@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2019-0226" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2019-0226
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0226">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Mapeando com robôs
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Mapping with robots
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Gabriel Alves Machado
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade do Estado do Rio de Janeiro, Instituto Politécnico do Rio de Janeiro, Nova Friburgo, RJ, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:alvesgabriel0327@gmail.com">
+      alvesgabriel0327@gmail.com
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Angelo Mondaini Calvão
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade do Estado do Rio de Janeiro, Instituto Politécnico do Rio de Janeiro, Nova Friburgo, RJ, Brasil
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-4208-1406">
+     http://orcid.org/0000-0002-4208-1406
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     A física é, tipicamente, introduzida aos alunos através da cinemática. Com a popularização da informática, é importante apresentar aos estudantes problemas atuais, que podem ser analisados de maneira lúdica utilizando o computador. Com este objetivo, através de simulações computacionais, estudamos diferentes estratégias para a cinemática de um robô que deve mapear espacialmente uma sala. As eficiências das diferentes estratégias foram comparadas extraindo algumas grandezas das trajetórias, como por exemplo, o “Convex Hull” e a Entropia. Com a comparação destas grandezas é possível tecer discussões com relação ao mapeamento realizado por cada uma delas.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Robótica; Física; Estatística; Engenharia
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     Physics is typically introduced to students through kinematics. In general, students learn to solve simple examples, for example, how to find the time of a journey from one position to another one. With the popularization of computer science, it is important to present problems which can be analyzed playfully on the computer. With this objective, through simulations, we study different strategies for the kinematics of a robot that must map a room. The efficiencies of the different strategies were compared by calculating some quantities from the trajectories, such as Convex Hull and Entropy. Comparing these quantities, it is possible to discuss the mapping performed by each one of them.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Robotics; Physics; Statistics; Engineering
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Para a maioria das pessoas, robôs ainda são personagens de filmes oníricos. Apesar de todo o avanço tecnológico das últimas décadas, robôs ainda ocupam uma pequena parte da vida cotidiana, e de uma maneira geral continuam restritos às grandes indústrias. O principal desafio da robótica em atividades cotidianas é a questão da segurança. Em geral a interação de robôs com o ser humano precisa ser cautelosa, diferente da indústria, onde os robôs podem trabalhar isolados a fim de evitar acidentes. Uma área de pesquisa que visa solucionar este problema é a Robótica Mole
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] C. Majidi. Soft Robotics
+					1, 5 (2014).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Apesar dos desafios da segurança, é possível desenvolver robôs simples e seguros, que sejam capazes de realizar tarefas interessantes, como por exemplo, robôs que varrem casas e secretárias virtuais
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] R. Gockley, A. Bruce, J. Forlizzi, M. Michalowski, A. Mundell, S. Rosenthal, B. Sellner, R. Simmons, K. Snipes, A.C. Schultz, et al., in: 2005 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, Edmonton, 2005), p. 1338.
+       </span>
+      </span>
+     </span>
+     . Sendo assim, podemos procurar quais outras aplicações admitem robôs simples que facilitem tarefas cotidianas ou de indústrias e empresas de pequeno porte.
+    </p>
+    <p>
+     Atualmente, com a popularização das impressoras 3D
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] J.L. Irwin, J.M. Pearce and G. Anzalone, in: 2014 ASEE annual conference &amp; exposition (American Society for Engineering Education, Indianapolis, 2014), p. 24.
+       </span>
+      </span>
+     </span>
+     e plataformas de microcontroladores, como o Arduino
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] M.L. McRoberts, Arduino básico (Novatec Editora, São Paulo, 2018).
+       </span>
+      </span>
+     </span>
+     , é possível construir robôs simples e acessíveis
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] https://www.thingiverse.com/, Smars modular robot, 2017.
+       </span>
+       <br/>
+       <a href="https://www.thingiverse.com/" target="_blank">
+        https://www.thingiverse.com/...
+       </a>
+      </span>
+     </span>
+     . Entretanto, não é fácil desenvolver programas para que esses robôs tenham a capacidade de realizar tarefas interessantes. O primeiro passo para que um robô consiga realizar qualquer tarefa é muitas vezes conceder-lhe a capacidade de reconhecer o seu ambiente e de se localizar nele.
+    </p>
+    <p>
+     Mapear uma região desconhecida não é uma tarefa simples. Mesmo com dados sobre a região, associar os dados para obter um mapa fidedigno exige métodos computacionais que variam em grau de complexidade, dependendo da qualidade e dos tipos de dados disponíveis. Este tema não é uma problemática recente
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] G. Dissanayake, S. Huang, Z. Wang and R. Ranasinghe, in 6th IEEE International Conference on (Global Software Engineering, Irvine, 2011), p. 477.
+       </span>
+      </span>
+     </span>
+     , um dos métodos mais difundidos é o SLAM (Simultaneous Localization and Mapping)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] M.W.M.G. Dissanayake, P. Newman, S. Clark, H.F. Durrant-Whyte and M. Csorba, IEEE Transactions on robotics and automation, 17, 229 (2001).
+       </span>
+      </span>
+     </span>
+     , o qual é capaz de gerar o mapa de uma região desconhecida através de um conjunto de pontos.
+    </p>
+    <p>
+     O embasamento físico-matemático utilizado para criação do algoritmo SLAM, assim como a convergência do método, foi estabelecido em 2001
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] M.W.M.G. Dissanayake, P. Newman, S. Clark, H.F. Durrant-Whyte and M. Csorba, IEEE Transactions on robotics and automation, 17, 229 (2001).
+       </span>
+      </span>
+     </span>
+     , junto com experimentos que atestam a eficácia do método. Além disso, métodos associados ao SLAM foram desenvolvidos, com o objetivo de melhorar a qualidade da navegação em regiões já parcialmente mapeadas, como por exemplo, o Path Planning
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] R. Valencia and J. Andrade-Cetto, in: Mapping, Planning and Exploration with Pose SLAM (Springer, Berlín, 2018), p. 53.
+       </span>
+      </span>
+     </span>
+     , que tem a finalidade de buscar rotas ótimas. Através deste método também é possível identificar obstáculos e planejar uma navegação segura.
+    </p>
+    <p>
+     Neste contexto, optamos por propor um estudo de estratégias de locomoção para coletar dados de uma região desconhecida de maneira ótima, a fim de que associadas ao SLAM e similares, o mapa de uma região desconhecida possa ser gerado.
+    </p>
+    <p>
+     A metodologia adotada foi a simulação de algumas estratégias simples de locomoção e mapeamento do espaço que possam ser implementadas em robôs simples. Uma vez definidas as estratégias a serem simuladas, comparações devem ser feitas para identificar a mais eficiente. Para isso, grandezas que possibilitem quantificar o comportamento observado precisam ser estudadas.
+    </p>
+    <p>
+     O trabalho foi elaborado para servir como uma introdução às simulações computacionais e robótica, para alunos de graduação em ciências exatas. Nossos programas foram implementados em Python, uma linguagem clara e didática. Usando a biblioteca pygame foi possível obter uma análise lúdica e qualitativa do problema.
+    </p>
+    <p>
+     Nossas simulações mostram que, apesar das dinâmicas analisadas serem simples, um mapeamento de qualidade pode ser alcançado. É possível encontrar kits de robôs a preços acessíveis na internet para testar na prática estes resultados. No entanto, existem diversas questões técnicas a serem consideradas, tais como: a escolha dos atuadores, dos sensores, a implementação do controle dos atuadores, o tratamento dos ruídos intrínsecos, dentre outras. Visto a complexidade e extensão das questões técnicas para a programação de um robô real, é mais conveniente ter como etapa preliminar a simulação de estratégias cinemáticas. Então, neste trabalho introdutório focamos na parte de simulação.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Metodologia
+    </h1>
+    <p>
+     Robôs aspiradores, destinados à limpeza da casa, por exemplo, se deslocam com diferentes padrões de movimento: andam rente a parede por um tempo, fazem padrões espirais, andam em direções aleatórias até encontrarem algum obstáculo. A combinação aleatória destes padrões, com sorte, fazem com que o robô limpe toda a região de interesse. Neste trabalho estamos interessados em obter o máximo de informações sobre a morfologia da região de interesse e desejamos verificar qual estratégia seria a mais eficiente, ou seja, a que oferece mais informações no menor intervalo de tempo.
+    </p>
+    <p>
+     Para este estudo, abordaremos o caso mais simples, no qual um robô deverá mapear uma sala quadrada 100x100, partindo sempre do centro. Vamos comparar duas estratégias simples, cujas dinâmicas são:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       A primeira dinâmica consiste em um caminhante balístico. Este escolherá uma direção inicial aleatória, e sofrerá incrementos constantes em sua posição dada uma direção. Quando este caminhante atingir uma das paredes, ele sofrerá uma colisão elástica.
+      </p>
+     </li>
+     <li>
+      <p>
+       Na segunda dinâmica o caminhante mudará a sua direção aleatoriamente a cada nova iteração, realizando um movimento browniano
+       <span class="ref">
+        <strong class="xref xrefblue">
+         [9]
+        </strong>
+        <span class="refCtt closed">
+         <span>
+          [9] H. Mori, Progress of theoretical physics
+					33, 423 (1965).
+         </span>
+        </span>
+       </span>
+       . Esta dinâmica servirá de referência, pois, ainda que não tenhamos esperança que ela seja eficiente, esta deve ser capaz, eventualmente, de mapear minimamente toda a região de interesse. Entretanto, uma dinâmica aceitável deve ser muito mais eficiente que essa.
+      </p>
+     </li>
+    </ol>
+    <p>
+     As estratégias podem ser comparadas de duas maneiras, qualitativa e quantitativa. Uma análise qualitativa consiste em observar a trajetória do caminhante no espaço, e ainda que ela possibilite uma análise intuitiva do comportamento do sistema, é difícil chegar a conclusões definitivas sobre a eficiência das estratégias. Já a análise quantitativa, por um lado, exige o cálculo de algumas grandezas e o estudo de seus conceitos, mas, por outro lado, permite chegarmos a conclusões mais definitivas e bem embasadas com dados concretos.
+    </p>
+    <p>
+     É importante ressaltar que diversas outras dinâmicas poderiam ser testadas para o mapeamento, entretanto, por serem mais complexas elas fogem do escopo introdutório deste trabalho. Contudo, algumas devem ser ao menos mencionadas. Duas dinâmicas interessantes e bastante usadas para simular processos de polimerização
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Rockenbach and R. A. Zara, Revista Brasileira de Ensino de Física
+					32, 4305 (2010).
+       </span>
+      </span>
+     </span>
+     podem ter aplicações também em robótica: Caminhadas Aleatórias Não Reversíveis (ou NRRW, Non-Reversal Random Walks)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] A. Skliros, W. Park and G.S. Chirikjian, Journal of algebraic statistics
+					1, 27 (2010).
+       </span>
+      </span>
+     </span>
+     e Caminhadas Auto-exclusivas (ou SAW, Self Avoiding Walks) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] N. Madras and G. Slade, The self-avoiding walk (Springer, Switzerland, 2013).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] M.E. Fisher, The Journal of Chemical Physics
+					44, 616 (1966).
+       </span>
+      </span>
+     </span>
+     ]. Estas dinâmicas são interessantes para modelar robôs que necessitam de um “cordão umbilical” por exemplo, um robô de apagar incêndios. Para este robô a caminhada deve ser mais restrita pois o mesmo não deve passar por cima da mangueira para evitar nós na mesma.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Análise Qualitativa
+    </h1>
+    <p>
+     No caso do Caminhante Balístico, notamos que, dependendo da condição inicial, o mapeamento acontece de forma bem diferente. Desta maneira, dividimos essa dinâmica em dois casos distintos.
+    </p>
+    <h2>
+     3.1. Caso 1 - Variáveis aleatórias inteiras
+    </h2>
+    <p>
+     Neste caso, a velocidade inicial do caminhante é constante, e as componentes assumem um valor inteiro no intervalo [−10,10].
+    </p>
+    <p>
+     Para este caso, observa-se que a distribuição dos pontos apresenta um padrão periódico, que pode ser reconhecido como figuras de Lissajous
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] E. Abbena, S. Salamon and A. Gray. Modern differential geometry of curves and surfaces with Mathematica (Chapman and Hall/CRC, Florida, 2017).
+       </span>
+      </span>
+     </span>
+     , como pode ser observado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/e804ff005280cab37dc022ba7fc7003d61df27e6.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Trajetória do caminhante balístico com condições iniciais inteiras. Da direita para a esquerda, a figura ilustra caminhantes com "velocidades" iniciais (incrementos na posição) com valores: (1;1), (1;2), (1;5), (4;6), (7;5). As “velocidades” iniciais foram normalizadas e foram feitas iterações até encontrar 1000 colisões com a periferia.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.2. Caso 2- Variáveis Aleatórias Contínuas
+    </h2>
+    <p>
+     Para o segundo caso, a velocidade continua constante, entretanto, as componentes podem assumir valores contínuos no intervalo [-10,10]. Nesse cenário o mapeamento mostra-se mais eficiente quando comparado ao anterior, uma vez que a distribuição de pontos apresenta um padrão quasiperiódico, assim como em sistemas dinâmicos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [15]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [15] A.M. Calvão and T.J.P. Penna, European Journal of Physics, 36, 045018 (2015).
+       </span>
+      </span>
+     </span>
+     . Desta forma o robô consegue um mapeamento de boa qualidade com um baixo número de iterações quando comparado aos outros processos (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 2
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/e52a634377c48fc1a5a4972eb610fa01892aa1b4.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Casos típicos da trajetória do movimento balístico com condições iniciais contínuas no intervalo [−10:10]. Da esquerda para direita,foram feitas iterações até conseguir os seguintes números de colisões com a periferia: 40, 100, 400.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.3. Movimento Browniano
+    </h2>
+    <p>
+     No terceiro e último caso, assim como nos primeiros estudos, temos um caminhante que parte do centro da região a ser mapeada. Contudo, nesse mapeamento, a cada nova iteração a velocidade do caminhante muda de direção além de possuir componentes que podem assumir valores contínuos. Assim, infere-se da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     que o método, apesar de não entrar em um padrão periódico semelhante ao do caminhante balístico do caso 1, pode ser considerado mais lento quando comparado ao caminhante do caso 2. Essa observação pode ser constatada comparando as
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 2
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     , onde podemos constatar que para uma mesma quantidade de pontos na periferia, o caminhante do caso 2 apresenta um mapeamento qualitativo superior ao do browniano.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/1ab5976ddb279fd427c334cb69f09690e4862796.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Casos típicos da trajetória do movimento browniano. Da esquerda para direita, foram feitas iterações até conseguir os seguintes números de colisões com a periferia: 40, 100, 400.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Análise Quantitativa
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 4
+     </a>
+     comparamos duas estratégias: a do caminhante balístico e a do movimento browniano. Nesse gráfico, que é uma ferramenta gráfica para representar a variação de dados observados de uma variável numérica por meio de quartis, observamos que a segunda estratégia necessita de um número de iterações da ordem de mil para tocar a periferia pela primeira vez. Ao passo que, na maioria dos casos a primeira necessita um número inferior a 100 iterações. Dessa forma, os dados sugerem que a estratégia do caminhante balístico gera pontos na periferia de maneira mais rápida, se comparado ao browniano. Entretanto, apenas a análise desse gráfico não permite inferir qual é a melhor estratégia, uma vez que não fica claro se os pontos mapeados da periferia conseguem gerar um mapeamento preciso da região de interesse.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/001f681675f90a561009911c4a8aa14d784ab4db.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      A fim de entender quantas iterações são necessárias para que o caminhante toque a periferia pelas primeiras vezes em 100 simulações, diagramas de caixas são apresentados para informar a estatística do número de iterações necessárias para que isso ocorra. Tipicamente, o movimento browniano demora muito mais para tocar a periferia pela primeira vez, porém, os encontros subsequentes com a periferia ocorrem com maior frequência, entretanto, estes pontos ficam todos numa mesma vizinhança, como ilustra a
+      <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 3
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A fim de estabelecer uma discussão quantitativa sobre a precisão do mapeamento da região, com relação aos métodos de mapeamento abordados, introduziremos o conceito de entropia da física estatística
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [16]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [16] F. Reif. Fundamentals of statistical and thermal physics (Waveland Press, Illinois, 2009).
+       </span>
+      </span>
+     </span>
+     e o de
+     <i>
+      convex hull
+     </i>
+     da geometria computacional
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [17]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [17] M. Berg, O. Cheong, M. Kreveld and M. Overmars, Computational geometry: algorithms and applications (Springer, Switzerland , 2008).
+       </span>
+      </span>
+     </span>
+     . Calculando essas grandezas poderemos estabelecer comparações quantitativas entre as estratégias escolhidas. Para facilitar a discussão, usaremos como métrica os pontos onde os caminhantes tocaram a periferia.
+    </p>
+    <h2>
+     4.1. Entropia
+    </h2>
+    <p>
+     A entropia definida na física estatística [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] F. Reif. Fundamentals of statistical and thermal physics (Waveland Press, Illinois, 2009).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] S. Salinas, Introdução a física estatística (Edusp, São Paulo, 1997).
+       </span>
+      </span>
+     </span>
+     ] é geralmente interpretada como o “grau de desorganização” de um sistema. No entanto, na teoria da informação, a entropia é interpretada como o grau de incerteza de uma variável aleatória, ou seja, o quão distintos podem ser os valores que uma variável aleatória assumirá dentro de um determinado espaço amostral
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [19]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [19] E.T. Jaynes, Physical review
+					106, 620 (1957).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Analisando dois casos simples, podemos compreender esta grandeza. Para o caso do lançar de uma moeda, temos um espaço de estados definido por Ω = {
+     <i>
+      cara
+     </i>
+     ,
+     <i>
+      coroa
+     </i>
+     }, já no caso do lançar de um dado, temos que o espaço de estados é Ω = {1,2,3,4,5,6}. Considerando que para estes espaços amostrais, a variável aleatória possui a mesma probabilidade de assumir qualquer um dos valores, a previsibilidade do estado dos sistemas é maior para a moeda do que para o dado. Podemos observar que, quanto maior o número de estados acessíveis, mais difícil se torna determinar o resultado da dinâmica do sistema, ou seja, maior é a incerteza. Esta observação pode ser quantificada através da entropia de Shannon
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [20]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [20] C.E. Shannon, Bell system technical journal
+					27, 379 (1948).
+       </span>
+      </span>
+     </span>
+     ,
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <mi>
+          S
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mstyle displaystyle="true">
+          <munder>
+           <mo>
+            ∑
+           </mo>
+           <mi>
+            Ω
+           </mi>
+          </munder>
+          <mrow>
+           <msub>
+            <mi>
+             p
+            </mi>
+            <mi>
+             i
+            </mi>
+           </msub>
+          </mrow>
+         </mstyle>
+         <mi>
+          l
+         </mi>
+         <mi>
+          o
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <msub>
+          <mi>
+           p
+          </mi>
+          <mi>
+           i
+          </mi>
+         </msub>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo
+     <i>
+      p
+      <sub>
+       i
+      </sub>
+     </i>
+     a probabilidade do sistema estar no estado
+     <i>
+      i
+     </i>
+     .
+    </p>
+    <p>
+     No caso do mapeamento, o conceito de entropia possibilita comparar a distribuição de pontos ao longo da periferia da região de interesse para as diferentes dinâmicas. Valores maiores de entropia informam que os pontos mapeados da periferia estão mais dispersos, ou seja, quanto maior a entropia, melhor é o mapeamento.
+    </p>
+    <p>
+     Para o cálculo da entropia de uma dada simulação, discretizamos as periferias da área de interesse em 50 partes, de maneira que foi possível calcular a probabilidade de cada segmento das arestas serem mapeados. Para as dinâmicas abordadas, a entropia, em cada simulação foi calculada com amostragens de 20, 100 e 1000 pontos sobre a periferia. Na mesma dinâmica, a partir das entropias de 1000 simulações, foi possível gerar histogramas. Com a distribuição dessas entropias é possível comparar as diferentes dinâmicas, como pode ser visto na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 5
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/b30d021365df8207e10459043cdea6672bf62f99.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Histograma da entropia para diferentes número de pontos na periferia e diferentes estratégias. De cima para baixo, temos os seguintes parâmetros: 20, 100 e 1000 pontos na periferia.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.2. Convex hull
+    </h2>
+    <p>
+     Na geometria computacional, o convex hull é definido como um polígono convexo gerado a partir de um conjunto de pontos no espaço tridimensional
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [21]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [21] M. Berg, O. Cheong, M. Kreveld and M. Overmars, Computational Geometry: Algorithms and Applications (Springer-Verlag TELOS, Santa Clara, 2008), 3ª ed.
+       </span>
+      </span>
+     </span>
+     . Dado um conjunto de pontos em 2D, o convex hull consiste em um polígono de área máxima com linhas que interligam os pontos mais externos, semelhante a um elástico (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 6
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Considere alguns alfinetes distribuidos sobre uma superfície, ao colocarmos um elástico de forma que todos os alfinetes fiquem no seu interior (linha marrom), temos que o elastico (linhas) definirá a área do convex hull desta distribuição de alfinetes (pontos).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Através do cálculo da área do convex hull é possível comparar as estratégias de mapeamento abordadas. Para isso, foi empregado um processo iterativo, no qual para cada novo ponto gerado na periferia é calculada uma nova área do convex hull. Este é calculado para um número mínimo de 3 pontos não-colineares até um total de 1000 pontos periféricos. Desta forma, pode-se obter para as 3 dinâmicas a evolução desta área em função do número de pontos na periferia. Algumas estratégias conseguem mapear toda a área, e nestes casos o desvio padrão associado tende a zero, como esperado (
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 7
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/df358e6275b03970975d702a9ab9100a139068b4.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Área do convex hull para as diferentes estratégias. Cada ponto do gráfico é a média de 10 simulações. O caminhante balístico, com condições iniciais contínuas, com ≈ 10
+      <sup>
+       2
+      </sup>
+      pontos na periferia já gera um bom mapeamento, no entanto, com condições iniciais inteiras, um mapeamento total, em média, é improvável. No caso do caminhante aleatório, um bom mapeamento é possível só para uma quantidade maior de pontos na periferia (≈ 10
+      <sup>
+       3
+      </sup>
+      ).
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.3. Mapeamento com obstáculos
+    </h2>
+    <p>
+     Com objetivo de analisar a eficiência dos mapeamentos, agora com a presença de obstáculos, foi criada uma parede na região central com uma abertura no centro (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 8
+     </a>
+     ). A análise foi feita variando o tamanho dessa abertura. Das observações das trajetórias do caminhante, e utilizando entropia e convex hull, pode-se tecer algumas discussões sobre a eficácia das estratégias em regiões com a presença de obstáculos.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/0ddd3914943c6fa7b64556948350c294cb7c762e.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Ilustração da trajetória das estratégias de mapeamento com obstáculo, no caso, o obstáculo são duas paredes. As simulações ilustradas foram feitas em um quadrado 100 × 100 e 10
+      <sup>
+       4
+      </sup>
+      iterações, com as paredes no meio e uma abertura de 10% no centro. A posição inicial do caminhante é aleatória. As estratégias são, da esquerda para direita: caminhante balístico (Caso 1), caminhante balístico (Caso 2) e Movimento Browniano.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Apesar dos obstáculos dificultarem o mapeamento, observa-se que eles não impedem que este ocorra de forma adequada para um número maior de pontos na periferia (
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 9
+     </a>
+     ). Claramente, aberturas menores exigem simulações mais longas para um bom mapeamento da periferia. Para os casos utilizando variáveis aleatórias inteiras, assim como no caso anterior (sem a presença de obstáculos), o mapeamento ocorre de forma inadequada. Nos casos com variáveis aleatórias contínuas e browniano o mapeamento tende a ser adequado. Entretanto, o browniano necessita de um alto número de pontos nas periferias e longos tempos de simulação, o que o torna menos eficiente que o contínuo, uma vez que este último realiza o mapeamento de forma mais rápida e com menos pontos periféricos.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/79afd6256f4ce771563dd2bb2ae1fe50e117388b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Área do convex hull para as diferentes estratégias. Cada ponto do gráfico é a média de 50 simulações. No caso de 0.0% e 100.0% de abertura temos os resultados esperados, metade da área e toda a área mapeada, respectivamente, para as dinâmicas do caminhante balístico contínuo e browniano. Um mapeamento total pode ser alcançado para aberturas menores com um número maior de pontos na periferia (mais iterações da dinâmica).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Tomando como referência um número de 1000 pontos coletados das periferias, a presença de obstáculos afeta diretamente a dispersão desses pontos ao longo da periferia(
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 10
+     </a>
+     ). Para aberturas menores observa-se que os pontos coletados tendem a se concentrar no mesmo hemisfério, o que traz como consequência baixos valores de entropia, ao passo que, para aberturas maiores a dispersão dos pontos aumenta e consequentemente os valores de entropia também (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 8
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/ynYm5vNqYByzvBPnPYwm3ML/692565a5102f60ab65c72c82b1b76c08e5435f44.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Entropia dos pontos periféricos para as diferentes estratégias. Cada ponto do gráfico é a média de 50 simulações. Uma entropia maior (dispersão dos pontos sobre a periferia) pode ser alcançado para aberturas menores com um número maior de pontos na periferia (mais iterações da dinâmica).
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Discussão
+    </h1>
+    <p>
+     Nesta seção vamos relacionar os métodos estudados ao longo das seções anteriores para entender a qualidade do mapeamento realizado por cada dinâmica.
+    </p>
+    <p>
+     Para o caminhante balístico (Caso 1), observa-se que este gera um padrão periódico (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     ), ou seja, o caminhante permanece naquela mesma trajetória infinitamente. Assim, essa estratégia acaba mapeando os mesmos pontos da periferia várias vezes deixando outros pontos sem serem mapeados. Isso reflete em uma dispersão baixa de pontos na periferia quando comparada às demais e, por conseguinte, valores de entropia baixos em relação às outras estratégias (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 5
+     </a>
+     ). Além disso, quando analisamos o gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 7
+     </a>
+     , observamos que para essa metodologia a área do convex hull acaba convergindo após obtermos, aproximadamente, 50 pontos na periferia. No entanto, essa grandeza converge para um valor diferente do esperado, que seria 10
+     <sup>
+      4
+     </sup>
+     ,já que, inicialmente, foi adotada uma região quadrada com dimensões 100 × 100. Este comportamento apresentado no gráfico deve-se ao fato dessa estratégia entrar em um regime periódico. Nesse regime a área do convex hull será sempre a mesma, pois os pontos mapeados da periferia são sempre os mesmos. Portanto, pode-se concluir que esta dinâmica não consegue mapear a região de interesse de forma eficaz.
+    </p>
+    <p>
+     O caminhante balístico (Caso 2) não forma um padrão periódico, diferentemente do que ocorre no caso 1, assim, com um número de 400 pontos, observa-se na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 2
+     </a>
+     que este método gera qualitativamente um bom mapeamento. Através do gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 5
+     </a>
+     , vemos que este caso é o que apresenta maior entropia dentre os estudados, isso implica num mapeamento melhor, já que este valor alto reflete uma melhor distribuição dos pontos periféricos. O gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 7
+     </a>
+     ratifica a qualidade desse mapeamento, dado que com aproximadamente 10
+     <sup>
+      2
+     </sup>
+     pontos na periferia a área do convex hull já começa a convergir para área exata do quadrado.
+    </p>
+    <p>
+     Por último temos o Movimento Browniano. Analisando qualitativamente a
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     , para uma mesma quantidade de pontos na periferia, essa estratégia apresenta um mapeamento inferior a dinâmica do caminhante balístico (caso 2). Através dos gráficos da entropia (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 5
+     </a>
+     ) observa-se que a medida que o número de pontos da periferia aumenta, os valores de entropia, do caso browniano, vão se aproximando do balístico (Caso 2), mas nunca o ultrapassam. Ademais, a partir da
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 7
+     </a>
+     , nota-se que este método também converge para a área exata do quadrado a ser mapeado. Entretanto, diferente dos outros métodos, a curva do convex hull para esta estratégia só começa a convergir após um número alto de pontos na periferia (aproximadamente 10
+     <sup>
+      3
+     </sup>
+     ). Assim sendo, esta estratégia pode vir a apresentar um bom mapeamento, mas seria necessário um número muito grande de pontos na periferia se comparado às demais estratégias. Consequentemente, passando por um processo iterativo extremamente longo (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 4
+     </a>
+     ).
+    </p>
+    <p>
+     Por fim, a eficiência das dinâmicas foram analisadas na presença de obstáculos. Neste contexto, a melhor estratégia continua sendo o caminhante balístico contínuo, que é capaz de gerar um bom mapeamento se a dinâmica for iterada por tempo suficiente, pois, áreas com obstáculos maiores dependem claramente de mais iterações da dinâmica para serem adequadamente mapeadas.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Conclusão
+    </h1>
+    <p>
+     Através das análises abordadas, as quais aliam conhecimentos de física, simulação computacional, estatística e geometria computacional, foi possível estabelecer comparações entre diferentes estratégias de mapeamento por meio de simulações e, consequentemente, tecer discussões qualitativas e quantitativas com relação a elas.
+    </p>
+    <p>
+     Por intermédio da análise das trajetórias das dinâmicas adotadas e das grandezas calculadas, foi possível concluir que, dentre as estratégias utilizadas, a que apresenta um melhor mapeamento é a do caminhante balístico - Caso 2. Uma vez que se mostrou, em todos os aspectos, superior às demais, tanto no que diz respeito a qualidade do mapeamento quanto a velocidade na qual realiza o mesmo.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        C. Majidi.
+        <i>
+         Soft Robotics
+        </i>
+        <b>
+         1
+        </b>
+        , 5 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        R. Gockley, A. Bruce, J. Forlizzi, M. Michalowski, A. Mundell, S. Rosenthal, B. Sellner, R. Simmons, K. Snipes, A.C. Schultz, et al., in:
+        <i>
+         2005 IEEE/RSJ International Conference on Intelligent Robots and Systems
+        </i>
+        (IROS, Edmonton, 2005), p. 1338.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        J.L. Irwin, J.M. Pearce and G. Anzalone, in:
+        <i>
+         2014 ASEE annual conference &amp; exposition
+        </i>
+        (American Society for Engineering Education, Indianapolis, 2014), p. 24.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        M.L. McRoberts,
+        <i>
+         Arduino básico
+        </i>
+        (Novatec Editora, São Paulo, 2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        https://www.thingiverse.com/, Smars modular robot, 2017.
+        <br/>
+        <a href="https://www.thingiverse.com/" target="_blank">
+         » https://www.thingiverse.com/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        G. Dissanayake, S. Huang, Z. Wang and R. Ranasinghe, in
+        <i>
+         6th IEEE International Conference on
+        </i>
+        (Global Software Engineering, Irvine, 2011), p. 477.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        M.W.M.G. Dissanayake, P. Newman, S. Clark, H.F. Durrant-Whyte and M. Csorba,
+        <i>
+         IEEE Transactions on robotics and automation
+        </i>
+        ,
+        <b>
+         17
+        </b>
+        , 229 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        R. Valencia and J. Andrade-Cetto, in:
+        <i>
+         Mapping, Planning and Exploration with Pose SLAM
+        </i>
+        (Springer, Berlín, 2018), p. 53.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        H. Mori,
+        <i>
+         Progress of theoretical physics
+        </i>
+        <b>
+         33
+        </b>
+        , 423 (1965).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        R. Rockenbach and R. A. Zara,
+        <i>
+         Revista Brasileira de Ensino de Física
+        </i>
+        <b>
+         32
+        </b>
+        , 4305 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        A. Skliros, W. Park and G.S. Chirikjian,
+        <i>
+         Journal of algebraic statistics
+        </i>
+        <b>
+         1
+        </b>
+        , 27 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        N. Madras and G. Slade,
+        <i>
+         The self-avoiding walk
+        </i>
+        (Springer, Switzerland, 2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        M.E. Fisher,
+        <i>
+         The Journal of Chemical Physics
+        </i>
+        <b>
+         44
+        </b>
+        , 616 (1966).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        E. Abbena, S. Salamon and A. Gray.
+        <i>
+         Modern differential geometry of curves and surfaces with Mathematica
+        </i>
+        (Chapman and Hall/CRC, Florida, 2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        A.M. Calvão and T.J.P. Penna,
+        <i>
+         European Journal of Physics
+        </i>
+        ,
+        <b>
+         36
+        </b>
+        , 045018 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        F. Reif.
+        <i>
+         Fundamentals of statistical and thermal physics
+        </i>
+        (Waveland Press, Illinois, 2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        M. Berg, O. Cheong, M. Kreveld and M. Overmars,
+        <i>
+         Computational geometry: algorithms and applications
+        </i>
+        (Springer, Switzerland , 2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        S. Salinas,
+        <i>
+         Introdução a física estatística
+        </i>
+        (Edusp, São Paulo, 1997).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        E.T. Jaynes,
+        <i>
+         Physical review
+        </i>
+        <b>
+         106
+        </b>
+        , 620 (1957).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        C.E. Shannon,
+        <i>
+         Bell system technical journal
+        </i>
+        <b>
+         27
+        </b>
+        , 379 (1948).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        M. Berg, O. Cheong, M. Kreveld and M. Overmars,
+        <i>
+         Computational Geometry: Algorithms and Applications
+        </i>
+        (Springer-Verlag TELOS, Santa Clara, 2008), 3ª ed.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        09 Dez 2019
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        23 Ago 2019
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        05 Nov 2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

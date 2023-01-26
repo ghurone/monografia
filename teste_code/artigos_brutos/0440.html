@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 41 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2019
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2019-0018" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2019-0018
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0018">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Sistema computadorizado para deslocamento de amostra com motor de passo utilizando o L298: aplicação na técnica de varredura-Z
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Computerized system for sample displacement with stepper motor using the L298: application in the Z-scan technique
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     André L. S. Romero
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:andretec@ifsc.usp.br">
+      andretec@ifsc.usp.br
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-9982-8171">
+     http://orcid.org/0000-0001-9982-8171
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Emerson C. Barbano
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Paraná, Centro Politécnico, Departamento de Física, Curitiba, PR, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Lino Misoguti
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de São Paulo, Instituto de Física de São Carlos, São Carlos, SP, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Neste trabalho vamos abordar uma nova tecnologia, de baixo custo, de controle de motor de passo via computador, a qual pode ser utilizada para movimentação de amostras. Mais especificamente, desenvolvemos um sistema de controle usando o módulo eletrônico comercial L298, que evita o uso de um circuito eletrônico tradicional complexo de múltiplos componentes discretos. Ademais, utilizamos um motor de passo acoplado em um estágio de translação para um experimento de óptica não linear de varredura-
+     <i>
+      Z
+     </i>
+     (
+     <i>
+      Z
+     </i>
+     -
+     <i>
+      scan
+     </i>
+     ) em que se faz necessário o deslocamento preciso de amostras. Tanto para o controle de motor de passo quanto aquisição de dados, foi utilizado o dispositivo myDAQ, fabricado pela empresa
+     <i>
+      National Instruments,
+     </i>
+     que é um dispositivo de multifunções versátil e de custo não tão elevado que pode ser conectado ao computador via porta de comunicação USB. Neste trabalho estamos utilizando a linguagem de programação visual
+     <i>
+      LabVIEW
+     </i>
+     e estamos disponibilizando para download os programas necessários para a movimentação do motor de passo. Os circuitos descritos são de simples e fácil montagem, podendo ser úteis para estudantes, alunos de iniciação científica, técnicos de laboratório e até mesmo para pesquisadores formados.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Labview; L298; Motor de Passo; myDAQ; Varredura-Z; Espectroscopia
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     In this work, we show up a new technology of low-cost stepper motor control via computer, that can be used for moving samples. More specifically, we developed a control system using the commercial electronic module L298, which avoids the use of a complex traditional electronic circuit of multiple discrete components. In addition, we used a stepper motor coupled in a translation stage for a nonlinear optics experiment, Z-scan, in which the precise displacement of samples is required. For both the stepper motor control and data acquisition we used the myDAQ device, which is manufactured by National Instruments and, it is a versatile multifunction and not-so-high cost device that can be connected to the computer via USB communication port. In this work we are using the visual programming language LabVIEW and we are making available for download the necessary programs for the movement of the stepper motor. The circuits described are simple and easy to assemble and may be useful for students, undergrad researchers, laboratory technicians and even for trained researchers.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Labview; L298; Stepper Motor; myDAQ; Z-scan; Spectroscopy
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Em um grande número de experimentos na área de física, se faz o uso de dispositivos eletromecânicos para movimentação de amostras e módulos de multifunções para aquisição de dados. Neste sentido, para se manter um laboratório de pesquisa moderno, sua constante atualização com novas tecnologias é essencial. Para isso o domínio e entendimento do funcionamento dos dispositivos de aquisição de dados e módulos de controle de motores de passo são muito importantes. Atualmente, o desenvolvimento tecnológico tem permitido um melhor interfaceamento de módulos de multifunções e novos programas de computador mais amigáveis e intuitivos que podem ser constantemente atualizados e modernizados.
+    </p>
+    <p>
+     Para este trabalho, apresentamos uma nova tecnologia de baixo custo para interfaceamento de experimentos assistidos por computador utilizando o módulo de multifunções myDAQ
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] National Instruments, myDAQ - Dispositivo de aquisição de dados para estudantes, disponível em http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166, acessado em 20/10/2018.
+       </span>
+       <br/>
+       <a href="http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166" target="_blank">
+        http://www.ni.com/en-us/shop/select/myda...
+       </a>
+      </span>
+     </span>
+     , da empresa
+     <i>
+      National Instruments
+     </i>
+     , que está disponível no Brasil para compra
+     <i>
+      online
+     </i>
+     e com desconto para professores e alunos universitários
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] http://brasil.ni.com/academia/mydaq, acessado em 20/10/2018.
+       </span>
+       <br/>
+       <a href="http://brasil.ni.com/academia/mydaq" target="_blank">
+        http://brasil.ni.com/academia/mydaq...
+       </a>
+      </span>
+     </span>
+     . Este é um dispositivo de multifunções que possui diversas funcionalidades e tem
+     <i>
+      LabVIEW
+     </i>
+     como linguagem base de programação. Com uma linguagem visual de programação poderosa e intuitiva, diferente das outras linguagens textuais,
+     <i>
+      LabVIEW
+     </i>
+     utiliza ícones gráficos que são conectados utilizando fios em um diagrama, que faz com que os dados sejam transmitidos e analisados seguindo um fluxo. Não diferente de outras linguagens,
+     <i>
+      LabVIEW
+     </i>
+     possui vários tipos de dados, laços de controle (
+     <i>
+      loop
+     </i>
+     ), construção de sub-rotinas (Sub
+     <i>
+      VI
+     </i>
+     s), programação por tratamento de eventos e uma vasta gama de funções matemáticas e de controle de fluxo. Esta é uma linguagem de programação de alto nível, tendo assim uma maior facilidade na programação de tarefas repetitivas. Ela é utilizada amplamente pelas universidades nos laboratórios de pesquisa e nas indústrias na área de automação e controle de processos.
+    </p>
+    <p>
+     O uso de motores de passo para movimentação de amostra nos proporciona o controle preciso de sua posição e velocidade. Por isso, utilizaremos um motor de passo bipolar, que possibilita uma resolução de 1,8 graus por passo. Trata-se de um motor de baixo custo que pode ser adquirido
+     <i>
+      online
+     </i>
+     por um preço médio de US$ 15,00. Para o controle de corrente desse motor, utilizamos um módulo comercial de controle de alta corrente L298
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF, acessado em 11/01/2019.
+       </span>
+       <br/>
+       <a href="http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF" target="_blank">
+        http://www.dx.com/p/lson-l298n-stepper-m...
+       </a>
+      </span>
+     </span>
+     , que também pode ser adquirido
+     <i>
+      online
+     </i>
+     , e seu preço médio é de US$ 5,00.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Detalhes sobre motores de passo
+    </h1>
+    <p>
+     Motores de passo são atuadores eletromecânicos que convertem um sinal digital pulsado em um movimento mecânico discreto (incremental), são amplamente utilizados em aplicações de controle industrial, robótica e instrumentação eletrônica. São motores DC, mas com a possibilidade de se controlar sua velocidade, direção e ângulo com extrema precisão. Com a tecnologia atual, podemos subdividir os passos de um motor em micro passos (
+     <i>
+      microstepping
+     </i>
+     ), conferindo assim maior precisão no movimento
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] Wikipedia, Stepper motor, disponível em https://en.wikipedia.org/wiki/Stepper_motor, acessado em 20/10/2018.
+       </span>
+       <br/>
+       <a href="https://en.wikipedia.org/wiki/Stepper_motor" target="_blank">
+        https://en.wikipedia.org/wiki/Stepper_mo...
+       </a>
+      </span>
+     </span>
+     . Porém, para utilizar esta tecnologia, temos que utilizar um circuito integrado mais sofisticado e vários outros componentes discretos montados em uma placa de circuito, deixando o projeto mais complexo para a montagem e também aumentando seu custo. Neste trabalho não vamos nos aprofundar na construção dos motores de passo, e seus diversos tipos, já que estes estão bem documentados
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] A3967 Microstepping driver with translator, disponível em https://www.sparkfun.com/datasheets/Robotics/A3967.pdf.
+       </span>
+       <br/>
+       <a href="https://www.sparkfun.com/datasheets/Robotics/A3967.pdf" target="_blank">
+        https://www.sparkfun.com/datasheets/Robo...
+       </a>
+      </span>
+     </span>
+     . O que vamos abordar neste artigo são conceitos necessários para se entender o funcionamento eletrônico dos motores e informações de métodos de acionamento das bobinas para que se obtenha o adequado funcionamento.
+    </p>
+    <p>
+     Os motores de passo são encontrados em dois tipos:
+     <i>
+      unipolar
+     </i>
+     e
+     <i>
+      bipolar
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] Desenvolvimento de um Controle para Motores de Passo, disponível em http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf.
+       </span>
+       <br/>
+       <a href="http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf" target="_blank">
+        http://www.fotonica.ifsc.usp.br/pdfs/201...
+       </a>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     <b>
+      <i>
+       -
+      </i>
+      motor
+      <i>
+       unipolar:
+      </i>
+     </b>
+     Este tipo de motor possui 5 fios (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1-A
+     </a>
+     ), sendo dois conjuntos de bobinas com uma derivação central (
+     <i>
+      tap
+     </i>
+     ) em cada bobina. Este tipo apresenta como característica o fato de ter um torque menor, devido à energização da metade de cada bobina por vez.
+    </p>
+    <p>
+     <b>
+      <i>
+       -
+      </i>
+      motor
+      <i>
+       bipolar
+      </i>
+      :
+     </b>
+     possui quatro fios, sendo dois conjuntos de bobinas (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1-B
+     </a>
+     ). Esse tipo tem maior torque, justamente por energizar cada bobina por inteiro. Contudo, para este tipo de motor há a necessidade de se inverter o sentido da corrente de cada bobina em um determinado instante. Sendo assim necessário o uso de um circuito mais sofisticado para a inversão da corrente.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Esquema de ligação das bobinas dos motores de passo. A) Motor Unipolar, possui 5 fios; B) Motor Bipolar, possui 4 fios.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Neste trabalho vamos utilizar motores do tipo bipolar (4 fios). Os motores unipolares (5 ou 6 fios) também podem ser utilizados como bipolares, bastando para isso apenas isolar os dois
+     <i>
+      tap
+     </i>
+     s centrais de cada bobina.
+    </p>
+    <p>
+     As configurações mais comuns são motores de passo que dão um giro de uma volta completa (360°) em 200 passos, com uma resolução de 1,8 graus por passo, e existem ainda aqueles com menor precisão que utilizam 48 passos por volta, resultando em uma resolução de 7,5 graus por passo.
+    </p>
+    <p>
+     Para o movimento contínuo do motor de passo, temos que energizar as bobinas seguindo uma sequência apropriada. Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , temos o esquema das bobinas dos motores, e seus terminais de ligação elétrica. Na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     podemos observar as tabelas com a sequência de acionamento das bobinas. São apresentadas duas tabelas, sendo uma para movimentar o motor no modo de passo inteiro (
+     <i>
+      full-step
+     </i>
+     ), o qual tem que andar 200 passos para poder percorrer uma volta completa do eixo, e outra tabela correspondendo ao modo de meio passo (
+     <i>
+      half-step
+     </i>
+     ), que proporciona uma resolução maior do motor, que, neste caso, tem que andar 400 passos para percorrer uma volta completa.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Tabela com a sequência de acionamento das bobinas para o caso do motor bipolar. Na parte superior temos a tabela para passo completo (
+      <i>
+       full-step
+      </i>
+      ) e na parte inferior temos a tabela para meio passo (
+      <i>
+       half-step
+      </i>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Podemos observar na tabela que existem dois fluxos no sentido da corrente. Essa inversão na corrente só é possível utilizando um circuito de controle mais sofisticado - neste trabalho utilizamos o
+     <i>
+      drive
+     </i>
+     de corrente
+     <i>
+      L298
+     </i>
+     , um circuito versátil que possui essa capacidade de inversão de corrente.
+    </p>
+    <p>
+     O que temos na tabela são as sequências de acionamento das bobinas dos motores. Observamos então que nos terminais 1a,1b da bobina 1, hora fica com o fluxo da corrente positivo (TF) e outra hora fica com o fluxo da corrente negativo (FT), fazendo assim a inversão da corrente.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Instruções de Montagem
+    </h1>
+    <p>
+     Apresentamos aqui a montagem do controle de motor de passo. Para a montagem deste projeto (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ) temos apenas duas pequenas placas de circuitos dispostas em uma caixa plástica (46 x 87 x 98 mm). Uma das placas é o módulo de corrente L298, e a outra uma pequena fonte de tensão do tipo chaveada bi-volt, a qual fornece uma tensão de saída de 12 volts e corrente de até 1 ampere.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Fotografia da montagem, na esquerda temos a fonte de tensão de 12 volts e a direita o módulo de corrente L298.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para a conexão entre o modulo de corrente e o módulo de aquisição de dados (myDAQ), usamos conectores do tipo DB9 (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     ), que é um padrão adotado em nosso laboratório para conexão dos módulos. Outro conector DB9 é utilizado para o motor de passo. Na parte traseira temos um interruptor para ligar a fonte de alimentação. Outros tipos de conectores podem ser utilizados respeitando a necessidade do uso de até 5 fios ativos para o caso de motores unipolares.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Fotografia da caixa finalizada com um conector DB-9 para o motor de passo e outro para o módulo de aquisição de dados (myDAQ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     É importante lembrar que a ligação entre o módulo de corrente e o módulo de aquisição de dados (myDAQ) se faz com baixa tensão, usando padrão
+     <b>
+      TTL
+     </b>
+     (5 volts), que é o padrão dos sistemas digitais. Por outro lado, a ligação do controle do motor de passo ao motor, se faz usando uma tensão de 12 volts de alta corrente, com isso temos um isolamento da parte de alta corrente do motor de passo com o computador.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Conexão entre os módulos
+    </h1>
+    <p>
+     Para a conexão entre os módulos, conectamos os terminais
+     <b>
+      IN1
+     </b>
+     ao
+     <b>
+      IN4
+     </b>
+     do módulo
+     <b>
+      L298
+     </b>
+     aos pinos
+     <b>
+      0
+     </b>
+     à
+     <b>
+      3
+     </b>
+     do módulo
+     <b>
+      myDAQ,
+     </b>
+     juntamente com o terra (GND) entre os módulos,
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     , de forma que apenas quatro linhas digitais do módulo de aquisição são utilizadas. Para a fonte de alimentação de
+     <b>
+      12
+     </b>
+     volts, utilizamos um eliminador de pilha de
+     <b>
+      1
+     </b>
+     ampere, para poder suprir a corrente necessária para acionamento do motor de passo.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Diagrama de conexão entre o módulo de aquisição e o módulo de corrente.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Podemos observar no diagrama esquemático (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     ) as ligações elétricas entre os módulos. Utiliza-se poucos fios, o que torna a montagem e compreensão deste circuito bastante simples.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Módulo de corrente (L298)
+    </h1>
+    <p>
+     Este módulo consiste de uma placa de circuito de aproximadamente 4,5 cm x 4,5 cm (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     ), com a parte de potência em um único circuito integrado, possui terminais de conexão, os quais facilitam muito a ligação com outros módulos. Internamente possui dois circuitos em
+     <b>
+      ponte H
+     </b>
+     , possibilitando a ligação de cargas de até
+     <b>
+      35 volts
+     </b>
+     e correntes de até
+     <b>
+      4 amperes
+     </b>
+     . Circuitos em
+     <b>
+      ponte H
+     </b>
+     são muito utilizados para controle de motores, devido à sua característica de inverter o sentido da corrente que passa pelas bobinas dos motores de passo, podendo assim executar a sequência correta de acionamento das bobinas do motor de passo. O chip possui um dissipador de calor, evitando sobreaquecimento. Estes módulos possuem um baixo custo (US$ 5,00) e são de fácil aquisição
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF, acessado em 11/01/2019.
+       </span>
+       <br/>
+       <a href="http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF" target="_blank">
+        http://www.dx.com/p/lson-l298n-stepper-m...
+       </a>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Módulo de corrente L298 para controle de motores de passo.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     6. Detalhes sobre ponte H
+    </h1>
+    <p>
+     O circuito denominado ponte H é amplamente utilizado em projetos de robótica, mecatrônica e automação. Este circuito é utilizado quando há a necessidade de controlar o sentido de rotação em um motor de corrente continua (DC). O sentido de rotação de um motor DC se dá justamente pelo sentido da circulação da corrente que passa através de seu enrolamento, ao inverter o sentido da corrente, também invertemos o sentido de rotação do motor. No projeto aqui abordado, a utilização da ponte H é adequada, pois, para movimentar o motor de passo, temos a necessidade de inverter o sentido da corrente nas bobinas num determinado instante, como foi visto na tabela da
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     , o fluxo da corrente muda entre positivo e negativo ao longo da tabela, o que resulta em um movimento contínuo e uniforme do motor de passo.
+    </p>
+    <p>
+     Para demonstrar o funcionamento da ponte H, temos na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.7
+     </a>
+     a representação esquemática de apenas uma das duas utilizadas em nosso sistema, onde podemos observar quatro transistores bipolares e também, na parte central, uma das duas bobinas do motor de passo. O nome ponte H vem justamente da semelhança da letra H com disposição dos quatro transistores e na parte central uma bobina conectando os dois lados.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Quando nenhum transistor está acionado, a bobina está sem fluxo de corrente. Quando os transistores Q1 e Q4 estão acionados, o fluxo de corrente está no sentido indicado pela seta na cor azul (seta cheia). Quando os transistores Q2 e Q3 estão acionados, o fluxo de corrente flui no sentido contrário, indicado pela seta na cor verde (seta tracejada).
+      <br/>
+     </div>
+    </div>
+    <p>
+     O funcionamento de uma ponte H é bem simples, temos que entender que os transistores bipolares funcionam como chaves que ligam e desligam o circuito. Ao dizer para o controle lógico que devemos ligar os transistores (chaves) Q1 e Q4, estamos fechando o circuito no qual o fluxo de corrente está sendo demonstrada com a seta na cor azul (seta cheia), no diagrama esquemático esta seta está no sentido da esquerda para a direita. Para a inversão do sentido da corrente, temos que desligar os transistores Q1 e Q4 e então ligar os outros dois transistores, Q2 e Q3. O sentido da corrente passa pela bobina do motor de passo em outro sentido, indicado pela seta na cor verde (seta tracejada), no diagrama esquemático esta seta está no sentido da direita para a esquerda. Para esta representação esquemática do fluxo da corrente nos transistores estamos utilizando o modelo de corrente convencional, o qual a corrente flui no sentido do terminal positivo (VCC) da alimentação até o terminal negativo (terra).
+    </p>
+    <p>
+     O diagrama interno do circuito de corrente L298 é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     . Podemos observar nos detalhes
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] L298 Dual full-bridge driver, disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+       </span>
+       <br/>
+       <a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">
+        https://www.sparkfun.com/datasheets/Comp...
+       </a>
+      </span>
+     </span>
+     que temos duas pontes H, ambas com a parte central conectada aos pinos de saída do circuito integrado. Uma, ponte H (A), com a parte central conectada aos pinos 2 e 3 e a outra, ponte H (B), aos pinos 13 e 14. Os circuitos que vemos no diagrama de bloco são circuitos lógicos de controle, estas portas lógicas protegem o circuito impedindo que os pares de transistores Q1;Q4 e Q2;Q3 sejam acionados simultaneamente. Se isso acontecer, estaríamos ligando a alimentação (VCC) diretamente ao terra, ocasionando um curto circuito.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Diagrama interno do circuito de controle de corrente L298. Nos detalhes temos a as duas pontes H, onde podemos observar que na parte central da ponte estão ligados os pinos 2 e 3 para a ponte A e os pinos 13 e 14 para a ponte B. Fonte: Adaptado de
+      <span class="ref">
+       <strong class="xref xrefblue">
+        [7]
+       </strong>
+       <span class="refCtt closed">
+        <span>
+         [7] L298 Dual full-bridge driver, disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+        </span>
+        <br/>
+        <a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">
+         https://www.sparkfun.com/datasheets/Comp...
+        </a>
+       </span>
+      </span>
+      .
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     7. Dispositivo de aquisição (myDAQ)
+    </h1>
+    <p>
+     Este dispositivo de aquisição e controle nos permite realizar interfaceamento de vários experimentos ao computador através da porta de comunicação USB,
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     , proporcionando aquisição de sinais analógicos (
+     <i>
+      A/D
+     </i>
+     ) com resolução de
+     <b>
+      16 bits
+     </b>
+     e taxa amostral de
+     <b>
+      200 kS/s
+     </b>
+     , também possui
+     <b>
+      8
+     </b>
+     linhas de entrada e saída digitais (
+     <i>
+      I/O
+     </i>
+     ) no padrão
+     <b>
+      TTL
+     </b>
+     , sendo estas as que vamos utilizar para conexão ao módulo de corrente
+     <b>
+      L298
+     </b>
+     . O dispositivo é um módulo versátil que também possui duas saídas analógicas (
+     <i>
+      D/A
+     </i>
+     ), às quais nos possibilitam sintetizar sinais analógicos tais como ondas senoidais, triangulares, dente de serra, entre outros, podendo assim ser utilizado também como um gerador de funções.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Módulo de aquisição myDAQ da empresa
+      <i>
+       National Instruments
+      </i>
+      , conectado ao computador via USB. Possui conector lateral com várias saídas digitais e entradas analógicas.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Este módulo de multifunções possui muitas outras funcionalidades
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] National Instruments, myDAQ - Dispositivo de aquisição de dados para estudantes, disponível em http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166, acessado em 20/10/2018.
+       </span>
+       <br/>
+       <a href="http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166" target="_blank">
+        http://www.ni.com/en-us/shop/select/myda...
+       </a>
+      </span>
+     </span>
+     , permitindo sua utilização em diversas atividades na área de instrumentação e automação eletrônica como também em experimentos e pesquisas de física.
+    </p>
+    <h1 class="articleSectionTitle">
+     8. Programa para controle dos motores
+    </h1>
+    <p>
+     O programa de controle do sistema foi desenvolvido utilizando a linguagem gráfica de programação
+     <i>
+      LabVIEW
+     </i>
+     , da empresa
+     <i>
+      National Instruments
+     </i>
+     , devido à sua simplicidade e programação intuitiva. É uma linguagem de alto nível, que utiliza como conceito principal o fluxo de dados.
+     <i>
+      LabVIEW
+     </i>
+     permite o desenvolvimento de algoritmos de forma simples, utilizando apenas ícones e elementos gráficos para representação de comunicação entre o computador e a interface de aquisição. O programa que apresentamos contém as tabelas com a sequência de acionamento das bobinas do motor de passo, a qual faz o motor girar de forma contínua e controlada. Como podemos observar na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     , temos duas tabelas, uma tabela de passo inteiro (
+     <i>
+      full step
+     </i>
+     ), e outra de meio passo (
+     <i>
+      half step
+     </i>
+     ).
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Tela do subprograma para controle do motor de passo (Motor-L298.vi), temos as tabelas com a sequência de acionamento das bobinas do motor de passo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O intuito de fazer essa parte do controle de acionamento do motor, dentro da programação em
+     <i>
+      LabVIEW
+     </i>
+     , é de justamente deixar o circuito o mais simples possível, não havendo a necessidade de componentes adicionais, como um microcontrolador contendo toda esta lógica de tabelas e controle de acionamento das bobinas do motor de passo. O fato de não utilizar um microcontrolador no projeto, permite diminuir os custos e também deixar o projeto muito mais simples. Todos os arquivos e programas desenvolvidos neste artigo estão disponíveis no repositório Github https://github.com/andretec/Stepper-motor-L298-myDAQ).
+    </p>
+    <p>
+     Sendo
+     <i>
+      LabVIEW
+     </i>
+     uma linguagem modular, o que fazemos é utilizar o programa da
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     (Motor-L298) como um subprograma (sub VI) dentro do programa principal. Na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     temos o painel frontal (
+     <i>
+      Front Panel
+     </i>
+     ), sendo esta a interface do usuário, onde o usuário entra com as informações como número de passos, tempo entre passos e sentido de rotação do motor. O painel frontal nos permite colocar componentes visuais de entrada de valores, tais como botões e componentes de entrada de números, além de também poder colocar indicadores que se assemelham à luzes (LEDs). Com um visual claro e intuitivo através deste painel faz-se a interação com o usuário.
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Tela do painel frontal do programa do motor de passo (Motor-L298.vi)
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     apresentamos a tela do diagrama de blocos (
+     <i>
+      Block Diagram
+     </i>
+     ) do programa teste (
+     <i>
+      test – Motor.vi
+     </i>
+     ). Nesta parte do programa é onde fazemos a ligação dos blocos e componentes. O programa é bem simples, possui um laço infinito no qual a tarefa executada termina somente com a intervenção do usuário clicando no botão “
+     <i>
+      stop
+     </i>
+     ”. O programa de controle está ao centro deste laço (ícone Motor L298) e nele estão definidos uma constante de 200 passos, que está ligada ao terminal “
+     <i>
+      number of steps
+     </i>
+     ”, e um terminal de controle que está ligado ao “
+     <i>
+      time between steps
+     </i>
+     ”, que define o intervalo de tempo entre os passos. Estão ligados ainda o terminal onde definimos os pinos de saída da placa de aquisição e também o terminal de sentido de rotação do motor de passo. Observe que existe uma constante ligada fora do laço, está definida inicialmente como “
+     <i>
+      false
+     </i>
+     ” (F) e ao longo do programa esta variável muda seu valor para “
+     <i>
+      true
+     </i>
+     ” (T), isto se dá através do componente de inversão digital conectado logo em seguida na linha verde.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Diagrama do programa de teste do controle do motor de passo (test – Motor.vi)
+      <br/>
+     </div>
+    </div>
+    <p>
+     Essa linha verde indica um sinal do tipo booleano (
+     <i>
+      true/false
+     </i>
+     ), ela está conectada ao terminal de sentido de rotação do motor de passo. O programa então funciona girando o motor de passo por uma volta completa em um sentido e depois fazendo o mesmo em outra direção, e faz isso indefinidamente.
+    </p>
+    <h1 class="articleSectionTitle">
+     9. Aplicação
+    </h1>
+    <p>
+     São várias as aplicações deste sistema para controle de motores de passo. Essas aplicações vão desde sistemas de microfabricação até técnicas de caracterização óptica não linear ou qualquer outro experimento que envolva um deslocamento controlado de uma amostra, espelho, monocromador, etc. Aqui apresentamos como aplicação uma medida de varredura-
+     <i>
+      Z
+     </i>
+     , onde a movimentação da amostra foi realizada com o sistema que desenvolvemos. Escolhemos a técnica de varredura-
+     <i>
+      Z
+     </i>
+     por ser simples e amplamente utilizada na área de óptica não linear.
+    </p>
+    <h1 class="articleSectionTitle">
+     10. Técnica de varredura-Z
+    </h1>
+    <p>
+     A técnica de varredura-
+     <i>
+      Z
+     </i>
+     (
+     <i>
+      Z-scan tecnique
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] M. Sheik-Bahae, A.A. Said, T. Wei, D. Hagan e E.W. van Stryland, IEEE J. Quantum Electronics 26, 760 (1990).
+       </span>
+      </span>
+     </span>
+     ) é uma técnica bastante utilizada para medir-se propriedades ópticas não lineares de amostras sólidas e líquidas. Um trabalho didático que contém mais informações a respeito pode ser encontrado na referência
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] C.R. Mendonça, L. Misoguti, F.F. Dall' Agnol e S.C. Zilio, Revista Brasileira de Ensino de Física, 21, 272 (1999).
+       </span>
+      </span>
+     </span>
+     . Nesta técnica a amostra desloca-se ao longo do eixo de propagação (considerado como sendo o eixo
+     <i>
+      Z
+     </i>
+     , daí o nome varredura-
+     <i>
+      Z
+     </i>
+     ) de um feixe laser focalizado, passando pelo ponto focal, veja
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     . Se a intensidade do laser for suficientemente alta, nas proximidades do ponto focal, vemos que a amostra passa a comportar-se como uma lente e este efeito de lente induzida é um efeito óptico não linear. Basicamente, um meio óptico não linear trans parente apresenta a seguinte expressão para o índice de refração:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mi>
+          n
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           n
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mi>
+           n
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mi>
+          I
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         0
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     é o índice de refração linear,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     o índice de refração não linear e
+     <i>
+      I
+     </i>
+     a irradiância. Sendo assim, para situações em que
+     <i>
+      I
+     </i>
+     é relativamente pequeno, o termo
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+       <mi>
+        I
+       </mi>
+      </mrow>
+     </math>
+     é desprezível e o índice de refração do material pode ser tido como sendo igual ao índice de refração linear,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         0
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     . Porém, para valores suficientemente altos de
+     <i>
+      I
+     </i>
+     , o efeito não linear torna-se significativo e pode-se observar então o efeito de lente induzida. Isso ocorre porque se considerarmos o perfil transversal de irradiância do feixe laser como sendo Gaussiano, podemos dizer que o termo
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mtext>
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     também comporta-se como uma Gaussiana, apresentando valor máximo no centro do feixe e diminuindo para as bordas. Isso leva a uma variação no índice de refração efetivo
+     <i>
+      n
+     </i>
+     , veja equação (1). Esta variação no índice de refração faz com que o material se comporte como uma lente convergente (caso
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     seja positivo) ou divergente (caso
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     seja negativo).
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Aparato experimental da técnica de varredura-
+      <i>
+       Z
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     No experimento mede-se, com um fotodetector, a potência transmitida por uma íris (abertura) posicionada após a amostra, como indicado na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     . Para o caso em que
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     é positivo, ao movermos a amostra em direção ao foco (
+     <i>
+      z
+     </i>
+     =0), ela passa a se comportar como uma lente convergente. Assim, quando a amostra está na região pré-foco (
+     <i>
+      z
+     </i>
+     &lt;0), ela causa um aumento na divergência do feixe na posição da íris, diminuindo a magnitude do sinal coletado pelo fotodetector,
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 14 (a)
+     </a>
+     . Por outro lado, quando a amostra está na região pós-foco (
+     <i>
+      z
+     </i>
+     &gt;0), ela diminui a divergência do feixe na posição da íris, aumentando assim o sinal coletado pelo fotodetector,
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 14 (b)
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 14
+      </strong>
+      <br/>
+      Caso
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          n
+         </mi>
+         <mtext>
+          2
+         </mtext>
+        </msub>
+        <mo>
+         &gt;
+        </mo>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </math>
+      . a) amostra antes do foco. b) amostra depois do foco. A linha contínua indica o traçado do feixe no caso em que não há efeito não linear. A linha tracejada indica a mudança na divergência do feixe causada pelo efeito não linear que ocorre devido à interação do laser com a amostra.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em uma curva típica de varredura-
+     <i>
+      Z
+     </i>
+     , a potência transmitida pela íris para cada posição
+     <i>
+      z
+     </i>
+     de varredura da amostra,
+     <math>
+      <mrow>
+       <mi>
+        P
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        z
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     , é dividida pela potência transmitida quando a amostra está distante do foco,
+     <math>
+      <mrow>
+       <mi>
+        P
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         z
+        </mi>
+        <mi>
+         ∞
+        </mi>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     , onde os efeitos não lineares não estão presentes, de forma que a contribuição dos efeitos lineares é eliminada. Assim, obtemos uma quantidade
+     <math>
+      <mrow>
+       <mi>
+        T
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        z
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mi>
+        P
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        z
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     /
+     <math>
+      <mrow>
+       <mi>
+        P
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         z
+        </mi>
+        <mi>
+         ∞
+        </mi>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     que é denominada de transmitância normalizada.
+    </p>
+    <p>
+     A curva apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 15
+     </a>
+     com um vale na região pré-foco seguido de um pico na região pós-foco é um típico sinal de varredura-
+     <i>
+      Z
+     </i>
+     para o caso de uma não linearidade refrativa positiva,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+       <mo>
+        &gt;
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     . Uma curva inversa é obtida para o caso em que
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+       <mo>
+        &lt;
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , ou seja, um pico pré-foco seguido de um vale pós-foco. Os extremos da transmitância normalizada, ou seja, os valores de vale e pico dependem do valor de
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     . Essencialmente,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     é proporcional à diferença entre a transmitância normalizada no pico e no vale,
+     <math>
+      <mrow>
+       <mi>
+        Δ
+       </mi>
+       <msub>
+        <mi>
+         T
+        </mi>
+        <mrow>
+         <mi>
+          p
+         </mi>
+         <mi>
+          v
+         </mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 15
+      </strong>
+      <br/>
+      T(z) em função da posição da amostra,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          n
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msub>
+        <mo>
+         &gt;
+        </mo>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     11. Medida experimental utilizando o novo sistema
+    </h1>
+    <p>
+     Para o nosso teste, preparamos uma solução de DR13 (
+     <i>
+      Disperse Red
+     </i>
+     13) em que usamos metanol como solvente. Como fonte de luz foi utilizado um feixe de laser contínuo em
+     <math>
+      <mrow>
+       <mi>
+        λ
+       </mi>
+       <mtext>
+       </mtext>
+       <mo>
+        =
+       </mo>
+       <mtext>
+       </mtext>
+       <mn>
+        532
+       </mn>
+      </mrow>
+     </math>
+     nm de um laser de Nd:YVO
+     <math>
+      <mrow>
+       <msub>
+        <mrow>
+        </mrow>
+        <mtext>
+         4
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     bombeado por diodos, dobrado em frequência. A focalização do feixe foi feita com uma lente convergente com distância focal de 5 cm (
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 17
+     </a>
+     ) e a transmitância foi coletada em um detector de silício (PIN). Realizamos o deslocamento da amostra com o controle de motor de passo desenvolvido neste projeto. Podemos observar na
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 17
+     </a>
+     que o estágio de translação está acoplado ao motor de passo através de uma correia dentada. A configuração mecânica do sistema de translação desloca 0,26 mm com 80 passos na configuração passo-completo (
+     <i>
+      full step
+     </i>
+     ) ou 0,13 mm na configuração meio-passo (
+     <i>
+      half step
+     </i>
+     ). Aqui realizamos o experimento no sistema de passo-completo. O resultado obtido é apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     , em que nota-se claramente uma curva característica de uma não linearidade negativa (pico na região pré-foco seguido de um vale na região pós-foco). Este sinal negativo da não linearidade está associado à origem térmica do efeito não linear medido em nosso experimento e, neste caso, o material comporta-se como uma lente divergente.
+    </p>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 16
+      </strong>
+      <br/>
+      T(z) para uma amostra de DR13. O deslocamento em
+      <i>
+       Z
+      </i>
+      foi realizado com o controle de motor de passo desenvolvido com módulo L298.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 17
+      </strong>
+      <br/>
+      Foto do estágio de translação com o suporte de amostra na montagem do experimento de varredura-
+      <i>
+       Z
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com os dados da curva experimental e as expressões teóricas da técnica de varredura-
+     <i>
+      Z
+     </i>
+     , ver referência
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] C.R. Mendonça, L. Misoguti, F.F. Dall' Agnol e S.C. Zilio, Revista Brasileira de Ensino de Física, 21, 272 (1999).
+       </span>
+      </span>
+     </span>
+     , é possível obter parâmetros do feixe como cintura, comprimento Rayleigh e também irradiância (desde que se saiba o valor da potência do feixe na amostra), além do valor do índice de refração não linear,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         n
+        </mi>
+        <mtext>
+         2
+        </mtext>
+       </msub>
+      </mrow>
+     </math>
+     , do material. Não apresentamos estes cálculos, pois foge da proposta deste trabalho. Nosso objetivo principal aqui foi mostrar a parte eletrônica de controle de motor de passo utilizando o L298 e sua interligação com um computador.
+    </p>
+    <h1 class="articleSectionTitle">
+     12. Conclusão
+    </h1>
+    <p>
+     Em resumo, o intuito deste trabalho foi mostrar que é possível simplificar a construção de um controle de motores de passo com o uso do L298. O uso deste componente eletrônico único evita a construção de circuitos eletrônicos mais complicados e complexos com microcontroladores e vários transistores de potência montados em uma placa de circuitos. Ademais, mostramos também o uso de um módulo de aquisição de dados mais simples (myDAQ) e linguagem LabVIEW com interfaces amigáveis para um experimento de varredura-
+     <i>
+      Z
+     </i>
+     , em que se utiliza um motor de passo para translação de amostras.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Gostaríamos de agradecer ao Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), à Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) pelo suporte financeiro, ao Instituto de Física de São Carlos e ao Grupo de Fotônica pela infraestrutura necessária para o desenvolvimento deste projeto.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        National Instruments,
+        <i>
+         myDAQ - Dispositivo de aquisição de dados para estudantes
+        </i>
+        , disponível em http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166, acessado em 20/10/2018.
+        <br/>
+        <a href="http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166" target="_blank">
+         » http://www.ni.com/en-us/shop/select/mydaq-student-data-acquisition-device?modelId=134166
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        http://brasil.ni.com/academia/mydaq, acessado em 20/10/2018.
+        <br/>
+        <a href="http://brasil.ni.com/academia/mydaq" target="_blank">
+         » http://brasil.ni.com/academia/mydaq
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF, acessado em 11/01/2019.
+        <br/>
+        <a href="http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF" target="_blank">
+         » http://www.dx.com/p/lson-l298n-stepper-motor-driver-module-red-5-35v-312595#.VGs7GvTF
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        Wikipedia,
+        <i>
+         Stepper motor
+        </i>
+        , disponível em https://en.wikipedia.org/wiki/Stepper_motor, acessado em 20/10/2018.
+        <br/>
+        <a href="https://en.wikipedia.org/wiki/Stepper_motor" target="_blank">
+         » https://en.wikipedia.org/wiki/Stepper_motor
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        <i>
+         A3967 Microstepping driver with translator
+        </i>
+        , disponível em https://www.sparkfun.com/datasheets/Robotics/A3967.pdf
+        <br/>
+        <a href="https://www.sparkfun.com/datasheets/Robotics/A3967.pdf" target="_blank">
+         » https://www.sparkfun.com/datasheets/Robotics/A3967.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        <i>
+         Desenvolvimento de um Controle para Motores de Passo
+        </i>
+        , disponível em http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf
+        <br/>
+        <a href="http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf" target="_blank">
+         » http://www.fotonica.ifsc.usp.br/pdfs/2010/Motor%20Passo.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        <i>
+         L298 Dual full-bridge driver
+        </i>
+        , disponível em https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+        <br/>
+        <a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf" target="_blank">
+         » https://www.sparkfun.com/datasheets/Components/General/L298N.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        M. Sheik-Bahae, A.A. Said, T. Wei, D. Hagan e E.W. van Stryland, IEEE J. Quantum Electronics
+        <b>
+         26
+        </b>
+        , 760 (1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        C.R. Mendonça, L. Misoguti, F.F. Dall' Agnol e S.C. Zilio, Revista Brasileira de Ensino de Física,
+        <b>
+         21
+        </b>
+        , 272 (1999).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        18 Abr 2019
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        26 Jan 2019
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        28 Fev 2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

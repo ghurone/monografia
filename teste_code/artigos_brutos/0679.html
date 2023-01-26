@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2015-0012" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2015-0012
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2015-0012">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Medida de
+  <math display="inline" id="m1">
+   <mi>
+    g
+   </mi>
+  </math>
+  com a placa Arduino em um experimento simples de queda livre
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Measurement of
+  <math display="inline" id="m2">
+   <mi>
+    g
+   </mi>
+  </math>
+  with an Arduino microcontroller in a simple free fall experiment
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     H. Cordova
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Mestrado Profissional em Ensino de Física, Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     A. C. Tort
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:tort@if.ufrj.br">
+      tort@if.ufrj.br
+     </a>
+     .
+    </div>
+    Mestrado Profissional em Ensino de Física, Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Um modo simples de medir a aceleração da gravidade
+     <math display="inline" id="m3">
+      <mi>
+       g
+      </mi>
+     </math>
+     no laboratório de física do ensino médio e de física básica no ensino universitário com um microcontrolador da família Arduíno é proposto. Resultados experimentais com um erro relativo de
+     <math display="inline" id="m4">
+      <mn>
+       0
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+      <mi>
+       %
+      </mi>
+     </math>
+     são apresentados e comparados com o valor local de
+     <math display="inline" id="m5">
+      <mi>
+       g
+      </mi>
+     </math>
+     medido pelo Observatório Nacional, Rio de Janeiro.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     aceleração da gravidade; queda livre; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     A simple way of measuring the terrestrial acceleration
+     <math display="inline" id="m6">
+      <mi>
+       g
+      </mi>
+     </math>
+     in the basic lab that makes use of the Arduino microcontroller is proposed. Experimental results with a relative error of
+     <math display="inline" id="m7">
+      <mn>
+       0
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+      <mi>
+       %
+      </mi>
+     </math>
+     were obtained and compared with the local value of
+     <math display="inline" id="m8">
+      <mi>
+       g
+      </mi>
+     </math>
+     as measured by the Brazilian National Observatory at Rio de Janeiro.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     gravitational accleration; free fall; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Um dos muitos modos possíveis de medir a aceleração da gravidade
+     <math display="inline" id="m9">
+      <mi>
+       g
+      </mi>
+     </math>
+     é deixar cair verticalmente um corpo a partir de uma altura predeterminada
+     <math display="inline" id="m10">
+      <mi>
+       h
+      </mi>
+     </math>
+     e medir a duração do seu tempo de queda. Como a velocidade inicial é nula, segue que:
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m11">
+        <mi>
+         g
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           h
+          </mi>
+         </mrow>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             t
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math display="inline" id="m12">
+      <mi>
+       t
+      </mi>
+     </math>
+     é a duração da queda. Embora a
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq.(1)
+     </a>
+     possa ser introduzida nos primeiros estágios do ensino da cinemática e seja o fundamento de uma das maneiras mais simples de medir
+     <math display="inline" id="m13">
+      <mi>
+       g
+      </mi>
+     </math>
+     , a rapidez com que a queda livre acontece pode tornar o experimento frustante para um novato. É possível melhorar os resultados por meio de circuitos eletrônicos capazes de determinar intervalos de tempo com pelo menos
+     <math display="inline" id="m14">
+      <mn>
+       1
+      </mn>
+      <mi>
+       ∕
+      </mi>
+      <mn>
+       10
+      </mn>
+     </math>
+     de milissegundo de resolução, veja por exemplo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.A. Blackburn and R. Koenig Am. J. Phys. 44, 855 (1976).
+       </span>
+      </span>
+     </span>
+     ], mas estas técnicas são mais apropriadas para os laboratórios didáticos avançados dos cursos de graduação. Por outro lado, o uso cada vez mais difundido dos modernos microcontroladores de baixo custo, como por exemplo, a família de microcontroladores ou placas Arduíno [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] M.A. Cavalcante, A. Bonizzia e L.C.P. Gomes, Rev. Bras. En. Fís. 30, 2501 (2008).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] H S. Amorim, M.A. Dias e V. Soares, Rev. Bras. En. Fís. 37, 4310 (2015).
+       </span>
+      </span>
+     </span>
+     ], capazes de medir intervalos de tempo na faixa de mili e microssegundos permite obter resultados perfeitamente aceitáveis no laboratório de física do ensino médio e de física básica no ensino universitário, mesmo que em uma primeira abordagem, por conveniência pedagógica, desprezemos os efeitos da resistência do ar e outros efeitos espúrios. Nossa prática experimental nos diz que enquanto
+     <math display="inline" id="m15">
+      <mi>
+       h
+      </mi>
+     </math>
+     for uma altura inferior a
+     <math display="inline" id="m16">
+      <mn>
+       1
+      </mn>
+     </math>
+     metro tais efeitos podem ser desconsiderados em uma primeira abordagem. Nas próximas seções discutiremos como isto pode ser feito.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Arranjo experimental
+    </h1>
+    <p>
+     O arranjo experimental é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     . Uma pequena esfera de aço de
+     <math display="inline" id="m17">
+      <mn>
+       9
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     mm de diâmetro está inicialmente presa entre duas alavancas metálicas, uma fixa e outra móvel. Estas duas alavancas fazem parte do sensor superior, que também funciona como plataforma de lançamento da esferinha, veja a
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     . A alavanca móvel, presa à alavanca fixa por meio de um ou mais atilhos de borracha, pressiona a esferinha contra a alavanca fixa. Enquanto a esferinha de aço estiver presa e logo em contato com as alavancas, teremos uma voltagem de
+     <math display="inline" id="m18">
+      <mn>
+       5
+      </mn>
+     </math>
+     V (nível alto) na porta 12 da placa Arduíno. Quando a alavanca móvel for manualmente empurrada para o lado e a esfera liberada, o circuito ficará aberto e a voltagem cai para
+     <math display="inline" id="m19">
+      <mn>
+       0
+      </mn>
+     </math>
+     V (nível baixo) na porta 12. Depois de cair uma altura predeterminada
+     <math display="inline" id="m20">
+      <mi>
+       h
+      </mi>
+     </math>
+     , a esfera atinge o sensor inferior -
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     - que consiste em uma base de madeira móvel ligeiramente inclinada que sob o efeito do impacto com a esfera aciona um contato elétrico levando a porta 11 do Arduíno para nível alto. Assim que a esfera rola para fora da base esta porta retorna ao nível baixo, veja o esquema da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     onde também é mostrado o circuito de apoio. O microcontrolador Arduíno registra o instante da liberação e do impacto, logo, a duração do tempo queda, depois permanece inativo durante 10 segundos antes de estar pronto para a próxima medida. A esfera é então recolocada na posição inicial levando o sensor superior novamente para o nível alto, permitindo uma nova medida. No sensor superior, há um furo de 1 mm de diâmetro onde a esfera deve ser encaixada, garantindo sempre o mesmo ponto de lançamento sem risco de mudança na altura. A altura medida é a distância entre o ponto de impacto da esfera no sensor inferior e a sua parte inferior, quando esta ainda está presa no sensor superior, assim o diâmetro da esfera não causa erros. A altura
+     <math display="inline" id="m21">
+      <mi>
+       h
+      </mi>
+     </math>
+     foi medida com uma trena metálica com divisões de 1 mm. O espaço entre os contatos elétricos do sensor inferior é muito inferior a
+     <math display="inline" id="m22">
+      <mn>
+       1
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     mm. Convém ressaltar que a esfera metálica, assim como os contatos metálicos dos sensores, devem estar perfeitamente limpos para evitar interrupções indevidas na comunicação com a placa Arduíno. O código-fonte para aquisição de dados com Arduino é mostrado no
+     <strong>
+      Apêndice
+     </strong>
+     . Para informações sobre a programação da placa Arduino, veja por exemplo, [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] A.R. de Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev Bras. En. Fís. 33, 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ] e referências ali citadas.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Visão geral do arranjo experimental.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Sensores superior (esquerda) e inferior (direita). No desenho, por clareza, o espaço entre os contatos elétricos no sensor inferior está exagerado, no experimento ele é inferior a
+      <math display="inline" id="m23">
+       <mn>
+        1
+       </mn>
+       <mspace width="0.3em">
+       </mspace>
+      </math>
+      mm. O peso da esfera ao atingir a base do sensor inferior permite que os contatos se toquem e ao rolar para fora da base, permite que a mola restaure a condição inicial.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Detalhes do sensor superior e plataforma de lançamento. Note que a esferinha fica encaixada em um pequeno furo e ali mantida pela pressão mecânica gerada pelo atilho de borracha. A esferinha é liberada quando a alavanca móvel é empurrada lateralmente. Ao lado, o circuito de apoio.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Resultados experimentais
+    </h1>
+    <p>
+     Para
+     <math display="inline" id="m24">
+      <mi>
+       h
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       943
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     m com
+     <math display="inline" id="m25">
+      <mi>
+       δ
+      </mi>
+      <mi>
+       h
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       001
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     m e
+     <math display="inline" id="m26">
+      <mi>
+       δ
+      </mi>
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       001
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     s, os tempos de queda vertical a partir do repouso são mostrados na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     .
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Medidas dos tempos de queda-livre. A duração média da queda é de
+      <math display="inline" id="m27">
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        439
+       </mn>
+       <mspace width="0.3em">
+       </mspace>
+      </math>
+      s.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os valores obtidos para
+     <math display="inline" id="m52">
+      <msub>
+       <mrow>
+        <mi>
+         g
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     correspondem ao valor médio de cada medida obtido a partir da
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (1)
+     </a>
+     da seguinte forma:
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m53">
+        <msub>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            g
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             g
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mspace width="0.3em">
+            </mspace>
+            <mstyle>
+             <mtext>
+              máx
+             </mtext>
+            </mstyle>
+           </mrow>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             g
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mspace width="0.3em">
+            </mspace>
+            <mstyle>
+             <mtext>
+              mín
+             </mtext>
+            </mstyle>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </mfrac>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m54">
+        <msub>
+         <mrow>
+          <mi>
+           g
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mspace width="0.3em">
+          </mspace>
+          <mstyle>
+           <mtext>
+            máx
+           </mtext>
+          </mstyle>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             h
+            </mi>
+            <mo>
+             +
+            </mo>
+            <mi>
+             δ
+            </mi>
+            <mi>
+             h
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mrow>
+          <msup>
+           <mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <msub>
+               <mrow>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+               </mrow>
+              </msub>
+              <mi>
+               −
+              </mi>
+              <mi>
+               δ
+              </mi>
+              <mi>
+               t
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mo>
+         ;
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="ee4">
+     <a name="e4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m55">
+        <msub>
+         <mrow>
+          <mi>
+           g
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mspace width="0.3em">
+          </mspace>
+          <mstyle>
+           <mtext>
+            mín
+           </mtext>
+          </mstyle>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             h
+            </mi>
+            <mi>
+             −
+            </mi>
+            <mi>
+             δ
+            </mi>
+            <mi>
+             h
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mrow>
+          <msup>
+           <mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <msub>
+               <mrow>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+               </mrow>
+              </msub>
+              <mo>
+               +
+              </mo>
+              <mi>
+               δ
+              </mi>
+              <mi>
+               t
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A incerteza individual
+     <math display="inline" id="m56">
+      <mi>
+       δ
+      </mi>
+      <msub>
+       <mrow>
+        <mi>
+         g
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     pode ser calculada com a expressão
+    </p>
+    <div class="row formula" id="ee5">
+     <a name="e5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m57">
+        <mi>
+         δ
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           g
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             g
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mspace width="0.3em">
+            </mspace>
+            <mstyle>
+             <mtext>
+              máx
+             </mtext>
+            </mstyle>
+           </mrow>
+          </msub>
+          <mi>
+           −
+          </mi>
+          <msub>
+           <mrow>
+            <mi>
+             g
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mspace width="0.3em">
+            </mspace>
+            <mstyle>
+             <mtext>
+              mín
+             </mtext>
+            </mstyle>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </mfrac>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     ou do modo usual [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] J.G. Taylor, An Introduction to Error Analysis (University Science Books, Boulder, 1982), 2nd ed.
+       </span>
+      </span>
+     </span>
+     ]. O resultado é
+     <math display="inline" id="m58">
+      <mi>
+       δ
+      </mi>
+      <msub>
+       <mrow>
+        <mi>
+         g
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       055
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     m/s
+     <math display="inline" id="m59">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     para todas as vinte e uma medidas individuais. Os resultados para
+     <math display="inline" id="m60">
+      <msub>
+       <mrow>
+        <mover accent="true">
+         <mi>
+          g
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     são mostrados na
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     . O valor médio de
+     <math display="inline" id="m61">
+      <msub>
+       <mrow>
+        <mover accent="true">
+         <mi>
+          g
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é
+     <math display="inline" id="m62">
+      <mn>
+       9
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       778
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     m/s
+     <math display="inline" id="m63">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     e o desvio padrão da média ou erro padrão é
+     <math display="inline" id="m64">
+      <mn>
+       0
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       012
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     m/s
+     <math display="inline" id="m65">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     , logo o experimento nos dá
+    </p>
+    <div class="row formula" id="ee6">
+     <a name="e6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m66">
+        <msub>
+         <mrow>
+          <mi>
+           g
+          </mi>
+         </mrow>
+         <mrow>
+          <mstyle>
+           <mtext>
+            exp.
+           </mtext>
+          </mstyle>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         9
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         78
+        </mn>
+        <mtext>
+        </mtext>
+        <mi>
+         ±
+        </mi>
+        <mtext>
+        </mtext>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         01
+        </mn>
+        <mstyle>
+         <mtext>
+          m/s
+         </mtext>
+         <mstyle>
+          <msup>
+           <mrow>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mstyle>
+         <mtext>
+         </mtext>
+        </mstyle>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Valores de
+      <math display="inline" id="m67">
+       <msub>
+        <mrow>
+         <mover accent="true">
+          <mi>
+           g
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+        </mrow>
+        <mrow>
+         <mi>
+          i
+         </mi>
+        </mrow>
+       </msub>
+      </math>
+      ; a incerteza de cada medida individual é
+      <math display="inline" id="m68">
+       <mi>
+        δ
+       </mi>
+       <msub>
+        <mrow>
+         <mi>
+          g
+         </mi>
+        </mrow>
+        <mrow>
+         <mi>
+          i
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        δ
+       </mi>
+       <mi>
+        g
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        055
+       </mn>
+       <mspace width="0.3em">
+       </mspace>
+      </math>
+      m/s
+      <math display="inline" id="m69">
+       <msup>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mn>
+          2
+         </mn>
+        </mrow>
+       </msup>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     O resultado dado pela
+     <a class="open-asset-modal" data-target="#ModalSchemee6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (6)
+     </a>
+     deve ser comparado com uma aproximação apropriada ao valor de
+     <math display="inline" id="m97">
+      <mi>
+       g
+      </mi>
+     </math>
+     local medido por Souza e Santos do Observatório Nacional [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] M.A. de Souza e A.A. dos Santos Absolute gravimetry on the Agulhas Negras calibration line, Rev. Bras. Geof. 28, 165 (2010).
+       </span>
+      </span>
+     </span>
+     ] em 2010,
+    </p>
+    <div class="row formula" id="ee7">
+     <a name="e7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m98">
+        <msub>
+         <mrow>
+          <mi>
+           g
+          </mi>
+         </mrow>
+         <mrow>
+          <mstyle>
+           <mtext>
+            Rio de Janeiro
+           </mtext>
+          </mstyle>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         978
+        </mn>
+        <mspace width="0.3em">
+        </mspace>
+        <mn>
+         789
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         852
+        </mn>
+        <mtext>
+        </mtext>
+        <mi>
+         ±
+        </mi>
+        <mtext>
+        </mtext>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         011
+        </mn>
+        <mstyle>
+         <mtext>
+          mGal
+         </mtext>
+        </mstyle>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math display="inline" id="m99">
+      <mn>
+       1
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+      <mstyle>
+       <mtext>
+        mGal
+       </mtext>
+      </mstyle>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mspace width="0.3em">
+      </mspace>
+      <mi>
+       ×
+      </mi>
+      <mspace width="0.3em">
+      </mspace>
+      <mn>
+       1
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mi>
+         −
+        </mi>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </msup>
+      <mspace width="0.3em">
+      </mspace>
+     </math>
+     m/s
+     <math display="inline" id="m100">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     . Para fins de comparação com o resultado experimental obtido basta que consideremos o valor aproximado
+    </p>
+    <div class="row formula" id="ee8">
+     <a name="e8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m101">
+        <msub>
+         <mrow>
+          <mi>
+           g
+          </mi>
+         </mrow>
+         <mrow>
+          <mstyle>
+           <mtext>
+            Rio.
+           </mtext>
+          </mstyle>
+         </mrow>
+        </msub>
+        <mtext>
+        </mtext>
+        <mi>
+         ≈
+        </mi>
+        <mtext>
+        </mtext>
+        <mn>
+         9
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         79
+        </mn>
+        <mstyle>
+         <mtext>
+          m/s
+         </mtext>
+         <mstyle>
+          <msup>
+           <mrow>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mstyle>
+         <mtext>
+         </mtext>
+        </mstyle>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O desvio percentual relativo é
+    </p>
+    <div class="row formula" id="ee9">
+     <a name="e9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m102">
+        <mfrac>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mn>
+           9
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           79
+          </mn>
+          <mi>
+           −
+          </mi>
+          <mn>
+           9
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           78
+          </mn>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <mrow>
+          <mn>
+           9
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           79
+          </mn>
+         </mrow>
+        </mfrac>
+        <mspace width="0.3em">
+        </mspace>
+        <mi>
+         ×
+        </mi>
+        <mspace width="0.3em">
+        </mspace>
+        <mn>
+         100
+        </mn>
+        <mtext>
+        </mtext>
+        <mi>
+         ≈
+        </mi>
+        <mtext>
+        </mtext>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mspace width="0.3em">
+        </mspace>
+        <mi>
+         %
+        </mi>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Nosso resultado pode também ser comparado com os obtidos com outros métodos, veja por exemplo, as referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] C.E. Aguiar e F. Laudares, Am. J. Phys. 71, 499 (2003).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] J.A. White, A. Medina, F.L. Román and S. Velasco, Phys. Teach. 45 175 (2007)
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] O. Schwarz, P. Vogt e J. Kunh, Phys. Teach. 51 312 (2013).
+       </span>
+      </span>
+     </span>
+     ]. É possível medir também com o modelo de placa Arduino que utilizamos (Mega 2560) intervalos de tempo com precisão de microssegundos, mas, no caso do arranjo experimental proposto, os registros das durações temporais são instáveis e muitos dados devem ser descartados, o que nos parece inconveniente desde um ponto de vista pedagógico
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Comentários finais
+    </h1>
+    <p>
+     O fator que realmente diferencia esta proposta experimental no nível do laboratório do ensino médio é a possibilidade de medir intervalos de tempo com precisão de milissegundos com um arranjo simples e de baixo custo. De fato, o custo total - sem contar o computador - pode ser igual ou menor do que R
+     <math display="inline" id="m103">
+      <mi>
+       $
+      </mi>
+      <mspace width="0.3em">
+      </mspace>
+      <mn>
+       60
+      </mn>
+     </math>
+     . Neste experimento usamos um microcontrolador Arduíno Mega, que pode ser substituído pelo Arduíno UNO de menor custo, sem necessidade de alteração na programação. Versões mais baratas dos microcontroladores Arduíno originais, os Garaginos, podem ser encontradas por R
+     <math display="inline" id="m104">
+      <mi>
+       $
+      </mi>
+      <mn>
+       45
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       00
+      </mn>
+     </math>
+     (a versão similar); a
+     <i>
+      protoboard
+     </i>
+     de 170 furos, custa por volta de R
+     <math display="inline" id="m105">
+      <mi>
+       $
+      </mi>
+      <mn>
+       6
+      </mn>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       00
+      </mn>
+     </math>
+     , e muitas vezes acompanha o
+     <i>
+      kit
+     </i>
+     Arduíno. Os dois resistores e os fios também são de baxíssimo custo. A base dos sensores foi feita com restos de madeira e as alavancas com sucata de alumínio. A mola que recoloca o sensor inferior na posição inicial foi tirada de uma impressora fora de uso.
+    </p>
+    <p>
+     Um dos autores do presente trabalho (H.C.) testou com sucesso o experimento com a colaboração voluntária dos alunos do terceiro ano do ensino médio de uma escola pública localizada no município do Rio de Janeiro. O experimento foi realizado no contraturno quando os alunos permanecem na escola sem a obrigação de estar em sala de aula. Como quase sempre acontece quando os alunos tem a oportunidade de “colocar a mão na massa”, a resposta foi gratificante para o professor. Mas deve ser observado que não foi exigido dos alunos que programassem o microcontrolador. Isto foi feito pelo professor e deste modo os alunos puderam concentrar-se na física envolvida no experimento e no tratamento dos dados que procuramos fazer do modo mais simples possível. Em condições regulares, os autores estimam que duas aulas de 50 minutos seriam suficientes para que os alunos pudessem realizar com eficácia o experimento. Na primeira aula seriam apresentados os fundamentos teóricos e o arranjo experimental dando a oportunidade aos alunos de familiarizaremse com o processo da medida a ser feita. Na segunda aula, os alunos poderiam então colher os dados e analisá-los.
+    </p>
+    <p>
+     Mas, notemos que nada impede que havendo disponibilidade de tempo, rudimentos da programação do micontrolador Arduíno também possam ser introduzidos.
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        A programação do microcontrolador Arduíno é feita em C++.
+       </span>
+      </span>
+     </span>
+     A questão da introdução do ensino de programação é contorversa, mas aqui, dada a simplicidade do experimento, ela é opcional.
+    </p>
+    <p>
+     Um experimento como este apresenta muitas possibilidades pedagógicas. Pode ser utilizado como uma experiência de laboratório de física básica em um curso formal, um projeto extraclasse para um grupo de alunos ou um projeto individual. Observe também que embora pensado para o laboratório básico nos níveis médio e universitário, este experimento pode ser realizado facilmente em casa por um aluno ou um amador interessado. Há uma comunidade Arduino formada por grupos que atuam nas redes sociais e que são totalmente dedicados à troca de experiências e informações envolvendo o uso e a programação do microcontrolador Arduíno e muitos de nossos alunos participam desses grupos.
+    </p>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        A programação do microcontrolador Arduíno é feita em C
+        <math display="inline" id="m106">
+         <msup>
+          <mrow>
+          </mrow>
+          <mrow>
+           <mo>
+            +
+           </mo>
+           <mo>
+            +
+           </mo>
+          </mrow>
+         </msup>
+        </math>
+        .
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem ao colega Dr. V. Soares pela leitura crítica do manuscrito original e aos árbitros pelas sugestões pertinentes.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] J.A. Blackburn and R. Koenig Am. J. Phys.
+        <b>
+         44
+        </b>
+        , 855 (1976).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] M.A. Cavalcante, A. Bonizzia e L.C.P. Gomes, Rev. Bras. En. Fís.
+        <b>
+         30
+        </b>
+        , 2501 (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] M.A. Cavalcante, C.R.C. Tavolar e E. Molisani, Rev. Bras. En. Fís.
+        <b>
+         33
+        </b>
+        , 4503 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] V.R. Coluci, G. Paulino, D.C. de Souza e E.P.R. Vasconcelos, Rev. Bras. En. Fís.
+        <b>
+         35
+        </b>
+        , 2506 (2013).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] A.R. de Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev Bras. En. Fís.
+        <b>
+         33
+        </b>
+        , 1702 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] H S. Amorim, M.A. Dias e V. Soares, Rev. Bras. En. Fís.
+        <b>
+         37
+        </b>
+        , 4310 (2015).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] C.E. Aguiar e F. Laudares, Am. J. Phys.
+        <b>
+         71
+        </b>
+        , 499 (2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] J.G. Taylor,
+        <i>
+         An Introduction to Error Analysis
+        </i>
+        (University Science Books, Boulder, 1982), 2nd ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] M.A. de Souza e A.A. dos Santos
+        <i>
+         Absolute gravimetry on the Agulhas Negras calibration line
+        </i>
+        , Rev. Bras. Geof.
+        <b>
+         28
+        </b>
+        , 165 (2010).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] J.A. White, A. Medina, F.L. Román and S. Velasco, Phys. Teach.
+        <b>
+         45
+        </b>
+        175 (2007)
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] R. De Luca e S. Ganci Rev. Bras. En. Fís.
+        <b>
+         33
+        </b>
+        , 3301 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] O. Schwarz, P. Vogt e J. Kunh, Phys. Teach.
+        <b>
+         51
+        </b>
+        312 (2013).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Apêndice: código de aquisição de dados com Arduino">
+    <h1 class="articleSectionTitle">
+     Apêndice: código de aquisição de dados com Arduino
+    </h1>
+    <p>
+     Por razões pedagógicas, o código-fonte utilizado é simples e procura obter apenas o tempo de duração da queda. Para maiores informações sobre a programação da placa Arduino ver [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] A.R. de Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev Bras. En. Fís. 33, 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] H S. Amorim, M.A. Dias e V. Soares, Rev. Bras. En. Fís. 37, 4310 (2015).
+       </span>
+      </span>
+     </span>
+     ].
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+     </a>
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Jun 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        08 Dez 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        04 Jan 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

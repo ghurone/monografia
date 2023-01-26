@@ -1,0 +1,5877 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0052" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0052
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0052">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Medindo a atividade cromosférica a partir dos espectros estelares
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Measuring chromospheric activity from stellar spectra
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Rafael R. Ferreira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:rafaelramon.pesquisa@gmail.com">
+      rafaelramon.pesquisa@gmail.com
+     </a>
+    </div>
+    Universidade Federal do Rio Grande do Norte, Departamento de Física Teórica e Experimental, Natal, RN, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-7255-3489">
+     http://orcid.org/0000-0001-7255-3489
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Bernardo F. O. Gonçalves
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Rio Grande do Norte, Departamento de Física Teórica e Experimental, Natal, RN, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-5467-5992">
+     http://orcid.org/0000-0001-5467-5992
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Matthieu Castro
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Rio Grande do Norte, Departamento de Física Teórica e Experimental, Natal, RN, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-1332-2477">
+     http://orcid.org/0000-0002-1332-2477
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Este trabalho apresenta, através de uma abordagem didática, os principais indicadores espectroscópicos atualmente utilizados para mensurar a atividade cromosférica, bem como introduz os mecanismos físicos que definem a atividade cromosférica em estrelas do tipo solar. Na introdução, apresentamos como se compõe a atmosfera solar e também indicamos como esse assunto poderia ser abordado no contexto do ensino de astronomia no ensino médio. Nas seções seguintes, caracterizamos fisicamente a cromosfera solar e apresentamos os principais índices espectroscópicos utilizados para medir a atividade cromosférica. Na parte final deste artigo, detalhamos o código utilizado para medir a atividade cromosférica a partir dos espectros estelares.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave
+     </strong>
+     <br/>
+     Sol; manchas solares; atividade cromosférica estelar
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     This work presents, through a didactic approach, the main spectroscopic indicators currently used to measure chromospheric activity, as well as introducing the physical mechanisms that define chromospheric activity in solar-type stars. In the introduction, we present how the solar atmosphere is composed and also indicate how this subject can be approached in the context of teaching astronomy in high school. In the following sections, we describe the physics of the solar chromosphere and present the main spectroscopic indices used to measure chromospheric activity. In the last section, we detail the code used to measure chromospheric activity from stellar spectra.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Sun; sunspots; stellar chromospheric activity
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A atmosfera é a única região do Sol diretamente acessível à observação humana, seja por telescópios terrestres ou espaciais. Sendo assim, o caminho percorrido por uma partícula de luz (um fóton) do núcleo do Sol até sua superfície é completamente indisponível para um observador terrestre. Somente na fotosfera podemos ter as primeiras informações sobre a radiação gerada pelas reações de fusão nuclear que ocorrem no interior solar, radiação esta que foi absorvida e reemitida um número exorbitante de vezes (pelos átomos que compõem a matéria solar) antes de emergir na fotosfera. A partir de então, os fótons devem fazer sua jornada pela atmosfera solar antes de serem captados por um detector terrestre. Ainda que seja uma região onde o plasma é muito mais rarefeito em comparação com o interior solar, a atmosfera esconde uma complexidade que vai muito além do que pode parecer à primeira vista. Embora a fotosfera seja a região mais fácil de ser observada, uma vez que a maior parte da luz solar que chega à Terra provém dela, existem outras camadas menos densas da atmosfera solar onde vários fenômenos interessantes ocorrem.
+    </p>
+    <p>
+     A divisão da atmosfera do Sol é constituída pelas seguintes camadas (ver Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS1_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     ): fotosfera, cromosfera, zona de transição e coroa. A fotosfera é a parte mais interna da atmosfera solar. Como já mencionado, também é a região mais fácil de ser observada na região visível do espectro eletromagnético. Sua temperatura fica em torno de 5800 K e sua densidade é de 2×10
+     <sup>
+      −4
+     </sup>
+     <i>
+      k g
+     </i>
+     ⋅
+     <i>
+      m
+     </i>
+     <sup>
+      −3
+     </sup>
+     . Já a cromosfera é uma região mais fria e menos densa que a fotosfera solar, com valores aproximados de 4500 K e 5×10
+     <sup>
+      −6
+     </sup>
+     <i>
+      k g
+     </i>
+     ⋅
+     <i>
+      m
+     </i>
+     <sup>
+      −3
+     </sup>
+     , para temperatura e densidade respectivamente. Devido à sua baixa densidade, a cromosfera é completamente ofuscada pelo brilho da fotosfera, podendo ser observada apenas com a utilização de filtros ópticos, em especial o filtro da linha espetral H-alfa (uma das linhas que são formadas na cromosfera). Entretanto, como será apresentado nas próximas seções, a alta cromosfera é caracterizada como uma região onde acontece uma inversão no gradiente de temperatura (ver Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS1_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     ), o que gera vários efeitos espectroscópicos dignos de uma abordagem mais detalhada.
+    </p>
+    <div class="row fig" id="S1_F1">
+     <a name="S1_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS1_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/4d5b609f985d7b86616f0d67112e8f3404d41d52.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Na figura vemos não só vemos a estrutura da atmosfera solar dividida em camadas (Fotosfera, Cromosfera e Coroa), como também algumas das estruturas internas do Sol, como núcleo e zona convectiva. Crédito: NASA’s Goddard Space Flight Center.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="S1_F2">
+     <a name="S1_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS1_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/b18e8d039efd073de9595122a15026b75ca0a0c3.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Estrutura térmica da atmosfera solar, a partir dos modelos teóricos publicados por Fontenla
+      <i>
+       et al.
+      </i>
+      2015 [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        18
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         18 J.M. Fontenla, P.C. Stancil e E. Landi, ApJ 809, 157 (2015).
+        </span>
+       </span>
+      </span>
+      ] e Fontenla
+      <i>
+       et al.
+      </i>
+      2016 [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        14
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         14 J.M. Fontenla, J.L. Linsky, J. Witbrod, K. France, A. Buccino, P. Mauas, M. Vieytes e L.M. Walkowicz, ApJ 830, 154 (2016).
+        </span>
+       </span>
+      </span>
+      ]. A baixa cromosfera consiste na região que se prolonga de dentro para fora da atmosfera estelar (a partir de onde o contínuo é opticamente estreito até o limbo estelar), onde aparecem as linhas atmosféricas tais como Hα. Já a alta cromosfera vai desde a região de temperatura mínima até o ponto de inversão do gradiente de temperatura, onde o hidrogênio se torna substancialmente ionizado. Fonte: Fontenla
+      <i>
+       et al.
+      </i>
+      2016 [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        14
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         14 J.M. Fontenla, J.L. Linsky, J. Witbrod, K. France, A. Buccino, P. Mauas, M. Vieytes e L.M. Walkowicz, ApJ 830, 154 (2016).
+        </span>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em seguida, a atmosfera solar apresenta uma zona de transição, região que fica entre a cromosfera e a coroa solar. Ela é caracterizada por um rápido aumento da temperatura e densidades cada vez menores (da ordem de centenas de milhares de Kelvin
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Para exemplificar, as linhas de emissão C II-IV, Si III-IV e O V são formadas na região de transição em temperaturas variando entre 20000 à 300000 K (Linsky 2019 [1]).
+       </span>
+      </span>
+     </span>
+     e 2×10
+     <sup>
+      −10
+     </sup>
+     <i>
+      k g
+     </i>
+     ⋅
+     <i>
+      m
+     </i>
+     <sup>
+      −3
+     </sup>
+     , respectivamente). É uma região muito pouco estudada devido à dificuldade de observação e suas características pouco definidas, o que é consequência de uma complexidade física do plasma que se encontra nessa região. Em uma zona mais próximas da coroa, a temperatura pode chegar a impressionantes 10
+     <sup>
+      6
+     </sup>
+     K. A coroa solar, por outro lado, tem uma temperatura média em torno de 2–3 milhões de K, podendo atingir valores muito maiores que a média em “zonas quentes”, algo que ainda desafia a teoria e os modelos atmosféricos para o Sol. A explicação mais aceita é que as perturbações magnéticas que se originam na fotosfera são responsáveis por tal aumento inesperado na temperatura da coroa, especialmente envolvendo o fenômeno de reconexão magnética (Priest 1999 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2 E.R. Priest, Ap&amp;SS 264, 77 (1999).
+       </span>
+      </span>
+     </span>
+     ]). Por fim, temos a heliosfera, região de vasta abrangência em que as partículas provenientes das camadas inferiores da atmosfera solar escapam para o meio interestelar e formam o que é conhecido como
+     <i>
+      vento solar
+     </i>
+     .
+    </p>
+    <p>
+     É interessante perceber a aplicabilidade deste conteúdo nas salas de aula do ensino básico, especialmente no ensino médio, que tanto carecem de uma visão mais aplicada dos assuntos vistos em sala de aula. Conteúdos como eletromagnetismo, termodinâmica e diversos tópicos de física moderna podem ser apresentados a partir do estudo da estrutura e dinâmica da atmosfera solar. O estudo sobre as camadas da atmosfera solar também pode ser apresentado de forma interdisciplinar, reunindo disciplinas como física, química e biologia. Além disso, existem diversas formas de se trabalhar experimentos simples ligados à física do Sol, de modo a engajar os alunos nos conteúdos apresentados em sala de aula (Alves 2020 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3 P.V. Alves, L.H.S. Reis, C.A.S. Querino, M.A.L. Moura, A.A. Feitosa Júnior e P.A.S. Martins, Revista Brasileira de Ensino de Física 42, e20190304 (2020).
+       </span>
+      </span>
+     </span>
+     ]). Outra fonte relevante de recursos didáticos que tratam da física solar é o livro publicado por Silva 2006 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4 A.V.R. Silva, Nossa Estrela O Sol. Temas atuais de física (Livraria da Física, São Paulo, 2006).
+       </span>
+      </span>
+     </span>
+     ], que contém exercícios a serem desenvolvidos em sala de aula. Portanto, possibilidades não faltam para que um assunto tão importante como a física solar seja apresentada imersa nos conteúdos previstos pela BNCC (Base Nacional Comum Curricular) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5 Ministério da Educação, Base Nacional Comum Curricular (Ministério da Educação, Brasília, 2018).
+       </span>
+      </span>
+     </span>
+     ] para as aulas do ensino básico.
+    </p>
+    <p>
+     Este artigo tem como objetivo apresentar, através de uma abordagem didática, a atividade cromosférica estelar, bem como introduzir os mecanismos físicos que definem a atividade cromosférica em estrelas do tipo solar, seus principais indicadores e medir atividade observacionalmente. O trabalho foi dividido da seguinte forma: na Seção
+     <strong>
+      2
+     </strong>
+     está uma introdução geral à atividade cromosférica estelar, bem como a descrição da cromosfera e linhas espectrais relacionadas. Na Seção
+     <strong>
+      3
+     </strong>
+     são apresentados os principais indicadores espectroscópicos usados para medir atividade estelar, utilizados para realizar diagnósticos com significado físico. Na Seção
+     <strong>
+      4
+     </strong>
+     apresentamos um método simples de cálculo de atividade utilizando métodos computacionais, bem como a calibração com um índice de atividade padrão, o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     . Por fim, na Seção
+     <strong>
+      5
+     </strong>
+     são apresentadas as considerações finais.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. A atividade cromosférica
+    </h1>
+    <p>
+     O termo atividade é amplamente utilizado, no contexto da astrofísica estelar, para referir-se à uma variedade de fenômenos magnéticos observados no interior de estrelas do tipo espectral
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        A classificação das estrelas em tipos espectrais está relacionada com características gerais dos espectros estelares. O tipo espectral da estrela depende primariamente da sua temperatura superficial, portanto sendo também dependente da sua cor (estrelas mais quentes estão mais próximas do azul, enquanto que estrelas mais frias estão próximas do vermelho) (Harwit 2006 [6]; Ridpath 2012 [7]).
+       </span>
+      </span>
+     </span>
+     F, G, K e M (com envoltório convectivo
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         3
+        </strong>
+        Envoltório convectivo (ou envelope convectivo) é a região da estrela onde o transporte de energia ocorre predominantemente por convecção. Estrelas com massas entre 0.4 M⊙ e 1.3 M⊙ apresentam envoltório convectivo.
+       </span>
+      </span>
+     </span>
+     ), fisicamente explicitados através da emissão de matéria e energia para fora da estrela. Contudo, é muito pouco definido na literatura, em termos físicos rigorosamente detalhados. Este conjunto de fenômenos exerce importante papel na evolução estelar, também possuindo implicações no estudo da descoberta de exoplanetas. Recentemente, foi proposto que a atividade estelar pode afetar a investigação e a caracterização das atmosferas dos exoplanetas em sistemas planetários similares ao nosso sistema solar (Haywood
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8 R.D. Haywood, A.C. Cameron, D. Queloz, S.C.C. Barros, M. Deleuil, R. Fares, M. Gillon, A.F. Lanza, C. Lovis, C. Moutou et al, MNRAS 443, 2517 (2014).
+       </span>
+      </span>
+     </span>
+     ], Haywood 2015 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9 R.D. Haywood, Hide and Seek: Radial-Velocity Searches for Planets around Active Stars . Doctoral Thesis, University of St Andrews, St. Andrews (2015).
+       </span>
+      </span>
+     </span>
+     ], Linsky 2019 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1 J. Linsky, Host Stars and their Effects on Exoplanet Atmospheres (Springer, Berlin, 2019), v. 955.
+       </span>
+      </span>
+     </span>
+     ]). Além disso, a atividade da estrela afeta diretamente a habitabilidade do exoplaneta, assim como sua capacidade de reter uma atmosfera semelhante a da Terra.
+    </p>
+    <p>
+     A atividade cromosférica pode ser definida, à princípio, como sendo o conjunto de fenômenos causados pela variação do campo magnético estelar ao longo do tempo (Hall 2008 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10 J.C. Hall, Living Reviews in Solar Physics 5, 2 (2008).
+       </span>
+      </span>
+     </span>
+     ]). Isto pode ocorrer de forma periódica, estacionária ou até mesmo anômala (sem explicação aparente). Acredita-se que a atividade está relacionada com a estrutura subsuperficial da zona convectiva externa da estrela (Egeland
+     <i>
+      et al.
+     </i>
+     2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11 R. Egeland, W. Soon, S. Baliunas, J.C. Hall, A.A. Pevtsov e L. Bertello, ApJ 835, 25 (2017).
+       </span>
+      </span>
+     </span>
+     ]). Entretanto, para entender a atividade cromosférica, é preciso compreender a estrutura da cromosfera.
+    </p>
+    <h2>
+     2.1. O que é a cromosfera?
+    </h2>
+    <p>
+     Os diversos avanços teóricos e observacionais nas últimas décadas permitiram que chegássemos a uma razoável compreensão da estrutura do Sol e de estrelas similares ao Sol (em geral, chamadas de estrelas do tipo solar). Dentre tais avanços, sabemos que estrelas como o Sol possuem cromosferas. A cromosfera é afetada, de modo geral, pela estrutura do interior estelar, bem como por outros parâmetros tais como a taxa de rotação, massa, metalicidade
+     <span class="ref footnote">
+      <sup class="xref">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         4
+        </strong>
+        Quantidade adimensional que se refere a abundância (em número de átomos) de elementos mais pesados que H e He presentes na composição da matéria estelar.
+       </span>
+      </span>
+     </span>
+     , etc.
+    </p>
+    <p>
+     Historicamente, a partir dos eclipses solares, foi observado a cor vermelha no limbo solar no início e ao fim do fenômeno. Foi a partir do trabalho de Lockyer 1868 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12 J.N. Lockyer, Proceedings of the Royal Society of London Series I 17, 131 (1868).
+       </span>
+      </span>
+     </span>
+     ] que o termo
+     <i>
+      cromosfera
+     </i>
+     foi utilizado a primeira vez, sendo então referido como a região da atmosfera solar que se distingue como uma ‘‘esfera de cor’’. O termo cromosfera, então, veio a ser expandido para incluir toda a camada da atmosfera acima do disco solar visível.
+     <span class="ref footnote">
+      <sup class="xref">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         5
+        </strong>
+        Atualmente, sabemos que a cor vermelha aparece principalmente devido à emissão no visível da linha Hα em 6562.8 Å.
+       </span>
+      </span>
+     </span>
+     Posteriormente, a cromosfera passou a ser definida como a camada de transição entre a fotosfera solar e a coroa solar. Com o passar do tempo, e o avanço da astronomia observacional, uma descrição mais rigorosa passou a ser necessária. O termo cromosfera foi utilizado para descrever a região da atmosfera solar que possui 10
+     <sup>
+      4
+     </sup>
+     km de extensão acima do limbo que é visível nas linhas de emissão neutras e ionizadas nos momentos do eclipse total (Linsky 1980 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13 J.L. Linsky, Annual Review of Astronomy and Astrophysics 18, 439 (1980).
+       </span>
+      </span>
+     </span>
+     ]). Posteriormente, o termo cromosfera passou a designar a camada responsável por formar as várias linhas de Fraunhofer no espectro solar, além das linhas de emissão no ultravioleta.
+    </p>
+    <p>
+     A definição da localização do início da cromosfera permanece controversa. Linsky 1980 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13 J.L. Linsky, Annual Review of Astronomy and Astrophysics 18, 439 (1980).
+       </span>
+      </span>
+     </span>
+     ], Fontenla
+     <i>
+      et al.
+     </i>
+     2016 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        14 J.M. Fontenla, J.L. Linsky, J. Witbrod, K. France, A. Buccino, P. Mauas, M. Vieytes e L.M. Walkowicz, ApJ 830, 154 (2016).
+       </span>
+      </span>
+     </span>
+     ] e Linsky 2019 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1 J. Linsky, Host Stars and their Effects on Exoplanet Atmospheres (Springer, Berlin, 2019), v. 955.
+       </span>
+      </span>
+     </span>
+     ] argumentam, baseados em modelos teóricos, que a cromosfera se inicia conforme mostrado na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS1_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     , em que a cromosfera começa no local onde inicia-se o aquecimento magnético e outros aquecimentos não radiativos, contudo estes aquecimentos não são suficientes para sobrepor o decréscimo da temperatura. A temperatura chega ao seu ponto mínimo na transição entre a baixa e alta cromosfera, conforme visto na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS1_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     . Também há outras definições à respeito do início da cromosfera, como descrito por Priest 2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        15 E. Priest, Magnetohydrodynamics of the Sun (Cambridge University Press, Cambridge, 2014).
+       </span>
+      </span>
+     </span>
+     ], onde argumenta que o início da cromosfera está localizado no mínimo de temperatura entre a fotosfera e a cromosfera.
+    </p>
+    <p>
+     Dentre as suas principais características, podemos destacar que nessa região há a inversão do gradiente de temperatura na atmosfera estelar. Isto é, a temperatura decresce de dentro para fora da estrela até o topo da fotosfera. Contudo, na cromosfera ocorre uma inversão deste gradiente térmico, de modo que nesta camada a temperatura aumenta consideravelmente. Outro aspecto fundamental da física da cromosfera é o seu não equilíbrio radiativo, o que particularmente a difere da física da fotosfera.
+    </p>
+    <p>
+     Cromosferas são também caracterizadas por um mecanismo de aquecimento não radiativo (Linsky 1980 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13 J.L. Linsky, Annual Review of Astronomy and Astrophysics 18, 439 (1980).
+       </span>
+      </span>
+     </span>
+     ]), que é tido na literatura como um comportamento não clássico para a atmosfera estelar, sendo que este aquecimento não radiativo domina o balanço energético desta camada. Muitos autores argumentam que este aquecimento é de caráter essencialmente magnético, isto é, os campos magnéticos controlam este aquecimento (Linsky 1980 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13 J.L. Linsky, Annual Review of Astronomy and Astrophysics 18, 439 (1980).
+       </span>
+      </span>
+     </span>
+     ], Hall 2008 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10 J.C. Hall, Living Reviews in Solar Physics 5, 2 (2008).
+       </span>
+      </span>
+     </span>
+     ], Linsky 2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16 J.L. Linsky, ARA&amp;A 55, 159 (2017).
+       </span>
+      </span>
+     </span>
+     ], Linsky 2019 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1 J. Linsky, Host Stars and their Effects on Exoplanet Atmospheres (Springer, Berlin, 2019), v. 955.
+       </span>
+      </span>
+     </span>
+     ]). Em estrelas frias também há transferência de
+     <i>
+      momentum
+     </i>
+     para o gás através de ondas mecânicas e pressão de radiação Lα (Haisch
+     <i>
+      et al.
+     </i>
+     1980 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        17 B.M. Haisch, J.L. Linsky e G.S. Basri, ApJ 235, 519 (1980).
+       </span>
+      </span>
+     </span>
+     ]; Linsky 1980 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13 J.L. Linsky, Annual Review of Astronomy and Astrophysics 18, 439 (1980).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     As linhas espectrais de emissão e do contínuo, chamadas linhas cromosféricas, portanto, são produzidas principalmente pelos processos de aquecimento não radiativo, o que gera a inversão do gradiente de temperatura e a mudança de regime para o não equilíbrio radiativo.
+    </p>
+    <p>
+     Ao longo das décadas, tem sido aceito que a fronteira entre a alta e a baixa cromosfera está no ponto de temperatura mínima da atmosfera estelar, precisamente onde ocorre a inversão do gradiente de temperatura
+     <span class="ref footnote">
+      <sup class="xref">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         6
+        </strong>
+        Neste trabalho decidiu-se por representar o gradiente de temperatura como ΔT/Δh, embora, do ponto de vista matemático, essa quantidade represente a taxa de variação da temperatura com a altura h, medida em relação ao centro da estrela. Portanto, a mudança de notação não modifica o significado físico dessa quantidade, sendo apenas uma notação para facilitar o caráter didático do texto. Na notação diferencial, este gradiente de temperatura pode ser representado como d T/d h.
+       </span>
+      </span>
+     </span>
+     Δ
+     <i>
+      T
+     </i>
+     /Δ
+     <i>
+      h
+     </i>
+     &lt; 0 para Δ
+     <i>
+      T
+     </i>
+     /Δ
+     <i>
+      h
+     </i>
+     &gt; 0, sendo este um aumento de temperatura não-linear. Esta inversão é forçada pelo violento aquecimento não radiativo, e isto pode ser compreendido como uma característica que distingue a cromosfera das outras camadas. Com temperaturas entre 4300 e 25000 K, na região da cromosfera podem ser produzidas linhas de emissão espectrais no óptico e no ultravioleta (UV).
+    </p>
+    <p>
+     Quanto à sua extensão, em torno de 2000 km (Rosso Nelson 2013 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19 O.R. Nelson, Rev. Bras. Ensino Fís. 35, 3317 (2013).
+       </span>
+      </span>
+     </span>
+     ]), há várias escalas de pressão (diferentes regimes de pressão, variando em ordem de grandeza do fator
+     <i>
+      e
+     </i>
+     <sup>
+      −1
+     </sup>
+     ) e sempre com Δ
+     <i>
+      T
+     </i>
+     /Δ
+     <i>
+      h
+     </i>
+     pequeno. Isso é perceptível pela grande opacidade
+     <span class="ref footnote">
+      <sup class="xref">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         7
+        </strong>
+        Opacidade é a grandeza física relacionada com a resistência da matéria à propagação da radiação eletromagnética. Se uma linha espectral apresenta opacidade alta, isso quer dizer que a radiação eletromagnética relacionada com a formação daquela linha tem dificuldade para se propagar no meio em questão.
+       </span>
+      </span>
+     </span>
+     das linhas Lα e das linhas ressonantes
+     <span class="ref footnote">
+      <sup class="xref">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         8
+        </strong>
+        Em espectroscopia, linhas ressonantes representam a transição entre o estado fundamental e o primeiro estado excitado em um átomo ou íon. Também são interpretadas como aquelas regiões do espectro altamente sensíveis ao magnetismo e à temperatura. Sendo, portanto, bons indicadores espectroscópios para se investigar o comportamento magnético no interior estelar. Aqui, especificamente, levando-se em conta as linhas cromosféricas.
+       </span>
+      </span>
+     </span>
+     H I, Ca II e Mg II, que são tidas como eficientes radiadores de energia, possuindo também a função de “termostatos”, indicando aumento da temperatura com o raio e diminuição da densidade. No topo da cromosfera, as linhas ressonantes e Lα se tornam bem “fracas”, e nessa região os mecanismos de esfriamento deixam de atuar efetivamente. Consequentemente Δ
+     <i>
+      T
+     </i>
+     /Δ
+     <i>
+      h
+     </i>
+     cresce abruptamente com o raio, sendo o início da região de transição para a coroa.
+    </p>
+    <p>
+     Em síntese, as condições necessárias para caracterizar a cromosfera estelar consistem em: 1) o aquecimento não radiativo é o principal componente do aumento de temperatura, 2) Portanto, Δ
+     <i>
+      T
+     </i>
+     /Δ
+     <i>
+      h
+     </i>
+     é significativamente pequeno quando comparado ao gradiente de pressão local. A região imediatamente acima da cromosfera é a região de transição entre cromosfera e coroa, caracterizada também pela predominância do aquecimento não radiativo, fracos mecanismos de resfriamento e pequena extensão (em relação à cromosfera). No caso do Sol, a coroa solar é caracterizada por Δ
+     <i>
+      T
+     </i>
+     /Δ
+     <i>
+      h
+     </i>
+     muito alto, com variações de temperatura da ordem de 30000 K a 10
+     <sup>
+      6
+     </sup>
+     K (Linsky 1980 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13 J.L. Linsky, Annual Review of Astronomy and Astrophysics 18, 439 (1980).
+       </span>
+      </span>
+     </span>
+     ]) e larga extensão de milhares de quilômetros, sendo estas temperaturas suficientemente altas para produção de linhas de emissão de raios X.
+    </p>
+    <p>
+     Apesar dos diversos desenvolvimentos teóricos e a ampliação dos dados observacionais nas últimas décadas, ainda há consideráveis lacunas na compreensão dos fenômenos físicos no interior da cromosfera. Isto é, ainda existem questões sobre sua origem, estrutura e dinâmica, bem como sua conexão com as outras camadas da atmosfera solar (Judge 2010 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        20 P.G. Judge, Mem. Soc. Astron. Italiana 81, 543 (2010).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <h2>
+     2.2. Manchas solares e linhas espectrais
+    </h2>
+    <p>
+     As variações temporais do campo magnético estelar possuem conexão intrínseca com o fluxo nas linhas H &amp; K do Cálcio II (que são as principais linhas espectrais utilizadas para quantificar a atividade cromosférica, ver maiores detalhes em §
+     <strong>
+      3.1
+     </strong>
+     ). As linhas de Ca II têm sido amplamente utilizadas como principal indicador espectroscópico da atividade estelar (Wilson 1968 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21 O.C. Wilson, ApJ 153, 221 (1968).
+       </span>
+      </span>
+     </span>
+     ], Auer &amp; Mihalas 1969 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        22 L.H. Auer e D. Mihalas, ApJ 156, 157 (1969).
+       </span>
+      </span>
+     </span>
+     ], Skumanich 1970 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        23 A. Skumanich, ApJ 159, 1077 (1970).
+       </span>
+      </span>
+     </span>
+     ], Duncan
+     <i>
+      et al.
+     </i>
+     1991 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </span>
+      </span>
+     </span>
+     ] e Wright
+     <i>
+      et al.
+     </i>
+     2004b [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25 J.T. Wright, G.W. Marcy, R.P. Butler e S.S. Vogt, ApJS 152, 261 (2004).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     Historicamente, ao analisar-se o espectro de uma estrela, percebeu-se que o fluxo nas linhas Ca II H &amp; K é um excelente indicador da atividade cromosférica do astro. Isso se deve à correlação entre o ciclo solar e o fluxo nestas linhas. Tal campo de estudo teve enorme progresso a partir de inúmeras observações realizadas pelos astrônomos Frans Middelkoop e Cornelis Zwann, utilizando o fluxo nas linhas do cálcio como indicador. Estes autores propuseram que a atividade cromosférica está relacionada diretamente com a eficiência do dínamo estelar. A consolidação de tal hipótese veio no trabalho de Rutten 1987 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        26 R.G.M. Rutten, A&amp;A 177, 131 (1987).
+       </span>
+      </span>
+     </span>
+     ], verificando que existe um fluxo mínimo nas linhas de Ca II em função do índice de cor (B−V)
+     <span class="ref footnote">
+      <sup class="xref">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         9
+        </strong>
+        Caracteriza-se pela diferença entre as magnitudes fotométricas da estrela através de dois filtros, no caso B e V. São importantes indicadores da temperatura estelar.
+       </span>
+      </span>
+     </span>
+     . Dessa maneira, uma estrela não poderia apresentar um valor de fluxo nas linhas de Ca II que fosse menor que seu valor mínimo, chamado
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       m i n
+      </i>
+     </sub>
+     (Ca II).
+    </p>
+    <p>
+     Há também uma correlação entre os valores entre o índice de atividade
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     (que é baseado no fluxo nas linhas do Ca II, está descrito em detalhes em §
+     <strong>
+      3.1.1
+     </strong>
+     ) e o número de manchas solares, estabelecido usando o Sol como padrão (Wilson 1963 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        27 O.C. Wilson, ApJ 138, 832 (1963).
+       </span>
+      </span>
+     </span>
+     ], Wilson &amp; Skumanich 1964 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        28 O.C. Wilson e A. Skumanich, ApJ 140, 1401 (1964).
+       </span>
+      </span>
+     </span>
+     ] e Wilson 1968 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21 O.C. Wilson, ApJ 153, 221 (1968).
+       </span>
+      </span>
+     </span>
+     ]), consolidando assim a conexão entre a atividade solar e o fluxo das linhas do Ca II H &amp; K.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Indicadores de atividade através da espectroscopia
+    </h1>
+    <p>
+     Alguns dos mais importantes indicadores espectroscópicos de atividade cromosférica são: Ca II nas linhas H (3968 Å) e K (3934 Å), Mg II nas linhas h (2803 Å) e k (2796 Å),
+     <i>
+      L α
+     </i>
+     na linha 1216 Å, a série de Balmer de H I (principalmente para as estrelas anãs M), He I nas linhas 10830 Å e 5876 Å, O I nas linhas 1305 Å e 1355 Å, Si II nas linhas 1808 Å e 1817 Å, Fe I, além das emissões em UV, Hα e Ca II IRT.
+    </p>
+    <p>
+     Em geral, medimos a atividade cromosférica calculando a razão entre as medidas dos fluxos medidos em determinadas regiões espectrais. Nessas regiões são encontradas linhas ressonantes, que são estas discutidas abaixo.
+    </p>
+    <p>
+     Nesta seção iremos destacar as principais técnicas de espectroscopia utilizadas para analisar e mensurar a atividade cromosférica. Atualmente, os espectros de alta resolução possuem importante papel nesse diagnóstico. As linhas mais utilizadas são as do Ca II, Mg II e Ca II IRT, que possuem profundas linhas de absorção, com um pico de emissão dentro de uma linha de absorção, por vezes com uma auto-reversão. Levando-se em conta que essas linhas são opticamente espessas com regiões de contínuo largas, em geral estas linhas começam a serem formadas ainda na fotosfera e possuem significado físico para o estudo da estrutura cromosférica.
+    </p>
+    <h2>
+     3.1. Linhas do Ca II H&amp;K
+    </h2>
+    <p>
+     As linhas ionizadas do cálcio II
+     <i>
+      H
+     </i>
+     (3968 Å) e
+     <i>
+      K
+     </i>
+     (3933 Å) são as linhas ressonantes majoritariamente utilizadas desde as primeiras imagens obtidas por Hale nos anos 1890. Para as estrelas com tipo espectral F,G,K (comumente chamadas de estrelas do tipo solar), estas linhas apresentam emissão dentro de uma região de absorção, tal como fica claro na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     . O Ca II ionizado representa o principal estágio da ionização na fotosfera e baixa cromosfera deste tipo de estrela [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16 J.L. Linsky, ARA&amp;A 55, 159 (2017).
+       </span>
+      </span>
+     </span>
+     ]. Já para as estrelas M, isto ocorre no Ca I ionizado na fotosfera e baixa cromosfera, neste caso não havendo alargamento considerável na região de absorção.
+    </p>
+    <div class="row fig" id="S3_F3">
+     <a name="S3_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/21788cc572efa34f3441c866ee05358fb717343b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Linha do Ca II K do espectro solar apresentada por Duncan
+      <i>
+       et al.
+      </i>
+      1991 [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        24
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+        </span>
+       </span>
+      </span>
+      ]. Especial detalhe para a linha de emissão com uma linha de absorção dentro, na região da linha K do Ca II (3933.63 Å). Fonte: Duncan
+      <i>
+       et al.
+      </i>
+      1991 [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        24
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+        </span>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     A emissão de Ca II é relativamente fraca, se comparado com a região de absorção adjacente, principalmente nas observações de estrelas em período de baixa atividade. Diversos levantamentos têm sido realizados nas últimas décadas, usando estas linhas como indicador de atividade, dentre eles podemos citar: Wilson 1978 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        29 O.C Wilson, ApJ 226, 379 (1978).
+       </span>
+      </span>
+     </span>
+     ], Linsky
+     <i>
+      et al.
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        30 J.L. Linsky, S.P. Worden, W. McClintock e R.M. Robertson, ApJS 41, 47 (1979).
+       </span>
+      </span>
+     </span>
+     ], Vaughan &amp; Preston [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        31 A.H. Vaughan e G.W. Preston, PASP 92, 385 (1980).
+       </span>
+      </span>
+     </span>
+     ], Pasquini
+     <i>
+      et al.
+     </i>
+     1988 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       32
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        32 L. Pasquini, R. Pallavicini e M. Pakull, A&amp;A 191, 253 (1988).
+       </span>
+      </span>
+     </span>
+     ], Robinson
+     <i>
+      et al.
+     </i>
+     1990 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       33
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        33 R.D. Robinson, L.E. Cram e M.S. Giampapa, ApJS 74, 891 (1990).
+       </span>
+      </span>
+     </span>
+     ], Duncan
+     <i>
+      et al.
+     </i>
+     1991 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </span>
+      </span>
+     </span>
+     ], Pasquini 1992 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       34
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        34 L. Pasquini, A&amp;A 266, 347 (1992).
+       </span>
+      </span>
+     </span>
+     ], Henry
+     <i>
+      et al.
+     </i>
+     1996 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       35
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        35 T.J. Henry, D.R. Soderblom, R.A. Donahue e S.L. Baliunas, AJ 111, 439 (1996).
+       </span>
+      </span>
+     </span>
+     ], Pace &amp; Pasquini 2004 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       36
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        36 G. Pace e L. Pasquini, A&amp;A 426, 1021 (2004).
+       </span>
+      </span>
+     </span>
+     ], Wright
+     <i>
+      et al.
+     </i>
+     2004 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        37 J.T. Wright, AJ 128, 1273 (2004).
+       </span>
+      </span>
+     </span>
+     ], Houdebine
+     <i>
+      et al.
+     </i>
+     2009 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       38
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        38 E.R. Houdebine, K. Junghans, M.C. Heanue e A.D. Andrews, A&amp;A 503, 929 (2009).
+       </span>
+      </span>
+     </span>
+     ], Issacson &amp; Fischer 2010 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       39
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        39 H. Isaacson e D. Fischer, ApJ 725, 875 (2010).
+       </span>
+      </span>
+     </span>
+     ] e Radick
+     <i>
+      et al.
+     </i>
+     2018 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       40
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        40 R.R. Radick, G.W. Lockwood, G.W. Henry, J.C. Hall e A.A. Pevtsov, ApJ 855, 75 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Como as linhas
+     <i>
+      H
+     </i>
+     &amp;
+     <i>
+      K
+     </i>
+     são excitadas através da colisão de elétrons no nível fundamental (Rutten 2003 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       41
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        41 R.J. Rutten, Radiative Transfer in Stellar Atmospheres. Lecture Notes Utrecht University (2003).
+       </span>
+      </span>
+     </span>
+     ]), então são adequadas para investigar a alta cromosfera. Essas linhas são exatamente formadas na alta cromosfera, com temperaturas entre 5000–20000 K, sendo seus picos de emissão formados em torno de 4000–10000 K. Há leves diferenças entre as estrelas do tipo solar e as estrelas M na região de formação. Nestas, a formação das linhas em questão ocorre entre a fotosfera e a baixa cromosfera, naquelas, as linhas são mais proeminentes e com alargamento, ocasionados pela alta densidade do plasma oriundo da fotosfera e da baixa cromosfera. Analisando do ponto de visto microscópico, as linhas ressonantes
+     <i>
+      H
+     </i>
+     &amp;
+     <i>
+      K
+     </i>
+     do Ca II, são formadas por decaimento radiativo causado pela transição atômica do nível 3
+     <sup>
+      2
+     </sup>
+     <i>
+      P
+     </i>
+     para o estado fundamental 3
+     <sup>
+      2
+     </sup>
+     <i>
+      S
+     </i>
+     .
+    </p>
+    <p>
+     O fluxo puramente cromosférico pode ser quantificado através do indicador
+     <math id="INEQ24">
+      <msubsup>
+       <mi>
+        R
+       </mi>
+       <mrow>
+        <mi>
+         H
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         K
+        </mi>
+       </mrow>
+       <mo>
+        ′
+       </mo>
+      </msubsup>
+     </math>
+     , que é calculado como o fluxo total das regiões em torno das linhas
+     <i>
+      H
+     </i>
+     &amp;
+     <i>
+      K
+     </i>
+     calibrado em unidades de fluxo absolutas e corrigido pelo fluxo residual de uma estrela sem cromosfera (Linsky &amp; Ayres 1978 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       42
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        42 J.L. Linsky e T.R. Ayres, ApJ 220, 619 (1978).
+       </span>
+      </span>
+     </span>
+     ], Noyes
+     <i>
+      et al.
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        43 R.W. Noyes, L.W. Hartmann, S.L. Baliunas, D.K. Duncan e A.H. Vaughan, ApJ 279, 763 (1984).
+       </span>
+      </span>
+     </span>
+     ], Mittag
+     <i>
+      et al.
+     </i>
+     2013 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       44
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        44 M. Mittag, J.H.M.M. Schmitt e K.P. Schröder, A&amp;A 549, A117 (2013).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     Outra forma de medir o fluxo das linhas do Ca II consiste em utilizar o índice de atividade de Mount Wilson, i.e.
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     , que é definido como sendo a razão entre o fluxo total em regiões estreitas do espectro em torno das linhas
+     <i>
+      H
+     </i>
+     &amp;
+     <i>
+      K
+     </i>
+     e o fluxo em regiões do
+     <i>
+      pseudocontínuo
+     </i>
+     em ambos os lados dessas linhas (Duncan
+     <i>
+      et al.
+     </i>
+     1991 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </span>
+      </span>
+     </span>
+     ], Baliunas
+     <i>
+      et al.
+     </i>
+     1995 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       45
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        45 S.L. Baliunas, R.A. Donahue, W.H. Soon, J.H. Horne, J. Frazer, L. WoodardEklund, M. Bradford, L.M. Rao, O.C. Wilson, Q. Zhang et al, ApJ 438, 269, (1995).
+       </span>
+      </span>
+     </span>
+     ], Wright
+     <i>
+      et al.
+     </i>
+     2004 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        37 J.T. Wright, AJ 128, 1273 (2004).
+       </span>
+      </span>
+     </span>
+     ]). O
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     é muito útil na busca de períodos de rotação, que podem ser calculados através da análise da variabilidade desse índice ao longo de dias. Também é possível medir o ciclo de atividade medindo-se a variabilidade do
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     ao longo de vários anos e, assim, possivelmente, chegar a um período para o ciclo de atividade da estrela.
+    </p>
+    <h3>
+     3.1.1. O índice
+     <i>
+      S
+      <sub>
+       MW
+      </sub>
+     </i>
+    </h3>
+    <p>
+     Em nosso trabalho, para medir a atividade cromosférica, utilizamos, principalmente, o fluxo nas linhas H&amp;K de Ca II, através do índice de fluxo
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     <i>
+      (“Mount Wilson S-index”)
+     </i>
+     , cujas medidas fotométricas foram realizadas pelo telescópio de 1,5 m no observatório do Mt. Wilson (Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     )
+     <span class="ref footnote">
+      <sup class="xref">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         10
+        </strong>
+        Localizado no Mount Wilson, um pico de 1742 m em San Gabriel Mountains, LA, Califórnia. O observatório contém dois telescópios importantes: Hale (1,5 m), que foi construído em 1908, e o telescópio Hooker (2,5 m), que foi construído em 1917.
+       </span>
+      </span>
+     </span>
+    </p>
+    <div class="row fig" id="S3_F4">
+     <a name="S3_F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/6347d2a6f3a1b81e1b106179c2c32a87d105c214.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Observatório do Mount Wilson. Fonte: University of California, Los Angeles.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O índice de atividade
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     é definido na forma da Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     :
+    </p>
+    <div class="row formula" id="eS3_E1">
+     <a name="S3_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi mathsize="120%">
+           S
+          </mi>
+          <mo mathsize="120%" stretchy="false">
+           =
+          </mo>
+          <mrow>
+           <mi mathsize="120%">
+            α
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mstyle displaystyle="true">
+            <mfrac>
+             <mrow>
+              <mi mathsize="120%">
+               H
+              </mi>
+              <mo mathsize="120%" stretchy="false">
+               +
+              </mo>
+              <mi mathsize="120%">
+               K
+              </mi>
+             </mrow>
+             <mrow>
+              <mi mathsize="120%">
+               R
+              </mi>
+              <mo mathsize="120%" stretchy="false">
+               +
+              </mo>
+              <mi mathsize="120%">
+               V
+              </mi>
+             </mrow>
+            </mfrac>
+           </mstyle>
+          </mrow>
+         </mrow>
+         <mo mathsize="120%" stretchy="false">
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      H
+     </i>
+     ,
+     <i>
+      K
+     </i>
+     ,
+     <i>
+      R
+     </i>
+     e
+     <i>
+      V
+     </i>
+     representam o fluxo total em cada uma dessas faixas. Tais fluxos significam medir o número de contagem de fótons que passa na respectiva janela. O α é uma constante de calibração que geralmente possui valor de 2.3 ou 2.4 conforme Duncan
+     <i>
+      et al.
+     </i>
+     1991 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </span>
+      </span>
+     </span>
+     ]. Para o Ca II H &amp; K, as linhas estão centradas em 3968.469 Å (K) e 3933.663 Å (H). Para a faixa do contínuo, as regiões do
+     <i>
+      pseudocontínuo
+     </i>
+     estão centradas em 3901.07 Å na banda
+     <i>
+      V
+     </i>
+     , enquanto a banda
+     <i>
+      R
+     </i>
+     está centrada em 4001.07 Å, como vistas nos espectros da Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S3_F5">
+     <a name="S3_F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/a75daaef2cbbcd8c7302d499f56e6f2450cf68b7.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Espectros NARVAL de alta resolução de 3 objetos do tipo solar. A região do Ca II H&amp;K é mostrada em destaque.
+      <br/>
+     </div>
+    </div>
+    <p>
+     No trabalho seminal sobre atividade do levantamento do Mount Wilson, Baliunas
+     <i>
+      et al.
+     </i>
+     1990 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       46
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        46 S. Baliunas e R. Jastrow, Nature 348, 520 (1990).
+       </span>
+      </span>
+     </span>
+     ], usando observações de séries temporais de longa duração das linhas de emissão Ca II
+     <i>
+      H
+     </i>
+     &amp;
+     <i>
+      K
+     </i>
+     (Projeto
+     <i>
+      Mount Wilson
+     </i>
+     ), identificaram estrelas que exibem índices
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     muito pequenos (i.e.
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     ≤0,15) e sem regularidade, sendo consideradas estrelas com atividade fixa. Isso, aparentemente, pode ser um estado comparado ao mínimo de Maunder (MM), colocando estes objetos como candidatos a estarem passando pelo mesmo período anômalo pelo qual passou o Sol (Wright
+     <i>
+      et al.
+     </i>
+     2004 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        37 J.T. Wright, AJ 128, 1273 (2004).
+       </span>
+      </span>
+     </span>
+     ]). Particularmente, o mínimo de Maunder se caracterizou como sendo um longo período de atividade mínima solar, entre os anos de 1645 e 1715, e foi descrito no trabalho seminal de Eddy 1976 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       47
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        47 J.A. Eddy, Science 192, 1189 (1976).
+       </span>
+      </span>
+     </span>
+     ]. Para exemplificar a baixa atividade solar na época do MM, estima-se que irradiância solar total
+     <span class="ref footnote">
+      <sup class="xref">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         11
+        </strong>
+        Corresponde à potência total por unidade de área na forma de radiação emitida pelo Sol em todos os comprimentos de onda do espectro eletromagnético.
+       </span>
+      </span>
+     </span>
+     naquele período estivesse entre 1 e 2.8
+     <i>
+      W
+     </i>
+     ⋅
+     <i>
+      m
+     </i>
+     <sup>
+      −2
+     </sup>
+     , enquanto que o valor atual é de 1368
+     <i>
+      W
+     </i>
+     ⋅
+     <i>
+      m
+     </i>
+     <sup>
+      −2
+     </sup>
+     (Lubin
+     <i>
+      et al.
+     </i>
+     2010 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       48
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        48 D. Lubin, D. Tytler e D. Kirkman, ApJ 716, 766 (2010).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     Ao longo das várias décadas cobertas pelo projeto do
+     <i>
+      Mount Wilson
+     </i>
+     , que incluiu o estudo de vários períodos de atividade mínima solar, o Sol manteve um valor do seu índice
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+      ⁣⊙
+     </sub>
+     entre 0,16 (mínimo normal de atividade) e 0,22 (máximo) entre 1966 e 1993 (Baliunas
+     <i>
+      et al.
+     </i>
+     1995 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       45
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        45 S.L. Baliunas, R.A. Donahue, W.H. Soon, J.H. Horne, J. Frazer, L. WoodardEklund, M. Bradford, L.M. Rao, O.C. Wilson, Q. Zhang et al, ApJ 438, 269, (1995).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <h3>
+     3.1.2. O índice
+     <math id="INEQ46">
+      <msubsup>
+       <mi>
+        R
+       </mi>
+       <mrow>
+        <mi>
+         H
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         K
+        </mi>
+       </mrow>
+       <mo>
+        ′
+       </mo>
+      </msubsup>
+     </math>
+    </h3>
+    <p>
+     O índice
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     de Mt. Wilson fornece um fluxo que contêm contribuições das componentes cromosférica e fotosférica. Dessa forma, é preciso restringir e separar a medida fotosférica do fluxo total. Para realizar esse procedimento utilizaremos o método conforme definido por Noyes
+     <i>
+      et al.
+     </i>
+     1984 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        43 R.W. Noyes, L.W. Hartmann, S.L. Baliunas, D.K. Duncan e A.H. Vaughan, ApJ 279, 763 (1984).
+       </span>
+      </span>
+     </span>
+     ], sendo definido da seguinte maneira:
+    </p>
+    <div class="row formula" id="eS3_E2">
+     <a name="S3_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            R
+           </mi>
+           <mrow>
+            <mi>
+             H
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             K
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msubsup>
+            <mi>
+             R
+            </mi>
+            <mrow>
+             <mi>
+              H
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              K
+             </mi>
+            </mrow>
+            <mo>
+             ′
+            </mo>
+           </msubsup>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <msub>
+             <mi>
+              R
+             </mi>
+             <mrow>
+              <mi>
+               p
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               h
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               o
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mi>
+               B
+              </mi>
+              <mo>
+               -
+              </mo>
+              <mi>
+               V
+              </mi>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      R
+     </i>
+     <sub>
+      <i>
+       H K
+      </i>
+     </sub>
+     representa o fluxo total e
+     <i>
+      R'
+     </i>
+     <sub>
+      <i>
+       H K
+      </i>
+     </sub>
+     representa a componente cromosférica na Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     . Logo, temos:
+    </p>
+    <div class="row formula" id="eS3_E3">
+     <a name="S3_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msubsup>
+           <mi>
+            R
+           </mi>
+           <mrow>
+            <mi>
+             H
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             K
+            </mi>
+           </mrow>
+           <mo>
+            ′
+           </mo>
+          </msubsup>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mrow>
+             <msub>
+              <mi>
+               C
+              </mi>
+              <mrow>
+               <mi>
+                c
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                f
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              ⁢
+             </mo>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <mi>
+                B
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mi>
+                V
+               </mi>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mrow>
+            <mo>
+             ⋅
+            </mo>
+            <mi>
+             S
+            </mi>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <msub>
+             <mi>
+              R
+             </mi>
+             <mrow>
+              <mi>
+               p
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               h
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               o
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mi>
+               B
+              </mi>
+              <mo>
+               -
+              </mo>
+              <mi>
+               V
+              </mi>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     na Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     <i>
+      C
+     </i>
+     <sub>
+      <i>
+       c f
+      </i>
+     </sub>
+     (
+     <i>
+      B
+     </i>
+     −
+     <i>
+      V
+     </i>
+     ) é um fator de conversão que transforma o fluxo dos canais
+     <i>
+      R
+     </i>
+     e
+     <i>
+      V
+     </i>
+     para o contínuo, e
+     <i>
+      R
+     </i>
+     <sub>
+      <i>
+       p h o t
+      </i>
+     </sub>
+     é a contribuição fotosférica. Essas medidas são determinadas da seguinte forma (ver Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     e Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ):
+    </p>
+    <div class="row formula" id="eS3_E4">
+     <a name="S3_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            log
+           </mi>
+           <mo>
+            ⁡
+           </mo>
+           <msub>
+            <mi>
+             C
+            </mi>
+            <mrow>
+             <mi>
+              c
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              f
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mrow>
+             <mn>
+              0.25
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 B
+                </mi>
+                <mo>
+                 -
+                </mo>
+                <mi>
+                 V
+                </mi>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               3
+              </mn>
+             </msup>
+            </mrow>
+            <mo>
+             -
+            </mo>
+            <mrow>
+             <mn>
+              1.33
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 B
+                </mi>
+                <mo>
+                 -
+                </mo>
+                <mi>
+                 V
+                </mi>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mn>
+             0.43
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mi>
+               B
+              </mi>
+              <mo>
+               -
+              </mo>
+              <mi>
+               V
+              </mi>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mn>
+            0.24
+           </mn>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS3_E5">
+     <a name="S3_E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           log
+          </mi>
+          <mo>
+           ⁡
+          </mo>
+          <msub>
+           <mi>
+            R
+           </mi>
+           <mrow>
+            <mi>
+             p
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             h
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             o
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mn>
+             4.898
+            </mn>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mn>
+             1.918
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <mi>
+                B
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mi>
+                V
+               </mi>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mrow>
+          </mrow>
+          <mo>
+           -
+          </mo>
+          <mrow>
+           <mn>
+            2.893
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mi>
+               B
+              </mi>
+              <mo>
+               -
+              </mo>
+              <mi>
+               V
+              </mi>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mn>
+             3
+            </mn>
+           </msup>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Feita a conversão, o único parâmetro envolvido na determinação do fluxo cromosférico é o índice de cor (
+     <i>
+      B
+     </i>
+     −
+     <i>
+      V
+     </i>
+     ) da estrela.
+    </p>
+    <h2>
+     3.2. Linhas do Mg II
+    </h2>
+    <p>
+     As linhas espectrais ressonantes do Magnésio II h&amp;k são análogas às linhas espectrais do Ca II, inclusive mantendo a mesma convenção na nomenclatura (h:2803 Å &amp; k:2796 Å), mas estão localizadas na região do ultravioleta (UV) próximo. As linhas do Mg II têm um papel importante na física da cromosfera de estrelas do tipo solar (Cardini 2005 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       49
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        49 D. Cardini, A&amp;A 430, 303 (2005).
+       </span>
+      </span>
+     </span>
+     ]). A utilização de linhas de Mg II como indicador de aquecimento não-radiativo e atividade cromosférica foi inicialmente proposta por Linksy &amp; Aires 1978 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       42
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        42 J.L. Linsky e T.R. Ayres, ApJ 220, 619 (1978).
+       </span>
+      </span>
+     </span>
+     ]. Posteriormente, vêm sendo amplamente estudadas em diversos outros trabalhos, no contexto das estrelas do tipo solar (Basri &amp; Linsky 1979 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       50
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        50 G.S. Basri and J.L. Linsky, ApJ 234, 1023 (1979).
+       </span>
+      </span>
+     </span>
+     ]; Cerruti-Sola
+     <i>
+      et al.
+     </i>
+     1992 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       51
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        51 M. Cerruti-Sola, C.C. Cheng e R. Pallavicini, A&amp;A 256, 185 (1992).
+       </span>
+      </span>
+     </span>
+     ]; Mathioudakis &amp; Doyle 1992 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       52
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        52 M. Mathioudakis e J.G. Doyle, A&amp;A 262, 523 (1992).
+       </span>
+      </span>
+     </span>
+     ]; Elgarøy
+     <i>
+      et al.
+     </i>
+     1997 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       53
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        53 O. Elgaroy, O. Engvold e P. Joras, A&amp;A 326, 165 (1997).
+       </span>
+      </span>
+     </span>
+     ]; Buchholz
+     <i>
+      et al.
+     </i>
+     1998 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       54
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        54 B. Buchholz, P. Ulmschneider e Manfred Cuntz, ApJ 494, 700 (1998).
+       </span>
+      </span>
+     </span>
+     ]; Cardini 2005 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       49
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        49 D. Cardini, A&amp;A 430, 303 (2005).
+       </span>
+      </span>
+     </span>
+     ]). Nas últimas três décadas, diagnósticos da cromosfera utilizando essas linhas vêm sendo ampliados pelo desenvolvimento de satélites espaciais. Esses poderosos instrumentos são constituídos de espectrógrafos que observam no UV, tendo em vista que o Mg II está localizado no ultravioleta próximo. Podemos citar dentre eles: o satélite
+     <i>
+      Copernicus
+     </i>
+     , o satélite
+     <i>
+      International Ultraviolet Explorer
+     </i>
+     (IUE) e o
+     <i>
+      Hubble Space Telescope
+     </i>
+     .
+    </p>
+    <p>
+     A partir da teoria de formação das linhas espectrais, podemos analisar do ponto de vista microscópico a física que descreve a formação das linhas do Mg II. Em nível atômico, os níveis 3
+     <sup>
+      2
+     </sup>
+     <i>
+      D
+     </i>
+     do Mg II ficam acima dos níveis 3
+     <sup>
+      2
+     </sup>
+     <i>
+      P
+     </i>
+     e a transição radiativa entre esses níveis ocorre nos comprimentos de onda 2791,60 Å e 2798,82 Å (bem próximo das linhas h&amp;k do Mg II). Quando a temperatura aumenta rapidamente na cromosfera, a partir do valor mínimo que produz densidade de elétrons maior que 10
+     <sup>
+      5
+     </sup>
+     <i>
+      m
+     </i>
+     <sup>
+      −3
+     </sup>
+     , as regiões de 2791,60 Å e 2798,82 Å entram em emissão, tornando-se indicadores de atividade (também da estrutura térmica e densidade da cromosfera). Isso ocorre em regiões de intensa atividade magnética caracterizada por forte aquecimento não-radiativo (Feldman &amp; Doschek 1977 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       55
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        55 U. Feldman e G.A. Doschek, ApJ 212, L147 (1977).
+       </span>
+      </span>
+     </span>
+     ]; Pereira
+     <i>
+      et al.
+     </i>
+     2015 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       56
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        56 T.M.D. Pereira, M. Carlsson, B. De Pontieu e Viggo Hansteen, ApJ 806, 14 (2015).
+       </span>
+      </span>
+     </span>
+     ]; Linsky 2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16 J.L. Linsky, ARA&amp;A 55, 159 (2017).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     Além disso, dentre as outras propriedades físicas das linhas de Mg II, podemos destacar que são formadas em regiões de mais altas temperaturas em relação ao Ca II. Devido à vasta abundância de magnésio (quando comparado com o Cálcio), as linhas do Mg II podem ser consideradas como excelente indicador de perda radiativa total na cromosfera. A sua localização no espectro encontra-se em torno de 2800 Å, o que caracteriza uma vantagem observacional pelo fato da contribuição fotosférica ser bastante reduzida em pequenos comprimentos de onda (Cardini 2005 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       49
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        49 D. Cardini, A&amp;A 430, 303 (2005).
+       </span>
+      </span>
+     </span>
+     ]). Isso resulta em um alto contraste entre as linhas de emissão h&amp;k e o fundo fotosférico.
+    </p>
+    <p>
+     O magnésio é muito mais abundante que o cálcio na atmosfera estelar (Linsky 2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16 J.L. Linsky, ARA&amp;A 55, 159 (2017).
+       </span>
+      </span>
+     </span>
+     ]). Esse fato resulta em uma maior densidade na alta cromosfera, com uma taxa de formação das linhas de emissão h&amp;k relativamente maior que suas análogas Ca II
+     <i>
+      H
+     </i>
+     &amp;
+     <i>
+      K
+     </i>
+     . Outro aspecto importante está no potencial de ionização dos íons de
+     <i>
+      M g
+     </i>
+     <sup>
+      +
+     </sup>
+     e
+     <i>
+      M g
+     </i>
+     <sup>
+      + +
+     </sup>
+     , que são bem maiores que nos íons
+     <i>
+      C a
+     </i>
+     <sup>
+      +
+     </sup>
+     e
+     <i>
+      C a
+     </i>
+     <sup>
+      + +
+     </sup>
+     . Outra informação relevante é saber que as linhas de Mg II são formadas nos espectros de praticamente todas as estrelas das classes espectrais entre F-K. Porém, ainda não há detecção destas linhas nos espectros de estrelas da classe M.
+    </p>
+    <h2>
+     3.3. Linhas Hα
+    </h2>
+    <p>
+     A linha Hα é amplamente utilizada para realizar diagnósticos observacionais das cromosferas, utilizando o fluxo nesta região do espectro estelar. Apesar disso, do ponto de vista teórico surge a questão se a formação desta linha ocorre devido às excitações colisionais (útil para medidas de aquecimento não-radiativo, portanto atividade cromosférica) ou se é formada da fotoionização (Linsky 2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16 J.L. Linsky, ARA&amp;A 55, 159 (2017).
+       </span>
+      </span>
+     </span>
+     ]). É certo que com o aumento do aquecimento cromosférico, a linha Hα se torna uma profunda linha de absorção (como visto na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="S3_F6">
+     <a name="S3_F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/b09ee79e982b5ae435f8e56d78f652514489c01b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Espectros NARVAL de alta resolução de 3 estrelas do tipo solar. A região de absorção do Hα é destacada, centrada em 6562.85 Å.
+      <br/>
+     </div>
+    </div>
+    <p>
+     É possível medir atividade usando a região da linha Hα, conforme proposto por Marsden
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ] e visto na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     . A linha de emissão Hα está centrada em 6562.85Å, o índice de atividade Hα-index é composto pela razão entre os fluxos na região desta linha e regiões do contínuo centradas em 6558.85 Å e 6567.30 Å.
+    </p>
+    <div class="row formula" id="eS3_E6">
+     <a name="S3_E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mrow>
+            <mi mathvariant="normal">
+             H
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             α
+            </mi>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mi>
+            index
+           </mi>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mfrac>
+           <msub>
+            <mi>
+             F
+            </mi>
+            <mrow>
+             <mi>
+              H
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              α
+             </mi>
+            </mrow>
+           </msub>
+           <mrow>
+            <msub>
+             <mi>
+              F
+             </mi>
+             <msub>
+              <mi>
+               V
+              </mi>
+              <mrow>
+               <mi>
+                H
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                α
+               </mi>
+              </mrow>
+             </msub>
+            </msub>
+            <mo>
+             +
+            </mo>
+            <msub>
+             <mi>
+              F
+             </mi>
+             <msub>
+              <mi>
+               R
+              </mi>
+              <mrow>
+               <mi>
+                H
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                α
+               </mi>
+              </mrow>
+             </msub>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Seguindo a Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     , que foi retirada dos trabalhos de Marsden 2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ] e Gizis
+     <i>
+      et al.
+     </i>
+     2002 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       58
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        58 J.E. Gizis, I.N. Reid e S.L. Hawley, AJ 123, 3356 (2002).
+       </span>
+      </span>
+     </span>
+     ],
+     <math id="INEQ100">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mi>
+            H
+           </mi>
+           <mi>
+            α
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     é o fluxo na região retangular centrada em Hα e com largura de 3.6 Å. As regiões do contínuo com os fluxos
+     <math id="INEQ101">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mi>
+            H
+           </mi>
+           <mi>
+            α
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     (centrada em 6558.85 Å) e
+     <math id="INEQ102">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           R
+          </mi>
+          <mrow>
+           <mi>
+            H
+           </mi>
+           <mi>
+            α
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     (centrada em 6567.30 Å), têm comprimento de 2,2 Å em ambas as larguras da região retangular.
+    </p>
+    <h2>
+     3.4. Linhas do Ca II IRT
+    </h2>
+    <p>
+     Diversos outros levantamentos observacionais ocorreram nas últimas duas décadas na busca por aprofundar o entendimento da conexão entre a atividade solar e estelar, assim como a respeito dos ciclos de atividade magnética nas estrelas do tipo solar. Através do avanço das técnicas observacionais, assim como o avanço tecnológico na construção de modernos telescópios, foi possível realizar observações astronômicas em regiões do espectro eletromagnético até então inexploradas. Dentre elas, podemos citar a região do infravermelho próximo, com a atividade magnética espectroscópica sendo mensurada pelo índice quantificado através do fluxo na região do tripleto de cálcio infravermelho (InfraRed Triplet IRT). O índice de atividade Ca II IRT (Martínez-Arnáiz
+     <i>
+      et al.
+     </i>
+     2011 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       59
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        59 R. Martínez-Arnáiz, J. López-Santiago, I. Crespo-Chacón e D. Montes, MNRAS 414, 2629 (2011).
+       </span>
+      </span>
+     </span>
+     ]) é detalhado na Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     .
+    </p>
+    <p>
+     As linhas do Ca II IRT estão centradas em 8498.02 Å, 8542.09 Å e 8662.14 Å (Martin
+     <i>
+      et al.
+     </i>
+     2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       60
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        60 J. Martin, B. Fuhrmeister, M. Mittag, T.O.B. Schmidt, A. Hempelmann, J.N. González-Pérez e J.H.M.M. Schmitt, A&amp;A 605, A113 (2017).
+       </span>
+      </span>
+     </span>
+     ]). Em nível atômico, essas linhas são formadas através de decaimentos radiativos entre os níveis 3
+     <sup>
+      2
+     </sup>
+     <i>
+      P
+     </i>
+     e 3
+     <sup>
+      2
+     </sup>
+     <i>
+      D
+     </i>
+     nas linhas do Ca II IRT, gerando uma emissão dentro de profundas linhas de absorção (Linsky 2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16 J.L. Linsky, ARA&amp;A 55, 159 (2017).
+       </span>
+      </span>
+     </span>
+     ]). Em geral, isso não pode ser distinguido em estrelas com nível muito baixo de atividade, conforme mostrado na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     , sendo, porém, bem visíveis em estrelas ativas ou algumas estrelas M. Dentre os diversos levantamentos observacionais utilizando Ca II IRT, podemos citar: Linsky
+     <i>
+      et al.
+     </i>
+     1979b [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       61
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        61 J.L. Linsky, D.M. Hunten, R. Sowell, D.L. Glackin e W.L. Kelch, ApJS 41, 481 (1979).
+       </span>
+      </span>
+     </span>
+     ], Dempsey
+     <i>
+      et al.
+     </i>
+     1993 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       62
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        62 R.C. Dempsey, B.W. Bopp, G.W. Henry e D.S. Hall, ApJS 86, 293 (1993).
+       </span>
+      </span>
+     </span>
+     ], Busà
+     <i>
+      et al.
+     </i>
+     2007 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       63
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        63 I. Busà, R. Aznar Cuadrado, L. Terranegra, V. Andretta e M.T. Gomez, A&amp;A 466, 1089 (2007).
+       </span>
+      </span>
+     </span>
+     ], López-Santiago
+     <i>
+      et al.
+     </i>
+     2010 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       64
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        64 J. López-Santiago, D. Montes, M.C. Gálvez-Ortiz, I. Crespo-Chacón, R.M. Martínez-Arnáiz, M.J. Fernández-Figueroa, E. Castro e M. Cornide, A&amp;A 514, A97 (2010).
+       </span>
+      </span>
+     </span>
+     ] e Martin
+     <i>
+      et al.
+     </i>
+     2017 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       60
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        60 J. Martin, B. Fuhrmeister, M. Mittag, T.O.B. Schmidt, A. Hempelmann, J.N. González-Pérez e J.H.M.M. Schmitt, A&amp;A 605, A113 (2017).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="S3_F7">
+     <a name="S3_F7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/86fc606530023b1dbedaf052e3ec4d855b097957.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Espectros NARVAL de alta resolução de 3 análogas solares. A região do Ca II IRT é mostrada, com as linhas de absorção em verde.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O índice de atividade mais utilizado no estudo da região do Ca II IRT consiste na razão entre o fluxo das linhas do Ca II IRT e as bandas do contínuo (ver Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     ). São representadas pelas bandas
+     <i>
+      F
+     </i>
+     <sub>
+      8498
+     </sub>
+     centrada em 8498.02 Å,
+     <i>
+      F
+     </i>
+     <sub>
+      8542
+     </sub>
+     centrada em 8542.09Å e
+     <i>
+      F
+     </i>
+     <sub>
+      8662
+     </sub>
+     centrada em 8662.14Å, todas com largura de 2Å. As bandas do contínuo:
+     <math id="INEQ103">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mi>
+            I
+           </mi>
+           <mi>
+            R
+           </mi>
+           <mi>
+            T
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     centrada em 8475.8Å e
+     <math id="INEQ104">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           R
+          </mi>
+          <mrow>
+           <mi>
+            I
+           </mi>
+           <mi>
+            R
+           </mi>
+           <mi>
+            T
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     centrada em 8704.9Å, com largura de 5Å.
+    </p>
+    <div class="row formula" id="eS3_E7">
+     <a name="S3_E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            Ca
+           </mi>
+           <mi>
+            IRT
+           </mi>
+          </msub>
+          <mo>
+           -
+          </mo>
+          <mi>
+           index
+          </mi>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>
+             F
+            </mi>
+            <mn>
+             8498
+            </mn>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             F
+            </mi>
+            <mn>
+             8542
+            </mn>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             F
+            </mi>
+            <mn>
+             8662
+            </mn>
+           </msub>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>
+             F
+            </mi>
+            <msub>
+             <mi>
+              V
+             </mi>
+             <mrow>
+              <mi>
+               I
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               R
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               T
+              </mi>
+             </mrow>
+            </msub>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             F
+            </mi>
+            <msub>
+             <mi>
+              R
+             </mi>
+             <mrow>
+              <mi>
+               I
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               R
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               T
+              </mi>
+             </mrow>
+            </msub>
+           </msub>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Levando-se em conta o índice de atividade do Ca II IRT, diversos autores vêm investigando a correlação entre os índices
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     e Ca II IRT. Martin 2011 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       60
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        60 J. Martin, B. Fuhrmeister, M. Mittag, T.O.B. Schmidt, A. Hempelmann, J.N. González-Pérez e J.H.M.M. Schmitt, A&amp;A 605, A113 (2017).
+       </span>
+      </span>
+     </span>
+     ] encontrou uma relação empírica entre os índices
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     e Ca II IRT que são fortemente correlacionados (ρ = 0,9). O fluxo em excesso no Ca II IRT e o índice de cor (B−V) foram usados para correlacionar com
+     <math id="INEQ75">
+      <msubsup>
+       <mi>
+        R
+       </mi>
+       <mrow>
+        <mi>
+         H
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         K
+        </mi>
+       </mrow>
+       <mo>
+        ′
+       </mo>
+      </msubsup>
+     </math>
+     , bem como
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     . A intenção é de utilizar uma combinação destes indicadores no esforço de expandir as séries temporais de atividades para o maior número de estrelas possíveis. Isso é importante na busca pela determinação de ciclos de atividade para outras estrelas do tipo solar, visando responder a questionamentos fundamentais no campo do magnetismo estelar, tais como: 1) “Quão singular é o ciclo de atividade do nosso Sol?”, 2) “Estrelas com possíveis Terras possuem ciclo de atividade similar ao ciclo do Sol?”.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Medindo a atividade cromosférica computacionalmente
+    </h1>
+    <p>
+     A tarefa de calcular índices de atividade cromosférica a partir de espectros tem sido aperfeiçoada ao longo das últimas sete décadas. No final dos anos 1950, foi estabelecida a correlação entre fluxo das linhas do Ca II H&amp;K e a atividade solar (Wilson 1963 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        27 O.C. Wilson, ApJ 138, 832 (1963).
+       </span>
+      </span>
+     </span>
+     ]; Wilson &amp; Skumanich 1964 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        28 O.C. Wilson e A. Skumanich, ApJ 140, 1401 (1964).
+       </span>
+      </span>
+     </span>
+     ]; Wilson 1968 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21 O.C. Wilson, ApJ 153, 221 (1968).
+       </span>
+      </span>
+     </span>
+     ]). Em meados dos anos 1960 o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     ficou estabelecido como principal indicador espectroscópico de atividade cromosférica (Auer &amp; Mihalas 1963 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        22 L.H. Auer e D. Mihalas, ApJ 156, 157 (1969).
+       </span>
+      </span>
+     </span>
+     ]; Skumanich 1970 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        23 A. Skumanich, ApJ 159, 1077 (1970).
+       </span>
+      </span>
+     </span>
+     ]; Wilson 1968 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21 O.C. Wilson, ApJ 153, 221 (1968).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     O cálculo computacional do índice de atividade S-index é realizado levando-se em conta os valores dos fluxos na região das linhas espectrais H&amp;K. Para determinar o fluxo em cada região é necessário somar as contagens dos pontos espectrais nas quatro regiões mostradas na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     , valores que são posteriormente normalizados. São definidos numericamente dois triângulos com largura à meia altura de 1.09 Å, centrada nas linhas H&amp;K. O mesmo foi realizado nas regiões do
+     <i>
+      pseudocontínuo
+     </i>
+     , porém com largura de 20 Å. O índice de atividade é então calculado pela Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     . Maiores detalhes podem ser encontrados no trabalho de Wright 2004b [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25 J.T. Wright, G.W. Marcy, R.P. Butler e S.S. Vogt, ApJS 152, 261 (2004).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row formula" id="eS4_E8">
+     <a name="S4_E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           S
+          </mi>
+          <mrow>
+           <mi>
+            M
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            W
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mi>
+            α
+           </mi>
+           <mo>
+            ⋅
+           </mo>
+           <msub>
+            <mi>
+             S
+            </mi>
+            <mrow>
+             <mi>
+              i
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              n
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              s
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              r
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              u
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              m
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              e
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              n
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              l
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo>
+           +
+          </mo>
+          <mi>
+           β
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os mais diversos esforços observacionais nas últimas seis décadas tornaram o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     o principal indicador de atividade estelar, sendo utilizado nos mais diversos instrumentos e não apenas no Observatório Mount Wilson (Marsden
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ]). Apesar da vantagem observacional de utilizar a região do visível, cada instrumento e telescópio possuem configurações observacionais significativamente distintas. Para obtermos um índice
+     <i>
+      S
+     </i>
+     equivalente ao
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     , ou seja na escala de Mount Wilson, é preciso inicialmente medir o
+     <i>
+      S
+     </i>
+     no instrumento em questão (isto é o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       i n s t r u m e n t a l
+      </i>
+     </sub>
+     ). Mas as estrelas observadas pelo instrumento devem ser uma amostra de objetos também observados no Mount Wilson. São utilizadas então as chamadas estrelas de calibração, isto é, estrelas que foram monitoradas originalmente no Mount Wilson e oportunamente precisam ser observadas no instrumento de interesse. Assim, é necessário comparar o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       i n s t r u m e n t a l
+      </i>
+     </sub>
+     com o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     , estrela por estrela, resultando na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S4_F8">
+     <a name="S4_F8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/1dde7437d899d9e97ba29808749e93f6ff554685.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Simulação da calibração do S-index instrumental para o
+      <i>
+       S
+      </i>
+      <sub>
+       <i>
+        M W
+       </i>
+      </sub>
+      . Os dados utilizados foram obtidos através de gerador de números aleatórios. A linha vermelha representa o ajuste linear adequado para esta amostra.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os objetos que constituem a amostra devem apresentar correlação entre
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     e
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       i n s t r u m e n t a l
+      </i>
+     </sub>
+     , o que precisa ser necessariamente verdadeiro, visto que são as mesmas estrelas observadas por instrumentos distintos. Dadas as condições anteriores, deve então ser realizada uma regressão linear simples entre as medidas de
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     e
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       i n s t r u m e n t a l
+      </i>
+     </sub>
+     . Tal método foi registrado por diversos autores nos últimos 20 anos, dentre os quais Wright
+     <i>
+      et al.
+     </i>
+     2004b [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25 J.T. Wright, G.W. Marcy, R.P. Butler e S.S. Vogt, ApJS 152, 261 (2004).
+       </span>
+      </span>
+     </span>
+     ]; Marsden
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ]. A calibração do
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       i n s t r u m e n t a l
+      </i>
+     </sub>
+     para
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     , ou seja, a escala de Mount Wilson, resultará em uma equação geral conforme é mostrado na Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS4_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     . Portanto, através desse método, é possível realizar medições do índice de atividade em qualquer instrumento compatível com a região do óptico no espectro eletromagnético, e calibrar tais medidas para
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     . O acúmulo dessas medidas ao longo do tempo é muito importante para a caracterização de ciclos de atividade nas mais diversas estrelas, a partir de dados oriundos dos mais diversos telescópios.
+    </p>
+    <p>
+     Posteriormente, visando melhorar a precisão nas medições deste índice de atividade, Wright
+     <i>
+      et al.
+     </i>
+     2004b [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25 J.T. Wright, G.W. Marcy, R.P. Butler e S.S. Vogt, ApJS 152, 261 (2004).
+       </span>
+      </span>
+     </span>
+     ], utilizando ∼100 estrelas, desenvolveu um método em que calcula-se o índice de atividade instrumental utilizando a Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS4_E9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     , sendo este método reproduzido com sucesso por Marsden
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ]. Este método consiste em encontrar o melhor ajuste não linear (através do método dos mínimos quadrados) para o fluxo em cada uma das regiões do espectro utilizadas. São elas:
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       H
+      </i>
+     </sub>
+     e
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       K
+      </i>
+     </sub>
+     que são as regiões de largura 2.18 Å ambas centradas nas linhas
+     <i>
+      H
+     </i>
+     e
+     <i>
+      K
+     </i>
+     do Ca II respectivamente. Por outro lado,
+     <math id="INEQ105">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           R
+          </mi>
+          <mrow>
+           <mi>
+            H
+           </mi>
+           <mi>
+            K
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math id="INEQ106">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mi>
+            H
+           </mi>
+           <mi>
+            K
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     são as regiões do contínuo, com 20 Å de largura, já descritas anteriormente na Seção
+     <strong>
+      3.1
+     </strong>
+     . Os valores dos fluxos
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       H
+      </i>
+     </sub>
+     ,
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       K
+      </i>
+     </sub>
+     ,
+     <math id="INEQ107">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           R
+          </mi>
+          <mrow>
+           <mi>
+            H
+           </mi>
+           <mi>
+            K
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math id="INEQ108">
+      <mrow>
+       <msub>
+        <mi>
+         F
+        </mi>
+        <mrow>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mi>
+            H
+           </mi>
+           <mi>
+            K
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     são calculados para cada estrela e os coeficientes
+     <i>
+      a
+     </i>
+     ,
+     <i>
+      b
+     </i>
+     ,
+     <i>
+      c
+     </i>
+     e
+     <i>
+      d
+     </i>
+     são pesos calculados usando o ajuste não linear com mínimos quadrados, resultando na Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS4_E9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     . Os erros do índice de atividade são empíricos e estimados a partir do desvio padrão calculado em toda a amostra.
+    </p>
+    <div class="row formula" id="eS4_E9">
+     <a name="S4_E9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            S
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             n
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             s
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             r
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             u
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             m
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             e
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             n
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             a
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             l
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mrow>
+              <mi>
+               a
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msub>
+               <mi>
+                F
+               </mi>
+               <mi>
+                H
+               </mi>
+              </msub>
+             </mrow>
+             <mo>
+              +
+             </mo>
+             <mrow>
+              <mi>
+               b
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msub>
+               <mi>
+                F
+               </mi>
+               <mi>
+                K
+               </mi>
+              </msub>
+             </mrow>
+            </mrow>
+            <mrow>
+             <mrow>
+              <mi>
+               c
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msub>
+               <mi>
+                F
+               </mi>
+               <msub>
+                <mi>
+                 R
+                </mi>
+                <mrow>
+                 <mi>
+                  H
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  K
+                 </mi>
+                </mrow>
+               </msub>
+              </msub>
+             </mrow>
+             <mo>
+              +
+             </mo>
+             <mrow>
+              <mi>
+               d
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msub>
+               <mi>
+                F
+               </mi>
+               <msub>
+                <mi>
+                 V
+                </mi>
+                <mrow>
+                 <mi>
+                  H
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  K
+                 </mi>
+                </mrow>
+               </msub>
+              </msub>
+             </mrow>
+            </mrow>
+           </mfrac>
+           <mo>
+            +
+           </mo>
+           <mi>
+            e
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Um esquema computacional para o cálculo do índice de atividade é mostrado na Fig.
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     , baseado no método já amplamente utilizado por Duncan
+     <i>
+      et al.
+     </i>
+     1991 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </span>
+      </span>
+     </span>
+     ], Wright
+     <i>
+      et al.
+     </i>
+     2004b [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        37 J.T. Wright, AJ 128, 1273 (2004).
+       </span>
+      </span>
+     </span>
+     ] e Marsden
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ]. É importante destacar a necessidade de realizar a correção da velocidade radial da estrela na análise do espectro em questão. Isso é essencial para corrigir a posição das linhas espectrais a serem estudadas.
+    </p>
+    <div class="row fig" id="S4_F9">
+     <a name="S4_F9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/1caedc85b95239107ff272d5fb6872810e7469df.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Esquema computacional do cálculo do índice de atividade cromosférica
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.1. Calibração
+     <i>
+      S
+      <sub>
+       SOPHIE
+      </sub>
+     </i>
+     para o
+     <i>
+      S
+      <sub>
+       MW
+      </sub>
+     </i>
+    </h2>
+    <p>
+     Para exemplificar, realizamos uma nova calibração para o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     a partir do S-index instrumental dos espectros do SOPHIE
+     <span class="ref footnote">
+      <sup class="xref">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         12
+        </strong>
+        O SOPHIE é um instrumento caçador de planetas localizado no Observatoire de Haute Provence, França.
+       </span>
+      </span>
+     </span>
+     . Essa nova calibração foi motivada pela significativa divergência entre os valores deste índice de atividade calculados neste trabalho e as medidas outrora apresentadas por Boisse
+     <i>
+      et al.
+     </i>
+     2010 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       65
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        65 I. Boisse, A. Eggenberger, N.C. Santos, C. Lovis, F. Bouchy, G. Hébrard, L. Arnold, X. Bonfils, X. Delfosse, M. Desort et al, A&amp;A 523, A88 (2010).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Para efetuar essa calibração, seguimos o proposto por Duncan
+     <i>
+      et al.
+     </i>
+     1991 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </span>
+      </span>
+     </span>
+     ]; Wright
+     <i>
+      et al.
+     </i>
+     2004 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25 J.T. Wright, G.W. Marcy, R.P. Butler e S.S. Vogt, ApJS 152, 261 (2004).
+       </span>
+      </span>
+     </span>
+     ] e Marsden
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ], que consiste basicamente em encontrar uma relação linear entre os índices de atividade para estrelas observadas no instrumento em questão e também pelo projeto HK do Mount Wilson. Para tanto, foram utilizadas 52 estrelas padrão de calibração que constam no trabalho seminal da colaboração Bcool (Marsden
+     <i>
+      et al.
+     </i>
+     2014 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        57 S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </span>
+      </span>
+     </span>
+     ]), em que o mesmo procedimento foi realizado para determinar uma calibração do S-index instrumental dos instrumentos NARVAL e ESPaDOnS
+     <span class="ref footnote">
+      <sup class="xref">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         13
+        </strong>
+        ESPaDOnS: an Echelle SpectroPolarimetric Device for the Observation of Stars at CFHT. Está localizado no telescópio CFHT (Canadian France Hawai Telescope ), sendo um espectrógrafo e espectropolarímetro do tipo echelle de alta resolução com R≈65000. O ESPaDOnS foi projetado para obter espectros localizados entre 3700–10000 Å do espectro, uma descrição detalhada do instrumento pode ser encontrada no trabalho de Donati et al. 2006 [66].
+       </span>
+      </span>
+     </span>
+     para o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     .
+    </p>
+    <p>
+     Desses 52 objetos, foram encontrados 6575 espectros no arquivo do SOPHIE. Então, foi calculado o S-index instrumental seguindo o proposto por Boisse
+     <i>
+      et al.
+     </i>
+     2010 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       65
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        65 I. Boisse, A. Eggenberger, N.C. Santos, C. Lovis, F. Bouchy, G. Hébrard, L. Arnold, X. Bonfils, X. Delfosse, M. Desort et al, A&amp;A 523, A88 (2010).
+       </span>
+      </span>
+     </span>
+     ], ressaltando que nesse instrumento há uma diferença de ≈1,07 Å na posição das regiões do
+     <i>
+      pseudocontínuo
+     </i>
+     em relação a todos os outros levantamentos onde o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     foi calculado. Em seguida, foi realizada a remoção de
+     <i>
+      outliers
+     </i>
+     fora do intervalo de 3
+     <i>
+      σ
+     </i>
+     da média, restando assim 6221 medidas. Os valores médios para cada estrela estão listados na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS4_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     e a Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     mostra a regressão linear que descreve a calibração, tendo como resultado a Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS4_E10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      10
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S4_F10">
+     <a name="S4_F10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Wv4DLvjzWsctdNYGBPQWM8y/643bf61b88c046e6831e1e394a4010f8b60ec713.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Calibração S instrumental SOPHIE para
+      <i>
+       S
+      </i>
+      <sub>
+       <i>
+        M W
+       </i>
+      </sub>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="S4_T1">
+     <a name="S4_T1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Dados observacionais médios para as estrelas de calibração SOPHIE.
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_E10">
+     <a name="S4_E10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           S
+          </mi>
+          <mrow>
+           <mi>
+            M
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            W
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mrow>
+           <mrow>
+            <mn>
+             01
+            </mn>
+            <mo>
+             ⋅
+            </mo>
+            <msub>
+             <mi>
+              S
+             </mi>
+             <mrow>
+              <mi>
+               S
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               O
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               P
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               H
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               I
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               E
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mn>
+            0
+           </mn>
+          </mrow>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           03
+          </mn>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Considerações finais
+    </h1>
+    <p>
+     O estudo da espectroscopia estelar, em especial com foco no magnetismo, possui um papel muito especial na revolução que a Astronomia vem passando ao longo das últimas décadas. Desde as primeiras observações das manchas solares pelas primeiras lunetas no século XVI, até os modernos telescópios de alta resolução dos dias atuais, a busca pela compreensão da física dos interiores estelares, bem como a busca por vida no Universo, têm motivado os astrônomos nessa jornada.
+    </p>
+    <p>
+     Há muito se sabe que a luz proveniente das estrelas pode ser interpretada inadequadamente quando não são levadas em conta as medidas de atividade (Duncan
+     <i>
+      et al.
+     </i>
+     1991 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24 D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </span>
+      </span>
+     </span>
+     ]). Uma introdução ao tema à comunidade de língua portuguesa e estudantes de graduação é oportuna. Além disso, não é apenas compreender o tema em questão mas também dar uma introdução de como os astrônomos fazem essas medidas, a partir da espectroscopia, ao longo dos anos.
+    </p>
+    <p>
+     As observações das linhas do Ca II tem sido objeto de esforços observacionais ao longo das últimas seis décadas. Desde o estudo da atividade cromosférica ao longo desses anos, até a busca por caracterizar ciclos de atividade, muito tem sido investigado através da determinação da atividade usando o
+     <i>
+      S
+     </i>
+     <sub>
+      <i>
+       M W
+      </i>
+     </sub>
+     . Particularmente, neste trabalho foi realizado um breve detalhamento das características físicas da cromosfera de estrelas do tipo solar. Os trabalhos publicados por Ferreira
+     <i>
+      et al.
+     </i>
+     2020 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       67
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        67 R.R. Ferreira, R. Barbosa, M. Castro, G. Guerrero, L. Almeida, P. Boumier e J.D. Nascimento. A&amp;A, 640, A46, (2020).
+       </span>
+      </span>
+     </span>
+     ] e Gonçalves, B. F. O.
+     <i>
+      et al.
+     </i>
+     2020 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       68
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        68 B.F.O. Gonçalves, J.S. Costa, L. Almeida, M. Castro e J.D. Jr. do Nascimento, MNRAS 498, 2295 (2020).
+       </span>
+      </span>
+     </span>
+     ] também utilizam a formulação para o cálculo do S-index baseado no que foi apresentado neste trabalho e podem servir como fonte para um aprofundamento posterior.
+    </p>
+    <p>
+     O entendimento do magnetismo solar e de outras estrelas similares ao nosso Sol tornou-se de fundamental importância. Neste contexto, a busca por outras dessas estrelas tem levado a Astronomia moderna a procurar por novas Terras, sendo a descoberta do primeiro planeta orbitando uma estrela do tipo solar (Mayor &amp; Queloz 1995 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       69
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        69 M. Mayor e D. Queloz, Nature 378, 355 (1995).
+       </span>
+      </span>
+     </span>
+     ]) agraciada com o prêmio nobel de Física de 2019.
+    </p>
+    <p>
+     A jornada pelos novos mundos do Cosmos, em especial a busca por novas Terras (e quem sabe atividade biológica), tem nos levado a questões fundamentais. Neste contexto, o estudo da atividade magnética estelar tem relevante importância. Isso não somente no contexto estelar mas também no sentido de investigar qual a efetividade e influência do campo magnético estelar, bem como a atividade, no ambiente da atmosfera dos planetas (Linsky 2019 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1 J. Linsky, Host Stars and their Effects on Exoplanet Atmospheres (Springer, Berlin, 2019), v. 955.
+       </span>
+      </span>
+     </span>
+     ]). Portanto, a atividade estelar pode afetar até mesmo a habitabilidade planetária, como é sugerido por Do Nascimento
+     <i>
+      et al.
+     </i>
+     2016 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       70
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        70 J.D. Jr. do Nascimento, A.A. Vidotto, P. Petit, C. Folsom, M. Castro, S.C. Marsden, J. Morin, G.F. Porto de Mello, S. Meibom, S.V. Jeffers et al, ApJ 820, L15, (2016).
+       </span>
+      </span>
+     </span>
+     ]. Tudo isso faz do estudo da atividade estelar uma ferramenta na busca de responder a pergunta: “Estamos mesmo sozinhos no Universo?”.
+    </p>
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem ao(a) revisor(a) anônimo(a) pelas contribuições e comentários que aperfeiçoaram este trabalho. As atividades do Grupo de Estrutura e Evolução Estelar (GE3)
+     <span class="ref footnote">
+      <sup class="xref">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         14
+        </strong>
+        http://astro.dfte.ufrn.br/
+       </span>
+      </span>
+     </span>
+     do DFTE/UFRN têm sido financiadas por contínuos programas da CAPES e CNPq. RRF agradece à CAPES pelas bolsas de pós-graduação que financiaram este trabalho. BFOG agradece tanto ao CNPq quanto à CAPES pelas bolsas de mestrado e doutorado, respectivamente.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="References">
+    <h1 class="articleSectionTitle">
+     References
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1
+       </sup>
+       <div>
+        J. Linsky,
+        <i>
+         Host Stars and their Effects on Exoplanet Atmospheres
+        </i>
+        (Springer, Berlin, 2019), v. 955.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2
+       </sup>
+       <div>
+        E.R. Priest, Ap&amp;SS 264, 77 (1999).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3
+       </sup>
+       <div>
+        P.V. Alves, L.H.S. Reis, C.A.S. Querino, M.A.L. Moura, A.A. Feitosa Júnior e P.A.S. Martins, Revista Brasileira de Ensino de Física 42, e20190304 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4
+       </sup>
+       <div>
+        A.V.R. Silva,
+        <i>
+         Nossa Estrela O Sol. Temas atuais de física
+        </i>
+        (Livraria da Física, São Paulo, 2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5
+       </sup>
+       <div>
+        Ministério da Educação,
+        <i>
+         Base Nacional Comum Curricular
+        </i>
+        (Ministério da Educação, Brasília, 2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        6
+       </sup>
+       <div>
+        M. Harwit,
+        <i>
+         Astrophysical Concepts
+        </i>
+        (Springer-Verlag, New York, 2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        7
+       </sup>
+       <div>
+        I. Ridpath,
+        <i>
+         A Dictionary of Astronomy
+        </i>
+        (Oxford University Press, Oxford, 2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        8
+       </sup>
+       <div>
+        R.D. Haywood, A.C. Cameron, D. Queloz, S.C.C. Barros, M. Deleuil, R. Fares, M. Gillon, A.F. Lanza, C. Lovis, C. Moutou et al, MNRAS 443, 2517 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        9
+       </sup>
+       <div>
+        R.D. Haywood,
+        <i>
+         Hide and Seek: Radial-Velocity Searches for Planets around Active Stars
+        </i>
+        . Doctoral Thesis, University of St Andrews, St. Andrews (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        10
+       </sup>
+       <div>
+        J.C. Hall, Living Reviews in Solar Physics 5, 2 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        11
+       </sup>
+       <div>
+        R. Egeland, W. Soon, S. Baliunas, J.C. Hall, A.A. Pevtsov e L. Bertello, ApJ 835, 25 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        12
+       </sup>
+       <div>
+        J.N. Lockyer, Proceedings of the Royal Society of London Series I 17, 131 (1868).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        13
+       </sup>
+       <div>
+        J.L. Linsky, Annual Review of Astronomy and Astrophysics 18, 439 (1980).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        14
+       </sup>
+       <div>
+        J.M. Fontenla, J.L. Linsky, J. Witbrod, K. France, A. Buccino, P. Mauas, M. Vieytes e L.M. Walkowicz, ApJ 830, 154 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        15
+       </sup>
+       <div>
+        E. Priest,
+        <i>
+         Magnetohydrodynamics of the Sun
+        </i>
+        (Cambridge University Press, Cambridge, 2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        16
+       </sup>
+       <div>
+        J.L. Linsky, ARA&amp;A 55, 159 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        17
+       </sup>
+       <div>
+        B.M. Haisch, J.L. Linsky e G.S. Basri, ApJ 235, 519 (1980).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        18
+       </sup>
+       <div>
+        J.M. Fontenla, P.C. Stancil e E. Landi, ApJ 809, 157 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        19
+       </sup>
+       <div>
+        O.R. Nelson, Rev. Bras. Ensino Fís. 35, 3317 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        20
+       </sup>
+       <div>
+        P.G. Judge, Mem. Soc. Astron. Italiana 81, 543 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        21
+       </sup>
+       <div>
+        O.C. Wilson, ApJ 153, 221 (1968).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        22
+       </sup>
+       <div>
+        L.H. Auer e D. Mihalas, ApJ 156, 157 (1969).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        23
+       </sup>
+       <div>
+        A. Skumanich, ApJ 159, 1077 (1970).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        24
+       </sup>
+       <div>
+        D.K. Duncan, A.H. Vaughan, O.C. Wilson, G.W. Preston, J. Frazer, H. Lanning, A. Misch, J. Mueller, D. Soyumer, L. Woodard et al, ApJS 76, 383 (1991).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        25
+       </sup>
+       <div>
+        J.T. Wright, G.W. Marcy, R.P. Butler e S.S. Vogt, ApJS 152, 261 (2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        26
+       </sup>
+       <div>
+        R.G.M. Rutten, A&amp;A 177, 131 (1987).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        27
+       </sup>
+       <div>
+        O.C. Wilson, ApJ 138, 832 (1963).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        28
+       </sup>
+       <div>
+        O.C. Wilson e A. Skumanich, ApJ 140, 1401 (1964).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        29
+       </sup>
+       <div>
+        O.C Wilson, ApJ 226, 379 (1978).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        30
+       </sup>
+       <div>
+        J.L. Linsky, S.P. Worden, W. McClintock e R.M. Robertson, ApJS 41, 47 (1979).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        31
+       </sup>
+       <div>
+        A.H. Vaughan e G.W. Preston, PASP 92, 385 (1980).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        32
+       </sup>
+       <div>
+        L. Pasquini, R. Pallavicini e M. Pakull, A&amp;A 191, 253 (1988).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        33
+       </sup>
+       <div>
+        R.D. Robinson, L.E. Cram e M.S. Giampapa, ApJS 74, 891 (1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        34
+       </sup>
+       <div>
+        L. Pasquini, A&amp;A 266, 347 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        35
+       </sup>
+       <div>
+        T.J. Henry, D.R. Soderblom, R.A. Donahue e S.L. Baliunas, AJ 111, 439 (1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        36
+       </sup>
+       <div>
+        G. Pace e L. Pasquini, A&amp;A 426, 1021 (2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        37
+       </sup>
+       <div>
+        J.T. Wright, AJ 128, 1273 (2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        38
+       </sup>
+       <div>
+        E.R. Houdebine, K. Junghans, M.C. Heanue e A.D. Andrews, A&amp;A 503, 929 (2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        39
+       </sup>
+       <div>
+        H. Isaacson e D. Fischer, ApJ 725, 875 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        40
+       </sup>
+       <div>
+        R.R. Radick, G.W. Lockwood, G.W. Henry, J.C. Hall e A.A. Pevtsov, ApJ 855, 75 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        41
+       </sup>
+       <div>
+        R.J. Rutten,
+        <i>
+         Radiative Transfer in Stellar Atmospheres. Lecture Notes Utrecht University
+        </i>
+        (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        42
+       </sup>
+       <div>
+        J.L. Linsky e T.R. Ayres, ApJ 220, 619 (1978).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        43
+       </sup>
+       <div>
+        R.W. Noyes, L.W. Hartmann, S.L. Baliunas, D.K. Duncan e A.H. Vaughan, ApJ 279, 763 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        44
+       </sup>
+       <div>
+        M. Mittag, J.H.M.M. Schmitt e K.P. Schröder, A&amp;A 549, A117 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        45
+       </sup>
+       <div>
+        S.L. Baliunas, R.A. Donahue, W.H. Soon, J.H. Horne, J. Frazer, L. WoodardEklund, M. Bradford, L.M. Rao, O.C. Wilson, Q. Zhang et al, ApJ 438, 269, (1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        46
+       </sup>
+       <div>
+        S. Baliunas e R. Jastrow, Nature 348, 520 (1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        47
+       </sup>
+       <div>
+        J.A. Eddy, Science 192, 1189 (1976).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        48
+       </sup>
+       <div>
+        D. Lubin, D. Tytler e D. Kirkman, ApJ 716, 766 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        49
+       </sup>
+       <div>
+        D. Cardini, A&amp;A 430, 303 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        50
+       </sup>
+       <div>
+        G.S. Basri and J.L. Linsky, ApJ 234, 1023 (1979).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        51
+       </sup>
+       <div>
+        M. Cerruti-Sola, C.C. Cheng e R. Pallavicini, A&amp;A 256, 185 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        52
+       </sup>
+       <div>
+        M. Mathioudakis e J.G. Doyle, A&amp;A 262, 523 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        53
+       </sup>
+       <div>
+        O. Elgaroy, O. Engvold e P. Joras, A&amp;A 326, 165 (1997).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        54
+       </sup>
+       <div>
+        B. Buchholz, P. Ulmschneider e Manfred Cuntz, ApJ 494, 700 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        55
+       </sup>
+       <div>
+        U. Feldman e G.A. Doschek, ApJ 212, L147 (1977).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        56
+       </sup>
+       <div>
+        T.M.D. Pereira, M. Carlsson, B. De Pontieu e Viggo Hansteen, ApJ 806, 14 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        57
+       </sup>
+       <div>
+        S.C. Marsden, P. Petit, S.V. Jeffers, J. Morin, R. Fares, A. Reiners, J-D. do Nascimento, M. Aurière, J. Bouvier e B.D. Carter, MNRAS 444, 3517 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        58
+       </sup>
+       <div>
+        J.E. Gizis, I.N. Reid e S.L. Hawley, AJ 123, 3356 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        59
+       </sup>
+       <div>
+        R. Martínez-Arnáiz, J. López-Santiago, I. Crespo-Chacón e D. Montes, MNRAS 414, 2629 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        60
+       </sup>
+       <div>
+        J. Martin, B. Fuhrmeister, M. Mittag, T.O.B. Schmidt, A. Hempelmann, J.N. González-Pérez e J.H.M.M. Schmitt, A&amp;A 605, A113 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        61
+       </sup>
+       <div>
+        J.L. Linsky, D.M. Hunten, R. Sowell, D.L. Glackin e W.L. Kelch, ApJS 41, 481 (1979).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        62
+       </sup>
+       <div>
+        R.C. Dempsey, B.W. Bopp, G.W. Henry e D.S. Hall, ApJS 86, 293 (1993).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        63
+       </sup>
+       <div>
+        I. Busà, R. Aznar Cuadrado, L. Terranegra, V. Andretta e M.T. Gomez, A&amp;A 466, 1089 (2007).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        64
+       </sup>
+       <div>
+        J. López-Santiago, D. Montes, M.C. Gálvez-Ortiz, I. Crespo-Chacón, R.M. Martínez-Arnáiz, M.J. Fernández-Figueroa, E. Castro e M. Cornide, A&amp;A 514, A97 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        65
+       </sup>
+       <div>
+        I. Boisse, A. Eggenberger, N.C. Santos, C. Lovis, F. Bouchy, G. Hébrard, L. Arnold, X. Bonfils, X. Delfosse, M. Desort et al, A&amp;A 523, A88 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        66
+       </sup>
+       <div>
+        J.F. Donati, C. Catala, J.D. Landstreet e P. Petit, Astronomical Society of the Pacific Conference Series 358 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        67
+       </sup>
+       <div>
+        R.R. Ferreira, R. Barbosa, M. Castro, G. Guerrero, L. Almeida, P. Boumier e J.D. Nascimento. A&amp;A, 640, A46, (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        68
+       </sup>
+       <div>
+        B.F.O. Gonçalves, J.S. Costa, L. Almeida, M. Castro e J.D. Jr. do Nascimento, MNRAS 498, 2295 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        69
+       </sup>
+       <div>
+        M. Mayor e D. Queloz, Nature 378, 355 (1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        70
+       </sup>
+       <div>
+        J.D. Jr. do Nascimento, A.A. Vidotto, P. Petit, C. Folsom, M. Castro, S.C. Marsden, J. Morin, G.F. Porto de Mello, S. Meibom, S.V. Jeffers et al, ApJ 820, L15, (2016).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Para exemplificar, as linhas de emissão C II-IV, Si III-IV e O V são formadas na região de transição em temperaturas variando entre 20000 à 300000 K (Linsky 2019 [
+        <span class="ref">
+         <sup class="xref xrefblue">
+          1
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           1 J. Linsky, Host Stars and their Effects on Exoplanet Atmospheres (Springer, Berlin, 2019), v. 955.
+          </span>
+         </span>
+        </span>
+        ]).
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        A classificação das estrelas em tipos espectrais está relacionada com características gerais dos espectros estelares. O tipo espectral da estrela depende primariamente da sua temperatura superficial, portanto sendo também dependente da sua cor (estrelas mais quentes estão mais próximas do azul, enquanto que estrelas mais frias estão próximas do vermelho) (Harwit 2006 [
+        <span class="ref">
+         <sup class="xref xrefblue">
+          6
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           6 M. Harwit, Astrophysical Concepts (Springer-Verlag, New York, 2006).
+          </span>
+         </span>
+        </span>
+        ]; Ridpath 2012 [
+        <span class="ref">
+         <sup class="xref xrefblue">
+          7
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           7 I. Ridpath, A Dictionary of Astronomy (Oxford University Press, Oxford, 2012).
+          </span>
+         </span>
+        </span>
+        ]).
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        Envoltório convectivo (ou envelope convectivo) é a região da estrela onde o transporte de energia ocorre predominantemente por convecção. Estrelas com massas entre 0.4 M
+        <sub>
+         ⊙
+        </sub>
+        e 1.3 M
+        <sub>
+         ⊙
+        </sub>
+        apresentam envoltório convectivo.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        4
+       </span>
+       <div>
+        Quantidade adimensional que se refere a abundância (em número de átomos) de elementos mais pesados que H e He presentes na composição da matéria estelar.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        5
+       </span>
+       <div>
+        Atualmente, sabemos que a cor vermelha aparece principalmente devido à emissão no visível da linha Hα em 6562.8 Å.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        6
+       </span>
+       <div>
+        Neste trabalho decidiu-se por representar o gradiente de temperatura como Δ
+        <i>
+         T
+        </i>
+        /Δ
+        <i>
+         h
+        </i>
+        , embora, do ponto de vista matemático, essa quantidade represente a taxa de variação da temperatura com a altura
+        <i>
+         h
+        </i>
+        , medida em relação ao centro da estrela. Portanto, a mudança de notação não modifica o significado físico dessa quantidade, sendo apenas uma notação para facilitar o caráter didático do texto. Na notação diferencial, este gradiente de temperatura pode ser representado como
+        <i>
+         d T
+        </i>
+        /
+        <i>
+         d h
+        </i>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        7
+       </span>
+       <div>
+        Opacidade é a grandeza física relacionada com a resistência da matéria à propagação da radiação eletromagnética. Se uma linha espectral apresenta opacidade alta, isso quer dizer que a radiação eletromagnética relacionada com a formação daquela linha tem dificuldade para se propagar no meio em questão.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        8
+       </span>
+       <div>
+        Em espectroscopia, linhas ressonantes representam a transição entre o estado fundamental e o primeiro estado excitado em um átomo ou íon. Também são interpretadas como aquelas regiões do espectro altamente sensíveis ao magnetismo e à temperatura. Sendo, portanto, bons indicadores espectroscópios para se investigar o comportamento magnético no interior estelar. Aqui, especificamente, levando-se em conta as linhas cromosféricas.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        9
+       </span>
+       <div>
+        Caracteriza-se pela diferença entre as magnitudes fotométricas da estrela através de dois filtros, no caso B e V. São importantes indicadores da temperatura estelar.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        10
+       </span>
+       <div>
+        Localizado no Mount Wilson, um pico de 1742 m em
+        <i>
+         San Gabriel Mountains, LA, Califórnia.
+        </i>
+        O observatório contém dois telescópios importantes: Hale (1,5 m), que foi construído em 1908, e o telescópio Hooker (2,5 m), que foi construído em 1917.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        11
+       </span>
+       <div>
+        Corresponde à potência total por unidade de área na forma de radiação emitida pelo Sol em todos os comprimentos de onda do espectro eletromagnético.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        12
+       </span>
+       <div>
+        O SOPHIE é um instrumento caçador de planetas localizado no
+        <i>
+         Observatoire de Haute Provence
+        </i>
+        , França.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        13
+       </span>
+       <div>
+        ESPaDOnS: an Echelle SpectroPolarimetric Device for the Observation of Stars at CFHT. Está localizado no telescópio CFHT (
+        <i>
+         Canadian France Hawai Telescope
+        </i>
+        ), sendo um espectrógrafo e espectropolarímetro do tipo echelle de alta resolução com
+        <i>
+         R
+        </i>
+        ≈65000. O ESPaDOnS foi projetado para obter espectros localizados entre 3700–10000 Å do espectro, uma descrição detalhada do instrumento pode ser encontrada no trabalho de Donati
+        <i>
+         et al.
+        </i>
+        2006 [
+        <span class="ref">
+         <sup class="xref xrefblue">
+          66
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           66 J.F. Donati, C. Catala, J.D. Landstreet e P. Petit, Astronomical Society of the Pacific Conference Series 358 (2006).
+          </span>
+         </span>
+        </span>
+        ].
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        14
+       </span>
+       <div>
+        http://astro.dfte.ufrn.br/
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        19 Nov 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        08 Fev 2021
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        07 Ago 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        28 Set 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

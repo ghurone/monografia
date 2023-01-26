@@ -1,0 +1,7454 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Seção especial - Celebrando os 100 anos de nascimento de Richard P. Feynman
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 40 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2018
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2017-0372" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2017-0372
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0372">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  A Integral de Caminhos: Uma Ponte entre a Mecânica Quântica e a Mecânica Clássica
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  The Path Integral: A bridge between Quantum and Classical Mechanics
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Alfredo M. Ozorio de Almeida
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Centro Brasileiro de Pesquisas Fisicas, Rio de Janeiro, RJ, Brazil
+    <div class="corresp">
+     Endereço de correspondência:
+     <a href="mailto:alfredozorio@gmail.com">
+      alfredozorio@gmail.com
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     A integral de caminhos de Feynman coloca de saída a ação clássica no cerne da evolução quântica. Ao invés de apenas contrastar a multiplicidade de caminhos quânticos com a raridade das trajetórias clássicas, podemos nos valer do princípio variacional que as identificam para construir abrangentes aproximações semiclássicas para o operador de evolução. A transformada de Fourier de seu traço fornece então a densidade de níveis quânticos de energia como uma soma sobre as órbitas periódicas clássicas: a fórmula do traço de Gutzwiller. As órbitas peródicas também explicam as correlações entre os níveis, seguindo padrões universais de matrizes aleatórias se o sistema clássico for caótico. Ao reverso, discrepâncias entre os espectros universais e os semiclássicos desvendaram correlações entre órbitas periódicas, nunca vislumbradas ao longo da história da mecânica clássica.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     integral de caminho; trajetória clássica; princípio variacional; órbita periódica; densidade de níveis; matrizes aleatórias
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     The Feynman path integral places the classical action in the very core of quantum evolution. Instead of contrasting the multiplicity of quantum paths with the scarcity of classical trajectories, we can avail ourselves of the variational principle by which they are identified. This leads to wide ranging semiclassical approximations for the evolution operator. The Fourier transform of the trace of this operator then supplies the density of quantum energy levels as a sum over the classical periodic orbits: The Gutzwiller trace formula. The periodic orbits also explain the correlations between levels, following universal classes of random matrices, if the classical system is chaotic. Conversely, discrepancies between the semiclassical spectra and the universal random matrix spectra uncouvered correlations between periodic orbits that had never been suspectected in the long history of classical mechanics.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     path integral; classical trajectory; variational principle; periodic orbit; level density; random matrices
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     Ainda que as formulações de Heisenberg e de Schrödinger da mecânica quântica invoquem alguns elementos básicos da mecânica clássica, estes surgem de tal forma transfigurados que poderíamos bem duvidar que lidam com os mesmos sistemas. Afinal, a trajetória, solução das equações de Newton, Lagrange, ou Hamilton, personagem central da mecânica clássica, simplesmente some da mecânica quântica. Ou melhor, na reformulação de Feynman, ela retorna, mas apenas como um membro qualquer do coro, um dos múltiplos caminhos que contribuem democraticamente para o propagador. É na aproximação semiclássica que a trajetória readquire um certo destaque ao organizar a fase dos caminhos vizinhos de forma a diminuir radicalmente o número de contribuições ao propagador. A rica interação entre as mecânicas clássica e quântica que daí decorre mal poderia ser antevista quando da formulação da integral de caminhos, mas tem sobre esta uma base sólida.
+    </p>
+    <p>
+    </p>
+    <p>
+     É bom frisar que a relação entre a mecânica clássica e a mecânica quântica de que aqui tratamos é intrínsica à estrita evolucão unitária desta, pertinente aos sistemas dinâmicos fundamentais, isolados e conservativos: O sistema quântico inicial permanece quântico para todo e sempre. Aqui, as trajetórias clássicas tem papel de esqueleto sobre o qual são tecidas as ondas quânticas, tal qual os raios da ótica geométrica guiam as ondas luminosas. Daí, já podemos antecipar que as trajetórias terão na aproximação semiclássica da mecânica quântica uma participação mais coletiva do que na mecânica clássica. Nesse contexto, não há como pretender esclarecer qualquer aspecto da questão crucial de como características clássicas surgem gradualmente no processo de descoerência próprio de sistemas quânticos não isolados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Giulini, E. Joos, C. Kiefer, J. Kupsch, I.-O. Stamatescu and H.D. Zeh, Decoherence and the Appearance of a Classical World in Quantum Theory (Springer, Berlin, 1996).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] W. Zurek, Rev. Mod. Phys. 75, 715 (2003).
+       </span>
+      </span>
+     </span>
+     ]. Não é de surpreender que o próprio Feynman, por meio do desenvolvimento das integrais de trajetória conhecido como
+     <i>
+      método de Feynman-Vernon
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] R.P. Feynman and F.L. Vernon, Ann. Phys. 24, 118 (1963).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] A.O. Caldeira and A.J. Leggett, Ann. Phys. (NY) 149, 374 (1983).
+       </span>
+      </span>
+     </span>
+     ], desempenhou papel de destaque neste estudo, mas este será objeto de outros ensaios neste número especial.
+    </p>
+    <p>
+    </p>
+    <p>
+     Consideremos um sistema de
+     <math>
+      <mi>
+       L
+      </mi>
+     </math>
+     graus de liberdade, tal que os pontos,
+     <math>
+      <mrow>
+       <mi mathvariant="bold">
+        x
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mo>
+        (
+       </mo>
+       <mi mathvariant="bold">
+        p
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <mi mathvariant="bold">
+        q
+       </mi>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     , do espaço de fases clássico tem como coordenadas os
+     <math>
+      <mi>
+       L
+      </mi>
+     </math>
+     momentos,
+     <math>
+      <mrow>
+       <mi mathvariant="bold">
+        p
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mo>
+        (
+       </mo>
+       <msub>
+        <mi>
+         p
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        ,
+       </mo>
+       <mo>
+        .
+       </mo>
+       <mo>
+        .
+       </mo>
+       <mo>
+        .
+       </mo>
+       <mo>
+        ,
+       </mo>
+       <msub>
+        <mi>
+         p
+        </mi>
+        <mi>
+         L
+        </mi>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     e as
+     <math>
+      <mi>
+       L
+      </mi>
+     </math>
+     posições,
+     <math>
+      <mrow>
+       <mi mathvariant="bold">
+        q
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mo>
+        (
+       </mo>
+       <msub>
+        <mi>
+         q
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        ,
+       </mo>
+       <mo>
+        .
+       </mo>
+       <mo>
+        .
+       </mo>
+       <mo>
+        .
+       </mo>
+       <mo>
+        ,
+       </mo>
+       <msub>
+        <mi>
+         q
+        </mi>
+        <mi>
+         L
+        </mi>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     . Na notação de Dirac, um auto-estado de posição,
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     evolui para o estado
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mover accent="true">
+         <mi>
+          U
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          −
+         </mo>
+        </msub>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , onde
+     <math>
+      <mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          U
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msup>
+        <mrow>
+         <mi mathvariant="normal">
+          e
+         </mi>
+        </mrow>
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <mi>
+          i
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mover accent="true">
+          <mi>
+           H
+          </mi>
+          <mo>
+           ^
+          </mo>
+         </mover>
+         <mo>
+          /
+         </mo>
+         <mi>
+          ℏ
+         </mi>
+        </mrow>
+       </msup>
+      </mrow>
+     </math>
+     é o operador de evolução e
+     <math>
+      <mover accent="true">
+       <mi>
+        H
+       </mi>
+       <mo>
+        ^
+       </mo>
+      </mover>
+     </math>
+     é o operador hamiltoniano. Então, definimos o
+     <i>
+      propagador
+     </i>
+     , alvo da integral de trajetória, como
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         〈
+        </mo>
+       </mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          U
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          −
+         </mo>
+        </msub>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         〈
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          +
+         </mo>
+        </msub>
+        <mo>
+         |
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          −
+         </mo>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . O interessante é detectar uma dupla personalidade do propagador, pois, além de ser o
+     <i>
+      overlap
+     </i>
+     entre dois estados, podemos chegar a ele só por operadores: Sendo o operador de transição entre posições,
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         〉
+        </mo>
+        <mo>
+         〈
+        </mo>
+       </mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , seu
+     <i>
+      traço
+     </i>
+     com o operador de evolução,
+     <math>
+      <mrow>
+       <mi>
+        tr
+       </mi>
+       <mspace width="3.33333pt">
+       </mspace>
+       <msub>
+        <mover accent="true">
+         <mi>
+          U
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mrow>
+        <mspace width="3.33333pt">
+        </mspace>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         〉
+        </mo>
+        <mo>
+         〈
+        </mo>
+       </mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mo>
+         〈
+        </mo>
+       </mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          U
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          −
+         </mo>
+        </msub>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , ou seja, o propagador é também elemento de matriz do operador de evolução.
+    </p>
+    <p>
+    </p>
+    <p>
+     Existem várias formas de integrais de caminho, todas baseadas na idéia de Feynman
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] R.P. Feynman, Rev. Mod. Phys. 20, 367 (1948).
+       </span>
+      </span>
+     </span>
+     (antecipada por Dirac
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] P.A.M. Dirac, Principles of Quantum Mechanics (Oxford University Press, Oxford, 1947).
+       </span>
+      </span>
+     </span>
+     ) de aproveitar a propriedade de grupo do operador de evolução para avaliar
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <msub>
+          <mover accent="true">
+           <mi>
+            U
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           t
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <munder>
+          <mo form="prefix" movablelimits="true">
+           lim
+          </mo>
+          <mrow>
+           <mi>
+            N
+           </mi>
+           <mo>
+            →
+           </mo>
+           <mi>
+            ∞
+           </mi>
+          </mrow>
+         </munder>
+         <mo>
+          [
+         </mo>
+         <mfrac>
+          <msub>
+           <mover accent="true">
+            <mi>
+             U
+            </mi>
+            <mo>
+             ^
+            </mo>
+           </mover>
+           <mrow>
+            <mi>
+             t
+            </mi>
+            <mo>
+             /
+            </mo>
+            <mi>
+             N
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           N
+          </mi>
+         </mfrac>
+         <msup>
+          <mo>
+           ]
+          </mo>
+          <mi>
+           N
+          </mi>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     As variações vem por conta da escolha de representação deste operador para tempos pequenos. Em vez de seguir o tratamento original de Feynman (esboçado também em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] R.P. Feynman, Statistical Mechanics: A Set of Lectures (Benjamin, Menlo Parrk, 1972).
+       </span>
+      </span>
+     </span>
+     ) vamos adotar aqui o de Marinov
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] M.S. Marinov, Phys. Reports 60, 1 (1960).
+       </span>
+      </span>
+     </span>
+     , pois, construida sobre caminhos no espaço de fases, se encaixa melhor nas considerações que se seguem. Em todo caso, pressupõe-se, como Feynman, uma Hamiltoniana da forma
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <mover accent="true">
+          <mi>
+           H
+          </mi>
+          <mo>
+           ^
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <mi>
+          H
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mover accent="true">
+           <mi mathvariant="bold">
+            p
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mo>
+           ,
+          </mo>
+          <mover accent="true">
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <msup>
+           <mrow>
+            <mover accent="true">
+             <mi mathvariant="bold">
+              p
+             </mi>
+             <mo>
+              ^
+             </mo>
+            </mover>
+           </mrow>
+           <mn>
+            2
+           </mn>
+          </msup>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            m
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mi>
+          V
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mover accent="true">
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde os operadores
+     <math>
+      <mover accent="true">
+       <mi mathvariant="bold">
+        p
+       </mi>
+       <mo>
+        ^
+       </mo>
+      </mover>
+     </math>
+     e
+     <math>
+      <mover accent="true">
+       <mi mathvariant="bold">
+        q
+       </mi>
+       <mo>
+        ^
+       </mo>
+      </mover>
+     </math>
+     tem
+     <math>
+      <mi>
+       L
+      </mi>
+     </math>
+     componentes de momento e posição. Assim, podemos escrever a representação mista do operador de evolução para
+     <math>
+      <mrow>
+       <mi>
+        t
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        ϵ
+       </mi>
+      </mrow>
+     </math>
+     como
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mrow>
+             <mo>
+              〈
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              p
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msub>
+             <mover accent="true">
+              <mi>
+               U
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mi>
+              ϵ
+             </mi>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mo>
+              −
+             </mo>
+            </msub>
+            <mrow>
+             <mo>
+              〉
+             </mo>
+             <mo>
+              =
+             </mo>
+             <mo>
+              〈
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              p
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ϵ
+              </mi>
+              <mover accent="true">
+               <mi>
+                H
+               </mi>
+               <mo>
+                ^
+               </mo>
+              </mover>
+              <mo>
+               /
+              </mo>
+              <mi>
+               ℏ
+              </mi>
+             </mrow>
+            </msup>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               −
+              </mo>
+             </msub>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+            <mover>
+             <mo>
+              ⟶
+             </mo>
+             <mrow>
+              <mi>
+               ϵ
+              </mi>
+              <mo>
+               →
+              </mo>
+              <mn>
+               0
+              </mn>
+             </mrow>
+            </mover>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             〈
+            </mo>
+            <msub>
+             <mi mathvariant="bold">
+              p
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+            <mo>
+             |
+            </mo>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ϵ
+              </mi>
+              <msup>
+               <mrow>
+                <mover accent="true">
+                 <mi mathvariant="bold">
+                  p
+                 </mi>
+                 <mo>
+                  ^
+                 </mo>
+                </mover>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mo>
+               /
+              </mo>
+              <mn>
+               2
+              </mn>
+              <mi>
+               m
+              </mi>
+              <mi>
+               ℏ
+              </mi>
+             </mrow>
+            </msup>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ϵ
+              </mi>
+              <mi>
+               V
+              </mi>
+              <mo>
+               (
+              </mo>
+              <mover accent="true">
+               <mi mathvariant="bold">
+                q
+               </mi>
+               <mo>
+                ^
+               </mo>
+              </mover>
+              <mo>
+               )
+              </mo>
+              <mo>
+               /
+              </mo>
+              <mi>
+               ℏ
+              </mi>
+             </mrow>
+            </msup>
+            <mo>
+             |
+            </mo>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mo>
+              −
+             </mo>
+            </msub>
+            <mo>
+             〉
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             =
+            </mo>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mfrac>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+                <mi>
+                 ϵ
+                </mi>
+               </mrow>
+               <mi>
+                ℏ
+               </mi>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <mfrac>
+                <msup>
+                 <mrow>
+                  <msub>
+                   <mi mathvariant="bold">
+                    p
+                   </mi>
+                   <mo>
+                    +
+                   </mo>
+                  </msub>
+                 </mrow>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  m
+                 </mi>
+                </mrow>
+               </mfrac>
+               <mo>
+                +
+               </mo>
+               <mi>
+                V
+               </mi>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <msub>
+                 <mi mathvariant="bold">
+                  q
+                 </mi>
+                 <mo>
+                  −
+                 </mo>
+                </msub>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+              </mfenced>
+             </mrow>
+            </msup>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mrow>
+             <mo>
+              〈
+             </mo>
+             <msub>
+              <mi mathvariant="bold">
+               p
+              </mi>
+              <mo>
+               +
+              </mo>
+             </msub>
+             <mo>
+              |
+             </mo>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               −
+              </mo>
+             </msub>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         〈
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          p
+         </mi>
+         <mo>
+          +
+         </mo>
+        </msub>
+        <mo>
+         |
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          −
+         </mo>
+        </msub>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        ∝
+       </mo>
+       <msup>
+        <mrow>
+         <mi mathvariant="normal">
+          e
+         </mi>
+        </mrow>
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <mfrac>
+          <mi>
+           i
+          </mi>
+          <mi>
+           ℏ
+          </mi>
+         </mfrac>
+         <mrow>
+          <msub>
+           <mi mathvariant="bold">
+            p
+           </mi>
+           <mo>
+            +
+           </mo>
+          </msub>
+          <mo>
+           ·
+          </mo>
+          <msub>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            −
+           </mo>
+          </msub>
+         </mrow>
+        </mrow>
+       </msup>
+      </mrow>
+     </math>
+     , de forma que para tempos pequenos temos
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mrow>
+             <mo>
+              〈
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msub>
+             <mover accent="true">
+              <mi>
+               U
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mi>
+              ϵ
+             </mi>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               −
+              </mo>
+             </msub>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+            <mo>
+             ≈
+            </mo>
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mn>
+                2
+               </mn>
+               <mi>
+                π
+               </mi>
+               <mi>
+                ℏ
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <mi>
+                L
+               </mi>
+               <mo>
+                /
+               </mo>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msup>
+            </mfrac>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             ×
+            </mo>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="normal">
+             d
+            </mi>
+            <msub>
+             <mi mathvariant="bold">
+              p
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mfrac>
+               <mi>
+                i
+               </mi>
+               <mi>
+                ℏ
+               </mi>
+              </mfrac>
+              <mi>
+               H
+              </mi>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 p
+                </mi>
+                <mo>
+                 +
+                </mo>
+               </msub>
+               <mo>
+                ,
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 q
+                </mi>
+                <mo>
+                 −
+                </mo>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </msup>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mfrac>
+               <mi>
+                i
+               </mi>
+               <mi>
+                ℏ
+               </mi>
+              </mfrac>
+              <msub>
+               <mi mathvariant="bold">
+                p
+               </mi>
+               <mo>
+                +
+               </mo>
+              </msub>
+              <mo>
+               ·
+              </mo>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 q
+                </mi>
+                <mo>
+                 +
+                </mo>
+               </msub>
+               <mo>
+                −
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 q
+                </mi>
+                <mo>
+                 −
+                </mo>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </msup>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Então o propagador para o tempo completo fica
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+           </mrow>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mrow>
+             <mo>
+              〈
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msub>
+             <mover accent="true">
+              <mi>
+               U
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mi>
+              t
+             </mi>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               −
+              </mo>
+             </msub>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+            <mo>
+             =
+            </mo>
+            <munder>
+             <mo form="prefix" movablelimits="true">
+              lim
+             </mo>
+             <mrow>
+              <mi>
+               N
+              </mi>
+              <mo>
+               →
+              </mo>
+              <mi>
+               ∞
+              </mi>
+             </mrow>
+            </munder>
+            <mo>
+             ∫
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="normal">
+             d
+            </mi>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mrow>
+              <mi>
+               N
+              </mi>
+              <mo>
+               −
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+           </mrow>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             .
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mi mathvariant="normal">
+             d
+            </mi>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mrow>
+             <mspace width="3.33333pt">
+             </mspace>
+             <mo>
+              〈
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msub>
+             <mover accent="true">
+              <mi>
+               U
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mi>
+              ϵ
+             </mi>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mrow>
+              <mi>
+               N
+              </mi>
+              <mo>
+               −
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+            <mrow>
+             <mo>
+              〉
+             </mo>
+             <mo>
+              .
+             </mo>
+             <mo>
+              .
+             </mo>
+             <mo>
+              .
+             </mo>
+             <mo>
+              〈
+             </mo>
+            </mrow>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <msub>
+             <mover accent="true">
+              <mi>
+               U
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mi>
+              ϵ
+             </mi>
+            </msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               −
+              </mo>
+             </msub>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+           </mrow>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             =
+            </mo>
+            <munder>
+             <mo form="prefix" movablelimits="true">
+              lim
+             </mo>
+             <mrow>
+              <mi>
+               N
+              </mi>
+              <mo>
+               →
+              </mo>
+              <mi>
+               ∞
+              </mi>
+             </mrow>
+            </munder>
+            <mo>
+             ∫
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi mathvariant="normal">
+               d
+              </mi>
+              <msub>
+               <mi mathvariant="bold">
+                p
+               </mi>
+               <mi>
+                N
+               </mi>
+              </msub>
+             </mrow>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mn>
+                2
+               </mn>
+               <mi>
+                π
+               </mi>
+               <mi>
+                ℏ
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <mi>
+                L
+               </mi>
+               <mo>
+                /
+               </mo>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msup>
+            </mfrac>
+            <mo>
+             ∫
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mo>
+             .
+            </mo>
+            <mo>
+             ∫
+            </mo>
+            <munderover>
+             <mo>
+              ∏
+             </mo>
+             <mrow>
+              <mi>
+               k
+              </mi>
+              <mo>
+               =
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+             <mrow>
+              <mi>
+               N
+              </mi>
+              <mo>
+               −
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </munderover>
+            <mfrac>
+             <mrow>
+              <mi mathvariant="normal">
+               d
+              </mi>
+              <msub>
+               <mi mathvariant="bold">
+                p
+               </mi>
+               <mi>
+                k
+               </mi>
+              </msub>
+              <mi mathvariant="normal">
+               d
+              </mi>
+              <msub>
+               <mi mathvariant="bold">
+                q
+               </mi>
+               <mi>
+                k
+               </mi>
+              </msub>
+             </mrow>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mn>
+                2
+               </mn>
+               <mi>
+                π
+               </mi>
+               <mi>
+                ℏ
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mi>
+               L
+              </mi>
+             </msup>
+            </mfrac>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+            <mspace width="-0.16em">
+            </mspace>
+           </mrow>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             ×
+            </mo>
+            <mo form="prefix">
+             exp
+            </mo>
+            <mfenced close="]" open="[" separators="">
+             <mfrac>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ℏ
+              </mi>
+             </mfrac>
+             <munderover>
+              <mo>
+               ∑
+              </mo>
+              <mrow>
+               <mi>
+                k
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0
+               </mn>
+              </mrow>
+              <mrow>
+               <mi>
+                N
+               </mi>
+               <mo>
+                −
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </munderover>
+             <mrow>
+              <mo>
+               [
+              </mo>
+              <msub>
+               <mi mathvariant="bold">
+                p
+               </mi>
+               <mrow>
+                <mi>
+                 k
+                </mi>
+                <mo>
+                 +
+                </mo>
+                <mn>
+                 1
+                </mn>
+               </mrow>
+              </msub>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 q
+                </mi>
+                <mrow>
+                 <mi>
+                  k
+                 </mi>
+                 <mo>
+                  +
+                 </mo>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                −
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 q
+                </mi>
+                <mi>
+                 k
+                </mi>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mo>
+               −
+              </mo>
+              <mi>
+               ϵ
+              </mi>
+              <mi>
+               H
+              </mi>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 p
+                </mi>
+                <mrow>
+                 <mi>
+                  k
+                 </mi>
+                 <mo>
+                  +
+                 </mo>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                ,
+               </mo>
+               <msub>
+                <mi mathvariant="bold">
+                 q
+                </mi>
+                <mi>
+                 k
+                </mi>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mo>
+               ]
+              </mo>
+             </mrow>
+            </mfenced>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     com
+     <math>
+      <mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mi>
+         N
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Podemos agora reconhecer na soma do expoente deste integrando a própria
+     <i>
+      ação
+     </i>
+     clássica,
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <mi>
+          S
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mo>
+           ,
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           −
+          </mo>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <msubsup>
+          <mo>
+           ∫
+          </mo>
+          <mn>
+           0
+          </mn>
+          <mi>
+           t
+          </mi>
+         </msubsup>
+         <mi mathvariant="normal">
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <msub>
+           <mi mathvariant="bold">
+            p
+           </mi>
+           <mi>
+            t
+           </mi>
+          </msub>
+          <mo>
+           ·
+          </mo>
+          <msub>
+           <mover accent="true">
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             ˙
+            </mo>
+           </mover>
+           <mi>
+            t
+           </mi>
+          </msub>
+          <mo>
+           −
+          </mo>
+          <mi>
+           H
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <msub>
+            <mi mathvariant="bold">
+             p
+            </mi>
+            <mi>
+             t
+            </mi>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mi>
+             t
+            </mi>
+           </msub>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     ao longo do caminho
+     <math>
+      <mrow>
+       <msub>
+        <mi mathvariant="bold">
+         x
+        </mi>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          p
+         </mi>
+         <mi>
+          t
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mi>
+          t
+         </mi>
+        </msub>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , discretizado em intervalos
+     <math>
+      <mrow>
+       <mi>
+        δ
+       </mi>
+       <mi>
+        t
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        ϵ
+       </mi>
+      </mrow>
+     </math>
+     . O propagador assume assim a sua forma simbólica de
+     <i>
+      integral de caminho
+     </i>
+     :
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m7">
+        <mrow>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+         </mrow>
+         <msub>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           +
+          </mo>
+         </msub>
+         <mrow>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <msub>
+          <mover accent="true">
+           <mi>
+            U
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           t
+          </mi>
+         </msub>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <msub>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            −
+           </mo>
+          </msub>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ∫
+         </mo>
+         <mi mathvariant="bold">
+          D
+         </mi>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <msub>
+           <mi mathvariant="bold">
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </msub>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo form="prefix">
+          exp
+         </mo>
+         <mfenced close="]" open="[" separators="">
+          <mfrac>
+           <mi>
+            i
+           </mi>
+           <mi>
+            ℏ
+           </mi>
+          </mfrac>
+          <mi>
+           S
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            +
+           </mo>
+           <mo>
+            ,
+           </mo>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            −
+           </mo>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mfenced>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Esta integral é análoga à de Feynman, mas os caminhos percorrem o espaço de fases livremente, sem que os momentos fiquem atrelados ao caminho das posições. Também lidamos, de saída, diretamente com a Hamiltoniana, dispensando a introdução da Lagrangiana que é mais distante da mecânica quântica. Outras construções da integral de caminho são a da representação de Weyl [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] A.M. Ozorio de Almeida, Proc. R. Soc. Lond. A 439, 139 (1992).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] A.M. Ozorio de Almeida, Phys. Rep. 295, 265 (1998).
+       </span>
+      </span>
+     </span>
+     ] (empregada no transporte da função de Wigner
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] E.P. Wigner, Phys Rev 40, 749 (1932).
+       </span>
+      </span>
+     </span>
+     ), ou a de estados coerentes [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] J.R. Klauder and B.S. Skagerstam, Coherent States, Applications in Physics and Mathematical Physics (World Scientific, Singapore, 1985).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] M. Baranger, M.A.M. de Aguiar, F. Keck, H.J. Korsch and B. Schellas, J. Phys. A: Math. Gen. 34, 7227 (2001).
+       </span>
+      </span>
+     </span>
+     ] (onde os caminhos percorrem um espaço de fases complexo).
+    </p>
+    <p>
+    </p>
+    <p>
+     A profusão de caminhos nesta bela formulação da mecânica quântica pareceriam impedir o uso direto da integral de Feynman, a não ser nos exemplos mais banais. Contudo, o
+     <i>
+      princípio variacional clássico
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] C. Lanczos, The Variational Principles of Mechanics (Dover Publications, New York, 1970).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] V.I. Arnold, Mathematical Methods of Classical Mechanics (Springer, Berlin, 1978).
+       </span>
+      </span>
+     </span>
+     ] surge oportunamente para organizar este excesso: A ação
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (6)
+     </a>
+     é estacionária para o caminho que coincide com a trajetória clássica. Em outras palavras, se discretizarmos os caminhos como em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (5)
+     </a>
+     , a trajetória é definida por
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m8">
+        <mrow>
+         <mfrac>
+          <mi>
+           ∂
+          </mi>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mi>
+             k
+            </mi>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mi>
+          S
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mo>
+           ,
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           −
+          </mo>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mi>
+           ∂
+          </mi>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi mathvariant="bold">
+             p
+            </mi>
+            <mi>
+             k
+            </mi>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mi>
+          S
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mo>
+           ,
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           −
+          </mo>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     para todo
+     <math>
+      <mi>
+       k
+      </mi>
+     </math>
+     . Como a presença dos momentos na Hamiltoniana já é quadrática, basta agora expandir o potencial entorno das posições ao longo de cada trajetória. Enumeradas pelo índice
+     <math>
+      <mi>
+       j
+      </mi>
+     </math>
+     , suas posições discretizadas serão
+     <math>
+      <msubsup>
+       <mi mathvariant="bold">
+        q
+       </mi>
+       <mrow>
+        <mi>
+         k
+        </mi>
+       </mrow>
+       <mi>
+        j
+       </mi>
+      </msubsup>
+     </math>
+     , de modo que aproximamos
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m9">
+        <mrow>
+         <mi>
+          V
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mi>
+          V
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <msubsup>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mrow>
+            <mi>
+             k
+            </mi>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msubsup>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          +
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           −
+          </mo>
+          <msubsup>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mrow>
+            <mi>
+             k
+            </mi>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msubsup>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          ·
+         </mo>
+         <mfrac>
+          <msup>
+           <mi>
+            ∂
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msup>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msup>
+            <mrow>
+             <mi mathvariant="bold">
+              q
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mi>
+          V
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <msubsup>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mrow>
+            <mi>
+             k
+            </mi>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msubsup>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           −
+          </mo>
+          <msubsup>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mrow>
+            <mi>
+             k
+            </mi>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msubsup>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          +
+         </mo>
+         <mo>
+          .
+         </mo>
+         <mo>
+          .
+         </mo>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Assim, o integrando em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (5)
+     </a>
+     se torna uma Gaussiana multidimensional, imediatamente integrável. Esse procedimento, conhecido como
+     <i>
+      método da fase estacionária
+     </i>
+     , fornece então a
+     <i>
+      aproximação semiclássica
+     </i>
+     do propagador,
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m10">
+        <mrow>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+         </mrow>
+         <msub>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           +
+          </mo>
+         </msub>
+         <mrow>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <msub>
+          <mover accent="true">
+           <mi>
+            U
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           t
+          </mi>
+         </msub>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             −
+            </mo>
+           </msub>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mrow>
+           <mi>
+            S
+           </mi>
+           <mi>
+            C
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <munder>
+          <mo>
+           ∑
+          </mo>
+          <mi>
+           j
+          </mi>
+         </munder>
+         <msub>
+          <mi>
+           D
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo form="prefix">
+          exp
+         </mo>
+         <mfenced close="]" open="[" separators="">
+          <mfrac>
+           <mi>
+            i
+           </mi>
+           <mi>
+            ℏ
+           </mi>
+          </mfrac>
+          <msub>
+           <mi>
+            S
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             +
+            </mo>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             −
+            </mo>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mfenced>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         S
+        </mi>
+        <mi>
+         j
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          +
+         </mo>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          −
+         </mo>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     é a integral da ação
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (6)
+     </a>
+     calculada sobre a j'ésima trajetória clássica entre
+     <math>
+      <msub>
+       <mi mathvariant="bold">
+        q
+       </mi>
+       <mo>
+        −
+       </mo>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi mathvariant="bold">
+        q
+       </mi>
+       <mo>
+        +
+       </mo>
+      </msub>
+     </math>
+     . (Estamos aqui omitindo pequenas
+     <i>
+      correções de Maslov
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M. Gutzwiller, Chaos in Classical and Quantum Mechanics (Springer-Verlag, New York, 1990).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [26] A.M. Ozorio de Almeida, Hamiltonian Systems: Chaos and Quantization (Cambridge University Press, Cambridge, 1988).
+       </span>
+      </span>
+     </span>
+     ].) Esta aproximação foi primeiro deduzida por van Vleck
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [16]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [16] J.H. van Vleck, Proc. Nac. Acad. Sci. 14, 178 (1928).
+       </span>
+      </span>
+     </span>
+     já em 1928 diretamente da equação de Schrödinger. Atingimos aqui um bom meio termo entre a mecânica clássica e a mecânica quântica: Equiparando a transformação unitária
+     <math>
+      <msub>
+       <mover accent="true">
+        <mi>
+         U
+        </mi>
+        <mo>
+         ^
+        </mo>
+       </mover>
+       <mi>
+        t
+       </mi>
+      </msub>
+     </math>
+     à transformação canônica clássica,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         C
+        </mi>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mo>
+        :
+       </mo>
+       <msub>
+        <mi mathvariant="bold">
+         x
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+       <mo>
+        ↦
+       </mo>
+       <msub>
+        <mi mathvariant="bold">
+         x
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+      </mrow>
+     </math>
+     , carregada pelas trajetórias hamiltonianas no tempo
+     <math>
+      <mi>
+       t
+      </mi>
+     </math>
+     , a ação,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         S
+        </mi>
+        <mi>
+         j
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          +
+         </mo>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <msub>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mo>
+          −
+         </mo>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , toma o papel de
+     <i>
+      função geratriz
+     </i>
+     de
+     <math>
+      <msub>
+       <mi>
+        C
+       </mi>
+       <mi>
+        t
+       </mi>
+      </msub>
+     </math>
+     , por meio das equações implícitas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] V.I. Arnold, Mathematical Methods of Classical Mechanics (Springer, Berlin, 1978).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] H. Goldstein, Classical Mechanics (Addison-Wesley, Reading, 1980), 2nd ed.
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m11">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi>
+             S
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msub>
+          </mrow>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             +
+            </mo>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi mathvariant="bold">
+           p
+          </mi>
+          <mo>
+           +
+          </mo>
+         </msub>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mfrac>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi>
+             S
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msub>
+          </mrow>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             −
+            </mo>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mi mathvariant="bold">
+           p
+          </mi>
+          <mo>
+           −
+          </mo>
+         </msub>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     De forma mais precisa, a transformação global
+     <math>
+      <msub>
+       <mi>
+        C
+       </mi>
+       <mi>
+        t
+       </mi>
+      </msub>
+     </math>
+     tem diferentes funções geratrizes na vizinhança de cada uma das trajetórias
+     <math>
+      <msubsup>
+       <mi mathvariant="bold">
+        x
+       </mi>
+       <mrow>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mi>
+        j
+       </mi>
+      </msubsup>
+     </math>
+     . A aproximação linearizada de incrementos,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         C
+        </mi>
+        <mi>
+         j
+        </mi>
+       </msub>
+       <mo>
+        :
+       </mo>
+       <mi>
+        δ
+       </mi>
+       <msub>
+        <mi mathvariant="bold">
+         x
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+       <mo>
+        ↦
+       </mo>
+       <mi>
+        δ
+       </mi>
+       <msub>
+        <mi mathvariant="bold">
+         x
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+      </mrow>
+     </math>
+     , tomados dos pontos inicial e final de cada trajetória, será
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m12">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mi>
+             δ
+            </mi>
+            <msub>
+             <mi mathvariant="bold">
+              x
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+           </mrow>
+          </mtd>
+          <mtd>
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mfenced close=")" open="(" separators="">
+             <mtable>
+              <mtr>
+               <mtd columnalign="left">
+                <mrow>
+                 <mi>
+                  δ
+                 </mi>
+                 <msub>
+                  <mi mathvariant="bold">
+                   p
+                  </mi>
+                  <mo>
+                   +
+                  </mo>
+                 </msub>
+                </mrow>
+               </mtd>
+              </mtr>
+              <mtr>
+               <mtd columnalign="left">
+                <mrow>
+                 <mi>
+                  δ
+                 </mi>
+                 <msub>
+                  <mi mathvariant="bold">
+                   q
+                  </mi>
+                  <mo>
+                   +
+                  </mo>
+                 </msub>
+                </mrow>
+               </mtd>
+              </mtr>
+             </mtable>
+            </mfenced>
+            <mo>
+             =
+            </mo>
+            <mfenced close=")" open="(" separators="">
+             <mtable>
+              <mtr>
+               <mtd columnalign="left">
+                <mfrac>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    p
+                   </mi>
+                   <mo>
+                    +
+                   </mo>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    p
+                   </mi>
+                   <mo>
+                    −
+                   </mo>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mtd>
+               <mtd>
+                <mfrac>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    p
+                   </mi>
+                   <mo>
+                    +
+                   </mo>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    q
+                   </mi>
+                   <mo>
+                    −
+                   </mo>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mtd>
+              </mtr>
+              <mtr>
+               <mtd columnalign="left">
+                <mfrac>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    q
+                   </mi>
+                   <mo>
+                    +
+                   </mo>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    p
+                   </mi>
+                   <mo>
+                    −
+                   </mo>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mtd>
+               <mtd>
+                <mfrac>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    q
+                   </mi>
+                   <mo>
+                    +
+                   </mo>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   δ
+                  </mi>
+                  <msub>
+                   <mi mathvariant="bold">
+                    q
+                   </mi>
+                   <mo>
+                    −
+                   </mo>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mtd>
+              </mtr>
+             </mtable>
+            </mfenced>
+            <mfenced close=")" open="(" separators="">
+             <mtable>
+              <mtr>
+               <mtd columnalign="left">
+                <mrow>
+                 <mi>
+                  δ
+                 </mi>
+                 <msub>
+                  <mi mathvariant="bold">
+                   p
+                  </mi>
+                  <mo>
+                   −
+                  </mo>
+                 </msub>
+                </mrow>
+               </mtd>
+              </mtr>
+              <mtr>
+               <mtd columnalign="left">
+                <mrow>
+                 <mi>
+                  δ
+                 </mi>
+                 <msub>
+                  <mi mathvariant="bold">
+                   q
+                  </mi>
+                  <mo>
+                   −
+                  </mo>
+                 </msub>
+                </mrow>
+               </mtd>
+              </mtr>
+             </mtable>
+            </mfenced>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <msubsup>
+             <mi mathvariant="bold">
+              M
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mi>
+              j
+             </mi>
+            </msubsup>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mi>
+             δ
+            </mi>
+            <msub>
+             <mi mathvariant="bold">
+              x
+             </mi>
+             <mo>
+              −
+             </mo>
+            </msub>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde a matriz Jacobiana
+     <math>
+      <msubsup>
+       <mi mathvariant="bold">
+        M
+       </mi>
+       <mi>
+        t
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msubsup>
+     </math>
+     é uma matriz simplética conhecida como
+     <i>
+      matriz de estabilidade
+     </i>
+     , ou
+     <i>
+      matriz de monodromia
+     </i>
+     . A amplitude da contribuição de cada uma das trajetórias ao propagador semiclássico
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     é dada por um bloco desta matriz:
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m13">
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <msub>
+          <mi>
+           D
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <msup>
+          <mrow>
+           <mo>
+            |
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mfenced close="|" open="|" separators="">
+          <mo form="prefix" movablelimits="true">
+           det
+          </mo>
+          <mfrac>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+            <msub>
+             <mi mathvariant="bold">
+              q
+             </mi>
+             <mo>
+              +
+             </mo>
+            </msub>
+           </mrow>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+            <msub>
+             <mi mathvariant="bold">
+              p
+             </mi>
+             <mo>
+              −
+             </mo>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mfenced>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mfenced close="|" open="|" separators="">
+           <mo form="prefix" movablelimits="true">
+            det
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              ∂
+             </mi>
+             <msub>
+              <mi mathvariant="bold">
+               p
+              </mi>
+              <mo>
+               −
+              </mo>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              ∂
+             </mi>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               +
+              </mo>
+             </msub>
+            </mrow>
+           </mfrac>
+          </mfenced>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mfenced close="|" open="|" separators="">
+           <mo form="prefix" movablelimits="true">
+            det
+           </mo>
+           <mfrac>
+            <mrow>
+             <msup>
+              <mi>
+               ∂
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <msub>
+              <mi>
+               S
+              </mi>
+              <mi>
+               j
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              ∂
+             </mi>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               −
+              </mo>
+             </msub>
+             <mi>
+              ∂
+             </mi>
+             <msub>
+              <mi mathvariant="bold">
+               q
+              </mi>
+              <mo>
+               +
+              </mo>
+             </msub>
+            </mrow>
+           </mfrac>
+          </mfenced>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </msup>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Devemos notar que a linearização de uma transformação canônica equivale a aproximar quadraticamente a Hamiltoniana que gerou o movimento. Para toda Hamiltoniana quadrática (ainda que dependente do tempo), só existe uma única trajetória em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     , sua amplitude é constante e, melhor, essa aproximação semiclássica passa a ser exata!
+    </p>
+    <p>
+    </p>
+    <p>
+     A correspondência entre a mecânica clássica e a mecânica quânica é ainda mais realçada pelo foco sobre uma única característica do propagador: o traço do operador de evolução que quantifica a tendência de qualquer estado inicial de retornar sobre si mesmo:
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m14">
+        <mrow>
+         <mi>
+          tr
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <msub>
+          <mover accent="true">
+           <mi>
+            U
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           t
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           ∫
+          </mo>
+          <mi mathvariant="normal">
+           d
+          </mi>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mspace width="3.33333pt">
+          </mspace>
+          <mo>
+           〈
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <msub>
+          <mover accent="true">
+           <mi>
+            U
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           t
+          </mi>
+         </msub>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi mathvariant="bold">
+           q
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Inserindo a aproximação semiclássica
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     para o propagador nesta expressão com
+     <math>
+      <mrow>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi mathvariant="bold">
+        q
+       </mi>
+      </mrow>
+     </math>
+     e notando que o valor estacionário do expoente,
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m15">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi>
+             S
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msub>
+          </mrow>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             +
+            </mo>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi>
+             S
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msub>
+          </mrow>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <msub>
+            <mi mathvariant="bold">
+             q
+            </mi>
+            <mo>
+             −
+            </mo>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi mathvariant="bold">
+           p
+          </mi>
+          <mo>
+           +
+          </mo>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <msub>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            +
+           </mo>
+          </msub>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mi mathvariant="bold">
+           p
+          </mi>
+          <mo>
+           −
+          </mo>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <msub>
+           <mi mathvariant="bold">
+            q
+           </mi>
+           <mo>
+            −
+           </mo>
+          </msub>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     identifica aqui o momento final,
+     <math>
+      <mrow>
+       <msub>
+        <mi mathvariant="bold">
+         p
+        </mi>
+        <mo>
+         +
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     com o momento inicial
+     <math>
+      <mrow>
+       <msub>
+        <mi mathvariant="bold">
+         p
+        </mi>
+        <mo>
+         −
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi mathvariant="bold">
+         q
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , deduzimos que a aproximação semiclássica para o traço, resultante do método de fase estacionária aplicado à integral
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (14)
+     </a>
+     é
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m16">
+        <mrow>
+         <msub>
+          <mi>
+           tr
+          </mi>
+          <mrow>
+           <mi>
+            S
+           </mi>
+           <mi>
+            C
+           </mi>
+          </mrow>
+         </msub>
+         <mspace width="3.33333pt">
+         </mspace>
+         <msub>
+          <mover accent="true">
+           <mi>
+            U
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           t
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <munder>
+          <mo>
+           ∑
+          </mo>
+          <mi>
+           j
+          </mi>
+         </munder>
+         <msub>
+          <mrow>
+           <msup>
+            <mi>
+             D
+            </mi>
+            <mo>
+             ′
+            </mo>
+           </msup>
+          </mrow>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo form="prefix">
+          exp
+         </mo>
+         <mfenced close="]" open="[" separators="">
+          <mfrac>
+           <mi>
+            i
+           </mi>
+           <mi>
+            ℏ
+           </mi>
+          </mfrac>
+          <msub>
+           <mrow>
+            <msup>
+             <mi>
+              S
+             </mi>
+             <mo>
+              ′
+             </mo>
+            </msup>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     (ignorando de novo pequenas correções em
+     <math>
+      <mi>
+       ℏ
+      </mi>
+     </math>
+     ). Aqui temos uma soma sobre aquelas trajetórias periódicas que tiverem o período
+     <math>
+      <mi>
+       t
+      </mi>
+     </math>
+     : Cada ponto de tal trajetória será um ponto fixo da transformação
+     <math>
+      <msub>
+       <mi>
+        C
+       </mi>
+       <mi>
+        t
+       </mi>
+      </msub>
+     </math>
+     . A ação para o retorno partindo de qualquer destes pontos será
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m17">
+        <mrow>
+         <msub>
+          <mrow>
+           <msup>
+            <mi>
+             S
+            </mi>
+            <mo>
+             ′
+            </mo>
+           </msup>
+          </mrow>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mo>
+           ∮
+          </mo>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mi mathvariant="bold">
+          p
+         </mi>
+         <mo>
+          ·
+         </mo>
+         <mi mathvariant="normal">
+          d
+         </mi>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          −
+         </mo>
+         <mspace width="3.33333pt">
+         </mspace>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mi>
+          t
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     sendo
+     <math>
+      <msub>
+       <mi>
+        E
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msub>
+     </math>
+     a energia constante da trajetória. Em conclusão, o retorno quântico toma por apoio clássico o conjunto de trajetórias periódicas do sistema.
+    </p>
+    <p>
+    </p>
+    <p>
+     Quanto maior o tempo, maior o número de trajetórias periódicas de um típico sistema hamiltoniano clássico limitado. (O oscilador harmônico não é um bom exemplo!) No limite
+     <math>
+      <mrow>
+       <mi>
+        t
+       </mi>
+       <mo>
+        →
+       </mo>
+       <mi>
+        ∞
+       </mi>
+      </mrow>
+     </math>
+     a soma em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     se torna infinita. Lembrando que o traço também é uma soma sobre os auto-valores
+     <math>
+      <msub>
+       <mi>
+        E
+       </mi>
+       <mi>
+        n
+       </mi>
+      </msub>
+     </math>
+     da Hamiltoniana quântica,
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block" id="m18">
+        <mrow>
+         <mi>
+          tr
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <msub>
+          <mover accent="true">
+           <mi>
+            U
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           t
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <munder>
+          <mo>
+           ∑
+          </mo>
+          <mi>
+           n
+          </mi>
+         </munder>
+         <mrow>
+          <mspace width="3.33333pt">
+          </mspace>
+          <mo>
+           〈
+          </mo>
+          <mi>
+           n
+          </mi>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <msup>
+          <mrow>
+           <mi mathvariant="normal">
+            e
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mi>
+            i
+           </mi>
+           <mi>
+            t
+           </mi>
+           <mover accent="true">
+            <mi>
+             H
+            </mi>
+            <mo>
+             ^
+            </mo>
+           </mover>
+           <mo>
+            /
+           </mo>
+           <mi>
+            ℏ
+           </mi>
+          </mrow>
+         </msup>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           n
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <munder>
+          <mo>
+           ∑
+          </mo>
+          <mi>
+           n
+          </mi>
+         </munder>
+         <mspace width="3.33333pt">
+         </mspace>
+         <msup>
+          <mrow>
+           <mi mathvariant="normal">
+            e
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mi>
+            i
+           </mi>
+           <mi>
+            t
+           </mi>
+           <msub>
+            <mi>
+             E
+            </mi>
+            <mi>
+             n
+            </mi>
+           </msub>
+           <mo>
+            /
+           </mo>
+           <mi>
+            ℏ
+           </mi>
+          </mrow>
+         </msup>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     obtemos
+    </p>
+    <div class="row formula" id="eeq19">
+     <a name="eq19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block" id="m19">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               π
+              </mi>
+              <mi>
+               ℏ
+              </mi>
+             </mrow>
+            </mfrac>
+            <msubsup>
+             <mo>
+              ∫
+             </mo>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mi>
+               ∞
+              </mi>
+             </mrow>
+             <mi>
+              ∞
+             </mi>
+            </msubsup>
+            <mi mathvariant="normal">
+             d
+            </mi>
+            <mi>
+             t
+            </mi>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mi>
+               t
+              </mi>
+              <mi>
+               E
+              </mi>
+              <mo>
+               /
+              </mo>
+              <mi>
+               ℏ
+              </mi>
+             </mrow>
+            </msup>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mi>
+             tr
+            </mi>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msub>
+             <mover accent="true">
+              <mi>
+               U
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mi>
+              t
+             </mi>
+            </msub>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             =
+            </mo>
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               π
+              </mi>
+              <mi>
+               ℏ
+              </mi>
+             </mrow>
+            </mfrac>
+            <munder>
+             <mo>
+              ∑
+             </mo>
+             <mi>
+              n
+             </mi>
+            </munder>
+            <msubsup>
+             <mo>
+              ∫
+             </mo>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mi>
+               ∞
+              </mi>
+             </mrow>
+             <mi>
+              ∞
+             </mi>
+            </msubsup>
+            <mi mathvariant="normal">
+             d
+            </mi>
+            <mi>
+             t
+            </mi>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               e
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mi>
+               t
+              </mi>
+              <mo>
+               (
+              </mo>
+              <mi>
+               E
+              </mi>
+              <mo>
+               −
+              </mo>
+              <msub>
+               <mi>
+                E
+               </mi>
+               <mi>
+                n
+               </mi>
+              </msub>
+              <mo>
+               )
+              </mo>
+              <mo>
+               /
+              </mo>
+              <mi>
+               ℏ
+              </mi>
+             </mrow>
+            </msup>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             =
+            </mo>
+            <munder>
+             <mo>
+              ∑
+             </mo>
+             <mi>
+              n
+             </mi>
+            </munder>
+            <mi>
+             δ
+            </mi>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              E
+             </mi>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               E
+              </mi>
+              <mi>
+               n
+              </mi>
+             </msub>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ≡
+            </mo>
+            <mi>
+             ρ
+            </mi>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              E
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Outrossim, a
+     <i>
+      densidade de estados
+     </i>
+     ,
+     <math>
+      <mrow>
+       <mi>
+        ρ
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mi>
+        E
+       </mi>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     , uma caraterística que só cabe a um sistema quântico, repousa semiclassicamente em uma soma sobre as trajetórias periódicas do sistema clássico correspondente. No entanto, devemos tomar um cuidado: Não basta inserir
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (19)
+     </a>
+     para calcular a aproximação semiclássica da densidade de estados. Perderíamos então a forte contribuição das trajetórias que não saem do lugar, no entorno de
+     <math>
+      <mrow>
+       <mi>
+        t
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , ou seja, todos os pontos iniciais. O cálculo deste
+     <i>
+      termo de Weyl
+     </i>
+     fornece uma interpolação suave,
+     <math>
+      <mrow>
+       <mover accent="true">
+        <mi>
+         ρ
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , para os sucessivos picos da densidade de estados, mas que não cabe tratar aqui. É o termo que sobra em
+     <math>
+      <mrow>
+       <mi>
+        ρ
+       </mi>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mover accent="true">
+        <mi>
+         ρ
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        +
+       </mo>
+       <mover accent="true">
+        <mi>
+         ρ
+        </mi>
+        <mo>
+         ˜
+        </mo>
+       </mover>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     que vai somando contribuições cada vez mais oscilatórias das trajetórias periódicas de crescente período, cuja interferência em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     vai afinando os picos finos de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (19)
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     A condição estacionária para a integral do lado esquerdo de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (19)
+     </a>
+     é
+    </p>
+    <div class="row formula" id="eeq20">
+     <a name="eq20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <math display="block" id="m20">
+        <mrow>
+         <mfrac>
+          <mi>
+           ∂
+          </mi>
+          <mrow>
+           <mi>
+            ∂
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <msub>
+           <mrow>
+            <msup>
+             <mi>
+              S
+             </mi>
+             <mo>
+              ′
+             </mo>
+            </msup>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <mi>
+           E
+          </mi>
+          <mspace width="3.33333pt">
+          </mspace>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mi>
+          E
+         </mi>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     ou seja, ela seleciona as órbitas periódicas (curvas fechadas sem diferenciação de tempo) sobre a camada de energia
+     <math>
+      <mrow>
+       <mi>
+        H
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mi mathvariant="bold">
+        x
+       </mi>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mi>
+        E
+       </mi>
+      </mrow>
+     </math>
+     , com a ação reduzida
+    </p>
+    <div class="row formula" id="eeq21">
+     <a name="eq21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <math display="block" id="m21">
+        <mrow>
+         <msub>
+          <mi>
+           σ
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           E
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mo>
+           ∮
+          </mo>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mi mathvariant="bold">
+          p
+         </mi>
+         <mo>
+          ·
+         </mo>
+         <mi mathvariant="normal">
+          d
+         </mi>
+         <mi mathvariant="bold">
+          q
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Assim, a componente oscilatória da densidade de estados tem a aproximação semiclássica
+    </p>
+    <div class="row formula" id="eeq22">
+     <a name="eq22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <math display="block" id="m22">
+        <mrow>
+         <msub>
+          <mover accent="true">
+           <mi>
+            ρ
+           </mi>
+           <mo>
+            ˜
+           </mo>
+          </mover>
+          <mrow>
+           <mi>
+            S
+           </mi>
+           <mi>
+            C
+           </mi>
+          </mrow>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           E
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <munder>
+          <mo>
+           ∑
+          </mo>
+          <mi>
+           j
+          </mi>
+         </munder>
+         <msub>
+          <mrow>
+           <msup>
+            <mi>
+             D
+            </mi>
+            <mrow>
+             <mo>
+              ′
+             </mo>
+             <mo>
+              ′
+             </mo>
+            </mrow>
+           </msup>
+          </mrow>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo form="prefix">
+          exp
+         </mo>
+         <mfenced close="]" open="[" separators="">
+          <mfrac>
+           <mi>
+            i
+           </mi>
+           <mi>
+            ℏ
+           </mi>
+          </mfrac>
+          <msub>
+           <mi>
+            σ
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mi>
+            E
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mfenced>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     conhecida como a
+     <i>
+      fórmula do traço de Gutzwiller
+     </i>
+     (vide
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [18]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [18] M. Gutzwiller, Chaos in Classical and Quantum Mechanics (Springer-Verlag, New York, 1990).
+       </span>
+      </span>
+     </span>
+     e também Balian e Bloch
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [19]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [19] R. Balian and C. Bloch, Ann. Phys. NY 85, 514 (1974).
+       </span>
+      </span>
+     </span>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     A beleza desta construção formal não deve dissipar sérias dúvidas sobre seu real significado: É como se surgisse um contexto onde o quântico fosse o conjugado de Fourier do clássico! Será que podemos realmente resolver os picos finos e possíveis degenerescências da densidade de estados ao incluir cada vez mais órbitas periódicas? Enfim, a soma sobre elas converge? O teorema de recorrência de Poincaré [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [20] R. Mañé, Teoria Ergódica (IMPA, Rio de Janeiro, 1983).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] O.E. Lanford, em Chaotic Behaviour of Deterministic Systems, editado por G. Ioss, R.H.G Helleman and R. Stora (Les Houches 36, Amsterdam, 1983).
+       </span>
+      </span>
+     </span>
+     ] garante que, em qualquer vizinhança de um ponto na camada de energia, haverá uma trajetória que eventualmente retorna. Partindo desta, é fácil encontrar uma órbita periódica adjacente. Então vemos que elas são densas sobre o espaço de fases, sendo, entretanto, infinitamente raras: A probabilidade de um ponto inicial arbitrário cair numa órbita peródica é nula. Como que esse especialíssimo conjunto das órbitas mais simples pode tipificar a rica gama de movimentos clássicos que abrangem do ultra regular (movimento harmônico multidimensional), ao integrável (trajetórias vinculadas a superfícies invariantes de dimensão menor que a camada de energia), aos movimentos predominantemente caóticos, caracterizados pelo afastamento exponencial de trajetórias vizinhas? Em contraste com as trajetórias periódicas, uma trajetória típica de um sistema caótico não fecha nunca e, com o tempo, percorre
+     <i>
+      ergodicamente
+     </i>
+     todo espaço de fases disponível energeticamente. Será que, mesmo assim, podemos nos valer da fórmula do traço para explorar a maneira que esta rica variedade clássica venha a afetar propriedades mensuráveis dos sistemas quânticos correspondentes? Não é um empreendimento fácil, pois a linearidade da mecânica quântica impede uma correspondência direta com as consequências da não linearidade clássica.
+    </p>
+    <p>
+    </p>
+    <p>
+     Na contramão de todas essas dúvidas existe um emprego notável da fórmula do traço como organizador do espectro de energias. A densidade de estados de um sistema que é classicamente caótico apresenta uma cacofonia de níveis. Contudo, sua transformada de Fourier apenas devolve, de acordo com
+     <a class="open-asset-modal" data-target="#ModalSchemeeq19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (19)
+     </a>
+     , o
+     <math>
+      <mrow>
+       <mi>
+        tr
+       </mi>
+       <mspace width="3.33333pt">
+       </mspace>
+       <msub>
+        <mover accent="true">
+         <mi>
+          U
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         t
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     de onde partimos. Fora o pico em
+     <math>
+      <mrow>
+       <mi>
+        t
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , haverá um pico em
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     , a primeira órbita periódica, seguido por picos em
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msub>
+     </math>
+     , para cada órbita periódica subsequente. O espectro de energia na parte superior da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     apresenta o espectro de energia experimental (ressonâncias espectrais) do hidrogênio altamente excitado em um campo magnético
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [22]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [22] A. Holle, J. Main, G. Wiebusch, H. Rottke and K.H. Welge, Phys. Rev. Lett. 61, 161 (1988).
+       </span>
+      </span>
+     </span>
+     . Sem o campo magnético teríamos os níveis do átomo de Rydberg (integrável) organizados por seus momentos angulares. A quebra de simetria pelo campo destrói as superfícies invariantes clássicas: Os únicos invariantes são as órbitas periódicas isoladas. Por outro lado, o campo desorganiza os níveis quânticos. Todos os estados compartilham características de
+     <i>
+      ergodicidade quântica
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] A. Shnirelman, Uspekhi Mat. Nauk. 29, 181 (1974).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] Y. Colin de Verdière, Comm. Math. Phys. 102, 497 (1985).
+       </span>
+      </span>
+     </span>
+     ], mas são mutuamente ortogonais, apesar de não serem distinguíveis por nenhuma simetria. Uma simples transformada de Fourier reimpõe uma nova ordem, os picos nítidos de
+     <math>
+      <mrow>
+       <mi>
+        tr
+       </mi>
+       <mspace width="3.33333pt">
+       </mspace>
+       <msub>
+        <mover accent="true">
+         <mi>
+          U
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         t
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     , que são mostrados junto com o esboço das órbitas periódicas que lhes dão origem.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      (a) Ressonâncias espectrais de um átomo de hidrogênio em um campo magnético. (b) Transformada de Fourier do espectro, com esboço das órbitas periódicas cujo período correspondente a cada pico.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No domínio do tempo não existe o problema de convergência. Só quando passamos para o domínio de energia é que surgem as dificuldades. De fato, em geral a fórmula do traço não converge, mas isso não impede seu uso como ferramenta exploratória da correspondência clássico-quântica. A diferença entre os sistemas clássicos regulares e os caóticos se reflete duplamente no traço de Gutzwiller. Primeiro, pode-se deduzir que o numero de órbitas periódicas cresce exponencialmente com o seu período,
+     <math>
+      <msub>
+       <mi>
+        τ
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msub>
+     </math>
+     , se o movimento for caótico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [25] J.H. Hannay and A.M. Ozorio de Almeida, J. Phys. A 17, 3429 (1984).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [26] A.M. Ozorio de Almeida, Hamiltonian Systems: Chaos and Quantization (Cambridge University Press, Cambridge, 1988).
+       </span>
+      </span>
+     </span>
+     ], enquanto que este crescimento é muito mais lento para sistemas regulares. Em contrapartida, a amplitude da contribuição de cada órbita do sistema caótico cai exponencialmente com
+     <math>
+      <msub>
+       <mi>
+        τ
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msub>
+     </math>
+     . De fato, a intensidade
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mrow>
+         <msup>
+          <mi>
+           D
+          </mi>
+          <mrow>
+           <mo>
+            ′
+           </mo>
+           <mo>
+            ′
+           </mo>
+          </mrow>
+         </msup>
+        </mrow>
+        <mi>
+         j
+        </mi>
+       </msub>
+       <msup>
+        <mrow>
+         <mo>
+          |
+         </mo>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        ≅
+       </mo>
+       <msup>
+        <mrow>
+         <mi mathvariant="normal">
+          e
+         </mi>
+        </mrow>
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <mi>
+          λ
+         </mi>
+         <msub>
+          <mi>
+           τ
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msub>
+        </mrow>
+       </msup>
+      </mrow>
+     </math>
+     , onde
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     é o
+     <i>
+      expoente de Lyapunov
+     </i>
+     que caracteriza o afastamento médio das trajetórias vizinhas do movimento caótico. Assim, a maneira que uma única tragetória caótica varre densamente toda a camada de energia se reflete na densa população de órbitas periódicas de período arbitrariamente longo.
+    </p>
+    <p>
+    </p>
+    <p>
+     A combinação destas duas características permite avaliar as correlações do espectro para pequenos intervalos,
+     <math>
+      <mi>
+       Δ
+      </mi>
+     </math>
+     , de energia,
+    </p>
+    <div class="row formula" id="eeq23">
+     <a name="eq23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <math display="block" id="m23">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mi>
+             K
+            </mi>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              Δ
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ≡
+            </mo>
+            <msup>
+             <mi>
+              W
+             </mi>
+             <mrow>
+              <mo>
+               −
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msup>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="normal">
+             d
+            </mi>
+            <mi>
+             E
+            </mi>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mover accent="true">
+             <mi>
+              ρ
+             </mi>
+             <mo>
+              ˜
+             </mo>
+            </mover>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              E
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mover accent="true">
+             <mi>
+              ρ
+             </mi>
+             <mo>
+              ˜
+             </mo>
+            </mover>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              E
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mi>
+              Δ
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             ≈
+            </mo>
+            <mi>
+             ℜ
+            </mi>
+            <munder>
+             <mo>
+              ∑
+             </mo>
+             <mrow>
+              <mi>
+               j
+              </mi>
+              <mi>
+               l
+              </mi>
+             </mrow>
+            </munder>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="normal">
+             d
+            </mi>
+            <mi>
+             E
+            </mi>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msub>
+             <mrow>
+              <msup>
+               <mi>
+                D
+               </mi>
+               <mrow>
+                <mo>
+                 ′
+                </mo>
+                <mo>
+                 ′
+                </mo>
+               </mrow>
+              </msup>
+             </mrow>
+             <mi>
+              j
+             </mi>
+            </msub>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              E
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mspace width="3.33333pt">
+            </mspace>
+            <msub>
+             <mrow>
+              <msup>
+               <mi>
+                D
+               </mi>
+               <mrow>
+                <mo>
+                 ′
+                </mo>
+                <mo>
+                 ′
+                </mo>
+               </mrow>
+              </msup>
+             </mrow>
+             <mi>
+              l
+             </mi>
+            </msub>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              E
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mspace width="3.33333pt">
+            </mspace>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             ×
+            </mo>
+            <mo form="prefix">
+             exp
+            </mo>
+            <mfenced close="]" open="[" separators="">
+             <mfrac>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ℏ
+              </mi>
+             </mfrac>
+             <mrow>
+              <mo>
+               [
+              </mo>
+              <msub>
+               <mi>
+                σ
+               </mi>
+               <mi>
+                j
+               </mi>
+              </msub>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                E
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mo>
+               −
+              </mo>
+              <msub>
+               <mi>
+                σ
+               </mi>
+               <mi>
+                l
+               </mi>
+              </msub>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                E
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mi>
+                Δ
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mo>
+               ]
+              </mo>
+             </mrow>
+            </mfenced>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     sendo a janela de integração,
+     <math>
+      <mi>
+       W
+      </mi>
+     </math>
+     , clássicamente pequena, porém ainda contendo muitos níveis quânticos. O fato de
+     <math>
+      <mrow>
+       <mi mathvariant="normal">
+        d
+       </mi>
+       <msub>
+        <mi>
+         σ
+        </mi>
+        <mi>
+         j
+        </mi>
+       </msub>
+       <mo>
+        /
+       </mo>
+       <mi mathvariant="normal">
+        d
+       </mi>
+       <mi>
+        E
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi>
+         τ
+        </mi>
+        <mi>
+         j
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , o período da órbita, indica que a maioria desses integrandos são altamente oscilatórios. Conservando apenas os termos em que
+     <math>
+      <mrow>
+       <mi>
+        j
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        l
+       </mi>
+      </mrow>
+     </math>
+     , obtemos então a
+     <i>
+      aproximação diagonal
+     </i>
+     ,
+    </p>
+    <div class="row formula" id="eeq24">
+     <a name="eq24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <math display="block" id="m24">
+        <mrow>
+         <msub>
+          <mi>
+           K
+          </mi>
+          <mi>
+           d
+          </mi>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           Δ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mi>
+          ℜ
+         </mi>
+         <munder>
+          <mo>
+           ∑
+          </mo>
+          <mi>
+           j
+          </mi>
+         </munder>
+         <mspace width="3.33333pt">
+         </mspace>
+         <msup>
+          <mrow>
+           <mo>
+            [
+           </mo>
+           <msub>
+            <mrow>
+             <msup>
+              <mi>
+               D
+              </mi>
+              <mrow>
+               <mo>
+                ′
+               </mo>
+               <mo>
+                ′
+               </mo>
+              </mrow>
+             </msup>
+            </mrow>
+            <mi>
+             j
+            </mi>
+           </msub>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mi>
+             E
+            </mi>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ]
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo form="prefix">
+          exp
+         </mo>
+         <mfenced close="]" open="[" separators="">
+          <mfrac>
+           <mi>
+            i
+           </mi>
+           <mi>
+            ℏ
+           </mi>
+          </mfrac>
+          <msub>
+           <mi>
+            τ
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mi>
+            E
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mi>
+           Δ
+          </mi>
+         </mfenced>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     É notável que a indiscutível crueza deste passo ainda preserva a informação essencial da correlação da densidade de estados: Sua transformada de Fourier (devidamente normalizada) concorda essencialmente com a das correlações universais dos ensembles de matrizes aleatórias [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [25] J.H. Hannay and A.M. Ozorio de Almeida, J. Phys. A 17, 3429 (1984).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [26] A.M. Ozorio de Almeida, Hamiltonian Systems: Chaos and Quantization (Cambridge University Press, Cambridge, 1988).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] M.V. Berry, Proc. R. Soc. Lond. A 400, 229 (1985).
+       </span>
+      </span>
+     </span>
+     ]. Assim, atingimos uma explicação física para a
+     <i>
+      conjectura de Bohigas, Giannoni e Schmit
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [27]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [27] O. Bohigas, M.J. Giannoni and C. Schmidt, Phys. Rev. Lett. 52, 1 (1984).
+       </span>
+      </span>
+     </span>
+     , de base empírica, que as correlações do espectro de energias dos sistemas caóticos coincidem com esses espectros universais, fazendo até a distinção entre as classes de universalidade das matrizes aleatórias, como a presença ou ausência de simetria de reversão temporal.
+    </p>
+    <p>
+    </p>
+    <p>
+     Será que a aproximação diagonal é o máximo que podemos almejar? A profusão de órbitas periódicas de um sistema caótico parece inibir qualquer pretensão de contabilizar as contribuições dos pares de órbitas em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq23" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (23)
+     </a>
+     . Mais uma aplicação surpreendente do traço de Gutzwiller foi então a de partir retroativamente dos desvios das correlações semiclássicas relativamente às correlações universais e conjecturar daí a existência de pares de trajetórias, com quase a mesma ação, levando a termos quase diagonais a serem adicionados a
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         K
+        </mi>
+        <mi>
+         d
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         Δ
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Parece muita pretensão desencavar uma novidade na estrutura de órbitas periódicas clássicas, investigadas desde Poincaré, com base em aproximações semiclássicas que passam por cima de qualquer cuidado com convergência. Não obstante, Sieber e Richter mostraram que existem sempre pares para as órbitas que traçam
+     <i>
+      figuras de oito
+     </i>
+     , como mostradas na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 2
+     </a>
+     e que estas fornecem a contribuição justa para aprimorar a concordância das correlações semiclássicas com as correlações universais
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [29]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [29] M. Sieber and K. Richter, Physica Scripta 2001, 128 (2001).
+       </span>
+      </span>
+     </span>
+     . Assim, a ponte clássico-quântica abarca trânsito nos dois sentidos.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      As órbitas periódicas nunca se auto-intersectam no espaço de fases, mas sua projeção nas posições pode formar uma 'figura de oito'. Na vizinhança dessas, existe sempre uma órbita periódica vizinha com quase a mesma ação.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Enfim, ainda há muito a entender sobre essa correspondência básica. A experiência indica que mais vale levar bem em conta a estrutura geral de ambas essas maravilhosas teorias do que fazer um grande esforço de estender para ordens superiores as aproximações semiclássicas, onde elas acabam perdendo seu conteúdo físico. A natureza dos auto-estados de uma Hamiltoniana caótica continua a ser um grande desafio. A bem da verdade, os estados que hoje em dia se preparam e manipulam no laboratório, como os átomos de Rydberg, não são deste tipo exótico, sendo distinguidos por suas simetrias. Como pescar um estado ergódico no mar de nívies da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     ? Quais seriam seus
+     <i>
+      recursos quânticos
+     </i>
+     ? Talvez seja o caso de considerá-los por hora como uma reserva natural de estados quânticos, ainda não tocados pelo homem, tanto mais nobres na sua inacessibilidade.
+    </p>
+    <p>
+    </p>
+    <p>
+     Devemos lembrar que a verdadeira dinâmica quântica se desenvolve no domínio do tempo. Não queremos só avaliar o espectro de energias; lidamos com a evolução temporal de outros personagens como observáveis, seu valor esperado, suas correlações e aí podemos, ao medir, fazer uma análize espectral. As aproximações semiclássicas fornecem expressões para todos esses elementos em termos do conjunto completo de trajetórias clássicas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [30]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [30] A.M. Ozorio de Almeida and O. Brodier, J. Phys. A 49, 185302 (2016).
+       </span>
+      </span>
+     </span>
+     . Para um tempo finito, não precisamos nos preocupar com a natureza regular ou caótica da evolução clássica. Mesmo para sistemas abertos, de evolução não unitária, desenvolvemos expressões semiclássicas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [31]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [31] A.M. Ozorio de Almeida and O. Brodier, Phil. Trans. R. Soc. A 369, 260 (2011).
+       </span>
+      </span>
+     </span>
+     dentro de aproximações markovianas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Giulini, E. Joos, C. Kiefer, J. Kupsch, I.-O. Stamatescu and H.D. Zeh, Decoherence and the Appearance of a Classical World in Quantum Theory (Springer, Berlin, 1996).
+       </span>
+      </span>
+     </span>
+     e, talvez, se venha a encontrar novas extensões do método de Feynman-Vernon para alargar ainda mais a ponte entre a mecânica clássica e a mecânica quântica.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Agradeço os comentários críticos de Mucio Continentino e Gabriel Lando, assim como apoio finceiro do CNPq e do Instituto Nacional de informação Quântica.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        D. Giulini, E. Joos, C. Kiefer, J. Kupsch, I.-O. Stamatescu and H.D. Zeh,
+        <i>
+         Decoherence and the Appearance of a Classical World in Quantum Theory
+        </i>
+        (Springer, Berlin, 1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        W. Zurek, Rev. Mod. Phys.
+        <b>
+         75
+        </b>
+        , 715 (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        R.P. Feynman and F.L. Vernon, Ann. Phys.
+        <b>
+         24
+        </b>
+        , 118 (1963).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        A.O. Caldeira and A.J. Leggett, Ann. Phys. (NY)
+        <b>
+         149
+        </b>
+        , 374 (1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        P.A.M. Dirac,
+        <i>
+         Principles of Quantum Mechanics
+        </i>
+        (Oxford University Press, Oxford, 1947).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        R.P. Feynman, Rev. Mod. Phys.
+        <b>
+         20
+        </b>
+        , 367 (1948).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        R.P. Feynman,
+        <i>
+         Statistical Mechanics: A Set of Lectures
+        </i>
+        (Benjamin, Menlo Parrk, 1972).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        M.S. Marinov, Phys. Reports
+        <b>
+         60
+        </b>
+        , 1 (1960).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        A.M. Ozorio de Almeida, Proc. R. Soc. Lond. A
+        <b>
+         439
+        </b>
+        , 139 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        A.M. Ozorio de Almeida, Phys. Rep.
+        <b>
+         295
+        </b>
+        , 265 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        E.P. Wigner, Phys Rev
+        <b>
+         40
+        </b>
+        , 749 (1932).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        J.R. Klauder and B.S. Skagerstam,
+        <i>
+         Coherent States, Applications in Physics and Mathematical Physics
+        </i>
+        (World Scientific, Singapore, 1985).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        M. Baranger, M.A.M. de Aguiar, F. Keck, H.J. Korsch and B. Schellas, J. Phys. A: Math. Gen.
+        <b>
+         34
+        </b>
+        , 7227 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        C. Lanczos,
+        <i>
+         The Variational Principles of Mechanics
+        </i>
+        (Dover Publications, New York, 1970).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        V.I. Arnold,
+        <i>
+         Mathematical Methods of Classical Mechanics
+        </i>
+        (Springer, Berlin, 1978).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        J.H. van Vleck, Proc. Nac. Acad. Sci.
+        <b>
+         14
+        </b>
+        , 178 (1928).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        H. Goldstein,
+        <i>
+         Classical Mechanics
+        </i>
+        (Addison-Wesley, Reading, 1980), 2nd ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        M. Gutzwiller,
+        <i>
+         Chaos in Classical and Quantum Mechanics
+        </i>
+        (Springer-Verlag, New York, 1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        R. Balian and C. Bloch, Ann. Phys. NY
+        <b>
+         85
+        </b>
+        , 514 (1974).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        R. Mañé,
+        <i>
+         Teoria Ergódica
+        </i>
+        (IMPA, Rio de Janeiro, 1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        O.E. Lanford, em
+        <i>
+         Chaotic Behaviour of Deterministic Systems
+        </i>
+        , editado por G. Ioss, R.H.G Helleman and R. Stora (Les Houches 36, Amsterdam, 1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        A. Holle, J. Main, G. Wiebusch, H. Rottke and K.H. Welge, Phys. Rev. Lett.
+        <b>
+         61
+        </b>
+        , 161 (1988).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [23]
+       </sup>
+       <div>
+        A. Shnirelman, Uspekhi Mat. Nauk.
+        <b>
+         29
+        </b>
+        , 181 (1974).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [24]
+       </sup>
+       <div>
+        Y. Colin de Verdière, Comm. Math. Phys.
+        <b>
+         102
+        </b>
+        , 497 (1985).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [25]
+       </sup>
+       <div>
+        J.H. Hannay and A.M. Ozorio de Almeida, J. Phys. A
+        <b>
+         17
+        </b>
+        , 3429 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [26]
+       </sup>
+       <div>
+        A.M. Ozorio de Almeida,
+        <i>
+         Hamiltonian Systems: Chaos and Quantization
+        </i>
+        (Cambridge University Press, Cambridge, 1988).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [27]
+       </sup>
+       <div>
+        O. Bohigas, M.J. Giannoni and C. Schmidt, Phys. Rev. Lett.
+        <b>
+         52
+        </b>
+        , 1 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [28]
+       </sup>
+       <div>
+        M.V. Berry, Proc. R. Soc. Lond. A
+        <b>
+         400
+        </b>
+        , 229 (1985).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [29]
+       </sup>
+       <div>
+        M. Sieber and K. Richter, Physica Scripta
+        <b>
+         2001
+        </b>
+        , 128 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [30]
+       </sup>
+       <div>
+        A.M. Ozorio de Almeida and O. Brodier, J. Phys. A
+        <b>
+         49
+        </b>
+        , 185302 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [31]
+       </sup>
+       <div>
+        A.M. Ozorio de Almeida and O. Brodier, Phil. Trans. R. Soc. A
+        <b>
+         369
+        </b>
+        , 260 (2011).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        05 Dez 2017
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        15 Fev 2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 40 
+                (3)
+   <span class="_separator">
+    •
+   </span>
+   2018
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2017-0317" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2017-0317
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0317">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Em busca do Prêmio Nobel - Versão beta
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  In search of the Nobel Prize - Beta version
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Carlos Alberto dos Santos
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:cas.ufrgs@gmail.com">
+      cas.ufrgs@gmail.com
+     </a>
+     .
+    </div>
+    Mestrado Nacional Profissional em Ensino de Física, Centro de Ciências Exatas e Naturais, Universidade Federal Rural do Semiárido, Av. Francisco Mota, 572, 59.625-900, Mossoró, RN, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Eliabe Maxsuel de Aquino
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Mestrado Nacional Profissional em Ensino de Física, Centro de Ciências Exatas e Naturais, Universidade Federal Rural do Semiárido, Av. Francisco Mota, 572, 59.625-900, Mossoró, RN, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Descreve-se a estrutura, funcionalidades e possibilidades de implementação da versão beta do jogo educacional multiplataforma
+     <b>
+      Em busca do Prêmio Nobel
+     </b>
+     . O jogo se desenvolve em dois ambientes, administrados por um código PHP. O ambiente de aprendizagem consiste em páginas de conteúdo em HTML e mapas conceituais confeccionados com a ferramenta CmapTools. O ambiente de jogo consiste em um banco de dados MySQL, com questões e telas de transição com a participação do Mestre-Orientador, um personagem similar ao Mestre de Jogo ou Narrador nos jogos de RPG. Essa estrutura modular e aberta permite que o jogo seja implementado em qualquer área de conhecimento que se deseje. Basta inserir no ambiente de aprendizagem, as páginas de conteúdo HTML pertinentes ao assunto, e incluir no ambiente de jogo o banco de questões correspondentes e as respectivas telas de transição.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     jogo educacional ensino de física; ensino de ciências; RPG
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     It will be described in this paper, the structure, funcionalities and implementation possibilities of a multiplataform game named
+     <b>
+      In search of the Nobel Prize
+     </b>
+     , in its beta version. The learning environment consists of HTML content pages and concept maps elaborated with CmapTools. The game environment consists of a MySQL database with questions and transition screens with the participation of a Master Advisor, a character similar to the Game Master or Narrator in RPG games. This modular and open structure enable the game implementation in several knowledge areas. It is enough to add content pages in the learning environment, as well as the question database and associate transition screens pertinent to the knowledge area.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     educacional game physics teaching; Science teaching; RPG
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Já faz muito tempo que educadores de várias áreas do conhecimento vêm investigando o uso de jogos educacionais em sala da aula [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M. Bopp, Affective and Emotional Aspects of Human-Computer Interaction, editado por M. Pivec (iOS Press, Clifton, 2006)
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] D. Craciun, J. Sci. Arts Year 10, 175 (2010).
+       </span>
+      </span>
+     </span>
+     ]. De um modo geral esses jogos podem ser classificados em duas grandes categorias: jogos de mesa e jogos digitais. Vamos tratar aqui unicamente dos jogos digitais. Boas revisões da literatura a esse respeito estão disponíveis em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M.-C. Li and C.-C. Tsai, J. Sci. Educ. Technol. 22, 877 (2013).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] D.B. Clark, E.E. Tanner-Smith and S.S. Killingsworth, Rev. Educ. Res. 86, 79 (2016).
+       </span>
+      </span>
+     </span>
+     ]. Uma modalidade de jogo educacional que tem sido objeto de inúmeras pesquisas recentemente é conhecido pela sigla RPG (roleplaying game), que pode ser traduzido como jogo de interpretação de papéis. Ele pode ser elaborado como jogo de mesa e como jogo digital. Embora o jogo
+     <b>
+      Em busca do Prêmio Nobel
+     </b>
+     , tenha elementos similares àqueles típicos de RPG, ele não pode ser classificado como tal. Portanto, não discutiremos aqui especificamente os jogos tipo RPG.
+    </p>
+    <p>
+     Muitos dos jogos digitais (incluindo-se os tipo RPG) se inspiram ou têm pontos em comum com os hipertextos elaborados a partir do final dos anos 1990….[
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] U. Wechselberger, in: Trans. Edutainment II, edited by Z. Pan, A.D. Cheok, W. Müller, and A. El Rhabili (Springer-Verlag, Berlin, 2009), p. 90104.
+       </span>
+      </span>
+     </span>
+     ] Foi por essa linha de criação que surgiu a ideia do presente jogo, o qual inspira-se em hipertextos que um dos autores (CAS) elaborou no início dos anos 2000. O caráter inovador daquele hipertexto sobre eletricidade e magnetismo, incluindo em sua estrutura janelas
+     <i>
+      pop-up
+     </i>
+     , animações e experimentos virtuais levou a CAPES a conceder-lhe, em 2003, um prêmio no âmbito do Programa de Apoio à Pesquisa em Educação a Distância. Da mesma forma, a Associação Brasileira de Educação a Distância (ABED) concedeu-lhe, em 2004, o Prêmio ABED / UNIVERSIA de Objetos de Aprendizagem. O material continua disponível no servidor do Instituto de Física da UFRGS
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        <a href="https://www.if.ufrgs.br/tex/fis142/mod00/" target="_blank">
+         https://www.if.ufrgs.br/tex/fis142/mod00/
+        </a>
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     O jogo foi concebido naquela oportunidade com estrutura geral apresentada no fluxograma da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     . Entre os detalhes imaginados, destacam-se:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       Ganha o PN quem chegar ao final do 10
+       <math display="inline" id="m1">
+        <msup>
+         <mrow>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           o
+          </mi>
+         </mrow>
+        </msup>
+       </math>
+       . mapa conceitual (MC), ou seja o 10
+       <math display="inline" id="m2">
+        <msup>
+         <mrow>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           o
+          </mi>
+         </mrow>
+        </msup>
+       </math>
+       . ponto de um conjunto aleatoriamente selecionado pelo programa. Para cada MC, o programa sorteia questões até que o jogador acerte uma.
+      </p>
+     </li>
+     <li>
+      <p>
+       Na alternativa “apenas navegar”, o usuário pode navegar por uma linha do tempo conceitual ou pelo espaço dos MCs. Esta é a opção de pura aprendizagem do usuário.
+      </p>
+     </li>
+     <li>
+      <p>
+       Na alternativa “jogar”, o usuário passa de um MC a outro se tiver sucesso na resposta de uma questão de múltipla escolha.
+      </p>
+     </li>
+     <li>
+      <p>
+       Um fator de sorte será acrescentado caso o usuário acerte a questão: (1) Normal: ganha um ponto; (2) Sorte: ganha dois pontos; (3) Azar: não ganha nada.
+      </p>
+     </li>
+     <li>
+      <p>
+       Incluir um contador de pontos para que o usuário saiba o quão longe está de ganhar o PN.
+      </p>
+     </li>
+     <li>
+      <p>
+       Incluir contador de tempo. Quando o jogador acaba, o contador para, registrando o tempo dispendido pelo usuário para ganhar o PN.
+      </p>
+     </li>
+    </ol>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Fluxograma original do Jogo do Prêmio Nobel.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como será visto mais adiante, a atual versão do jogo é menos centrada em mapas conceituais do que a versão originalmente imaginada. Todavia, a estrutura básica do jogo foi mantida. A sua implementação não foi possível desde a origem, pela incapacidade do autor do jogo em encontrar um colaborador com expertise computacional e disposição de trabalho adequadas à tarefa.
+    </p>
+    <p>
+     Revisando a literatura atual, percebemos que a ideia original do presente jogo é conceptualmente similar a jogos elaborados recentemente [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] S. Samuelson, H.M. Halff, L. Halff and C. Brown, in: 3rd IEEE International Conference on Digital Game and Intellitgent Toy Enhanced Learning, Kaohsiung, Taiwan, 2010, editado por G. Biswas, D. Carr, Y.S. Chee and W.Y. Hwang (IEEE Computer Society, Los Alamitos, 2010), p. 166.
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] T.V. Paula, E.V.P. Souza, T.G.N. Silva, D.M. Silva and M.E.N.P. Ribeiro, Holos 31, 98 (2015).
+       </span>
+      </span>
+     </span>
+     ], o que nos motivou a investir a enorme energia necessária para sua implementação.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. O algoritmo e suas funcionalidades
+    </h1>
+    <p>
+     O jogo se desenvolve em dois ambientes administrados por um código PHP
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        <a href="https://secure.php.net/manual/pt_BR/intro-whatis.php" target="_blank">
+         https://secure.php.net/manual/pt_BR/intro-whatis.php
+        </a>
+        .
+       </span>
+      </span>
+     </span>
+     , com auxílio do yiiframework na versão 2
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         3
+        </strong>
+        <a href="http://www.yiiframework.com/" target="_blank">
+         http://www.yiiframework.com/
+        </a>
+       </span>
+      </span>
+     </span>
+     . O ambiente de aprendizagem consiste em páginas de conteúdo em HTML e mapas conceituais confeccionados com a ferramenta CmapTools
+     <span class="ref footnote">
+      <sup class="xref">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         4
+        </strong>
+        <a href="https://cmap.ihmc.us/" target="_blank">
+         https://cmap.ihmc.us/
+        </a>
+        .
+       </span>
+      </span>
+     </span>
+     . O ambiente de jogo consiste em um banco de dados MySQL
+     <span class="ref footnote">
+      <sup class="xref">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         5
+        </strong>
+        <a href="https://www.mysql.com/" target="_blank">
+         https://www.mysql.com/
+        </a>
+       </span>
+      </span>
+     </span>
+     , com questões e telas de transição com a participação do Mestre-Orientador, um personagem similar ao Mestre de Jogo ou Narrador nos jogos de RPG. Todo o sistema está baseado na arquitetura MVC (Model-view-controller)
+     <span class="ref footnote">
+      <sup class="xref">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         6
+        </strong>
+        <a href="https://pt.wikipedia.org/wiki/MVC" target="_blank">
+         https://pt.wikipedia.org/wiki/MVC
+        </a>
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     Como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     , a arquitetura MVC opera em três camadas:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Camada de modelo responsável pela leitura, escrita e validação dos dados do banco.
+      </p>
+     </li>
+     <li>
+      <p>
+       Camada de visão, por meio da qual os dados e informações são exibidos ao usuário. É o que de fato o usuário vê, ou seja é a exibição das páginas HTML e das questões.
+      </p>
+     </li>
+     <li>
+      <p>
+       Camada de controle responsável pela comunicação com o usuário. Ela lhe envia notificações e recebe as respostas do usuário.
+      </p>
+     </li>
+    </ul>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Esquema operacional da arquitetura MVC (Model-view-controller).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nessa versão beta, os desafios consistem unicamente em questões típicas do ENEM, mas a próxima versão, cujo algoritmo já está em elaboração, conta com a inclusão de experimentos virtuais que possam ser manipulados para permitir avaliação.
+    </p>
+    <p>
+     O usuário tem duas alternativas: estudar ou jogar. Para jogar ele deverá passar por um teste de admissão, ou seja, acertar três questões sucessivas de nível fácil. Para estudar ele tem o conteúdo apresentado sob a forma de hipertextos e sob a forma de mapas conceituais. Vejamos as interfaces do jogo e suas funcionalidades.
+    </p>
+    <h2>
+     2.1. A interface do administrador
+    </h2>
+    <p>
+     O menu de administração do jogo é apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     O administrador pode configurar diversas componentes do jogo, sendo duas dessas componentes de extrema importância: o conteúdo de aprendizagem (hipertextos e mapas conceituais) e os desafios ao jogador (questões de múltipla escolha). Vamos concentrarmo-nos nas questões, que podem ser distribuídas por tópicos e por graus de dificuldade. Estamos utilizando a atomística para a aplicação da versão beta, cujo conteúdo foi dividido em quatro tópicos: modelo atômico, propriedades atômicas da matéria, tabela periódica e radioatividade. As questões foram elaboradas com três graus de dificuldade: fácil, intermediário e difícil.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Menu de administração do jogo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A interface para o cadastramento de questões é apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     . Na parte superior está o campo para inserção do enunciado. Se a questão tiver figura, ela deve ser inserida no campo “Figura”. Cada questão tem uma imagem de entrada e uma de saída, a serem discutidas mais adiante. O administrador deve informar a qual tópico a questão se refere e o seu nível de dificuldade. Depois de informar as alternativas para as respostas, o administrador deve informar qual a alternativa correta.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Interface para o cadastramento de questões.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.2. A interface de aprendizagem
+    </h2>
+    <p>
+     A interface de aprendizagem consiste de hipertextos e mapas conceituais. Os hipertextos consistem em páginas de conteúdo (contidas na biblioteca) e em páginas com as biografias dos cientistas mais importantes da área na qual o jogo está sendo aplicado. Apenas como ilustração apresentaremos na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     o menu da biblioteca de atomística
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Menu da biblioteca.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.3. A interface do jogador
+    </h2>
+    <p>
+     Uma vez aprovado no teste de admissibilidade, ou seja uma vez tendo acertado sequencialmente três questões fáceis, o jogador ingressa no jogo na categoria Graduação. Ele tem que passar por mais duas categorias antes de se candidatar ao Prêmio Nobel: Mestrado e Doutorado.
+    </p>
+    <p>
+     Ele passa da Graduação para o Mestrado quando acertar no mínimo três questões fáceis de cada um dos quatro tópicos. Para passar para a categoria Doutorado o jogador deve acertar no mínimo três questões intermediárias de cada tópico e, finalmente, para ganhar o Prêmio Nobel (PN) ele deve acertar no mínimo três questões difíceis de cada tópico. Ou seja, para ganhar o PN o jogador tem que acertar no mínimo 36 questões. Por que no mínimo?
+    </p>
+    <p>
+     Por duas razões. Para colocar no jogo a sorte e o azar, e para simular o que ocorre na vida de qualquer cientista. É muito frequente o cientista perder parte do seu trabalho, quando tenta publica-lo. Por exemplo, se ele tenta publicar um resultado que foi anteriormente obtido e publicado por outro, sem seu conhecimento, é grande a chance de o trabalho não ser aceito. Mesmo que o trabalho seja aceito, ele pode ficar em desvantagem na corrida pelo PN, porque a paternidade da sua descoberta é atribuída a outro cientista. Para simular essa situação colocamos um elemento de imprevisibilidade no algoritmo. Quando o jogador responde corretamente a última questão de cada nível (Graduação, Mestrado e Doutorado), o programa sorteia SORTE ou AZAR. Se der SORTE, ele passa para o nível seguinte ou ganha o PN. Se der AZAR, ele terá que responder nova questão, e só passará para o nível seguinte ou ganhará o PN, se acertar a última questão e tiver SORTE. Qualquer que seja o caso, o programa apresenta uma tela de congratulação ou explicando o infortúnio, conforme ilustram as
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 6
+     </a>
+     A e
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     B
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      (A) Congratulação pela passagem para o grau de Doutorado; (B) Consolando pelo infortúnio.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Cada questão tem uma tela de entrada e outra de saída. A tela de entrada é exibida antes da questão. Sua finalidade é alertar o jogador para o tipo de questão que ele vai ter que responder. Ele pode fazer uma autoanálise do seu conhecimento em relação ao tema, e se for o caso decidir estuda-lo antes de responder a questão. Neste caso ele sai da área de jogo e vai para a área de aprendizagem (mapas conceituais ou hipertextos).
+    </p>
+    <p>
+     A tela de saída é exibida se o jogador errar a questão. Sua finalidade é informar a origem do erro e encaminha-lo para a área da biblioteca que trata do assunto abordado na questão. A título de ilustração apresentaremos o enunciado de uma questão, sua tela de entrada (
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     ) e sua tela de saída (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Antes de ver o enunciado da questão, o jogador sabe qual o tema abordado, por meio de uma tela como esta.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Quando o jogador erra, ele sabe a razão do erro e é encaminhado para o ponto da biblioteca onde encontra o hipertexto que trata o assunto da questão.
+      <br/>
+     </div>
+    </div>
+    <div>
+     <blockquote>
+      <p>
+       Entre os vários modelos atômicos, um dos mais conhecidos é aquele elaborado por Joseph John Thomson, conhecido na literatura como modelo do pudim de ameixa, segundo o qual:
+      </p>
+     </blockquote>
+    </div>
+    <ol type="a">
+     <li>
+      <p>
+       os elétrons têm caráter corpuscular e de onda, simultaneamente.
+      </p>
+     </li>
+     <li>
+      <p>
+       no centro do átomo existe um núcleo muito pequeno e denso, cercado por elétrons.
+      </p>
+     </li>
+     <li>
+      <p>
+       os elétrons giram em torno do núcleo em órbitas elípticas.
+      </p>
+     </li>
+     <li>
+      <p>
+       os elétrons giram em torno do núcleo em órbitas circulares.
+      </p>
+     </li>
+     <li>
+      <p>
+       o átomo é constituído por uma mistura homogênea de cargas elétricas positivas e negativas.
+      </p>
+     </li>
+    </ol>
+    <h1 class="articleSectionTitle">
+     3. Possibilidades de utilização em sala de aula e considerações finais
+    </h1>
+    <p>
+     O jogo “Em busca do Prêmio Nobel”, como aqui proposto tem uma estrutura aberta que permite sua utilização em qualquer área do conhecimento e de acordo com qualquer teoria de ensino-aprendizagem. Tudo vai depender do conteúdo inserido e da forma como o jogo será utilizado em sala de aula. Para a primeira aplicação elaboramos hipertextos e mapas conceituais pertinentes à área da atomística, em estilo típico dos livros didáticos destinados ao ensino médio.
+    </p>
+    <p>
+     Assim, a vinculação a eventuais teorias pedagógicas ficará por conta do professor que utilizar o material. Por exemplo, um professor que deseje basear sua prática pedagógica de acordo com a teoria de Ausubel [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] M.A. Moreira e E.F.S. Masini, Aprendizagem Significativa: A Teoria de David Ausubel (Moraes, São Paulo, 1982).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] D.P. Ausubel, Educational Psychology: A Cognitive View (Holt, Rinehart and Winston, New York, 1968).
+       </span>
+      </span>
+     </span>
+     ], poderá antes da utilização do jogo trabalhar com os subsunçores ou ideias-âncoras pertinentes à atomística. Da mesma forma, um professor que queira seguir a orientação de Vygotsky [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] L.S. Vygotski, A Formação Social Da Mente (Livraria Martins Fontes, São Paulo, 1991).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] A. Gaspar e I.C.C. Monteiro, Investig. em Ensino Ciências 10, 227 (2005).
+       </span>
+      </span>
+     </span>
+     ] deverá programar atividades com grande interação social entre os alunos.
+    </p>
+    <p>
+     Por exemplo, para estimular a socialização do conhecimento e ao mesmo tempo premiar os mais bem sucedidos no jogo, oficinas foram ministradas pelos primeiros alunos que passaram de nível. O primeiro aluno que passou da Graduação para o Mestrado coordenou uma oficina sobre como superou as dificuldades do jogo naquela primeira fase. Oficinas similares ocorreram durante a passagem do Mestrado para o Doutorado, e um grande evento em sala de aula foi organizado quando o primeiro aluno que ganhou o Prêmio Nobel de Atomística. Relatos dessa aplicação, que ainda encontra-se em andamento, serão oportunamente submetidos a publicação.
+    </p>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        <a href="https://www.if.ufrgs.br/tex/fis142/mod00/" target="_blank">
+         https://www.if.ufrgs.br/tex/fis142/mod00/
+        </a>
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        <a href="https://secure.php.net/manual/pt_BR/intro-whatis.php" target="_blank">
+         https://secure.php.net/manual/pt_BR/intro-whatis.php
+        </a>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        <a href="http://www.yiiframework.com/" target="_blank">
+         http://www.yiiframework.com/
+        </a>
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        4
+       </span>
+       <div>
+        <a href="https://cmap.ihmc.us/" target="_blank">
+         https://cmap.ihmc.us/
+        </a>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        5
+       </span>
+       <div>
+        <a href="https://www.mysql.com/" target="_blank">
+         https://www.mysql.com/
+        </a>
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        6
+       </span>
+       <div>
+        <a href="https://pt.wikipedia.org/wiki/MVC" target="_blank">
+         https://pt.wikipedia.org/wiki/MVC
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Material suplementar">
+    <h1 class="articleSectionTitle">
+     Material suplementar
+    </h1>
+    <p>
+     O seguinte material suplementar está disponível online:
+    </p>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/hyJcdZMJMvfFqTCDxgLP7Wh/e32b29ac39d2c360092ad6b3d014aad6c80d4824.pdf" target="_blank">
+     Em busca do Prêmio Nobel - Versão beta
+    </a>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        M. Bopp,
+        <i>
+         Affective and Emotional Aspects of Human-Computer Interaction
+        </i>
+        , editado por M. Pivec (iOS Press, Clifton, 2006)
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        D. Craciun, J. Sci. Arts Year
+        <b>
+         10
+        </b>
+        , 175 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        M.-C. Li and C.-C. Tsai, J. Sci. Educ. Technol.
+        <b>
+         22
+        </b>
+        , 877 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        D. Tomic and B. Divjak, J. Inf. Organ. Sci.
+        <b>
+         35
+        </b>
+        , 15 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        D.B. Clark, E.E. Tanner-Smith and S.S. Killingsworth, Rev. Educ. Res.
+        <b>
+         86
+        </b>
+        , 79 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        U. Wechselberger, in:
+        <i>
+         Trans. Edutainment II
+        </i>
+        , edited by Z. Pan, A.D. Cheok, W. Müller, and A. El Rhabili (Springer-Verlag, Berlin, 2009), p. 90104.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        S. Samuelson, H.M. Halff, L. Halff and C. Brown, in:
+        <i>
+         3rd IEEE International Conference on Digital Game and Intellitgent Toy Enhanced Learning
+        </i>
+        , Kaohsiung, Taiwan, 2010, editado por G. Biswas, D. Carr, Y.S. Chee and W.Y. Hwang (IEEE Computer Society, Los Alamitos, 2010), p. 166.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        F.C.C. Campos, A.F. Oliveira, J.R.N. da Silva, EmRede
+        <b>
+         2
+        </b>
+        , 8 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        T.V. Paula, E.V.P. Souza, T.G.N. Silva, D.M. Silva and M.E.N.P. Ribeiro, Holos
+        <b>
+         31
+        </b>
+        , 98 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        M.A. Moreira e E.F.S. Masini,
+        <i>
+         Aprendizagem Significativa: A Teoria de David Ausubel
+        </i>
+        (Moraes, São Paulo, 1982).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        D.P. Ausubel,
+        <i>
+         Educational Psychology: A Cognitive View
+        </i>
+        (Holt, Rinehart and Winston, New York, 1968).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        L.S. Vygotski,
+        <i>
+         A Formação Social Da Mente
+        </i>
+        (Livraria Martins Fontes, São Paulo, 1991).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        A. Gaspar e I.C.C. Monteiro, Investig. em Ensino Ciências
+        <b>
+         10
+        </b>
+        , 227 (2005).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        19 Out 2017
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        22 Nov 2017
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        28 Nov 2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

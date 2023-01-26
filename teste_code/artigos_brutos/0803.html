@@ -1,0 +1,3401 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ens. Fis. 37 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   Oct-Dec 2015
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173742009" target="_blank">
+    https://doi.org/10.1590/S1806-11173742009
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173742009">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Sensores digitais de temperatura com tecnologia
+  <i>
+   one-wire
+  </i>
+  : Um exemplo de aplicação didática na área de condução térmica
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  (Digital sensors of temperature with one-wire technology: An example of pedagogical application in the area of thermal conduction)
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Helio Salim do Amorim
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil
+    <div class="corresp">
+     1E-mail:
+     <a href="mailto:hsalim@uol.com.br">
+      hsalim@uol.com.br
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Marco Adriano Dias
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educaçao, Ciência e Tecnologia do Rio de Janeiro, Nilópolis, Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Vitorvani Soares
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto de Física, Universidade Federal do Rio de Janeiro, Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste trabalho apresentamos uma experiência simples de condução térmica usando sensores de temperatura digitais com tecnologia
+     <i>
+      one-wire
+     </i>
+     (um-fio) associados a uma placa Arduino para controle e aquisição de dados. Os sensores utilizados são acessóveis e podem ser facilmente encontrados no mercado nacional. O modelo experimental reproduz uma experiência clássica de condução térmica usada comumente em livros didáticos de física para apresentar e discutir a lei de Fourier da condução térmica. Os resultados se mostraram suficientemente sensíveis para revelar uma distribuição não linear de temperaturas numa situação em que condições de contorno pouco realistas, e comumente aplicadas à lei de Fourier nos livros didáticos, resulta num comportamento linear.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     condução térmica; sensores de temperatura; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We present in this work a simple experiment of thermal conduction using digital temperature sensors with one-wire technology associated with an Arduino board to control and data acquisition. The sensors used are affordable and can be easily found in the country market. The experimental model reproduces a classic experiment of thermal conduction commonly used in textbooks of physics to present and discuss the Fourier law of heat conduction. The results were sufficiently sensitive to reveal a nonlinear temperature distribution in a situation where unrealistic boundary conditions, usually applied to the Fourier law in textbooks, results in linear behavior.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     heat conduction; temperature sensors; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Uma nova geração de sensores de temperatura digitais simplifica consideravelmente, como veremos, o planejamento de experiências didáticas, particularmente, em física térmica. São sensores que utilizam uma única via de comunicação (
+     <i>
+      one-wire bus
+     </i>
+     ) com o dispositivo de aquisição de dados. É possível colocar uma quantidade indefinidamente grande desses sensores numa única linha de comunicação serial.
+    </p>
+    <p>
+     Nesse trabalho apresentamos uma aplicação simples do sensor DS18B20 da Maxim [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] Maxim Devices - Ds18b20 (datasheet), http://www.maximintegrated.com/en/products/analog/sensors-_and-_sensor-_interface/DS18B20.html, acesso em 8/6/2015.
+       </span>
+       <br/>
+       <a href="http://www.maximintegrated.com/en/products/analog/sensors-_and-_sensor-_interface/DS18B20.html" target="_blank">
+        http://www.maximintegrated.com/en/produc...
+       </a>
+      </span>
+     </span>
+     ] numa experiência clássica de condução térmica. Esses sensores fornecem a temperatura Celsius com resolução programável de 9 a 12 bits, operam numa faixa de −55 °C a +125 °C, com uma acurácia de 0,5 °C na faixa −10 °C a 85 °C. O consumo de energia é muito baixo podendo-se usar as tensões, tipicamente, disponíveis na própria placa de aquisição de dados, ou seja, não se faz necessário a utilização de uma fonte de tensão externa exclusiva para os sensores. Os sensores DS18B20 podem ser encontrados facilmente no mercado nacional, entretanto o custo é muito variável e é recomendável uma pesquisa cuidadosa. Para controle e aquisição de dados, usamos uma placa Arduino Uno (REV 3) ligada a um computador (PC), via porta USB, para a coleta e armazenagem dos dados.
+    </p>
+    <p>
+     Temos assistido nestes últimos anos uma crescente popularização da placa Arduino em aplicações didáticas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] A.R.D. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Revista Brasileira de Ensino de Física 33 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física 33, 4503 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Essas propostas mostram que com a utilização da Arduino aumentamos consideravelmente os recursos experimentais para a realização de atividades didáticas aliadas as exigências de baixo custo e de integração da Física com a área da tecnologia eletrônica e informática, demanda essa sempre crescente por uma maior integração da escola com o mundo do trabalho.
+    </p>
+    <p>
+     Com a popularização da placa Arduino, observamos também um aumento expressivo na oferta de sensores para as mais diversas aplicações. O fenômeno que estudamos consiste na condução de calor através de uma barra metálica cilíndrica conectada em suas extremidades com duas fontes térmica mantidas a temperaturas constantes. Esse sistema é muito utilizado pelos livros didáticos para discutir de forma introdutória e quantitativa o fenômeno da condução térmica e suas principais propriedades, tal como a lei de Fourier. Em geral, nessa fase introdutória o problema é tratado dentro de uma aproximação unidimensional onde se despreza todas as trocas de calor com o meio externo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] R. Resnick, D. Halliday e K.S. Krane. Física 2 (LTC Editora, São Paulo, 2003), 5ª ed.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Montagem experimental
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     mostramos esquematicamente a montagem experimental. Utilizamos uma barra cilíndrica de latão, com 1/2 polegada de diâmetro, fixada por suas extremidades em duas latas comuns de folha de flandres, usadas originalmente como embalagem de alimentos. A fixação da barra com a parede das latas foi completada com resina epóxi.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Esquema representando a montagem experimental: uma barra cilíndrica de latão fixada por suas extremidades em duas latas comuns de folha de flandres.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Pequenos furos foram feitos ao longo da superfície da barra, em intervalos regulares, para a fixação dos sensores DS18B20. Pasta térmica foi usada para melhorar o contato térmico dos sensores com o corpo do cilindro. Em uma das latas colocamos água em ebulição (+100 °C). A ebulição foi mantida com auxílio de um aquecedor elétrico de imersão simples de 500 W alimentado por uma fonte AC variável (0–127 V AC). A fonte variável tem a finalidade de controlar a potência dissipada no aquecedor. Dependendo da quantidade de líquido e da potência dissipada nominal a ebulição pode ser muito intensa acarretando derramamento de água. Em substituição à fonte pode-se usar um dimmer. Uma tampa simples ajuda a diminuir as perdas de vapor. Na outra lata mantemos uma mistura de água e gelo em equilíbrio térmico (0 °C). As latas foram pintadas com tinta zarcão para proteção contra corrosão. As experiências foram realizadas envolvendo-se a barra cilíndrica com placas de isopor (15 mA) para minimizar as trocas com o meio ambiente. Como indica a
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , usamos seis sensores espaçados de 5,0 cm um do outro e das extremidades das latas perfazendo um comprimento externo para a barra de 35 cm. A barra se projeta aproximadamente 5,0 cm para o interior das latas.
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     mostramos os detalhes das conexões elétricas. O sensor DS18B20 no modo de encapsulamento TO-92 possui três terminais identificados com GND (terra), DQ (saída/entrada de dados) e V
+     <sub>
+      DD
+     </sub>
+     . DQ é o terminal de saída e entrada de dados no protocolo
+     <i>
+      one-wire
+     </i>
+     , ou
+     <i>
+      1-Wire
+     </i>
+     (1-Fio). Cada sensor tem um número de identificação (ID) que permite a sua localização precisa entre vários sensores que estejam conectados num único fio. Todos os terminais DQ dos seis sensores são ligados entre si e conectados a uma entrada digital da placa Arduino (pino 3). O fio de conexão dos terminais DQ é também conectado ao terminal de 5 V da placa Arduino através de um resistor de 4,7 k
+     <math display="inline" id="m19">
+      <mi>
+       Ω
+      </mi>
+     </math>
+     . Os terminais GND e VDD são ligados entre si e conectados ao terminal GND da Arduino.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Detalhes das conexões elétricas: o sensor DS18B20 e seus terminais.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para a leitura e armazenamento das medidas de temperatura desenvolvemos um aplicativo simples que lê os dados enviados pela Arduino para a porta USB do computador. Os dados são armazenados em um arquivo sequencial para as análises subsequentes. O aplicativo (leSerial.exe) foi desenvolvido em linguagem Basic
+     <sup>
+      ®
+     </sup>
+     para Windows
+     <sup>
+      ®
+     </sup>
+     tal como implementado no compilador LibertyBasic
+     <sup>
+      ®
+     </sup>
+     (v4.0.4) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] http://www.libertybasic.com/, acesso em 8/6/2015.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Programação da Arduino
+    </h1>
+    <p>
+     A programação da Arduino é simples. O programa (esquete) que usamos é adaptado do código apresentado e discutido por McRoberts [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] M. McRoberts, Arduino Básico (Novatec Editora Ltda., São Paulo, 2011).
+       </span>
+      </span>
+     </span>
+     ]. Para executar esse programa é necessário instalar duas bibliotecas especiais no diretório
+     <i>
+      libraries
+     </i>
+     da IDE Arduino: a
+     <i>
+      OneWire
+     </i>
+     , dedicada a comunicação da Arduino com sensores digitais no protocolo
+     <i>
+      1-Wire
+     </i>
+     , e a biblioteca
+     <i>
+      DallasTemperature
+     </i>
+     para a comunicação específica com os sensores DS18B20. Com a execução do programa o número de identificação de cada sensor é lido e armazenado. A temperatura de cada sensor é lida em intervalos de tempo regulares e podem ser acompanhadas diretamente no monitor do PC utilizando-se a função
+     <i>
+      Serial Monitor
+     </i>
+     da IDE Arduino. No Apêndice 1 transcrevemos o esquete e apresentamos algumas orientações de uso. Cópias de todos os programas usados neste trabalho podem ser obtidas na página do Programa de Mestrado Profissional em Ensino de Física (PMPEF/IF-UFRJ) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] http://www.if.ufrj.br/~pef/producao_academica/material_didatico/2015/conducao_termica/, acesso em 8/6/2015.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados
+    </h1>
+    <p>
+     Os resultados de duas experiências são aqui apresentados. Na primeira experiência, as temperaturas dos reservatórios foram mantidas em 0 °C e +100 °C. A temperatura ambiente foi de 18,5 °C e as medidas de temperatura dos seis sensores foram registradas a cada 5 s. O sistema levou aproximadamente uma hora para alcançar o estado estacionário. Na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     representamos o gráfico da evolução temporal das temperaturas até atingir este estado.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Evolução temporal da temperatura de cada um dos seis sensores localizados ao longo de uma barra cilíndrica de latão, com 1/2 polegada de diâmetro, até atingirem a temperatura do estado estacionário. Nesta experiência, as temperaturas dos reservatórios foram mantidas em 0 °C e +100 °C.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com as temperaturas obtidas na condição estacionária, construímos o gráfico da temperatura (
+     <i>
+      T
+     </i>
+     ) em função da posição (
+     <i>
+      x
+     </i>
+     ) do sensor ao longo da barra, como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , assumindo
+     <i>
+      x
+     </i>
+     = 0 na parede do reservatório de temperatura mais alta.
+    </p>
+    <p>
+     Como podemos observar da
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , o comportamento da temperatura (
+     <i>
+      T
+     </i>
+     )
+     <i>
+      vs
+     </i>
+     . posição (
+     <i>
+      x
+     </i>
+     ) é aproximadamente linear. No gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     a linha reta indicada foi ajustada pelo método dos mínimos quadrados (
+     <i>
+      R
+     </i>
+     (coeficiente de correlação) = 0,994) e o coeficiente angular (CA) obtido foi de −2,05 °C/cm.
+    </p>
+    <p>
+     Na segunda experiência repetimos as mesmas condições, mas mantivemos um dos reservatórios com água à temperatura ambiente (19,0 °C) e o outro com a mistura água e gelo. Nessa situação todas as temperaturas observadas no sistema eram menores, ou iguais, à temperatura ambiente.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Temperatura estacionária dos diferentes sensores em função da sua localização ao longo de uma barra cilíndrica de latão, com 1/2 polegada de diâmetro. A linha continua representa o comportamento aproximadamente linear da distribuição de temperatura. A linha tracejada revela um comportamento parabólico desta mesma distribuição. Nesta experiência, as temperaturas dos reservatórios foram mantidas em 0 °C e +100 °C.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     mostramos a evolução temporal da temperatura observada nos seis sensores e na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     mostramos a distribuição das temperaturas estacionárias ao longo da barra. Um comportamento aproximadamente linear é também observado (
+     <i>
+      R
+     </i>
+     = 0,984 e CA = −0,33°C/cm).
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Evolução temporal da temperatura de cada um dos seis sensores localizados ao longo de uma barra cilíndrica de latão, com 1/2 polegada de diâmetro, até atingirem a temperatura do estado estacionário. Nesta experiência, as temperaturas dos reservatórios foram mantidas em 0 °C e 19,0 °C, a temperatura ambiente.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Temperatura estacionária dos diferentes sensores em função da sua localização ao longo de uma barra cilíndrica de latão, com 1/2 polegada de diâmetro. A linha continua representa o comportamento aproximadamente linear da distribuição de temperatura ao longo da barra. A linha tracejada revela um comportamento parabólico desta mesma distribuição. Nesta experiência, as temperaturas dos reservatórios foram mantidas em 0 °C e 19,0 °C.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Discussão
+    </h1>
+    <p>
+     Uma primeira aproximação teórica do problema poderia considerar o modelo idealizado, já acima referido e discutido por Resnick e cols [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] R. Resnick, D. Halliday e K.S. Krane. Física 2 (LTC Editora, São Paulo, 2003), 5ª ed.
+       </span>
+      </span>
+     </span>
+     ]. Assumimos dois reservatórios térmicos à temperatura constantes
+     <i>
+      T
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      T
+     </i>
+     <sub>
+      2
+     </sub>
+     , uma barra homogênea de comprimento
+     <i>
+      L
+     </i>
+     , área da seção reta
+     <i>
+      A
+     </i>
+     e condutividade térmica
+     <i>
+      k
+     </i>
+     , termicamente isolada do meio ambiente. Considerando o eixo de coordenadas
+     <i>
+      x
+     </i>
+     paralelo ao eixo da barra, orientado do reservatório de temperatura mais alta para o de temperatura mais baixa (
+     <i>
+      T
+     </i>
+     <sub>
+      1
+     </sub>
+     &gt;
+     <i>
+      T
+     </i>
+     <sub>
+      2
+     </sub>
+     ) e assumindo a temperatura como sendo uniforme em toda a seção reta para um dado
+     <i>
+      x
+     </i>
+     (aproximação unidimensional), escrevemos para a taxa de transferência de calor (
+     <i>
+      H
+     </i>
+     ) através de uma seção reta da barra,
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m01">
+        <mi>
+         H
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo>
+         -
+        </mo>
+        <mi>
+         k
+        </mi>
+        <mi>
+         A
+        </mi>
+        <mfrac>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa expressão é uma aplicação direta da
+     <i>
+      lei de Fourier
+     </i>
+     da condução térmica. Assumindo um isolamento perfeito, onde não há trocas de calor com o meio ambiente ao longo da barra, temos
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m02">
+        <mi>
+         H
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mstyle>
+         <mtext>
+          constante
+         </mtext>
+        </mstyle>
+        <mo>
+         ,
+        </mo>
+        <mspace width="2em">
+        </mspace>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           0
+          </mn>
+          <mo>
+           ≤
+          </mo>
+          <mi>
+           x
+          </mi>
+          <mo>
+           ≤
+          </mo>
+          <mi>
+           L
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    e
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m03">
+        <mfrac>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mstyle>
+         <mtext>
+          constante
+         </mtext>
+        </mstyle>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Colocando em perspectiva todos os argumentos que suportam a relação (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ) vamos considerar a ilustração na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Representação do calor trocado
+      <i>
+       dQ
+      </i>
+      por condução térmica através da superfície e da seção transversal de um elemento
+      <i>
+       dx
+      </i>
+      ao longo do comprimento
+      <i>
+       L
+      </i>
+      da barra cilíndrica.
+      <i>
+       Tx
+      </i>
+      e
+      <i>
+       Tx + dx
+      </i>
+      indicam as temperaturas nas posições
+      <i>
+       x
+      </i>
+      e
+      <i>
+       x
+      </i>
+      +
+      <i>
+       dx
+      </i>
+      , respectivamente.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Tomando um pequeno elemento da barra cilíndrica, de comprimento Δ
+     <i>
+      x
+     </i>
+     , aplicamos a primeira lei da termodinâmica, no estado estacionário, entre dois instantes separados por um intervalo de tempo infinitesimal (
+     <i>
+      dt
+     </i>
+     ),
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m04">
+        <mi>
+         d
+        </mi>
+        <mi>
+         U
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         d
+        </mi>
+        <mi>
+         Q
+        </mi>
+        <mo>
+         -
+        </mo>
+        <mi>
+         d
+        </mi>
+        <mi>
+         W
+        </mi>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     U
+    </i>
+    é a energia interna,
+    <i>
+     W
+    </i>
+    o trabalho e
+    <i>
+     Q
+    </i>
+    o calor trocados com o meio [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      4
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [4] R. Resnick, D. Halliday e K.S. Krane. Física 2 (LTC Editora, São Paulo, 2003), 5ª ed.
+      </span>
+     </span>
+    </span>
+    ]. No estado estacionário não há variação de temperatura e de volume e assim o trabalho e a variação da energia interna são nulas, resultando da primeira lei (
+    <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     4
+    </a>
+    ) que o calor trocado, no intervalo de tempo considerado, é também nulo. Considerando as superfícies limítrofes do elemento cilíndrico e o calor trocado por condução térmica através dessas superfícies temos
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m05">
+        <mi>
+         d
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           Q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           I
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <mi>
+         d
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           Q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           I
+          </mi>
+          <mi>
+           I
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <mi>
+         d
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           Q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           I
+          </mi>
+          <mi>
+           I
+          </mi>
+          <mi>
+           I
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    Considerando um perfeito isolamento térmico na superfície cilíndrica (dQIII = 0),
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m06">
+        <mi>
+         d
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           Q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           I
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <mi>
+         d
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           Q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           I
+          </mi>
+          <mi>
+           I
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         H
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mi>
+         d
+        </mi>
+        <mi>
+         t
+        </mi>
+        <mo>
+         -
+        </mo>
+        <mi>
+         H
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           x
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mi>
+           Δ
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mi>
+         d
+        </mi>
+        <mi>
+         t
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    que resulta em
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m07">
+        <mi>
+         H
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         -
+        </mo>
+        <mi>
+         H
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           x
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mi>
+           Δ
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    que por sua vez, em síntese, é a mesma relação (
+    <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     2
+    </a>
+    ). Como condição de contorno para a solução da equação diferencial (
+    <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     1
+    </a>
+    ) aplicamos
+    <i>
+     T
+    </i>
+    (
+    <i>
+     x
+    </i>
+    = 0) =
+    <i>
+     T
+    </i>
+    <sub>
+     1
+    </sub>
+    e
+    <i>
+     T
+    </i>
+    (
+    <i>
+     x
+    </i>
+    =
+    <i>
+     L
+    </i>
+    ) =
+    <i>
+     T
+    </i>
+    <sub>
+     2
+    </sub>
+    e obtemos como distribuição de temperatura ao longo da barra,
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m08">
+        <mi>
+         T
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         -
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             H
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <mi>
+           k
+          </mi>
+          <mi>
+           A
+          </mi>
+         </mrow>
+        </mfrac>
+        <mi>
+         x
+        </mi>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    ou
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m09">
+        <msub>
+         <mrow>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           k
+          </mi>
+          <mi>
+           A
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+         </mrow>
+        </mfrac>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msub>
+          <mo>
+           -
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Vemos assim que esse modelo simples resulta na previsão de uma distribuição linear da temperatura ao longo da barra. Entretanto, o sistema experimental utilizado é suficientemente sensível para mostrar uma realidade mais rica e complexa. Se observarmos atentamente os gráficos nas
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 4
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     , vemos que o comportamento linear aludido é aproximativo, e os pontos experimentais definem mais apropriadamente uma curva. No caso da
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , uma curva com concavidade para baixo e na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     com concavidade para cima. Por outro lado, se extrapolamos as retas ajustadas para as coordenadas
+     <i>
+      x
+     </i>
+     = 0 e
+     <i>
+      x
+     </i>
+     = 35 cm, as temperaturas obtidas são diferentes dos valores de temperatura das duas fontes, 0 °C e 100 °C respectivamente, o que não é consistente com as condições de contorno assumidas na solução da equação de condução térmica (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ).
+    </p>
+    <p>
+     Numa primeira avaliação, esse resultado nos remete à revisão da hipótese que considera a barra como termicamente isolada do meio ambiente (
+     <i>
+      dQ
+     </i>
+     <sub>
+      <i>
+       III
+      </i>
+     </sub>
+     = 0): o isolamento térmico não é perfeito e, portanto, no nível de sensibilidade dos sensores DS18B20, devemos considerar as trocas de calor da barra com o meio. Essa conclusão sugere a possibilidade de refazer a experiência retirando por completo o isolamento de isopor. A experiência foi realizada e o resultado, usando as fontes de 0 °C e 100 °C e seguindo os mesmos procedimentos já descritos, é apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Temperatura estacionária de cada um dos sensores localizados ao longo da barra em função da sua posição. A linha tracejada serve de suporte para acentuar o caráter não linear da distribuição de temperaturas ao longo da barra. A linha continua representa um arco de parábola ajustado através do método dos mínimos quadrados (
+      <i>
+       R
+      </i>
+      = 0,9992).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Vemos que o comportamento da temperatura é nitidamente não linear, seguindo uma distribuição ao longo de uma curva de concavidade para baixo, de forma similar ao resultado anterior. Constatamos também que o isolamento de isopor não introduziu grandes diferenças. De fato, o ar é um mal condutor térmico e seu desempenho como meio isolante só não é maior que o isopor pela presença de correntes de convecção que tornam as trocas mais eficientes. O ar livre não é um meio estático de trocas térmicas.
+    </p>
+    <p>
+     A questão das condições de contorno também precisam ser revistas. No modelo experimental usado, mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , as barras se prolongam para o interior dos reservatórios em aproximadamente 5,0 cm, como indicado na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      No modelo experimental usado as barras se prolongam para o interior dos reservatórios em aproximadamente 5,0 cm.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A preocupação aqui foi dar mais rigidez mecânica à montagem e melhorar as trocas de calor. Naturalmente, estas partes não são isoladas e devem se formar gradientes de temperatura em seu interior entre a superfície de contato com o líquido e a superfície que corresponde à seção reta da barra em
+     <i>
+      x
+     </i>
+     = 0, e o mesmo acontecendo em
+     <i>
+      x
+     </i>
+     =
+     <i>
+      L
+     </i>
+     . A temperatura nesses pontos não são as mesmas dos líquidos, podendo ser estimadas a partir dos dados experimentais.
+    </p>
+    <p>
+     Como proposta de aplicação didática, podemos sugerir aos nossos alunos duas questões que seguem rumos independentes: (a) como podemos melhorar o isolamento térmico da barra? Um interessante desafio técnico para o qual nosso aparato experimental tem sensibilidade para avaliar. (b) Como podemos modificar o modelo de transferência de calor da barra de forma a incluir as trocas com o meio? No Apêndice 2 apresentamos uma sugestão.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Conclusão
+    </h1>
+    <p>
+     Apresentamos uma experiência de custo acessível e de simples aplicação que serve para mostrar a versatilidade de sensores de temperatura digitais com tecnologia
+     <i>
+      one-wire
+     </i>
+     . Com uma placa Arduino esses sensores podem ser usados para a medida de perfis térmicos em uma grande variedade de sistemas possibilitando a investigação de fenômenos de transferência de calor de forma, também, quantitativa. Essa metodologia experimental é simples e pode facilitar a realização de diferentes experimentos sobre mecanismos de transferência de calor no ensino médio, onde assunto é comumente muito pouco explorado. O modelo DS18B20 é pré-calibrado pelo fabricante o que permite a sua imediata aplicação como termômetro e tem sido usado em muitas aplicações práticas por desenvolvedores de projetos para a plataforma Arduino o que implica que uma grande quantidade de informação pode ser obtida nos fóruns de discussão [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] http://forum.arduino.cc/, acesso em 8/6/2015.
+       </span>
+      </span>
+     </span>
+     ]. O sensor é de fácil aquisição no mercado nacional e pode ser encontrado também em fornecedores internacionais, a custos compensadores, na internet.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Apêndices">
+    <h1 class="articleSectionTitle">
+     Apêndices
+    </h1>
+    1. Listagem do programa utilizado
+    <p>
+     Apresentamos aqui a listagem do programa (esquete) utilizado. Este programa é utilizado para a medida de temperatura (escala Celsius) através de seis sensores DS18B20 e pode ser facilmente modificado para um número maior (ou menor) de sensores. Cada sensor é fornecido com um código pré-gravado pelo fabricante. O programa é uma adaptação simples do programa apresentado por McRoberts [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] M. McRoberts, Arduino Básico (Novatec Editora Ltda., São Paulo, 2011).
+       </span>
+      </span>
+     </span>
+     ]. Para carregar o programa é necessário antes se certificar que as bibliotecas
+     <i>
+      OneWire
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] http://www.pjrc.com/teensy/td_libs_OneWire.html, acesso em 8/6/2015.
+       </span>
+      </span>
+     </span>
+     ] e
+     <i>
+      DallasTemperature
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] http://milesburton.com/index.php?title=Dallas_Temperature_Control_Library, acesso em 8/6/2015.
+       </span>
+      </span>
+     </span>
+     ] estão devidamente instaladas no diretório
+     <i>
+      libraries
+     </i>
+     da IDE Arduino. Essas bibliotecas já estão incorporadas nas últimas versões da IDE Arduino e veem com vários exemplos de aplicação. Os sensores possuem uma resolução em bits pré-programável de 9 a 12. A resolução em bits implica na resolução em temperatura. Não introduzimos nenhuma alteração na resolução dos sensores permanecendo, portanto, o valor
+     <i>
+      default
+     </i>
+     , 12, o que implica que as temperaturas variam em intervalos de 0,0625 °C. É possível alterar a resolução seletivamente para isso consulte os exemplos de aplicação que veem com a biblioteca
+     <i>
+      DallasTemperature
+     </i>
+     . A listagem do programa é apresentada a seguir:
+    </p>
+    <p>
+     /*Projeto-Condução de calor com seis sensores DS18B20.
+    </p>
+    <p>
+     Projeto adaptado do esquete original de Michael McRoberts
+    </p>
+    <p>
+     (ver "Arduino Básico", NOVATEC Editora Ltda., 2011, pag.311)
+    </p>
+    <p>
+     Programa de Mestrado Profissional em Ensino de Física, PMPEF/IF-UFRJ */
+    </p>
+    <p>
+     //Bibliotecas incorporadas
+    </p>
+    <p>
+     #include &lt;OneWire.h&gt;
+    </p>
+    <p>
+     #include &lt;DallasTemperature.h&gt;
+    </p>
+    <p>
+     //A linha de dados vai para o pino digital 3
+    </p>
+    <p>
+     #define ONE_WIRE_BUS 3
+    </p>
+    <p>
+     //Prepara uma instância de oneWire para se comunicar com //dispositivos OneWire
+    </p>
+    <p>
+     (essa biblioteca contempla outros
+    </p>
+    <p>
+     //sensores one-wire)
+    </p>
+    <p>
+     OneWire oneWire(ONE_WIRE_BUS);
+    </p>
+    <p>
+     //Passa a referência oneWire para
+    </p>
+    <p>
+     DallasTemperature
+    </p>
+    <p>
+     DallasTemperature sensors(&amp;oneWire);
+    </p>
+    <p>
+     //Cria o array DeviceAddress para armazenar os endereços dos //seis sensores. Se estiver usando uma quantidade diferente de //sensores você deve alterar aqui o número de termos do array.
+    </p>
+    <p>
+     DeviceAddress Term1, Term2, Term3, Term4, Term5, Term6;
+    </p>
+    <p>
+     void setup() {
+    </p>
+    <p>
+     //inicia a porta serial
+    </p>
+    <p>
+     Serial.begin(9600);
+    </p>
+    <p>
+     //inicia a biblioteca
+    </p>
+    <p>
+     sensors.begin();
+    </p>
+    <p>
+     //localiza e informa os sensores no barramento
+    </p>
+    <p>
+     Serial.print("Localizando os sensores...");
+    </p>
+    <p>
+     Serial.print("Encontrados ");
+    </p>
+    <p>
+     Serial.print(sensors.getDeviceCount(), DEC);
+    </p>
+    <p>
+     Serial.println(" sensores.");
+    </p>
+    <p>
+     if(!sensors.getAddress(Term1,0))
+    </p>
+    <p>
+     Serial.println("Incapaz de localizar o sensor 0");
+    </p>
+    <p>
+     if(!sensors.getAddress(Term2,1))
+    </p>
+    <p>
+     Serial.println("Incapaz de localizar o sensor 1");
+    </p>
+    <p>
+     if(!sensors.getAddress(Term3,2))
+    </p>
+    <p>
+     Serial.println("Incapaz de localizar o sensor 2");
+    </p>
+    <p>
+     if(!sensors.getAddress(Term4,3))
+    </p>
+    <p>
+     Serial.println("Incapaz de localizar o sensor 3");
+    </p>
+    <p>
+     if(!sensors.getAddress(Term5,4))
+    </p>
+    <p>
+     Serial.println("Incapaz de localizar o sensor 4");
+    </p>
+    <p>
+     if(!sensors.getAddress(Term6,5))
+    </p>
+    <p>
+     Serial.println("Incapaz de localizar o sensor 5");
+    </p>
+    <p>
+     Serial.println;
+    </p>
+    <p>
+     //imprime os endereços para os quatro dispositivos
+    </p>
+    <p>
+     Serial.print("Sensor 0, Endereço: ");
+    </p>
+    <p>
+     printAddress(Term1);
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     Serial.print("Sensor 1, Endereço: ");
+    </p>
+    <p>
+     printAddress(Term2);
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     Serial.print("Sensor 2, Endereço: ");
+    </p>
+    <p>
+     printAddress(Term3);
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     Serial.print("Sensor 3, Endereço: ");
+    </p>
+    <p>
+     printAddress(Term4);
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     Serial.print("Sensor 4, Endereço: ");
+    </p>
+    <p>
+     printAddress(Term5);
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     Serial.print("Sensor 5, Endereço: ");
+    </p>
+    <p>
+     printAddress(Term6);
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+     //Define a função printAddress para imprimir o endereço dos //sensores.
+    </p>
+    <p>
+     void printAddress(DeviceAddress deviceAddress)
+    </p>
+    <p>
+     { for(int i=0; i&lt;8; i++) {
+    </p>
+    <p>
+     //preenche o endereço com zeros, se necessário.
+    </p>
+    <p>
+     if(deviceAddress[i] &lt; 16) Serial.print("0");
+    </p>
+    <p>
+     Serial.print(deviceAddress[i], HEX);
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+     void loop() {
+    </p>
+    <p>
+     //chama a função
+    </p>
+    <p>
+     sensor.requestTemperature() para
+    </p>
+    <p>
+     solicitar a //temperatura de todos
+    </p>
+    <p>
+     os sensores no barramento.
+    </p>
+    <p>
+     sensors.requestTemperatures();
+    </p>
+    <p>
+     //imprime as informações de cada dispositivo.
+    </p>
+    <p>
+     float T1 = sensors.getTempC(Term1);
+    </p>
+    <p>
+     Serial.print(T1);
+    </p>
+    <p>
+     Serial.print(" ");
+    </p>
+    <p>
+     float T2 = sensors.getTempC(Term2);
+    </p>
+    <p>
+     Serial.print(T2);
+    </p>
+    <p>
+     Serial.print(" ");
+    </p>
+    <p>
+     float T3 = sensors.getTempC(Term3);
+    </p>
+    <p>
+     Serial.print(T3);
+    </p>
+    <p>
+     Serial.print(" ");
+    </p>
+    <p>
+     float T4 = sensors.getTempC(Term4);
+    </p>
+    <p>
+     Serial.print(T4);
+    </p>
+    <p>
+     Serial.print(" ");
+    </p>
+    <p>
+     float T5 = sensors.getTempC(Term5);
+    </p>
+    <p>
+     Serial.print(T5);
+    </p>
+    <p>
+     Serial.print(" ");
+    </p>
+    <p>
+     float T6 = sensors.getTempC(Term6);
+    </p>
+    <p>
+     Serial.print(T6);
+    </p>
+    <p>
+     Serial.println();
+    </p>
+    <p>
+     //Intervalo de 5s (5000 milisegundos) entre medidas //sucessivas.
+    </p>
+    <p>
+     Altere este valor segundo suas necessidades.
+    </p>
+    <p>
+     delay(5000);
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+     A coleta dos dados pode ser acompanhada através da função
+     <i>
+      Serial Monitor
+     </i>
+     da IDE Arduino. Para salvar os dados em arquivo desenvolvemos o programa
+     <i>
+      leSerial
+     </i>
+     para plataforma Windows
+     <sup>
+      ®
+     </sup>
+     . Cópias desses programas podem ser obtidas no endereço especificado no texto do artigo. A seguir mostramos a tela inicial com alguns dados coletados,
+    </p>
+    <p>
+     Localizando os sensores... Encontrados 6 sensores.
+    </p>
+    <p>
+     Sensor 0, Endereço: 28A4213703000081
+    </p>
+    <p>
+     Sensor 1, Endereço: 28C9E136030000A5
+    </p>
+    <p>
+     Sensor 2, Endereço: 2825073703000038
+    </p>
+    <p>
+     Sensor 3, Endereço: 281D103703000059
+    </p>
+    <p>
+     Sensor 4, Endereço: 2887223703000020
+    </p>
+    <p>
+     Sensor 5, Endereço: 28F7163703000023
+    </p>
+    <p>
+     25.25 25.12 25.37 25.37 25.31 25.19
+    </p>
+    <p>
+     25.25 25.12 25.37 25.37 25.31 25.25
+    </p>
+    <p>
+     25.31 25.12 25.44 25.31 25.31 25.19
+    </p>
+    <p>
+     ......
+    </p>
+    <p>
+     As seis colunas com as temperaturas não estão ordenadas de uma forma organizada, isto é, a primeira coluna associado ao sensor
+     <i>
+      Term1
+     </i>
+     não necessariamente corresponde ao primeiro sensor na barra em ordem crescente da coordenada
+     <i>
+      x
+     </i>
+     . Essa disposição das colunas pode ser facilmente alterada no programa na seção "// imprime as informações de cada dispositivo".
+    </p>
+    2. Uma discussão mais avançada da transferência de calor
+    <p>
+     A conclusão obtida a partir da análise dos dados de que a barra não está termicamente isolada do meio externo pode oferecer uma oportunidade de aprofundamento da discussão em torno do fenômeno de transferência de calor, particularmente com aqueles alunos que se mostrem mais interessados. Uma revisão simples do modelo teórico original de modo a levar em conta as trocas com o meio externo pode ser proposto tomando por base o sistema constituído de um pequeno elemento da barra de comprimento infinitesimal (
+     <i>
+      dx
+     </i>
+     ) de forma a considerar a temperatura como uniforme em toda a sua extensão (
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     ). Uma aproximação simples para a taxa de calor trocado pelo elemento cilíndrico com o meio externo (
+     <i>
+      dH
+     </i>
+     ′) pode ser inferida da própria lei de Fourier e do resultado expresso pela relação (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     ), isto é, a taxa é diretamente proporcional à diferença de temperatura entre o elemento considerado e o meio,
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m10">
+        <mi>
+         d
+        </mi>
+        <msup>
+         <mrow>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           ′
+          </mi>
+         </mrow>
+        </msup>
+        <mo>
+         ∝
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           T
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           -
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Um coeficiente de proporcionalidade pode ser usado que leve em conta (como na Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     )) a área da superfície do elemento cilíndrico em contato com o meio externo (2π
+     <i>
+      Rdx
+     </i>
+     , onde
+     <i>
+      R
+     </i>
+     é o raio do cilindro) e uma constante (γ), indeterminada, que se relaciona aos materiais envolvidos e a geometria do sistema, isto é,
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m11">
+        <mi>
+         d
+        </mi>
+        <msup>
+         <mrow>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           ′
+          </mi>
+         </mrow>
+        </msup>
+        <mo>
+         =
+        </mo>
+        <mo>
+         -
+        </mo>
+        <mi>
+         γ
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           π
+          </mi>
+          <mi>
+           R
+          </mi>
+          <mi>
+           d
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           T
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           -
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa relação é bem conhecida e usada para tratar problemas de resfriamento de corpos densos submersos em meios fluidos frios. Nesses casos, as trocas são assistidas por correntes de convecção (transferência de calor por convecção) e a relação (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) é conhecida como lei do resfriamento de Newton por ter sido proposta pela primeira vez por Isaac Newton. A primeira lei da Termodinâmica aplicada ao elemento cilíndrico pode ser escrita como
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m12">
+        <mtable columnalign="right center left">
+         <mtr>
+          <mtd>
+           <mi>
+            H
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mi>
+            H
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              x
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mi>
+              d
+             </mi>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mrow>
+             <mi>
+              H
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              ′
+             </mi>
+            </mrow>
+           </msup>
+           <mo>
+            =
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mi>
+            H
+           </mi>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              H
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mi>
+              d
+             </mi>
+             <mi>
+              H
+             </mi>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mrow>
+             <mi>
+              H
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              ′
+             </mi>
+            </mrow>
+           </msup>
+           <mo>
+            =
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    ou
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m13">
+        <mi>
+         d
+        </mi>
+        <mi>
+         H
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         d
+        </mi>
+        <msup>
+         <mrow>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           ′
+          </mi>
+         </mrow>
+        </msup>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo as Eqs. (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) na Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     ),
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m14">
+        <mi>
+         k
+        </mi>
+        <mi>
+         A
+        </mi>
+        <mfrac>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             d
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <msup>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mi>
+         d
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         γ
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           π
+          </mi>
+          <mi>
+           R
+          </mi>
+          <mi>
+           d
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           T
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           -
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mi>
+         d
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m15">
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           A
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mi>
+           π
+          </mi>
+          <msup>
+           <mrow>
+            <mi>
+             R
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    ou
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m16">
+        <mfrac>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             d
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <msup>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           π
+          </mi>
+          <mi>
+           γ
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           k
+          </mi>
+          <mi>
+           R
+          </mi>
+         </mrow>
+        </mfrac>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           T
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           -
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      11
+     </a>
+     ) pode ser resolvida analiticamente e sua solução geral é
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m17">
+        <mi>
+         T
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           c
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <msup>
+         <mrow>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           β
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           c
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msub>
+        <msup>
+         <mrow>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mrow>
+          <mo>
+           -
+          </mo>
+          <mi>
+           β
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+        </msup>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     c
+    </i>
+    <sub>
+     1
+    </sub>
+    e
+    <i>
+     c
+    </i>
+    <sub>
+     2
+    </sub>
+    são constantes de integração e
+    <i>
+     β
+    </i>
+    2 = 2πγ∕
+    <i>
+     kR
+    </i>
+    . Esse resultado é consistente com o comportamento não linear observado para a função
+    <i>
+     T
+    </i>
+    (
+    <i>
+     x
+    </i>
+    ). Se considerarmos a situação da primeira e da terceira experiência relatadas no texto, em que
+    <i>
+     T
+    </i>
+    (
+    <i>
+     x
+    </i>
+    ) é maior do que
+    <i>
+     T
+    </i>
+    <sub>
+     0
+    </sub>
+    na maior extensão da barra, a Eq. (
+    <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     11
+    </a>
+    ) nos mostra que
+    <i>
+     d
+    </i>
+    <sup>
+     2
+    </sup>
+    <i>
+     T
+    </i>
+    ∕
+    <i>
+     dx
+    </i>
+    <sup>
+     2
+    </sup>
+    &gt; 0, o que resulta em uma curva com concavidade para baixo, tal como observado. Na situação da segunda experiência em que
+    <i>
+     T
+    </i>
+    <sub>
+     0
+    </sub>
+    é maior que
+    <i>
+     T
+    </i>
+    (
+    <i>
+     x
+    </i>
+    ) em toda a extensão da barra, resulta da Eq. (
+    <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     11
+    </a>
+    ) que
+    <i>
+     d
+    </i>
+    <sup>
+     2
+    </sup>
+    <i>
+     T
+    </i>
+    ∕
+    <i>
+     dx
+    </i>
+    <sup>
+     2
+    </sup>
+    &lt; 0, o que corresponde a uma curva com concavidade para cima, também, tal como observado na
+    <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Fig. 6
+    </a>
+    .
+    <p>
+     É ainda possível estender a análise um pouco mais. Se considerarmos que as trocas de calor com o meio externo são pequenas, na medida em que o ar e o isopor são maus condutores de calor, podemos assumir que o parâmetro γ é pequeno. Se procedermos a expansão das funções exponenciais em série de potências de
+     <i>
+      βx
+     </i>
+     e desprezamos as potências superiores a dois é fácil mostrar que a expressão (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      12
+     </a>
+     ) se reduz a
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m18">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd columnalign="right">
+           <mi>
+            T
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                T
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                0
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mspace width="2em">
+           </mspace>
+          </mtd>
+          <mtd columnalign="right">
+           <mspace width="2em">
+           </mspace>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mspace width="2em">
+           </mspace>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              -
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              β
+             </mi>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mfrac>
+            <mrow>
+             <msup>
+              <mrow>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <mrow>
+                 <mi>
+                  β
+                 </mi>
+                 <mi>
+                  x
+                 </mi>
+                </mrow>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msup>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </mfrac>
+           <mspace width="1em">
+           </mspace>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Nesse grau de aproximação o gráfico da temperatura ao longo da barra é um arco de parábola. Nas
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 4
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     mostramos com linhas tracejadas parábolas ajustadas aos dados através do método dos mínimos quadrados. Essa aproximação se adapta muito melhor aos dados observados.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        Maxim Devices - Ds18b20 (datasheet), http://www.maximintegrated.com/en/products/analog/sensors-_and-_sensor-_interface/DS18B20.html, acesso em 8/6/2015.
+        <br/>
+        <a href="http://www.maximintegrated.com/en/products/analog/sensors-_and-_sensor-_interface/DS18B20.html" target="_blank">
+         » http://www.maximintegrated.com/en/products/analog/sensors-_and-_sensor-_interface/DS18B20.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        A.R.D. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        1702 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4503 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        R. Resnick, D. Halliday e K.S. Krane.
+        <i>
+         Física 2
+        </i>
+        (LTC Editora, São Paulo, 2003), 5ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        http://www.libertybasic.com/, acesso em 8/6/2015.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        M. McRoberts,
+        <i>
+         Arduino Básico
+        </i>
+        (Novatec Editora Ltda., São Paulo, 2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        http://www.if.ufrj.br/~pef/producao_academica/material_didatico/2015/conducao_termica/, acesso em 8/6/2015.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        http://forum.arduino.cc/, acesso em 8/6/2015.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        http://www.pjrc.com/teensy/td_libs_OneWire.html, acesso em 8/6/2015.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        http://milesburton.com/index.php?title=Dallas_Temperature_Control_Library, acesso em 8/6/2015.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Oct-Dec 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        09 Maio 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        03 Ago 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

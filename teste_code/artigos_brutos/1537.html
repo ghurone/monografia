@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 26 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   Dez 2004
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172004000400018" target="_blank">
+    https://doi.org/10.1590/S1806-11172004000400018
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172004000400018">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  ''LAB Fit ajuste de curvas'': um software em português para tratamento de dados experimentais
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  LAB Fit curve fitting: a software in Portuguese for treatment of experimental data
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Wilton Pereira da Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Cleide M.D.P.S. e Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Cláudio G.B. Cavalcanti
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Diogo D.P.S. e Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor5">
+    <span>
+     Ivomar B. Soares
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor5" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor6">
+    <span>
+     João A.S. Oliveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor6" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Paraíba,  
+        ,  Universidade Federal de Campina Grande,  Departamento de Física ,  Grupo de Aquisição e Tratamento de Dados,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor7">
+    <span>
+     Cleiton D.P.S. e Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor7" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  S.J. Campos,  
+          ,  SP,  
+        ,  ITA,  Departamento de Engenharia Eletrônica ,  Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Este artigo visa a comunicar o desenvolvimento de um software para tratamento de dados experimentais, denominado LAB Fit. Na verdade, trata-se de um pacote de programas envolvendo ajuste de curvas, gráficos 2D e 3D, estatística básica, propagação de erros e algumas ferramentas matemáticas. O software foi inicialmente publicado em inglês, buscando atingir um público alvo maior que o brasileiro, há cerca de dois anos. Devido ao sucesso alcançado, verificado pelo grande número de downloads e pelo número crescente de licenciamentos, está sendo disponibilizada, também, uma versão em português. Exemplos típicos de uso do LAB Fit mostram parte das potencialidades do software tanto no ensino como na pesquisa experimental. O seu desempenho foi verificado utilizando o ''Statistical Reference Datasets Project (SRDP)'' do ''National Institute of Standards and Technology (NIST)'', que apresenta 27 conjuntos de dados e respectivas funções com valores certificados para os parâmetros. Todos os 27 resultados obtidos pelo LAB Fit são estatisticamente idênticos aos valores certificados.
+    </p>
+    <p>
+     ajuste de curvas; propagação de erros; estatística básica; gráficos 2D e 3D
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     This paper aims to communicate the development of a software for treatment of experimental data called LAB Fit (curve fitting, 2D and 3D graphs, basic statistics, error propagation and mathematical tools). The english version was released two years ago and, due to the achieved success, verified by the great number of downloads, it is also being released a portuguese version. Typical examples of using of the LAB Fit show part of the potentialities of the program in the experimental teaching and research. The performance of the software has been verified with the Statistical Reference Datasets Project (SRDP) of the National Institute of Standards and Technology (NIST), which presents 27 datasets (and functions) with certified values for the parameters. All the 27 LAB Fit results are statistically identical to the certified values.
+    </p>
+    <p>
+     curve fitting; error propagation; basic statistics; 2D and 3D graphs
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      PRODUTOS E MATERIAIS DIDÁTICOS
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     ''LAB Fit ajuste de curvas'': um software em português para tratamento de dados experimentais
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      LAB Fit curve fitting: a software in Portuguese for treatment of experimental data
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Wilton Pereira da Silva
+      <sup>
+       I
+      </sup>
+      ; Cleide M.D.P.S. e Silva
+      <sup>
+       I
+      </sup>
+      ; Cláudio G.B. Cavalcanti
+      <sup>
+       I
+      </sup>
+      ; Diogo D.P.S. e Silva
+      <sup>
+       I
+      </sup>
+      ; Ivomar B. Soares
+      <sup>
+       I
+      </sup>
+      ; João A.S. Oliveira
+      <sup>
+       I
+      </sup>
+      ; Cleiton D.P.S. e Silva
+      <sup>
+       II
+      </sup>
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      I
+     </sup>
+     Grupo de Aquisição e Tratamento de Dados, Departamento de Física, Universidade Federal de Campina Grande, PB, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      II
+     </sup>
+     Departamento de Engenharia Eletrônica, ITA, S.J. Campos, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <strong>
+      Endereço para correspondência
+     </strong>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Este artigo visa a comunicar o desenvolvimento de um
+     <i>
+      software
+     </i>
+     para tratamento de dados experimentais, denominado
+     <i>
+      LAB Fit
+     </i>
+     . Na verdade, trata-se de um pacote de programas envolvendo ajuste de curvas, gráficos 2D e 3D, estatística básica, propagação de erros e algumas ferramentas matemáticas. O
+     <i>
+      software
+     </i>
+     foi inicialmente publicado em inglês, buscando atingir um público alvo maior que o brasileiro, há cerca de dois anos. Devido ao sucesso alcançado, verificado pelo grande número de
+     <i>
+      downloads
+     </i>
+     e pelo número crescente de licenciamentos, está sendo disponibilizada, também, uma versão em português. Exemplos típicos de uso do
+     <i>
+      LAB Fit
+     </i>
+     mostram parte das potencialidades do
+     <i>
+      software
+     </i>
+     tanto no ensino como na pesquisa experimental. O seu desempenho foi verificado utilizando o ''
+     <i>
+      Statistical Reference Datasets Project
+     </i>
+     (SRDP)'' do ''
+     <i>
+      National Institute of Standards and Technology
+     </i>
+     (NIST)'', que apresenta 27 conjuntos de dados e respectivas funções com valores certificados para os parâmetros. Todos os 27 resultados obtidos pelo
+     <i>
+      LAB Fit
+     </i>
+     são estatisticamente idênticos aos valores certificados.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     ajuste de curvas, propagação de erros, estatística básica, gráficos 2D e 3D.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     This paper aims to communicate the development of a software for treatment of experimental data called LAB Fit (curve fitting, 2D and 3D graphs, basic statistics, error propagation and mathematical tools). The english version was released two years ago and, due to the achieved success, verified by the great number of downloads, it is also being released a portuguese version. Typical examples of using of the LAB Fit show part of the potentialities of the program in the experimental teaching and research. The performance of the software has been verified with the Statistical Reference Datasets Project (SRDP) of the National Institute of Standards and Technology (NIST), which presents 27 datasets (and functions) with certified values for the parameters. All the 27 LAB Fit results are statistically identical to the certified values.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     curve fitting, error propagation, basic statistics, 2D and 3D graphs.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Tanto na pesquisa científica como na abordagem experimental do ensino das ciências, a observação de um dado fenômeno pode resultar em um gráfico cuja análise fornece parâmetros que possibilitam descrever qualitativa e quantitativamente tal fenômeno. A partir da década de 80, a determinação gráfica de parâmetros vem paulatinamente sendo substituída pelo método dos mínimos quadrados, uma vez que a aplicação generalizada deste método se tornou viável com a popularização dos microcomputadores. A essa técnica de determinação de parâmetros dá-se o nome genérico de ''regressão'' ou ''ajuste de curvas'', e já existem dezenas de
+     <i>
+      softwares
+     </i>
+     para essa aplicação disponíveis no mercado (ver, por exemplo, [1], [2], [3], [4] e [5]). A vivência na pesquisa e no ensino de disciplinas experimentais mostra que, em geral, num laboratório, é recomendável que se disponha de um
+     <i>
+      software
+     </i>
+     para análises de dados com as características mínimas apresentadas a seguir.
+    </p>
+    <p>
+    </p>
+    <p>
+     Primeiro, o
+     <i>
+      software
+     </i>
+     deve possibilitar o ajuste de funções, em geral, com a maior quantidade possível de informações sobre a função ajustada, inclusive a sua representação gráfica, se for o caso. Segundo, é desejável que tal
+     <i>
+      software
+     </i>
+     disponha de um menu com cálculos relativos à estatística básica já que, num laboratório, freqüentemente se deseja extrair informações de uma população de dados. Por último, devido ao fato do trabalho experimental muitas vezes envolver medidas, o que implica em incertezas, o
+     <i>
+      software
+     </i>
+     deve, também, conter um menu para cálculos de propagação de erros.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma minuciosa pesquisa na internet possibilita afirmar que, das dezenas de
+     <i>
+      softwares
+     </i>
+     disponíveis no mercado, nenhum deles dispõe, simultaneamente, destes três requisitos. Ao que parece, isto se deve a razões estratégicas de comercialização: ao invés de um, pode-se disponibilizar três
+     <i>
+      softwares
+     </i>
+     distintos, e cobrar por todos eles. Um exemplo que enfatiza esta estratégia pode ser dado através do
+     <i>
+      TableCurve
+     </i>
+     [5], em que o
+     <i>
+      software
+     </i>
+     de regressão não-linear é subdividido em dois, sendo um para ajuste de funções de uma variável independente (
+     <i>
+      TableCurve 2D
+     </i>
+     ) e o outro para funções de duas variáveis independentes (
+     <i>
+      TableCurve 3D
+     </i>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     Este artigo visa a apresentar um
+     <i>
+      software
+     </i>
+     para tratamento de dados experimentais, com versões em inglês e em português, cujo desenvolvimento teve o objetivo de preencher não só as necessidades de seus criadores, como também a lacuna identificada no mercado.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Um breve histórico
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Em 1995 os dois primeiros autores deste artigo iniciaram, com a publicação de um livro sobre tratamento de dados experimentais [6], um trabalho visando ao fortalecimento das disciplinas experimentais oferecidas em sua universidade. No ano de 1996 os mesmos professores disponibilizaram, para os seus alunos, em complementação ao livro publicado, o programa ''Ajuste'', que dispunha de várias ferramentas
+     <span class="ref footnote">
+      <sup class="xref">
+       *1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1*
+        </strong>
+        Ajuste de curvas, estatística básica e propagacão de erros.
+       </span>
+      </span>
+     </span>
+     para o tratamento de dados experimentais. Apesar de ser uma boa ferramenta para os fins a que se destinava, o ''Ajuste'' foi desenvolvido na plataforma DOS, praticamente extinta nos dias atuais. Para tornar o ''Ajuste'' mais simples e amigável, no ano de 1999 os seus autores iniciaram o processo de sua migração para o ambiente Windows e, nessa plataforma, ele passou a se chamar
+     <i>
+      LAB Fit Curve Fitting Software (LAB Fit)
+     </i>
+     [7]. Buscando atingir um público alvo maior que o brasileiro, o
+     <i>
+      software
+     </i>
+     foi lançado em inglês, em agosto de 2002, em vários
+     <i>
+      sites
+     </i>
+     de
+     <i>
+      downloads
+     </i>
+     como, por exemplo,
+     <i>
+      cnet, cnetasia, zdnet, simtel, topshareware, soft32 e newfreeware
+     </i>
+     . Na maioria destes
+     <i>
+      sites
+     </i>
+     o
+     <i>
+      LAB Fit
+     </i>
+     se tornou um dos líderes em número de
+     <i>
+      downloads
+     </i>
+     , em comparação com outros da mesma categoria, estando quase sempre entre os dois ou três primeiros colocados. Apesar do sucesso da versão em inglês (comprovado por milhares de
+     <i>
+      downloads
+     </i>
+     e também pelo crescente número de licenciamentos), os autores sempre recebiam uma reclamação de seus usuários mais próximos: havia uma certa demanda, por parte de uma significativa parcela de seus alunos, por uma versão em português. Para atender a esta demanda, há cerca de um ano foi lançada, também, uma versão em português (V 7.2.14 c) e, neste idioma, o
+     <i>
+      software
+     </i>
+     recebeu o nome LAB Fit Ajuste de Curvas [8].
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Concepções gerais para o desenvolvimento do LAB Fit
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Durante a sua concepção ficou estabelecido que o
+     <i>
+      LAB Fit
+     </i>
+     seria desenvolvido para análise e tratamento de dados experimentais, de forma ampla. Assim, neste
+     <i>
+      software
+     </i>
+     , deveria ser possível:
+    </p>
+    <p>
+    </p>
+    <p>
+     a) tratar dados similares; isto é, determinar o valor médio e a incerteza de um conjunto de leituras de uma mesma quantidade, efetuadas em condições similares. Além disso, o
+     <i>
+      software
+     </i>
+     deveria exibir um histograma referente aos dados tratados. Deveria haver, ainda, uma opção para tratar dois conjuntos de dados simultaneamente calculando, inclusive, a covariância e o coeficiente de correlação entre eles;
+    </p>
+    <p>
+    </p>
+    <p>
+     b) tratar dados não similares; isto é, determinar o valor médio e a incerteza de um conjunto de medidas de uma quantidade, em que cada uma delas é dada pelo seu valor médio e o correspondente desvio padrão;
+    </p>
+    <p>
+    </p>
+    <p>
+     c) determinar erro propagado; isto é, calcular o valor médio e a incerteza de uma função de uma ou de várias variáveis independentes, em que cada uma delas é dada através de seu valor médio e de seu desvio padrão;
+    </p>
+    <p>
+    </p>
+    <p>
+     d) traçar gráficos 2D e 3D de funções estipuladas pelo usuário;
+    </p>
+    <p>
+    </p>
+    <p>
+     e) efetuar cálculos matemáticos tais como: 1) resolver sistema de equações lineares, 2) determinar raízes de função e resolver equação não-linear, 3) calcular integral e derivada de funções de uma variável independente, 4) resolver sistemas de equações diferenciais ordinárias acopladas;
+    </p>
+    <p>
+    </p>
+    <p>
+     f) extrair valores de coordenadas de pontos em gráficos 2D
+    </p>
+    <p>
+    </p>
+    <p>
+     g) ajustar curvas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Quanto ao sétimo requisito, o principal do
+     <i>
+      software
+     </i>
+     , o
+     <i>
+      LAB Fit
+     </i>
+     deveria ter um menu para ajuste de curvas, e os principais programas deste menu usariam regressão não-linear. O
+     <i>
+      LAB Fit
+     </i>
+     deveria ajustar funções de uma e de várias variáveis independentes, admitindo incertezas na variável dependente (Y) e também nas variáveis independentes (X). Em caso de incertezas em X e em Y, seria realizado um pré-ajuste desconsiderando as incertezas em X, que depois seriam transferidas para Y, por propagação de erros. A biblioteca do
+     <i>
+      LAB Fit
+     </i>
+     disponibilizaria mais de 200 funções de uma variável independente e quase 280 funções com duas variáveis independentes, previamente definidas. O usuário disporia, ainda, de um programa que procuraria pelas melhores funções de ajuste, dentre as disponíveis na biblioteca [9]. Haveria, também, uma opção que possibilitasse ao usuário escrever a sua própria função de ajuste, o que levou os criadores do
+     <i>
+      software
+     </i>
+     a desenvolver um avaliador de expressões [10] (''
+     <i>
+      function parser
+     </i>
+     '') específico para a linguagem
+     <i>
+      Fortran
+     </i>
+     , que foi utilizada em todo o pacote de programas que compõem o
+     <i>
+      LAB Fit
+     </i>
+     . Uma vez determinados os parâmetros da função de ajuste, deveria ser possível extrapolar a função ajustada e, para os casos 2D e 3D, o gráfico da função obtida seria mostrado. No caso 2D, o usuário poderia até incluir barras de erro e faixas de confiança e de predição no gráfico a ser traçado.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Fundamentação teórica
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Relembrando que o
+     <i>
+      LAB Fit
+     </i>
+     surgiu em complementação ao livro sobre tratamento de dados escrito pelos dois primeiros autores deste artigo, fica claro que toda a fundamentação teórica e também todas as fórmulas embutidas no pacote têm como suporte a Ref. [6], embora outros autores tivessem sido consultados [11], [12], [13] e [14]. Deve-se observar que o objetivo deste artigo é apenas o de apresentar o
+     <i>
+      software
+     </i>
+     desenvolvido, e não o de discutir de forma profunda a teoria na qual tal
+     <i>
+      software
+     </i>
+     se baseia. Portanto, aqui cabe apenas mencionar que, no
+     <i>
+      LAB Fit
+     </i>
+     , os ajustes de funções são feitos através de regressão não-linear aplicada de forma iterativa, até que um critério de convergência seja atingido (ver, por exemplo, as seções 6.8 e 6.9 do capítulo 6 da Ref. [6]). Como o processo iterativo é muito instável em termos computacionais, o algoritmo de Levenberg-Marquardt [15] foi a opção utilizada para contornar a maioria dos problemas de divergência que ocorrem quando os valores iniciais estipulados pelo usuário não forem muito adequados. O
+     <i>
+      LAB Fit
+     </i>
+     sempre sugere ao usuário o uso do algoritmo de Levenberg-Marquardt, embora o
+     <i>
+      software
+     </i>
+     possibilite não utilizar esta opção.
+    </p>
+    <p>
+    </p>
+    <p>
+     Quanto às ferramentas matemáticas, em todo o
+     <i>
+      LAB Fit
+     </i>
+     , sistemas de equações lineares são resolvidos via tabela LU. Já o cálculo de raízes de uma função, bem como a solução de uma equação não-linear, utiliza o método da bisseção aplicado duas vezes: uma para a função e outra para a sua derivada. A propósito, o cálculo de derivadas, ponto crítico de
+     <i>
+      softwares
+     </i>
+     de ajuste de curvas, é feito diretamente a partir da definição enquanto que integrais são feitas acumulando áreas de trapézios. Já a solução numérica de equações diferenciais ordinárias é feita através do método de Runge-Kutta.
+    </p>
+    <p>
+    </p>
+    <p>
+     Os programas gráficos para representar funções de uma e de duas variáveis independentes tiveram como ponto de partida o estudo sobre o assunto apresentado no VFortran Tutorial [16], que é um tutorial para programação em
+     <i>
+      Fortran
+     </i>
+     95 para Windows, utilizando uma opção de programação denominada ''
+     <i>
+      QuickWin Application
+     </i>
+     ''. As
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 1
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigfig02" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     mostram dois gráficos que foram originalmente traçados no
+     <i>
+      LAB Fit
+     </i>
+     com a largura de 800 pixels e que, depois, foram reduzidos para a largura de 280 pixels com a utilização do
+     <i>
+      software IrfanView
+     </i>
+     [17].
+    </p>
+    <div class="row fig" id="fig01">
+     <a name="fig01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="fig02">
+     <a name="fig02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig02" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A rigor, as
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 1
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigfig02" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     , que foram inicialmente editadas no próprio
+     <i>
+      LAB Fit
+     </i>
+     , deveriam ter sido reeditadas após a redução, reescrevendo-se as escalas e as informações sobre as variáveis, porque tais informações já não são legíveis. Entretanto, como se trata apenas de ilustrações, isto não foi feito.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      5. Alguns exemplos de aplicação do LAB Fit
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para ilustrar algumas situações envolvendo dados experimentais em que o
+     <i>
+      LAB Fit
+     </i>
+     pode ser aplicado, serão mostrados alguns exemplos, também disponíveis no próprio
+     <i>
+      software
+     </i>
+     quando todos os componentes são instalados. Em todos os exemplos será suposto que os erros sistemáticos das leituras sejam desprezíveis, e também que exista um ''valor verdadeiro'' para o resultado do processo de medição.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      5.1. Exemplo de tratamento de dados similares - Amostra não agrupada
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Suponha que tenham sido feitas as leituras indicadas na
+     <a class="open-asset-modal" data-target="#ModalTabletab01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     para o valor de uma grandeza X, e que se deseja extrair informações dessa amostra de dados.
+    </p>
+    <div class="row table" id="tab01">
+     <a name="tab01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTabletab01" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Clicando-se no item ''Dados Similares - Histograma'' do menu ''Tratamento de Dados'' ou então no botão ''Trat'' aparecerá uma caixa de diálogo em que o usuário deve escolher a primeira dentre as três opções disponíveis. Ao clicar no botão ''Novo'' e informar os dados, surge uma nova caixa de diálogo com as informações sobre a amostra, conforme pode ser visto na
+     <a class="open-asset-modal" data-target="#ModalFigfig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig03">
+     <a name="fig03">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig03" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Então, o usuário pode extrair os seguintes resultados finais:
+    </p>
+    <p>
+    </p>
+    <p>
+     com 68,3% de confiança
+    </p>
+    <p>
+    </p>
+    <p>
+     Intervalo de predição das leituras:
+    </p>
+    <p>
+    </p>
+    <p>
+     X
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     = 10,230 ± 0,029
+    </p>
+    <p>
+    </p>
+    <p>
+     Intervalo de confiança do valor verdadeiro:
+    </p>
+    <p>
+    </p>
+    <p>
+     X
+     <sub>
+      <i>
+       V
+      </i>
+     </sub>
+     = 10,230 ± 0,008
+    </p>
+    <p>
+    </p>
+    <p>
+     com 95,4% de confiança
+    </p>
+    <p>
+    </p>
+    <p>
+     Intervalo de predição das leituras:
+    </p>
+    <p>
+    </p>
+    <p>
+     X
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     = 10,23 ± 0,06
+    </p>
+    <p>
+    </p>
+    <p>
+     Intervalo de confiança do valor verdadeiro:
+    </p>
+    <p>
+    </p>
+    <p>
+     X
+     <sub>
+      <i>
+       V
+      </i>
+     </sub>
+     = 10,230 ± 0,017
+    </p>
+    <p>
+    </p>
+    <p>
+     Clicando no botão ''OK'' da caixa mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigfig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     o usuário deve informar como será o histograma que, então, será traçado. No programa
+     <i>
+      Graph2D
+     </i>
+     do
+     <i>
+      LAB Fit
+     </i>
+     , após fornecer as informações sobre o histograma a ser traçado, o usuário pode clicar no menu ''Gráfico'' e depois no item ''
+     <i>
+      Zoom
+     </i>
+     mais'' que o gráfico será desenhado com as dimensões adequadas para uma posterior edição e redução em
+     <i>
+      softwares
+     </i>
+     apropriados como o da Ref. [17]. A
+     <a class="open-asset-modal" data-target="#ModalFigfig04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     mostra um histograma referente à
+     <a class="open-asset-modal" data-target="#ModalTabletab01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig04">
+     <a name="fig04">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig04" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No pacote
+     <i>
+      LAB Fit
+     </i>
+     , versão em português, existem três arquivos de instalação distintos: o do software, propriamente dito, (arquivo chamado ''LABFit_p.zip''), o ''Help.zip'' que instala os arquivos de ajuda e também o ''Exemplos.zip'' em que se pode encontrar exemplos de outras opções disponíveis para tratamento de dados.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      5.2. Exemplo de tratamento de dados não similares
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Suponha que em quatro séries de leituras de uma grandeza X, cada uma delas tratada como foi mostrado no item 5.1, se tenha obtido os resultados finais para o valor verdadeiro da grandeza em cada série, conforme mostra a
+     <a class="open-asset-modal" data-target="#ModalTabletab02" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     .
+    </p>
+    <div class="row table" id="tab02">
+     <a name="tab02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTabletab02" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Então, para extrair um resultado final para o valor da grandeza basta clicar no menu ''Tratamento de Dados'' e depois no item ''Dados não-similares'' ou então no botão ''N S''. Após informar os valores médios e também os desvios padrão correspondentes, obtém-se uma nova média e o seu desvio padrão:
+    </p>
+    <p>
+    </p>
+    <p>
+     X = 9,74 ± 0,14.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      5.3. Exemplo de ajuste de curvas
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O
+     <i>
+      LAB Fit
+     </i>
+     ajusta funções partindo do pressuposto de que se trata de uma função não-linear nos parâmetros, com várias variáveis independentes. Até para uma função linear com apenas uma variável independente, o tratamento dado é o mesmo para o caso mais geral. Aqui serão utilizados, como exemplo, dados típicos da pressão
+     <i>
+      vs.
+     </i>
+     a temperatura de um gás submetido a um aquecimento isocórico, conforme mostra a
+     <a class="open-asset-modal" data-target="#ModalTabletab03" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 3
+     </a>
+     . Tais dados foram obtidos por alunos em um laboratório de Física Experimental I. Outros exemplos, como o ajuste da função logística a um conjunto de dados referentes ao crescimento de raízes de feijão, ou mesmo o ajuste de funções de duas ou mais variáveis independentes, podem ser obtidos diretamente no
+     <i>
+      software
+     </i>
+     .
+    </p>
+    <div class="row table" id="tab03">
+     <a name="tab03">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTabletab03" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para informar os dados, o usuário deve clicar no menu ''Arquivo'' e depois no item ''Novo'' ou então no botão ''Novo'' que surgirá uma caixa de diálogo em que devem ser definidos: a) o número de variáveis independentes, b) quais são as variáveis que têm incertezas e ainda, no caso de ser apenas uma só, c) se a variável independente é ângulo em graus. Uma vez que os dados tenham sido informados, para os caso 2D e 3D a aparência da tela principal do
+     <i>
+      software
+     </i>
+     é modificada, destacando os pontos informados, conforme mostra a
+     <a class="open-asset-modal" data-target="#ModalFigfig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     , para o exemplo referente à
+     <a class="open-asset-modal" data-target="#ModalTabletab03" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig05">
+     <a name="fig05">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig05" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Neste ponto o usuário dispõe de três possibilidades: a) optar por procurar pelas melhores funções da biblioteca que se encaixam nos pontos experimentais [9] (menu ''Ajuste de Curvas'', item ''Ajuste: Achar funções'' ou botão ''Acha''), b) escolher uma função de ajuste na biblioteca do
+     <i>
+      LAB Fit
+     </i>
+     (menu ''Ajuste de Curvas'', item ''Ajuste: funções da biblioteca'' ou botão ''Bibl''), c) escrever a função de ajuste (menu ''Ajuste de Curvas'', item ''Ajuste: funções do usuário'' ou botão ''Usu''). Caso o usuário escolha a primeira opção, o
+     <i>
+      LAB Fit
+     </i>
+     ajustará todas as funções de sua biblioteca aos dados, determinando os melhores modelos através do valor do qui-quadrado reduzido referente a cada ajuste. Caso a decisão do usuário recaia nas duas últimas opções, o ajuste será feito apenas para a função estipulada. Para os dados deste exemplo, a observação da
+     <a class="open-asset-modal" data-target="#ModalFigfig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     e o conhecimento do fenômeno físico [18] sugerem que o modelo adequado seja uma função do primeiro grau:
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm01">
+     <a name="frm01">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/c323cf42b5529cdfab9c0a4b291b1afcfa101a8c.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No
+     <i>
+      LAB Fit
+     </i>
+     , o segundo membro de tal expressão deve ser escrito como A*X+B. Procedendo-se ao ajuste, obtém-se os resultados em uma caixa de diálogo, conforme mostra a
+     <a class="open-asset-modal" data-target="#ModalFigfig06" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig06">
+     <a name="fig06">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig06" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Esta caixa informa que a convergência ocorreu na iteração de número 7 e que o coeficiente de correlação entre y
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     e y(x
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     ) é 0,9945950. Informa, também, o nome do arquivo de dados (zero_abs.txt), a função de ajuste estipulada pelo usuário (Y = A*X+B) e o número de graus de liberdade do ajuste (Gr. Lib = 12). Há, ainda, informações sobre o qui-quadrado (igual a 12) e sobre o qui-quadrado reduzido, que vale 1. Os resultados para os parâmetros de ajuste são:
+    </p>
+    <p>
+    </p>
+    <p>
+     A = 0,236 ± 0,005 e B = 66,24 ± 0,27.
+    </p>
+    <p>
+    </p>
+    <p>
+     Clicando-se no botão ''Detalhes'', várias informações sobre o ajuste são disponibilizadas em um arquivo denominado ''saida.lst'', inclusive a matriz das covariâncias que, neste exemplo, é igual a
+    </p>
+    <p>
+    </p>
+    <p>
+     0,252322E-04 -0,129946E-02
+    </p>
+    <p>
+    </p>
+    <p>
+     -0,129946E-02 0,706124E-01
+    </p>
+    <p>
+    </p>
+    <p>
+     de onde se pode extrair cov(A , B) = -0,129946E-02.
+    </p>
+    <p>
+    </p>
+    <p>
+     O botão ''Rejeição'' possibilita ao usuário identificar os pontos que eventualmente estejam fora da faixa de predição. Já o botão ''Avaliar'' possibilita que sejam determinados o valor médio e a incerteza da função ajustada para valores de x estipulados pelo usuário. Por outro lado, ao clicar no botão ''OK'', o gráfico da função ajustada será traçado, sendo que o usuário pode escolher, via caixa de diálogo, várias características a serem incluídas como, por exemplo, barras de erro, faixas de confiança e de predição, grade, extrapolação e cores. Optando por incluir barras de erro, grade e faixas de confiança e de predição tem-se, para o exemplo apresentado, o gráfico mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig07" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig07">
+     <a name="fig07">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig07" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Um outro recurso disponível no
+     <i>
+      LAB Fit
+     </i>
+     é o da extrapolação da função ajustada. Se a opção pelo gráfico da função ajustada incluísse apenas grade e extrapolação, estipulando-se o intervalo de
+     <i>
+      t
+     </i>
+     de -300,0 C até 71,0 C, o resultado final seria aquele mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig08" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     , que possibilita ao usuário fazer interessantes análises sobre o fenômeno em estudo.
+    </p>
+    <div class="row fig" id="fig08">
+     <a name="fig08">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig08" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      5.4. Propagação de erros
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Supondo que o experimento do item 5.3 tenha por objetivo determinar a temperatura do zero absoluto em graus centígrados, os resultados referentes ao ajuste podem ser usados, após a breve consideração que será feita a seguir. A temperatura do zero absoluto (
+     <i>
+      t
+     </i>
+     <sub>
+      z
+     </sub>
+     ) é aquela em que a energia cinética das moléculas seria igual a zero, o que implicaria na pressão zero exercida pelo gás sobre as paredes do recipiente. Então, da Eq. (1) obtém-se:
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm02">
+     <a name="frm02">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/D44sMcwfXQrm4YQPDN3BZLN/d8031167d898180808fcefe396faf4c9e6aa3789.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Clicando-se no menu ''Tratamento de Dados'' e depois no item ''Propagação de Erros'' (ou no botão ''Prop''), aparecerá uma caixa de diálogo onde o usuário deve selecionar ou escrever a função a ser calculada, indicando as variáveis independentes por X1, X2, e assim por diante. Para a operação indicada na Eq. (2), basta selecionar a função de número quatro, Y = X1/X2, e em seguida clicar no botão ''OK''. Aparecerá, então, uma nova caixa de diálogo com a função selecionada, na qual deve-se acrescentar um sinal de menos. Depois, os valores médios e as incertezas de X1 (=b) e de X2 (=a) devem ser informados. Ao clicar no botão ''OK'' surge uma nova caixa de diálogo para a complementação das informações sobre a matriz das covariâncias, conforme é visto na
+     <a class="open-asset-modal" data-target="#ModalFigfig09" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig09">
+     <a name="fig09">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig09" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Como se sabe, os elementos diagonais desta matriz são dados pelo quadrado das incertezas dos parâmetros (ver, por exemplo, o item 6.6.1 do capítulo 6 da Ref. [6]), que já foram previamente informadas. Assim, na caixa de diálogo da
+     <a class="open-asset-modal" data-target="#ModalFigfig09" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     já aparecem os valores dos elementos diagonais. Então, o usuário deve apenas escrever os elementos não diagonais dessa matriz. Por comodidade, se um elemento não diagonal for igual a zero, ele não precisa ser escrito, o que é interpretado pelo
+     <i>
+      LAB Fit
+     </i>
+     como valor zero. Uma vez informados todos os valores não diagonais diferentes de zero, basta clicar no botão ''OK'' e observar o resultado final conforme mostra a
+     <a class="open-asset-modal" data-target="#ModalFigfig10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig10">
+     <a name="fig10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Então, por propagação de erros, obtém-se o seguinte resultado para o zero absoluto:
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       z
+      </i>
+     </sub>
+     = (-281 ± 7) ºC.
+    </p>
+    <p>
+    </p>
+    <p>
+     Conforme foi mencionado em 5.3, existem várias informações disponíveis no arquivo ''saida.lst'', obtido clicando-se no botão ''Detalhes'' da caixa de diálogo com os resultados do ajuste. Uma destas informações é o fator f pelo qual a incerteza deve ser multiplicada, de forma que o resultado obtido defina um intervalo com probabilidade pré-fixada de ocorrência do valor verdadeiro (ver, por exemplo, o capítulo VI da Ref. [11]). O valor deste fator depende do número de graus de liberdade do ajuste e, no
+     <i>
+      LAB Fit
+     </i>
+     , o seu cálculo pressupõe que os dados tenham uma distribuição normal em torno da função ajustada. Para este exemplo, pré-definindo a probabilidade em 95,4%, o fator vale f(95,4%) = 2,22. Assim, o resultado final para a temperatura do zero absoluto é:
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       z
+      </i>
+     </sub>
+     = (-281 ± 16) ºC, com 95,4% de confiança.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      6. Certificação do LAB Fit e considerações finais
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Os autores do
+     <i>
+      software
+     </i>
+     <i>
+      LAB Fit
+     </i>
+     procuraram por razões objetivas para certificar a qualidade do produto desenvolvido. Uma destas razões seria a abrangência de uso em laboratórios de ensino e de pesquisa. Outra seria a facilidade de uso, que quase dispensa os arquivos de ajuda e de exemplos. Muitas outras razões poderiam ser citadas como, por exemplo, no caso de ajustes, a grande tolerância com valores iniciais ruins. Entretanto, por mais que os autores evidenciassem as virtudes do produto que desenvolveram, poderia ficar a sensação de que os ''elogios'' sobre tal produto fossem tendenciosos, já que talvez não houvesse suficiente isenção acerca das informações prestadas. Conscientes deste risco, os autores procuraram buscar razões que realmente pudessem ser consideradas objetivas e, em certos aspectos, até mesmo inquestionáveis.
+    </p>
+    <p>
+    </p>
+    <p>
+     Felizmente, com relação à certificação de
+     <i>
+      softwares
+     </i>
+     estatísticos, existe um projeto denominado ''
+     <i>
+      Statistical Reference Datasets Project
+     </i>
+     (SRDP)'' [19] do ''
+     <i>
+      National Institute of Standards and Technology
+     </i>
+     (NIST)'' [20], que é o órgão de padronização do governo norte-americano. O SRDP disponibiliza 27 arquivos de dados com as correspondentes funções para a regressão não-linear, juntamente com os resultados certificados. Estes resultados foram obtidos pelo SRDP com os cálculos das derivadas das funções de ajuste feitos através de expressões analíticas, e com precisões acima da dupla precisão normalmente utilizada. Isto significa que, em termos práticos, foi feito um programa específico para a regressão não-linear de cada função de ajuste. Para cada um dos 27 conjuntos de dados, dois conjuntos de valores iniciais distintos são sugeridos. Os conjuntos de dados foram classificados pelo SRDP, segundo o grau de dificuldade na obtenção de resultados corretos, em três categorias: ''
+     <i>
+      lower
+     </i>
+     '' (8 arquivos), ''
+     <i>
+      average
+     </i>
+     '' (11 arquivos) e ''
+     <i>
+      higher
+     </i>
+     '' (8 arquivos).
+    </p>
+    <p>
+    </p>
+    <p>
+     A versão 7.2.31 do
+     <i>
+      LAB Fit
+     </i>
+     (inglês) foi testada e os resultados, detalhados no site do
+     <i>
+      software
+     </i>
+     [7], serão resumidos aqui. Todos os 27 conjuntos de dados, testados com os dois conjuntos de valores iniciais sugeridos, apresentaram resultados estatisticamente idênticos aos apontados pelo SRDP. Este desempenho do
+     <i>
+      LAB Fit
+     </i>
+     pode ser considerado excelente quando comparado com a performance de
+     <i>
+      softwares
+     </i>
+     comerciais importantes como, por exemplo, o NLREG [4] que, segundo o seu autor, não obtém respostas para três dos 27 arquivos, e para outros três a resposta só é satisfatória para um dos dois grupos de valores iniciais sugeridos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Como outros
+     <i>
+      softwares
+     </i>
+     , o
+     <i>
+      LAB Fit
+     </i>
+     é um projeto que vai sendo modificado à medida em que possibilidades de melhoramentos vão sendo detectadas. Muitas das características atuais teve a sua origem através de sugestões de usuários. Atualmente, os autores estão trabalhando para incorporar ao
+     <i>
+      software
+     </i>
+     uma opção para
+     <i>
+      splines
+     </i>
+     e também para dar aos gráficos traçados uma qualidade de publicação, sem a necessidade de muitos artifícios.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma pergunta que poderia ser feita por usuários do
+     <i>
+      LAB Fit
+     </i>
+     e também por leitores deste artigo seria a respeito da possibilidade do desenvolvimento de uma versão do
+     <i>
+      software
+     </i>
+     na plataforma Linux. Isto chegou a ser cogitado mas estudos preliminares descartaram essa necessidade devido ao fato de que já existem programas que viabilizam a execução de softwares desenvolvidos em Windows na plataforma Linux (ver, por exemplo, a Ref. [21]). Assim, a idéia básica é tornar as versões para Windows cada vez mais poderosas porque, deste modo, os usuários das duas plataformas estarão sendo beneficiados.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Agradecimentos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Cláudio G.B. Cavalcanti, Diogo D.P.S. e Silva, Ivomar B. Soares e João A.S. Oliveira agradecem ao CNPq pela bolsa de Iniciação Científica.
+    </p>
+    <p>
+    </p>
+    <p>
+     [9] Embora o critério para definir o melhor ajuste possa ser baseado no valor do coeficiente de correlação entre y
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     e y(x
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     ), o mais utilizado baseia-se no menor qui-quadrado reduzido para a função ajustada, e este é o critério que foi adotado para classificar as melhores funções no
+     <i>
+      LAB Fit
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+     [18] Praticamente todos os livros de Física básica abordam o tema ''aquecimento isocórico'' nos capítulos referentes ao estudo de gases.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <li>
+     <div>
+      Endereço para correspondência
+     </div>
+     <div>
+      Wilton Pereira da Silva
+     </div>
+     <div>
+      E-mail:
+     </div>
+     <div>
+      <a href="mailto:wiltonps@uol.com.br">
+       wiltonps@uol.com.br
+      </a>
+     </div>
+    </li>
+    <p>
+    </p>
+    <p>
+     Recebido em 07/11/2003; Aceito em 18/11/2004
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <li>
+     <span class="xref big">
+      1*
+     </span>
+     <div>
+      Ajuste de curvas, estatística básica e propagacão de erros.
+     </div>
+    </li>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1]
+        <i>
+         Origin Data Analysis and Graphing Software
+        </i>
+        ,    disponível em www.originlab.com    acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [2]
+        <i>
+         SigmaPlot Graphing Software
+        </i>
+        , disponível    em www.sigmaplot.com    acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [3]
+        <i>
+         DataFit - Curve Fitting and Data Plotting
+        </i>
+        , disponível em www.oakdaleengr.com acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [4]
+        <i>
+         NLREG - Nonlinear Regression Analysis Program
+        </i>
+        , disponível em www.nlreg.com acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [5]
+        <i>
+         TableCurve
+        </i>
+        , disponível em www.systat.com    acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] Wilton P. Silva e Cleide M.D.P.S. Silva,
+        <i>
+         Tratamento de Dados Experimentais
+        </i>
+        (Editora Universitária da UFPB,    Joăo Pessoa, 1998), 2Ş ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [7]
+        <i>
+         LAB Fit Curve Fiting Software
+        </i>
+        , disponível    em www.labfit.net acesso    em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [8]
+        <i>
+         LAB Fit Ajuste de Curvas
+        </i>
+        , disponível    em http://zeus.df.ufcg.edu.br/labfit/index_p.htm    acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] Wilton P. Silva e Ivomar B. Soares,
+        <i>
+         Fortran    Function Parser,
+        </i>
+        código aberto disponível em www.extension.hpg.com.br    acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] O.A.M. Helene e V.R. Vanin,
+        <i>
+         Tratamento    Estatístico de Dados em Física Experimental
+        </i>
+        (Editora Edgard Blücher    Ltda, Săo Paulo, 1981), 1Ş ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] José H. Vuolo,
+        <i>
+         Fundamentos da Teoria    de Erros
+        </i>
+        (Editora Edgard Blücher, Săo Paulo, 1992), 1Ş ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] P.R. Bevington, and D.K. Robinson,
+        <i>
+         Data    Reduction and Error Analysis for Physical Sciences
+        </i>
+        (McGraw-Hill, New York,    1992), 2nd ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] J.R. Taylor,
+        <i>
+         An Introduction to Error    Analysis
+        </i>
+        (University Science Books, Sausalito, California, 1997), 2nd ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] William H. Press,
+        <i>
+         et al.
+        </i>
+        ,
+        <i>
+         Numerical    Recipes in Fortran 77
+        </i>
+        , in
+        <i>
+         The Art of Scientific Computing
+        </i>
+        , (Cambridge    University Press, 1996), p. 678-680.
+       </div>
+      </li>
+      <li>
+       <div>
+        [16]
+        <i>
+         VFortran Tutorial -Programação no Visual Studio
+        </i>
+        , disponível em www.extensao.hpg.com.br acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [17]
+        <i>
+         IrfanView
+        </i>
+        , online, download disponível    em http://www.Irfanview.com
+       </div>
+      </li>
+      <li>
+       <div>
+        [19]
+        <i>
+         Statistical Reference Datasets Project
+        </i>
+        , informações em www.nist.gov/itl/div898/strd acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [20]
+        <i>
+         National Institute of Standards and Technology
+        </i>
+        ,    informaçőes em www.nist.gov    acesso em 17/11/2004.
+       </div>
+      </li>
+      <li>
+       <div>
+        [21]
+        <i>
+         Winehq
+        </i>
+        , disponível em www.winehq.com    acesso em 17/11/2004.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <h2>
+    </h2>
+    <div class="ref-list">
+     Endereço para correspondência
+         Wilton Pereira da Silva 
+         E-mail: 
+        
+          wiltonps@uol.com.br
+        
+      
+        1*
+         Ajuste de curvas, estatística básica e propagacão de erros.
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        25 Abr 2005
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Dez 2004
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        18 Nov 2004
+       </li>
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        07 Nov 2003
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

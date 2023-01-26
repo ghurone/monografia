@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Notas e Discussões
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 39 
+                (3)
+   <span class="_separator">
+    •
+   </span>
+   2017
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2017-0001" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2017-0001
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0001">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Oscilador harmônico: Uma análise via séries de Fourier
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Harmonic oscillator: An analysis via Fourier series
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Samuel Rocha de Oliveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:samuel@ime.unicamp.br">
+      samuel@ime.unicamp.br
+     </a>
+     .
+    </div>
+    Matemática Aplicada, Universidade Estadual de Campinas, Cidade Universitária Zeferino Vaz, Barão Geraldo, Campinas, SP, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Mostramos que o método das séries de Fourier para resolver a equação do oscilador harmônico simples foi mal utilizado no artigo “Estados ligados em um potencial delta duplo via transformadas seno e cosseno de Fourier” publicado na Revista Brasileira de Ensino de Física v. 36, n. 2.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     oscilador harmônico; séries de Fourier
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We show that the Fourier series method for the solution of the harmonic oscillator equation was misused in the article “Bound states in a double delta potential via Fourier sine and cosine transforms” published in the Revista Brasileira de Ensino de Física, v. 36, n. 2.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     harmonic oscillator; Fourier series
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Comentário
+    </h1>
+    <p>
+     A ideia apresentada em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] A.S. de Castro, Revista Brasileira de Ensino de Física 36, 2701 (2014).
+       </span>
+      </span>
+     </span>
+     ] é resolver a equação
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m01">
+        <mfrac>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             d
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <mi>
+           x
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             t
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <msup>
+           <mrow>
+            <mi>
+             t
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mo>
+         +
+        </mo>
+        <msubsup>
+         <mrow>
+          <mi>
+           w
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msubsup>
+        <mspace width="0.3em">
+        </mspace>
+        <mi>
+         x
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           t
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     com
+     <math display="inline" id="m02">
+      <msub>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       &gt;
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     usando a série (trigonométrica) de Fourier
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m03">
+        <mi>
+         x
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>
+            a
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+         </mrow>
+         <mn>
+          2
+         </mn>
+        </mfrac>
+        <mo>
+         +
+        </mo>
+        <mstyle displaystyle="true">
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            n
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           ∞
+          </mi>
+         </munderover>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <msub>
+           <mi>
+            a
+           </mi>
+           <mi>
+            n
+           </mi>
+          </msub>
+          <mi>
+           cos
+          </mi>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           n
+          </mi>
+          <mi>
+           w
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mi>
+            b
+           </mi>
+           <mi>
+            n
+           </mi>
+          </msub>
+          <mtext>
+           sen
+          </mtext>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           n
+          </mi>
+          <mi>
+           w
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+          <mo stretchy="false">
+           )
+          </mo>
+          <mo>
+           ,
+          </mo>
+         </mrow>
+        </mstyle>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     para funções periódicas de período
+     <math display="inline" id="m04">
+      <mi>
+       T
+      </mi>
+     </math>
+     em que
+     <math display="inline" id="m05">
+      <mi>
+       w
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       2
+      </mn>
+      <mi>
+       π
+      </mi>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       T
+      </mi>
+     </math>
+     . A substituição de série de Fourier na equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ), assumindo a
+     <b>
+      convergência uniforme
+     </b>
+     para que a diferenciação e o somatório comutem, fornece a seguinte equação:
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m06">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <msubsup>
+            <mi>
+             w
+            </mi>
+            <mn>
+             0
+            </mn>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mfrac>
+            <mrow>
+             <msub>
+              <mi>
+               a
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <mo>
+            +
+           </mo>
+           <mstyle displaystyle="true">
+            <munderover>
+             <mo>
+              ∑
+             </mo>
+             <mrow>
+              <mi>
+               n
+              </mi>
+              <mo>
+               =
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+             <mi>
+              ∞
+             </mi>
+            </munderover>
+            <mrow>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mrow>
+               <msup>
+                <mi>
+                 n
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <msup>
+                <mi>
+                 w
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                −
+               </mo>
+               <msubsup>
+                <mi>
+                 w
+                </mi>
+                <mn>
+                 0
+                </mn>
+                <mn>
+                 2
+                </mn>
+               </msubsup>
+              </mrow>
+              <mo>
+               )
+              </mo>
+             </mrow>
+            </mrow>
+           </mstyle>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mo>
+            ×
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               a
+              </mi>
+              <mi>
+               n
+              </mi>
+             </msub>
+             <mi>
+              cos
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              n
+             </mi>
+             <mi>
+              w
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mi>
+               b
+              </mi>
+              <mi>
+               n
+              </mi>
+             </msub>
+             <mtext>
+              sen
+             </mtext>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              n
+             </mi>
+             <mi>
+              w
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <mn>
+            0.
+           </mn>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em virtude da
+     <b>
+      independência linear
+     </b>
+     das funções constante
+     <math display="inline" id="m07">
+      <msubsup>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msubsup>
+     </math>
+     ,
+     <math display="inline" id="m08">
+      <mo>
+       cos
+      </mo>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <mi>
+         n
+        </mi>
+        <mi>
+         w
+        </mi>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math display="inline" id="m09">
+      <mstyle>
+       <mtext>
+        sen
+       </mtext>
+      </mstyle>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <mi>
+         n
+        </mi>
+        <mi>
+         w
+        </mi>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     ,
+     <math display="inline" id="m10">
+      <mi>
+       n
+      </mi>
+      <mo>
+       ≥
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     , conclui-se que
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m11">
+        <msubsup>
+         <mrow>
+          <mi>
+           w
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msubsup>
+        <msub>
+         <mrow>
+          <mi>
+           a
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ⇒
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           a
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     pois, por hipótese inicial,
+     <math display="inline" id="m12">
+      <msub>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ≠
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , e
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m13">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msup>
+              <mi>
+               n
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <msup>
+              <mi>
+               w
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              −
+             </mo>
+             <msubsup>
+              <mi>
+               w
+              </mi>
+              <mn>
+               0
+              </mn>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <msub>
+            <mi>
+             a
+            </mi>
+            <mi>
+             n
+            </mi>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msup>
+              <mi>
+               n
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <msup>
+              <mi>
+               w
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              −
+             </mo>
+             <msubsup>
+              <mi>
+               w
+              </mi>
+              <mn>
+               0
+              </mn>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <msub>
+            <mi>
+             b
+            </mi>
+            <mi>
+             n
+            </mi>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mi>
+            n
+           </mi>
+           <mo>
+            ≥
+           </mo>
+           <mn>
+            1.
+           </mn>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O artigo chegou à primeira conclusão com um argumento inconsistente com o método e se precipitou em afirmar
+     <math display="inline" id="m14">
+      <msup>
+       <mrow>
+        <mi>
+         n
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+      <msup>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+      <mo>
+       -
+      </mo>
+      <msubsup>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msubsup>
+     </math>
+     ,
+     <math display="inline" id="m15">
+      <mi>
+       n
+      </mi>
+      <mo>
+       ≥
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     sem levar em consideração que essa equação fixa um único valor para
+     <math display="inline" id="m16">
+      <mi>
+       n
+      </mi>
+      <mi>
+       w
+      </mi>
+     </math>
+     , pois
+     <math display="inline" id="m17">
+      <msub>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     na equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) é uma constante dada. A solução correta é como segue. Para
+     <math display="inline" id="m18">
+      <mi>
+       n
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       ñ
+      </mi>
+     </math>
+     se obtém que
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m19">
+        <msup>
+         <mrow>
+          <mi>
+           ñ
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <msup>
+         <mrow>
+          <mi>
+           w
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         =
+        </mo>
+        <msubsup>
+         <mrow>
+          <mi>
+           w
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msubsup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo
+     <math display="inline" id="m20">
+      <msub>
+       <mrow>
+        <mi>
+         a
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         ñ
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m21">
+      <msub>
+       <mrow>
+        <mi>
+         b
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         ñ
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     arbitrárias, digamos
+     <math display="inline" id="m22">
+      <msub>
+       <mrow>
+        <mi>
+         a
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         ñ
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       A
+      </mi>
+     </math>
+     e
+     <math display="inline" id="m23">
+      <msub>
+       <mrow>
+        <mi>
+         b
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         ñ
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       B
+      </mi>
+     </math>
+     . Por outro lado, para
+     <math display="inline" id="m24">
+      <mi>
+       n
+      </mi>
+      <mo>
+       ≠
+      </mo>
+      <mi>
+       ñ
+      </mi>
+     </math>
+     se obtém
+     <math display="inline" id="m25">
+      <msub>
+       <mrow>
+        <mi>
+         a
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         n
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     e
+     <math display="inline" id="m26">
+      <msub>
+       <mrow>
+        <mi>
+         b
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         n
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     . E assim a solução da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) é
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m27">
+        <mi>
+         x
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           t
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mi>
+         A
+        </mi>
+        <mi>
+         cos
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             w
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+          <mi>
+           t
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         +
+        </mo>
+        <mi>
+         B
+        </mi>
+        <mstyle>
+         <mtext>
+          sen
+         </mtext>
+        </mstyle>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             w
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+          <mi>
+           t
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        A.S. de Castro, Revista Brasileira de Ensino de Física
+        <b>
+         36
+        </b>
+        , 2701 (2014).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        02 Jan 2017
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        03 Fev 2017
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        03 Fev 2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

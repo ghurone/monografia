@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 35 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2013
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172013000200023" target="_blank">
+    https://doi.org/10.1590/S1806-11172013000200023
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172013000200023">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Desenvolvimento de um periodímetro microcontrolado para aplicações em física experimental
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Development of a microcontrolled periodmeter for experimental physics applications
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     José Carlos Andrades
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Centro Federal de Educação Tecnológica Celso Suckow da Fonseca,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Aridio Schiappacassa
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Centro Federal de Educação Tecnológica Celso Suckow da Fonseca,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Péricles Freire dos Santos
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Centro Federal de Educação Tecnológica Celso Suckow da Fonseca,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Nesse trabalho é apresentado o desenvolvimento de um sistema de baixo custo para medidas de intervalo de tempo, baseado em um microcontrolador PIC. Este periodímetro permite aplicações em variados experimentos de física, substituindo os cronômetros de acionamento manual, por exemplo, que introduzem desvios nas medidas devido ao tempo de reação humana. Selecionou-se a medida do período de oscilação de um pêndulo como exemplo de aplicação. Obteve-se uma boa concordância dos dados experimentais com o modelo teórico de cálculo do período em função do comprimento do pêndulo. Além disso, atingiu-se o objetivo principal, que é o de apresentar uma proposta básica e flexível que - por meio da troca do sensor Hall utilizado por um de outro tipo, bem como da alteração da linguagem de programação empregada - permite variadas adaptações em aulas de física que podem atender ao ensino médio, à graduação ou à iniciação científica.
+    </p>
+    <p>
+     periodímetro; PIC; pêndulo; sensor Hall
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The development of a PIC microcontrollerbased and low-cost system for time measurements is presented in this work. This periodmeter allows applications in many physics experiments, replacing stop watches, for instance, which cause imprecision due to human reaction time. The measurement of a pendulum's period was chosen as an application example. A high degree of agreement was achieved between the experimental data and the theoretical model that shows how the period is changed according to the length of the pendulum. Also, the main goal has been reached: the presentation of a basic and flexible proposal that allows many adaptations in physics classes, by replacing the Hall sensor used in this experiment by another type or by changing the programming language. This is appropriate for high school level, undergraduate level courses, or for the scientific initiation programs.
+    </p>
+    <p>
+     periodmeter; PIC; pendulum; Hall sensor
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      DESENVOLVIMENTO EM ENISNO DE FÍSICA
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Desenvolvimento de um periodímetro microcontrolado para aplicações em física experimental
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Development of a microcontrolled periodmeter for experimental physics applications
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     José Carlos AndradesI,
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: 
+        andrades.jose7@gmail.com.
+       </span>
+      </span>
+     </span>
+     ; Aridio Schiappacassa; Péricles Freire dos Santos
+    </p>
+    <p>
+    </p>
+    <p>
+     Centro Federal de Educação Tecnológica Celso Suckow da Fonseca, Rio de Janeiro, RJ, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Nesse trabalho é apresentado o desenvolvimento de um sistema de baixo custo para medidas de intervalo de tempo, baseado em um microcontrolador PIC. Este periodímetro permite aplicações em variados experimentos de física, substituindo os cronômetros de acionamento manual, por exemplo, que introduzem desvios nas medidas devido ao tempo de reação humana. Selecionou-se a medida do período de oscilação de um pêndulo como exemplo de aplicação. Obteve-se uma boa concordância dos dados experimentais com o modelo teórico de cálculo do período em função do comprimento do pêndulo. Além disso, atingiu-se o objetivo principal, que é o de apresentar uma proposta básica e flexível que - por meio da troca do sensor Hall utilizado por um de outro tipo, bem como da alteração da linguagem de programação empregada - permite variadas adaptações em aulas de física que podem atender ao ensino médio, à graduação ou à iniciação científica.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     periodímetro, PIC, pêndulo, sensor Hall.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     The development of a PIC microcontrollerbased and low-cost system for time measurements is presented in this work. This periodmeter allows applications in many physics experiments, replacing stop watches, for instance, which cause imprecision due to human reaction time. The measurement of a pendulum's period was chosen as an application example. A high degree of agreement was achieved between the experimental data and the theoretical model that shows how the period is changed according to the length of the pendulum. Also, the main goal has been reached: the presentation of a basic and flexible proposal that allows many adaptations in physics classes, by replacing the Hall sensor used in this experiment by another type or by changing the programming language. This is appropriate for high school level, undergraduate level courses, or for the scientific initiation programs.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     periodmeter, PIC, pendulum, Hall sensor.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Tempo é uma grandeza básica da física e, por ser um conceito primitivo, sua medida é de crucial importância na caracterização de variados fenômenos físicos e na medida indireta de grandezas derivadas como a velocidade ou a aceleração. Partindo dessa premissa é apresentado neste artigo o processo de desenvolvimento do hardware e do software de um sistema que segue a linha de outros trabalhos que propõem soluções alternativas para medidas de intervalo de tempo e/ou frequência em física experimental [1-7].
+    </p>
+    <p>
+    </p>
+    <p>
+     Na presente proposta, tem-se um sistema simples e de baixo custo baseado em um microcontrolador da família PIC, o qual substitui cronômetros de acionamento manual, que tipicamente introduzem maiores desvios nas medidas devido ao tempo de reação humana.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para maior objetivação do projeto foi selecionado como exemplo de aplicação a medida do período de oscilação de um pêndulo simples. As oscilações deste tipo de pêndulo representam um dos casos mais simples de movimento periódico, tendo sido o primeiro princípio mecânico aplicado à medida de intervalos de tempo mais curtos e com mais precisão, desde os tempos de Galileu [4, 8, 9], além do fato de a abordagem do pêndulo poder ser empregada em diferentes níveis e ser a base em quase todas as aulas de introdução ao laboratório de física [4, 7, 10, 11].
+    </p>
+    <p>
+    </p>
+    <p>
+     Apesar de sua simplicidade, os pêndulos em suas variadas formas têm sido um tema de grande importância, não somente no desenvolvimento de ferramentas matemáticas, mas também no provimento de uma rica estrutura teórica na qual uma variedade de fenômenos naturais pode ser compreendida [10, 12, 14]. Mesmo nos dias de hoje, nos problemas das pesquisas de vanguarda, uma das primeiras tentativas consiste em se tentar modelar o fenômeno em termos do oscilador harmônico, caso em que se situa o pêndulo simples [11, 13]. Em geral o modelo do oscilador permite o conhecimento do fenômeno envolvido numa primeira abordagem e depois se acrescentam correções para níveis mais elevados. Caso não funcione, alternativas são buscadas [14]. Assim, trata-se de um interessante modelo para ser utilizado como referencial básico para calibrações, análises, controles ou medições de variadas grandezas físicas, como medida da aceleração da gravidade, medida e controle de velocidade, testes de modelos teóricos, simulações de movimento harmônico simples e movimento circular uniforme, dentre outras aplicações.
+    </p>
+    <p>
+    </p>
+    <p>
+     É um instigante desafio interdisciplinar integrar conceitos aparentemente distantes como a mecânica de um pêndulo simples e os modernos circuitos elétricos [15] ou eletrônicos programáveis aplicados à medida de tempo. O isocronismo dos osciladores e os procedimentos para medidas de tempo são os elementos comuns que integram os temas. O medidor do período de um pêndulo é apenas um objeto de estudo para enfatizar as possibilidades de aplicações e estabelecer procedimentos experimentais a partir do projeto de um periodímetro genérico, que é o cerne deste trabalho. Além do mais, diferentes tipos de sensores podem ser empregados e estudados e variadas linguagens de programação podem ser utilizadas no desenvolvimento dos softwares, permitindo a utilização do sistema em diversificados temas de aulas de física no ensino médio, na graduação ou mesmo em iniciação científica.
+    </p>
+    <p>
+    </p>
+    <p>
+     É regularmente comum o uso de sensores ópticos em trabalhos do gênero [2-4, 6, 13, 16], bem como de sensores de posição ou movimento [7, 11, 17] sensores do tipo acelerômetro - no caso de ensaios de impacto (pêndulos de impacto) [18] - ou mesmo transdutores de ultrassom [10]. Optou-se, na presente proposta, pelo uso de um sensor de efeito Hall chaveado por um magneto preso ao pêndulo, para dar mais um exemplo da variedade de opções de estudo. Além disso, com esse tipo de sensor, investigações de grandezas magnéticas que atuam sobre um pêndulo magnético podem ser idealizadas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Escolheu-se o PIC 16F628A para executar o software do controle do sistema. Este atende à aplicação proposta e é um tipo de microcontrolador de uso bastante comum, de fácil obtenção no mercado e de custo baixo.
+    </p>
+    <p>
+    </p>
+    <p>
+     A linguagem de programação BASIC, por ser bastante didática e simples, foi adotada, permitindo uma rápida implementação do sistema até por pessoas leigas em programação. O resultado da medida é exibido em um display LCD alfanumérico, tornando o sistema portátil. Além disso, soluções com o PC também podem ser pensadas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Portanto, este trabalho inscreve-se no âmbito de estudos que se interessam pelos processos de pesquisa, desenvolvimento e difusão de tecnologias educacionais modernas e interdisciplinares, visando ao aumento da eficácia em aulas experimentais de física em laboratórios que não dispõem de recursos mais sofisticados [3, 4, 6, 7, 10, 11, 19, 20] e buscando colocar sempre o aluno no centro do processo educacional para fins de construção do conhecimento e da motivação [3, 16, 19, 21, 22].
+    </p>
+    <p>
+    </p>
+    <p>
+     Microcontroladores apresentam, de forma geral, uma boa relação custo-benefício na área de instrumentação programável de terceira ou quarta geração [23] e a quantidade de artigos técnico-científicos que aborda este tema tem sido crescente nos últimos anos, segundo a base de dados do
+     <i>
+      Institute for Scientific Information
+     </i>
+     (ISI).
+    </p>
+    <p>
+    </p>
+    <p>
+     O professor poderá implementar o sistema aqui proposto e usá-lo simplesmente como instrumento de medida de períodos, ou desenvolver todo um projeto de programação de microcontroladores com seus alunos a partir de sua concepção básica, experimentando variadas linguagens de programação, testando outros tipos de sensores ou adaptando o programa do periodímetro para a medida de outras grandezas físicas derivadas.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Descrição do método
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.1. A Montagem do pêndulo e do sensor
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O pêndulo usado neste experimento é constituído de uma chumbada de pesca de 175 g suspensa por dois fios leves de nylon formando um "V''. A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     mostra esta construção, onde foi usada uma tábua de madeira de 40 cm x 20 cm como base e duas hastes paralelas foram a ela fixadas para sustentar o fio em "V''. Um sensor de efeito Hall é posicionado na parte mais baixa da oscilação de forma a detectar a passagem do prumo por esta posição. Isto é viabilizado pelo campo magnético gerado por um ímã fixado à chumbada. A construção em "V'' permite que a massa da chumbada permaneça estável no mesmo plano enquanto oscila, permitindo que a chave Hall seja acionada na ida e desligada na volta da oscilação Esta configuração em "V'' é muita utilizada nos sistemas com sensores [4, 17] para que a estabilidade do sistema seja mantida. Outra solução é usar uma haste rígida no lugar do fio flexível.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Figura 1 -
+     <i>
+      Setup
+     </i>
+     do periodímetro microcontrolado.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     deixa mais claro como é realizado o movimento do pêndulo frente ao sensor Hall.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      - Movimento do pêndulo.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     as setas indicam a direção do movimento do pêndulo frente ao sensor.
+    </p>
+    <p>
+    </p>
+    <p>
+     O fio é enrolado em um eixo que permite o ajuste da altura do pêndulo, e o sensor é colocado numa base que pode deslizar ao longo de uma das hastes de forma a acompanhar a mudança da altura do peso. Este arranjo possibilita que o professor e seus alunos possam fazer um gráfico que evidencie o período de oscilação medido em função da altura do pêndulo. Este processo permite validar a medida feita pelo instrumento projetado por meio da comparação com o modelo teórico.
+    </p>
+    <p>
+    </p>
+    <p>
+     Nos experimentos realizados, o erro percentual obtido permaneceu numa faixa de 0,5% a 1,5%, dependendo mais da estabilidade mecânica e dos processos de medida de altura do que do processo eletrônico. Este trabalho descreve apenas os procedimentos para desenvolver o hardware e o software, ficando a validação da medida a cargo de cada montador, até porque se trata da proposta de um periodímetro genérico que pode ser usado com vários tipos de sensores ou diferentes
+     <i>
+      setups
+     </i>
+     para testes.
+    </p>
+    <p>
+    </p>
+    <p>
+     Existem sensores Hall que produzem uma ddp proporcional ao campo aplicado, permitindo, dentre outras aplicações, a medida de correntes sem contato. O sensor utilizado neste experimento, entretanto, é uma chave que é acionada pela presença de um campo magnético de aproximadamente 140 gauss, dependendo da temperatura, conforme informações do
+     <i>
+      datasheet
+     </i>
+     do componente utilizado (SS41 da Honeywell). Este valor está coerente com o campo gerado por um pequeno ímã, tal como o utilizado na experiência.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     mostra os detalhes do sensor. Em (a), o aspecto físico do componente: um dispositivo semicondutor de três terminais. Em (b), tem-se a disposição dos pinos, onde, olhando-se o componente de frente - tal como aparece em (a) - vê-se que o pino da esquerda corresponde ao terminal positivo de alimentação, cujo valor pode variar de 4,5 V a 24 V. No caso deste experimento, adotou-se uma alimentação de 5 V, para manter a compatibilidade com a tensão de alimentação do microcontrolador PIC utilizado. O pino do meio é o terminal de massa, e o da direita é a saída. Essa última, como esclarece o esquema da estrutura interna exibido em (c), é uma saída em coletor aberto. Assim, para se obter o nível adequado de sinal de saída quando a chave for ativada por um campo magnético externo (caso em que o transistor entrará em corte), deve-se ligar um resistor de elevação (
+     <i>
+      pull up
+     </i>
+     ). Foi usado um valor de 12 kΩ, como esquematizado em (b).
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      - Detalhes da chave Hall SS41 da Honeywell.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A chave é acionada com determinada polaridade de campo magnético. O transistor entra em corte, e a saída passa para nível alto (5 V). Quando a polaridade desse campo é invertida, a chave é desligada (o transistor satura, e a saída vai para nível baixo). Mantendo-se o ímã na posição lateral mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , a chave é acionada na passagem de ida e desligada na volta.
+    </p>
+    <p>
+    </p>
+    <p>
+     O microcontrolador foi programado para ativar o TIMER 1 - que é um de seus contadores internos - a cada bordo de subida recebido na sua entrada de interrupção do modo
+     <i>
+      capture
+     </i>
+     . Isto permite determinar o intervalo de tempo entre dois eventos -no caso, dois bordos de subida -, determinando, assim, o período de oscilação.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     mostra a visão superior da montagem do periodímetro, feita numa placa de circuito impresso universal. Um LED de cor azul foi ligado em série com a chave, e acende no instante em que o transistor da mesma satura. Isto indica uma transição do nível alto para o nível baixo (bordo de descida).
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      - Visão superior da montagem.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O LED verde indica apenas que a fonte foi ligada.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     esquematiza as conexões elétricas de entrada (sensor) e saída (display LCD 16 x 2 com
+     <i>
+      back light
+     </i>
+     ) com o PIC 16F628A. São todos componentes de fácil aquisição e de baixo custo. O programa foi feito para que o display mostre os valores de período diretamente em milissegundos, como é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      - Conexões de entrada e saída do PIC.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      - Aspecto da leitura no LCD.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Uma fonte de alimentação de 5 V é requerida. No caso do experimento, projetou-se uma fonte com retificação de onda completa em ponte, a qual utilizou um transformador de 110 V/12 V. A corrente do transformador é de 500 mA, valor mais que suficiente para aplicação requerida. A tensão de 5 V foi obtida na saída com um regulador de tensão 7805 (
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      - Esquema da fonte de alimentação.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2. Considerações práticas para a medição
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2.1. Considerações gerais
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Um procedimento que traz maior facilidade de medida em métodos tradicionais de determinação do período de um pêndulo, quando se usa cronômetros, é iniciar a medida quando o prumo passa pelo ponto mais baixo da oscilação. A razão disso é que esse é o ponto de maior velocidade e é mais fácil de identificar, quando começar e quando parar a medição. Na montagem proposta, é o ponto onde o sensor Hall está posicionado, mas, no caso da medida eletrônica, não há esta preocupação de início/fim da medição, visto que ela é feita automaticamente. Entretanto, é uma consideração útil para comparar a medida manual com a medida eletrônica.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma massa de maior valor aplicada ao pêndulo também é desejável, porque, além de manter o fio mais esticado, também faz o pêndulo real se aproximar mais do modelo do pêndulo simples.
+    </p>
+    <p>
+    </p>
+    <p>
+     O período real (pêndulo físico) depende do momento de inércia, sendo o pêndulo simples apenas uma idealização em que a massa está toda concentrada em um ponto. Embora o periodímetro meça períodos de qualquer amplitude - para fins de simplificação da confrontação com o modelo teórico -, a experiência permaneceu dentro do domínio de validade do pêndulo simples, com um ângulo máximo de 10°. Isto implica uma amplitude de oscilação entre aproximadamente 1,4 cm (para uma altura de 9,0 cm) e 2,4 cm (para uma altura de 16,0 cm), de acordo com o esquema da
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      - Cálculo do ângulo do pêndulo.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No caso do experimento, com a montagem do pêndulo em "V'', a altura (h) será medida pela vertical que passa pela reta que une os dois pivôs e pelo centro de massa do pêndulo, como é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      - Altura do pêndulo e determinação do centro de massa.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Quanto maior o comprimento do pêndulo (altura "h''), maior o período de oscilação e, consequentemente, menor o erro relativo na medida do período.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2.2. Determinação do centro de massa
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Existem alguns procedimentos algébricos e geométricos para a determinação do centro de massa. No caso deste experimento, entretanto, optou-se por um procedimento mais prático.
+    </p>
+    <p>
+    </p>
+    <p>
+     Inicialmente, arbitrou-se uma posição aproximada do centro de massa e mediu-se a altura com uma régua milimetrada. Uma vez constatado que o período de oscilação medido pelo equipamento tinha uma boa aproximação do valor teórico esperado, realizou-se o procedimento inverso: a partir do valor do período medido, calculou-se a altura, determinando-se, assim, a posição do centro de massa, a qual foi utilizada para as medidas subsequentes
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2.3. Considerações sobre as fontes de erro
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     São listadas a seguir as fontes de erros detectadas no caso do experimento proposto neste projeto:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       fricção no ponto de suspensão, que faz o período oscilar de uma oscilação para outra. A fricção é diretamente proporcional à velocidade e à amplitude de oscilação;
+      </p>
+     </li>
+     <li>
+      <p>
+       correntes de ar;
+      </p>
+     </li>
+     <li>
+      <p>
+       rotação do peso do pêndulo, ou seja, oscilações não planares;
+      </p>
+     </li>
+     <li>
+      <p>
+       não linearidade característica do pêndulo real, ou seja, maior diferença entreθ e senθ;
+      </p>
+     </li>
+     <li>
+      <p>
+       inexatidões de temporização, devido às características do instrumental utilizado (precisão do
+      </p>
+      <p>
+       <i>
+        clock
+       </i>
+       , precisão das variáveis de programa, resolução do medidor etc.).
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.3. Princípio conceitual do processo de medição
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A ideia básica aplicada a este projeto é a de um
+     <i>
+      contador de eventos
+     </i>
+     . Neste, podem ser aplicados dois princípios: ou se determinam quantos pulsos ou transições do mensurando ocorreram dentro de um intervalo de tempo padrão (chamado
+     <i>
+      base de tempo
+     </i>
+     ), ou, então, se determina diretamente o tempo transcorrido entre as duas transições do evento. O primeiro modo é chamado
+     <i>
+      modo frequencímetro
+     </i>
+     . O segundo é chamado
+     <i>
+      modo periodímetro
+     </i>
+     [5], método este que permite medidas mais precisas quando se trata de sinais de baixa frequência, como é o caso do pêndulo do experimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     O modo periodímetro permite leituras mais precisas em sinais de baixa frequência, devido à sua elevada
+     <i>
+      resolução
+     </i>
+     [5]. A resolução é outro fator que limita a confiança da medida, sendo definida como "a menor variação da grandeza medida que causa uma variação perceptível na indicação correspondente'' [24]. Como exemplo, são comuns em cronômetros digitais resoluções da ordem de centésimos de segundo [25], o que significa que o
+     <i>
+      display
+     </i>
+     exibe dois dígitos após o ponto decimal, indicando variações de 0,01 segundo. Variações abaixo deste valor não são detectadas, e o
+     <i>
+      display
+     </i>
+     permanece exibindo o mesmo número que exibia antes da variação.
+    </p>
+    <p>
+    </p>
+    <p>
+     Conclui-se que, de forma generalizada, nos medidores de intervalos de tempo, quanto mais pulsos forem contados dentro do intervalo de tempo pré-estabelecido, maior será a resolução, maior a quantidade de dígitos e, consequentemente, maior a precisão.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Algoritmo e desenvolvimento dos programas
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O algoritmo utilizado como referência para programar o periodímetro microcontrolado segue o princípio conceitual explicado anteriormente. Para se determinar o intervalo de tempo entre dois eventos - que no caso serão duas transições de subida geradas pelo acionamento da chave Hall-, devem-se contar quantos pulsos são produzidos por um oscilador de referência e multiplicar este valor pelo período deste oscilador
+    </p>
+    <p>
+    </p>
+    <p>
+     Para escrever o programa do microcontrolador, utilizou-se o compilador
+     <i>
+      mikrobasic pro for pic
+     </i>
+     versão 3.2, em sua versão gratuita, limitada a 2 Kwords, obtenível no site
+     <a href="http://www.mikroe.com" target="_blank">
+      www.mikroe.com
+     </a>
+     . Para gravação do PIC, usou-se o programa
+     <i>
+      IC-PROG
+     </i>
+     , obtenível no site
+     <a href="http://www.ic-prog.com" target="_blank">
+      www.ic-prog.com
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     No caso do microcontrolador PIC 16F628A, usou-se o modo
+     <i>
+      capture
+     </i>
+     do módulo CCP
+     <i>
+      (Capture/Compare/PWM
+     </i>
+     ), no qual o TIMER1 ( contador / temporizador de 16 bits) é utilizado para medir o tempo entre dois eventos ocorridos no pino 9 deste microcontrolador (RB3/CCP1). Estas e outras informações são obtidas no
+     <i>
+      datasheet
+     </i>
+     do microcontrolador PIC 16F628A, que é um PIC de 8 bits para aplicações de nível médio (
+     <i>
+      mid-range ou mid-level
+     </i>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     O registrador CCP1CON, de uso específico para a configuração do módulo CCP, permite quatro opções para a contagem do TIMER1:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Contagem em cada bordo de descida (
+      </p>
+      <p>
+       <i>
+        prescaler
+       </i>
+       de 1:1);
+      </p>
+     </li>
+     <li>
+      <p>
+       Contagem em cada bordo de subida (
+      </p>
+      <p>
+       <i>
+        prescaler
+       </i>
+       de 1:1;
+      </p>
+     </li>
+     <li>
+      <p>
+       Contagem em cada 4 bordos de subida (
+      </p>
+      <p>
+       <i>
+        prescaler
+       </i>
+       de 1:4);
+      </p>
+     </li>
+     <li>
+      <p>
+       Contagem em cada 16 bordos de subida (
+      </p>
+      <p>
+       <i>
+        prescaler
+       </i>
+       de 1:16)
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     Como a frequência obtida pelos cristais utilizados no
+     <i>
+      clock
+     </i>
+     é muito elevada (na faixa de MHz), faz-se o uso de divisores de frequência, denominados
+     <i>
+      prescaler
+     </i>
+     , que permitem a obtenção de medidas com vários alcances e várias precisões. Quanto maior a divisão de frequência, maior o período obtido na base de tempo e consequentemente maior a precisão da medida. Entretanto, este procedimento não será adequado no caso do pêndulo, como será explicado a seguir.
+    </p>
+    <p>
+    </p>
+    <p>
+     Cada vez que o evento programado ocorrer no pino CCP1, que deve estar programado como
+     <i>
+      entrada
+     </i>
+     , os valores de TMR1L (parte baixa do TIMER1) e TMR1H (parte alta do TIMER1) são transferidos para os registradores CCPR1L e CCPR1H, respectivamente.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para o procedimento de contagem de tempo entre eventos, utilizou-se o recurso de
+     <i>
+      interrupção
+     </i>
+     do microcontrolador. Interrupções são utilizadas em vários programas de microcontroladores, para responder a determinadas mudanças que ocorrem em periféricos dos mesmos [26]. Como o nome sugere, a interrupção serve para interromper o processamento da CPU imediatamente, podendo-se criar respostas específicas para aquela interrupção em particular. Assim, quando uma interrupção ocorre, o programa é paralisado e desviado para uma sub-rotina específica de tratamento definida pelo programador. Depois, o programa passa a ser executado do ponto onde parou. As interrupções são muito rápidas, pois são tratadas diretamente pelo hardware
+    </p>
+    <p>
+    </p>
+    <p>
+     O PIC 16F628A possui várias fontes de interrupção. Para o programa do experimento, foram utilizadas duas fontes de interrupção: interrupção de CCP e interrupção do TIMER1
+    </p>
+    <p>
+    </p>
+    <p>
+     A ideia básica do projeto é: quando o ímã preso ao pêndulo passar em frente ao sensor Hall, será gerada uma transição de subida no pino RB3/CCP1, o que deve gerar uma interrupção para o microcontrolador. Assim, a interrupção associada ao evento
+     <i>
+      capture
+     </i>
+     foi habilitada, de forma que a geração de um bordo de subida no pino CCP1 chama uma sub-rotina específica para o tratamento desta interrupção, em que o intervalo de tempo entre as duas ocorrências é calculado adequadamente. O TIMER1 é zerado no início do processo pelo programa, ou seja, na primeira transição de subida gerada no pino RB3/CCP1. Assim, o valor que ele contiver no segundo bordo de subida será o número de pulsos de
+     <i>
+      clock
+     </i>
+     ocorridos neste intervalo de tempo (
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     )
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      - Valores capturados pelo TIMER 1 na ocorrência entre eventos.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Como já citado, este valor do TIMER1 é transferido para o registro CCPR1, assim que o evento ocorre. No programa em BASIC do experimento, uma variável denominada "cont'' irá receber este valor. Como o TIMER1 é um registro de 16 bits, sua faixa de funcionamento é de 0 a 65535 (2
+     <sup>
+      16
+     </sup>
+     = 65536), retornando a zero assim que ele atinge este valor máximo. Este processo é chamado de
+     <i>
+      estouro
+     </i>
+     ou
+     <i>
+      overflow
+     </i>
+     e, neste instante, caso a interrupção desse
+     <i>
+      timer
+     </i>
+     esteja habilitada, ocorre uma interrupção. Interrupções pelo
+     <i>
+      timer
+     </i>
+     são muito utilizadas para a contagem de tempo. Esta última fica muito precisa, pois a interrupção pode ocorrer a qualquer momento. Não há necessidade de constantes análises durante a execução do programa para garantir que o tempo seja contado.
+    </p>
+    <p>
+    </p>
+    <p>
+     Multiplicando-se o conteúdo do TIMER1 no segundo evento (0xXXXX) pelo valor do período do
+     <i>
+      clock
+     </i>
+     , obtém-se o intervalo de tempo entre os dois eventos. Como o
+     <i>
+      clock
+     </i>
+     interno corresponde a 1/4 do
+     <i>
+      clock
+     </i>
+     externo, tem-se: 4 MHz (frequência escolhida para o
+     <i>
+      clock
+     </i>
+     ) dividido por 4, resultando em 1 MHz ou um período de 1 µs.
+    </p>
+    <p>
+    </p>
+    <p>
+     Entretanto, para longos períodos entre eventos- como é o caso do período do pêndulo- vários estouros do TIMER1 podem ocorrer. Portanto, é necessário conhecer a quantidade de estouros do TIMER1 para se calcular adequadamente o tempo. Com um
+     <i>
+      prescaler
+     </i>
+     de 1:1 e um período de
+     <i>
+      clock
+     </i>
+     de 1 µs, o TIMER1 levará 65536 µs para estourar. Para se conseguir um tempo maior e também maior precisão na medida, pode-se utilizar um
+     <i>
+      prescaler
+     </i>
+     maior. Utilizou-se o maior disponível, que é de 1:8, o que significa que o tempo de estouro será de 65536 x 8 µs = 524,288 ms. Para fins de pré-teste, fez-se um programa em mikrobasic para piscar um LED por interrupção do TIMER1 e
+     <i>
+      prescaler
+     </i>
+     de 1:8. O valor medido por um osciloscópio conectado à porta correspondente do LED, com uma base de tempo de 0,1 s/DIV, foi de 530 ± 10 µs - tomando-se para erro metade da menor divisão da escala -, o que está perfeitamente condizente com o modelo teórico.
+    </p>
+    <p>
+    </p>
+    <p>
+     O intervalo de tempo entre eventos é o produto do número de pulsos da base de tempo ocorridos pelo valor do
+     <i>
+      prescaler
+     </i>
+     , dividido pela frequência do
+     <i>
+      clock
+     </i>
+     - que aparece dividida por quatro. Portanto:
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="3d0e9a5f4ec536da4539f54bd398fff8b4c3dc48">
+     <a name="3d0e9a5f4ec536da4539f54bd398fff8b4c3dc48">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg3d0e9a5f4ec536da4539f54bd398fff8b4c3dc48" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/m9ryVzDgTbF9NNbjMVVdWjR/3d0e9a5f4ec536da4539f54bd398fff8b4c3dc48.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde "ov'' é a variável que armazena a quantidade de estouros
+     <i>
+      (overflow
+     </i>
+     ) do TIMER1; "cont'' é a variável que armazena a captura da contagem do TIMER1; 4 MHz é a frequência do
+     <i>
+      clock
+     </i>
+     - poderia ser um
+     <i>
+      clock
+     </i>
+     externo a cristal, mas, por facilidade de montagem e teste, optou-se pelo
+     <i>
+      clock
+     </i>
+     interno, que é de mesmo valor e também é dividido por 4; 8 é o valor do
+     <i>
+      prescaler
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Como a Eq, (1) já corresponde ao período do pêndulo - pois corresponde a duas passagens do ímã no mesmo sentido-, basta dividir este valor por 1000, para se obter o valor diretamente em ms. Assim, se obtém
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="ca4942b066a4a9f14a77190e5df6b376ad758c6d">
+     <a name="ca4942b066a4a9f14a77190e5df6b376ad758c6d">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgca4942b066a4a9f14a77190e5df6b376ad758c6d" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/m9ryVzDgTbF9NNbjMVVdWjR/ca4942b066a4a9f14a77190e5df6b376ad758c6d.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde "tempo'' é a variável que armazena o período de oscilação do pêndulo
+    </p>
+    <p>
+    </p>
+    <p>
+     Como a variável "cont'' é do tipo "Word'' (inteiro positivo de 16 bits) - para armazenar os 16 bits do TIMER1-, ela definirá a resolução da medida em 1 ms
+    </p>
+    <p>
+    </p>
+    <p>
+     Como já citado, o modo CCP utiliza quatro formas de contagem para o TIMER1. O processo está esquematizado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     . No caso da interrupção CCP, usar um
+     <i>
+      prescaler
+     </i>
+     de 1:1 significa que, a cada bordo de subida, será gerada uma interrupção, como no exemplo anterior. Assim, na primeira passagem do ímã pelo sensor, será gerado um bordo de subida, dando início ao processo de contagem. Na segunda passagem, ou seja, durante o retorno, é gerado um bordo de descida. A contagem do TIMER1 só será interrompida no bordo de subida seguinte
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Figura 11 - Diagrama em blocos da operação do modo
+     <i>
+      capture
+     </i>
+     . Fonte: microchip.
+    </p>
+    <p>
+    </p>
+    <p>
+     O
+     <i>
+      prescaler
+     </i>
+     de 1:16 do CCP poderia ser usado para uma maior resolução, e, consequentemente, uma maior precisão na medida, pois isto daria uma resolução efetiva correspondente ao período do
+     <i>
+      clock
+     </i>
+     interno dividido por 16. Neste caso, somente após 16 oscilações completas do pêndulo, seria calculado o tempo e registrado o valor. Entretanto, este procedimento é recomendado somente para freqüências estáveis na entrada, o que não ocorre no caso do pêndulo, particularmente nas primeiras oscilações, como foi explicado na seção 2.2.3, referente às fontes de erro. O Apêndice 1 mostra todo o algoritmo utilizado para a programação do microcontrolador na forma de fluxograma. Em (a), tem-se a parte principal do programa (
+     <i>
+      main
+     </i>
+     ). Em (b), tem-se a sub-rotina de interrupção. O PIC 16F628A não possui interrupções de alta prioridade e baixa prioridade, como os PICs da família 18XX. Entretanto, é possível trabalhar com duas interrupções, bastando fazer um teste no mikrobasic para saber qual interrupção ocorreu [27]. O Apêndice 2 mostra todo o programa em mikrobasic
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Discussão e conclusões
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Este trabalho apresentou o desenvolvimento do hardware e do software de um periodímetro genérico de baixo custo para aplicações em aulas de física experimental. A medida do período de um pêndulo é apenas uma dentre um grande número de aplicações que podem ser experimentadas. No caso deste experimento em particular, as maiores fontes de erro são sistemáticas, sendo a mais significativa dada pela medida do comprimento do pêndulo, a qual pode ser feita por uma régua milimetrada ou por outro instrumento eletrônico de precisão. O desvio em relação ao instrumento "régua milimetrada'' é de apenas 0,05 cm; porém o desvio da medição é maior devido à localização estimada do centro de massa, à inconstância da posição do pêndulo na armação em "V'' e à determinação da horizontal que passa pelos pivôs. A altura limitada do pêndulo é outro fator que compromete a confiança da medida, pois quanto maior o comprimento do pêndulo, maior é o período e mais precisa a leitura se torna.
+    </p>
+    <p>
+    </p>
+    <p>
+     A precisão do instrumento de medida foi confirmada com medidas de período da forma de onda gerada pelo TIMER1 do microcontrolador em um osciloscópio, constatando-se compatibilidade com os valores teóricos previstos, com um desvio de ± 10 µs devido à limitação imposta pela base de tempo utilizada no osciloscópio (0,1 s/divisão). Limitações são determinadas pela frequência do
+     <i>
+      clock
+     </i>
+     do microcontrolador (4 MHz ± 1%, segundo o fabricante) e pela resolução da leitura, determinada inclusive pelo tipo de variável usado no programa.
+    </p>
+    <p>
+    </p>
+    <p>
+     Este é um experimento no qual são esperadas flutuações no valor do mensurando, devido às características de construção do pêndulo; portanto os erros percentuais observados não caracterizam um fator definitivo no erro de medição.
+    </p>
+    <p>
+    </p>
+    <p>
+     Instrumentos inteligentes, baseados em microprocessadores, microcontroladores ou implementados virtualmente em computadores pessoais vêm substituindo gradativamente a instrumentação convencional com vantagens [23]. No caso do experimento proposto neste projeto, muitas adaptações podem ser feitas para a medida de outras grandezas físicas. O uso de um sensor magnético de efeito Hall tem vantagens na investigação de grandezas magnéticas, caso em que se poderia construir um pêndulo magnético e observar a influência de campos magnéticos sobre os mesmos. Poderia se investigar, inclusive, o efeito de campos magnéticos produzidos por supercondutores.
+    </p>
+    <p>
+    </p>
+    <p>
+     Há certa dificuldade de fixação do ímã ao peso do pêndulo, o que afeta inclusive a localização do centro de massa. O uso de sensores ópticos deve minimizar estes problemas. Esses sensores são mais práticos até mesmo para medidas de outras grandezas (como a velocidade) e seu consequente uso em experimentos de queda livre de corpos. Este procedimento ficaria dificultado com a chave Hall utilizada, havendo a necessidade de pelo menos dois sensores para a determinação da velocidade.
+    </p>
+    <p>
+    </p>
+    <p>
+     A principal vantagem do periodímetro digital é, sem dúvida, a leitura automática de valores, evitando o tempo de reação humana para a marcação do início e do fim da medição que usa cronômetros manuais Esses tempos são tipicamente menores que 100 ms, atingindo os piores casos tempos pouco maiores que 700 ms [25].
+    </p>
+    <p>
+    </p>
+    <p>
+     A partir do hardware e do software aqui propostos, o professor poderá desenvolver e aprimorar inúmeros projetos e experimentos com seus alunos, atendendo a variados níveis de ensino.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      5. Agradecimentos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Os autores agradecem a Pablo Diniz Batista pelas primeiras idéias e sugestões para este projeto a Ademarlaudo França Barbosa (
+     <i>
+      in memoriam
+     </i>
+     ) pela leitura crítica da versão preliminar deste artigo, pelas observações sempre pertinentes e pelos incentivos constantes; e a Cássio Leite Vieira e Vera Lucia Esteves De Almeida pelas revisões finais de texto e pelo
+     <i>
+      abstract
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 9/6/2012
+    </p>
+    <p>
+    </p>
+    <p>
+     Aceito em 2/2/2013
+    </p>
+    <p>
+    </p>
+    <p>
+     Publicado em 15/5/2013
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <li>
+     <span class="xref big">
+      1
+     </span>
+     <div>
+      E-mail:
+     </div>
+     <div>
+      <a href="mailto:andrades.jose7@gmail.com">
+       andrades.jose7@gmail.com
+      </a>
+      .
+     </div>
+    </li>
+    <p>
+    </p>
+    <p>
+     <b>
+      Apêndice
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1 - Fluxograma do programa
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     - (a) Programa principal; (b) Sub-rotina de interrupção.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      2 - Programa em mikrobasic
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     program periodimetro
+    </p>
+    <p>
+    </p>
+    <p>
+     ' Conexões do módulo LCD
+    </p>
+    <p>
+    </p>
+    <p>
+     dim LCD_RS as sbit at RB2_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_EN as sbit at RB1_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D4 as sbit at RB7_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D5 as sbit at RB6_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D6 as sbit at RB5_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D7 as sbit at RB4_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_RS_Direction as sbit at TRISB2_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_EN_Direction as sbit at TRISB1_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D4_Direction as sbit at TRISB7_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D5_Direction as sbit at TRISB6_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D6_Direction as sbit at TRISB5_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     LCD_D7_Direction as sbit at TRISB4_bit
+    </p>
+    <p>
+    </p>
+    <p>
+     ' Fim das conexões do módulo LCD
+    </p>
+    <p>
+    </p>
+    <p>
+     'Declaração das variáveis
+    </p>
+    <p>
+    </p>
+    <p>
+     dim ov as longword 'Armazena o numero de estouros (overflow) do TIMER1)
+    </p>
+    <p>
+    </p>
+    <p>
+     tempo as longword 'Armazena o intervalo de tempo entre eventos
+    </p>
+    <p>
+    </p>
+    <p>
+     tempo_txt as char[16] 'variável tempo no formato string para o display
+    </p>
+    <p>
+    </p>
+    <p>
+     cont as word 'Armazena a contagem do TIMER1
+    </p>
+    <p>
+    </p>
+    <p>
+     evento as bit 'Informa se é o primeiro bordo de subida ou não
+    </p>
+    <p>
+    </p>
+    <p>
+     sub procedure interrupt 'Subrotina de tratamento das interrupções
+    </p>
+    <div>
+     <blockquote>
+      <div>
+       <blockquote>
+        <p>
+         if pir1.ccp1if then 'Se ocorreu interrupção do módulo CCP (ímã)
+        </p>
+        <p>
+         if not evento then 'Se é o primeiro bordo de subida (evento = 0)
+        </p>
+        <p>
+         ov=0 'zera contagem de overflows do TIMER1
+        </p>
+        <p>
+         TMR1L=0 'zera a parte baixa do TIMER1
+        </p>
+        <p>
+         TMR1H=0 'zera a parte alta do TIMER1
+        </p>
+        <p>
+         cont=0 'zera a variável que armazena o conteúdo do TIMER1
+        </p>
+        <p>
+         evento=1 'seta a variável evento
+        </p>
+        <p>
+         pir1.ccp1if=0 'zera o flag de interrupção do modo CCP
+        </p>
+        <p>
+         t1con.tmr1on=1 'liga o TIMER1
+        </p>
+        <p>
+         else 'se não é primeiro bordo de subida (evento = 1)
+        </p>
+        <p>
+         t1con.tmr1on=0 'desliga TMR1
+        </p>
+        <p>
+         cont=ccpr1 'transfere o valor do registro CCPR1 para a variável cont
+        </p>
+        <p>
+         tempo=(65536*ov+cont)/125 'calcula o tempo decorrido
+        </p>
+        <p>
+         evento=0 'zera a variável evento
+        </p>
+        <p>
+         pir1.ccp1if=0 'zera o flag de interrupção do modo CCP
+        </p>
+        <p>
+         end if
+        </p>
+       </blockquote>
+      </div>
+      <p>
+       else
+      </p>
+      <div>
+       <blockquote>
+        <p>
+         if pir1.tmr1if then 'Se ocorreu interrupção por estouro do TIMER1
+        </p>
+        <p>
+         ov=ov+1 'incrementa a variável que armazena o número de estouros
+        </p>
+        <p>
+         pir1.tmr1if=0 'zera o flag de interrupção de estouro do TIMER1
+        </p>
+        <p>
+         end if
+        </p>
+       </blockquote>
+      </div>
+      <p>
+       end if
+      </p>
+     </blockquote>
+    </div>
+    <p>
+    </p>
+    <p>
+     end sub 'fim da sub-rotina de tratamento das interrupções
+    </p>
+    <p>
+    </p>
+    <p>
+     main: 'rotina principal
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       TMR1L=0 'zera a parte baixa do TIMER1
+      </p>
+      <p>
+       TMR1H=0 'zera a parte alta do TIMER1
+      </p>
+      <p>
+       ov=0 'zera contagem de overflows do TIMER1
+      </p>
+      <p>
+       tempo=0 'zera o valor da variável tempo
+      </p>
+      <p>
+       evento=0 'zera a variável evento
+      </p>
+      <p>
+       T1CON=%00110000 'desliga timer1, seta clock interno, prescaler 1:8
+      </p>
+      <p>
+       CCP1CON= %00000101 'Liga capture com bordo de subida e prescaler de 1:1
+      </p>
+      <p>
+       LCD_INIT 'inicialização do display LCD
+      </p>
+      <p>
+       Lcd_Cmd(_LCD_CURSOR_OFF) 'desliga o cursor
+      </p>
+      <p>
+       Lcd_Cmd(_LCD_CLEAR) 'limpa o display
+      </p>
+      <p>
+       LCD_OUT(1,1,"TEMPO EM ms:") 'envia mensagem para linha 1, coluna 1
+      </p>
+      <p>
+       LCD_OUT(2,1,"0") 'envia mensagem para linha 2, coluna 1
+      </p>
+      <p>
+       PIE1.CCP1IE=1 'habilita interrupção pelo modo capture
+      </p>
+      <p>
+       PIE1.TMR1IE=1 'habilita interrupção por estouro do TIMER1
+      </p>
+      <p>
+       INTCON.PEIE=1 'habilita interrupção de periféricos
+      </p>
+      <p>
+       INTCON.GIE=1 'habilita interrupção global
+      </p>
+      <p>
+       TRISB=%00001000 'Define RB3/CCP1 como entrada e as demais como saída
+      </p>
+     </blockquote>
+    </div>
+    <p>
+    </p>
+    <p>
+     LCD: delay_ms(100) 'atraso de 100 milissegundos
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       longwordtostr(tempo,tempo_txt) 'converte a variável tempo para string
+      </p>
+      <p>
+       Lcd_Out(1,1,"TEMPO EM ms:") 'Escreve texto na linha 1, coluna 1
+      </p>
+      <p>
+       LCD_OUT(2,1,tempo_txt) 'escreve o valor de tempo na linha 2, coluna 1
+      </p>
+      <p>
+       GOTO LCD 'repete os passos até ocorrer uma interrupção
+      </p>
+     </blockquote>
+    </div>
+    <p>
+    </p>
+    <p>
+     END.
+    </p>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] R. Hessel e    A.C. Perinotto, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4502    (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] A.J. Palangana    e P.R.B. Pedreira, Revista Brasileira de Ensino de Física
+        <b>
+         17
+        </b>
+        ,    215 (1995).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] G. Dionisio    e W.C. MAgno, Revista Brasileira de Ensino de Física
+        <b>
+         29
+        </b>
+        , 287 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] Y. Kostov
+        <i>
+         et    al.
+        </i>
+        American Journal of Physics
+        <b>
+         76
+        </b>
+        , 956 (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] J.J. González,    M. Sanmartín and F.J. González,
+        <i>
+         Frecuencímetro Electrónico    Virtual de Precisión con Ajuste Automático del Modo de Operación
+        </i>
+        Grupo de Investigación en Instrumentación Electrónica Aplicada    y Técnicas de Formación Universidad de Cádiz disponível    em http://www2.uca.es/grup-invest/instrument_electro/Publicaciones/Frecvir.PDF    Acesso em 23/2/2013.
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] M.F.O. Fernandes
+        <i>
+         Desenvolvimento de um Contador e/ou Frequencímetro Microcontrolado
+        </i>
+        Relatório final de atividades, Instituto de Física Gleb Wataghin,    Campinas, 2009.
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] E.J. Salumbides
+        <i>
+         et al.
+        </i>
+        American Journal of Physics
+        <b>
+         70
+        </b>
+        , 868 (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] H.M. Nussenzveig,
+        <i>
+         Curso de Física Básica
+        </i>
+        v. 1 -
+        <i>
+         Mecânica
+        </i>
+        (São    Paulo, Edgard Blücher, 1981) p. 29.
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] K. Watari,
+        <i>
+         Mecânica Clássica
+        </i>
+        v. 1 (Editora Livraria da Física,    São Paulo, 2004) p 18-19.
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] F.J. Arnold
+        <i>
+         et al.
+        </i>
+        Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4311    (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] R.D. Peters,
+        <i>
+         Study of Simple Harmonic Oscillator Resonance Using a Compact Kater Pendulum
+        </i>
+        (Physics Department, Mercer University, 2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] C. Gauld Science    &amp; Education
+        <b>
+         13
+        </b>
+        , 811 (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] Harvard Instructional    Physics Labs
+        <i>
+         The Pendulum
+        </i>
+        Laboratory 1, Physics
+        <b>
+         15c
+        </b>
+        ; REV 0. January    31, (2007) Disponível em http://www.fas.harvard.edu/$sim$scphys/courses/15c/15c_1.pdf    Acesso em 23/2/2013.
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] R.S. Kaushal,    Indian Journal of Pure &amp; Applies Physics
+        <b>
+         43
+        </b>
+        , 479 (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] F.N. Rodrigues    and J.J.F. Sousa, in:
+        <i>
+         XVI Simpósio Nacional de Ensino de Física
+        </i>
+        - SNEF 2005, Rio de Janeiro.
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] Heriot-Watt    University
+        <i>
+         Advanced Higher Physics Investigation
+        </i>
+        -
+        <i>
+         Student Handbook
+        </i>
+        Department of Physics School of Engineering and Physical Sciences Disponível    em http://physicskyle.files.wordpress.com/2011/06/ah-physics-investigation1.pdf.    Acesso em 23/2/2013.
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] Pasco disponível em http://www.csun.edu/science/courses/646/assignments/probeware-docs/13%20SHM%20pendulum%20SV.pdf. Acesso em 23/2/2013.
+        <br/>
+        <a href="http://http://www.csun.edu/science/courses/646/assignments/probeware-docs/13%20SHM%20pendulum%20SV.pdf" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] S.M. Martins    e S.E. Lucena, in:
+        <i>
+         XVII Congresso Brasileiro de Engenharia e Ciência    dos Materiais
+        </i>
+        - CBECIMat 2006, Foz do Iguaçu, 2006.
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] J.S. Figueira,    Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4403 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20] M.A. Cavalcante
+        <i>
+         ET AL
+        </i>
+        , Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4503    (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] C.E. Laburu    and A.M.P. Carvalho, Revista Brasileira de Ensino de Física
+        <b>
+         17
+        </b>
+        ,    243 (1995).
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] A.A.S. Brito,    Revista Brasileira de Ensino de Física
+        <b>
+         1
+        </b>
+        , 14, (1979).
+       </div>
+      </li>
+      <li>
+       <div>
+        [23] J.M.D. Pereira    e P.S. Girão Revista da Ordem dos Engenheiros
+        <b>
+         28
+        </b>
+        , 69 (1998).
+       </div>
+      </li>
+      <li>
+       <div>
+        [24] Brasil
+        <i>
+         Vocabulário Internacional de Metrologia
+        </i>
+        -
+        <i>
+         Conceitos Fundamentais e Gerais e Termos Associados - 4º edição do VIM
+        </i>
+        (INMETRO Rio de Janeiro, 2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [25] J.C. Gust,    R.M. Graham and M.A. Lombardi, National Institute of Standards and Technology    - NIST. Special Publication
+        <b>
+         960-12
+        </b>
+        , January (2009). Disponível    em http://tf.nist.gov/general/pdf/2281.pdf.    Acesso em 23/2/2010.
+        <br/>
+        <a href="http://http://tf.nist.gov/general/pdf/2281.pdf" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [26] M. Verle,
+        <i>
+         Pic Microcontrollers - Programming in BASIC
+        </i>
+        Mikroelektronika. Disponível    em http://www.mikroe.com/eng/products/view/476/pic-microcontrollersprogramming-in-basic/.    Acesso em 23/2/2013.
+       </div>
+      </li>
+      <li>
+       <div>
+        [27] Mikroelektronika
+        <i>
+         MikroBASIC PRO for PIC
+        </i>
+        Mikroelektronika, (2009) http://www.mikroe.com/eng/downloads/get/37/mikrobasic_pic_pro_manual_v101.pdf    Acesso em 23/2/2013.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <h2>
+    </h2>
+    <div class="ref-list">
+     1
+         E-mail: 
+        andrades.jose7@gmail.com.
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        05 Jul 2013
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Jun 2013
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        09 Jun 2012
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        02 Fev 2013
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

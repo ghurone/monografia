@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 39 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2017
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2016-0287" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2016-0287
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0287">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Desenvolvimento de um kit experimental com Arduino para o ensino de Física Moderna no Ensino Médio
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Development of an experimental Arduino kit for teaching Modern Physics in High School
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Sérgio Silveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Mestrado Profissional em Ensino de Física, Coordenadoria Especial de Física, Química e Matemática, Universidade Federal de Santa Catarina, Araranguá, SC, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Mauricio Girardi
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:mauricio.girardi@ufsc.br">
+      mauricio.girardi@ufsc.br
+     </a>
+     .
+    </div>
+    Coordenadoria Especial de Física, Química e Matemática, Universidade Federal de Santa Catarina, Araranguá, SC, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste artigo descrevemos a construção e funcionamento de um kit experimental de baixo custo para demonstrar o efeito fotoelétrico. Para isso, utilizamos a plataforma Arduino para o controle e interfaceamento com o computador, bem como um pico-amperímetro com amplificador operacional de alto ganho e impedância. Uma interface gráfica para computadores e dispositivos móveis foi desenvolvido a fim de controlar o experimento e exibir os dados obtidos em tempo real. São também apresentadas as aplicações do kit no estudo do efeito termiônico e da condutividade elétrica do plasma.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Física Moderna; efeito fotoelétrico e termiônico; Arduino; Ensino Médio
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In the present article we describe the construction and operation of a low cost experimental kit to demonstrate the photoelectric effect. In this way, we employed the Arduino platform for control and computer interfacing as well as a picoammeter with a high gain and impedance op-amp. A graphic interface for computers and mobile devices was also developed in order to control the hardware and to display, in real time, the experimental data. We also present the application of the same kit for studying the thermionic effect and the electric conductivity of plasma.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Modern Physics; photoelectric and thermionic effects; plasma; Arduino; high school
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Mesmo após 110 anos da produção dos artigos de Einstein [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] I.C. Moreira, Física na Escola 6, 4 (2005).
+       </span>
+      </span>
+     </span>
+     ] que revolucionaram a Física no início do século XX e, de certa forma, deram início à Física Moderna e Contemporânea (FMC), a introdução de seus conceitos no Ensino Médio (EM), continua incipiente. Poucos são os livros didáticos de EM que dão destaque ao tema, ficando, na maioria dos casos, relegado aos capítulos finais do livro do terceiro ano ou a pequenas inserções nos livros de primeiro e segundo anos. Essa mesma realidade já era relatada por Terrazan [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E.A. Terrazan, Cad. Cat. Ens. Fis. 9, 209 (1992).
+       </span>
+      </span>
+     </span>
+     ], quando este cita que os livros de física utilizados no Brasil ainda se baseavam nos “manuais estrangeiros de ensino de física utilizados no século passado” - neste caso, o século XIX. Tais textos limitavam-se à divisão clássica da Física em Mecânica, Física Térmica, Ondas, Óptica e Eletromagnetismo. Atualmente é possível encontrar, com frequência, tópicos de FMC em livros destinados ao ensino da Física [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] L. Dominguini, J.R. Maximiano e L. Cardoso, in: IX ANPED Sul - Seminário de Pesquisa em Educação da Região Sul, Caxias do Sul, 2012.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A FMC foi consolidada no período entre o final do século XIX e a primeira metade do século XX [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] I.C. Moreira, Física na Escola 6, 4 (2005).
+       </span>
+      </span>
+     </span>
+     ], período este que foi palco de uma revolução que mudou a forma de interpretar o mundo físico. Foram então estabelecidas as bases teóricas da Relatividade e da Física Quântica. Assim que se tornou mais fundamentado, tal conhecimento começou a ser transposto aos diferentes níveis de ensino, obtendo maior inserção nos níveis universitários.
+    </p>
+    <p>
+     As discussões sobre a introdução de tópicos de FMC no EM atravessaram a virada do século. Surgiram então inúmeros trabalhos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E.A. Terrazan, Cad. Cat. Ens. Fis. 9, 209 (1992).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] F. Caruso e N. de Freitas, Cad. Bras. Ens. Fis. 26, 355 (2009).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] E.C. Valadares e A.M. Moreira, Cad. Cat. Ens. Fis. 15, 121 (1998).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] F. Ostermann e C.J.H. Cavalcanti, Cad. Cat. Ens. Fis. 16, 267 (1999).
+       </span>
+      </span>
+     </span>
+     ] sugerindo a introdução de conteúdos pontuais e específicos no currículo médio. O presente artigo busca contribuir com esse processo através de uma abordagem experimental [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] C. Chesman, C. André e A. Macêdo, Física Moderna Experimental e Aplicada (Editora Livraria da Física, São Paulo, 2004).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] I.S. Oliveira, Física Moderna para Iniciado, Interessados e Aficionados (Editora Livraria da Física, São Paulo, 2009).
+       </span>
+      </span>
+     </span>
+     ] do efeito fotoelétrico.
+    </p>
+    <p>
+     Todavia, a adoção de tal abordagem esbarra, muitas vezes, na falta de materiais nos laboratórios das escolas públicas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] F.F. de Oliveira, D.M. Vianna e R.S. Gerbassi, Rev. Bras. Ens. Fis. 29, 447 (2007).
+       </span>
+      </span>
+     </span>
+     ]. Na maioria delas, estaduais principalmente, verifica-se a existência de espaços destinados aos laboratórios didáticos, mas geralmente equipados apenas com os itens mais básicos, ligados ao estudo de Física Clássica, Química e Biologia. Equipamentos mais elaborados ou destinados à experimentação em Física Moderna (aquela com impacto mais profundo nos avanços tecnológicos do último século) são quase inexistentes, muitas vezes devido ao seu alto custo. Por outro lado todas as escolas têm computadores em laboratórios de informática que são utilizados, na maioria dos casos, apenas para pesquisas bibliográficas na internet, sendo assim subutilizados. Muitos destes computadores poderiam ser alocados para o uso no laboratório de física, em simulações ou experimentos com coleta automática de dados.
+    </p>
+    <p>
+     Muitos trabalhos demonstram que é possível a integração entre o computador e a atividade didática experimental. As primeiras delas utilizavam o computador no controle do experimento através de interfaces conectadas com a porta paralela [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] D. Fagundes, J. Sartori, T. Catunda e L.A.O. Nunes, Rev. Bras. Ens. Fis. 17, 196 (1995).
+       </span>
+      </span>
+     </span>
+     ] ou porta de jogos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] C.E. Aguiar e F. Laudares, Rev. Bras. Ens. Fis. 23, 371 (2001).
+       </span>
+      </span>
+     </span>
+     ]. Haag, Araújo e Veit [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] R. Haag, I.S. Araujo e E.A. Veit, Física na Escola 6, 69 (2005).
+       </span>
+      </span>
+     </span>
+     ] citam motivos para o uso da aquisição automática de dados e elencam uma série de propostas e sugestões de uso das interfaces disponíveis nos computadores da época. As propostas mais atuais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fis. 33, 4503 (2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] J.T. Guaitolini, G.S. Ramos, S.L. da Silva e A.C. Gama, Cad. Bras. Ens. Fis. 33, 619 (2016).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] R.F. de Rodrigues e S.L.S. Cunha, Textos de Apoio ao Professor de Física 25, 1 (2014).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] G. Fetzner, in: Experimentos de Baixo Custo para o Ensino de Física em Nível Médio Usando a Placa Arduino-Uno. Tese de Mestrado, UFRGS, 2015.
+       </span>
+      </span>
+     </span>
+     ] têm dado preferência ao uso da porta serial (USB) conectada a kits experimentais controlados por microcontroladores que manipulam os sensores e se comunicam com o computador. Aqui o computador passa a enviar comandos e receber dados do microcontrolador. Os dados recebidos são tratados e exibidos, em tempo real, em interfaces gráficas que também servem de instrumento de interatividade da pessoa com o experimento pois, é nelas que controlamos quais comandos serão enviados ao microcontrolador.
+    </p>
+    <p>
+     Atualmente existem inúmeras plataformas de desenvolvimento baseadas em microcontroladores, tais como Galileo da Intel, os PICs da Microchip e o mais popular entre os usuários, o Atmega 328P, que compõe a plataforma Arduino Uno [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] Página oficial do Arduino: https://www.arduino.cc.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc" target="_blank">
+        https://www.arduino.cc...
+       </a>
+      </span>
+     </span>
+     ] desenvolvida na Itália em 2005. Tais plataformas são usadas na automação de diversos projetos e são apropriadas à coleta automática de dados e ao controle de experimentos didáticos.
+    </p>
+    <p>
+     Em particular, a plataforma Arduino apresenta baixíssimo custo ($2,5 dólares por unidade) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] Página oficial do Arduino: https://www.arduino.cc.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc" target="_blank">
+        https://www.arduino.cc...
+       </a>
+      </span>
+     </span>
+     ], programação relativamente fácil, versatilidade e grande quantidade de informações disponíveis na rede mundial, seja na página oficial, seja em fóruns, com os mais variados temas.
+    </p>
+    <p>
+     Assim, a ideia deste trabalho vem em resposta à necessidade de equipar os laboratórios de física para a experimentação em Física Moderna que, ao mesmo tempo, motive os alunos através de interfaces interativas. Para isso propõem-se uma abordagem diferenciada do tradicional com um experimento de baixo custo, acessível à maioria dos profissionais e escolas da rede pública. Um experimento interativo que faz uso de uma plataforma de desenvolvimento aliada a uma interface gráfica familiar aos estudantes do Ensino Médio, integrado com as modernas tecnologias, em que os próprios alunos manipulam o objeto de aprendizagem.
+    </p>
+    <p>
+     O presente artigo está dividido da seguinte forma: na seção 2 apresentamos os detalhes da montagem e funcionamento do dispositivo juntamente com os diagramas de cada circuito. Na seção 3 exibimos a aplicação do kit no estudo do efeito fotoelétrico e indicamos a possibilidade de uso para demonstração do efeito termiônico e da condutividade elétrica do plasma. Por fim, na seção 4 apresentamos as conclusões e perspectivas.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. O sistema desenvolvido
+    </h1>
+    <p>
+     O dispositivo desenvolvido no presente trabalho é composto, como dito anteriormente, por um kit interativo e uma interface gráfica cujo funcionamento é discutido a seguir.
+    </p>
+    <h2>
+     2.1. O fotoduino
+    </h2>
+    <p>
+     O kit experimental aqui denominado FOTODUINO (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ) consiste em um conjunto de lâmpadas, grade e placa (de ferro zincado ou zinco) e um dispositivo eletrônico de comunicação e controle desenvolvido com base na plataforma de desenvolvimento Arduino, utilizado para demonstrar qualitativamente o efeito fotoelétrico.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Kit FOTODUINO.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O conjunto das lâmpadas foi montado com LEDs comuns integrados em uma caixa metálica. A luz ultravioleta necessária ao experimento com o efeito fotoelétrico foi produzida por uma pequena lâmpada UV (lâmpada de mercúrio de catodo frio) utilizada em esterilizadores de escovas dentais. A vantagem desta lâmpada em relação às utilizadas em experimentos comerciais é a sua baixa potência (que a torna mais segura), tamanho e acionamento simples.
+    </p>
+    <p>
+     O dispositivo eletrônico de controle montado em uma caixa metálica, consiste de picoamperímetro, uma fonte de alta tensão e um circuito de acionamento para as lâmpadas, todos controlados por um Arduino que também tem como função a comunicação com o microcomputador. A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     mostra o diagrama de blocos do aparato experimental para demonstração do efeito fotoelétrico.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Diagrama esquemático do experimento.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A corrente fotoelétrica surge quando a luz incide sobre a superfície metálica da placa e elétrons são ejetados e acelerados pelo campo elétrico entre a grade e a placa. Porém, o fenômeno só ocorre a partir de uma frequência mínima (abaixo de determinado comprimento de onda) que depende do material da superfície metálica.
+    </p>
+    <p>
+     O kit FOTODUINO aqui apresentado é composto de 5 blocos principais:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       O amperímetro;
+      </p>
+     </li>
+     <li>
+      <p>
+       Fonte de alta tensão AT;
+      </p>
+     </li>
+     <li>
+      <p>
+       O circuito de acionamento das lâmpadas de diferentes cores;
+      </p>
+     </li>
+     <li>
+      <p>
+       A interface com o computador, que inclui a placa de Arduino;
+      </p>
+     </li>
+     <li>
+      <p>
+       O conjunto de placa e grade.
+      </p>
+     </li>
+    </ol>
+    <p>
+     Um esquema mais detalhado da disposição interna do equipamento com as partes principais, periféricos e conexões entre elas é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Diagrama esquemático do dispositivo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O Arduino comunica-se, via cabo USB, com o computador enviando as leituras do amperímetro e recebendo os comandos da interface gráfica. Os comandos recebidos são transmitidos ao bloco de comando das lâmpadas e ao bloco da fonte AT.
+    </p>
+    <p>
+     O diagrama esquemático do circuito do amperímetro foi obtido de uma adaptação da proposta existente no próprio
+     <i>
+      datasheet
+     </i>
+     do circuito integrado CA3420 (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Diagrama esquemático presente no datasheet do CI.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O circuito adaptado com o acoplador óptico é representado na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     . Nela temos o resistor de 1 M que é ligado à placa metálica do experimento e ao amplificador operacional CA3420, via resistor de 10 M, cuja função é proteger o amplificador da alta tensão. O amplificador atua com alto ganho de corrente e entrega um sinal ao acoplador óptico PC817 que faz o isolamento e protege a entrada analógica A0 do Arduino enquanto R7 funciona como um resistor
+     <i>
+      pull down
+     </i>
+     mantendo o nível baixo de A0. Quando uma leitura do amperímetro faz circular corrente no LED do acoplador, ele ilumina o transistor do 817 e o faz conduzir, elevando a tensão na entrada do Arduino que oscila entre 0 e 5 volts. Assim, o amperímetro mede variações de corrente que são convertidas em variações de tensão medidas pela porta analógica A0 do Arduino.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Diagrama adaptado do amperímetro. A alimentação de e + 1,5V é produzida a partir de duas pilhas comuns em série com uma derivação central para o aterramento. Os resistores 1, 2 e 3 assim como o capacitor 1, são flutuantes, sem contato com a placa de cobre.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A fonte de alta tensão (AT) está representada no esquema da
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     . Nela vemos que o terminal PWM IN é ligado ao pino digital 11 do Arduino e recebe o pulso de PWM responsável pela indução de alta tensão através do indutor L
+     <math display="inline" id="m1">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         1
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     que recebe 5 V da conexão USB e descarrega-se em C
+     <math display="inline" id="m2">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         2
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     via diodo D
+     <math display="inline" id="m3">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         1
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     que só permite a circulação de corrente em um sentido, impedindo a descarga do capacitor quando o transistor chaveia. A saída de alta tensão AT OUT é ligada à grade através de um conector para pino banana.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Diagrama da fonte AT.
+      <br/>
+     </div>
+    </div>
+    <p>
+     As saídas digitais do Arduino tem capacidade de fornecimento de corrente limitada a 40 mA, que é suficiente para acionar apenas um ou dois LEDs. Para contornar esta limitação, aumentando a corrente controlada, utilizam-se transistores de chaveamento para o controle das lâmpadas. A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     mostra os detalhes do circuito de controle das lâmpadas.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Detalhe de um dos transistores de chaveamento das lâmpadas. É necessário um acionador por lâmpada.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A alimentação provém da conexão USB e o retorno é chaveado por transistores NPN de uso geral, de baixa potência (BC547) para os LEDs e média (TIP31) para a lâmpada UV, comandados pelas saídas digitais do Arduino que são conectadas às bases dos transistores através de resistores de 1 kohm.
+    </p>
+    <p>
+     O conjunto pode ser montado em placas padrão para protótipos ou em placa impressas. Um exemplo de
+     <i>
+      layout
+     </i>
+     é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Placa FOTODUINO com Arduino Nano.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A grade foi obtida de uma chapa perfurada da caixa de uma fonte atx e a placa foi confeccionada com uma chapa de ferro galvanizado (recoberto com zinco). Pode-se utilizar uma chapa de zinco puro mas esta é mais difícil de ser obtida. O indutor da fonte AT foi retirado do circuito de uma lâmpada fluorescente compacta.
+    </p>
+    <p>
+     Toda a construção do dispositivo pode ser realizada de forma artesanal, com componentes novos ou de sucata e demandam pouco conhecimento em eletrônica. O custo total para construção é de aproximadamente R$ 100,00. Os detalhes relacionadas à montagem, especificação de componentes, substituição por equivalentes e resolução de problemas pode ser encontrada na referência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] Repositório da UFSC: http://mnpef.ararangua.ufsc.br/produtos-e-dissertacoes/.
+       </span>
+       <br/>
+       <a href="http://mnpef.ararangua.ufsc.br/produtos-e-dissertacoes/" target="_blank">
+        http://mnpef.ararangua.ufsc.br/produtos-...
+       </a>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     2.2. A interface gráfica
+    </h2>
+    <p>
+     A leitura da corrente no picoamperímetro é convertida em sinal digital e enviada ao computador para ser exibida em uma interface gráfica gerada por um aplicativo criado a partir de um código escrito linguagem
+     <i>
+      Processing
+     </i>
+     . A mesma interface oferece interatividade ao captar ações do
+     <i>
+      mouse
+     </i>
+     e convertê-las em comandos enviados ao Arduino. Uma imagem do aplicativo aparece é mostrada
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      kit FOTODUINO montado e interface gráfica em um experimento com o efeito fotoelétrico. Gráfico da corrente entre as placas versus tempo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os interruptores coloridos comandam o acionamento das lâmpadas utilizadas durante o experimento, e representam as cores dos LEDs. Os botões “
+     <i>
+      Auto
+     </i>
+     ” e “
+     <i>
+      Reset
+     </i>
+     ” atuam sobre a escala de exibição dos dados. Esses são apresentados graficamente, em tempo real, através da movimentação da linha azul. Quando uma corrente elétrica é medida pelo picoamperímetro, esta aparece na forma de subida da linha como apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     . Uma escala relativa pode ser criada, bem como uma escala absoluta de corrente caso haja uma maneira de calibrar o equipamento (neste caso é necessário um picoamperímetro comercial).
+    </p>
+    <p>
+     Esta interface gráfica foi testada em ambientes Windows, Linux e Android podendo assim controlar o experimento tanto a partir de computadores desktop quanto de dispositivos móveis.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Discussão e aplicações
+    </h1>
+    <p>
+     O dispositivo aqui apresentado foi testado em experimentos envolvendo o efeito fotoelétrico, a condutividade elétrica do plasma e no efeito termiônico em lâmpadas de duplo filamento [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] J.G. Dodd, Am. J. Phys. 39, 1159 (1971).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [20] C. Wagner and H.H. Soonpaa, Am. J. Phys. 62, 473 (1993).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Especificamente em relação ao efeito fotoelétrico, temos uma demonstração qualitativa do fenômeno, na qual o equipamento monitora a corrente fotoelétrica entre a placa (ligada no terminal negativo da fonte AT) e a grade, exibindo o gráfico da corrente
+     <i>
+      versus
+     </i>
+     tempo. As lâmpadas podem então ser acionadas a fim de verificar a variação da corrente, que inicialmente é nula.
+    </p>
+    <p>
+     No efeito fotoelétrico, um elétron da superfície do material absorve um fóton de energia hc/
+     <math display="inline" id="m4">
+      <mi>
+       λ
+      </mi>
+     </math>
+     , (h é a constante de Planck, c é a velocidade da luz no vácuo e
+     <math display="inline" id="m5">
+      <mi>
+       λ
+      </mi>
+     </math>
+     é o comprimento de onda associado ao fóton) e é ejetado com energia cinética cujo valor máximo é dado por K
+     <math display="inline" id="m6">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         max
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+     </math>
+     hc/
+     <math display="inline" id="m7">
+      <mi>
+       λ
+      </mi>
+     </math>
+     - w
+     <math display="inline" id="m8">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     (w
+     <math display="inline" id="m9">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a chamada função trabalho, que depende do material da placa) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] C. Chesman, C. André e A. Macêdo, Física Moderna Experimental e Aplicada (Editora Livraria da Física, São Paulo, 2004).
+       </span>
+      </span>
+     </span>
+     ]. Portanto, o comprimento de onda máximo associado aos fótons incidentes para que ocorra o efeito fotoelétrico deve ser
+     <math display="inline" id="m10">
+      <msub>
+       <mrow>
+        <mi>
+         λ
+        </mi>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         max
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+     </math>
+     hc/w
+     <math display="inline" id="m11">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     . Assim, no caso do zinco temos w
+     <math display="inline" id="m12">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+     </math>
+     4,33 eV (
+     <math display="inline" id="m13">
+      <msub>
+       <mrow>
+        <mi>
+         λ
+        </mi>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         max
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+     </math>
+     286 nm), para o cobre 4,70 eV (263 nm), para o alumínio 4,08 eV (303 nm) e para o níquel 5,01 eV (247 nm).
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     exibimos os espectros de emissão das lâmpadas utilizadas. Os LEDs vermelho, amarelo, verde, azul e UVA emitem em uma faixa larga do espectro, com máximos nos comprimentos de onda que dão suas cores características e com valores superiores a 350 nm, não causando assim efeito fotoelétrico nos materiais acima citados.
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Da direita para esquerda, espectros dos LEDs utilizados (vermelho, amarelo, verde, azul, UVA), LED UVC e da lâmpada de catodo frio de mercúrio.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Já a lâmpada de catodo frio de mercúrio possui um espectro mais estreito com máximo em torno de 254 nm, sendo então capaz de produzir o efeito fotoelétrico no zinco, alumínio e cobre. Assim, ao acioná-la, percebe-se um aumento da corrente entre as placas.
+    </p>
+    <p>
+     Vários testes com materiais diferentes podem ser realizados, relacionando-se assim, o comprimento de onda máximo e a função trabalho do material.
+    </p>
+    <p>
+     A lâmpada de mercúrio pode ainda ser substituída por um LED UVC (espectro na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     ) simplificando ainda mais o equipamento (mas aumentado significativamente seu custo).
+    </p>
+    <p>
+     Como vemos ainda na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     , o largo espectro de emissão dos LEDs é um limitante para utilização do experimento na determinação da constante de Planck via ajuste linear da equação eV
+     <math display="inline" id="m14">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+     </math>
+     K
+     <math display="inline" id="m15">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         max
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     <math display="inline" id="m16">
+      <mo>
+       =
+      </mo>
+     </math>
+     hc/
+     <math display="inline" id="m17">
+      <mi>
+       λ
+      </mi>
+     </math>
+     - w
+     <math display="inline" id="m18">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     onde V
+     <math display="inline" id="m19">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é o potencial de corte (tensão reversa aplicada entre as placas a fim de frear os elétrons, anulando a corrente, para um dado comprimento de onda), já que
+     <math display="inline" id="m20">
+      <mi>
+       λ
+      </mi>
+     </math>
+     , neste caso, não está bem definido.
+    </p>
+    <p>
+     Outro limitante para obtenção de dados quantitativos vem do fato de a placa e a grade não estarem no vácuo. Ao serem ejetados, os elétrons rapidamente recombinam com íons presente no ar circundante, impedido a determinação precisa do potencial de corte. A substituição das placas por um tubo detetor de UV (célula fotoelétrica) resolveria esta questão, mas novamente encareceria o experimento.
+    </p>
+    <p>
+     Assim, a análise quantitativa é possível com adaptações no
+     <i>
+      hardware
+     </i>
+     e
+     <i>
+      software
+     </i>
+     . Como exemplo, um controle na intensidade da luz e na tensão entre as placas, bem como a adição de LEDs UVC com máximos de emissão em diferentes comprimento de onda seriam um primeiro passo para obtenção de dados numéricos.
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     mostra o gráfico obtido em um ensaio com o efeito fotoelétrico. Neste, os LEDs são acionados sequencialmente através dos botões de acionamento. Percebe-se que para os comprimentos de onda no vermelho, amarelo, verde, azul e UVA, a curva da corrente em função do tempo não se altera. O software exibe então o momento em que a lâmpada de luz ultravioleta (UVC) é acionada (e depois desligada), evidenciando a presença de corrente entre as placas (que aumenta apenas para este comprimento de onda).
+    </p>
+    <p>
+     A inversão da polaridade entre a placa e a grade inibe o movimento das cargas, indicando assim que são os portadores negativos que são ejetados da superfície do material. A substituição da placa de zinco por outros materiais com função trabalho mais elevadas, inibindo o efeito fotoelétrico, também foi testado.
+    </p>
+    <p>
+     O mesmo aumento da corrente é percebido ao se aproximar uma chama da região entre as placas. A diferença de potencial entre a grade e a placa (de aproximadamente 400 V) é suficiente para gerar uma corrente mensurável no dispositivo, indicada pela elevação da curva, demonstrando de forma qualitativa a movimentação de íons no plasma gerado pela combustão.
+    </p>
+    <p>
+     Por fim, com a substituição das placas por uma lâmpada de duplo filamento (com um deles rompido), pode-se demonstrar o efeito termiônico como sugerido nas referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] J.G. Dodd, Am. J. Phys. 39, 1159 (1971).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [20] C. Wagner and H.H. Soonpaa, Am. J. Phys. 62, 473 (1993).
+       </span>
+      </span>
+     </span>
+     ]. Testes preliminares indicaram que o dispositivo funciona adequadamente para este caso, exibindo uma da corrente do filamento aquecido para o terceiro terminal da lâmpada ao ser aquecido acima de determinada temperatura. Neste caso é necessária uma fonte externa para acender a lâmpada, além da fonte AT.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Conclusões
+    </h1>
+    <p>
+     O kit FOTODUINO foi concebido inicialmente para ser utilizado em experimentos de análise qualitativa do efeito fotoelétrico e das propriedades elétricas do plasma. Porém, outras aplicações também são possíveis, tais como o efeito termiônico. O equipamento pode também servir à demonstrações envolvendo eletrostática, já que apresenta grande sensibilidade às variações do campo elétrico nas proximidades da grade.
+    </p>
+    <p>
+     A interface gráfica é versátil e pode ser adaptada com facilidade para controlar uma grande variedade de experimentos didáticos com o uso do Arduino pois, monitora os dados numéricos enviados pela USB e enviados comandos para os acionadores. Com poucas modificações no código pode-se adaptá-lo a experimentos em que se pretenda exibir graficamente, em tempo real, a evolução temporal de uma grandeza.
+    </p>
+    <p>
+     O equipamento pode ser construído com facilidade mesmo sem experiência em eletrônica e apresenta baixíssimo custo, o que viabiliza sua utilização em laboratórios didáticos de escolas públicas. A interface gráfica, disponível tanto para desktops quanto para dispositivos móveis, é de fácil utilização e se mostra atrativa para os jovens estudantes do ensino médio.
+    </p>
+    <p>
+     A utilização da plataforma Arduino abre ainda a possibilidade de tornar o equipamento acessível remotamente [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] D.C. Cardoso e E.K. Takahashi, Revista Brasileira de Pesquisa em Educação em Ciências 11, 185 (2011).
+       </span>
+      </span>
+     </span>
+     ], oportunizando ao aluno realizar o experimento mesmo fora do ambiente escolar, bastando para isso acesso à internet.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores deste trabalho agradecem à Coordenação de Aperfeiçoamento de Pessoal de Nível Superior, à Universidade Federal de Santa Catarina e à Sociedade Brasileira de Física pelo apoio financeiro.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        I.C. Moreira, Física na Escola
+        <b>
+         6
+        </b>
+        , 4 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        E.A. Terrazan, Cad. Cat. Ens. Fis.
+        <b>
+         9
+        </b>
+        , 209 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        L. Dominguini, J.R. Maximiano e L. Cardoso, in:
+        <i>
+         IX ANPED Sul - Seminário de Pesquisa em Educação da Região Sul
+        </i>
+        , Caxias do Sul, 2012.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        F. Caruso e N. de Freitas, Cad. Bras. Ens. Fis.
+        <b>
+         26
+        </b>
+        , 355 (2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        E.C. Valadares e A.M. Moreira, Cad. Cat. Ens. Fis.
+        <b>
+         15
+        </b>
+        , 121 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        F. Ostermann e C.J.H. Cavalcanti, Cad. Cat. Ens. Fis.
+        <b>
+         16
+        </b>
+        , 267 (1999).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        C. Chesman, C. André e A. Macêdo,
+        <i>
+         Física Moderna Experimental e Aplicada
+        </i>
+        (Editora Livraria da Física, São Paulo, 2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        I.S. Oliveira,
+        <i>
+         Física Moderna para Iniciado, Interessados e Aficionados
+        </i>
+        (Editora Livraria da Física, São Paulo, 2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        F.F. de Oliveira, D.M. Vianna e R.S. Gerbassi, Rev. Bras. Ens. Fis.
+        <b>
+         29
+        </b>
+        , 447 (2007).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        D. Fagundes, J. Sartori, T. Catunda e L.A.O. Nunes, Rev. Bras. Ens. Fis.
+        <b>
+         17
+        </b>
+        , 196 (1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        C.E. Aguiar e F. Laudares, Rev. Bras. Ens. Fis.
+        <b>
+         23
+        </b>
+        , 371 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        R. Haag, I.S. Araujo e E.A. Veit, Física na Escola
+        <b>
+         6
+        </b>
+        , 69 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fis.
+        <b>
+         33
+        </b>
+        , 4503 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        J.T. Guaitolini, G.S. Ramos, S.L. da Silva e A.C. Gama, Cad. Bras. Ens. Fis.
+        <b>
+         33
+        </b>
+        , 619 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        R.F. de Rodrigues e S.L.S. Cunha, Textos de Apoio ao Professor de Física
+        <b>
+         25
+        </b>
+        , 1 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        G. Fetzner, in:
+        <i>
+         Experimentos de Baixo Custo para o Ensino de Física em Nível Médio Usando a Placa Arduino-Uno
+        </i>
+        Tese de Mestrado, UFRGS, 2015.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        Página oficial do Arduino: https://www.arduino.cc
+        <br/>
+        <a href="https://www.arduino.cc" target="_blank">
+         » https://www.arduino.cc
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        Repositório da UFSC: http://mnpef.ararangua.ufsc.br/produtos-e-dissertacoes/
+        <br/>
+        <a href="http://mnpef.ararangua.ufsc.br/produtos-e-dissertacoes/" target="_blank">
+         » http://mnpef.ararangua.ufsc.br/produtos-e-dissertacoes/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        J.G. Dodd, Am. J. Phys.
+        <b>
+         39
+        </b>
+        , 1159 (1971).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        C. Wagner and H.H. Soonpaa, Am. J. Phys.
+        <b>
+         62
+        </b>
+        , 473 (1993).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        D.C. Cardoso e E.K. Takahashi, Revista Brasileira de Pesquisa em Educação em Ciências
+        <b>
+         11
+        </b>
+        , 185 (2011).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        30 Nov 2016
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        20 Jan 2017
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        12 Abr 2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

@@ -1,0 +1,4129 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173812083" target="_blank">
+    https://doi.org/10.1590/S1806-11173812083
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812083">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0" data-toggle="tooltip">
+  </span>
+  Clima espacial e choques interplanetários
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Space weather and interplanetary shocks
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     D.M. Oliveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:denny.m.deoliveira@nasa.gov">
+      denny.m.deoliveira@nasa.gov
+     </a>
+     .
+    </div>
+    NASA Goddard Space Flight Center, Greenbelt, MD, USAGoddard Planetary Heliophysics Institute, University of Maryland Baltimore County, Baltimore, MD, USA
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     M.V.D. Silveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    NASA Goddard Space Flight Center, Greenbelt, MD, USAInstituto Nacional de Pesquisas Espaciais, São José dos Campos, SP, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     São discutidos nesse artigo alguns conceitos básicos relacionados ao clima espacial no ambiente próximo da Terra. Devido ao desenvolvimento tecnológico dos anos recentes, o clima espacial tornou-se um tema importante de pesquisa. Os avanços da área se devem principalmente à sua aplicabilidade nos sistemas tecnológicos tanto no espaço próximo quanto na superfície da Terra. Dentre os diversos temas abordados pelo clima espacial está a investigação de como perturbações no meio interplanetário, decorrentes da variabilidade solar, afetam o campo magnético da Terra. Os efeitos de tais variações podem ser observados em solo através de medidas de magnetômetros e no espaço próximo à Terra, por exemplo, as auroras. Alguns aspectos de uma perturbação solar em particular, a saber choques interplanetários, são brevemente revisados. Um evento real com atividade geomagnética intensa é simulado por um código magneto-hidrodinâmico (MHD). Resultados da simulação numérica concordam bem com dados observados por magnetômetros em solo. A importância de simulações globais MHD no desenvolvimento de modelos de previsão de clima espacial é enfatizada.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     clima espacial; interações magnetosfera-ionosfera; simulações numéricas e observações
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     It is discussed in this paper some basic concepts related to space weather in the near-Earth space environment. Due to technological developments in the past years, space weather has become an important subject of research. The achievements in this area are mainly related to its applicability to the safety of technological systems in space and on the ground. Among several subjects of space weather researchers' interest is the investigation of how perturbations in the interplanetary medium, as a consequence of solar variability, affect the Earth's magnetic field. The effects of such variabilities can be observed on the ground through measurements of magnetometers on the ground and in the near-Earth space environment, for example, the auroras. Some aspects of a particular case of solar disturbances, namely interplanetary shocks, are briefly reviewed. A real event with intense geomagnetic activity is simulated by a global magnetohydrodynamic (MHD) code. Simulation results agree well with ground magnetometer data. The importance of global MHD simulations in developing space weather prediction models is emphasized.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     space weather; magnetosphere-ionosphere interactions; numerical simulations and observations
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A região denominada espaço interplanetário é a região que contém os planetas e outros corpos celestes no sistema solar
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M.G. Kivelson and C.T. Russell, Introduction to Space Physics (Cambridge University Press, Cambridge, 1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . O espaço interplanetário é preenchido pelo vento solar e o campo magnético interplanetário (IMF, em inglês)
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física 33, 4301 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A atmosfera solar, ou o vento solar, predomina em uma região denominada heliosfera. O vento solar expande-se constantemente em direção ao limite do domínio do Sol, denominado heliopausa
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] O.R. Nelson, Revista Brasileira de Ensino de Física 35, 3317 (2013).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Devido ao fato de ser um plasma, o vento solar interage constantemente com o ambiente espacial próximo da Terra. Tal interação produz efeitos que são detectados localmente e na superfície da Terra. Exemplos diretos desta interação são as auroras boreal e austral, observadas em regiões de altas latitudes. Outro efeito observado é o decréscimo da componente horizontal do campo magnético registrado por magnetômetros na superfície da Terra. Este efeito corresponde ao início de tempestades geomagnéticas
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física 33, 4301 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A intensidade dessas interações pode variar com o nível de atividade no Sol. Em épocas de alta atividade solar, o número de manchas solares, regiões escuras visíveis na superfície do Sol, é maior do que em épocas de baixa atividade solar
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E. Echer, N.R. Rigozo, D.J. Roger Nordemann, L.E.A. Vieira, A. Prestes e H.H. De Faria, Revista Brasileira de Ensino de Física 22, 157 (2003).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Por séculos, observações mostraram que o ciclo solar segue um padrão de aproximadamente 11 anos entre dois períodos de máxima atividade solar
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] J.A. Eddy, Science 192, 1189 (1976).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Manchas solares, especialmente quando coexistem em grupos, podem liberar enormes quantidades de plasma em alta velocidade que são arremessadas da superfície do Sol por um processo denominado reconexão magnética
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M.G. Kivelson and C.T. Russell, Introduction to Space Physics (Cambridge University Press, Cambridge, 1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] D.A. Gurnett and A. Bhattacharjee, Introduction to Plasm Physics With Space and Laboratory Applications (Cambridge University Press, Cambridge, United Kingdom, 2005).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A reconexão magnética transforma energia magnética em energia cinética e térmica do plasma, que por sua vez acelera quantidades gigantes de plasma
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] V.M. Souza, M.V.D Silveira, D. Koga e P.R. Jauer, Revista Brasileira de Ensino de Física, in press, 2016.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Tais fenômenos são denominados ejeções de massa coronal (CMEs, em inglês). As CMEs desempenham um papel importante no entendimento da interação do vento solar com o campo magnético terrestre e sua consequente geoefetividade.
+    </p>
+    <p>
+     Este ambiente próximo da Terra, ou o ambiente geospacial, é usualmente dividido em três partes principais: (i) o Sol, que é a fonte de energia para todas as interações; (ii) o meio interplanetário, que é o caminho por onde o vento solar e perturbações viajam antes de interagir com o campo magnético da Terra; (iii) e um sistema forçado mais complexo. Este sistema forçado por sua vez é dividido em ionosfera e magnetosfera da Terra
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] E. Echer, Revista Brasileira de Ensino de Física 32, 2301 (2010).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , que por sua vez são acoplados um ao outro
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] D. Oliveira, Revista Brasileira de Ensino de Física 36, 1305 (2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     e à termosfera
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] T.J. Fuller-Rowell, D. Rees, S. Quegan, R.J. Moffet, M.V. Codrescu and G.H. Millward, in: R.W. Schunk, ed, STEP Report. Scientific Commitee on Solar Terrestrial Physics (Boulder, Colorado, 1996), p. 217.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . O impacto de CMEs com a magnetosfera também provoca saltos na densidade de partículas neutras na termosfera
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] D.M. Oliveira, E. Zesta, H.K. Connor, Y.-J. Su, E.K. Sutton, C.Y. Huang, D.M. Ober, S. Delay and P. Schuck, In SM23B-2565 , AGU Fall Meeting, San Francisco, CA, 2015.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A quantidade de entrada de energia nesse sistema quase sempre depende da configuração da magnetosfera da Terra. Em épocas em que a componente z do IMF é dirigida para o sul, ou seja,
+     <i>
+      B
+      <sub>
+       z
+      </sub>
+     </i>
+     &lt; 0 , mais energia pode entrar no sistema magnetosférico e mais efeitos podem ser detectados em todas as regiões na magnetosfera
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] J.W. Dungey, Phys. Rev. Lett. 6, 47 (1961).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Estudos de clima espacial têm como objetivo compreender a variabilidade dessas interações e seus impactos sobre o ambiente geoespacial e na superfície da Terra
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] E. Echer, W.D. Gonzalez, F.L. Guarnieri, A.D. Lago and L.E.A. Vieira, Adv. Space Res. 35, 855 (2005).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Nas décadas recentes a humanidade tornou-se mais dependente da tecnologia para atividades diárias que vão da superfície até o ambiente espacial terrestre. Tal dependência requer vigilância constante do clima no espaço
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] National Research Council (NRC), in: Technical Report (National Research Council, Washington, D. C., 2008), Available at http://www.nap.edu/openbook.php?record_id=12507.
+       </span>
+       <br/>
+       <a href="http://www.nap.edu/openbook.php?record_id=12507" target="_blank">
+        http://www.nap.edu/openbook.php?record_i...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Equipamentos eletrônicos a bordo de satélites comerciais e GPS são altamente sensíveis à variabilidade do ambiente geoespacial. Por exemplo, uma CME viajando em direção à Terra pode criar descontinuidades em seus limites frontais. Tais descontinuidades são frequentemente ondas de choque interplanetárias que envolvem a magnetosfera, comprimindo e intensificando os campos magnéticos da magnetosfera que por sua vez produzem correntes geomagnéticas induzidas (GICs, em inglês) medidas na superfície da Terra. GICs podem afetar seriamente redes de transmissão de energia elétrica levando a graves danos a equipamentos, interrupções de serviço e a perdas econômicas elevadas
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] L. Bolduc, J. Atmos. Sol. Terr. Phys. 64, 1793 (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] C.J. Schrijver, R. Dobbins, W. Murtagh and S.M. Petrinec, arXiv:1406.7024.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . GICs também podem impactar oleodutos, provocando corrosões internas que prejudicam os fluxos de petróleo
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] R.A. Gummow and P. Eng, J. Atmos. Sol. Terr. Phys. 64, 1755 (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Portanto, o entendimento das interações de choques interplanetários com a magnetosfera da Terra não tem apenas fins acadêmicos, mas também despertam interesse prático
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] D.M. Oliveira and J. Raeder, J. Geophys. Res. 119, 8188 (2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     e econômico.
+    </p>
+    <p>
+     O principal objetivo deste artigo é apresentar ao leitor alguns aspectos básicos da física de descontinuidades no vento solar, em particular de choques interplanetários transientes no vento solar, e seus impactos no clima espacial. Os indíces geomagnéticos mais utilizados no decorrer dos anos são apresentados na seção 2. Na seção 3 alguns conceitos e equações da teoria magneto-hidrodinâmica (MHD) são introduzidos. Descontinuidades MHD são discutidas na seção 4. A seção 5 apresenta os tipos de choques MHD. A seção 6 discute a importância de simulações numéricas MHD para o entendimento de fenômenos relacionados ao clima espacial, e um evento real é discutido na seção 7. Finalmente, a seção 8 conclui o artigo.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. índices Geomagnéticos
+    </h1>
+    <p>
+     Atividade geomagnética desencadeada por perturbações solares é frequentemente medida por magnetômetros no solo. Tais medições são quantificadas por índices geomagnéticos que indicam uma variedade de efeitos causados por perturbações solares em diferentes latitudes da superfície terrestre. Os índices mais usados na física da magnetosfera terrestre ao longo dos anos são os índices Dst, SYM-H, Kp, Ap, AL, AU e AE. A natureza e uso desses índices já foram revistos
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] G. Rostoker, Rev. Geophys. 10, 935 (1972).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     e serão brevemente discutidos a seguir.
+    </p>
+    <p>
+     O Dst é um índice de precisão de tempo de 1 hora que mede a intensidade da corrente de anel
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física 33, 4301 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . O índice Dst é utilizado para quantificar a intensidade das tempestades geomagnéticas
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física 33, 4301 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Um critério usualmente utilizado para quantificar tempestades geomagnéticas é: Dst ≥−30 nT, tempestade fraca; −100 ≤ Dst ≤−30 nT, tempestade moderada; e Dst ≤−100nT a tempestade é classificadas como uma tempestade intensa (ver
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     ). O íındice Dst pode ser obtido a partir do Centro Mundial de Dados para Geomagnetismo (WDC, em inglês) em Kioto, no Japão pelo site
+     <a href="http://wdc.kugi.kyoto-u.ac.jp/index.html" target="_blank">
+      http://wdc.kugi.kyoto-u.ac.jp/index.html
+     </a>
+     .
+    </p>
+    <p>
+     Há algumas quantidades magnetosféricas que requerem dados com maior precisão. Este é o caso do início súbito de uma tempestade (SSC, em inglês), que é a primeira resposta dramática à compressão da magnetosfera pelas perturbações solares, tais como choques interplanetários
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] E.J. Smith, J.A. Slavin, R.D. Zwickl and S.J. Bame, in: Y. Kamide and J. A. Slavin, eds, Solar Wind and Magnetosphere Coupling (Terra Scientific, Tokyo, 1986), p. 345.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Eventos SSC são frequentemente associados a saltos abruptos de um índice chamado SYM-H. O índice SYM-H é semelhante ao índice Dst mas com resolução temporal de 1 min
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] T. Iyemori, J. Geomagn. Geoelectr. 42, 1249 (1990).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     representa uma tempestade geomagnética intensa associada a um choque interplanetário impulsionado por uma CME observada por satélites localizados à frente da Terra no dia 18 de abril de 2001 (ver lista em
+     <a href="http://srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm" target="_blank">
+      srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm
+     </a>
+     ). Como indicado pela linha tracejada, um salto repentino em SSC é observado logo após 0000 UT (
+     <i>
+      universal time
+     </i>
+     , em inglês) em 18 de Abril de 2001. A linha vertical tracejada da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     representa o instante em que o choque interplanetário atinge a magnetosfera. O índice Dst, em seguida, começa a cair e atinge um mínimo de menos de -110 nT, aproximadamente 6 h após o choque/CME atingir a magnetosfera. Esta é a principal fase da tempestade geomagnética
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [20] W.D. Gonzalez, J.A. Joselyn, Y. Kamide, H.W. Kroehl, G. Rostoker, B.T. Tsurutani and V. M. Vasylinas, J. Geophys. Res. 99, 5771 (1994).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Índice Dst para a tempesdade geomagnética do dia 18 de abril de 2001 desencadeada por um choque interplanetário. Este choque foi impulsionado por uma CME cujo impacto com a magnetosfera terrestre levou a uma tempestade geomagnética. O instante do impacto do choque com a magnetosfera é usualmente associado com o aumento do índice SYM-H medido no solo. A linha tracejada indica este momento, que ocorreu logo após 0000 UT do dia 18 de abril de 2001. A medida mínima Dst foi gravada por magnetômetros no solo em valores inferiores a -110 nT aproximadamente 6 h após o impacto do choque/CME com a magnetosfera.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Atividades geomagnéticas que ocorrem em regiões de latitude intermediária são frequentemente medidas pelo índice logarítmico Kp
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] G. Rostoker, Rev. Geophys. 10, 935 (1972).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . O índice linear Ap é semelhante ao índice Kp. O cálculo desses índices é obtido a partir de atividades geomagnéticas em regiões de baixas e altas latitudes. Por exemplo, alta atividades nos índices Kp(Ap) podem não indicar alta atividade auroral, e consequentemente altos índices de regiões de latitudes intermediárias podem não indicar aumento da atividade da corrente de anel
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] G. Rostoker, Rev. Geophys. 10, 935 (1972).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Pesquisadores devem tomar precauções ao escolher o índice mais adequado para descrever determinadas atividades geomagnéticas
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] G. Rostoker, Rev. Geophys. 10, 935 (1972).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Definições e detalhes de métodos de cálculo relacionados a esses índices podem ser encontradas na literatura
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] G. Rostoker, Rev. Geophys. 10, 935 (1972).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Atividades aurorais em regiões de alta latitude são frequentemente medidas pelos índices AL, AU e AE. No caso particular em que choques interplanetários atingem a magnetosfera da Terra, devido ao seu acoplamento à ionosfera
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] D. Oliveira, Revista Brasileira de Ensino de Física 36, 1305 (2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , correntes elétricas ionosféricas, ou correntes aurorais, podem ser intensificadas. Para uma corrente auroral que se move para leste (em relação à superfície da Terra), uma perturbação positiva na componente horizontal do campo magnético surge em medidas de magnetômetros no solo. A medição deste distúrbio é chamada de envelope superior ou AU. Quando correntes aurorais se movem para oeste, o envelope inferior, ou a componente negativa do campo magnético na superfície, diminui. Tal efeito é quantificado pelo índice AL. AE é a diferença AE = AU -AL associada à atividade auroral
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] T. Neil Davis and Masahisa Sugiura, J. Geophys. Res. 71, 785 (1966).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . AL quantifica a intensidade de subtempestades magnetosféricas, e AE é usualmente utilizado para quantizar o volume de atividade auroral noturna
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] G. Rostoker, Rev. Geophys. 10, 935 (1972).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] T. Neil Davis and Masahisa Sugiura, J. Geophys. Res. 71, 785 (1966).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Descontinuidades magneto-hidrodinâmicas no vento solar
+    </h1>
+    <h2>
+     3.1. Equações MHD
+    </h2>
+    <p>
+     O meio interplanetário é composto por um fluido condutor denominado plasma. Quando se move, um plasma (por exemplo, o vento solar) interage com campos magnéticos localizados em seu caminho. Correntes elétricas são induzidas, as quais, por sua vez, geram campos magnéticos que podem modificar o movimento do plasma. A área da ciência que descreve a dinâmica do movimento do plasma na aproximação de baixas frequências e somente um fluido condutor é denominada magneto-hidrodinâmica, ou simplesmente MHD. A teoria MHD corresponde a um conjunto de equações de fluidos acoplado às equações de Maxwell. Plasmas possuem uma propriedade interessante relacionada à formação de descontinuidades. Descontinuidades são efeitos não-lineares de quebra de onda. Quando descontinuidades MHD são geradas nesse ambiente, conservação de massa, momento e energia são condições necessárias para se descrever o plasma em ambos os lados da descontinuidade. Tais equações são denominadas equações de Rankine-Hugoniot (RH) ou condições de salto. O tipo de descontinuidade discutida nesse artigo é um caso particular de descontinuidades chamadas choques MHD. Nesta seção, as equações MHD e as condições de salto RH costumeiramente utilizadas em estudos de comportamento de choques são brevemente apresentadas. Os choques MHD são então classificados em termos dos ângulos de seus vetores normais em relação ao vetor campo magnético na região de não-choque no sistema de referência do choque e seu movimento relativo ao Sol. Finalmente, algumas equações para se calcular as condições de saltos para choques são apresentadas. Mais detalhes sobre as equações MHD e RH podem ser encontradas na literatura em língua portuguesa
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física 33, 2302 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [25] E. Echer, M.V. Alves and W.D. Gonzalez, Revista Brasileira de Ensino de Física 28, 56 (2006).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Um plasma é composto por partículas positivas e negativas. Assim, o movimento do plasma depende dos campos elétricos e magnéticos
+     <b>
+      E
+     </b>
+     e
+     <b>
+      B
+     </b>
+     e é governado pelas equações de Maxwell descritas abaixo
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [26] J.D. Jackson, Classical Electrodynamics (John Wiley &amp;, Inc., Hoboken, 1999).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/2d27dbc7e31944bd7043278873db1a1d6e6e77ee.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/a48bb810e25958bdb598e95c64cf1307697c49ff.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/1d6a05333ce0219599efd5259e972a97a6916420.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee4">
+     <a name="e4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/c38dd907040a0a8f2d0487d009eebf772c4e7a3f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (1)
+     </a>
+     , conhecida por lei de Gauss, afirma que o campo elétrico saindo de um volume arbitrário é proporcional à carga (ρ
+     <sub>
+      q
+     </sub>
+     ) dentro do volume. A lei de Gauss para o magnetismo, representada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     , indica que monopolos magnéticos não existem na natureza, o que implica que o fluxo magnético através de uma superfície fechada é sempre nulo.
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação (3)
+     </a>
+     é denominada lei de Faraday, que mostra que a voltagem acumulada em torno de um circuito fechado é proporcional à razão temporal da variação do fluxo magnético. Finalmente, a
+     <a class="open-asset-modal" data-target="#ModalSchemee4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (4)
+     </a>
+     mostra a lei de Ampère com o termo modificado de Maxwell, o que indica que correntes elétricas e mudanças em campos elétricos são proporcionais ao campo magnético que circula ao redor da área que eles envolvem.
+    </p>
+    <p>
+     As
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (1
+     </a>
+     -
+     <a class="open-asset-modal" data-target="#ModalSchemee4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4)
+     </a>
+     precisam de alguns ajustes para serem incluídas na teoria MHD. A densidade de carga ρ
+     <sub>
+      q
+     </sub>
+     no plasma interplanetário é nula devido às propriedades macroscópicas de quasi-neutralidade. A velocidade da luz é definida por c =1/. Considerando as dimensões características na teoria MHD de comprimento, tempo e velocidade,
+     <i>
+      L
+     </i>
+     , τ, e
+     <i>
+      U
+     </i>
+     (velocidade não relativística), as derivadas spaciais e temporais de
+     <b>
+      B
+     </b>
+     e
+     <b>
+      E
+     </b>
+     podem ser escritas aproximadamente por |
+     <b>
+      ∇
+     </b>
+     ×
+     <b>
+      B
+     </b>
+     | ≈ B/L e µ0ε0|∂
+     <b>
+      E
+     </b>
+     /∂t| ≈ E/(c
+     <sup>
+      2
+     </sup>
+     τ). Da análise dimensional da lei de Faraday (
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     ),
+     <i>
+      E
+     </i>
+     =
+     <i>
+      UB
+     </i>
+     . Assim, comparando as equações acima,
+    </p>
+    <div class="row formula" id="ee5">
+     <a name="e5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/69103739bcc0d18661eeadfbfa510ed8d04ed068.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Portanto, as equações de Maxwell na teoria MHD são reduzidas a
+    </p>
+    <div class="row formula" id="ee6">
+     <a name="e6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/95866f9757583d94ea565e1c76760494c626be10.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee7">
+     <a name="e7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/37f0423b8d8350ff44264826ddf808262b22b607.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee8">
+     <a name="e8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/1c97dfda6387bd4e03870bf5e32f39bf7ad58dda.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee9">
+     <a name="e9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/77efda91b34d4253c2da34cdee7571fdb2262668.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     As equações MHD são dadas por
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] D.A. Gurnett and A. Bhattacharjee, Introduction to Plasm Physics With Space and Laboratory Applications (Cambridge University Press, Cambridge, United Kingdom, 2005).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+    </p>
+    <div class="row formula" id="ee10">
+     <a name="e10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/7d98b63bd7734f901a15dc98592d496b6e939193.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee11">
+     <a name="e11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/504e7d4ee12051bb60cd8fc97958ca680473b2cd.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee12">
+     <a name="e12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/bce6ea0434e7d81a6233a9d0ea5b6c989d295768.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Nessas equações, ρ é a densidade de massa do plasma,
+     <b>
+      B
+     </b>
+     é o campo magnético,
+     <b>
+      u
+     </b>
+     é a velocidade do plasma, P é a pressão térmica, γ = 5/3 é a razão entre os calores específicos a pressão e volume constantes CP /CV , P/(γ − 1) é a energia interna e γP/(γ − 1) é a entalpia do sistema. As quantidades conservadas em um plasma são resumidas abaixo. A
+     <a class="open-asset-modal" data-target="#ModalSchemee10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     representa conservação de massa no plasma. As outras equações representam conservação de momento (
+     <a class="open-asset-modal" data-target="#ModalSchemee11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      11
+     </a>
+     ) e energia (
+     <a class="open-asset-modal" data-target="#ModalSchemee12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      12
+     </a>
+     ), respectivamente.
+    </p>
+    <p>
+     Um plasma pode ser estudado em termos de suas velocidades típicas, campo magnético, e alguns parâmetros adimensionais. Em resumo, tais velocidades são a velocidade do som a velocidade de Alfvén e a velocidade magnetosônica cuja raiz positiva se refere à velocidade magnetosônica rápida, e a raiz negativa se refere à velocidade magnetosônica lenta. A obliquidade θ
+     <i>
+      B
+      <sub>
+       n
+      </sub>
+     </i>
+     corresponde ao ângulo entre o campo magnético na região sem o choque e o vetor normal da estrutura.
+    </p>
+    <div class="row formula" id="ee13">
+     <a name="e13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/b6525c938dbb9563c939f8c14ddf4a81c72948de.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee14">
+     <a name="e14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/258109f2177e1280539766b4ea70daa3b4c5c422.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee15">
+     <a name="e15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/9681dfa28425095ffeb278bff2dbe53bebdf2373.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os parâmetros adimensionais do plasma são representados pelo beta do plasma, a razão entre a pressão térmica e a pressão magnética do plasma
+    </p>
+    <div class="row formula" id="ee16">
+     <a name="e16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/ce0df98b0aac8617f828f729fb92397cccaa8e78.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     e os outros parâmetros são denominados números de Mach, ou a razão entre a velocidade do fluido
+     <i>
+      u
+     </i>
+     e a velocidade característica do meio. Tais números de Mach são o número de Mach sônico:
+    </p>
+    <div class="row formula" id="ee17">
+     <a name="e17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/59de2038494de71f9e2dc99f081de60ca638051c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     o número de Mach Alfvénico
+    </p>
+    <div class="row formula" id="ee18">
+     <a name="e18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/1b58d33a6ce47f1a64892cc6c388a6ee5360e44d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     e, similarmente, o número de Mach magnetosônico
+    </p>
+    <div class="row formula" id="ee19">
+     <a name="e19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/d9270779ead3c6ebc45feb45bf6123de5a664350.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     No caso particular de choques MHD, a velocidade considerada é a velocidade do choque em relação ao meio. Para uma discussão mais completa sobre as propriedades das ondas de Alfvén e ondas de choque não-colisionais no meio interplanetário, consulte outros artigos publicados previamente pela Revista Brasileira de Ensino de Física
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física 33, 2302 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [25] E. Echer, M.V. Alves and W.D. Gonzalez, Revista Brasileira de Ensino de Física 28, 56 (2006).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h2>
+     3.2. Equações Rankine-Hugoniot
+    </h2>
+    <p>
+     Um choque é formado quando uma onda sofre uma descontinuidade que modifica os principais parâmetros do meio, tais como a densidade do fluido, temperatura (pressão) e velocidade
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [27] D. Burguess, in: M.G. Kivelson and C.T. Russell, eds, Introduction to Space Plasma Physics (Cambridge University Press, Cambridge, 1995), Chapter 5.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Uma condição necessária é que a velocidade relativa entre o choque e a velocidade de fluxo do fluido tem que ser maior que a velocidade do som no lado da descontinuidade sem os efeitos do choque. Além disso, com o aumento da pressão e temperatura, é possível afirmar que a entropia aumenta na região atrás do choque, o que indica que a energia cinética da onda se transforma em energia térmica do fluido na atrás do choque. Tais descrições são válidas para um fluido ordinário cujas partículas trocam energia e momento devido a colisões. No caso do vento solar, as densidades médias são tipicamente da ordem de 5 partículas por cm
+     <sup>
+      3
+     </sup>
+     em 1 UA (unidade astronômica). Com o caminho livre médio da ordem de grandeza do sistema, que é aproximadamente 1 UA, calculada da teoria cinética, a ocorrência de colisões no plasma são muito improváveis
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] L.F. Burlaga, Interplanetary Magnetohydrodynamics (Oxford University Press, New York, 1995).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Por outro lado, momento e energia são transmitidos entre as partículas devido a presença de interações eletromagnéticas que tornam o processo ainda mais complicado. Agora, além do campo magnético em si, sua direção em relação à normal do choque tem grande importância
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] L.F. Burlaga, Interplanetary Magnetohydrodynamics (Oxford University Press, New York, 1995).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A presença do campo magnético também proporciona outras complicações. Primeiro, o plasma passa a ter mais de uma velocidade característica além da velocidade do som, uma vez que os conceitos de velocidade de Alfvén e velocidade magnetosônica são necessários para explicar o comportamento do plasma. Segundo, a geometria do choque desempenha um papel importante na física do choque uma vez que a orientação do vetor indução magnética em relação à normal do choque acarreta diferentes consequências quando este ângulo é grande ou pequeno. Esta última característica de choques será discutida a seguir. Assim, um choque somente existe quando a sua velocidade relativa ao meio de propagação é maior do que pelo menos a velocidade magnetosônica lenta, ou, de acordo com a expressão (
+     <a class="open-asset-modal" data-target="#ModalSchemee19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      19
+     </a>
+     ), quando MMS ≥ 1
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] L.F. Burlaga, Interplanetary Magnetohydrodynamics (Oxford University Press, New York, 1995).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     As condições de salto de RH são derivadas das equações MHD escritas em forma conservativa, ou seja, ∂/∂t(•)−
+     <b>
+      ∇
+     </b>
+     ∙(•) = 0. A equação de conservação de massa é a mesma
+     <a class="open-asset-modal" data-target="#ModalSchemee10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     . A equação de conservação de momento é re-escrita após multiplicar a
+     <a class="open-asset-modal" data-target="#ModalSchemee10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     por
+     <b>
+      u
+     </b>
+     e adicionar o resultado ao lado esquerdo da
+     <a class="open-asset-modal" data-target="#ModalSchemee11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (11)
+     </a>
+     e reagrupar os termos que dependem de
+     <i>
+      ρ
+     </i>
+     e
+     <b>
+      u. A
+     </b>
+     densidade de corrente é eliminada desta equação após substituir a equação de Ampère (
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     ) escrita na forma
+     <b>
+      J
+     </b>
+     =
+     <b>
+      ∇
+     </b>
+     ×
+     <b>
+      B
+     </b>
+     /
+     <i>
+      µ
+     </i>
+     0
+    </p>
+    <div class="row formula" id="ee20">
+     <a name="e20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/01ccae1eda09e62b24b0792c8832545aa55205ad.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee21">
+     <a name="e21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/d38efe2a292ed444eae7224f49cb2977a121bf8d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee22">
+     <a name="e22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/b316d02dcd421c6b604356ca2659816f3dbdaa50.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os termos
+     <b>
+      uu
+     </b>
+     e
+     <b>
+      BB
+     </b>
+     são denominados tensores (ou alternativamente
+     <i>
+      dyadics
+     </i>
+     , em inglês) e resultam da multiplicação entre dois vetores
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [29] I.V. Lindell, Methods for Electromagnetic Field Analysis (Wiley-Blackwell, Hoboken, New Jersey, 1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . O termo 𝟙 representa o tensor unitário. Além disso, o campo elétrico na
+     <a class="open-asset-modal" data-target="#ModalSchemee12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (12)
+     </a>
+     foi eliminado após a utilização da condição de congelamento do campo magnético ao plasma, onde
+     <b>
+      E
+     </b>
+     = −
+     <b>
+      u
+     </b>
+     × B
+     <sup>
+      (
+     </sup>
+     1
+     <sup>
+      )
+     </sup>
+     , e a identidade do produto entre três vetores (
+     <b>
+      F
+     </b>
+     ×
+     <b>
+      G
+     </b>
+     ) ×
+     <b>
+      H
+     </b>
+     = (F ∙
+     <b>
+      H
+     </b>
+     )
+     <b>
+      G
+     </b>
+     − (
+     <b>
+      G
+     </b>
+     ∙
+     <b>
+      H
+     </b>
+     )F.
+    </p>
+    <p>
+     Para se relacionar os parâmetros do plasma na região denominada pré-descontinuidade (região sem efeitos da descontinuidade, ou
+     <i>
+      upstream
+     </i>
+     , em inglês)e na região pós-descontinuidade (região com efeitos da descontinuidade, ou
+     <i>
+      downstream
+     </i>
+     , em inglês), um método conveniente descrito na literatura será utilizado a seguir
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] D.A. Gurnett and A. Bhattacharjee, Introduction to Plasm Physics With Space and Laboratory Applications (Cambridge University Press, Cambridge, United Kingdom, 2005).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     representa um plasma que flui através de uma superfície extremamente fina e uma descontinuidade MHD de áreas
+     <i>
+      A
+     </i>
+     <sub>
+      1
+     </sub>
+     (região pré-descontinuidade) e
+     <i>
+      A
+     </i>
+     <sub>
+      2
+     </sub>
+     (região pós-descontinuidade) ao longo da normal
+     <b>
+      n
+     </b>
+     , que é perpendicular às duas superfícies. Após integrar a
+     <a class="open-asset-modal" data-target="#ModalSchemee20" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (20)
+     </a>
+     e utilizar o teorema de Gauss no segundo termo, tem-se que
+    </p>
+    <div class="row formula" id="ee32">
+     <a name="e32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/9bee659698c9d0dcdcc099c159ccb2ebe9c69f32.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Representação esquemática de uma caixa infinitamente pequena colocada paralelamente à superfície de uma descontinuidade MHD. Assumindo que a espessura da caixa também é infinitamente pequena, seu volume diminui a valores infinitamente pequenos. Figura extraída da literatura
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        6
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [6] D.A. Gurnett and A. Bhattacharjee, Introduction to Plasm Physics With Space and Laboratory Applications (Cambridge University Press, Cambridge, United Kingdom, 2005).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Aplicando o mesmo método às outras equações, as condições de salto de RH para conservação de massa, momento e energia são escritas como
+    </p>
+    <div class="row formula" id="ee23">
+     <a name="e23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/a0258708d23f68e61ca57fbae4ced5f60872ef83.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee24">
+     <a name="e24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/aa04f49ed2f559804a5504877ad4c74154f0fdb5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee25">
+     <a name="e25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/92d972a6c067352dca330c9f4a43b8cd387c0958.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os parâmetros dessas equações são os mesmos parâmetros encontrados nas equações MHD:
+     <b>
+      u
+     </b>
+     é a velocidade de fluxo do plasma no sistema de referência do meio, os índices
+     <i>
+      n
+     </i>
+     representam quantidades normais, e os outros parâmetros são parâmetros ordinários de plasma. Os termos entre colchetes [(•)] = 0 indicam que os fluxos dessas quantidades são conservados através da descontinuidade, ou seja, [Ψ] = Ψ
+     <sub>
+      2
+     </sub>
+     − Ψ
+     <sub>
+      1
+     </sub>
+     . A
+     <a class="open-asset-modal" data-target="#ModalSchemee23" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (23)
+     </a>
+     representa a conservação do fluxo de massa, a
+     <a class="open-asset-modal" data-target="#ModalSchemee24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (24)
+     </a>
+     representa a conservação de fluxo de momento, e a
+     <a class="open-asset-modal" data-target="#ModalSchemee25" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (25)
+     </a>
+     representa a conservação do fluxo de energia.
+    </p>
+    <p>
+     As equações representadas acima podem ser escritas em uma forma ainda mais conveniente. O produto escalar da
+     <a class="open-asset-modal" data-target="#ModalSchemee24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (24)
+     </a>
+     com os vetores unitários n̂ e t̂ geram as
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (27)
+     </a>
+     e (
+     <a class="open-asset-modal" data-target="#ModalSchemee28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      28
+     </a>
+     ) mostradas abaixo. As equações de Maxwell requerem que a componente normal do campo magnético e a componente tangencial do campo elétrico sejam conservadas através da superfície da descontinuidade. Então, um conjunto completo das condições de salto de RH é dado por
+    </p>
+    <div class="row formula" id="ee26">
+     <a name="e26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/9f5caa1512f8d2de04a6be74fe75f56e0b2da4cf.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee27">
+     <a name="e27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/bf331cabc2fb96ad2b364174ccdbaa7c41fbd388.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee28">
+     <a name="e28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/1ad74a2f1c7ea6bc0f3890b8c23e422ade383b2a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee29">
+     <a name="e29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/62078704c75813c60ca8ccb54d71b979c926f252.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee30">
+     <a name="e30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/c4965bfb5d311b20cf551f2d6b229f196fea9ed4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee31">
+     <a name="e31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/e55d462a58210823ef75e6e37fa3c8c030dd0aca.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     É importante aqui mencionar que as ondas de choque MHD correspondem ao tipo mais complexo de descontinuidades MHD, devido ao fato de que todos os parâmetros do plasma representados pelas equações de RH podem variar. As outras descontinuidades do vento solar são a descontinuidade de contato (DC), a descontinuidade tangencial (DT)e a descontinuidade rotacional (DR). Essas descontinuidades MHD foram primeiro sugeridas teoricamente
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [30] L.D. Landau and E.M. Lifshitz, Electrodynamics of Continuous Media (Pergamon Press, New York, 1960).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Diferentes descontinuidades MHD tem sido observadas por satélites no vento solar e suas propriedades tem sido discutidas por diversos autores
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] D.A. Gurnett and A. Bhattacharjee, Introduction to Plasm Physics With Space and Laboratory Applications (Cambridge University Press, Cambridge, United Kingdom, 2005).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [31] D.S. Colburn and C.P. Sonett, Space Sci. Rev. 439, 506 (1966).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       32
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [32] B.T. Tsurutani, G.S. Lakhina, O.P. Verkhoglyadova, W.D. Gonzalez, E. Echer and F.L. Guarnieri, J. Atmos. Sol. Terr. Phys. 73, 5 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Não há fluxo de plasma através da superfície de uma DC, o que implica que a velocidade normal
+     <i>
+      v
+      <sub>
+       n
+      </sub>
+     </i>
+     é nula. Entretanto, a densidade de plasma sofre saltos na superfície de DCs, ou seja,
+     <i>
+      ρ
+     </i>
+     ≠ 0. No caso particular de uma DC em que
+     <i>
+      B
+      <sub>
+       n
+      </sub>
+     </i>
+     = 0, esta descontinuidade é denominada DT. Essa diferença foi observada usando dados do satélite Mariner 5
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       33
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [33] E.J. Smith, Space Sci. Rev. 34, 101 (1983).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Em uma DT, o fluxo de plasma e campo magnético são paralelos à superfície da descontinuidade. Uma DR não tem saltos na densidade do plasma, ou seja,
+     <i>
+      ρ
+     </i>
+     = 0, mas plasma flui através da superfície de uma DR. A pressão não muda através da superfície de uma DR, ou seja
+     <i>
+      v
+      <sub>
+       n
+      </sub>
+     </i>
+     ≠ 0. A
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     resume as principais propriedades de DCs, DTs, DRs e ondas de choque. DCs são muito mais difíceis de serem identificadas devido à rápida difusão do plasma ao longo das linhas de campo magnético em sua superfícies, torando o salto muito tênue
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [31] D.S. Colburn and C.P. Sonett, Space Sci. Rev. 439, 506 (1966).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . No entanto, a possibilidade de observações de DCs tem sido discutida mais recentemente em
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       34
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [34] W.-C. Hsieh, J.-H. Shue, J.-K. Chao, T.-C. Tsai, Z. Nĕmĕcek and J. ̆Safránková, Geophys. Res. Lett. 41, 8228 (2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Devido a raridade de suas identificações e, consequentemente, suas observações, descontinuidades no vento solar não fazem parte no escopo deste artigo. Portanto, a partir de agora, somente ondas de choque MHD se propagando no espaço interplanetário serão consideradas em nossa análise de descontinuidades MHD.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Classificação das descontinuidades MHD de acordo com a componente normal da velocidade, componente normal do campo magnético, e variações da densidade do plasma através da descontinuidade.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Tipos e fontes de choques interplanetários
+    </h1>
+    <h2>
+     4.1. Tipos de choques
+    </h2>
+    <p>
+     A sequência da discussão sobre os tipos e classificações de choques é baseada em descrições encontradas na literatura
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] L.F. Burlaga, Interplanetary Magnetohydrodynamics (Oxford University Press, New York, 1995).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [30] L.D. Landau and E.M. Lifshitz, Electrodynamics of Continuous Media (Pergamon Press, New York, 1960).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , e em uma revisão recente
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       32
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [32] B.T. Tsurutani, G.S. Lakhina, O.P. Verkhoglyadova, W.D. Gonzalez, E. Echer and F.L. Guarnieri, J. Atmos. Sol. Terr. Phys. 73, 5 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Como já foi abordado, o vento solar tem velocidades típicas diferentes. As velocidades magnetossônicas dependem tanto da velocidade do som quanto da velocidade de Alfvén. Quando a velocidade relativa do choque, calculada no sistema de referência do mesmo, é maior do que a velocidade magnetossônica do meio, o choque é classificado como rápido. No caso contrário, o choque é classificado como lento. Se o choque se propaga na direção oposta do Sol, o choque é classificado como progressivo. Entretanto, se o choque se propaga em direção ao Sol, ele é classificado como reverso. No sistema de referência da Terra (ou de um satélite), todos os choques se propagam na direção oposta ao Sol porque todos os choques são arrastados pelo vento solar
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] L.F. Burlaga, Interplanetary Magnetohydrodynamics (Oxford University Press, New York, 1995).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Assim, choques podem ser classificados como choque reverso rápido/lento (do inglês
+     <i>
+      fast/slow reverse shock
+     </i>
+     ) e choque progressivo rápido/lento (do inglês
+     <i>
+      fast/slow forward shock
+     </i>
+     ). A
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     mostra qualitativamente como os parâmetros do plasma variam após a ocorrência de choques. No caso de choques interplanetários se propagando na heliosfera, choques rápidos e progressivos são mais frequentes e causam mais perturbações na magnetosfera da Terra
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       35
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [35] D.B. Berdichevsky, A. Szabo, R.P. Lepping, A.F. Viñas and F. Mariani, J. Geophys. Res. 105, 289 (2000).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       36
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [36] S. Jurac, J.C. Kasper, J.D. Richardson and A.J. Lazarus, Geophys. Res. Lett. 29, 101 (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Densidade do plasma, campo magnético, temperatura e velocidade têm saltos positivos em choques progressivos rápidos. Em todos os casos, a velocidade do choque é medida no sistema de referência da Terra ou de satétites que observam o choque.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Variações artificiais dos parâmetros
+      <i>
+       n, P, B
+      </i>
+      e
+      <i>
+       v
+      </i>
+      do plasma e campo magnético interplanetários. Os painéis superiores indicam: esquerda, choque rápido progressivo, e direita, choque lento progressivo. Os painéis inferiores indicam: esquerda, choque rápido reverso, e direita, choque lento reverso.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     representa um choque rápido progressivo real observado pelo satélite ACE em 23 de junho de 2000. Tipicamente, saltos nos parâmetros de plasma e campo magnético associados a choques rápidos progressivos são muito abruptos, como pode ser visto na mesma figura, de cima para baixo: campo magnético total (em nT), pressão térmica do plasma (em pPa), densidade numérica de partículas (em cm
+     <sup>
+      -3)
+     </sup>
+     , velocidade (km/s) e pressão dinâmica, proporcional a
+     <i>
+      ρv
+     </i>
+     <sup>
+      2
+     </sup>
+     , e dada em nPa. O aumento da pressão dinâmica é um resultado da compressão da magnetosfera pelo choque. Tal efeito eventualmente desencadeia uma grande variedade de fenômenos que podem ser medidos na superfície da Terra por magnetômetros.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Um choque progressivo rápido observado pelo satélite ACE no dia 23 de junho de 2000 às 1226 UT. Saltos em todos os parâmetros do plasma são do tipo degraus e positivos. O aumento da pressão dinâmica
+      <i>
+       ρv
+      </i>
+      <sup>
+       2
+      </sup>
+      também indica a ocorrência de um choque interplanetário.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como já foi previamente discutido, a presença do vetor campo magnético no plasma espacial introduz uma complexidade adicional em relação a um gás ordinário porque o ângulo entre o vetor campo magnético e a normal do choque desempenha um papel importante na determinação dos parâmetros do plasma nas regiões pré-choque e pós-choque. Assim, um choque interplanetário pode ser classificado como perpendicular, oblíquo ou paralelo
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] L.F. Burlaga, Interplanetary Magnetohydrodynamics (Oxford University Press, New York, 1995).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [30] L.D. Landau and E.M. Lifshitz, Electrodynamics of Continuous Media (Pergamon Press, New York, 1960).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . No primeiro caso, o ângulo entre o vetor campo magnético e a normal do choque, ou oblicidade
+     <i>
+      θ
+      <sub>
+       Bn
+      </sub>
+     </i>
+     , e 90°. No segundo caso,
+     <i>
+      θ
+      <sub>
+       Bn
+      </sub>
+     </i>
+     é 45°. Quando esse ângulo assume um valor de 0°, o choque é classificado como paralelo. A
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     mostra os vetores campo magnético e velocidade no sistema de referência do choque no caso de um choque rápido progressivo. No painel superior da
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5 (a)
+     </a>
+     , o campo magnético está no plano perpendicular ao plano que contém a normal do choque. O campo magnético na região pós-choque aumenta e a velocidade diminui. O mesmo ocorre no caso de um choque oblíquo, como mostrado no painel inferior (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      b
+     </a>
+     ) da mesma figura.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Representações esquemática de choques rápidos progressivos no sistema de referência do choque. Painel (a) representa um choque perpendicular no qual o vetor campo magnético pertence a um plano perpendicular à normal do choque, ou o plano tangencial. Nesse caso, a magnitude do campo magnético na região pós-choque aumenta em relação á magnitude do campo magnético na região pré-choque. O contrário ocorre com a velocidade. Painel (b) mostra um choque oblíquo, com o campo magnético disposto nos dois planos. A velocidade do choque aumenta nesse caso. A normal do choque é definida apontando para a região préchoque, ou a região de menor entropia. Figura extraída da literatura
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        28
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [28] L.F. Burlaga, Interplanetary Magnetohydrodynamics (Oxford University Press, New York, 1995).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      .
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.2. Fontes de choques interplanetários
+    </h2>
+    <p>
+     As duas principais fontes de choque interplanetários são as ejeções de massa coronal (CMEs)
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [37] J.T. Gosling, in: N. Crooker, J.A. Jocelyn, and J. Feynman, eds, Coronal Mass Ejections, number Geophys. Monogr. Ser. 99 (American Geophysical Union, Washington, DC, 1997), p. 9-16.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     e regiões de interação co-rotantes (CIRs)
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       38
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [38] V.J. Pizzo, J. Geophys. Res. 96, 5405 (1991).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Uma representação esquemática de um choque interplanetário impulsionado por uma CME (ou ICME, uma CME propagando no meio interplanetário), é mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     . CMEs são formadas na coroa solar, a camada superior da atmosfera do Sol. Embora a coroa solar tenha sido observada durante eclipses solares por séculos, CMEs foram observadas somente após o advento da era espacial. Ao se propagar por todo o espaço interplanetário, descontinuidades do vento solar, ou quase sempre choques interplanetários, são formadas à frente de CMEs.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Representação esquemática da formação de um choque na parte frontal de uma ICME, como representado na literatura
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        39
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [39] T.H. Zurbuchen and I.G. Richardson, Space Sci. Rev. 123, 31 (2006).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Um exemplo de um choque interplanetário relacionado a uma CIR é representado esquematicamente pela
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     . Essa figura mostra que a geometria de CIRs pode propiciar boas condições para a formação de choques inclinados em relação à linha imaginária que liga o Sol e a Terra. Nesta figura, uma CIR é vista de cima do polo norte do Sol, olhando para baixo sobre o plano da eclíptica. Diferenças espaciais na expansão quase radial (como indicado pelas setas pretas) se acoplam com a rotação solar para produzir regiões de compressão (sombreado) e rarefações no meio interplanetário. Movimentos secundários não radiais são movidos por gradientes de pressão construídos na região de interação (setas grandes abertas). Linhas de campo magnético, que correspondem a linhas de corrente de fluxo na estrutura rotativa , são arrastadas para a configuração em espiral mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     . Choques podem ocorrer se a diferença entre as velocidade dos fluxos rápido e lento for maior do que a velocidade magnetossônica do meio.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Representação esquemática da interação entre regiões com velocidades diferentes no sistema de referência da Terra
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        38
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [38] V.J. Pizzo, J. Geophys. Res. 96, 5405 (1991).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      . Quando a diferença entre os fluxos de alta e baixa velocidade se torna maior do que a velocidade magnetosônica do meio, um choque interplanetário pode eventualmente ser formado.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Choques interplanetários impulsionados pelas perturbações solares citadas acima são diferentes entre si em vários aspectos, como, por exemplo, potencial("força") do choque, propagação radial e taxa de ocorrência ao longo do ciclo solar
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       40
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [40] J.G. Luhmann, T.-L. Zhang, S.M. Petrinec, C.T. Russell, P. Gazis and A. Barnes, J. Geophys. Res. 98, 5559 (1993).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Assim, atividade geomagnética seguida por CMEs e CIRs podem também desencadear observações distintas, como, por exemplo, intensidade e duração de tempestades geomagnéticas
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       41
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [41] J.E. Borovsky and M.H. Denton, J. Geophys. Res. 111, A7 (2006).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Muitas vezes, estruturas de choques interplanetários são concebidas como estruturas planares que se propagam no espaço interplanetário
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       42
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [42] C.T. Russell, Y.L. Wang, J. Raeder, R.L. Tokar, C.W. Smith, K.W. Ogivie, A.J. Lazarus, R.P Lepping, A. Szabo, H. Kawano, T. Mukai, S. Savin, Y.L. Yermolaev, X. Zhou and B. T. Tsurutani, J. Geophys. Res. 105, 143 (2000).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Essa estrutura permite a determinação de um vetor unitário perpendicular à superfície de choque, que aponta geralmente para o Sol, ou região pré-choque, denominada normal do choque. Normais de choques interplanetários impulsionados tanto por CMEs ou CIRs usualmente diferem na orientação
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [43] L. Jian, C.T. Russell, J.G. Luhmann and R.M. Skoug, Solar Phys. 239, 337 (2006).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       44
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [44] L. Jian, C.T. Russell, J.G. Luhmann and R.M. Skoug, Solar Phys. 239, 393 (2006).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Choques impulsionados por CMEs tendem a ter as suas normais de choque alinhadas à linha imaginária que liga o Sol e a Terra, devido às suas propagações radiais, como mostra a
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     . Por outro lado, choques impulsionados por CIRs são mais propensos a terem suas normais inclinadas em relação à linha Sol-Terra, como pode ser visto na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     . Isso acontece devido ao fato das correntes de fluxos rápidos e lentos tenderem a seguir a espiral de Parker
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       38
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [38] V.J. Pizzo, J. Geophys. Res. 96, 5405 (1991).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h2>
+     4.3. Atividade geomagnética desencadeada por choques interplanetários com inclinações diferentes
+    </h2>
+    <p>
+     Atividade geomagnética desencadeada por choques interplanetários cujas normais desempenham ângulos diferentes em relação à linha Sol-Terra tem sido estudada em anos recentes. Por exemplo, o tempo de ascensão de uma SSC mais longo do que é usualmente registrado, foi observado por magnetômetros em solo na sequência do impacto de um choque interplanetário observado no espaço interplanetário pelo satélite Wind
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       45
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [45] T. Takeuchi, C. T. Russell and T. Araki, J. Geophys. Res. 107, 1423 (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Normalmente, o tempo de ascensão de uma SSC associada a um choque interplanetário está dentro do intervalo de 4 a 10 min, mas o choque que ocorreu no dia 15 de dezembro de 1995 levou a um tempo de ascensão da SSC de aproximadamente 30 min. Os autores argumentaram que o choque teve uma normal no plano equatorial altamente inclinada em relação à linha Sol-Terra, o que levou a uma compressão assimétrica da "magnetosfera geoefetiva". Tais resultados foram mais tarde confirmados por simulações globais MHD
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       46
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [46] X.-C. Guo, Y.-Q. Hu and C. Wang, Chinese Phys. Lett. 22, 3221 (2005).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       47
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [47] C. Wang, Z.H. Huang, Y. Q. Hu and X.C. Guo. in: G. Li, G. Zank and C. T. Russell, eds, 4th Annual IGPP International Astrophysics Conference on the Physics of Collisionless Shocks AIP Conference Proceedings, Am. Inst. of Phys, p. 320-324.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Esses resultados levaram alguns desses autores a estudar tais efeitos estatisticamente no vento solar e dados geomagnéticos
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       48
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [48] C. Wang, C.X. Li, Z.H. Huang and J.D. Richardson, Geophys. Res. Lett. 33, L14104 (2006).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .. Eles descobriram que quanto mais frontalmente o choque atinge a magnetosfera, mais breve será o tempo de ascensão da SSC associada ao choque. Portanto, resultados de simulações e observações confirmaram a hipótese levantada previamente por outros autores
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       45
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [45] T. Takeuchi, C. T. Russell and T. Araki, J. Geophys. Res. 107, 1423 (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Recentemente, a geoefetividade de choques interplanetários cujas normais apresentavam diferentes orientações tem sido investigada em simulações numéricas
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] D.M. Oliveira and J. Raeder, J. Geophys. Res. 119, 8188 (2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       49
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [49] D. Oliveira and J. Raeder, in: SM41B-2232 , AGU Fall Meeting, San Francisco, CA, 2013.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       50
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [50] D.M. Oliveira and J. Raeder, in: P-MON06 , 12th International Conference on Substorms, Ise, Japan, 2014.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     e observações
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       50
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [50] D.M. Oliveira and J. Raeder, in: P-MON06 , 12th International Conference on Substorms, Ise, Japan, 2014.
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [51] D.M. Oliveira and J. Raeder, J. Geophys. Res. 120, 4313 (2015).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [52] D.M. Oliveira, J. Raeder, B.T. Tsurutani e J.W. Gjerloev, Braz. Jour. Phys. 46, 97 (2016).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       53
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [53] D.M. Oliveira, J. Raeder, B.T. Tsurutani and J.W. Gjerloev, in: SM41B-2232, AGU Fall Meeting, San Francisco, CA, 2015. 1305-17
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . No trabalho envolvendo simulações, os autores estudaram atividades geomagnéticas seguidas pelo impacto deum choque frontal e dois choques oblíquos com a magnetosfera da Terra. Um dos choques inclinados tinha um número de Mach correspondente ao dobro do número de Mach do choque frontal. Os autores reportaram que o choque frontal levou a reações geomagnéticas mais intensas, tais como intensificações de correntes alinhadas ao campo magnético e fluxo de energias aurorais, devido ao fato de que o choque frontal comprimiu a magnetosfera simetricamente por todos os lados, enquanto que o choque inclinado levou a uma compressão assimétrica da magnetosfera. Apesar do segundo choque inclinado ser duas vezes mais forte que o choque frontal, a atividade geomagnética desencadeada pelo primeiro é considerada moderada quando comparada à atividade geomagnética desencadeada pelo segundo
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       54
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [54] D.M. Oliveira, A Study of Interplanetary Shock Geoeffectiveness Controlled by Impact Angles Using Simulations and Observations (PhD thesis, University of New Hampshire, 2015).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     5. A importância de códigos MHD em investigações sobre clima espacial
+    </h1>
+    <p>
+     A magnetosfera da Terra é um ambiente de grandes proporções e consequentemente apresenta muitas dificuldades para se obter medidas de satélites simultaneamente em suas diferentes regiões. Satélites registram dados em regiões limitadas da magnetosfera. Para se obter um melhor conhecimento de como diferentes setores da magnetosfera respondem a um determinado evento, por exemplo, um choque interplanetário, pesquisadores utilizam modelos numéricos globais MHD em investigações de fenômenos relacionados ao clima espacial
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       55
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [55] J. Raeder, in: J. Buchner, C.T. Dum and M. Scholer, eds, Space Plasma Simulation (Springer Verlag, Berlin, 2003).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Existem diversos tipos de modelos MHD, mas basicamente todos eles resolvem as equações MHD em uma caixa de simulações cujas as dimensões são previamente determinadas. Propriedades de diferentes modelos MHD e seus resultados podem ser encontrados em uma revisão recente
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       56
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [56] C. Wang, X.-C. Guo, Z. Peng, B.-B. Tang, T.-R. Sun, W.-Y. Li and Y.-Q. Hu, Science China: Earth Sciences 56, 1141 (2013).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Há diversos modelos MHD utilizados por cientistas em diversos países. Os códigos MHD mais conhecidos, com o significado de suas siglas em inglês, e suas origens, são: BATS-R-US (
+     <i>
+      Block-Adaptive-Tree
+     </i>
+     Solarwind-Roe-Upwind-Scheme, University of Michigan, Estados Unidos), LFM (
+     <i>
+      Lyon-Fedder-Mobarry
+     </i>
+     , Dartmouth College, Estados Unidos), OpenGGCM(
+     <i>
+      Open Geospace General Circulation Model
+     </i>
+     , University of New Hampshire, Estados Unidos), GUMICS (
+     <i>
+      Grand-Unified Magnetosphere-Ionosphere Coupling Simulation
+     </i>
+     , Finnish Meteorological Institute, Finlândia), e PPMLR-MHD (
+     <i>
+      Piecewise Parabolic Method with a Lagrangian Remap
+     </i>
+     , China), entre outros. Todos os códigos aqui mencionados possuem características similares e diferentes, em particular a estrutura de suas grades, que dependem estritamente da região a ser investigada
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       56
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [56] C. Wang, X.-C. Guo, Z. Peng, B.-B. Tang, T.-R. Sun, W.-Y. Li and Y.-Q. Hu, Science China: Earth Sciences 56, 1141 (2013).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A maioria desses códigos pode ser compilada por requisição sob demanda no site da CCMC (
+     <i>
+      Community Coordinate Modelling Center
+     </i>
+     , em inglês)
+     <a href="http://ccmc.gsfc.nasa.gov" target="_blank">
+      ccmc.gsfc.nasa.gov
+     </a>
+     . CCMC é alocada e administrada pelo Goddard Space ight Center da NASA.
+    </p>
+    <p>
+     Usualmente, pesquisadores comparam dados de satélites com resultados de modelos numéricos na tentativa de se obter conclusões e entender processos relacionados ao acoplamento entre a magnetosfera e a ionosfera. Aqui são apresentados resultados obtidos do código numérico OpenGGCM
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       55
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [55] J. Raeder, in: J. Buchner, C.T. Dum and M. Scholer, eds, Space Plasma Simulation (Springer Verlag, Berlin, 2003).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Neste artigo, o código OpenGGCM é utilizado no estudo do impacto de um choque interplanetário rápido progressivo com a magnetosfera da Terra em simulações numéricas. O código OpenGGCM é um modelo global acoplado à magnetosfera, ionosfera e termosfera, o que cobre toda a área de interesse em clima espacial. A primeira versão do código OpenGGCM surgiu na década de 1990 na Universidade da Califórnia em Los Angeles. OpenGGCM utiliza um aspecto particular de métodos computacionais. Como o código engloba uma enorme região da magnetosfera com alta resolução, algumas rotinas do OpenGGCM devemser compiladas simultaneamente com um grande número de computadores em um espaço de tempo razoável. Para alcançar esse objetivo, o código deve ser paralelizado por MPI (
+     <i>
+      Method Parsing Interface
+     </i>
+     , do inglês). Mais informações gerais e técnicas sobre o código OpenGGCM podem ser encontradas na página wiki
+     <a href="http://openggcm.sr.unh.edu/wiki/index.php/Main_Page" target="_blank">
+      http://openggcm.sr.unh.edu/wiki/index.php/Main_Page
+     </a>
+     , e outras referências lá listadas.
+    </p>
+    <p>
+     A parte do código OpenGGCM relacionada à magnetosfera resolve as equações MHD em um problema de condições de contorno inerciais. As equações MHD são resolvidas dentro de uma região esférica de raio ∼3R
+     <sub>
+      T
+     </sub>
+     com a Terra no centro, onde R
+     <sub>
+      T
+     </sub>
+     = 6371 km é o raio da Terra. A região dentro de 3R
+     <sub>
+      T
+     </sub>
+     é tratada como uma região de acoplamento entre a magnetosfera e a ionosfera (MI) onde processos físicos que acoplam a magnetosfera ao sistema ionosfera-termosfera são parametrizados por modelos e relações simples. O sistemas ionosfera-termosfera é modelado pelo código CTIM (
+     <i>
+      Coupled Thermosphere Ionosphere Model
+     </i>
+     , em inglês) da agência norte-americana NOAA (do inglês
+     <i>
+      National Oceanic and Atmospheric Administration
+     </i>
+     )
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] T.J. Fuller-Rowell, D. Rees, S. Quegan, R.J. Moffet, M.V. Codrescu and G.H. Millward, in: R.W. Schunk, ed, STEP Report. Scientific Commitee on Solar Terrestrial Physics (Boulder, Colorado, 1996), p. 217.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       57
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [57] J. Raeder, Y. Wang and T.J. Fuller-Rowell, in: P. Song and H.J. Siscoe, eds, Space Weather, number Geophys. Monogr. Ser. 125 (American Geophysical Union, Washington, D.C., 2001), p. 377-384.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . OpenGGCM é descrito com mais detalhes na literatura
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       55
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [55] J. Raeder, in: J. Buchner, C.T. Dum and M. Scholer, eds, Space Plasma Simulation (Springer Verlag, Berlin, 2003).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     ; os leitores mais interessados são então encorajados a consultarem esses artigos para mais detalhes.
+    </p>
+    <p>
+     O código OpenGGCM utiliza uma versão modificada do sistema de coordenadas GSE (do inglês
+     <i>
+      Geocentric Solar Ecliptic
+     </i>
+     ). Nesse novo sistema decoordenadas, o eixo X aponta na direção do Sol, o eixo Y aponta na direção amanhecer-ocaso (direção oposta ao movimento da Terra em torno do Sol), e o eixo Z aponta na direção norte e perpendicular ao plano eclíptico para completar o sistema de coordenadas. Assim, ao relalizar os cálculos, OpenGGCMmodifica o sistema de coordenadas GSE de acordo com as relações
+     <i>
+      X'
+     </i>
+     = −
+     <i>
+      X
+      <sub>
+       GSE
+      </sub>
+     </i>
+     ,
+     <i>
+      Y'
+     </i>
+     = −
+     <i>
+      Y
+      <sub>
+       GSE
+      </sub>
+     </i>
+     , e
+     <i>
+      Z'
+     </i>
+     =
+     <i>
+      Z
+      <sub>
+       GSE
+      </sub>
+     </i>
+     . O domínio das simulações tipicamente é compreendido entre 30RT na direção do Sol e 3000R
+     <sub>
+      T
+     </sub>
+     na direção da magnetocauda. Para completar a caixa de simulação, o domínio geométrico se extende a 50RT nas direções Y e Z em uma compilação típica.
+    </p>
+    <p>
+     As grades utilizadas por simulações numéricas computadas pelo código OpenGGCM são denominadas grades adaptativas cartesianas (do inglês "
+     <i>
+      stretched cartesian
+     </i>
+     ")
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       55
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [55] J. Raeder, in: J. Buchner, C.T. Dum and M. Scholer, eds, Space Plasma Simulation (Springer Verlag, Berlin, 2003).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . As grades cartesianas adaptativas são adaptadas a cada caso particular de simulações devido a possibilidade de se definir as regiões onde altas definições são desejadas. Células de grades adaptativas podem ser tomadas menores em áreas com maiores resoluções. Essas regiões são localizadas tipicamente próximas da Terra e sua magnetocauda.
+    </p>
+    <p>
+     As
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 8
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     representam exemplos de grades adaptativas utilizadas em simulações do código OpenGGCM nos planos GSE modificados XY e YZ. Tais grades utilizam aproximadamente dois milhões de células. As grades reais utilizadas nas simulações abordadas nesse artigo utilizaram aproximadamente 40 milhões de células. As duas figuras mostram regiões de altas resoluções na magnetocauda e regiões próximas da Terra.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Exemplo de uma grade adaptativa cartesiana no sistemas de coordenadas modificado GSE no plano XY similar à utilizada na simulação do evento descrito neste artigo onde
+      <i>
+       X'
+      </i>
+      = −
+      <i>
+       X
+       <sub>
+        GSE
+       </sub>
+      </i>
+      . Aqui a resolução é aproximadamente vinte vezes menor do que a resolução empregada no choque evento aqui simulado. Regiões próximas da Terra e da magnetocauda são de maiores resoluções.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Exemplo de uma grade adaptativa cartesiana utilizada pelo código OpenGGCM no plano YZ em coordenadas GSE similar à utilizada no choque interplanetário aqui simulado. Note que as regiões de altas resoluções são localizadas próximas da Terra. OpenGGCM utiliza uma versão modificada do sistema de coordenadas GSE em que
+      <i>
+       Y'
+      </i>
+      = −
+      <i>
+       Y
+       <sub>
+        GSE
+       </sub>
+      </i>
+      . A resolução das simulações reais discutidas neste artigo é aproximadamente vinte vezes maior.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Mais detalhes sobre o modelo OpenGGCM, tais como equações, técnicas numéricas, condições de contorno e acoplamento entre duas diferentes regiões podem ser encontradas na literatura
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       55
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [55] J. Raeder, in: J. Buchner, C.T. Dum and M. Scholer, eds, Space Plasma Simulation (Springer Verlag, Berlin, 2003).
+       </span>
+      </span>
+     </span>
+     . OpenGGCM também tem sido discutido e sumarizado em algumas dissertações de doutorado sob supervisão do Professor Joachim Raeder da University of New Hampshire disponíveis em seu website
+     <a href="http://mhd.sr.unh.edu/%CB%9Cjraeder/tmp.homepage/?section=00theses" target="_blank">
+      http://mhd.sr.unh.edu/
+      <sub>
+       ˜
+      </sub>
+      jraeder/tmp.homepage/?section=00theses
+     </a>
+     para download.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Reação do sistema magnetosfera-ionosfera a um choque interplanetário em 23 de junho de 2000
+    </h1>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     mostra a atividade geomagnética desencadeada pelo choque interplanetário de 23 de junho de 2000 observado pelo satélite ACE. Esse choque interplanetário é o mesmo choque representado pela
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     . Esse evento foi observado por ACE às 1226 UT em (234,36.6,0.7) R
+     <sub>
+      T
+     </sub>
+     GSE no espaço interplanetário na direção do Sol. ACE registrou saltos abruptos na componente
+     <i>
+      B
+      <sub>
+       z
+      </sub>
+     </i>
+     (não mostrado aqui), campo magnético total, pressão térmica do plasma, densidade do número de partículas, velocidade do plasma, e pressão dinâmica (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     ). Aproximadamente 55 min mais tarde, o choque atingiu a magnetopausa, comprimiu a magnetosfera, e uma SSC foi detectada por magnetômetros no solo (painel do meio,
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     ). Aumento do índice AE e decréscimo do índice AL seguiram o choque interplanetário aproximadamente 1 hora depois do impacto, alcançando um valor máximo em torno de 1500 nT para AE e um valor mínimo de em torno -1000 nT para AL. A normal calculada para esse choque é (0,785; 0,153; 0,600), o que indica que o ângulo entre a normal do choque e o eixo X é de ∼140°, velocidade do choque 553,2 km/s, e número de Mach magnetosônico de 2,60. Para completar a análise dos parâmetros do choque, a razão de compressão entre as densidades do plasma depois e antes do choque é 2,62. Embora este choque tenha apresentado uma velocidade alta
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       51
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [51] D.M. Oliveira and J. Raeder, J. Geophys. Res. 120, 4313 (2015).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , nenhuma tempestade geomagnética foi registrada depois do seu impacto.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Dados do vento solar observados pelo satélite ACE e dados geomagnéticos registrados pelo WDC. O painel superior indica que ocorreu um aumento abrupto da pressão dinâmica
+      <i>
+       ρv
+      </i>
+      <sup>
+       2
+      </sup>
+      , em nPa, às 1226 UT, associado ao impacto de um choque interplanetário com a magnetosfera da Terra. Apesar do impacto ter sido causado por um cho que intenso
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        51
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [51] D.M. Oliveira and J. Raeder, J. Geophys. Res. 120, 4313 (2015).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      , uma tempestade geomagnética não foi observada nas horas que seguiram o impacto do choque. A ocorrência de um SSC foi registrada por magnetômetros no solo aproximadamente 25 min após a observação do choque por ACE, como indica o painel do meio. O indicador de SSC é o índice SYM-H, similar ao índice Dst, mas com resolução temporal de um min. O SSC é a primeira resposta da magnetosfera à sua compressão causada pelo choque interplanetário. Em algo em torno de uma hora após o choque impacto, como é visto no painel inferior, estações geomagnéticas mostram um aumento no índice AE e um decréscimo no ındice AL. Tais fenômenos indicam que atividades geomagnéticas aurorais e o desencadeamento de uma subtempestade foram desencadeadas pelo impacto do choque interplanetário com a magnetosfera da Terra.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em suas simulações numéricas, o código MHD OpenGGCM ingere os dados do satélite ACE para este choque e computa diversas quantidades físicas que acoplam a magnetosfera e a ionosfera através de correntes elétricas alinhadas ao campo magnético da Terra e precipitações aurorais
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       55
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [55] J. Raeder, in: J. Buchner, C.T. Dum and M. Scholer, eds, Space Plasma Simulation (Springer Verlag, Berlin, 2003).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Para se ter uma visão global da resposta do sistema magnetosferaionosfera ao choque interplanetário mencionado acima, diferentes quantidades computadas pelo código OpenGGCM são mostradas e discutidas a seguir.
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     mostra a resposta global da magnetosfera ao impacto do choque interplanetário. Os três primeiros painéis (linha superior) representam o campo magnético total da magnetosfera (
+     <i>
+      B
+      <sub>
+       t
+      </sub>
+     </i>
+     (
+     <i>
+      nT
+     </i>
+     ) =
+     <sub>
+      T
+     </sub>
+     na frente da Terra, e 30 R
+     <sub>
+      T
+     </sub>
+     em direção à magnetocauda. A direção Y estende-se a Y = ± 20 R
+     <sub>
+      T
+     </sub>
+     a partir da Terra. Os três painéis inferiores representam a pressão térmica, em P(pPa), para a magnetosfera da Terra no plano meridional (GSEXZ). Aqui, as dimensões da simulação são as mesmas como descrito acima, exceto que Y e Z são permutados no sistema de coordenadas GSE. As duas linhas da
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     representam três momentos distintos para B e P relacionados à interação do choque interplanetário e a magnetosfera da Terra. A primeira coluna, à s 1226 UT, mostra a magnetosferaquando o choque é observado pelo satélite ACE, e a magnetosfera ainda não foi perturbada pelo choque.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/rkvM6VpW5KgcqNqshsTHfFp/931eb61b5f2d2dd7522155aade7728561f1c3a1f.jpg" style="max-width:100%"/>
+     no plano GSE equatorial (XY). O lado diurno da magnetosfera (apontando para o Sol) corresponde aos valores positivos de X. A região de simulação estende-se a 15 R
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Resposta da magnetosfera a um choque interplanetário observado pelo satélite ACE em 23 de junho de 2000, às 1226 UT à frente da Terra, como computada pelo código OpenGGCM. Os três painéis superiores representam o campo magnético total da magnetosfera, e os três painéis inferiores representam a pressão térmica do plasma. Cada coluna representa três momentos diferentes relacionados à interação entre choque e magnetosfera: à esquerda, no momento em que ACE observa o choque e a magnetosfera não é perturbada; centro, o choque interage com a frente de choque e começa a penetrar na magnetopausa; e à direita, o choque começa efetivamente a comprimir a magnetosfera. O aumento da amplitude de campo magnético e de plasma devido a compressão são visíveis na coluna da direita. A magnetosfera interior (região amarela no painel da direita da linha superior) é deslocada em direção a Terra por cerca de 2 R
+      <sub>
+       T
+      </sub>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A coluna do meio, às 1232 UT, mostra as primeiras interações do choque com a magnetosfera. Neste momento, o choque começa a interagir com a magnetosfera atravessando a magnetopausa após atingira frente de choque. O aumento da SSC, conforme indicado pelo índice SYM-H na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     e registrado por magnetômetros no solo às 1300 UT, é um resultado da compressão da magnetosfera pelo choque. Os efeitos desta compressão são visíveis na coluna da direita da
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     com o aumento da amplitude do campo magnético e pressão térmica. A magnetosfera interior (regiões em amarelo nos painéis da linha superior) é comprimida, e a magnetopausa se move cerca de 2 RT em direção à Terra a partir do ponto subsolar. Os painéis inferiores mostram que o magnetocauda foi altamente perturbada durante a passagem do choque interplanetário em ambos os planos XY e XZ.
+    </p>
+    <p>
+     A resposta da ionosfera ao choque interplanetário é representada pela
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     . A região diurna (em direção ao Sol) corresponde à parte superior de cada painel na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     , enquanto que a região noturna corresponde à porção inferior de cada painel na mesma figura, ou região oposta ao Sol. Em todos os gráficos para a ionosfera aqui representados, os círculos tracejados indicam latitude magnética (MLAT, sigla em inglês), variando de 90° (pólo norte magnético) em intervalos de 10° até 55° MLAT. Os três painéis superiores indicam densidades de correntes alinhadas ao campo, em
+     <i>
+      µ
+     </i>
+     A/m
+     <sup>
+      2
+     </sup>
+     . Em seguida, os três painéis inferiores indicam o fluxo de energia auroral de elétrons, em W/m
+     <sup>
+      2
+     </sup>
+     , o que é um indicador de atividade auroral. Em forma similar à descrição da resposta da magnetosfera, estas quantidades ionosféricas são representadas em três instantes distintos: às 1226 UT (choque visto por ACE), 1300 UT(magnetômetros em solo registram um salto abrupto em SYM-H, ou uma SSC, como mostra a
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     ), e 1400 UT (magnetômetros de solo registram atividade geomagnética máxima). O painel esquerdo na linha superior da
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     mostra claramente as correntes não perturbadas denominadas correntes das Regiões 1 e 2
+     <sup>
+      (
+     </sup>
+     9
+     <sup>
+      )
+     </sup>
+     . Embora o choque ainda não tenha atingido a magnetosfera, alguma atividade geomagnética é visível, como mostrado na configuração das correntes alinhadas ao campo e alguma precipitação auroral no lado noturno e menor atividade no lado diurno (linha inferior, painel esquerdo). Como representado nos painéis do meio, correntes alinhadas ao campo do lado diurno aumentam e têm suas configurações ligeiramente alteradas, enquanto que a atividade auroral começa a aumentar no lado noturno da ionosfera, como pode ser visto na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     . Apesar de alguma atividade auroral estar presente no lado diurno, a maior parte dessa atividade é originada no lado noturno. Finalmente, as correntes alinhadas ao campo ainda aumentam no lado diurno, mas em menor proporção quando comparadas às anteriores, como mostra o painel da direita, na linha superior. Em seguida, na linha inferior, no painel direito, a ionosfera mostra atividade auroral intensa que começou aproximadamente uma hora antes (1300 UT). Arcos aurorais são vistos na ionosfera noturno entre 60° e 70° MLAT, o que é uma assinatura de sub-tempestades
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       58
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [58] S.-I. Akasofu, Planet. Space Sci. 12, 273 (1964).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Esta atividade auroral já era evidente devido ao aumento dos índice AE e o decréscimo do índice AL como indicado pela
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Resultados da resposta da ionosfera ao choque interplanetário de 23 de junho de 2000 como obtido a partir do código OpenGGCM. Esta segue o mesmo estilo da
+      <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig. 11
+      </a>
+      para corresntes alinhadas ao campo na linha superior e precipitação de energia auroral na linha inferior. Na primeira coluna, a ionosfera não é perturbada. Na coluna do meio, a atividade geomagnética começa a aparecer na ionosfera, especialmente no lado noturno da ionosfera como é mostrado pelo aumento da atividade auroral. Ás 1400 UT, a atividade auroral atinge o seu máximo, tal como pode ser visto em quase todo lado noturno da ionosfera entre 70° e 65° MLAT. Neste momento, magnetômetros de solo registaram valores máximos do índice AE e mínimos do índice AL, tal como indicado pela
+      <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig. 10
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Este evento mostra a importância de simulações globais MHD em investigações de fenômenos relacionados ao clima espacial. Os resultados das simulações concordam satisfatoriamente com as observações, como indicado pelos registros de atividade geomagnética e resultados das simulações para a ionosfera.
+    </p>
+    <h1 class="articleSectionTitle">
+     7. Conclusão
+    </h1>
+    <p>
+     Foram apresentados nesse artigo conceitos básicos relacionados ao clima espacial e suas eventuais consequências a equipamentos tecnológicos localizados tanto no ambiente espacial próximo da Terra quanto na sua superfície. A importância da utilização de indíces geomagnéticos para quantificar atividades geomagnéticas desencadeadas por perturbações solares, em particular perturbações relacionadas a choques interplanetários, foram brevemente revisadas. A teoria magneto-hidrodinâmica (MHD) e suas principais equações foram apresentadas. A formação de descontinuidades MHD no vento solar, especialmente as ondas de choque, foram discutidas.
+    </p>
+    <p>
+     A importância de simulações globais MHD na tentativa de compreender a interação de choques interplanetários com a magnetosfera da Terra também foi discutida. Em particular, resultados da simulação de um evento real com alta atividade geomagnética no lado noturno da ionosfera foram comparados com dados reais observados por satélites e magnetômetros na superfície da Terra. Foi mostrado que a compatibilidade entre resultados de simulações e dados reais de observações desenpenha um papel importante no entendimento de fenômenos relacionados ao clima espacial. Finalmente, a importância de simulações globais MHD no desenvolvimento de modelos para previsão de clima espacial foi destacada.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Este trabalho teve apoio financeiro parcial da Agência Espacial Norte-Americana (NASA) sob contratos NNX13AK31G e NNG11PL02A, Fundação Nacional da Ciência (NSF) sob contrato AGS1143895, do Escritório de Pesquisa Patrocinada pela Força Aérea americana (AFOSR) sob contrato FA-9550-120264, Universities Space Research Association (USRA) sob o contrato 05145.02.674.001e CNPq sob o contrato 232906/2014-9. Cálculos numéricos foram computados por Trillian, um super computador Cray XE6m-200 localizado na University of New Hampshire, Estados Unidos, financiado pela NSF MRI sob contrato PHY-1229408. Os autores agradecem as equipes dos satélites ACE e Wind e pela disponibilidade dos dados públicos. Especialmente, os autores agradecem o avaliador por suas valiosas sugestões e encorajamento em escrever este artigo no idioma português.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        M.G. Kivelson and C.T. Russell,
+        <i>
+         Introduction to Space Physics
+        </i>
+        (Cambridge University Press, Cambridge, 1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4301 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        O.R. Nelson, Revista Brasileira de Ensino de Física
+        <b>
+         35
+        </b>
+        , 3317 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        E. Echer, N.R. Rigozo, D.J. Roger Nordemann, L.E.A. Vieira, A. Prestes e H.H. De Faria, Revista Brasileira de Ensino de Física
+        <b>
+         22
+        </b>
+        , 157 (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        J.A. Eddy, Science
+        <b>
+         192
+        </b>
+        , 1189 (1976).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        D.A. Gurnett and A. Bhattacharjee,
+        <i>
+         Introduction to Plasm Physics With Space and Laboratory Applications
+        </i>
+        (Cambridge University Press, Cambridge, United Kingdom, 2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        V.M. Souza, M.V.D Silveira, D. Koga e P.R. Jauer, Revista Brasileira de Ensino de Física, in press, 2016.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        E. Echer, Revista Brasileira de Ensino de Física
+        <b>
+         32
+        </b>
+        , 2301 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        D. Oliveira, Revista Brasileira de Ensino de Física
+        <b>
+         36
+        </b>
+        , 1305 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        T.J. Fuller-Rowell, D. Rees, S. Quegan, R.J. Moffet, M.V. Codrescu and G.H. Millward, in: R.W. Schunk, ed,
+        <i>
+         STEP Report. Scientific Commitee on Solar Terrestrial Physics
+        </i>
+        (Boulder, Colorado, 1996), p. 217.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        D.M. Oliveira, E. Zesta, H.K. Connor, Y.-J. Su, E.K. Sutton, C.Y. Huang, D.M. Ober, S. Delay and P. Schuck, In
+        <i>
+         SM23B-2565
+        </i>
+        , AGU Fall Meeting, San Francisco, CA, 2015.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        J.W. Dungey, Phys. Rev. Lett.
+        <b>
+         6
+        </b>
+        , 47 (1961).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        E. Echer, W.D. Gonzalez, F.L. Guarnieri, A.D. Lago and L.E.A. Vieira, Adv. Space Res.
+        <b>
+         35
+        </b>
+        , 855 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        National Research Council (NRC), in:
+        <i>
+         Technical Report
+        </i>
+        (National Research Council, Washington, D. C., 2008), Available at http://www.nap.edu/openbook.php?record_id=12507
+        <br/>
+        <a href="http://www.nap.edu/openbook.php?record_id=12507" target="_blank">
+         » http://www.nap.edu/openbook.php?record_id=12507
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        L. Bolduc, J. Atmos. Sol. Terr. Phys.
+        <b>
+         64
+        </b>
+        , 1793 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        C.J. Schrijver, R. Dobbins, W. Murtagh and S.M. Petrinec, arXiv:1406.7024.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        R.A. Gummow and P. Eng, J. Atmos. Sol. Terr. Phys.
+        <b>
+         64
+        </b>
+        , 1755 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        D.M. Oliveira and J. Raeder, J. Geophys. Res.
+        <b>
+         119
+        </b>
+        , 8188 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        G. Rostoker, Rev. Geophys.
+        <b>
+         10
+        </b>
+        , 935 (1972).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        W.D. Gonzalez, J.A. Joselyn, Y. Kamide, H.W. Kroehl, G. Rostoker, B.T. Tsurutani and V. M. Vasylinas, J. Geophys. Res.
+        <b>
+         99
+        </b>
+        , 5771 (1994).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        E.J. Smith, J.A. Slavin, R.D. Zwickl and S.J. Bame, in: Y. Kamide and J. A. Slavin, eds,
+        <i>
+         Solar Wind and Magnetosphere Coupling
+        </i>
+        (Terra Scientific, Tokyo, 1986), p. 345.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        T. Iyemori, J. Geomagn. Geoelectr.
+        <b>
+         42
+        </b>
+        , 1249 (1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [23]
+       </sup>
+       <div>
+        T. Neil Davis and Masahisa Sugiura, J. Geophys. Res.
+        <b>
+         71
+        </b>
+        , 785 (1966).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [24]
+       </sup>
+       <div>
+        E. Costa Jr., F.J.R. Simões, F.R. Cardoso e M.V. Alves, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 2302 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [25]
+       </sup>
+       <div>
+        E. Echer, M.V. Alves and W.D. Gonzalez, Revista Brasileira de Ensino de Física
+        <b>
+         28
+        </b>
+        , 56 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [26]
+       </sup>
+       <div>
+        J.D. Jackson,
+        <i>
+         Classical Electrodynamics
+        </i>
+        (John Wiley &amp;, Inc., Hoboken, 1999).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [27]
+       </sup>
+       <div>
+        D. Burguess, in: M.G. Kivelson and C.T. Russell, eds,
+        <i>
+         Introduction to Space Plasma Physics
+        </i>
+        (Cambridge University Press, Cambridge, 1995), Chapter 5.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [28]
+       </sup>
+       <div>
+        L.F. Burlaga,
+        <i>
+         Interplanetary Magnetohydrodynamics
+        </i>
+        (Oxford University Press, New York, 1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [29]
+       </sup>
+       <div>
+        I.V. Lindell,
+        <i>
+         Methods for Electromagnetic Field Analysis
+        </i>
+        (Wiley-Blackwell, Hoboken, New Jersey, 1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [30]
+       </sup>
+       <div>
+        L.D. Landau and E.M. Lifshitz,
+        <i>
+         Electrodynamics of Continuous Media
+        </i>
+        (Pergamon Press, New York, 1960).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [31]
+       </sup>
+       <div>
+        D.S. Colburn and C.P. Sonett, Space Sci. Rev.
+        <b>
+         439
+        </b>
+        , 506 (1966).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [32]
+       </sup>
+       <div>
+        B.T. Tsurutani, G.S. Lakhina, O.P. Verkhoglyadova, W.D. Gonzalez, E. Echer and F.L. Guarnieri, J. Atmos. Sol. Terr. Phys.
+        <b>
+         73, 5
+        </b>
+        (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [33]
+       </sup>
+       <div>
+        E.J. Smith, Space Sci. Rev.
+        <b>
+         34
+        </b>
+        , 101 (1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [34]
+       </sup>
+       <div>
+        W.-C. Hsieh, J.-H. Shue, J.-K. Chao, T.-C. Tsai, Z. Nĕmĕcek and J. ̆Safránková, Geophys. Res. Lett.
+        <b>
+         41
+        </b>
+        , 8228 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [35]
+       </sup>
+       <div>
+        D.B. Berdichevsky, A. Szabo, R.P. Lepping, A.F. Viñas and F. Mariani, J. Geophys. Res.
+        <b>
+         105
+        </b>
+        , 289 (2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [36]
+       </sup>
+       <div>
+        S. Jurac, J.C. Kasper, J.D. Richardson and A.J. Lazarus, Geophys. Res. Lett.
+        <b>
+         29
+        </b>
+        , 101 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [37]
+       </sup>
+       <div>
+        J.T. Gosling, in: N. Crooker, J.A. Jocelyn, and J. Feynman, eds,
+        <i>
+         Coronal Mass Ejections, number Geophys. Monogr. Ser. 99
+        </i>
+        (American Geophysical Union, Washington, DC, 1997), p. 9-16.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [38]
+       </sup>
+       <div>
+        V.J. Pizzo, J. Geophys. Res.
+        <b>
+         96
+        </b>
+        , 5405 (1991).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [39]
+       </sup>
+       <div>
+        T.H. Zurbuchen and I.G. Richardson, Space Sci. Rev.
+        <b>
+         123
+        </b>
+        , 31 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [40]
+       </sup>
+       <div>
+        J.G. Luhmann, T.-L. Zhang, S.M. Petrinec, C.T. Russell, P. Gazis and A. Barnes, J. Geophys. Res.
+        <b>
+         98
+        </b>
+        , 5559 (1993).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [41]
+       </sup>
+       <div>
+        J.E. Borovsky and M.H. Denton, J. Geophys. Res.
+        <b>
+         111
+        </b>
+        , A7 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [42]
+       </sup>
+       <div>
+        C.T. Russell, Y.L. Wang, J. Raeder, R.L. Tokar, C.W. Smith, K.W. Ogivie, A.J. Lazarus, R.P Lepping, A. Szabo, H. Kawano, T. Mukai, S. Savin, Y.L. Yermolaev, X. Zhou and B. T. Tsurutani, J. Geophys. Res.
+        <b>
+         105
+        </b>
+        , 143 (2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [43]
+       </sup>
+       <div>
+        L. Jian, C.T. Russell, J.G. Luhmann and R.M. Skoug, Solar Phys.
+        <b>
+         239
+        </b>
+        , 337 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [44]
+       </sup>
+       <div>
+        L. Jian, C.T. Russell, J.G. Luhmann and R.M. Skoug, Solar Phys.
+        <b>
+         239
+        </b>
+        , 393 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [45]
+       </sup>
+       <div>
+        T. Takeuchi, C. T. Russell and T. Araki, J. Geophys. Res.
+        <b>
+         107
+        </b>
+        , 1423 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [46]
+       </sup>
+       <div>
+        X.-C. Guo, Y.-Q. Hu and C. Wang, Chinese Phys. Lett.
+        <b>
+         22
+        </b>
+        , 3221 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [47]
+       </sup>
+       <div>
+        C. Wang, Z.H. Huang, Y. Q. Hu and X.C. Guo. in: G. Li, G. Zank and C. T. Russell, eds,
+        <i>
+         4th Annual IGPP International Astrophysics Conference on the Physics of Collisionless Shocks
+        </i>
+        AIP Conference Proceedings, Am. Inst. of Phys, p. 320-324.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [48]
+       </sup>
+       <div>
+        C. Wang, C.X. Li, Z.H. Huang and J.D. Richardson, Geophys. Res. Lett.
+        <b>
+         33
+        </b>
+        , L14104 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [49]
+       </sup>
+       <div>
+        D. Oliveira and J. Raeder, in:
+        <i>
+         SM41B-2232
+        </i>
+        , AGU Fall Meeting, San Francisco, CA, 2013.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [50]
+       </sup>
+       <div>
+        D.M. Oliveira and J. Raeder, in:
+        <i>
+         P-MON06
+        </i>
+        , 12t
+        <sup>
+         h
+        </sup>
+        International Conference on Substorms, Ise, Japan, 2014.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [51]
+       </sup>
+       <div>
+        D.M. Oliveira and J. Raeder, J. Geophys. Res.
+        <b>
+         120
+        </b>
+        , 4313 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [52]
+       </sup>
+       <div>
+        D.M. Oliveira, J. Raeder, B.T. Tsurutani e J.W. Gjerloev, Braz. Jour. Phys.
+        <b>
+         46
+        </b>
+        , 97 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [53]
+       </sup>
+       <div>
+        D.M. Oliveira, J. Raeder, B.T. Tsurutani and J.W. Gjerloev, in:
+        <i>
+         SM41B-2232
+        </i>
+        , AGU Fall Meeting, San Francisco, CA, 2015. 1305-17
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [54]
+       </sup>
+       <div>
+        D.M. Oliveira,
+        <i>
+         A Study of Interplanetary Shock Geoeffectiveness Controlled by Impact Angles Using Simulations and Observations
+        </i>
+        (PhD thesis, University of New Hampshire, 2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [55]
+       </sup>
+       <div>
+        J. Raeder, in: J. Buchner, C.T. Dum and M. Scholer, eds,
+        <i>
+         Space Plasma Simulation
+        </i>
+        (Springer Verlag, Berlin, 2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [56]
+       </sup>
+       <div>
+        C. Wang, X.-C. Guo, Z. Peng, B.-B. Tang, T.-R. Sun, W.-Y. Li and Y.-Q. Hu, Science China: Earth Sciences
+        <b>
+         56
+        </b>
+        , 1141 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [57]
+       </sup>
+       <div>
+        J. Raeder, Y. Wang and T.J. Fuller-Rowell, in: P. Song and H.J. Siscoe, eds,
+        <i>
+         Space Weather, number Geophys. Monogr. Ser. 125
+        </i>
+        (American Geophysical Union, Washington, D.C., 2001), p. 377-384.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [58]
+       </sup>
+       <div>
+        S.-I. Akasofu, Planet. Space Sci.
+        <b>
+         12
+        </b>
+        , 273 (1964).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        09 Ago 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        15 Set 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        <img alt="Creative Common - by 4.0" src="https://licensebuttons.net/l/by/4.0/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

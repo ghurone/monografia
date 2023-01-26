@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 23 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   Dez 2001
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172001000400003" target="_blank">
+    https://doi.org/10.1590/S1806-11172001000400003
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172001000400003">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Aquisição de dados usando Logo e a porta de jogos do PC
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     C. E. Aguiar
+    </span>
+   </a>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     F. Laudares
+    </span>
+   </a>
+  </span>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Descrevemos um sistema de aquisição de dados baseado na porta de jogos do IBM-PC com plataforma Windows. Os programas de aquisição e análise são totalmente escritos na linguagem Logo. O sistema é utilizado para medir o período de um pêndulo como função da amplitude de oscilação.
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     A data acquisition system using the game port of an IBM-PC running Windows is described. The programs for data acquisition and analysis are all written in Logo. The system is used to measure the period of a pendulum as function of the oscillation amplitude.
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      Aquisição de Dados Usando Logo e a Porta de Jogos do PC
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     C. E. Aguiar e F. Laudares
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      Instituto de Física, Universidade Federal do Rio de Janeiro
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+     Cx.P. 68528, Rio de Janeiro, 21945-970, RJ
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 10 de Abril de 2001. Aceito em 3 de Janeiro 2002.
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       Descrevemos um sistema de aquisição de dados baseado na porta de jogos do IBM-PC com plataforma Windows. Os programas de aquisição e análise são totalmente escritos na linguagem Logo. O sistema é utilizado para medir o período de um pêndulo como função da amplitude de oscilação.
+      </p>
+      <p>
+       A data acquisition system using the game port of an IBM-PC running Windows is described. The programs for data acquisition and analysis are all written in Logo. The system is used to measure the period of a pendulum as function of the oscillation amplitude.
+      </p>
+     </blockquote>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      I Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O computador é um ótimo instrumento de laboratório. Ele presta-se muito bem a experiências que envolvem medidas de tempo, aquisição de dados em grandes quantidades, e tratamento de dados em tempo real [1]. Apesar de todas estas características favoráveis, os computadores têm sido pouco usados nos laboratórios didáticos. E quando isto ocorre, é quase sempre com o auxílio de "kits" pré-fabricados - pacotes de circuitos eletrônicos e programas produzidos por empresas especializadas, vendidos a preços relativamente altos, e que muitas vezes operam como verdadeiras caixas-pretas. Em geral é difícil usar estes pacotes para realizar experimentos diferentes daqueles para os quais eles foram projetados, o que limita a sua utilidade didática [2]. Esta falta de flexibilidade tem origem, em parte, nos programas de aquisição e tratamento de dados contidos nos kits, que raramente podem ser modificados ou mesmo compreendidos por professores e estudantes.
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho descrevemos como montar um sistema de aquisição de dados simples, de baixo custo, utilizável em laboratórios didáticos da escola média, e que dá a alunos e professores controle completo sobre o seu uso. O sistema está baseado na substituição do "joystick", em geral usado para controlar jogos no computador, por sensores que podem ser utilizados em uma grande variedade de experiências. A idéia de usar a interface de jogos para aquisição de dados não é nova. Entretanto, propostas anteriores [3, 4, 5] utilizavam computadores que não existem mais, como o Apple II e MSX, ou programas de aquisição escritos em linguagens pouco usadas hoje, como Pascal e Basic (que deram origem ao Delphi e VisualBasic, muito populares mas pouco apropriados ao ensino médio). Uma implementação recente desta idéia pode ser encontrada na referência [6], com programas de aquisição escritos em C e QBasic. No que se segue descreveremos como montar um sistema de aquisição de dados a partir da porta de jogos de um IBM-PC com plataforma Windows (95/98/ME), usando programas totalmente escritos em Logo. Esta é uma linguagem simples, desenvolvida para uso didático, e que freqüentemente é ensinada na escola fundamental e média. Com isto todos os aspectos do sistema que descrevemos podem ser compreendidos e modificados por estudantes e professores, proporcionando-lhes uma grande flexibilidade no planejamento e execução de experimentos. A versão do Logo que utilizamos é o SuperLogo, produzido pelo Núcleo de Informática Aplicada à Educação (NIED) da Unicamp [7]. Esta versão tem os comandos em português, e é distribuída gratuitamente via Internet. Uma proposta semelhante à deste trabalho, usando o MSWLogo (em inglês) [8], pode ser encontrada na referência [9].
+    </p>
+    <p>
+    </p>
+    <p>
+     O motivo principal para se usar a porta de jogos em um laboratório didático é a segurança e facilidade com que podemos conectar sensores a esta interface. Um joystick é essencialmente um conjunto de resistências variáveis cujos valores são lidos a cada momento pelo computador. Substituindo o joystick por um componente eletrônico cuja resistência dependa da grandeza física que queremos medir (temperatura ou intensidade luminosa, por exemplo) podemos monitorar esta grandeza, registrar a sua evolução temporal em intervalos muito pequenos, e manipular quantidades de dados que dificilmente seriam alcançáveis em um laboratório didático convencional.
+    </p>
+    <p>
+    </p>
+    <p>
+     Este artigo está organizado da seguinte maneira. Na seção II discutimos o funcionamento do joystick e da porta de jogos [10, 11]. Uma forma simples de medir tempos é apresentada na seção III. Na seção IV descrevemos sucintamente alguns sensores que podem ser conectados à porta de jogos. Na seção V mostramos um experimento realizado com o sistema. Alguns comentários gerais e conclusões estão na seção VI.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      II A porta de jogos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      II.1 O joystick
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O tipo mais comum de joystick para IBM-PC são os joysticks analógicos. Estes joysticks têm dois botões e dois potenciômetros cujas resistências vão de 0 a 100 kW (em alguns casos até 150 kW). O movimento esquerda-direita do joystick (eixo X) muda a resistência de um dos potenciômetros, e o movimento frente-trás (eixo Y) muda a resistência do outro. Em geral as resistências são nulas quando o joystick está todo para a esquerda e para a frente. Um esquema do joystick está mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     . Os dois botões estão representados pelas chaves A e B, e X e Y são os potenciômetros já mencionados. A tensão de 5 V e o aterramento não são fornecidos pelo joystick, mas pela porta de jogos à qual ele é conectado.
+    </p>
+    <div class="row fig" id="fig01">
+     <a name="fig01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      II.2 A porta de jogos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A porta de jogos do IBM-PC é uma interface para dois joysticks analógicos, embora exista a conexão para apenas um deles. O uso simultâneo de dois joysticks só é possível com um cabo especial em forma de 'Y'. O joystick é conectado à parte traseira do computador via um soquete de 15 pinos, como o mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig02" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig02">
+     <a name="fig02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig02" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A porta de jogos não faz parte da "placa mãe". Em geral ela é implementada em uma placa própria ou, mais freqüentemente, colocada na placa de som. Neste último caso o conector tem dois dos seus 15 pinos dedicados à porta MIDI (
+     <i>
+      musical instruments digital interface
+     </i>
+     ). Os outros pinos dão acesso aos quatro botões e quatro potenciômetros (dois eixos X e dois Y) correspondentes aos dois joysticks, a um potencial de +5 Volts, e a um terra. Esta porta é muito segura, mas devemos tomar cuidado com curto-circuitos entre o potencial de 5 V e o terra.
+    </p>
+    <p>
+    </p>
+    <p>
+     A função dos pinos da porta de jogos pode ser vista na
+     <a class="open-asset-modal" data-target="#ModalTabletab01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 1
+     </a>
+     . Cada um dos joysticks (que chamamos 1 e 2) tem dois botões (A e B) e dois potenciômetros (X e Y). Assim A1 é o botão A do joystick 1, X2 é o potenciômetro X do joystick 2, etc. Muitos joysticks dão acesso aos 4 botões. Nestes casos A1 e B1 referem-se aos botões principais, e A2 e B2 aos secundários.
+    </p>
+    <div class="row table" id="tab01">
+     <a name="tab01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTabletab01" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      II.3 Como a porta de jogos trabalha
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigfig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     mostra os circuitos ligados a cada um dos 15 pinos da porta de jogos. Os circuitos conectam os botões e potenciômetros dos joysticks a 8 linhas b0...b7. Estas linhas alimentam 8 bits (1 byte), numerados respectivamente de 0 a 7, colocados no endereço de entrada/saída 513 (decimal). Os bits de 4 a 7 informam o estado dos botões de forma bastante direta. Como vemos na
+     <a class="open-asset-modal" data-target="#ModalFigfig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.3
+     </a>
+     , quando um botão é pressionado o potencial na linha de saída torna-se 0 V, o que coloca o bit correspondente no valor 0. Quando o botão é solto o potencial da linha sobe para 5 V e o valor do bit passa a ser 1.
+    </p>
+    <div class="row fig" id="fig03">
+     <a name="fig03">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig03" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Os bits de 0 a 3, correspondentes às linhas b0...b3, são usados para determinar a resistência dos potenciômetros. Esta determinação é mais complicada que no caso dos botões, e é feita com o auxílio de um circuito integrado, o NE558, composto basicamente por 4 "multivibradores monoestáveis" [12]. O circuito mantém os bits 0...3 com valor zero até que se escreva algo no endereço da porta. Neste instante circuito descarrega os capacitores ligados ao potenciômetros e coloca os bits 0...3 no estado 1. Cada capacitor começa então a ser carregado através do seu potenciômetro, e o bit correspondente é mantido no valor 1 até que a tensão no capacitor atinja cerca de 3,3 V (2/3 do valor máximo 5 V). A partir daí o circuito coloca o bit de volta no estado 0. O tempo
+     <i>
+      T
+     </i>
+     durante o qual o bit permanece no estado 1 depende da resistência
+     <i>
+      R
+     </i>
+     do potenciômetro segundo a fórmula
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="014fc4012b1f6f7b8250c67bd7614f6bd00daf87">
+     <a name="014fc4012b1f6f7b8250c67bd7614f6bd00daf87">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg014fc4012b1f6f7b8250c67bd7614f6bd00daf87" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/014fc4012b1f6f7b8250c67bd7614f6bd00daf87.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Encontrando este tempo obtemos a resistência do potenciômetro. A medida de tempo pode ser feita com um programa simples de contagem [5, 9]. Tal programa deve ser muito rápido, e portanto não pode ser escrito em uma linguagem interpretada como Logo. Por isto o SuperLogo tem um comando especial para determinar o tempo
+     <i>
+      T
+     </i>
+     , que será discutido mais à frente. Observe que com
+     <i>
+      R
+     </i>
+     =100 kW gastamos aproximadamente 1 ms em uma medida de resistência. Note também que se não houver nada conectado a uma determinada linha (
+     <i>
+      R
+     </i>
+     = ¥) o bit correspondente pode ficar indefinidamente com valor 1.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalTabletab02" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 2
+     </a>
+     resume como o estado dos joysticks é mapeado no byte da porta. A numeração dos bits, de 0 a 7, corresponde à significância deles no byte (os de menor índice estão "à direita" dos de maior índice).
+    </p>
+    <div class="row table" id="tab02">
+     <a name="tab02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTabletab02" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      II.4 Lendo a porta de jogos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Muitas versões do Logo têm comandos que lêem a porta de jogos. No SuperLogo isto é feito com portaentradab 513, onde 513 é o endereço da porta de jogos (512 também serve). Se tivermos um joystick conectado à porta e executarmos a instrução
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="5bd2c81460afe74c06688b4f0b5ae112ac468538">
+     <a name="5bd2c81460afe74c06688b4f0b5ae112ac468538">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg5bd2c81460afe74c06688b4f0b5ae112ac468538" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/5bd2c81460afe74c06688b4f0b5ae112ac468538.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     obteremos o byte da porta, ou melhor, a sua representação decimal (um número decimal entre 0 e 255). Para obter o estado de cada uma das 8 linhas da porta (o valor de cada bit) devemos converter este número para a representação binária. A maneira mais eficiente de fazer isto é usar a operação lógica
+     <i>
+      E
+     </i>
+     , definida por: 0
+     <i>
+      E
+     </i>
+     0 = 0, 0
+     <i>
+      E
+     </i>
+     1 = 0, 1
+     <i>
+      E
+     </i>
+     0 = 0, 1
+     <i>
+      E
+     </i>
+     1 = 1. Existe no SuperLogo uma operação, bite, que toma dois números inteiros como argumento e aplica a operação
+     <i>
+      E
+     </i>
+     a cada par de bits de mesma significância (mesma "posição" no byte). Por exemplo, aplicando bite aos números binários 1100 e 1010 obtemos 1000. Como o Logo só usa a representação decimal, esta operação é realizada com a instrução
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="474d645e715c9de8a944ee024ab3c718b35c3800">
+     <a name="474d645e715c9de8a944ee024ab3c718b35c3800">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg474d645e715c9de8a944ee024ab3c718b35c3800" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/474d645e715c9de8a944ee024ab3c718b35c3800.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     já que 12
+     <sub>
+      <i>
+       dec
+      </i>
+     </sub>
+     = 1100
+     <sub>
+      <i>
+       bin
+      </i>
+     </sub>
+     e 10
+     <sub>
+      <i>
+       dec
+      </i>
+     </sub>
+     = 1010
+     <sub>
+      <i>
+       bin
+      </i>
+     </sub>
+     . A resposta que o Logo apresenta é 8, pois 8
+     <sub>
+      <i>
+       dec
+      </i>
+     </sub>
+     = 1000
+     <sub>
+      <i>
+       bin
+      </i>
+     </sub>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Então, se quisermos saber qual é o
+     <i>
+      N
+     </i>
+     -ésimo bit (
+     <i>
+      N
+     </i>
+     = 0, 1, 2¼) de um número
+     <i>
+      X
+     </i>
+     , basta fazer o bite de 2
+     <sup>
+      <i>
+       N
+      </i>
+     </sup>
+     com
+     <i>
+      X
+     </i>
+     . Todos os bits de 2
+     <sup>
+      <i>
+       N
+      </i>
+     </sup>
+     valem 0, com exceção do
+     <i>
+      N
+     </i>
+     -ésimo bit que vale 1. Portanto, se o
+     <i>
+      N
+     </i>
+     -ésimo bit de
+     <i>
+      X
+     </i>
+     for 0 o resultado da operação será 0. Se o
+     <i>
+      N
+     </i>
+     -ésimo bit for 1 o resultado será 2
+     <sup>
+      <i>
+       N
+      </i>
+     </sup>
+     . Por exemplo, para saber se o botão A1 (que corresponde ao bit 4) está apertado ou não, tomamos o bite de 2
+     <sup>
+      4
+     </sup>
+     = 16 com a leitura da porta:
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="6fa4d9879cc42bc1915ef87b8b90e8ab9f2f68a5">
+     <a name="6fa4d9879cc42bc1915ef87b8b90e8ab9f2f68a5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg6fa4d9879cc42bc1915ef87b8b90e8ab9f2f68a5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/6fa4d9879cc42bc1915ef87b8b90e8ab9f2f68a5.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Se o botão estiver apertado o resultado será 0, e se ele estiver livre o resultado será 1. Para saber o valor de cada um dos 8 bits da porta, basta aplicar o procedimento acima para
+     <i>
+      N
+     </i>
+     = 0, 1, 2, 3¼7, o que corresponde a usar 1, 2, 4, 8¼128 em bite. Isto pode ser feito com a instrução
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="6b068a66d7ab03a5fed8ffc64718bc601981c898">
+     <a name="6b068a66d7ab03a5fed8ffc64718bc601981c898">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg6b068a66d7ab03a5fed8ffc64718bc601981c898" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/6b068a66d7ab03a5fed8ffc64718bc601981c898.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     que produz uma lista com o valor dos oito bits da porta.
+    </p>
+    <p>
+    </p>
+    <p>
+     Com estes procedimentos podemos usar os botões do joystick para controlar programas Logo. E o que é mais importante, podemos monitorar sensores externos. Por exemplo, fotodiodos e fototransistores são componentes eletrônicos que conduzem corrente dependendo da incidência de luz (veja a seção IV). Substituindo um botão do joystick por algum destes fotosensores, podemos usar o computador para monitorar se o sensor está sendo iluminado ou não.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      II.5 Medindo resistências com a porta de jogos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Como já comentamos, a resistência de um potenciômetro do joystick é obtida medindo-se o tempo que o bit correspondente permanece com valor 1. Este tempo é tipicamente menor que alguns milisegundos. Fazer um programa em Logo para medi-lo não é eficiente, pois tal programa seria muito lento. Para realizar esta medida o SuperLogo tem uma função especial, portajoystick :M. Esta fornece o tempo que um bit da porta de jogos, especificado pela variável M, permanece no estado 1. Os valores M = 1, 2, 4, 8 correspondem aos bits 0, 1, 2, 3, ou seja, aos potenciômetros X1, Y1, X2, Y2. Por exemplo, para medir a resistência de X1 executamos a instrução
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="6bfca28974f71f0784f3ebfa33b498d467972d63">
+     <a name="6bfca28974f71f0784f3ebfa33b498d467972d63">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg6bfca28974f71f0784f3ebfa33b498d467972d63" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/6bfca28974f71f0784f3ebfa33b498d467972d63.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Devemos ter algum cuidado ao tentar medir os potenciômetros X2 e Y2. Como eles quase nunca estão ligados à porta (pois o segundo joystick raramente é usado) a resistência que é encontrada é infinita, e o tempo a ser medido também. Neste caso o comando portajoystick fornece o valor -1, mas pode levar muito tempo (até alguns minutos, dependendo do computador) para fazer isto.
+    </p>
+    <p>
+    </p>
+    <p>
+     O tempo fornecido por portajoystick não está em unidades predeterminadas. Mas, como já vimos, este tempo varia linearmente com a resistência, o que é suficiente para muitas aplicações. De qualquer forma, usando resistências conhecidas é possível calibrar a saída de portajoystick. Com este comando podemos utilizar o "manche" do joystick para controlar programas Logo. E, principalmente, podemos monitorar a resistência de sensores externos como fotoresistores e termistores (resistores dependentes de luz e temperatura, veja a seção IV) colocados no lugar dos potenciômetros.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      III A medida de tempo
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Agora que já sabemos ler a porta de jogos, o próximo passo é registrar a evolução temporal dos sinais que ela recebe. Para isto precisamos aprender a medir o instante em que o sinal foi lido. No SuperLogo isto pode ser feito com o comando tempomili, que fornece o tempo em milisegundos decorrido desde que o sistema operacional (Windows) foi iniciado. Executando a instrução
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="bd87e2cbde9dec3e019baf8fdca21d40c3800c0e">
+     <a name="bd87e2cbde9dec3e019baf8fdca21d40c3800c0e">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgbd87e2cbde9dec3e019baf8fdca21d40c3800c0e" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/bd87e2cbde9dec3e019baf8fdca21d40c3800c0e.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     obtemos a quantos milisegundos o Windows está operando. É importante saber que o tempo fornecido por tempomili não é atualizado a cada milisegundo, mas em intervalos cuja magnitude depende do computador e da configuração do sistema. Resoluções temporais típicas de tempomili estão na faixa de 3 a 15 ms.
+    </p>
+    <p>
+    </p>
+    <p>
+     Quando lemos apenas o estado dos botões, é possível obter uma resolução temporal melhor do que a citada acima. Quer o botão esteja aberto ou fechado, uma medida do seu estado leva sempre o mesmo tempo para ser realizada. Como este tempo é bem menor que a resolução temporal de tempomili, podemos usar a contagem de medidas como relógio. O intervalo de tempo entre duas medidas sucessivas é calculado dividindo o tempo total de aquisição, que pode ser medido com tempomili, pelo número de medidas realizadas. Este procedimento não pode ser utilizado se lemos um potenciômetro (via portajoystick) pois, como já vimos, neste caso a duração da medida depende do valor da resistência.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      IV Conectando sensores à porta de jogos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     No lugar dos botões e potenciômetros do joystick, podemos conectar à porta de jogos componentes eletrônicos de resistência variável e usá-los como sensores. Nesta seção discutiremos rapidamente alguns desses componentes: o termistor NTC, o fotoresistor, o fotodiodo e o fototransistor [12, 13].
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      IV.1 Termistores
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O termistor é um componente eletrônico cuja resistência varia consideravelmente com a temperatura. Em geral os termistores são do tipo NTC (
+     <i>
+      negative temperature coefficient
+     </i>
+     ), para os quais a resistência diminui com o aumento da temperatura. Um termistor NTC é feito de material semicondutor, e é tipicamente utilizado na faixa de temperaturas entre -50
+     <sup>
+      °
+     </sup>
+     C e 150
+     <sup>
+      °
+     </sup>
+     C.
+    </p>
+    <p>
+    </p>
+    <p>
+     A relação entre a resistência e a temperatura absoluta de um NTC (curva característica
+     <i>
+      R
+     </i>
+     /
+     <i>
+      T
+     </i>
+     ) é altamente não-linear, e pode ser aproximada por
+     <i>
+      R
+     </i>
+     = aexp(b/
+     <i>
+      T
+     </i>
+     ). Medindo a resistência para duas temperaturas diferentes podemos obter as constantes a e b e construir uma curva de calibração razoavelmente precisa. A resistência de um NTC é geralmente especificada a 25
+     <sup>
+      °
+     </sup>
+     C, e na maioria dos casos está entre 100 W e 100 kW. Tipicamente, a sensibilidade a 25
+     <sup>
+      °
+     </sup>
+     C é da ordem de -4% /
+     <sup>
+      °
+     </sup>
+     C.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      IV.2 Fotoresistores
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O fotoresistor, também chamado de célula fotocondutora, fotocélula, ou LDR (
+     <i>
+      light dependent resistor
+     </i>
+     ) possui uma resistência que depende da quantidade de luz que ele recebe. No escuro os fotoresistores têm resistência elevada, tipicamente na faixa de MW. Quando são expostos à luz, a resistência diminui por ordens de magnitude. Sua desvantagem como sensor está na lentidão de resposta, que chega a décimos de segundo - uma fotocélula pode não perceber o "pisca-pisca" de 60 Hz de uma lâmpada fluorescente.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      IV.3 Fotodiodos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O fotodiodo é um diodo semicondutor em que a junção está exposta à luz. A corrente reversa de um fotodiodo aumenta linearmente com a incidência de luz, como pode ser visto nas curvas características
+     <i>
+      I
+     </i>
+     /
+     <i>
+      V
+     </i>
+     da
+     <a class="open-asset-modal" data-target="#ModalFigfig04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     . No escuro a corrente reversa é muito pequena, geralmente da ordem de nA. Observe que as curvas características passam pelo quarto quadrante (
+     <i>
+      V
+     </i>
+     ×
+     <i>
+      I
+     </i>
+     &lt; 0), de modo que o fotodiodo pode produzir energia elétrica - as células solares são um tipo de fotodiodo.
+    </p>
+    <div class="row fig" id="fig04">
+     <a name="fig04">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig04" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Os fotodiodos são úteis como sensores de radiação visível e infravermelha. A resposta espectral (sensibilidade a diferentes comprimentos de onda) de um fotodiodo de silício atinge o máximo em torno 900 nm, no infravermelho. Alguns fotodiodos têm coberturas que filtram a luz visível ou a radiação infravermelha.
+    </p>
+    <p>
+    </p>
+    <p>
+     As correntes obtidas com um fotodiodo são geralmente baixas, menores que 100 mA para uma incidência luminosa de 1 mW/cm
+     <sup>
+      2
+     </sup>
+     . Com isto não podemos usar um fotodiodo diretamente no lugar de um botão do joystick. Como vemos na
+     <a class="open-asset-modal" data-target="#ModalFigfig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.3
+     </a>
+     , com o botão apertado passam pelo circuito cerca de 5 mA (na verdade  ~ 4 mA já são interpretados como "botão apertado" pela porta). Para obter correntes desta magnitude temos que amplificar o sinal do fotodiodo, ligando-o a um transistor como está mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.5
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig05">
+     <a name="fig05">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig05" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      IV.4 Fototransistores
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Os fototransistores são transistores com a junção coletor-base exposta à luz. Fototransistores são bem mais sensíveis que fotodiodos, gerando correntes da ordem de mA quando iluminados a 1 mW/cm
+     <sup>
+      2
+     </sup>
+     . Um fototransistor com "ganho" suficientemente alto pode ser usado diretamente no lugar de um botão do joystick. Caso contrário um circuito semelhante ao da
+     <a class="open-asset-modal" data-target="#ModalFigfig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.5
+     </a>
+     (um
+     <i>
+      fotodarlington
+     </i>
+     ) pode ser usado para amplificar a corrente.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      V Aplicação: Período do pêndulo a grandes oscilações
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      V.1 A montagem do experimento
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O objetivo da experiência é medir o período de um pêndulo como função da amplitude de oscilação. O aparato utilizado está mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig06" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.6
+     </a>
+     . O movimento do pêndulo é monitorado a partir das interrupções que a sua passagem causa no feixe luminoso que vai da lâmpada ao fotosensor.
+    </p>
+    <div class="row fig" id="fig06">
+     <a name="fig06">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig06" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Usamos como detetor o conjunto fotodiodo-transistor discutido na seção IV.3, iluminado por um LED infravermelho obtido em um controle remoto de TV. O fotodiodo foi tirado de um
+     <i>
+      mouse
+     </i>
+     sem uso, e a amplificação foi feita por um transistor NPN de uso genérico (BC548C). A
+     <a class="open-asset-modal" data-target="#ModalFigfig07" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     mostra o sistema usado. O transistor está ligado à porta de jogos via os pinos 2 e 4 do conector, que correspondem ao botão A1 do joystick e ao terra (veja a seção II.2). Assim, quando o fotodiodo estiver no escuro, ou recebendo uma iluminação insuficiente, o transistor se comportará como uma chave aberta. Se o fotodiodo receber um sinal luminoso mais forte o transistor permitirá a passagem de uma corrente alta entre o pino 2 e o terra, simulando o apertar do botão do joystick. Portanto, quando o pêndulo passa entre o LED e o fotodiodo, deixando este último na sombra, o bit 4 da porta vale 1. Quando a luz atinge o fotodiodo o bit 4 passa a valer 0.
+    </p>
+    <div class="row fig" id="fig07">
+     <a name="fig07">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig07" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Ao oscilar, o pêndulo gera então um sinal como o mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig08" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.8
+     </a>
+     . Registrando este sinal podemos obter o período da oscilação, e o tempo D
+     <i>
+      t
+     </i>
+     durante o qual o pêndulo esteve em frente ao fotosensor. A velocidade do pêndulo neste ponto é dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="08f78a955e76299145377239fe3ef4fac737d819">
+     <a name="08f78a955e76299145377239fe3ef4fac737d819">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg08f78a955e76299145377239fe3ef4fac737d819" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/08f78a955e76299145377239fe3ef4fac737d819.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     em que
+     <i>
+      D
+     </i>
+     é o diâmetro do objeto oscilante ou, mais exatamente, a distância que este objeto percorre enquanto a porta recebe "1" como sinal. Esta distância pode ser medida independentemente, o que permite calcular
+     <i>
+      V
+     </i>
+     <sub>
+      0
+     </sub>
+     . Como o fotosensor está em frente à posição de equilíbrio do pêndulo,
+     <i>
+      V
+     </i>
+     <sub>
+      0
+     </sub>
+     é a velocidade máxima da oscilação. A velocidade angular correspondente é
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="1f509e3d6815699f73ba972e0da0b966e179b597">
+     <a name="1f509e3d6815699f73ba972e0da0b966e179b597">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg1f509e3d6815699f73ba972e0da0b966e179b597" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/1f509e3d6815699f73ba972e0da0b966e179b597.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     em que
+     <i>
+      R
+     </i>
+     é a distância do feixe luminoso ao ponto de fixação do pêndulo. Na nossa montagem
+     <i>
+      D
+     </i>
+     = 3,3 ± 0.1 cm e
+     <i>
+      R
+     </i>
+     = 48,8 ± 0.5 cm. Conhecendo W
+     <sub>
+      0
+     </sub>
+     podemos calcular o ângulo máximo de oscilação, Q
+     <sub>
+      <i>
+       max
+      </i>
+     </sub>
+     , dado por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="0d13be9cd9043fef230f52f7566fbc8469309ae9">
+     <a name="0d13be9cd9043fef230f52f7566fbc8469309ae9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg0d13be9cd9043fef230f52f7566fbc8469309ae9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/0d13be9cd9043fef230f52f7566fbc8469309ae9.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      R
+     </i>
+     <sub>
+      <i>
+       G
+      </i>
+     </sub>
+     é o raio de giração do pêndulo e
+     <i>
+      g
+     </i>
+     é a aceleração da gravidade.
+    </p>
+    <div class="row fig" id="fig08">
+     <a name="fig08">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig08" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      V.2 O programa de aquisição
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O programa de aquisição que utilizamos (aquisicao) está listado abaixo. O parâmetro de entrada tmax determina a duração da aquisição de dados em milisegundos. O programa lê continuamente o tempo e o estado do botão A1, que corresponde ao pino da interface de jogos ligado ao fotosensor. A cada leitura os resultados são colocados nas variáveis t e a1, que em seguida são escritas em um arquivo chamado dados.txt. O valor de a1 é 0 quando o sensor está iluminado e 16 quando ele está no escuro.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="953ce08ab41f9d9574d3095b0b4734de0bf101d1">
+     <a name="953ce08ab41f9d9574d3095b0b4734de0bf101d1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg953ce08ab41f9d9574d3095b0b4734de0bf101d1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/953ce08ab41f9d9574d3095b0b4734de0bf101d1.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para obter o período e amplitude de cada oscilação do pêndulo devemos analisar os dados contidos no arquivo gerado pelo programa de aquisição. Isto é feito pelo programa analise, mostrado no Apêndice, que calcula o período e a velocidade angular a cada passagem do pêndulo pela posição de equilíbrio.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      V.3 Resultados experimentais
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Mostramos a seguir os resultados de um experimento em que o movimento do pêndulo foi acompanhado durante 4 minutos. A
+     <a class="open-asset-modal" data-target="#ModalFigfig09" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.9
+     </a>
+     mostra a velocidade angular máxima W
+     <sub>
+      0
+     </sub>
+     como função do tempo. O amortecimento da oscilação causado pelas forças de atrito é bem visível. O período das oscilações como função do tempo está apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigfig10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.10
+     </a>
+     . A diminuição do período reflete a sua dependência na amplitude que, como vimos, é gradativamente reduzida pelos atritos. A estabilização do período que ocorre após algum tempo corresponde à entrada do pêndulo no "regime de pequenas oscilações".
+    </p>
+    <div class="row fig" id="fig09">
+     <a name="fig09">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig09" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="fig10">
+     <a name="fig10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigfig11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.11
+     </a>
+     mostra como o período depende da velocidade angular máxima. As oscilações de maior amplitude têm W
+     <sub>
+      0
+     </sub>
+     » 4 rad/s, o que corresponde a Q
+     <sub>
+      max
+     </sub>
+     » 50
+     <sup>
+      °
+     </sup>
+     . Para estas amplitudes o período é cerca de 0,08 s maior que para as pequenas oscilações, um aumento da ordem de 5%.
+    </p>
+    <div class="row fig" id="fig11">
+     <a name="fig11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para as pequenas oscilações sabemos que o período é dado por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="43c910be6482831665294ed823b2341e63fe3f65">
+     <a name="43c910be6482831665294ed823b2341e63fe3f65">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg43c910be6482831665294ed823b2341e63fe3f65" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/43c910be6482831665294ed823b2341e63fe3f65.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O pêndulo que utilizamos tem um raio de giração
+     <i>
+      R
+     </i>
+     <sub>
+      <i>
+       G
+      </i>
+     </sub>
+     = 48,8 ± 0,2 cm. Usando
+     <i>
+      g
+     </i>
+     = 978,8 cm/s
+     <sup>
+      2
+     </sup>
+     para a aceleração gravitacional no Rio de Janeiro (segundo o Observatório Nacional) obtemos
+     <i>
+      T
+     </i>
+     = 1,403 ± 0,003 s. A
+     <a class="open-asset-modal" data-target="#ModalFigfig11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     mostra que este cálculo está em bom acordo com o resultado experimental a baixas velocidades (pequenas amplitudes).
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      V.4 Período do pêndulo a grandes amplitudes
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigfig11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.11
+     </a>
+     mostra algo que dificilmente é medido em um laboratório didático convencional: a variação do período de um pêndulo com a amplitude da oscilação. Comparar esta medida com a previsão da mecânica Newtoniana é instrutivo. Um cálculo simples do período de grandes oscilações pode ser realizado resolvendo numericamente a equação de movimento do pêndulo. Isto é feito no programa Logo listado a seguir, pendulo, que calcula o período (em segundos) como função da velocidade angular máxima, dada pelo parâmetro de entrada omega0 (em rad/s). No programa a variável x é o comprimento do arco descrito pelo pêndulo a partir do ponto de equilíbrio, e v e a são a velocidade e aceleração correspondentes. O efeito das forças de atrito sobre o período foi ignorado por ser muito pequeno no nosso caso, mas pode ser incluído facilmente no programa se for necessário.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="52946afb467c1de03ae672e977987bffdc1a511b">
+     <a name="52946afb467c1de03ae672e977987bffdc1a511b">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg52946afb467c1de03ae672e977987bffdc1a511b" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/52946afb467c1de03ae672e977987bffdc1a511b.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A curva que está na
+     <a class="open-asset-modal" data-target="#ModalFigfig11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.11
+     </a>
+     foi obtida com o programa acima. O cálculo reproduz bastante bem o comportamento dos dados experimentais. Observe que o cálculo do período no programa pendulo utiliza apenas conceitos que são familiares no ensino médio (essencialmente D
+     <i>
+      x
+     </i>
+     =
+     <i>
+      v
+     </i>
+     D
+     <i>
+      t
+     </i>
+     e D
+     <i>
+      v
+     </i>
+     =
+     <i>
+      a
+     </i>
+     D
+     <i>
+      t
+     </i>
+     , veja a rotina passo). Este é um bom exemplo de como os computadores podem facilitar a modelagem matemática de fenômenos físicos, tornando-a acessível a alunos que não conhecem cálculo.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      VI Comentários finais
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho nós discutimos a utilização da porta de jogos de um PC/Windows como interface para aquisição de dados. O sistema apresentado tem as seguintes características:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Pode ser montado sem fazer modificações no computador.
+      </p>
+     </li>
+     <li>
+      <p>
+       Utiliza como sensores componentes eletrônicos simples e fáceis de encontrar.
+      </p>
+     </li>
+     <li>
+      <p>
+       É fácil de compreender e implementar.
+      </p>
+     </li>
+     <li>
+      <p>
+       É versátil, podendo ser usado em muitos experimentos diferentes.
+      </p>
+     </li>
+     <li>
+      <p>
+       É bastante rápido, pelo menos para os objetivos de um laboratório didático, alcançando resoluções temporais da ordem de milisegundos.
+      </p>
+     </li>
+     <li>
+      <p>
+       Tem custo próximo de zero se o computador já estiver disponível.
+      </p>
+     </li>
+     <li>
+      <p>
+       Os programas de aquisição e análise de dados podem ser todos escritos em Logo.
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     O sistema pode ser usado em laboratórios didáticos do ensino médio, em condições tais que
+     <i>
+      tanto alunos quanto professores são capazes de compreender e controlar todas as etapas do processo de aquisição e análise dos dados
+     </i>
+     . Isto se deve não apenas à simplicidade da interface, mas principalmente ao fato de que os programas de aquisição e análise são inteiramente escritos em uma linguagem acessível como Logo.
+    </p>
+    <p>
+    </p>
+    <p>
+     A aquisição de dados pela porta de jogos não representa, obviamente, a única forma de utilização do computador em um laboratório didático. Além dos kits comerciais já mencionados (alguns até usam a porta de jogos), inúmeras outras propostas existem, com diferentes graus de sofisticação e custo. Para alguns exemplos, veja as referências [2, 14, 15, 16, 17, 18]. Qualquer que seja a proposta, parece claro que ao introduzir computadores no laboratório didático passamos a ser capazes de observar uma variedade maior de fenômenos, e a analisá-los com mais facilidade. Se somarmos a isto o potencial que o computador tem enquanto instrumento de modelagem matemática, vemos que estas máquinas podem ter um impacto muito positivo no ensino de física, possibilitando uma ligação entre experimento e teoria que raramente é alcançada com outros meios.
+    </p>
+    <p>
+    </p>
+    <p>
+     Agradecemos o apoio dado pelo Laboratório Didático do Instituto de Física da UFRJ (LADIF), e pelos Profs. Artur Chaves e Susana de Souza Barros.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Apêndice
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste apêndice mostramos o programa analise, que utilizamos para analisar os dados obtidos na experiência com o pêndulo (seção V). Os dados são lidos no arquivo dados.txt, gerado pelo programa aquisição (ver seção V.2). O programa de análise calcula o instante
+     <i>
+      t
+     </i>
+     em que ocorre uma passagem do pêndulo pela posição de equilíbrio, e o período
+     <i>
+      T
+     </i>
+     e velocidade angular W
+     <sub>
+      0
+     </sub>
+     nesta passagem. Para isto o programa localiza os instantes em que o sinal na porta deu os "saltos" mostrados na
+     <a class="open-asset-modal" data-target="#ModalFigfig08" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.8
+     </a>
+     , coloca esses tempos em uma lista (saltos), e a partir desta lista calcula os valores de
+     <i>
+      t
+     </i>
+     ,
+     <i>
+      T
+     </i>
+     e W
+     <sub>
+      0
+     </sub>
+     (variáveis t, periodo e omega). Uma tabela com os resultados é escrita no arquivo tpo.dat. A variável fator usada para calcular W
+     <sub>
+      0
+     </sub>
+     corresponde a
+     <i>
+      D
+     </i>
+     /
+     <i>
+      R
+     </i>
+     (ver seção V.1). Todos os tempos são convertidos para segundos.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="170e43c3c2c60d9be3c06a4d14537e372d362f84">
+     <a name="170e43c3c2c60d9be3c06a4d14537e372d362f84">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg170e43c3c2c60d9be3c06a4d14537e372d362f84" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/H8vdgfyrBQJ8T5gRsPKG44r/170e43c3c2c60d9be3c06a4d14537e372d362f84.gif" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] J.C. Alves,
+        <i>
+         Uma Proposta Pedagógica para Uso do Computador em Ambientes    de Ensino Experimental de Física
+        </i>
+        , Tese de Doutorado, COPPE-UFRJ, 2000
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] M.A. Cavalcante e C.R.C. Tavolaro,
+        <i>
+         Projete Você Mesmo Experimentos    Assistidos por Computador: Construindo Sensores e Analisando Dados
+        </i>
+        , Revista    Brasilera de Ensino de Física
+        <b>
+         22
+        </b>
+        (2000) 421
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] M.L. de Jong e J.W. Layman,
+        <i>
+         Using the Apple II as a laboratory instrument
+        </i>
+        ,    The Physics Teacher
+        <b>
+         22
+        </b>
+        (May 1984) 291
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] W.M. Gonçalvez, A.F. Heinrich e J.C. Sartorelli,
+        <i>
+         Aquisição    de dados com a porta de jogos de computadores Apple
+        </i>
+        , Revista de Ensino de    Física
+        <b>
+         13
+        </b>
+        (1991) 63
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] J. Fuller,
+        <i>
+         Science Experimenters' Kit
+        </i>
+        , http://    www.southwest.com.au/~jfuller/scikit.zip
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] R. Haag,
+        <i>
+         Utilizando a Placa de Som do Micro PC no Laboratório Didático    de Física
+        </i>
+        , Revista Brasileira de Ensino de Física
+        <b>
+         23
+        </b>
+        (2001)    176
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] Núcleo de Informática Aplicada à Educação (Nied/Unicamp),
+        <i>
+         SuperLogo 3.0
+        </i>
+        , http:// www.nied.unicamp.br
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] G. Mills,
+        <i>
+         MSWLogo
+        </i>
+        , http://www.softronix.com/logo.html
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] J. Fuller,
+        <i>
+         Games Port Input
+        </i>
+        , http://www.southwest.com.au/~jfuller/logotut/games.htm
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] T. Engdal,
+        <i>
+         Joysticks and other game controllers
+        </i>
+        , http://www.hut.fi/Misc/Electronics/    docs/joystick/
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] R. Zelenovsky e A. Mendonça,
+        <i>
+         PC: um guia prático de hardware    e interfaceamento
+        </i>
+        , Editora MZ, 1999
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] G.J. Deboo e C.N. Burrous,
+        <i>
+         Integrated Circuits and Semiconductor Devices
+        </i>
+        ,    McGraw-Hill, 1977
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] S.M. Sze,
+        <i>
+         Physics of Semiconductor Devices
+        </i>
+        , Wiley, 1969
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] R.D. Peters,
+        <i>
+         Experimental computational physics using an inexpensive    microcomputer
+        </i>
+        , Computers in Physics (July/Aug 1988) 68
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] P.J. Collings e T.B. Greensdale,
+        <i>
+         Using the computer as a laboratory    instrument
+        </i>
+        , The Physics Teacher (Feb 1989) 76
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] R.V. Ribas, A.F. Souza e N. Santos,
+        <i>
+         Um sistema de aquisição    de dados de baixo custo para o laboratório didático
+        </i>
+        , Revista Brasileira    de Ensino de Física
+        <b>
+         20
+        </b>
+        (1998) 293
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] D.Fagundes, J. Sartori, T. Catunda e L.A.O. Nunes,
+        <i>
+         Usando a porta paralela    do micro PC
+        </i>
+        , Revista Brasileira de Ensino de Física
+        <b>
+         17
+        </b>
+        (1995)    196
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] D.F. Souza, J. Sartori, M.J.V. Bell e L.A.O. Nunes,
+        <i>
+         Aquisição    de dados e aplicações simples usando a porta paralela do micro PC
+        </i>
+        ,    Revista Brasileira de Ensino de Física
+        <b>
+         20
+        </b>
+        (1998) 413
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        19 Ago 2002
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Dez 2001
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        10 Abr 2001
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        03 Jan 2001
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

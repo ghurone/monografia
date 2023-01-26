@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 41 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2019
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2019-0028" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2019-0028
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0028">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Proposta experimental para análise das variáveis de estado dos gases com Arduino
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Experimental proposal for analysis of the state variables of gases with Arduino
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     João Michels Cardoso
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Santa Catarina, Araranguá, SC, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:jmichelsc@hotmail.com">
+      jmichelsc@hotmail.com
+     </a>
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-4959-3516">
+     http://orcid.org/0000-0003-4959-3516
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Marcelo Zannin
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Santa Catarina, Araranguá, SC, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Por se tratar de uma ciência amplamente aplicada nos ramos tecnológicos, é essencial que a física seja ensinada a partir de demonstrações dos fenômenos e com relações entre teoria e prática. No entanto, por diversos motivos, os professores optam por aulas puramente expositivas. De maneira geral, verifica-se que, dessa forma, os alunos não se interessam pela disciplina e absorvem o conhecimento de forma mecânica. O presente estudo objetivou a construção de um produto educacional de baixo custo, utilizando a plataforma Arduino, para demonstrar a relação entre as variáveis de estado de um gás ideal em aulas do Ensino Médio. Os resultados demonstraram que, mesmo com materiais simples, é possível a construção de um aparato experimental capaz de extrair dados quantitativos e sua utilização em aula pode contribuir na construção do conhecimento de forma potencialmente significativa.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Física; Experimentação; Ensino Médio; Arduino
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     Since it is a widely applied science in the technological fields, it is essential that physics be taught from demonstrations of phenomena and relating theory and practice. However, for lots of reasons, teachers choose mainly expository classes. In general, it is verified that, in such way, the students are not interested in the subject and absorb knowledge in a mechanical way. The present study aimed at the construction of a low cost educational product using the Arduino platform to demonstrate the relationship between the state variables of an ideal gas in secondary school classes. The results showed that, even with simple materials, it is possible to construct an experimental apparatus capable to extract quantitative data and its use in class may contribute to the construction of knowledge in a potentially significant way.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Physics; Experimentation; High School; Arduino
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     As ciências da natureza – física, química e biologia - fazem uso de leis, modelos matemáticos e representações para a interpretação dos dados empíricos, explicação de fenômenos cotidianos e aplicações em diversos setores da indústria. Todavia, apesar da relevância dos assuntos tratados nessas disciplinas, os professores relatam constantemente a falta de interesse e, consequentemente, baixo desempenho por parte dos alunos. A física, por essência, deve ser estudada relacionando a teoria com a prática. No entanto, por diversas razões – tempo, infraestrutura e deficiências em sua formação – os professores não realizam experimentos, o que pode ser um dos fatores para a falta de aprendizagem e interesse pelo conteúdo.
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       [...] grande parte da dificuldade encontrada por esses alunos quanto ao aprendizado de Física se dá pela ausência de laboratórios didáticos, que servem como instrumentos de verificação dos fenômenos físicos em complementaridade aos estudos teóricos realizados em sala de aula. As atividades práticas em laboratórios fomentam nos alunos um conhecimento único a respeito da importância do aprendizado de Física e de sua aplicação no dia-a-dia, facilitando o seu aprendizado.
+       <span class="ref">
+        <strong class="xref xrefblue">
+         [1]
+        </strong>
+        <span class="refCtt closed">
+         <span>
+          [1] J.C.X. Silva e C.E. Santos, Rev. Bras. Ens. Fís. 39, 1401 (2017).
+         </span>
+        </span>
+       </span>
+      </p>
+     </blockquote>
+    </div>
+    <p>
+     Podem ser aplicadas diversas iniciativas para minimizar a atual má formação em física na educação básica e despertar o interesse dos discentes pelas áreas de ciência e tecnologia.
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] J.C.X. Silva e C.E. Santos, Rev. Bras. Ens. Fís. 39, 1401 (2017).
+       </span>
+      </span>
+     </span>
+     O envolvimento dos alunos com o experimento deve constar no planejamento de tais experiências didáticas. Professores da
+     <i>
+      American Association of Physics Teachers
+     </i>
+     afirmam que as atividades “
+     <i>
+      hands on
+     </i>
+     ”, onde os alunos manipulam os dados do experimento, estimulam seu interesse, motivação e concentração nas aulas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] https://www.aapt.org/resources/policy/RoleOfLabs.cfm, acessado em 16/01/2019.
+       </span>
+       <br/>
+       <a href="https://www.aapt.org/resources/policy/RoleOfLabs.cfm" target="_blank">
+        https://www.aapt.org/resources/policy/Ro...
+       </a>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Os custos dos experimentos didáticos em física têm diminuído nos últimos anos e muitas propostas de baixo custo estão sendo sugeridas na literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Rev. Bras. Ens. Fís. 33, 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] J.A. Santos, Instrumentação Eletrônica com o Arduino Aplicada ao Ensino de Física. Dissertação de Mestrado, Universidade Federal Rural de Pernambuco, Recife (2015).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] S. Siveira e M. Girardi, Rev. Bras. Ens. Fís. 39, 4502 (2017).
+       </span>
+      </span>
+     </span>
+     ]. Todavia, ainda existem muitos experimentos não acessíveis por questões financeiras. Nesse sentido, a plataforma Arduino têm se destacado nas iniciativas de introdução de experimentação e aquisição de dados no ensino. Ela possui, além do baixo custo, material de consulta abundante disponível na internet, é de fácil utilização para leigos em programação e possibilita a interação com diversos fenômenos físicos abordados no ensino médio. Além disso, é uma ótima ferramenta para experimentação, capaz de construir instrumentos científicos de baixo custo e provar princípios físicos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] M.M.P.C. Moreira, M.C. Romeu, F.R.V. Alves e F.R.O. Silva, Cad. Bras. Ens. Fís. 35, 721 (2018).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Dentre os diversos objetos de estudo da disciplina de Física no ensino médio, destaca-se – usualmente na segunda série – o estudo da termologia. Os conceitos de temperatura e calor, dilatação térmica, gases ideais, termodinâmica, entre outros, são tratados a partir de modelos simples que, no entanto, são sustentação para aqueles que optam pela área tecnológica, dada a vasta aplicabilidade de tais conceitos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] T.O. Camel e C.A.L. Filgueiras, Quí. Nov. 36, 738 (2013).
+       </span>
+      </span>
+     </span>
+     . Além de sua importância como base para o ensino superior, tais conteúdos são recorrentes nos exames – ENEM e vestibulares – para ingresso no ensino superior.
+    </p>
+    <p>
+     Nesse sentido, o presente trabalho propõe a construção de um aparato experimental de baixo custo com utilização do Arduino para demonstrar as proporções entre pressão, volume e temperatura de uma amostra gasosa. O artigo está dividido da seguinte forma: a sessão 2 apresenta os materiais necessários e as etapas de montagem do kit experimental, bem como os programas utilizados e o algoritmo escrito na Arduino IDE. Na terceira sessão estão dispostos os experimentos possíveis e sugestões para aplicações didáticas do kit experimental. A quarta e última sessão apresenta as considerações finais e perspectivas futuras para o estudo.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Construção do experimento
+    </h1>
+    <h2>
+     2.1. Programas utilizados
+    </h2>
+    <p>
+     Alguns softwares são requisitos para a implementação da atividade prática, conforme a presente metodologia. São eles:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       <b>
+        Arduino IDE:
+       </b>
+       é a interface de programação do Arduino. Seu download está disponível no site da plataforma (
+       <a href="https://www.arduino.cc/en/Main/Software" target="_blank">
+        https://www.arduino.cc/en/Main/Software
+       </a>
+       ) e é nessa interface que o algoritmo é desenvolvido;
+      </p>
+     </li>
+     <li>
+      <p>
+       <b>
+        PLX-DAQ:
+       </b>
+       trata-se de um suplemento de software para o Microsoft Excel. Ele adquire dados de qualquer microcontrolador e eleva os números em colunas à medida que eles chegam. Essa ferramenta fornece uma fácil análise de planilha de dados coletados no campo, análise laboratorial de sensores e monitoramento de equipamentos em tempo real. Foi utilizada para transposição dos dados lidos pelos sensores para o editor de planilhas para a construção dos gráficos em tempo real. Pode ser obtido no site de sua desenvolvedora, a empresa Parallax (
+       <a href="https://www.parallax.com/downloads/plx-daq" target="_blank">
+        https://www.parallax.com/downloads/plx-daq
+       </a>
+       ).
+      </p>
+     </li>
+     <li>
+      <p>
+       <b>
+        Microsoft Office/Excel 2000 ou 2003
+       </b>
+       <sup>
+        ®
+       </sup>
+       : são os editores de planilhas suportados pelo programa PLX-DAQ. Não foram feitos testes com versões mais novas.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b>
+        Microsoft Windows 7
+        <sup>
+         ®
+        </sup>
+        ou versão anterior:
+       </b>
+       a funcionalidade do programa PLX-DAQ foi testada somente no sistema operacional Windows 7. O programa funcionou perfeitamente, apesar de a Parallax indicar que o mesmo requer Windows 98.
+      </p>
+     </li>
+    </ul>
+    <h2>
+     2.2. Bibliotecas utilizadas
+    </h2>
+    <p>
+     Bibliotecas são, em programação, conjuntos de funções já escritas por outros programadores. O site do Arduino fornece algumas bibliotecas e ferramentas de busca para outras (
+     <a href="https://www.arduino.cc/en/Reference/Libraries" target="_blank">
+      https://www.arduino.cc/en/Reference/Libraries
+     </a>
+     ). Além disso, o próprio programa Arduino IDE possui, em versões mais recentes, um buscador de bibliotecas em Sketch &gt; Import Library. Para o programa desenvolvido, são necessárias as seguintes bibliotecas:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       <b>
+        Wire.h:
+       </b>
+       essa biblioteca permite que você se comunique com dispositivos I2C (Inter-Integrated Circuit). No programa, ela tem a função de comunicação com o sensor de temperatura e pressão BMP180.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b>
+        Adafruit_BMP085.h:
+       </b>
+       é uma biblioteca específica para o sensor BMP180. Ela simplifica a programação para o seu funcionamento.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b>
+        Ultrasonic.h:
+       </b>
+       é a biblioteca para o sensor ultrassônico utilizado na leitura da distância (volume). Torna mais fácil a programação para o funcionamento do sensor.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b>
+        LiquidCrystal.h:
+       </b>
+       essa biblioteca permite que a placa Arduino controle um display LCD. Está relacionada com a leitura dos dados no visor LCD.
+      </p>
+     </li>
+    </ul>
+    <h2>
+     2.3. O algoritmo
+    </h2>
+    <p>
+     Foi utilizado o Arduino por seu baixo custo e vasto material disponível na internet, conforme mencionado anteriormente. O algoritmo foi escrito na linguagem própria da plataforma – semelhante à linguagem C - no software Arduino IDE
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fís. 33, 4503 (2011).
+       </span>
+      </span>
+     </span>
+     . O objetivo é medir as variáveis pressão, volume e temperatura do ar contido em um cilindro.
+    </p>
+    <p>
+     O volume do cilindro foi medido de forma indireta, através da distância entre o pistão e a base, com o sensor HC-SR04. Trata-se de um sensor de distância ultrassônico que, segundo o
+     <i>
+      datasheet
+     </i>
+     do produto, possui
+     <i>
+      range
+     </i>
+     de leitura de 2 cm até 4 m e
+     <i>
+      accuracy
+     </i>
+     de 3 mm. Para leitura de temperatura e pressão, utilizou-se o sensor BMP 180 para Arduino. Segundo o
+     <i>
+      datasheet
+     </i>
+     do produto, sua
+     <i>
+      range
+     </i>
+     de leitura é 300-1100 hPa e sua
+     <i>
+      accuracy
+     </i>
+     é de 0,5 hPa.
+    </p>
+    <p>
+     Além disso, foi utilizado um display LCD para mostrar os valores lidos, tornando possível a utilização do kit experimental sem o computador. O algoritmo – disponível no
+     <a href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/52f79780f159cc0bac38ecac24c83d0661ef2a0c.pdf" target="_blank">
+      Apêndice
+     </a>
+     - possui linhas de código específicas para o PLX-DAQ exportar os dados para o Excel.
+    </p>
+    <p>
+     O algoritmo em questão pode ser descrito pelo fluxograma demonstrado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Fluxograma simplificado do algoritmo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O algoritmo completo, presente no
+     <a href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/52f79780f159cc0bac38ecac24c83d0661ef2a0c.pdf" target="_blank">
+      Apêndice
+     </a>
+     , pode ser adaptado – com conhecimento básico da linguagem de programação do Arduino – dependendo da necessidade do usuário.
+    </p>
+    <h2>
+     2.4. Montagem do experimento
+    </h2>
+    <p>
+     Os materiais utilizados na montagem do kit experimental estão descritos na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     . Em geral, são materiais de baixo custo e fácil acesso.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Materiais utilizados para montar o experimento
+      <br/>
+     </div>
+    </div>
+    <p>
+     A peça principal do experimento, o cilindro de PVC com êmbolo móvel, é construída, em um primeiro momento, com duas tampas do mesmo material. Na tampa de baixo deve ser feito um furo e um vinco para a passagem dos cabos, conforme a
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Tampa inferior do cilindro. Construída com um tampão de PVC e perfurada para a passagem de 8 jumpers fêmea/macho. A vedação é feita com cola quente.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A tampa superior precisa ser perfurada cinco vezes: um furo central para a passagem da guia do êmbolo e quatro para a passagem de ar que permite o movimento do pistão, conforme a
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Tampa superior do cilindro. Deve ser encaixada na parte superior do cilindro para manter o pistão no prumo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com o cilindro montado, podem ser feitos o pistão e a guia para movimentá-lo. O pistão é feito com um tampão de PVC e uma borracha de vedação. A peça, demonstrada na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     , é furada com o mesmo diâmetro da barra de aço utilizada como guia e uma fenda deve ser feita em sua lateral, para o encaixe do o-ring utilizado na vedação.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Montagem do pistão. O anel de borracha não deve ficar frouxo nem apertado demais.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A guia é fixada no pistão com uma pequena porca. No outro lado da guia coloca-se um pino, também fixado através de uma porca, para facilitar a movimentação do conjunto. O resultado está exposto na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Guia do pistão pronta.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O Arduino deve ser instalado em uma extremidade da plataforma de MDF. A protoboard colada no centro e o cilindro na outra extremidade. Para fixação do pistão, utilizam-se as duas hastes metálicas. Essas, além de fixarem o cilindro na plataforma, permitem melhor movimentação para o pistão e garantem que as tampas não estourem com o aumento da pressão. Detalhes da fixação do cilindro podem ser vistos na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Fixação do cilindro na plataforma. Recomenda-se fechar o cilindro e fixa-lo após todos os testes com os sensores que estão dentro do mesmo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     mostra os sensores na tampa inferior do cilindro. Algumas dificuldades podem ser encontradas para uma boa vedação do mesmo. Orienta-se utilizar o tubo e as tampas de PVC com diâmetro, no mínimo, de 60 mm, para acomodar os sensores. O experimento descrito no presente artigo utilizou bitolas de 80 mm.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Sensores fixados no cilindro.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para o funcionamento do algoritmo descrito anteriormente, o circuito foi montado conforme a
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     , sendo que os sensores foram colocados, através de jumpers, dentro do cilindro e não diretamente na protoboard.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Circuito do Arduino.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O produto educacional completo pode ser visualizado na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      O produto educacional.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. A funcionalidade do kit experimental
+    </h1>
+    <p>
+     A vedação foi o principal desafio encontrado na construção do kit. Foi constatado que não é possível uma vedação perfeita, verifica-se um pequeno escape de ar ao movimentar o pistão. Mesmo assim, o experimento é capaz de demonstrar a relação entre pressão e volume com grande eficiência.
+    </p>
+    <p>
+     A relação entre pressão e volume
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] H.C. Van Ness e M.M. Abbot, Introdução à Termodinâmica da Engenharia Química (LTC, Rio de Janeiro, 2000), v. 1, p. 54.
+       </span>
+      </span>
+     </span>
+     pode ser verificada com a
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     , que demonstra medições realizadas com o pistão sendo pressionado:
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Pressionando o Pistão. Verifica-se aumento da pressão com a diminuição de volume causada pelo movimento do pistão.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O diagrama de dispersão obtido para o ensaio descrito acima está exposto na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 11
+     </a>
+     . A linha de tendência corresponde à função potência calculada pelo método dos mínimos quadrados. O coeficiente de determinação obtido foi de 0,9773, demonstrando que os dados se ajustam à equação de uma hipérbole.
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Gráfico de uma Isoterma. Os dados experimentais demonstram a proporção inversa entre pressão e volume à temperatura constante.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A planilha foi configurada para construção automática do gráfico através dos dados importados pelo PLX-DAQ. Esse suplemento apresenta a possibilidade de construção do gráfico, análise da equação e do coeficiente de determinação de forma automática. No entanto, a ferramenta também permite que os dados sejam somente importados para o Excel e o processo de plotagem do gráfico seja feita de forma manual, o que, do ponto de vista pedagógico, pode ser bastante valioso para os alunos que aprenderão a manipular uma planilha de dados.
+    </p>
+    <p>
+     O produto P x V é proporcional à temperatura em Kelvin e uma variação perceptível em termos percentuais nessa escala termométrica é muito difícil de ocorrer. Portanto, essa relação de proporcionalidade é difícil de ser demonstrada, visto que não é possível causar grandes variações de temperatura no cilindro, pois o mesmo pode se deformar. Essa informação foi utilizada para a discussão em classe.
+    </p>
+    <p>
+     Mantendo o pistão na mesma posição e aquecendo o cilindro com auxílio de um secador de cabelo, verifica-se na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     a relação entre pressão e temperatura.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Pressão e Temperatura. Os dados demonstram aumento da pressão com a elevação de temperatura
+      <span class="ref">
+       <strong class="xref xrefblue">
+        [10]
+       </strong>
+       <span class="refCtt closed">
+        <span>
+         [10] P.W. Atkins, Físico-Química (LTC, Rio de Janeiro, 2008), v. 1, p. 10.
+        </span>
+       </span>
+      </span>
+      . Todavia, o gráfico obtido não é de qualidade, dada a pequena variação relativa alcançada e o tempo necessário para obtê-la.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Considerações finais
+    </h1>
+    <p>
+     O experimento sugerido pelo presente artigo demonstrou resultados pertinentes para uma metodologia de construção de um produto educacional para demonstração experimental quantitativa do comportamento das variáveis de estado de um gás ideal. Foi observado que na literatura existem diversas propostas de aplicações de experimentos didáticos de baixo custo, especialmente em artigos recentes nas revistas de ensino de física. Tais propostas demonstram-se executáveis e apresentam bons resultados quando são inseridas em sequências didáticas planejadas e com objetivos bem definidos. O Arduino destaca-se pela capacidade de demonstrações qualitativas de fenômenos físicos, mas, especialmente, pela coleta de dados quantitativos. Desse modo, o desenvolvimento de projetos de aplicação do mesmo em procedimentos experimentais voltados ao ensino deve continuar a crescer nos próximos anos.
+    </p>
+    <p>
+     Na construção do produto educacional pôde-se perceber que, além do baixo custo, a vasta quantidade de material e a comunidade online tornam o Arduino vantajoso também no fato de que qualquer um pode pesquisar, aprender e desenvolver projetos com o mesmo. Além disso, todos os materiais utilizados na construção do produto educacional foram de baixo custo e facilmente encontrados. Houve diversas dificuldades na construção do kit experimental – destacam-se a escolha dos materiais adequados e a vedação do cilindro -, todavia, com o presente trabalho, essa prática pode ser replicada facilmente pelo docente que tiver interesse.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores deste trabalho agradecem à Coordenação de Aperfeiçoamento de Pessoal de Nível Superior, à Universidade Federal de Santa Catarina e à Sociedade Brasileira de Física.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Supplementary material">
+    <h1 class="articleSectionTitle">
+     Supplementary material
+    </h1>
+    <p>
+     O seguinte material suplementar está disponível online:
+    </p>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/qVfLtSY4TNQRfyWBFWTvgSm/52f79780f159cc0bac38ecac24c83d0661ef2a0c.pdf" target="_blank">
+     Apêndice
+    </a>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        J.C.X. Silva e C.E. Santos, Rev. Bras. Ens. Fís.
+        <b>
+         39
+        </b>
+        , 1401 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        https://www.aapt.org/resources/policy/RoleOfLabs.cfm, acessado em 16/01/2019.
+        <br/>
+        <a href="https://www.aapt.org/resources/policy/RoleOfLabs.cfm" target="_blank">
+         » https://www.aapt.org/resources/policy/RoleOfLabs.cfm
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Rev. Bras. Ens. Fís.
+        <b>
+         33
+        </b>
+        , 1702 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        J.A. Santos,
+        <i>
+         Instrumentação Eletrônica com o Arduino Aplicada ao Ensino de Física.
+        </i>
+        Dissertação de Mestrado, Universidade Federal Rural de Pernambuco, Recife (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        S. Siveira e M. Girardi, Rev. Bras. Ens. Fís.
+        <b>
+         39
+        </b>
+        , 4502 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        M.M.P.C. Moreira, M.C. Romeu, F.R.V. Alves e F.R.O. Silva, Cad. Bras. Ens. Fís.
+        <b>
+         35
+        </b>
+        , 721 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        T.O. Camel e C.A.L. Filgueiras, Quí. Nov.
+        <b>
+         36
+        </b>
+        , 738 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fís.
+        <b>
+         33
+        </b>
+        , 4503 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        H.C. Van Ness e M.M. Abbot,
+        <i>
+         Introdução à Termodinâmica da Engenharia Química
+        </i>
+        (LTC, Rio de Janeiro, 2000), v. 1, p. 54.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        P.W. Atkins,
+        <i>
+         Físico-Química
+        </i>
+        (LTC, Rio de Janeiro, 2008), v. 1, p. 10.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        19 Jun 2019
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        06 Fev 2019
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        18 Abr 2019
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        07 Maio 2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

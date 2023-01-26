@@ -1,0 +1,4989 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0265" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0265
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0265">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Análise de uma corrida de 100 metros rasos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Analysis of a 100 meter dash race
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Fernando de Simoni
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:fsimoni@id.uff.br">
+      fsimoni@id.uff.br
+     </a>
+    </div>
+    Universidade Federal Fluminense, Departamento de Ciências da Natureza, Rio das Ostras, RJ, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-9070-9934">
+     http://orcid.org/0000-0001-9070-9934
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste trabalho será analisada uma corrida de 100 metros rasos utilizando um modelo que descreve o atleta como uma bola quicante adicionado do efeito de arrasto do ar turbulento.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave
+     </strong>
+     <br/>
+     Mecânica; bola quicante; corrida
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this work, a 100-meter dash race will be analyzed using a model that describes the athlete as a bouncing ball added to the turbulent air drag effect.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Mechanics; bouncing ball; dash race
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Uma das classes de modelagem aplicadas em velocistas de 100 metros rasos é baseada em arrasto do ar [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.J.H. Gómez, V. Marquina e R.W. Gómez, European Journal of Physics 34, 1227 (2013).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] O. Helene e M.T. Yamashita, American Journal of Physics 78, 307 (2010).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I. Alexandrov e P. Lucht, American Journal of Physics 49, 254 (1981).
+       </span>
+      </span>
+     </span>
+     ]. Em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.J.H. Gómez, V. Marquina e R.W. Gómez, European Journal of Physics 34, 1227 (2013).
+       </span>
+      </span>
+     </span>
+     ] foi utilizado um modelo de arrasto do ar laminar e turbulento. Em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] O. Helene e M.T. Yamashita, American Journal of Physics 78, 307 (2010).
+       </span>
+      </span>
+     </span>
+     ] foi utilizado um arrasto do ar laminar adicionado de um decaimento na velocidade no final da corrida. Outra possibilidade de modelagem são os chamados modelos quasi-físicos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] J.R. Mureika, Canadian Journal of Physics 79, 697 (2001).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] S.Gaudet, Journal of Biomechanics 47, 2933 (2014).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] J.B. Keller, Physics Today 26, 43 (1973).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] G. Wagner, The Physics Teacher 36, 144 (1998).
+       </span>
+      </span>
+     </span>
+     ] com até cinco termos para modelar as forças que atuam nos atletas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] S.Gaudet, Journal of Biomechanics 47, 2933 (2014).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Neste trabalho, um atleta de 100 metros rasos será modelado como uma bola quicante [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] L. Bencsik e A. Zelei, Mechanical Systems and Signal Processing 89, 78 (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ] com arrasto do ar turbulento. O modelo será aplicado na final do campeonato de 2009 em Berlim, onde Usain Bolt estabeleceu o recorde mundial [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Este trabalho é composto das seguintes seções: na seção
+     <strong>
+      2
+     </strong>
+     será apresentado o modelo da bola quicante, desenvolvido por [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] L. Bencsik e A. Zelei, Mechanical Systems and Signal Processing 89, 78 (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ], onde foi adicionado o efeito de arrasto do ar turbulento; na seção
+     <strong>
+      3
+     </strong>
+     será feita a análise dos três primeiros colocados nessa corrida: Usain Bolt, Tyson Gay e Asafa Powell. As quantidades a serem analisadas provenientes do ajuste no tempo são: a velocidade, a aceleração e a potência de cada atleta. Por fim, temos as conclusões.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Modelo teórico
+    </h1>
+    <p>
+     O modelo de bola quicante [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] L. Bencsik e A. Zelei, Mechanical Systems and Signal Processing 89, 78 (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ] possui características de modelos de fisiologia e biomecânica do esporte (
+     <i>
+      e.g.
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] J.B. Morin, G. Dalleau, H. Kyröläinen, T. Jeannin e A. Belli, Journal of Applied Biomechanics 21, 167 (2005).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] O. Helene e M.T. Yamashita, American Journal of Physics 78, 307 (2010).
+       </span>
+      </span>
+     </span>
+     ]). Estes estudos descrevem a corrida do atleta utilizando os seguintes parâmetros:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       <i>
+        t
+       </i>
+       <sub>
+        <i>
+         ar
+        </i>
+       </sub>
+       : tempo que o velocista passa no ar em cada passada;
+      </p>
+     </li>
+     <li>
+      <p>
+       <i>
+        t
+       </i>
+       <sub>
+        c
+       </sub>
+       : tempo que o velocista mantém contato com o chão em cada passada;
+      </p>
+     </li>
+     <li>
+      <p>
+       <i>
+        a
+       </i>
+       <sub>
+        t
+       </sub>
+       : módulo da aceleração total imposta pelo velocista.
+      </p>
+     </li>
+    </ul>
+    <p>
+     Neste estudo, no modelo da bola quicante é adicionado o parâmetro ϵ, que simula a eficiência na transferência das forças das pernas para a produção da aceleração na direção horizontal de movimento,
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Aplicando a segunda lei de Newton na direção vertical no atleta enquanto está em contato com o chão, obtemos a seguinte relação,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E1">
+     <a name="S2_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <msub>
+            <mi>
+             F
+            </mi>
+            <mi>
+             y
+            </mi>
+           </msub>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mi>
+             m
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             g
+            </mi>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             a
+            </mi>
+            <mrow>
+             <mi mathvariant="normal">
+              t
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              y
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      a
+     </i>
+     <sub>
+      t,
+      <i>
+       y
+      </i>
+     </sub>
+     é a aceleração total vertical,
+     <i>
+      g
+     </i>
+     é a aceleração da gravidade,
+     <i>
+      m
+     </i>
+     é a massa do atleta e
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     é a força que o chão produz no atleta. Neste trabalho iremos aproximar a força
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     à uma constante, consequentemente
+     <i>
+      a
+     </i>
+     <sub>
+      t,
+      <i>
+       y
+      </i>
+     </sub>
+     também será. Desta forma, dividindo a força
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     pela massa do atleta temos,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E2">
+     <a name="S2_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            a
+           </mi>
+           <mi>
+            y
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            g
+           </mi>
+           <mo>
+            +
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <msub>
+              <mi>
+               v
+              </mi>
+              <mi>
+               y
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A interpretação de Δ
+     <i>
+      t
+     </i>
+     é direta: é o tempo que o velocista mantém contato com o chão, ou seja, é o parâmetro
+     <i>
+      t
+     </i>
+     <sub>
+      c
+     </sub>
+     . Para a variação da velocidade vertical durante o contato, Δ
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     , é utilizado que o atleta está em queda-livre em toda a extensão de tempo
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     . Consequentemente, Δ
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     =
+     <i>
+      gt
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] L. Bencsik e A. Zelei, Mechanical Systems and Signal Processing 89, 78 (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ], fornecendo
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E3">
+     <a name="S2_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            a
+           </mi>
+           <mi>
+            y
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            g
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mn>
+              1
+             </mn>
+             <mo>
+              +
+             </mo>
+             <mfrac>
+              <msub>
+               <mi>
+                t
+               </mi>
+               <mi>
+                ar
+               </mi>
+              </msub>
+              <msub>
+               <mi>
+                t
+               </mi>
+               <mi mathvariant="normal">
+                c
+               </mi>
+              </msub>
+             </mfrac>
+            </mrow>
+            <mo rspace="0.8pt">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa equação fornece a aceleração vertical necessária para manter o velocista um tempo
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     no ar.
+    </p>
+    <p>
+     Para modelar a aceleração horizontal do atleta,
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     , será utilizada a definição de módulo da aceleração total,
+     <math id="INEQ19">
+      <mrow>
+       <msub>
+        <mi>
+         a
+        </mi>
+        <mi mathvariant="normal">
+         t
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msqrt>
+        <mrow>
+         <msubsup>
+          <mi>
+           a
+          </mi>
+          <mi>
+           x
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+         <mo>
+          +
+         </mo>
+         <msubsup>
+          <mi>
+           a
+          </mi>
+          <mi>
+           y
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+        </mrow>
+       </msqrt>
+      </mrow>
+     </math>
+     . Nessa relação existe um vínculo que deve ser aplicado: quando
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     &gt;
+     <i>
+      a
+     </i>
+     <sub>
+      t
+     </sub>
+     , fornece
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     imaginário. Para contornar esse problema, o modelo para a aceleração
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     será dado por,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E4">
+     <a name="S2_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           a
+          </mi>
+          <mi>
+           x
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           {
+          </mo>
+          <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+           <mtr>
+            <mtd columnalign="left">
+             <mrow>
+              <mi>
+               ϵ
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msqrt>
+               <mrow>
+                <msubsup>
+                 <mi>
+                  a
+                 </mi>
+                 <mi mathvariant="normal">
+                  t
+                 </mi>
+                 <mn>
+                  2
+                 </mn>
+                </msubsup>
+                <mo>
+                 -
+                </mo>
+                <msubsup>
+                 <mi>
+                  a
+                 </mi>
+                 <mi>
+                  y
+                 </mi>
+                 <mn>
+                  2
+                 </mn>
+                </msubsup>
+               </mrow>
+              </msqrt>
+             </mrow>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <msub>
+                <mi>
+                 a
+                </mi>
+                <mi>
+                 y
+                </mi>
+               </msub>
+               <mo>
+                &lt;
+               </mo>
+               <msub>
+                <mi>
+                 a
+                </mi>
+                <mi mathvariant="normal">
+                 t
+                </mi>
+               </msub>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mn>
+              0
+             </mn>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <msub>
+                 <mi>
+                  a
+                 </mi>
+                 <mi>
+                  y
+                 </mi>
+                </msub>
+                <mo>
+                 ⩾
+                </mo>
+                <msub>
+                 <mi>
+                  a
+                 </mi>
+                 <mi mathvariant="normal">
+                  t
+                 </mi>
+                </msub>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               .
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Nesta definição foi adicionado a eficiência, ϵ, um parâmetro já apresentado no início desta seção.
+    </p>
+    <p>
+     A definição da aceleração horizontal dada pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ), fornece mais um vínculo nos parâmetros para haver movimento na horizontal na largada. Como o atleta sai do repouso, a sua aceleração inicial na horizontal,
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     = 0), tem que ser maior que zero, por consequência
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     = 0) &lt;
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       t
+      </i>
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     = 0). O vínculo é dado por
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E5">
+     <a name="S2_E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mfrac>
+            <msub>
+             <mi>
+              a
+             </mi>
+             <mi>
+              t
+             </mi>
+            </msub>
+            <mi>
+             g
+            </mi>
+           </mfrac>
+           <mo>
+            -
+           </mo>
+           <mfrac>
+            <msub>
+             <mi>
+              t
+             </mi>
+             <mi>
+              ar
+             </mi>
+            </msub>
+            <mrow>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mi mathvariant="normal">
+               c
+              </mi>
+             </msub>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mi>
+               v
+              </mi>
+              <mo>
+               =
+              </mo>
+              <mn>
+               0
+              </mn>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mrow>
+           </mfrac>
+          </mrow>
+          <mo>
+           &gt;
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Na modelagem de
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       c
+      </i>
+     </sub>
+     , serão utilizados dados empíricos provenientes de velocistas. Estudos de fisiologia e biomecânica do esporte encontraram que o tempo de contato típico de um velocista com o chão varia com a sua velocidade, sendo cada vez menor quanto mais rápido estiver [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] P.G. Weyand, R.F. Sandell, D.N.L. Prime e M.W. Bundle, Journal of Applied Physiology 108, 950 (2010).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] A. Mero, P.V. Komi e R.J. Gregor, Sports Medicine 13, 376 (1992).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] P.G. Weyand, D.B. Sternlight, M.J. Bellizzi e S. Wright, Journal of Applied Physiology 89, 1991 (2000).
+       </span>
+      </span>
+     </span>
+     ]. Neste estudo será utilizado o modelo apresentado em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ],
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E6">
+     <a name="S2_E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            t
+           </mi>
+           <mi mathvariant="normal">
+            c
+           </mi>
+          </msub>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            v
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           {
+          </mo>
+          <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+           <mtr>
+            <mtd columnalign="left">
+             <mrow>
+              <mn>
+               0
+              </mn>
+              <mo rspace="0.8pt">
+               ,
+              </mo>
+              <mrow>
+               <mpadded width="+1.7pt">
+                <mn>
+                 3612
+                </mn>
+               </mpadded>
+               <mo>
+                ⁢
+               </mo>
+               <mi mathvariant="normal">
+                s
+               </mi>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 v
+                </mi>
+                <mo>
+                 &lt;
+                </mo>
+                <mrow>
+                 <mrow>
+                  <mpadded width="+1.7pt">
+                   <mn>
+                    2
+                   </mn>
+                  </mpadded>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi mathvariant="normal">
+                   m
+                  </mi>
+                 </mrow>
+                 <mo>
+                  /
+                 </mo>
+                 <mi mathvariant="normal">
+                  s
+                 </mi>
+                </mrow>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               ,
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mrow>
+              <mn>
+               0
+              </mn>
+              <mo rspace="0.8pt">
+               ,
+              </mo>
+              <mrow>
+               <mn>
+                0314
+               </mn>
+               <mo>
+                +
+               </mo>
+               <mn>
+                0
+               </mn>
+              </mrow>
+              <mo rspace="0.8pt">
+               ,
+              </mo>
+              <mrow>
+               <mn>
+                6596
+               </mn>
+               <mo>
+                /
+               </mo>
+               <mi>
+                v
+               </mi>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 v
+                </mi>
+                <mo>
+                 &gt;
+                </mo>
+                <mrow>
+                 <mrow>
+                  <mpadded width="+1.7pt">
+                   <mn>
+                    2
+                   </mn>
+                  </mpadded>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi mathvariant="normal">
+                   m
+                  </mi>
+                 </mrow>
+                 <mo>
+                  /
+                 </mo>
+                 <mi mathvariant="normal">
+                  s
+                 </mi>
+                </mrow>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               .
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O arrasto do ar será introduzido utilizando a sua modelagem turbulenta [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.J.H. Gómez, V. Marquina e R.W. Gómez, European Journal of Physics 34, 1227 (2013).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] J.R. Mureika, Canadian Journal of Physics 79, 697 (2001).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] N.P. Linthorne, Journal of Applied Biomechanics 10, 110 (1994).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] Y. Nakayama e R.F. Boucher, Introduction to Fluid Mechanics (Butterworth-Heinemann, Oxford, 2000), p. 150.
+       </span>
+      </span>
+     </span>
+     ],
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E7">
+     <a name="S2_E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            F
+           </mi>
+           <mi>
+            ar
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <mo>
+            ⁢
+           </mo>
+           <mpadded width="+1.7pt">
+            <mi>
+             ρ
+            </mi>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             C
+            </mi>
+            <mi>
+             d
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            A
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <msub>
+               <mi>
+                v
+               </mi>
+               <mi>
+                x
+               </mi>
+              </msub>
+              <mo>
+               -
+              </mo>
+              <msub>
+               <mi>
+                v
+               </mi>
+               <mi>
+                ar
+               </mi>
+              </msub>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     As quantidades são: ρ é a densidade do ar;
+     <i>
+      C
+     </i>
+     <sub>
+      <i>
+       d
+      </i>
+     </sub>
+     é o coeficiente de arrasto adimensional;
+     <i>
+      A
+     </i>
+     é a área da seção reta do atleta;
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     é a velocidade do ar com relação ao chão e
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     é a velocidade horizontal do atleta também com relação ao chão.
+    </p>
+    <p>
+     A segunda lei de Newton na direção horizontal fornece duas equações diferenciais acopladas,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E8">
+     <a name="S2_E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mstyle displaystyle="true">
+           <mfrac>
+            <mrow>
+             <mi mathvariant="normal">
+              d
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <msub>
+              <mi>
+               v
+              </mi>
+              <mi>
+               x
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi mathvariant="normal">
+              d
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mfrac>
+          </mstyle>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msub>
+            <mi>
+             a
+            </mi>
+            <mi>
+             x
+            </mi>
+           </msub>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mstyle displaystyle="true">
+             <mfrac>
+              <mn>
+               1
+              </mn>
+              <mn>
+               2
+              </mn>
+             </mfrac>
+            </mstyle>
+            <mo>
+             ⁢
+            </mo>
+            <mstyle displaystyle="true">
+             <mfrac>
+              <mrow>
+               <mpadded width="+1.7pt">
+                <mi>
+                 ρ
+                </mi>
+               </mpadded>
+               <mo>
+                ⁢
+               </mo>
+               <msub>
+                <mi>
+                 C
+                </mi>
+                <mi>
+                 d
+                </mi>
+               </msub>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                A
+               </mi>
+              </mrow>
+              <mi>
+               m
+              </mi>
+             </mfrac>
+            </mstyle>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <msub>
+                <mi>
+                 v
+                </mi>
+                <mi>
+                 x
+                </mi>
+               </msub>
+               <mo>
+                -
+               </mo>
+               <msub>
+                <mi>
+                 v
+                </mi>
+                <mi>
+                 ar
+                </mi>
+               </msub>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS2_E9">
+     <a name="S2_E9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mstyle displaystyle="true">
+           <mfrac>
+            <mrow>
+             <mi mathvariant="normal">
+              d
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mrow>
+             <mi mathvariant="normal">
+              d
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mfrac>
+          </mstyle>
+          <mo>
+           =
+          </mo>
+          <msub>
+           <mi>
+            v
+           </mi>
+           <mi>
+            x
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Quando o atleta está em contato com o chão a aceleração
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     é dada pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ) e quando está no ar essa aceleração será nula. Para resolver esse sistema de equações foi utilizado o pacote numérico scipy e sua função solve_ivp com o método RK45 e tolerância absoluta e relativa de 10
+     <sup>
+      −8
+     </sup>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] P. Virtanen, R. Gommers, T.E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright et al., Nature Methods 17, 261 (2020).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     são mostrados dois perfis de velocidade com parâmetros
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     = 0,2s,
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       t
+      </i>
+     </sub>
+     = 32m/s
+     <sup>
+      2
+     </sup>
+     e
+     <i>
+      ϵ
+     </i>
+     = 0,4. A linha cinza corresponde ao modelo sem ar e a linha preta com arrasto do ar com os parâmetros:
+     <i>
+      A
+     </i>
+     = 0,59m
+     <sup>
+      2
+     </sup>
+     ,
+     <i>
+      C
+     </i>
+     <sub>
+      <i>
+       d
+      </i>
+     </sub>
+     = 1,
+     <i>
+      ρ
+     </i>
+     = 1,215
+     <i>
+      kg
+     </i>
+     /m
+     <sup>
+      3
+     </sup>
+     , massa de 95 kg e
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     = 0. Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     é notável uma característica esperada do modelo: a sua descontinuidade.
+    </p>
+    <div class="row fig" id="S2_F1">
+     <a name="S2_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/jcgQkwBqCbwsHPyBtMcgphL/f736fb2bf457e0ef9dcd180c699bbdb19734240a.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1:
+      </strong>
+      <br/>
+      A linha cinza mostra o perfil de velocidade para o modelo sem ar e a linha preta ao modelo com arrasto do ar. Os parâmetros utilizados foram:
+      <i>
+       t
+      </i>
+      <sub>
+       <i>
+        ar
+       </i>
+      </sub>
+      = 0,2 s,
+      <i>
+       a
+      </i>
+      <sub>
+       t
+      </sub>
+      = 32m/s
+      <sup>
+       2
+      </sup>
+      e
+      <i>
+       ϵ
+      </i>
+      = 0,4;
+      <i>
+       A
+      </i>
+      = 0,59m
+      <sup>
+       2
+      </sup>
+      ,
+      <i>
+       C
+      </i>
+      <sub>
+       <i>
+        d
+       </i>
+      </sub>
+      = 1,
+      <i>
+       ρ
+      </i>
+      = 1,215
+      <i>
+       kg
+      </i>
+      /m
+      <sup>
+       3
+      </sup>
+      , massa de 95 kg e
+      <i>
+       v
+      </i>
+      <sub>
+       <i>
+        ar
+       </i>
+      </sub>
+      = 0.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Inicialmente, os dois perfis de velocidades possuem um comportamento similar. Entretanto, quando atingem a velocidade de 8m/s o arrasto do ar começa a ser relevante e retira energia do perfil com arrasto, deixando-o mais lento. O perfil sem arrasto segue um movimento retilíneo e uniforme após 30 metros de corrida. Nesse momento temos o vínculo entre as acelerações dada pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ),
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     &gt;
+     <i>
+      a
+     </i>
+     <sub>
+      t
+     </sub>
+     , consequentemente
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     será zero e a velocidade será uma constante até o final da corrida. Após 50 metros, o perfil de velocidade com arrasto oscila em torno de um valor aproximadamente constante. Esse efeito ocorrre pois sempre que o atleta estiver no ar ele perde velocidade e quando tocar no chão produz uma aceleração que compensa essa perda inicial de velocidade.
+    </p>
+    <p>
+     O tempo de corrida para os modelos sem e com ar possuem os seguintes valores, respectivamente:
+     <i>
+      T
+     </i>
+     <sub>
+      <i>
+       cor
+      </i>
+     </sub>
+     = 9,90s e
+     <i>
+      T
+     </i>
+     <sub>
+      <i>
+       cor
+      </i>
+     </sub>
+     = 10,08s. Uma diferença de 0,18 centésimos de segundos, um valor alto para corridas de 100 metros rasos. Essa diferença é uma amostra do impacto do arrasto do ar no modelo de bola quicante.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Análise do campeonato mundial de 2009
+    </h1>
+    <p>
+     Em 2009 ocorreu o campeonato mundial de atletismo em Berlim [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Um dos eventos mais esperados foi a corrida final de 100 metros rasos. Estavam listados para essa corrida os seguintes atletas: Usain Bolt (UB), Tyson Gay (TG) e Asafa Powell (AP). O primero bateu o recorde mundial, 9,58s, o segundo bateu o recorde nacional dos Estados Unidos, 9,71s, e o terceiro conseguiu o seu melhor tempo na temporada, 9,84s.
+    </p>
+    <p>
+     A estimativa da área de seção reta dos três atletas será feita utilizando o ajuste fenomenológico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] N.P. Linthorne, Journal of Applied Biomechanics 10, 110 (1994).
+       </span>
+      </span>
+     </span>
+     ],
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E10">
+     <a name="S3_E10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           A
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mn>
+            0
+           </mn>
+           <mo rspace="0.8pt">
+            ,
+           </mo>
+           <mrow>
+            <mn>
+             24
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mo rspace="0.8pt">
+              ,
+             </mo>
+             <mrow>
+              <mpadded width="+1.7pt">
+               <mn>
+                217
+               </mn>
+              </mpadded>
+              <mo>
+               ⁢
+              </mo>
+              <mpadded width="+1.7pt">
+               <msup>
+                <mi>
+                 h
+                </mi>
+                <mn>
+                 0.725
+                </mn>
+               </msup>
+              </mpadded>
+              <mo>
+               ⁢
+              </mo>
+              <msup>
+               <mi>
+                m
+               </mi>
+               <mn>
+                0.425
+               </mn>
+              </msup>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     <i>
+      h
+     </i>
+     é a altura do atleta e
+     <i>
+      m
+     </i>
+     a sua massa. Na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS3_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     são apresentados os valores da altura e da massa de cada atleta [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+       </span>
+      </span>
+     </span>
+     ]. Ainda na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS3_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     temos o tempo de reação e o resultado fornecidos pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      10
+     </a>
+     ). O coeficiente de arrasto será adotado igual a um,
+     <i>
+      C
+     </i>
+     <sub>
+      <i>
+       d
+      </i>
+     </sub>
+     = 1. A velocidade do ar medida na hora da competição foi
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     = 0,9m/s na direção da corrida. A densidade do ar será dada por
+     <i>
+      ρ
+     </i>
+     = 1,215
+     <i>
+      kg
+     </i>
+     /m
+     <sup>
+      3
+     </sup>
+     e a gravidade por
+     <i>
+      g
+     </i>
+     = 9,806m/s
+     <sup>
+      2
+     </sup>
+     .
+    </p>
+    <div class="row table" id="S3_T1">
+     <a name="S3_T1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS3_T1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1:
+      </strong>
+      <br/>
+      Os quatro parâmetros fixos para a análise da corrida: a segunda coluna fornece o tempo de reação de cada um dos atletas [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        10
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+        </span>
+       </span>
+      </span>
+      ]; as duas próximas colunas fornecem suas alturas e massas [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        18
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [18] M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+        </span>
+       </span>
+      </span>
+      ], e a útima coluna fornece a área de arrasto calculada utilizando a equação (
+      <a class="open-asset-modal" data-target="#ModalSchemeS3_E10" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       10
+      </a>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     A análise aplicou os dados de tempo a cada dez metros da corrida, por consequência aplicando dez medidas e também o tempo de reação,
+     <i>
+      t
+     </i>
+     <sub>
+      r
+     </sub>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ] (ver Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS3_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     ). Para encontrar o melhor ajuste dos parâmetros do modelo, foi utilizado o método dos mínimos quadrados sem peso nas medidas,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E11">
+     <a name="S3_E11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msup>
+           <mi>
+            χ
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <munderover>
+            <mo largeop="true" movablelimits="false" symmetric="true">
+             ∑
+            </mo>
+            <mrow>
+             <mi>
+              i
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+            <mn>
+             10
+            </mn>
+           </munderover>
+           <msup>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mrow>
+              <mrow>
+               <mi>
+                t
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <msub>
+                 <mi>
+                  x
+                 </mi>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+              <mo>
+               -
+              </mo>
+              <msub>
+               <mi>
+                t
+               </mi>
+               <mi>
+                i
+               </mi>
+              </msub>
+             </mrow>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     são as dez medidas de tempo e
+     <i>
+      t
+     </i>
+     (
+     <i>
+      x
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     ) as estimativas do modelo.
+    </p>
+    <p>
+     Na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     são mostrados os resultados dos ajustes para os três atletas e os seus parâmetros derivados. A primeira coluna identifica o atleta, a segunda fornece o coeficiente de determinação entre o modelo e os tempos medidos. Todos os atletas possuem
+     <i>
+      R
+     </i>
+     <sup>
+      2
+     </sup>
+     ≈0,99999, indicando um bom ajuste do modelo. Ainda na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     são mostrados os parâmetros ajustados do modelo: coluna 3 (
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     ), 4 (
+     <i>
+      a
+     </i>
+     <sub>
+      t
+     </sub>
+     ) e 5 (ϵ). Como a eficiência tem um valor similar entre os três atletas, ela não é relevante nesta análise. Interessante notar que os resultados da bola quicante mostram duas metodologias diferentes de corrida. UB e AP utilizaram uma passada no ar maior e aceleração também maior com relação a TG. A técnica apresentada nesse modelo para TG se utiliza do inverso: tempo no ar e aceleração menores com relação as de UB e AP.
+    </p>
+    <div class="row table" id="S2_T2">
+     <a name="S2_T2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS2_T2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2:
+      </strong>
+      <br/>
+      Melhores ajustes e parâmetros derivados: a segunda coluna fornece o coeficiente de determinação subtraido de 1; nas colunas 3, 4 e 5 temos o valor melhor ajustado dos parâmetros do modelo: tempo no ar, aceleração total e a eficiência; da sexta até a última coluna temos os parâmetros derivados. Na sexta coluna temos o tempo de corrida
+      <i>
+       T
+      </i>
+      <sub>
+       <i>
+        cor
+       </i>
+      </sub>
+      , na sétima temos a velocidade máxima,
+      <i>
+       v
+      </i>
+      <sub>
+       <i>
+        max
+       </i>
+      </sub>
+      , na oitava temos a força total imposta pelo atleta, na nona temos o número de passadas, na décima temos a frequência média de passadas em toda corrida e por fim temos a oscilação vertical do centro de massa.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O tempo de corrida está em boa concordâcia com os seus resultados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Para UB foi encontrada uma diferença de 0,01 segundos, para TG a diferença é de 0,02 segundos e AP com 0,03 segundos. O tempo de corrida foi subestimado para todos os atletas. Uma explicação para esse resultado é uma possível diminuição da velocidade do atleta no final da corrida. Como no modelo existe uma velocidade terminal que oscila entorno de um valor constante, se o atleta dimiuir a sua velocidade no final da corrida o modelo irá subestimar o tempo de corrida. Esse efeito pode ser encontrado em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ] nas suas Figuras A, B e C. Todos possuem um decaimento da velocidade no final: UB diminuindo após 90 metros, TG depois de 80 metros e AP após 75 metros. Este efeito poderia ser mitigado adicionando um decaimento da velocidade no modelo teórico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] O. Helene e M.T. Yamashita, American Journal of Physics 78, 307 (2010).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     são mostradas as diferenças de tempo entre a curva melhor ajustada de UB com os dados medidos dos três atletas,
+    </p>
+    <div class="row fig" id="S3_F2">
+     <a name="S3_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/jcgQkwBqCbwsHPyBtMcgphL/aaf40316231a9968b97d3130fe840d2c1c8c1c83.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2:
+      </strong>
+      <br/>
+      Tempos medidos da corrida: losango preto (UB), circulo preto (TG) e quadrado cinza (AP). Curvas de melhor ajuste: linha contínua preta (UB), linha tracejada preta (TG) e linha contínua cinza (AP). Todas as quantidades estão sendo comparadas com a curva de melhor ajuste de UB, tanto os dados quanto os melhores ajustes:
+      <math id="INEQ86">
+       <mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          Δ
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <msubsup>
+          <mi>
+           t
+          </mi>
+          <mi>
+           i
+          </mi>
+          <mi>
+           d
+          </mi>
+         </msubsup>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi mathvariant="normal">
+           s
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <msubsup>
+          <mi>
+           t
+          </mi>
+          <mi>
+           i
+          </mi>
+          <mi>
+           d
+          </mi>
+         </msubsup>
+         <mo>
+          -
+         </mo>
+         <msubsup>
+          <mi>
+           t
+          </mi>
+          <mi>
+           UB
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msubsup>
+        </mrow>
+       </mrow>
+      </math>
+      , com os dados
+      <i>
+       d
+      </i>
+      do i-ésimo atleta e
+      <math id="INEQ88">
+       <mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          Δ
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <msubsup>
+          <mi>
+           t
+          </mi>
+          <mi>
+           i
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msubsup>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi mathvariant="normal">
+           s
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <msubsup>
+          <mi>
+           t
+          </mi>
+          <mi>
+           i
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msubsup>
+         <mo>
+          -
+         </mo>
+         <msubsup>
+          <mi>
+           t
+          </mi>
+          <mi>
+           UB
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msubsup>
+        </mrow>
+       </mrow>
+      </math>
+      , com o modelo
+      <i>
+       m
+      </i>
+      do i-ésimo atleta.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E12">
+     <a name="S3_E12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msubsup>
+            <mi>
+             t
+            </mi>
+            <mi>
+             i
+            </mi>
+            <mi>
+             d
+            </mi>
+           </msubsup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi mathvariant="normal">
+             s
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msubsup>
+            <mi>
+             t
+            </mi>
+            <mi>
+             i
+            </mi>
+            <mi>
+             d
+            </mi>
+           </msubsup>
+           <mo>
+            -
+           </mo>
+           <mpadded width="+1.7pt">
+            <msubsup>
+             <mi>
+              t
+             </mi>
+             <mi>
+              UB
+             </mi>
+             <mi>
+              m
+             </mi>
+            </msubsup>
+           </mpadded>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde
+     <math id="INEQ82">
+      <msubsup>
+       <mi>
+        t
+       </mi>
+       <mi>
+        i
+       </mi>
+       <mi>
+        d
+       </mi>
+      </msubsup>
+     </math>
+     significa os dados de tempo medidos do i-ésimo atleta e
+     <math id="INEQ83">
+      <msubsup>
+       <mi>
+        t
+       </mi>
+       <mi>
+        UB
+       </mi>
+       <mi>
+        m
+       </mi>
+      </msubsup>
+     </math>
+     são os tempos estimados pelo modelo melhor ajustado para UB. Cada atleta é identificado da seguinte forma: losango preto para UB, circulo preto para TG e quadrado cinza para AP. Essas comparações também são aplicadas nas curvas de melhor ajuste,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E13">
+     <a name="S3_E13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msubsup>
+            <mi>
+             t
+            </mi>
+            <mi>
+             i
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msubsup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi mathvariant="normal">
+             s
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msubsup>
+            <mi>
+             t
+            </mi>
+            <mi>
+             i
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msubsup>
+           <mo>
+            -
+           </mo>
+           <msubsup>
+            <mi>
+             t
+            </mi>
+            <mi>
+             UB
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msubsup>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde
+     <math id="INEQ84">
+      <msubsup>
+       <mi>
+        t
+       </mi>
+       <mi>
+        i
+       </mi>
+       <mi>
+        m
+       </mi>
+      </msubsup>
+     </math>
+     são os melhores ajustes do modelo para o i-ésimo atleta calculado nas posições medidas na corrida. Neste caso cada atleta é identicado da seguinte forma: linha preta para UB, linha tracejada preta para TG e linha contínua cinza para AP.
+    </p>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     mostra que os dados dos três atletas oscilam em torno das suas curvas de melhor ajuste, mostrando uma boa concordância entre o modelo e os dados, como foi apresentado anteriormente. Temos que inicialmente AP está na frente da corrida, devido principalmente ao menor tempo de reação. Entretanto, um pouco antes de dez metros de corrida, UB já está na liderança e se mantém assim até o fim, em concordância com a Tabela A de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ]. TG inicia a corrida atrás de UB e AP, porém próximo de 40 metros ele ultrapassa AP, também em boa concordância com a Tabela A de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     As quatro últimas colunas da Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     fornecem os seguintes parâmetros derivados:
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       t
+      </i>
+     </sub>
+     =
+     <i>
+      ma
+     </i>
+     <sub>
+      t
+     </sub>
+     , a força total aplicada pelo atleta;
+     <i>
+      N
+     </i>
+     <sub>
+      p
+     </sub>
+     , o número de passadas, (
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     +
+     <i>
+      t
+     </i>
+     <sub>
+      c
+     </sub>
+     ), em toda a corrida;
+     <i>
+      f
+     </i>
+     <sub>
+      p
+     </sub>
+     é a frequência média das passadas; e
+     <i>
+      y
+     </i>
+     <sub>
+      c
+     </sub>
+     é a oscilação vertical do centro de massa do atleta. Para a força temos um resultado na mesma ordem de grandeza que na referência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+       </span>
+      </span>
+     </span>
+     ] que utilizou uma forma senoidal para o seu modelo da força. Utilizando o peso do atleta,
+     <i>
+      W
+     </i>
+     <sub>
+      <i>
+       g
+      </i>
+     </sub>
+     , como referência, temos um resultado mais homogêneo,
+     <i>
+      F
+     </i>
+     <sub>
+      t
+     </sub>
+     /
+     <i>
+      W
+     </i>
+     <sub>
+      <i>
+       g
+      </i>
+     </sub>
+     ≈3, um resultado acentuado, porém temos de lembrar que a análise foi aplicada em atletas de elite. O número de passadas mostra mais uma vez a diferença de técnica de TG em comparação com UB e AP. TG produz aproximadamente 4 oscilações (quiques) a mais que UB e AP. A frequêcia média de passadas é conectada com
+     <i>
+      N
+     </i>
+     <sub>
+      p
+     </sub>
+     como,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E14">
+     <a name="S3_E14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            f
+           </mi>
+           <mi mathvariant="normal">
+            p
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mpadded width="+1.7pt">
+           <mfrac>
+            <msub>
+             <mi>
+              N
+             </mi>
+             <mi mathvariant="normal">
+              p
+             </mi>
+            </msub>
+            <msub>
+             <mi>
+              T
+             </mi>
+             <mi>
+              cor
+             </mi>
+            </msub>
+           </mfrac>
+          </mpadded>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os resultados do modelo são significativamente menores que os valores medidos em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+       </span>
+      </span>
+     </span>
+     ], mostrados nas suas Tabelas 5 e 2, respectivamente. Nessas referências são mostrados valores entre 4Hz e 5Hz. TG, que possui o maior valor dos três, tem um valor de
+     <i>
+      f
+     </i>
+     <sub>
+      p
+     </sub>
+     = 3,64
+     <i>
+      Hz
+     </i>
+     , destoante dos valores encontrados por [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ] e [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+       </span>
+      </span>
+     </span>
+     ]. Os resultados da oscilação do centro de massa,
+     <i>
+      y
+     </i>
+     <sub>
+      <i>
+       c
+      </i>
+     </sub>
+     , também mostram os dois estilos de corrida já encontrado anteriormente: TG oscila com uma menor altura principalmente devido ao seu menor
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     e UB e AP aplicam uma passada maior, consequentemente possuem uma oscilação mais pronunciada do centro massa. Interessante notar que todos os valores são da ordem de centímetros, um resultado que aparenta ser razoável.
+    </p>
+    <h2>
+     3.1. Velocidade
+    </h2>
+    <p>
+     A sétima coluna da Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     , fornece a velocidade máxima ajustada pelo modelo para cada atleta. Todos os três resultados estão em concordância com a Tabela D de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ], sendo a maior discrepância para AP, substimando a sua velocidade máxima em apenas 0,08 m/s.
+    </p>
+    <p>
+     Na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS3_T3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      3
+     </a>
+     são apresentadas as diferenças relativas percentuais para a média da velocidade a cada 10 metros da corrida,
+    </p>
+    <div class="row table" id="S3_T3">
+     <a name="S3_T3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS3_T3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3:
+      </strong>
+      <br/>
+      Diferença relativa percentual das velocidades médias estimadas pelo modelo e os dados medidos [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        10
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+        </span>
+       </span>
+      </span>
+      ] em trechos constante de 10 metros,
+      <math id="INEQ85">
+       <mrow>
+        <mrow>
+         <msup>
+          <mi mathvariant="normal">
+           Δ
+          </mi>
+          <mi mathvariant="normal">
+           r
+          </mi>
+         </msup>
+         <mo>
+          ⁢
+         </mo>
+         <mi>
+          V
+         </mi>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mn>
+          100
+         </mn>
+         <mo>
+          ×
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mrow>
+           <mrow>
+            <msub>
+             <mover accent="true">
+              <mi>
+               V
+              </mi>
+              <mo>
+               ¯
+              </mo>
+             </mover>
+             <mi>
+              est
+             </mi>
+            </msub>
+            <mo>
+             /
+            </mo>
+            <mi>
+             V
+            </mi>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E15">
+     <a name="S3_E15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <msup>
+            <mi mathvariant="normal">
+             Δ
+            </mi>
+            <mi mathvariant="normal">
+             r
+            </mi>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            V
+           </mi>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mn>
+            100
+           </mn>
+           <mo>
+            ×
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mrow>
+              <msub>
+               <mover accent="true">
+                <mi>
+                 V
+                </mi>
+                <mo>
+                 ¯
+                </mo>
+               </mover>
+               <mi>
+                est
+               </mi>
+              </msub>
+              <mo>
+               -
+              </mo>
+              <mi>
+               V
+              </mi>
+             </mrow>
+             <mi>
+              V
+             </mi>
+            </mfrac>
+            <mo rspace="0.8pt">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      V
+     </i>
+     é a velocidade medida fornecida pela Tabela C de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ] e
+     <math id="INEQ102">
+      <msub>
+       <mover accent="true">
+        <mi>
+         V
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mi>
+        est
+       </mi>
+      </msub>
+     </math>
+     é a velocidade média estimada pelo modelo. Entre 10 e 90 metros o modelo se afasta do valor medido em no máximo 1,45%, mostrando um bom ajuste nesta região. Entretanto, o primeiro trecho possui diferenças acentuadas. Uma possível fonte de erro é devido à falta de medidas nesse trecho, sendo a posição de 10 metros a primeira à ser incluida na análise. Outra possível fonte de erro neste trecho é a variação muito rápida da velocidade dos atletas. O último trecho também possue valores maiores com relação aos dados medidos. Esse efeito é devido à diminuição da velocidade dos atletas no final da corrida, como discutido na seção
+     <strong>
+      3
+     </strong>
+     .
+    </p>
+    <h2>
+     3.2. Aceleração
+    </h2>
+    <p>
+     Para os três atletas, a aceleração máxima na direção da corrida, ocorre no bloco de largada. Para UB temos 11,83m/s
+     <sup>
+      2
+     </sup>
+     , para TG temos 10,78m/s
+     <sup>
+      2
+     </sup>
+     e AP obteve 11,66m/s
+     <sup>
+      2
+     </sup>
+     em concordâcia com medidas obtidas empiricamente com atletas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] J.B. Morin, G. Dalleau, H. Kyröläinen, T. Jeannin e A. Belli, Journal of Applied Biomechanics 21, 167 (2005).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     são apresentados os perfis de aceleração. Todas as acelerações foram multiplicadas pelo fator
+     <math id="INEQ106">
+      <msqrt>
+       <mrow>
+        <mi>
+         x
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msqrt>
+     </math>
+     , de tal forma a facilitar o discernimento entre as curvas. Inicialmente AP e UB possuem acelerações similares, entretanto ao alcançar 15 metros, AP começa a diminuir sua aceleração com relação a UB, até o final da corrida. TG possui a menor aceleração inicialmente, entretanto, também em 15 metros já possui valores maiores que AP e depois segue próximo à curva de UB. Na posição 40 metros, TG começa a obter valores maiores que UB, possuindo maior aceleração até o final. É interessante notar que os três atletas possuem uma aceleração terminal aproximadamente constante, ∼0,5m/s
+     <sup>
+      2
+     </sup>
+     . Este efeito é devido ao arrasto do ar que mantém uma força aproximadamente constante e contrária ao movimento. Consequentemente, o atleta deve impor uma aceleração para compensar este efeito (veja Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     que mostra este efeito no perfil de velocidade).
+    </p>
+    <div class="row fig" id="S3_F3">
+     <a name="S3_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/jcgQkwBqCbwsHPyBtMcgphL/e53d9b924c3be86b2cf581caae31ee7664e57617.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3:
+      </strong>
+      <br/>
+      Os três perfis de aceleração multiplicados pelo fator
+      <math id="INEQ108">
+       <msqrt>
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msqrt>
+      </math>
+      : UB linha contínua preta, TG linha tracejada preta e AP linha contínua cinza.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.3. Potência
+    </h2>
+    <p>
+     A estimativa da potência mecânica dos atletas de 100 metros rasos utilizando o modelo de bola quicante é direta. O modelo faz a separação do movimento nas componentes horizontal,
+     <i>
+      x
+     </i>
+     , e vertical
+     <i>
+      y
+     </i>
+     , e também da força do arrasto do ar. Na direção horizontal de movimento temos,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E16">
+     <a name="S3_E16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            P
+           </mi>
+           <mi>
+            x
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             a
+            </mi>
+            <mi>
+             x
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             v
+            </mi>
+            <mi>
+             x
+            </mi>
+           </msub>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     com
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     dada pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ) e
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     proveniente da resolução das equações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     ). A componente vertical é dada por,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E17">
+     <a name="S3_E17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            P
+           </mi>
+           <mi>
+            y
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mpadded width="+1.7pt">
+            <msub>
+             <mi>
+              a
+             </mi>
+             <mi>
+              y
+             </mi>
+            </msub>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            g
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mfrac>
+            <msub>
+             <mi>
+              t
+             </mi>
+             <mi>
+              ar
+             </mi>
+            </msub>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      a
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     é dada pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     ) e para o arrasto ar temos,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E18">
+     <a name="S3_E18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            P
+           </mi>
+           <mi>
+            ar
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mpadded width="+1.7pt">
+            <msub>
+             <mi>
+              F
+             </mi>
+             <mi>
+              ar
+             </mi>
+            </msub>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             v
+            </mi>
+            <mi>
+             x
+            </mi>
+           </msub>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <mo>
+            ⁢
+           </mo>
+           <mpadded width="+1.7pt">
+            <mi>
+             ρ
+            </mi>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             C
+            </mi>
+            <mi>
+             d
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            A
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mpadded width="+1.7pt">
+            <msup>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <msub>
+                <mi>
+                 v
+                </mi>
+                <mi>
+                 x
+                </mi>
+               </msub>
+               <mo>
+                -
+               </mo>
+               <msub>
+                <mi>
+                 v
+                </mi>
+                <mi>
+                 ar
+                </mi>
+               </msub>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             v
+            </mi>
+            <mi>
+             x
+            </mi>
+           </msub>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     é mostrado o resultado do modelo para a potência de UB (linha cinza), uma função descontínua, como era esperado. Consequentemente, foi aplicado um filtro nessa medida de tal forma a suavizá-la [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] P. Virtanen, R. Gommers, T.E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright et al., Nature Methods 17, 261 (2020).
+       </span>
+      </span>
+     </span>
+     ]. A potência máxima têm um valor
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     (
+     <i>
+      x
+     </i>
+     = 7
+     <i>
+      m
+     </i>
+     ) = 6,46
+     <i>
+      kW
+     </i>
+     e, a suavizada,
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     (
+     <i>
+      x
+     </i>
+     = 9m) = 2,17
+     <i>
+      kW
+     </i>
+     , respectivamente 8,7
+     <i>
+      hp
+     </i>
+     e 2,9
+     <i>
+      hp
+     </i>
+     . Os valores do modelo são acentuados devido ao pouco espaço de tempo que ocorre a cada passada,
+     <i>
+      t
+     </i>
+     <sub>
+      c
+     </sub>
+     . Interessante notar que, assim como a aceleração, a potência não decai para zero no final da corrida devido ao arrasto do ar. De agora em diante todas as potências serão analisadas com aplicação da suavização.
+    </p>
+    <div class="row fig" id="S3_F4">
+     <a name="S3_F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/jcgQkwBqCbwsHPyBtMcgphL/8300f9a2af4fcce704c494e6f943a1eca0ce50bb.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4:
+      </strong>
+      <br/>
+      Potência estimada na direção horizontal desenvolvida por UB durante toda a corrida. A linha cinza é o resultado do modelo e a linha preta é a mesma medida porém suavizada [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        17
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [17] P. Virtanen, R. Gommers, T.E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright et al., Nature Methods 17, 261 (2020).
+        </span>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     são mostradas todas as potências com os dados do melhor ajuste de UB (as suas características são similares para TG e AP). A potência desenvolvida na horizontal,
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     (linha contínua preta), é a mesma mostrada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     . A componente vertical da potência,
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     (linha contínua cinza), cresce rapidamente até se manter num valor constante,
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     = 0,89
+     <i>
+      kW
+     </i>
+     , que permanece até o final da corrida. Está é a potência necesária que o atleta precisa fornecer para se manter quicando verticalmente no ar com uma variação
+     <i>
+      y
+     </i>
+     <sub>
+      <i>
+       c
+      </i>
+     </sub>
+     (veja Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="S3_F5">
+     <a name="S3_F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/jcgQkwBqCbwsHPyBtMcgphL/c149523c1f3f35c36b395e9e9abe043522b3166e.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5:
+      </strong>
+      <br/>
+      Potência mecânica desenvolvida com os melhores ajustes de UB.
+      <i>
+       P
+      </i>
+      <sub>
+       <i>
+        x
+       </i>
+      </sub>
+      é a potência na direção da corrida (linha contínua preta),
+      <i>
+       P
+      </i>
+      <sub>
+       <i>
+        y
+       </i>
+      </sub>
+      na vertical (linha contínua cinza),
+      <i>
+       P
+      </i>
+      <sub>
+       <i>
+        x
+       </i>
+       +
+       <i>
+        y
+       </i>
+      </sub>
+      é a potência total que UB desenvolveu na corrida (linha traço e ponto cinza) e
+      <i>
+       P
+      </i>
+      <sub>
+       <i>
+        ar
+       </i>
+      </sub>
+      é a potência desenvolvida pelo arrasto ar (linha tracejada preta).
+      <br/>
+     </div>
+    </div>
+    <p>
+     A potência total que o atleta aplica com suas pernas é dada por,
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+      +
+      <i>
+       y
+      </i>
+     </sub>
+     =
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     +
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     , e é mostrada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     (linha cinza tracejada e com pontos). Ela segue um padrão similar a
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     , porém com valores mais acentuados. Neste caso o seu valor máximo é
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+      +
+      <i>
+       y
+      </i>
+     </sub>
+     = 3,05
+     <i>
+      kW
+     </i>
+     e valor constante de 1,45 kW após 60 metros. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.J.H. Gómez, V. Marquina e R.W. Gómez, European Journal of Physics 34, 1227 (2013).
+       </span>
+      </span>
+     </span>
+     ] e [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] O. Helene e M.T. Yamashita, American Journal of Physics 78, 307 (2010).
+       </span>
+      </span>
+     </span>
+     ] encontraram os seguintes valores para a potência máxima, respectivamente: 2,62
+     <i>
+      kW
+     </i>
+     e 2,82
+     <i>
+      kW
+     </i>
+     . Em boa conformidade com os nossos resultados.
+    </p>
+    <p>
+     Ainda na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     é apresentada a potência desenvolvida pelo arrasto do ar (linha tracejada preta), mostrando que esse efeito fica relevante na segunda metade da corrida, com valor aproximadamente igual a
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     . Essa igualdade entre as duas potências é esperada, pois no final da corrida toda a potência horizontal que o atleta desenvolve é para vencer o arrasto do ar. Para estimar o impacto do arrasto do ar no modelo, será utilizada a potência média em toda a corrida,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E19">
+     <a name="S3_E19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            P
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mpadded width="-3.3pt">
+            <msubsup>
+             <mo largeop="true" symmetric="true">
+              ∫
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mn>
+              100
+             </mn>
+            </msubsup>
+           </mpadded>
+           <mrow>
+            <mrow>
+             <mrow>
+              <mo rspace="0pt">
+               d
+              </mo>
+              <mpadded width="+1.7pt">
+               <mi>
+                x
+               </mi>
+              </mpadded>
+             </mrow>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              P
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mi>
+               x
+              </mi>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mrow>
+            <mo>
+             /
+            </mo>
+            <mn>
+             100
+            </mn>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os resultados são dados por:
+     <math id="INEQ133">
+      <mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          P
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mi>
+         x
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mpadded width="+1.7pt">
+         <mn>
+          956
+         </mn>
+        </mpadded>
+        <mo>
+         ⁢
+        </mo>
+        <mi mathvariant="normal">
+         W
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math id="INEQ134">
+      <mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          P
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mi>
+         ar
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mpadded width="+1.7pt">
+         <mn>
+          459
+         </mn>
+        </mpadded>
+        <mo>
+         ⁢
+        </mo>
+        <mi mathvariant="normal">
+         W.
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     Esses valores fornecem que ∼50% da potência média desenvolvida para o movimento na direção horizontal,
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     , é utilizada para vencer o arrasto do ar.
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     são mostradas as potências para o melhor ajuste do modelo de UB (linha contínua preta), TG (linha tracejada preta) e AP (linha contínua cinza). Como esperado, UB é o atleta que desenvolve a maior potência em toda a corrida, com AP próximo somente no seu início e final. Essa proximidade é devido ao ajuste similar da aceleração total
+     <i>
+      a
+     </i>
+     <sub>
+      t
+     </sub>
+     e tempo no ar
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       ar
+      </i>
+     </sub>
+     , como mostrado na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     . TG produz a menor potência, mesmo chegando em segundo lugar, indicando que a sua técnica dentro do modelo deve ser a mais eficiente energeticamente.
+    </p>
+    <div class="row fig" id="S3_F6">
+     <a name="S3_F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/jcgQkwBqCbwsHPyBtMcgphL/77f7ee394e0d8ffbdfa2015230bc633d18a760e6.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6:
+      </strong>
+      <br/>
+      Potência horizontal desenvolvida por UB (linha contínua preta), TG (linha tracejada preta) e AP (linha contínua cinza.)
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Conclusão
+    </h1>
+    <p>
+     Neste trabalho foi utilizado o modelo de bola quicante [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] L. Bencsik e A. Zelei, Mechanical Systems and Signal Processing 89, 78 (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Allain, How Is a Runner Like a Bouncing Ball?, disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+       </span>
+       <br/>
+       <a href="https://tinyurl.com/ytx9vads" target="_blank">
+        https://tinyurl.com/ytx9vads...
+       </a>
+      </span>
+     </span>
+     ] para analisar a final da corrida de 100 metros rasos no campeonato mundial de 2009 em Berlim [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Primeiramente concluímos a necessidade de incluir no modelo o arrasto do ar, sendo utilizado a sua modelagem turbulenta. A análise foi feita nos três primeiros colocados: Usain Bolt, Tyson Gay e Asafa Powell.
+    </p>
+    <p>
+     Todos os três atleta obtiveram um bom ajuste com os dados, tendo um coeficiente de determinação próximo da unidade. O modelo da bola quicante conseguiu discernir entre duas técnicas de corrida. Usain Bolt e Asafa Powell obtiveram valores altos para o tempo no ar e para a aceleração total, enquanto Tyson Gay aplicou o inverso: valor baixo para o tempo no ar e para a aceleração (veja Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     ).
+    </p>
+    <p>
+     Como mostrado na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     , o modelo conseguiu reproduzir uma boa quantidade dos parâmetros derivados. O tempo de corrida e as suas velocidades máximas estão muito próximas das suas medidas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ], além da força máxima imposta pelos atletas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+       </span>
+      </span>
+     </span>
+     ]. Entretanto, o número de passadas e sua frequência associada não foram bem ajustados pelo modelo. Para a frequência média de passadas foi encontrado o valor de 3,22
+     <i>
+      Hz
+     </i>
+     para Usain Bolt, divergindo dos valores medidos em pelo menos 25% [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+       </span>
+      </span>
+     </span>
+     ]. Essa discrepância indica algum problema com o modelo. Uma possibilidade é a constância do tempo de ar aplicado no modelo. Assim como o tempo de contato com o chão decai com a velocidade, o mesmo deveria acontecer com o tempo no ar.
+    </p>
+    <p>
+     A análise da velocidade (seção
+     <strong>
+      3.1
+     </strong>
+     ) mostrou que somente os trechos inicial e final não possuem um bom ajuste para os três atletas, indicando que o modelo é validado entre os trechos de 10 até 90 metros. A análise da aceleração horizontal (seção
+     <strong>
+      3.2
+     </strong>
+     ) mostrou que o seu valor máximo ocorre na largada e decai até um valor aproximadamente constante. Este efeito deve-se ao arrasto do ar que retira energia do atleta em cada passada no ar, diminuindo sua velocidade e consequentemente ele precisará produzir essa aceleração para conseguir manter a sua velocidade final.
+    </p>
+    <p>
+     Para a potência (seção
+     <strong>
+      3.3
+     </strong>
+     ), o modelo encontrou valores similares para o seu valor máximo desenvolvido por Usain Bolt em relação aos resultados anteriores da mesma corrida [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.J.H. Gómez, V. Marquina e R.W. Gómez, European Journal of Physics 34, 1227 (2013).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] O. Helene e M.T. Yamashita, American Journal of Physics 78, 307 (2010).
+       </span>
+      </span>
+     </span>
+     ]. Interessante notar que, assim como a aceleração, a potência segue um valor constante após o meio da corrida. Este efeito, tanto como na aceleração, deve-se ao arrasto do ar, tanto que a potência horizontal e a potência do arrasto são iguais após 80 metros (veja Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     ). Por fim, foi encontrado que 50% da potência desenvolvida por Usain Bolt foi utilizada para vencer o arrasto do ar.
+    </p>
+    <p>
+     Para a análise numérica e produção das figuras foram utilizadas os recursos das bibliotecas: scipy [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] P. Virtanen, R. Gommers, T.E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright et al., Nature Methods 17, 261 (2020).
+       </span>
+      </span>
+     </span>
+     ], numpy [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] C.R. Harris, K.J. Millman, S.J. van der Walt, R. Gommers, P. Virtanen, D. Cournapeau, E. Wieser, J. Taylor, S. Berg, N.J. Smith et al., Nature 585, 357 (2020).
+       </span>
+      </span>
+     </span>
+     ] e matplotlib [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [20] J.D. Hunter, Computing in Science &amp; Engineering 9, 90 (2007).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referênces">
+    <h1 class="articleSectionTitle">
+     Referênces
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        J.J.H. Gómez, V. Marquina e R.W. Gómez, European Journal of Physics 34, 1227 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        O. Helene e M.T. Yamashita, American Journal of Physics 78, 307 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        I. Alexandrov e P. Lucht, American Journal of Physics 49, 254 (1981).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        J.R. Mureika, Canadian Journal of Physics 79, 697 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        S.Gaudet, Journal of Biomechanics 47, 2933 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        J.B. Keller, Physics Today 26, 43 (1973).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        G. Wagner, The Physics Teacher 36, 144 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        L. Bencsik e A. Zelei, Mechanical Systems and Signal Processing 89, 78 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        R. Allain,
+        <i>
+         How Is a Runner Like a Bouncing Ball?
+        </i>
+        , disponível em: https://tinyurl.com/ytx9vads, acessado em 08/07/2021.
+        <br/>
+        <a href="https://tinyurl.com/ytx9vads" target="_blank">
+         » https://tinyurl.com/ytx9vads
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        R. Graubner e E. Nixdorf, IAAF study 26, 19 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        J.B. Morin, G. Dalleau, H. Kyröläinen, T. Jeannin e A. Belli, Journal of Applied Biomechanics 21, 167 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        P.G. Weyand, R.F. Sandell, D.N.L. Prime e M.W. Bundle, Journal of Applied Physiology 108, 950 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        A. Mero, P.V. Komi e R.J. Gregor, Sports Medicine 13, 376 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        P.G. Weyand, D.B. Sternlight, M.J. Bellizzi e S. Wright, Journal of Applied Physiology 89, 1991 (2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        N.P. Linthorne, Journal of Applied Biomechanics 10, 110 (1994).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        Y. Nakayama e R.F. Boucher,
+        <i>
+         Introduction to Fluid Mechanics
+        </i>
+        (Butterworth-Heinemann, Oxford, 2000), p. 150.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        P. Virtanen, R. Gommers, T.E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright et al., Nature Methods 17, 261 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        M.J.D. Taylor e R. Beneke, International Journal of Sports Medicine 33, 667 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        C.R. Harris, K.J. Millman, S.J. van der Walt, R. Gommers, P. Virtanen, D. Cournapeau, E. Wieser, J. Taylor, S. Berg, N.J. Smith et al., Nature 585, 357 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        J.D. Hunter, Computing in Science &amp; Engineering 9, 90 (2007).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        19 Nov 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        26 Jul 2021
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        14 Out 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        25 Out 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

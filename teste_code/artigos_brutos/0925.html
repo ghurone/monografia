@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 35 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2013
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172013000200026" target="_blank">
+    https://doi.org/10.1590/S1806-11172013000200026
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172013000200026">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Ilustração de incertezas em medidas utilizando experimentos de queda livre
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Illustration of uncertanties in measurements by using free fall experiments
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Vitor R. Coluci
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Guilherme Paulino
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Diego C. de Souza
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Elba P.R. Vasconcelos
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Limeira,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Faculdade de Tecnologia ,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     O conhecimento da incerteza de uma medida é crucial para obter conclusões a partir de resultados experimentais. Erros aleatórios, comuns em experimentos, produzem uma distribuição dos valores medidos que segue o formato gaussiano. Neste trabalho desenvolvemos uma montagem baseada no fenômeno de queda livre para auxiliar na ilustração do conceito de incerteza em medidas. Os tempos de queda de um objeto foram obtidos automaticamente pela placa Arduino e exibidos na forma de um histograma na tela do computador. A visualização do histograma foi feita em tempo real e permitiu verificar o aparecimento do aspecto gaussiano à medida que repetições do experimento eram realizadas.
+    </p>
+    <p>
+     incerteza em medidas; queda livre; placa Arduino
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The knowledge of the uncertainty of a measurement is crucial to draw conclusions from experimental results. Random errors are common in experiments and they produce a distribution of measured values that follows the Gaussian shape. In this work, we developed an apparatus based on the free fall phenomenon to assist in the illustration of the concept of uncertainty in measurements. The free fall time of an object has been obtained automatically by the Arduino board and displayed as a histogram on the computer screen. The visualization of the histogram was produced in real time and allowed to check the appearance of the Gaussian shape as the experiment was repeated.
+    </p>
+    <p>
+     uncertainty in measurements; free fall; Arduino platform
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      DESENVOLVIMENTO EM ENISNO DE FÍSICA
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Ilustração de incertezas em medidas utilizando experimentos de queda livre
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Illustration of uncertanties in measurements by using free fall experiments
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Vitor R. ColuciI,
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: vitor@ft.unicamp.br.
+       </span>
+      </span>
+     </span>
+     ; Guilherme Paulino; Diego C. de Souza; Elba P.R. Vasconcelos
+    </p>
+    <p>
+    </p>
+    <p>
+     Faculdade de Tecnologia, Universidade de Campinas, Limeira, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O conhecimento da incerteza de uma medida é crucial para obter conclusões a partir de resultados experimentais. Erros aleatórios, comuns em experimentos, produzem uma distribuição dos valores medidos que segue o formato gaussiano. Neste trabalho desenvolvemos uma montagem baseada no fenômeno de queda livre para auxiliar na ilustração do conceito de incerteza em medidas. Os tempos de queda de um objeto foram obtidos automaticamente pela placa Arduino e exibidos na forma de um histograma na tela do computador. A visualização do histograma foi feita em tempo real e permitiu verificar o aparecimento do aspecto gaussiano à medida que repetições do experimento eram realizadas.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     incerteza em medidas, queda livre, placa Arduino.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     The knowledge of the uncertainty of a measurement is crucial to draw conclusions from experimental results. Random errors are common in experiments and they produce a distribution of measured values that follows the Gaussian shape. In this work, we developed an apparatus based on the free fall phenomenon to assist in the illustration of the concept of uncertainty in measurements. The free fall time of an object has been obtained automatically by the Arduino board and displayed as a histogram on the computer screen. The visualization of the histogram was produced in real time and allowed to check the appearance of the Gaussian shape as the experiment was repeated.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     uncertainty in measurements, free fall, Arduino platform.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Os conceitos de medidas e suas incertezas são importantes para a formação geral em física e áreas afins. No ensino superior, esses conceitos são geralmente introduzidos e trabalhados em disciplinas de laboratório. No Ensino Médio, por outro lado, esses conceitos são raramente abordados. Uma abordagem introdutória desses conceitos com uma discussão do método científico poderia contribuir para corrigir a visão equivocada dos alunos do Ensino Médio de que a física é um conjunto de fórmulas "mágicas'' inventadas por gênios da ciência.
+    </p>
+    <p>
+    </p>
+    <p>
+     Quando o conceito de incerteza é abordado, muitas vezes é apresentado por meio da análise de medidas de comprimento ou de tempo. A partir dessas medidas, solicita-se ao aluno cálculos de média e desvio padrão e a elaboração de histogramas. No caso particular de medidas de comprimento (medições do alcance em experimentos de lançamento de projéteis, por exemplo), a obtenção do histograma pode ser tediosa já que o experimento precisa ser repetido inúmeras vezes. Além disso, é necessário programar um tempo para a elaboração do histograma. Isso porque geralmente os alunos ainda estão aprendendo a construir gráficos no computador no estágio do curso em que são apresentados os conceitos de medidas e incertezas.
+    </p>
+    <p>
+    </p>
+    <p>
+     O formato do histograma de medidas de um experimento realizado e repetido várias vezes sob as mesmas condições segue o padrão de uma função gaussiana [1, 2]. Isso ocorre devido a presença de erros aleatórios inerentes do experimento. Dessa forma, ao se aumentar o número de medidas, o aspecto gaussiano vai se tornando evidente. Esse fato pode ser verificado com o uso da chamada tábua de Galton [3] (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     ). Proposta por Francis Galton em 1889 para ilustrar a distribuição normal, a tábua tem na parte superior um repositório de esferas (de vidro, por exemplo) que, quando liberadas, atravessam uma região formada por obstáculos (pregos) que as desviam de sua trajetória inicial de maneira aleatória. Após a travessia, as esferas se acumulam em canais que permitem quantificar o número de esferas que chega em cada região da parte inferior. Com a liberação das esferas do repositório, um padrão gaussiano vai aparecendo [4].
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      - Esquema da táabua de Galton. Bolas de gude são liberadas da parte superior e atravessam um região formada por pregos. Após passar por essa região, atingem a parte inferior onde se acumulam em canais.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Neste trabalho desenvolvemos uma montagem para auxiliar na ilustração do conceito de incerteza em medidas. De forma análoga à tábua de Galton, a montagem permite a visualização simultânea do histograma durante a realização das medidas e a observação do padrão gaussiano quando mais repetições do experimento são realizadas. A montagem sugerida pode ser utilizada em sala de aula tanto no Ensino Médio, para introduzir os conceitos de medidas e incertezas, como no ensino superior, para complementar às aulas já existentes sobre o tema.
+    </p>
+    <p>
+    </p>
+    <p>
+     A montagem foi feita para coletar dados de tempo referentes ao fenômeno de queda livre. Por ser um fenômeno familiar tanto aos alunos do Ensino Médio como do ensino superior, o entendimento do processo de medida se torna mais fácil. A queda livre de um objeto vem sendo estudada há várias décadas [5-12]. Esses trabalhos, voltados ao Ensino de Física, enfatizaram principalmente a determinação da aceleração da gravidade por distintas maneiras e com diferentes graus de precisão utilizando, por exemplo, pulsos elétricos [5], sensores ópticos [6, 9, 11], som [10] e câmera digital [12]. No entanto, pelo nosso conhecimento, ainda nenhum trabalho utilizou o fenômeno de queda livre para ilustrar incertezas em medidas.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Montagem
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.1. Construção
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A montagem é composta por uma esfera de metal, um eletroímã, sensores ópticos, circuitos de aquisição e um computador. A esfera, inicialmente presa a um eletroímã, é liberada do repouso (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     ). Durante a queda, a posição da esfera é detectada por dois sensores ópticos separados por uma distância conhecida. O tempo de queda da esfera é determinado por meio de sinais elétricos enviados pelos sensores a uma placa de aquisição. Essa placa determina a diferença de tempo da passagem da esfera pelos dois sensores e envia a informação ao computador para a visualização posterior dos dados.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      - Visão geral da montagem do experimento de queda livre utilizado para a visualização de histogramas de tempos de queda.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Ao se repetir o experimento de liberação da esfera, um histograma dos dados de tempo pode ser construído. Esse histograma apresenta as variações nos valores obtidos das medidas de tempo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Utilizamos um eletroímã para permitir que a esfera fosse liberada praticamente sempre do mesmo ponto (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     ). O eletroímã foi construído enrolando-se um fio de cobre de 1 mm de diâmetro num cilindro de ferro (2 mm de diâmetro e 9 cm de comprimento) num total de aproximadamente 300 voltas (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3a
+     </a>
+     ). Um circuito para o eletroímã foi projetado para que este fosse desligado/ligado por um interruptor (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 3
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     ). Esse tipo de mecanismo facilita a repetição do experimento, processo que deve ser feito diversas vezes para que o formato gaussiano do histograma seja melhor visualizado.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Figura 3 - (a) Eletroímã utilizado para manter a esfera parada antes de iniciar a queda. (b) Circuitos de gerenciamento dos sensores e do eletroímã e a placa de aquisiçãoo Arduino.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Figura 4 - Circuito de controle do eletroímã.
+    </p>
+    <p>
+    </p>
+    <p>
+     A detecção da passagem da esfera em pontos específicos no eixo vertical foi feita utilizando diodos emissores de luz azul e fotodiodos (sensores). Quando a esfera interrompia a passagem de luz, um sinal era enviado a um circuito que gerencia os dois sensores (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      - Circuito para coleta de sinais dos sensores e transmissão de dados para a placa Arduino.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Neste circuito, as bases dos transistores BC548 são diretamente conectadas na resposta de saída dos sensores ópticos. A corrente é fotogerada apenas na presença de um feixe luminoso no fotodiodo por um diodo emissor de luz que compõe o sensor. Quando existe fotocorrente na base do transistor, este estará saturado. No momento em que ocorre interrupção deste feixe, o transistor entrará em corte. O circuito integrado 7408 possui portas lógicas AND, que são utilizadas no circuito para adequar o sinal proveniente do coletor do transistor em níveis apenas digitais (lógica TTL, 0 V ou 5 V). Isto é feito comparando este sinal com o sinal constante fornecido pela fonte de alimentação +Vcc (nível lógico alto). Este procedimento resulta em um sinal de saída puramente digital para a comunicação com a placa de aquisição. A aquisição de dados é feita a partir do momento em que os feixes são interrompidos. A frequência de operação do cristal de
+     <i>
+      clock
+     </i>
+     da placa de aquisição é utilizada para contar o tempo em
+     <img src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/e6d354e4b2b8099c596d48c27436bc3ff86021aa.jpg" style="max-width:100%"/>
+     desde que a placa é inicializada. Assim, após ambos os sensores serem acionados pela interrupção do feixe luminoso, a placa calcula a diferença de tempo e envia esse valor para o computador portátil no padrão ASCII, via comunicação serial USB.
+    </p>
+    <p>
+    </p>
+    <p>
+     A placa de aquisição utilizada neste trabalho foi a placa Arduino [13, 14]. A placa Arduino é uma plataforma de prototipagem eletrônica de
+     <i>
+      hardware
+     </i>
+     livre baseada no microcontrolador ATmega328 que possui opções de entrada e saída digitais e analógicas. Outros trabalhos voltados para o Ensino de Física utilizaram a placa Arduino para a investigação de fenômenos mecânicos, térmicos [15] e eletrônicos [16] e mostraram que a placa Arduino é uma opção muito interessante para experimentos didáticos devido ao seu baixo custo e versatilidade de utilização.
+    </p>
+    <p>
+    </p>
+    <p>
+     A programação da placa Arduino é feita por meio de linguagem própria, baseada na linguagem
+     <i>
+      Wiring
+     </i>
+     [13, 17]. O código fonte utilizado para a placa Arduino para a determinação do tempo de queda entre os sensores é apresentado a seguir.
+    </p>
+    <p>
+    </p>
+    <p>
+     /* Recebe os sinais elétricos e imprime a diferença de tempo na saída serial */
+    </p>
+    <p>
+    </p>
+    <p>
+     // Utiliza entradas digitais 6 e 7
+    </p>
+    <p>
+    </p>
+    <p>
+     int sensor1 = 7;
+    </p>
+    <p>
+    </p>
+    <p>
+     int sensor2 = 6;
+    </p>
+    <p>
+    </p>
+    <p>
+     int leitura = 0;
+    </p>
+    <p>
+    </p>
+    <p>
+     unsigned long t1=0, t2=0;
+    </p>
+    <p>
+    </p>
+    <p>
+     float t;
+    </p>
+    <p>
+    </p>
+    <p>
+     // Define as portas dos sensores e
+    </p>
+    <p>
+    </p>
+    <p>
+     // a velocidade de transmissão de
+    </p>
+    <p>
+    </p>
+    <p>
+     // dados (9600 bits/s)
+    </p>
+    <p>
+    </p>
+    <p>
+     void setup() {
+    </p>
+    <p>
+    </p>
+    <p>
+     pinMode (sensor1,INPUT);
+    </p>
+    <p>
+    </p>
+    <p>
+     pinMode (sensor2,INPUT);
+    </p>
+    <p>
+    </p>
+    <p>
+     Serial.begin (9600);
+    </p>
+    <p>
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+    </p>
+    <p>
+     // Laço principal do programa
+    </p>
+    <p>
+    </p>
+    <p>
+     void loop() {
+    </p>
+    <p>
+    </p>
+    <p>
+     // Determina tempo decorrido da liberação da
+    </p>
+    <p>
+    </p>
+    <p>
+     // esfera até o passar pelo sensor 1
+    </p>
+    <p>
+    </p>
+    <p>
+     if (digitalRead(sensor1)==HIGH) {
+    </p>
+    <p>
+    </p>
+    <p>
+     t1=micros();
+    </p>
+    <p>
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+    </p>
+    <p>
+     // Determina tempo decorrido da liberação da
+    </p>
+    <p>
+    </p>
+    <p>
+     // esfera até passar pelo sensor 2
+    </p>
+    <p>
+    </p>
+    <p>
+     if (digitalRead(sensor2)==HIGH) {
+    </p>
+    <p>
+    </p>
+    <p>
+     t2=micros();
+    </p>
+    <p>
+    </p>
+    <p>
+     // Variavel auxiliar para garantir apenas
+    </p>
+    <p>
+    </p>
+    <p>
+     // uma contagem de tempo
+    </p>
+    <p>
+    </p>
+    <p>
+     leitura = 1;
+    </p>
+    <p>
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+    </p>
+    <p>
+     if( leitura == 1 ){
+    </p>
+    <p>
+    </p>
+    <p>
+     // Entra somente se a esfera tiver passado
+    </p>
+    <p>
+    </p>
+    <p>
+     // pelos sensores 1 e 2
+    </p>
+    <p>
+    </p>
+    <p>
+     // Calcula tempo de queda em milisegundos
+    </p>
+    <p>
+    </p>
+    <p>
+     t = (t2-t1)/1000.0;
+    </p>
+    <p>
+    </p>
+    <p>
+     leitura=0;
+    </p>
+    <p>
+    </p>
+    <p>
+     // Imprime o valor de t na porta serial
+    </p>
+    <p>
+    </p>
+    <p>
+     Serial.println(t,3);
+    </p>
+    <p>
+    </p>
+    <p>
+     // Aguarda 1 segundo para nova contagem delay(1000);
+    </p>
+    <p>
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+    </p>
+    <p>
+     }
+    </p>
+    <p>
+    </p>
+    <p>
+     Os fotodiodos utilizados possuem uma corrente sensível à variação de luminosidade, cuja precisão de tempo de corte é da ordem de ns [18]. Portanto, a limitação da precisão do tempo obtido é dada basicamente pela placa Arduino, cujo tempo de aquisição é da ordem de
+     <img src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/cb2ca1c82fcad08b688b16d10b9c30b2bbf52b60.jpg" style="max-width:100%"/>
+     [13].
+    </p>
+    <p>
+    </p>
+    <p>
+     A visualização dos dados de tempo de queda é feita utilizando um histograma construído com o
+     <i>
+      software
+     </i>
+     gratuito
+     <b>
+      Processing
+     </b>
+     [19]. O
+     <b>
+      Processing
+     </b>
+     permite uma comunicação direta com a placa
+     <b>
+      Arduino
+     </b>
+     e fornece muitas possibilidades para se trabalhar com a visualização dos dados processados por ela. O código fonte para o programa
+     <b>
+      Processing
+     </b>
+     que foi utilizado para gerar os histogramas pode ser obtido em [20].
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2. Testes
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para testar a montagem construída, realizamos medidas de tempo para diferentes distâncias entre os sensores e obtivemos a aceleração da esfera. Utilizamos uma esfera de aço de 1.90 ± 0.05 cm de diâmetro. Como a distância máxima percorrida pela esfera durante a queda é de aproximadamente 35 cm (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     ), o efeito do atrito da esfera com o ar foi considerado desprezível. Mohazzabi calculou que, para uma esfera de aço de 2 cm de diâmetro, não considerar o atrito do ar leva a um erro no tempo de queda de apenas 0.02% para uma distância de 50 cm [21]. Como no nosso experimento temos uma distância inferior a esta, o erro deve ser ainda menor. Assim, desprezando-se o atrito do ar, a aceleração da esfera deve ser o valor da aceleração da gravidade. Nessas condições, a queda da esfera (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     ) é descrita por um movimento acelerado
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="343ed3755c0c0be5f52bb25733d1c6ef822cbe51">
+     <a name="343ed3755c0c0be5f52bb25733d1c6ef822cbe51">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg343ed3755c0c0be5f52bb25733d1c6ef822cbe51" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/343ed3755c0c0be5f52bb25733d1c6ef822cbe51.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6.
+      </strong>
+      <br/>
+      Esquema da montagem do experimento de queda livre.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      S
+     </i>
+     é a posição vertical da esfera medida a partir do primeiro sensor
+     <i>
+      S
+     </i>
+     <sub>
+      1
+     </sub>
+     ,
+     <i>
+      t
+     </i>
+     é o tempo,
+     <i>
+      g
+     </i>
+     é a aceleração da gravidade e
+     <i>
+      v
+     </i>
+     <sub>
+      0
+     </sub>
+     é a velocidade que a esfera possui ao passar por
+     <i>
+      S
+     </i>
+     <sub>
+      1
+     </sub>
+     . O valor de
+     <i>
+      v
+     </i>
+     <sub>
+      0
+     </sub>
+     é
+     <img src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/495edaf009ffee524f336c0ece58521327c3add6.jpg" style="max-width:100%"/>
+     onde
+     <i>
+      d
+     </i>
+     é a distância da extremidade (inferior) da esfera que não está em contato com o eletroímã até
+     <i>
+      S
+     </i>
+     <sub>
+      1
+     </sub>
+     . A disposição dos sensores foi tal que
+     <i>
+      D
+     </i>
+     = 4.90 ± 0.05 cm e
+     <i>
+      d
+     </i>
+     = 3.00 ± 0.05 cm.
+    </p>
+    <p>
+    </p>
+    <p>
+     Com os tempos de queda obtidos para diferentes valores de
+     <i>
+      S
+     </i>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     ), o seguinte ajuste quadrático foi obtido (
+     <i>
+      t
+     </i>
+     em ms e
+     <i>
+      S
+     </i>
+     em cm)
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="87bb1f149803bc20daa989f6c7e809bb07f524a7">
+     <a name="87bb1f149803bc20daa989f6c7e809bb07f524a7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg87bb1f149803bc20daa989f6c7e809bb07f524a7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YK3TYhDh3hCYc3QJ8FHztvh/87bb1f149803bc20daa989f6c7e809bb07f524a7.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Figura 7 - Comportamento obtido para a distância (
+     <i>
+      S
+     </i>
+     ) entre os sensores em função do tempo de queda (
+     <i>
+      t
+     </i>
+     ). O ajuste quadrático aos pontos experimentais também é apresentado (coeficiente de correlação R
+     <sup>
+      2
+     </sup>
+     =0.999993). As barras de erros associadas aos pontos experimentais são menores que o tamanho dos pontos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Desse ajuste obtivemos
+     <i>
+      d
+     </i>
+     = 3.0 ± 0.3 cm e
+     <i>
+      g
+     </i>
+     = 9.67 ± 0.07 m/s
+     <sup>
+      2
+     </sup>
+     . O valor de
+     <i>
+      g
+     </i>
+     obtido é menor em 1.2% do valor teórico esperado para Limeira-SP (9.7879342 m/s
+     <sup>
+      2
+     </sup>
+     ) segundo a fórmula da gravidade teórica (fórmula de Somiglinana) do sistema de referência geodésica WGS84 [22]. Dessa forma, os valores de
+     <i>
+      d
+     </i>
+     e
+     <i>
+      g
+     </i>
+     obtidos estão muito próximos dos valores esperados indicando que a montagem está fornecendo os valores corretos. Podemos ver que, embora o objetivo principal da montagem não foi de se realizar estudos de cinemática e determinar
+     <i>
+      g
+     </i>
+     , a montagem também pode ser utilizada para essa finalidade.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Resultados
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Um exemplo da tela produzida pelo Processing que é exibida no computador é apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     . Nessa tela são exibidos o histograma dos valores e o valor da última medida realizada.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      - Imagem produzida pelo Processing para o histograma obtido com 42 medidas do tempo de queda utilizando a montagem apresentada na Fig. 2.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Como demonstração da montagem proposta e ilustração do aparecimento do aspecto gaussiano do histograma, realizamos um experimento onde foram realizadas 250 medidas de tempo de queda. Os histogramas obtidos em diferentes instantes do experimento (
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     ) apresentaram a evolução da distribuição das medidas para o padrão gaussiano conforme aumentávamos o número
+     <i>
+      N
+     </i>
+     de realizações do experimento. Um ajuste do conjunto completo de medidas com uma função gaussiana (
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     - linha tracejada) forneceu uma gaussiana de média 181.63 ms e desvio padrão de 0.09 ms.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Figura 
+  9 - Histogramas para medidas de tempo de queda obtidos com a montagem proposta 
+  (Fig. 2). A função gaussiana ajustada para 250 medidas e apresentada 
+  em linha tracejada.
+    </p>
+    <p>
+    </p>
+    <p>
+     Como o experimento é de fácil execução e repetição, pode-se pedir a um grupo de alunos que realize o experimento enquanto o professor discute os conceitos envolvidos. A montagem permite realizar pelo menos 3 medidas/min de forma que um tempo típico para obter 50 medidas seria inferior a 15 min. Como observado na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     , um conjunto de 50 medidas já seria suficiente para ilustrar o aspecto gaussiano das medidas.
+    </p>
+    <p>
+    </p>
+    <p>
+     A montagem utilizada permitiu a aquisição automática de dados de tempo e exibição desses dados em tempo real. Como apontado por Haag
+     <i>
+      et al.
+     </i>
+     [23], a aquisição automática de dados nos laboratórios didáticos de física otimiza o tempo de realização dos experimentos e permite enriquecer a aprendizagem dos alunos utilizando maneiras alternativas para a compreensão dos fenômenos estudados.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Conclusões
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A aquisição automática de dados de tempo de queda no experimento de queda livre permitiu ilustrarmos o conceito de incerteza em medidas por meio da visualização em tempo real do histograma de medidas. A utilização da plataforma Arduino facilitou o processo de aquisição e mostrou-se novamente uma ferramenta muito versátil para experimentos didáticos. Além da ilustração do conceito de incertezas e de erros aleatórios e sistemáticos, a montagem sugerida neste trabalho também permite ao professor trabalhar outros conceitos em sala de aula. Por exemplo, o conceito de
+     <i>
+      modelo
+     </i>
+     pode ser ilustrado por meio da determinação de leis científicas, utilizando o ajuste de curvas para obter quantidades físicas como a aceleração da gravidade.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Agradecimentos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Os autores agradecem o Serviço de Apoio ao Estudante (SAE)/UNICAMP, FAPESP e CNPq pelo apoio financeiro, à Fabio R. Chagas por sua contribuição nos estágios iniciais desse trabalho e ao Prof. Hélio S. de Amorim do Instituto de Física da Universidade Federal do Rio de Janeiro pelas informações sobre a placa Arduino fornecidas no início do trabalho.
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 16/5/2012
+    </p>
+    <p>
+    </p>
+    <p>
+     Aceito em 11/2/2013
+    </p>
+    <p>
+    </p>
+    <p>
+     Publicado em 28/5/2013
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <li>
+     <span class="xref big">
+      1
+     </span>
+     <div>
+      E-mail:
+     </div>
+     <div>
+      <a href="mailto:vitor@ft.unicamp.br">
+       vitor@ft.unicamp.br
+      </a>
+      .
+     </div>
+    </li>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] G.L. Squires,
+        <i>
+         Practical Physics
+        </i>
+        (McGraw-Hill Publishing Company Limited, London, 1968).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] J.H. Vuolo,
+        <i>
+         Fundamentos da Teoria de Erros
+        </i>
+        (Editora Edgard Blucher Ltda, São    Paulo, SP, 1992).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] F. Galton,
+        <i>
+         Natural Inheritance
+        </i>
+        (MacMillan, 1889), p. 63-65, disponível em    http://www.galton.org, acessado    em 16/4/2013.
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] V.V. Kozlov    and M.Y. Mitrofanova, Regular and Chaotic Dynamics
+        <b>
+         8
+        </b>
+        , 431 (2003)
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] R.A. Nelson,    Am. J. Phys.
+        <b>
+         49
+        </b>
+        , 829 (1981)
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] S.M. Quick,    Am. J. Phys.
+        <b>
+         57
+        </b>
+        , 814 (1989)
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] A. Edgar, Am.    J. Phys.
+        <b>
+         59
+        </b>
+        , 568 (1991)
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] K. Wick and    K. Ruddick, Am. J. Phys.
+        <b>
+         67
+        </b>
+        , 962 (1999)
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] G. Dionisio    e W.C. Magno, Revista Brasileira de Ensino de Física
+        <b>
+         29
+        </b>
+        , 287    (2007)
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] J.A. White,    A. Medina, F.L. Roman and S. Velasco, The Physics Teacher
+        <b>
+         45
+        </b>
+        , 175 (2007)
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] M. Garg, Kalimullah,    P. Arun and F.M.S. Lima, Am. J. Phys.
+        <b>
+         75
+        </b>
+        , 254 (2007)
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] E.P.M. Corveloni,    E.S. Gomes, A.R. Sampaio, A.F. Mendes, V.L.L. Costa e R.C. Viscovini, Revista    Brasileira de Ensino de Física
+        <b>
+         31
+        </b>
+        , 3504 (2009)
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] http://www.arduino.cc/, acessado em 16/4/2013
+        <br/>
+        <a href="http://http://www.arduino.cc/" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] Jonathan Oxer    and Hugh Blemings,
+        <i>
+         Practical Arduino: Cool Projects for Open Source Hardware
+        </i>
+        (Apress, New York, 2009), 1ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] A.R. de Souza,    A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim,    Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 1702 (2011)
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] M.A. Cavalcante,    C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4503 (2011)
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] http://wiring.org.co/, acessado em 16/4/2013
+        <br/>
+        <a href="http://http://wiring.org.co/" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] Albert P.    Malvino,
+        <i>
+         Eletrônica
+        </i>
+        (Editora Makron Books, São Paulo, SP,    1997), v. 1, 4ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] http://www.processing.org/, acessado em 16/4/2013
+        <br/>
+        <a href="http://http://www.processing.org/" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [20] http://www.ft.unicamp.br/vitor/lie/a.zip, acessado em 16/4/2013
+        <br/>
+        <a href="http://http://www.ft.unicamp.br/vitor/lie/a.zip" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] P. Mohazzabi,    The Physics Teacher
+        <b>
+         49
+        </b>
+        , 89 (2011)
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] H. Moritz,    Journal of Geodesy
+        <b>
+         74
+        </b>
+        , 128 (2000)
+       </div>
+      </li>
+      <li>
+       <div>
+        [23] R. Haag, I.S.    Araujo e E.A. Veit, Física na Escola
+        <b>
+         6
+        </b>
+        (1), 69 (2005)
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <h2>
+    </h2>
+    <div class="ref-list">
+     1 E-mail: vitor@ft.unicamp.br.
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        05 Jul 2013
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Jun 2013
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        16 Maio 2012
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        11 Fev 2013
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

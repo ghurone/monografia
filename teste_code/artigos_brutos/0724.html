@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Notas e Discussões
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2016-0044" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2016-0044
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0044">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  A geometria dinâmica do círculo de Apolônio
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  The dynamic geometry of Apollonius circle
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Reynaldo Lopes de Oliveira Jr.
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Escola SESC de Ensino Médio, Rio de Janeiro, RJ, Brasil.
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:rlojunior@gmail.com">
+      rlojunior@gmail.com
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste trabalho, apresento uma nova questão referente à aplicação do círculo de Apolônio no contexto do
+     <i>
+      design de games
+     </i>
+     . Ao invés de determinarmos o ponto de encontro a partir das condições iniciais; na nova questão proposta decidiremos previamente o ponto de encontro/interceptação e calcularemos o instante em que o torpedo deve ser lançado. Na questão proposta em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física 36, 3502 (2014).
+       </span>
+      </span>
+     </span>
+     ] o torpedo e o navio partem ao mesmo tempo (em trajetória retilínea) rumo a interceptação. E se esperarmos um certo tempo
+     <math display="inline" id="m1">
+      <mi>
+       t
+      </mi>
+     </math>
+     para lançarmos o torpedo? Ou então, e se apontarmos o torpedo para uma determinada posição e desejarmos saber em que instante o navio será interceptado nesta posição? Estas são as novas questões trazidas nesta nota.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     problemas de perseguição; simulação computacional; simulação com software educacional
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this paper, I present a new application of the Apollonius circle in a game design context. Instead of determining the meeting point from the initial conditions, in the present proposal a previously prescribed interception point is given and I calculate the instant of time that the torpedo must be launched. In the problem proposed in reference [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física 36, 3502 (2014).
+       </span>
+      </span>
+     </span>
+     ] the torpedo and the ship start at the same time (on a straight path) towards the point of interception. Now I pose the following question: What happens if we wait a certain time
+     <math display="inline" id="m2">
+      <mi>
+       t
+      </mi>
+     </math>
+     to launch the torpedo? What happens if we aim the torpedo to a certain point and we want to know the instant the ship is hit when passing through this point? These are the new questions addressed to in this note.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     pursuit problems; computational simulation; educational software
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     No trabalho [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física 36, 3502 (2014).
+       </span>
+      </span>
+     </span>
+     ] foi apresentado, como uma aplicação do círculo de Apolônio, a solução para a interceptação entre dois objetos a uma velocidade constante (um torpedo e um navio porta-aviões).
+    </p>
+    <p>
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     o navio (N) está na posição (0,0) em
+     <math display="inline" id="m3">
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     de um plano cartesiano. O eixo x a partir da origem, cruza a posição do torpedo (T). A reta NAB é a suposta direção a ser seguida pelo navio. Os pontos A e B são os pontos onde N intercepta o círculo de Apolônio. Se o navio e o torpedo
+     <b>
+      partirem ao mesmo tempo
+     </b>
+     de suas posições iniciais, eles se interceptarão em A ou B para um dado
+     <math display="inline" id="m4">
+      <mi>
+       k
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mfrac>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           V
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           N
+          </mi>
+         </mrow>
+        </msub>
+       </mrow>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           V
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           T
+          </mi>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfrac>
+     </math>
+     . Onde
+     <math display="inline" id="m5">
+      <msub>
+       <mrow>
+        <mi>
+         V
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         N
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a velocidade escalar do navio e
+     <math display="inline" id="m6">
+      <msub>
+       <mrow>
+        <mi>
+         V
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         T
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a velocidade escalar do torpedo. Para mais detalhes sobre este problema ver ref. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física 36, 3502 (2014).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Círculo de Apolônio Estático para k = 0.7
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Neste artigo apresento uma nova questão: e se resolvermos esperar um pouco para atirarmos o torpedo, quais seriam as novas possibilidades de interceptação? O navio ainda parte da origem do plano cartesiano xy (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     ) e o torpedo ainda está em T. A nova situação se dá pelo fato do torpedo não partir ao mesmo tempo que o navio.
+    </p>
+    <p>
+    </p>
+    <p>
+     Considere o navio na origem do plano xy e o torpedo sobre o eixo x na posição T (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     ). Para este caso o círculo de Apolônio é dado pela equação [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física 36, 3502 (2014).
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m7">
+        <msup>
+         <mrow>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             x
+            </mi>
+            <mo>
+             -
+            </mo>
+            <msub>
+             <mrow>
+              <mi>
+               x
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               0
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <msup>
+         <mrow>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             y
+            </mi>
+            <mo>
+             -
+            </mo>
+            <msub>
+             <mrow>
+              <mi>
+               y
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               0
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         =
+        </mo>
+        <msup>
+         <mrow>
+          <mi>
+           R
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde:
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m8">
+        <msub>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mo>
+           -
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             k
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <mo>
+           -
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </mfrac>
+        <mo>
+         ,
+        </mo>
+        <mspace width="2em">
+        </mspace>
+        <msub>
+         <mrow>
+          <mi>
+           y
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m9">
+        <mi>
+         R
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           k
+          </mi>
+          <msub>
+           <mrow>
+            <mi>
+             x
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           -
+          </mo>
+          <msup>
+           <mrow>
+            <mi>
+             k
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <mo>
+           |
+          </mo>
+         </mrow>
+        </mfrac>
+        <mo>
+         ,
+        </mo>
+        <mspace width="2em">
+        </mspace>
+        <mi>
+         k
+        </mi>
+        <mo>
+         ≠
+        </mo>
+        <mn>
+         1
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Imaginemos agora que o navio continue a navegar e o torpedo ainda não tenha sido lançado. Precisamos saber como determinar a cada instante as novas possibilidades de interceptação. Dada a posição de N em
+     <math display="inline" id="m10">
+      <mi>
+       t
+      </mi>
+      <mo>
+       &gt;
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , para mantermos a mesma solução que a apresentada em (
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) devemos traçar um novo plano cartesiano x'y'. Para a construção deste plano x'y' rotacionamos e transladamos o eixo xy (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     ). Observamos assim que o centro do círculo de Apolônio também será rotacionado e transladado. O novo centro do círculo de Apolônio em
+     <math display="inline" id="m11">
+      <mi>
+       t
+      </mi>
+      <mo>
+       &gt;
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     será C'. Sendo assim as possibilidades de interceptação entre N e T serão nos pontos A' e B' conforme mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     . Observe ainda nesta figura que o ponto N, que indica a posição do navio já está em um pouco mais a frente do que quando
+     <math display="inline" id="m12">
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Eixo cartesiano x'y'
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Círculo de Apolônio para
+      <math display="inline" id="m13">
+       <mi>
+        k
+       </mi>
+       <mo>
+        &lt;
+       </mo>
+       <mn>
+        1
+       </mn>
+      </math>
+      em um instante
+      <math display="inline" id="m14">
+       <mi>
+        t
+       </mi>
+       <mo>
+        &gt;
+       </mo>
+       <mn>
+        0
+       </mn>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Nesta figura o raio do círculo de Apolônio é menor do que a solução em
+     <math display="inline" id="m15">
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     . O raio da circunferência de acordo com (
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     ) depende da posição de T. Como na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     a posição, no novo sistema x'y', muda a cada instante o raio também mudará. Na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 4
+     </a>
+     podemos observar a evolução temporal da circunferência.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Em linhas tracejadas temos o círculo de Apolônio em
+      <math display="inline" id="m16">
+       <mi>
+        t
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </math>
+      conforme mostrado na
+      <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 1
+      </a>
+      e em linha sólida temos o círculo depois de um tempo
+      <math display="inline" id="m17">
+       <mi>
+        t
+       </mi>
+       <mo>
+        &gt;
+       </mo>
+       <mn>
+        0
+       </mn>
+      </math>
+      conforme mostrado na
+      <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 3
+      </a>
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Sendo assim, se o torpedo demorar um tempo
+     <math display="inline" id="m18">
+      <mi>
+       t
+      </mi>
+      <mo>
+       &gt;
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     para ser atirado, a nova possibilidade de interceptação será em B' ou em A'.
+    </p>
+    <p>
+    </p>
+    <p>
+     Com o avanço de
+     <i>
+      softwares
+     </i>
+     matemáticos podemos observar que antes problemas estáticos e imóveis, agora podem ser animados tornando o aprendizado da matemática mais significativo e interessante. Não são poucos os problemas onde nossos alunos têm que ”imaginar”rotações, translações das figuras geométricas estáticas do quadro negro. Assim, utilizei o
+     <i>
+      software
+     </i>
+     Geogebra para tornar o problema do círculo de Apolônio, um
+     <i>
+      applet
+     </i>
+     interativo. O link da aplicação especialmente criada para este trabalho está neste endereço
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        <a href="http://ggbtu.be/m1325441" target="_blank">
+         http://ggbtu.be/m1325441
+        </a>
+       </span>
+      </span>
+     </span>
+     . Para acessar a aplicação não é necessário ter o
+     <i>
+      software
+     </i>
+     Geogebra instalado.
+    </p>
+    <p>
+    </p>
+    <p>
+     A fim de complementar os estudos realizados sobre o círculo de Apolônio, já apresentado nesta revista [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física 36, 3502 (2014).
+       </span>
+      </span>
+     </span>
+     ], apresentei a solução de mais uma questão que emergiu a respeito do tema. A nova questão surge a partir da implementação do círculo de Apolônio como algorítimo na programação de jogos de tiro. O jogo a ser desenvolvido é uma releitura do jogo lançado pela Atari em 1977, o
+     <i>
+      Air-Sea Battle
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] Air-Sea Battle, disponível em https://en.wikipedia.org/wiki/Air-Sea_Battle.
+       </span>
+       <br/>
+       <a href="https://en.wikipedia.org/wiki/Air-Sea_Battle" target="_blank">
+        https://en.wikipedia.org/wiki/Air-Sea_Ba...
+       </a>
+      </span>
+     </span>
+     ]. Neste jogo o jogador controla um canhão anti aéreo e deve atingir aviões que passam por cima da cidade. Ambos míssil e avião viajam em trajetórias retilíneas. Sabendo a velocidade do míssil e do avião (ou pelo menos sabendo a razão entre as velocidades) surge a pergunta: quanto tempo devemos esperar para que o míssil intercepte o avião?
+    </p>
+    <p>
+    </p>
+    <p>
+     O interessante é notar que desta vez, diferente da proposição feita em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física 36, 3502 (2014).
+       </span>
+      </span>
+     </span>
+     ] desejamos previamente definir a posição de interceptação. Refazendo a pergunta em termos matemáticos seria: Em que instante as trajetórias do míssil e do avião interceptarão o círculo de Apolônio? Para resolver esta questão se fez necessário entender como o círculo de Apolônio (e as condições de interceptação) evoluem com o tempo.
+    </p>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        <a href="http://ggbtu.be/m1325441" target="_blank">
+         http://ggbtu.be/m1325441
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        R. Lopes e A.C. Tort, Revista Brasileira de Ensino de Física
+        <b>
+         36
+        </b>
+        , 3502 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        Air-Sea Battle, disponível em https://en.wikipedia.org/wiki/Air-Sea_Battle
+        <br/>
+        <a href="https://en.wikipedia.org/wiki/Air-Sea_Battle" target="_blank">
+         » https://en.wikipedia.org/wiki/Air-Sea_Battle
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        22 Fev 2016
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        21 Jun 2016
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        30 Jun 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

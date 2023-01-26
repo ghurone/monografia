@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 32 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   Dez 2010
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172010000400013" target="_blank">
+    https://doi.org/10.1590/S1806-11172010000400013
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172010000400013">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Desenvolvimento de uma ferramenta para o ensino de física experimental a distância
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Development a tool of experimental physics teaching at distance
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Márlon Caetano Ramos Pessanha
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  São Paulo,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Sabrina Gomes Cozendey
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  São Carlos,  
+          ,  São Paulo,  
+        ,  Universidade Federal de São Carlos,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Marcelo de Oliveira Souza
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Rio de Janeiro,  
+          ,  Rio de Janeiro,  
+        ,  Universidade Estadual do Norte Fluminense,  Laboratório de Ciências Físicas ,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Apresentamos neste artigo dados sobre desenvolvimento de um sistema de instrumentação virtual que possibilita o controle e coleta de dados de experimentos através da internet, para o uso em atividades de ensino de física experimental a distância. O sistema é composto por um conjunto interativo de softwares e hardwares. Foram criados três tipos diferentes de softwares: Cliente, Servidor de Comunicação e Servidor de Controle. Estes softwares foram desenvolvidos com o uso das linguagens de programação Object Pascal e C++. Foram construídos circuitos eletrônicos de interface para a comunicação entre computador e experimento. Testes de comunicação e controle/coleta de dados foram realizados com a utilização de um experimento básico de física moderna.
+    </p>
+    <p>
+     ensino a distância; experimentos automatizados; física experimental; informática na educação; instrumentação virtual
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We present in this paper the development of a system of virtual instrumentation that makes possible the control and collects of data of experiments by Internet, for the use in activities of experimental physics teaching. The system is composed by an interactive set of softwares and hardwares. Three different types of softwares had been created: Client, Communication server and Control Server. These softwares had been developed with the use of the programming languages Object Pascal and C++. Interface electronic circuits had been constructed for the communication between Computer and Experiment. Tests of communication and control/collect of data had been carried with the use of a basic experiment of modern physics.
+    </p>
+    <p>
+     distance learning; automatized experiments; experimental physics; computer in education; virtual instrumentation
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      PRODUTOS E MATERIAIS DIDÁTICOS
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Desenvolvimento de uma ferramenta para o ensino de física experimental a distância
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Development a tool of experimental physics teaching at distance
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Márlon Caetano Ramos PessanhaI,
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: 
+        marlonpessanha@yahoo.com.br.
+       </span>
+      </span>
+     </span>
+     ; Sabrina Gomes Cozendey
+     <sup>
+      <b>
+       II
+      </b>
+     </sup>
+     ; Marcelo de Oliveira Souza
+     <sup>
+      <b>
+       III
+      </b>
+     </sup>
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      I
+     </sup>
+     Universidade de São Paulo, São Paulo, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      II
+     </sup>
+     Universidade Federal de São Carlos, São Carlos, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      III
+     </sup>
+     Laboratório de Ciências Físicas, Universidade Estadual do Norte Fluminense Darcy Ribeiro, Rio de Janeiro, RJ, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Apresentamos neste artigo dados sobre desenvolvimento de um sistema de instrumentação virtual que possibilita o controle e coleta de dados de experimentos através da internet, para o uso em atividades de ensino de física experimental a distância. O sistema é composto por um conjunto interativo de softwares e hardwares. Foram criados três tipos diferentes de softwares: Cliente, Servidor de Comunicação e Servidor de Controle. Estes softwares foram desenvolvidos com o uso das linguagens de programação Object Pascal e C++. Foram construídos circuitos eletrônicos de interface para a comunicação entre computador e experimento. Testes de comunicação e controle/coleta de dados foram realizados com a utilização de um experimento básico de física moderna.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     ensino a distância, experimentos automatizados, física experimental, informática na educação, instrumentação virtual.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     We present in this paper the development of a system of virtual instrumentation that makes possible the control and collects of data of experiments by Internet, for the use in activities of experimental physics teaching. The system is composed by an interactive set of softwares and hardwares. Three different types of softwares had been created: Client, Communication server and Control Server. These softwares had been developed with the use of the programming languages Object Pascal and C++. Interface electronic circuits had been constructed for the communication between Computer and Experiment. Tests of communication and control/collect of data had been carried with the use of a basic experiment of modern physics.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     distance learning, automatized experiments, experimental physics, computer in education, virtual instrumentation.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Segundo Moran [1] a educação a distância (EaD) pode ser definida como um processo de ensino-aprendizagem, mediado por tecnologias, onde professores e estudantes estão separados espacial e/ou temporalmente.
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste processo, algum meio permite a interação entre estudantes, professores e materiais de estudo. Dentre os meios mais comuns, podem ser destacados as correspondências, a televisão, o rádio, e mais recentemente, os meios computacionais.
+    </p>
+    <p>
+    </p>
+    <p>
+     Alguns dos meios computacionais em destaque, que podem ser utilizados para transmissão/construção do conhecimento em EaD, são as mídias removíveis (disquete, cd-roms, dvd-rom, etc.) contendo apostilas e exercícios digitalizados, imagens e vídeos-aula, softwares diversos, e principalmente, a Internet.
+    </p>
+    <p>
+    </p>
+    <p>
+     A Internet passou a um lugar de destaque como importante ferramenta para a EaD, pois de forma facilitada é possível a transmissão de texto, vídeo, áudio, imagens, além de transmissões ao vivo de acontecimentos.
+    </p>
+    <p>
+    </p>
+    <p>
+     O uso da Internet na Educação a Distância vem se intensificando, tendo suas origens já há algumas décadas. Como exemplo, no Brasil, a Universidade de Brasília (UnB) já utilizava nos anos 80 a Internet em cursos de extensão universitária. [2].
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1.1 Ensino experimental
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Em cursos a distância que envolvam disciplinas científicas a utilização de experimentos didáticos é uma interessante prática pedagógica que pode ser considerada.
+    </p>
+    <p>
+    </p>
+    <p>
+     A experimentação é importante e de certa forma fundamental no ensino das ciências naturais. É uma oportunidade de visualização da ação dos conceitos abordados em aula, além de permitir ao estudante que conheça algumas das ferramentas utilizadas na prática científica.
+    </p>
+    <p>
+    </p>
+    <p>
+     Diferentes teorias da aprendizagem dão sustentação ao uso de experimentos como ferramenta para a aprendizagem. Com base na Teoria de Piaget [3], a abordagem experimental se mostra como ótima ferramenta auxiliar no processo de construção do conhecimento. A apresentação de novos conceitos aos estudantes gera o que em sua teoria denomina-se desequilíbrio, e após isto, com a realização de práticas experimentais, é oferecido ao estudante uma oportunidade de confronto entre o que foi construído mentalmente e o que é real, ocorrendo então um reajuste mental ou construção de um novo esquema mental.
+    </p>
+    <p>
+    </p>
+    <p>
+     Durante uma prática experimental é possível o acompanhamento simultâneo de vários estudantes. Desta forma, uma característica marcante da experimentação é a possibilidade de interação ente os diferentes indivíduos envolvidos no processo ensino-aprendizagem. Baseado na teoria de Vygotsky [4], a participação de grupos de estudantes no procedimento experimental, com a interação entre estudantes e entre estes e um professor, apresenta-se como um ponto positivo que auxilia no desenvolvimento cognitivo destes estudantes.
+    </p>
+    <p>
+    </p>
+    <p>
+     Experimentos que possuam relações com situações cotidianas, ou propriedades de elementos já conhecidas pelos estudantes, apresentam-se ainda como ótimas ferramentas de contextualização. Em outras palavras, a experimentação pode ser utilizada como ponte entre os conceitos ensinados e o que é real e presente no cotidiano dos estudantes.
+    </p>
+    <p>
+    </p>
+    <p>
+     Um último aspecto normalmente envolvido em uma prática experimental é a motivação. A teoria da aprendizagem de Ausubel [5] aponta a motivação dos estudantes como um colaborador da aprendizagem. A interação entre os estudantes e o experimento é algo que traz motivação para os estudantes, que têm a oportunidade de não serem apenas ouvintes de explanações, como ocorre na pedagogia tradicional, mas de serem indivíduos participativos no processo ensino-aprendizagem.
+    </p>
+    <p>
+    </p>
+    <p>
+     Ressalta-se que, para que a prática experimental a distância ocorra é necessário a utilização de tecnologias que permitam a interação entre estudantes e procedimento experimental a distância.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1.2 A educação a distância no Brasil
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     No Brasil foi autorizado por lei e regulamentado por decreto presidencial, o Ensino a distância para diferentes níveis [6, 7].
+    </p>
+    <p>
+    </p>
+    <p>
+     Desta forma, instituições de ensino puderam oferecer também cursos EaD em nível básico (Ensino Fundamental e Médio), nível técnico, de educação especial, de educação de jovens e adultos, e de nível superior.
+    </p>
+    <p>
+    </p>
+    <p>
+     O Brasil já conta com diversos cursos a distância em nível superior. Entre os cursos oferecidos no país, alguns podem ser destacados pelo seu tradicional uso da experimentação, como os cursos de formação de professores de física, química, matemática e ciências. Tais cursos possuem geralmente em suas grades curriculares, disciplinas experimentais de física e química.
+    </p>
+    <p>
+    </p>
+    <p>
+     Segundo levantamento efetuado a partir do Sistema Integrado de Informações da Educação Superior (SiedSup) do Ministério da Educação do Brasil, foi possível verificar a quantidade de cursos de física, química, matemática e ciências, na modalidade de EaD, que se encontram autorizados a funcionar. Em 2008 eram 76 cursos com no mínimo 26808 vagas [8].
+    </p>
+    <p>
+    </p>
+    <p>
+     Muitas disciplinas experimentais presentes nas grades curriculares destes cursos ocorrem em aulas presenciais. Tecnologias que permitam que estas aulas ocorram de forma não presencial, a distância, são interessantes, pois permitem uma maior facilidade para os estudantes e professores destes cursos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando a importância da experimentação no processo ensino-aprendizagem, principalmente no ensino de ciências, e ainda mais importante na formação de professores, fica evidente a necessidade de dispositivos tecnológicos que permitam esta prática pedagógica a distância.
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando ainda o uso da Internet como o meio tecnológico que permita a comunicação entre os estudantes e professores devem ser utilizados dispositivos que permitam uma prática experimental à distância, através da Internet.
+    </p>
+    <p>
+    </p>
+    <p>
+     O presente artigo apresenta o desenvolvimento de um sistema de instrumentação virtual que possibilita a prática experimental a distância através da internet.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Metodologia
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O sistema proposto é composto por um conjunto de elementos de software e hardware. A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     apresenta o esquema de funcionamento e as interações do sistema.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Aos experimentos são conectados sensores e componentes de controle. Estes sensores e componentes eletrônicos são variados, e de acordo com a necessidade de cada experimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     Estes componentes se conectam a um circuito de interface (placa de aquisição e controle de dados), que permite a comunicação entre experimento e computador. Foi considerado o uso da placa de interface USB R-Control30. [9].
+    </p>
+    <p>
+    </p>
+    <p>
+     Em paralelo, uma câmera coleta imagens do experimento, enviando estes dados ao computador através de uma porta de comunicação USB.
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste computador operam três softwares servidores, um responsável pelo gerenciamento das imagens (Servidor Encoder), outro pelo gerenciamento de controle e coleta de dados (Servidor de Controle) e um último pelo gerenciamento de conexões de softwares clientes (Servidor de Comunicação).
+    </p>
+    <p>
+    </p>
+    <p>
+     O Software Cliente se conecta aos Servidores de Comunicação e Encoder, recebendo e enviando dados. Os usuários do sistema utilizam o Software Cliente, sendo possível a conexão simultânea de vários destes usuários. Através deste software é possível acompanhar e controlar o procedimento experimental, e interagir com outros usuários que estejam conectados ao sistema.
+    </p>
+    <p>
+    </p>
+    <p>
+     Os softwares Servidor de Comunicação, Servidor de Controle, e Cliente foram desenvolvidos na pesquisa.
+    </p>
+    <p>
+    </p>
+    <p>
+     O Software Encoder utilizado foi o Microsoft Windows Media Encoder 9.0 [10], de licença gratuita para versões originais do Windows XP e Vista.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.1 Desenvolvimento dos Softwares
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Entre os softwares que compõem o sistema, apenas o Servidor Encoder não foi desenvolvido durante a pesquisa. Todos os demais softwares foram elaborados com a utilização dos ambientes de desenvolvimento (IDE) Delphi e C++Builder [11][12].
+    </p>
+    <p>
+    </p>
+    <p>
+     O IDE Delphi foi utilizado no desenvolvimento dos softwares Cliente e Servidor de Comunicação; enquanto o IDE C++Builder foi utilizado para o desenvolvimento do software Servidor de Controle.
+    </p>
+    <p>
+    </p>
+    <p>
+     No desenvolvimento dos softwares, foram implementadas diversas funções, como a comunicação entre os softwares por protocolo TCP/IP; funções que permitissem a adaptabilidade e o gerenciamento de procedimentos experimentais e de controle, etc. A
+     <a class="open-asset-modal" data-target="#ModalTablet01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     apresenta algumas das funções implementadas em cada software.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row table" id="t01">
+     <a name="t01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet01" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Foram implementadas ainda, para todos os três softwares, a função de carregamento de esquemas de cores do software, carregamento automático de configurações iniciais, e acesso à seção de ajuda de cada software.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2 Hardware
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para a comunicação através da porta USB foi considerada a utilização de um circuito de Interface comercial, a Placa R-Control30 da Rogercom. [9].
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma foto desta placa de interface é apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Esta placa possui diversas funções de controle e coleta de dados. Para o Sistema de Instrumentação Virtual, foram utilizadas as funções de Conversão analógico-digital (A/D) de 4 canais e Conversão digital-analógico (D/A) de 1 canal.
+    </p>
+    <p>
+    </p>
+    <p>
+     O conversor A/D foi utilizado para a leitura de até quatro sensores de experimentos. Já o conversor D/A foi utilizado no controle experimental.
+    </p>
+    <p>
+    </p>
+    <p>
+     Foi elaborado ainda, um circuito auxiliar de controle com o objetivo de converter o sinal de saída do canal D/A em sinais de controle.
+    </p>
+    <p>
+    </p>
+    <p>
+     O circuito auxiliar de controle (CAC-USB) possui como componente eletrônico principal o Driver LM3914. Este componente possui dez saídas analógicas que podem ser ligadas ou desligadas, de acordo com a diferença de potencial que é aplicada em dois pinos do componente [13].
+    </p>
+    <p>
+    </p>
+    <p>
+     Desta forma, a saída do conversor D/A da placa R-Control30 foi conectada ao circuito auxiliar de controle, e assim, de acordo com a diferença de potencial fornecida pelo conversor D/A, foi possível ligar uma das saídas do Driver LM3914.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     apresenta o esquema eletrônico do circuito auxiliar de controle.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.3 Experimento para teste
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Foram construídos diversos experimentos de física, com o intuito de realizar testes de funcionamento do sistema de instrumentação virtual desenvolvido.
+    </p>
+    <p>
+    </p>
+    <p>
+     Como exemplo, um dos experimentos tratou dos conceitos físicos de absorção e reflexão da luz por materiais claros e escuros.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para isto, em uma caixa foram colocadas duas placas metálicas idênticas, mas pintadas por tintas de cores diferentes, uma pintada de preto e outra de branco. Uma lâmpada fluorescente de 9 Watts, de baixa radiação térmica, foi colocada em frente às placas de forma que emitisse luz branca sobre estas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Atrás das placas foram colocados sensores térmicos (termistores), possibilitando verificar a absorção da energia luminosa, que provoca o aumento da temperatura da placa. À frente de cada placa foram colocados ainda sensores de luminosidade LDR (Light Dependent Resistor), com o objetivo de verificar a intensidade de radiação luminosa refletida por cada placa.
+    </p>
+    <p>
+    </p>
+    <p>
+     Estes sensores são resistências variáveis em função das grandezas físicas que verificam (luminosidade e temperatura).
+    </p>
+    <p>
+    </p>
+    <p>
+     As
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 4
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     apresentam, respectivamente, o esquema de montagem e uma foto deste experimento.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Um circuito auxiliar (C-E1), com seu esquema eletrônico representado na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     , foi utilizado para coletar valores analógicos de tensão elétrica em cada um dos sensores. A tensão elétrica está relacionada às medições efetuadas nos sensores. Cada um dos circuitos auxiliares (C-E1) se conectava à placa de aquisição de dados através de um dos canais de conversão A/D.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Após a montagem do experimento, os sensores de temperatura foram calibrados. Para isto, foi tomado como referência os dados técnicos fornecidos pelo fabricante [14].
+    </p>
+    <p>
+    </p>
+    <p>
+     Para as medições de temperatura, foram utilizados dois termistores NTC (Negative Temperature Coefficient). Estes sensores possuem seu valor de resistência inversamente proporcional à temperatura.
+    </p>
+    <p>
+    </p>
+    <p>
+     Esta relação obedece a uma expressão, que é apresentada em Eq. (1)
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="0f732ced25923033c153bb53b73cc46894ce7347">
+     <a name="0f732ced25923033c153bb53b73cc46894ce7347">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg0f732ced25923033c153bb53b73cc46894ce7347" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/0f732ced25923033c153bb53b73cc46894ce7347.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      R
+      <sub>
+       T
+      </sub>
+     </i>
+     é a resistência elétrica do Termistor;
+     <i>
+      T
+     </i>
+     é a temperatura em °C que está sendo verificada pelo termistor. Já 25 ºC (resistência do termistor à 25 °C) e
+     <i>
+      B
+     </i>
+     são valores constantes informados pelo fabricante. Os termistores utilizados possuem os valores 10000 para
+     <i>
+      R
+     </i>
+     25 ºC e 3965 para
+     <i>
+      B
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     apresenta um gráfico da relação
+     <i>
+      RT
+     </i>
+     x
+     <i>
+      T
+     </i>
+     .
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Conforme pode ser observado, o comportamento deste sensor não é linear, tendo para o intervalo entre 0 °C e 100 °C um coeficiente de correlação
+     <i>
+      R
+     </i>
+     <sup>
+      2
+     </sup>
+     igual a 0,7387.
+    </p>
+    <p>
+    </p>
+    <p>
+     Desta forma, é necessária que seja utilizada alguma alternativa que permita a linearização. O circuito auxiliar C-E1 possui também a função de linearização das medidas efetuadas nos sensores. O circuito, conforme pôde ser observado na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     , trata-se de uma associação em série entre o sensor, neste caso o termistor, e um resistor de 10 kΩ. É efetuada a leitura da tensão elétrica atuante no resistor.
+    </p>
+    <p>
+    </p>
+    <p>
+     Com a aplicação da lei de Ohm, chegaremos à seguinte equação
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="da1d9c867cb5726c170a041f89c9039fcf7eb17c">
+     <a name="da1d9c867cb5726c170a041f89c9039fcf7eb17c">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgda1d9c867cb5726c170a041f89c9039fcf7eb17c" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/da1d9c867cb5726c170a041f89c9039fcf7eb17c.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Substituindo o valor de
+     <i>
+      R
+      <sub>
+       T
+      </sub>
+     </i>
+     , descrito pela Eq. (1), na Eq. (2), é possível traçar o gráfico para a relação entre
+     <i>
+      U
+     </i>
+     <sub>
+      R
+     </sub>
+     10 kΩ e
+     <i>
+      T
+     </i>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Durante a coleta de dados, a grandeza física medida é a tensão elétrica atuante no resistor; e conforme e possível observar na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     , o gráfico mostra-se mais linear se comparado ao apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     . O coeficiente de correlação para este gráfico (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     ) é
+     <i>
+      R
+      <sup>
+       2
+      </sup>
+     </i>
+     igual a 0,9479.
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando apenas o intervalo de medida de temperatura entre 0 °C e 40 °C, o gráfico possui um com portamento bem próximo de uma linha reta, conforme observa-se na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para este intervalo, o coeficiente de correlação se aproxima muito da linha reta, possuindo
+     <i>
+      R
+      <sup>
+       2
+      </sup>
+     </i>
+     igual a 0,9996. Devido a aproximação a um comportamento linear, a tensão elétrica obtida no resistor, em função da temperatura verificada no termistor, pode ser descrita pela Eq. (3)
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="18fad3443fb86d4e89adf043f1dfd97ecb7400bf">
+     <a name="18fad3443fb86d4e89adf043f1dfd97ecb7400bf">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg18fad3443fb86d4e89adf043f1dfd97ecb7400bf" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/SVH8kNNj5XhwbDNmBXBsDTz/18fad3443fb86d4e89adf043f1dfd97ecb7400bf.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para o experimento proposto, o intervalo entre 0 °C e 40 ºC é satisfatório, podendo-se tomar como referência a equação Eq. (3).
+    </p>
+    <p>
+    </p>
+    <p>
+     Já em relação aos sensores de luminosidade, os LDRs, devido a algumas características da fonte de luz utilizada e dos próprios sensores, é feita a medição de um valor relativo ao máximo de intensidade de luz que o LDR consegue verificar.
+    </p>
+    <p>
+    </p>
+    <p>
+     De acordo com as informações de fabricantes [15, 16], para o tipo de sensor LDR utilizado (CdS - sulfeto de cádmio - 550 nm), o fenômeno fotoelétrico ocorre com maior facilidade quando se incide sobre o sensor uma radiação eletromagnética na faixa de 550 nm. A
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     , que se segue, apresenta um gráfico da resposta relativa do tipo de sensor LDR utilizado, em relação ao comprimento de onda da radiação ao qual o sensor é exposto.
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O gráfico se refere a um mínimo de intensidade da radiação de comprimento de onda de 550 nm, necessária para que a resposta relativa do sensor seja o máximo (100%). No gráfico, é apresentada ainda, a resposta relativa que o sensor apresenta para radiações em outras faixas de comprimento de onda, que possuem a mesma intensidade da radiação de 550 nm.
+    </p>
+    <p>
+    </p>
+    <p>
+     Quando o sensor apresenta uma resposta relativa igual a 100%, sua resistência elétrica está bem próxima de zero, e logo, uma resposta relativa igual a 0% indica que o sensor apresenta uma resistência elétrica alta.
+    </p>
+    <p>
+    </p>
+    <p>
+     Cabe ressaltar que, é possível, com radiações luminosas de comprimento de onda diferentes de 550 nm, alcan»car uma resposta próxima ou igual a 100%, mas para isto, será necessária uma intensidade maior da radiação. Esta intensidade diz respeito a densidade de energia luminosa que incide sobre o sensor, ou seja, energia/área do sensor.
+    </p>
+    <p>
+    </p>
+    <p>
+     Como a fonte luminosa utilizada no experimento emite radiação luminosa em diferentes comprimentos de onda, torna-se difícil a coleta de informações com estes sensores, a não ser a resposta relativa do sensor.
+    </p>
+    <p>
+    </p>
+    <p>
+     Cada sensor LDR é conectado a um circuito auxiliar C-E1, e a tensão elétrica medida é proporcional à resposta relativa do sensor, em que para uma medição igual a 0 V se tem uma resposta relativa igual a 0%, enquanto para uma medida igual a 5 V ter-se-á uma resposta relativa igual a 100%.
+    </p>
+    <p>
+    </p>
+    <p>
+     Sensores do tipo LDR possuem um tempo de resposta que varia em cerca de 40 ms à 50 ms [17]. Sendo assim, o sensor LDR só permite a percepção de variações de luminosidade que ocorram em intervalos de tempo de no mínimo 40 ms. Para variações de luminosidade com tempos inferiores, é possível somente identificar valores médios desta variação.
+    </p>
+    <p>
+    </p>
+    <p>
+     O experimento utiliza uma lâmpada fluorescente, a qual possui uma variação periódica da intensidade da luminosidade com freqüência correspondente à, no mínimo, o dobro da freqüência de oscilação da rede elétrica. Sendo assim, o período desta variação é inferior ao tempo de reaçãao do sensor LDR, não possibilitando a percepção desta, e somente um valor médio desta variação.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.4. Testes
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para que se pudesse efetuar uma avaliação do funcionamento do Sistema de Instrumentação Virtual desenvolvido foram realizados dois tipos de testes. Em um primeiro tipo se buscou verificar alguns aspectos relacionados a transmissão de dados durante a comunicação dos softwares; e em outro tipo de teste buscou-se verificar o uso do sistema desenvolvido na realização de procedimentos experimentais e de controle.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.4.1. Testes de transmissão de dados
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Nestes testes foram verificados os tempos de transferência de mensagens entre o software cliente e software servidor, e o tempo de atraso no recebimento de imagens de vídeo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para que fosse possível a medição do tempo entre o envio e recebimento de mensagens, um software do tipo cliente foi modificado, gerando assim uma nova versão deste software, a qual foi denominada "Software Cliente-Timer".
+    </p>
+    <p>
+    </p>
+    <p>
+     Visualmente, esta versão é idêntica ao software Cliente. A modificação consistiu na adição de mais uma função no software. Para isto, durante o seu desenvolvimento foi implementado um contador de tempo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Qualquer mensagem enviada por um software cliente é direcionada ao servidor, que por sua vez, redireciona para todos os clientes conectados, inclusive para aquele que enviou a mensagem.
+    </p>
+    <p>
+    </p>
+    <p>
+     Sendo assim, a função implementada registra o momento em que o usuário envia a mensagem e o momento em que o usuário recebe de volta esta mesma mensagem. O intervalo de tempo entre estes momentos é armazenado em um arquivo, no mesmo diretório em que se encontra o executável do software.
+    </p>
+    <p>
+    </p>
+    <p>
+     Este software foi utilizado no lugar do software cliente, por apenas um dos usuários do sistema, durante os testes com experimentos, os quais serão descritos a frente.
+    </p>
+    <p>
+    </p>
+    <p>
+     Já para o registro do tempo de atraso no recebimento de imagens de vídeo foi desenvolvido um software, também através do IDE Delphi, o qual possui um cronômetro virtual, e o acesso µas imagens transmitidas pelo servidor. Quando o cronômetro virtual do software está em funcionamento, é feita uma captura da tela do software a cada 30 s, e salva em um arquivo de imagem.
+    </p>
+    <p>
+    </p>
+    <p>
+     Durante os testes, o cronômetro virtual do software foi disparado no mesmo momento que um cronômetro real, que tem seu visor filmado pela câmera de captura de imagens. Desta forma, nos arquivos que sâo criados periodicamente, há informações do tempo dos dois cronômetros. A diferença de tempo entre estes dois valores de tempo é o atraso no recebimento das imagens.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     apresenta um esquema de como isto ocorre. Através da Fig. 12, é apresentada uma tela capturada deste software, durante sua execução.
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Este teste foi realizado durante 1 h, com a coleta do tempo de atraso ocorrendo a cada 30 s.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.4.2. Teste de controle e coleta de dados do experimento
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Foi realizado ainda um teste das funções de controle e coleta de dados a distância através do sistema desenvolvido. O teste consistiu em uma sessão de 5 h ininterrupta onde o sistema esteve em operação, em que se buscou, observar possíveis falhas de funcionamento do sistema, verificar características dos softwares no que diz respeito a qualidade destes, e a viabilidade de uso como ferramenta pedagógica.
+    </p>
+    <p>
+    </p>
+    <p>
+     No decorrer destas 5 h, os dados experimentais coletados (medidas de luminosidade re°etida e temperatura das placas) foram enviados a cada 20 s aos clientes conectados ao sistema. Além disto, comandos de controle (ligar ou desligar a fonte luminosa) foram enviados a cada 20 min ao servidor por um dos clientes.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Resultados e discussão
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3.1. Softwares desenvolvidos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A seguir, são apresentados resultados do desenvolvimento gráfico e de funções dos softwares.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma tela capturada do Software Cliente é apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O software possui diversas funções, destacando a possibilidade de interação com o experimento e com os outros usuários conectados.
+    </p>
+    <p>
+    </p>
+    <p>
+     O usuário do software poderá visualizar em tempo real o procedimento experimental, controlar o experimento através de linhas de comando (comandos enviados como texto) ou através de Botões. O software possibilita a configuração de até 20 botões para facilitar o controle do experimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     Por se tratar de uma ferramenta para aplicação no ensino, foi implementada uma função para o acesso a conteúdos teóricos, que devem abordar os conceitos envolvidos no procedimento experimental. Uma tela da seção de conteúdos teóricos para um dos experimentos construídos, é apresentada através da
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 14
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O software Servidor de Comunicação possui uma tela mais simples que as dos demais softwares desenvolvidos. A
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 15
+     </a>
+     apresenta a tela capturada do Software Servidor de Comunicação.
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Entre as funções implementadas no desenvolvimento deste software, destacam-se a possibilidade de ações para com os usuários (desconexão e mensagem privativa) e a possibilidade de configuração de mensagens automáticas de conexão.
+    </p>
+    <p>
+    </p>
+    <p>
+     Um último software desenvolvido, o Servidor de Controle, possui uma quantidade significativa de funções implementadas. Uma tela capturada deste software é apresentada através da
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Entre as funções destacam-se as de seleção de usuário que poderá controlar o experimento, as de configuração de comandos de controle do procedimento experimental, e as de configuração de canais A/D.
+    </p>
+    <p>
+    </p>
+    <p>
+     A seleção do usuário que poderia efetuar o controle possibilita um maior gerenciamento da aula experimental a distância. Como o sistema possibilita a conexão simultânea de diversos estudantes, é necessário que se escolha um destes para efetuar o controle do procedimento, podendo esta escolha ser modificada a qualquer momento. Mesmo que um estudante não possa no momento controlar o experimento, ele ainda acompanharia o procedimento, com o acesso às imagens em tempo real e aos dados coletados no experimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     Tanto a configuração de comandos de controle, como a configuração de canais A/D torna o software adaptável a diversos experimentos. Esta é uma característica importante do sistema. Considerando o uso do sistema em um curso a distância, será necessária uma adaptabilidade aos diferentes procedimentos experimentais que deverão ser realizados. Neste software é possível a configuração do tipo de medida que está sendo realizada em cada canal A/D, e ainda, os comandos de controle específicos para o procedimento experimental. Toda a configuração pode ser salva em arquivo, podendo ser restaurada quando o mesmo procedimento experimental for realizado novamente.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3.2. Testes de transmissão de dados
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Os testes de transmissão de dados no formato de texto (mensagens), foram realizados durantes os testes de funcionamento com os experimentos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Destacando apenas o experimento apresentado no presente artigo, foi realizada uma sessão de teste, com 5 h de duração com a medição do intervalo de tempo no momento que era enviado um comando de controle, o que ocorria a cada 20 min. Logo, foram feitas 15 medições do intervalo entre envio e recebimento de mensagens, para cada sessão de teste.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 17
+     </a>
+     apresenta os intervalos, em milisegundos, verificados durante este teste.
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     É possível observar que a média geral obtida para o intervalo entre envio e recebimento de resposta, foi de aproximadamente 0,1 s.
+    </p>
+    <p>
+    </p>
+    <p>
+     Este intervalo de tempo é satisfatório, e permite que mensagens sejam trocadas quase que instantaneamente. Levando-se em conta ainda a alta velocidade na coleta de dados dos experimentos, pode-se afirmar que tais procedimentos terão um acompanhamento em tempo real.
+    </p>
+    <p>
+    </p>
+    <p>
+     Já durante o teste de transferência de imagens, foi verificado, conforme pode ser observado na
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 18
+     </a>
+     , um tempo de atraso constante.
+    </p>
+    <div class="row fig" id="f18">
+     <a name="f18">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf18" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O tempo de atraso no recebimento das imagens foi constante em 7 s. É um tempo alto, mas que, no entanto, dependendo do experimento utilizado, não compromete o acompanhamento deste.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para experimentos mais dinâmicos, como alguns de mecânica, o sistema não se mostrou apropriado. Ressalta-se, no entanto, que esta é uma limitação da tecnologia de transmissão de imagens através da internet que se tem atualmente, que tende a evoluir µa medida que ocorre também a evolução das bandas de internet.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3.3. Testes com o uso do experimento
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste tópico são apresentados alguns dos resultados obtidos durante o teste do sistema com o uso do experimento apresentado neste artigo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Durante os testes com os dispositivos de controle, foi possível, com o uso do Sistema de Instrumentação Virtual desenvolvido, o acesso ao controle e coleta de dados do experimento. O sistema mostrou-se eficiente no controle e no acompanhamento do procedimento. Foram obtidos informações relativas a temperatura de absorção e luminosidade re°etida pelas duas placas metálicas presentes no experimento. As
+     <a class="open-asset-modal" data-target="#ModalFigf19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 19
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf20" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      20
+     </a>
+     apresentam os gráficos obtidos a partir dos valores coletados neste experimento, ao longo das 5 h de execução do procedimento experimental.
+    </p>
+    <div class="row fig" id="f19">
+     <a name="f19">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf19" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f20">
+     <a name="f20">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf20" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Durante a realização do teste a lâmpada presente no experimento era ligada ou desligada em intervalos de 20 min. A luminosidade re°etida nos momentos em que a lâmpada encontrava-se ligada ou desligada é perceptível através da Fig. 19. Estes momentos coincidem com a elevação e o declínio da temperatura das placas, que podem ser verificados na Fig. 20.
+    </p>
+    <p>
+    </p>
+    <p>
+     Ressalta-se, entretanto, que as variações da intensidade de luminosidade re°etida da lâmpada não são perceptíveis, devido µas limitações do sensor utilizado, conforme apresentado no tópico 2.3. Devido o elevado tempo de atraso do sensor LDR é possível apenas o acompanhamento de valores médios destas variações.
+    </p>
+    <p>
+    </p>
+    <p>
+     No entanto, o experimento permite diferenciar nitidamente, a capacidade de re°exão e absorção da luz, por placas claras e escuras. Desta forma, é possível concluir a adequação do experimento proposto para a discussão conceitual sobre o fenômeno envolvido.
+    </p>
+    <p>
+    </p>
+    <p>
+     O Sistema de Instrumentação Virtual desenvolvido permitiu o acesso em tempo real aos dados coletados no experimento, além do controle do experimento, onde foi possível ligar ou desligar a fonte luminosa do experimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Conclusão
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Muitas disciplinas experimentais presentes nas grades curriculares dos cursos a distância ocorrem em aulas presenciais.
+    </p>
+    <p>
+    </p>
+    <p>
+     Tecnologias que permitam que estas aulas ocorram de forma não presencial a distância são necessárias, por permitirem uma maior facilidade e dinamismo tanto para os estudantes como para os professores destes cursos.
+    </p>
+    <p>
+    </p>
+    <p>
+     A ferramenta desenvolvida permitiria que estas aulas experimentais pudessem ocorrer a distância, através da internet, possibilitando o controle e acompanhamento simultâneo de um procedimento experimental por até 50 estudantes. Esta quantidade de 50 estudantes está relacionada a uma limitação do software encoder, que permite a conexão de no máximo 50 usuários.
+    </p>
+    <p>
+    </p>
+    <p>
+     Com base na teoria de Vygotsky, a elaboração de conteúdos teóricos, acessíveis através do software Cliente e específicos para cada experimento, permitiria um desenvolvimento real do estudante; e a partir da interação com outros usuários e tutores seria possível também um desenvolvimento potencial.
+    </p>
+    <p>
+    </p>
+    <p>
+     A visualização dos experimentos através de imagens reais permite que os estudantes possam relacionar mais facilmente aquilo que está sendo visualizado, com o conteúdo teórico que lhe foi apresentado.
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando ainda, uma quantidade cada vez maior de cursos na modalidade a distância em que a experimentação se faz necessária, com base nos resultados obtidos, e considerando ainda os variados aspectos positivos do uso de experimentos e novas tecnologias no ensino, é possível concluir que a ferramenta desenvolvida possui um alto grau de aplicabilidade.
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 15/10/2009; Aceito em 25/5/2010; Publicado em 28/2/2011
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <li>
+     <span class="xref big">
+      1
+     </span>
+     <div>
+      E-mail:
+     </div>
+     <div>
+      <a href="mailto:marlonpessanha@yahoo.com.br">
+       marlonpessanha@yahoo.com.br
+      </a>
+      .
+     </div>
+    </li>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] J.M.    Moran, O que é Educação a Distância. Disponível    em http://www.eca.usp.br/prof/moran/dist.htm    Acesso em 1/10/2008.
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] M.E.C.    de Andrade, Processo de Ensino-Aprendizagem via Internet. Tese de Mestrado em    Engenharia de Produção, Universidade Federal de Santa Catarina,    Florianópolis (2001).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] N.    Piletti, Psicologia Educacional. (Ática, Săo Paulo, 1999).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] L.    Vygotsky, Pensamento e Linguagem (Martins Fontes, Săo Paulo, 1998).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] D.    Ausubel, J. Novak e H. Hanesian, Psicologia Educacional (Interamericana, Rio    de Janeiro, 1980).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] Brasil, Lei n± 9.394, de 20 de dezembro de 1996. Estabelece as diretrizes e bases da educação nacional (1996).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] Brasil, Decreto n± 5.622, de 19 de dezembro de 2005, Presidência da República, Casa Civil, Subchefia de Assuntos Jurídicos (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] SIEDSUP/MEC,    Cadastro das Instituições de Ensino Superior: Busca de Curso,    Disponível em http://www.educacaosuperior.inep.gov.br/funcional/busca    curso.stm Acesso em 8/10/2008.
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] Rogercom.com,    Manual da Placa R-CONTROL 30, Disponível em http://www.rogercom.com/Produtos/PlacaRcontrol30/Manual-RCONTROL30.pdf    Acesso em 9/9/2007.
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] Microsoft, Windows Media Encoder 9 Series, Disponível em http://www.microsoft.com/windows/windowsmedia/pt/9series/encoder/default.aspx Acesso em 9/9/2007.
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] I.C.    Boratti, Programação Orientada a Objetos Usando Delphi (Visual    Books, Florianópolis, 2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] A.D.    Bueno, Programação Orientada a Objeto com C++ (Novatec, Săo Paulo,    2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] National    Semiconductor, Data Sheet LM3914: Dot/Bar Display Driver. Disponível    em http://www.national.com/green/pdf/LM3914VNOPB.pdf    Acesso em 15/7/2008.
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] Maxim, Application Note 817 - Using Thermistors in Temperature Tracking Power Supplies. Disponível em http://pdfserv.maximic.com/en/an/AN817.pdf Acesso em 10/7/2008.
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] Silonex,    Standard Optoelectronic Components. Disponível em http://www1.silonex.com/datasheets/specs/images/pdf/103259.pdf    Acesso em 10/7/2008, (2007a).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] Silonex,    TO-5 Photocells. Disponível em http://www1.silonex.com/optoelectronics/photocells.html    Acesso em 10/7/2008 (2007b).
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] Dick    Smith Electronics, Data Sheet Z 4801: Cadmium Sulphide Light Dependent Resistor.    Disponível em http://www.dse.com.au/isroot/dse/support/Z4801.pdf    Acesso em 20/12/2009.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <h2>
+    </h2>
+    <div class="ref-list">
+     1
+         E-mail: 
+        marlonpessanha@yahoo.com.br.
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        04 Abr 2011
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Dez 2010
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        15 Out 2009
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        25 Maio 2010
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

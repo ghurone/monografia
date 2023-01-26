@@ -1,0 +1,3266 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2020-0124" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2020-0124
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0124">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Resfriamento evaporativo da água em um refrigerador de vaso cerâmico: estudo experimental da transferência de calor e massa
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Evaporative cooling of water in a clay-pot refrigerator: experimental study of heat and mass transfer
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     M. Paes de Barros
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Mato Grosso, Instituto de Física, Cuiabá, MT, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:marcelo.paes@fisica.ufmt.br">
+      marcelo.paes@fisica.ufmt.br
+     </a>
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-0726-3260">
+     http://orcid.org/0000-0003-0726-3260
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Este artigo descreve um experimento quantitativo destinado a avaliar o desempenho de um refrigerador de vaso cerâmico que trabalha com o princípio de resfriamento evaporativo e comparar os resultados experimentais com valores previstos em modelo de transferência de calor e massa. O experimento, desenvolvido durante aulas de “Instrumentação para o Ensino”, foi concebido para ser facilmente implementado pelos alunos que, além de realizar os ensaios, confeccionaram uma planilha eletrônica que modela o problema e avalia a consistência dos resultados. O modelo baseado em uma transferência simplificada de calor e massa mostra-se em boa concordância quantitativa com as medições experimentais. O experimento, que permite identificar os mecanismos de transferência envolvidos em um sistema físico real, pode ser empregado em sala de aula para apoiar o ensino de Física nessa área.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Condução; convecção; planilha eletrônica; modelagem
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     This paper describes a quantitative experiment to evaluate the performance of a clay-pot refrigerator which works on the evaporative cooling principle compare the experimental results with predicted values in heat and mass transfer model. The experiment, developed during “Instrumentation for Teaching” classes, was designed to be easily implemented by students that, in addition to performing the tests, made a spreadsheet that models the problem and evaluates the consistency of the results. The model based on a simplified heat and mass transfer is shown to be in good quantitative agreement with the experimental measurements. The experiment, allowing identifying the transfer mechanisms involved in a real physical system, may be employed in the classroom to support the teaching of Physics in this area.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Conduction; convection; spreadsheet; modeling
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     O ensino por modelagem pode aumentar a compreensão conceitual dos alunos sobre tópicos de Física, uma vez que envolve confronta-los com seus conceitos prévios, examinar as evidências reunidas em uma atividade experimental e conceber um modelo coerente, subjacente a uma situação física.
+    </p>
+    <p>
+     As origens dessa abordagem fornecem uma base epistemológica evidente no currículo, pois as atividades dos alunos se concentram no processo de construção, validação e implantação de modelos. Esse processo de modelagem replica a atividade central da prática de cientistas e, portanto, incentiva os alunos a se envolverem com as práticas da Ciência e com suas formas de construir conhecimento
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] E. Brewe, V. Sawtelle, L.H. Kramer, G.E. O'Brien, I. Rodriguez, P. Pamelá, Phys. Rev. ST Phys. Educ. Res. 6, 010106 (2010).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Ao contrário das abordagens tradicionais, centradas no professor, o ensino por modelagem é baseado em problemas, com atividades centradas no aluno, orientado, geralmente, por processos de aprendizado em equipe
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] J.L. Jenkins, E.M. Howard, Sci. Educ. Int. 30, 2 (2019).
+       </span>
+      </span>
+     </span>
+     . Assim, ao combinar os componentes ativos, centrados no aluno, com a organização estratégica de conceitos projetada para desenvolver a compreensão, não apenas dos conceitos encontrados, mas também de sua inter-relação, essa abordagem promove a compreensão conceitual do aluno adequadamente estruturada, levando a uma compreensão profunda, significativa e funcional do assunto [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] D. Hestenes, Am. J. Phys. 55, 5 (1987).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] M. Wells, D. Hestenes, G. Swackhamer, Am. J. Phys. 63, 7 (1995).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Para tanto, os modelos matemáticos, ao representarem de forma simplificada um sistema, mantendo as suas características essenciais, se valem de objetos matemáticos, como são as funções, os vetores, as figuras geométricas, sendo de particular interesse em Física os modelos de sistemas dinâmicos, isto é, modelos que estabelecem alguma relação matemática entre quantidades físicas e o tempo, considerado como uma variável independente
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] E.A. Veit, V.D. Teodoro, Rev. Bras. Ens. Fís. 24, 2 (2002).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Assim, o presente artigo descreve um experimento didático com essa abordagem, elaborado para o estudo da transferência de calor e massa em um refrigerador de vaso cerâmico, com base no princípio do resfriamento evaporativo.
+    </p>
+    <p>
+     Os resultados obtidos, além de permitirem avaliar o desempenho do refrigerador, são utilizados para a elaboração de um modelo simplificado, em planilha eletrônica, com base nas transferências de calor e massa entre o refrigerador e o ambiente.
+    </p>
+    <p>
+     A simplicidade do aparato utilizado e o caráter funcional do experimento viabilizam sua utilização em aulas práticas de disciplinas que tratam desse tema.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Fundamentação Teórica
+    </h1>
+    <p>
+     Tradicionalmente, potes de barro são amplamente utilizados para condicionamento de água em localidades rurais situadas em regiões tropicais. Isso se deve, além do custo reduzido, a redução da temperatura da água potável em seu interior, de forma que a bebida pareça mais refrescante.
+    </p>
+    <p>
+     Registros do uso de resfriadores de panela em panela (
+     <i>
+      pot-in-pot
+     </i>
+     ) datam de 2500 aC, no Egito, e de 3000 aC, nas civilizações do vale do Indus. Dispositivos semelhantes podem ser encontrados em culturas diferentes, como o botijo, elemento tradicional da cultura espanhola, que consiste em uma única panela de barro poroso, geralmente cheia de água, ou a moringa, termo indígena que nomina o artefato no Brasil [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] A. Chemin, V.D. Vehel, A. Caussarieu, N. Plihon, N. Taberleta, Am. J. Phys. 86, 3 (2018).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] J.I. Zubizarreta, G. Pinto, Eng. Edu. 29, 96 (1995).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Nas áreas rurais da Índia, a comida vegetariana é frequentemente preservada em um refrigerador de vaso cerâmico (
+     <i>
+      clay-pot refrigerator
+     </i>
+     ). O espaço de resfriamento é uma panela de barro menor inserida dentro de uma panela de barro maior, com o espaço entre os dois vasos preenchido com areia. Os vazios nesse espaço são ocupados com água, deixando a areia saturada
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] R.M. Damle, A.W. Date, Int. J. Heat Mass Transf. 37, 11 (2015).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Nesse contexto, o experimento descrito neste artigo foi elaborado para estudar a transferência de calor e massa entre um refrigerador de vaso cerâmico e o ambiente, sistema físico real, em que o calor transferido é resultado da soma dessas contribuições individuais.
+    </p>
+    <p>
+     Nesta seção, são apresentadas hipóteses simplificadoras, discutidas as influências dos parâmetros-chave e proposta uma equação governante simplificada com base em referências sobre o resfriamento evaporativo em materiais cerâmicos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] R.M. Damle, A.W. Date, Int. J. Heat Mass Transf. 37, 11 (2015).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] A. Fouda, Z. Melikyan, Appl. Therm. Eng. 31, 5 (2011).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] A. Chemin, V.D. Vehel, A. Caussarieu, N. Plihon, N. Taberleta, Am. J. Phys. 86, 3 (2018).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] K. Vafai, Handbook of Porous Media (Taylor and Francis, Boca Raton, 2005).
+       </span>
+      </span>
+     </span>
+     -
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] R.G.M. van der Sman, J. Food Eng. 60, 4 (2003).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     2.1. O refrigerador de vaso cerâmico
+    </h2>
+    <p>
+     No refrigerador proposto, a água da areia saturada, que preenche a lacuna entre os dois vasos, atravessa, por difusão, as paredes do vaso cerâmico externo e, ao evaporar, esfria todo o conjunto (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/9fef5d0c65a5d8c225d63f4475a1515d7ddaf244.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      O refrigerador de vaso cerâmico
+      <br/>
+     </div>
+    </div>
+    <p>
+     A areia estabiliza o vaso interno dentro do vaso externo e distribui uniformemente a água ao longo de toda a altura do vaso, por meio de ação capilar.
+    </p>
+    <p>
+     A origem do resfriamento está no calor latente de evaporação dessa água na superfície externa. Durante a evaporação na superfície do vaso externo poroso, a energia correspondente é obtida principalmente do próprio vaso e, em menor grau, do ambiente circundante. No entanto, este último é negligenciado na conservação de energia neste modelo, participando como sorvedor do vapor d'água formado, ao removê-lo pela transferência de massa que arrasta o vapor para longe do conjunto
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] R.L. Garcia, J. Zabadal, R.A. Amaral, J.A.D.G. Neto, A. Schmitz, Rev. Bras. Ensino Fís. 39, 3 (2017).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <h2>
+     2.2. Modelo Simplificado
+    </h2>
+    <p>
+     Para o modelo simplificado do refrigerador de vaso cerâmico, as superfícies curvas do vaso foram assumidas como superfícies cilíndricas retas de raio r e altura H (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     ). A interface do conjunto com o ambiente é a superfície externa do pote externo, designada por w-w, através da qual ocorre o fluxo algébrico de transferência de massa (kg/s) para o ar circundante estagnado, fase considerada que se estende da superfície w-w à superfície imaginária
+     <math>
+      <mi>
+       ∞
+      </mi>
+     </math>
+     -
+     <math>
+      <mi>
+       ∞
+      </mi>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] R.M. Damle, A.W. Date, Int. J. Heat Mass Transf. 37, 11 (2015).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/acf02c99ddb323b5b10a8385f472601d4cd9bd4b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      O modelo simplificado
+      <br/>
+     </div>
+    </div>
+    <p>
+     As principais suposições nesse modelo simplificado, que descreve o resfriamento do vaso cerâmico, são
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+     :
+    </p>
+    <ol type="1">
+     <li>
+      (1)
+      <p>
+       a temperatura do conjunto (T
+       <math>
+        <mrow>
+         <msub>
+          <mrow>
+          </mrow>
+          <mi mathvariant="normal">
+           i
+          </mi>
+         </msub>
+         <mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+       , superficial e interna, é a mesma em qualquer instante;
+      </p>
+     </li>
+     <li>
+      (2)
+      <p>
+       as propriedades térmicas do conjunto são independentes da temperatura;
+      </p>
+     </li>
+     <li>
+      (3)
+      <p>
+       o meio poroso, areia e cerâmica, permanece saturado durante todo o experimento;
+      </p>
+     </li>
+     <li>
+      (4)
+      <p>
+       as trocas de calor pela tampa são negligenciadas;
+      </p>
+     </li>
+     <li>
+      (5)
+      <p>
+       a superfície w-w é considerada completamente saturada, umidade relativa do ar (UR) de 100%.
+      </p>
+     </li>
+    </ol>
+    <h2>
+     2.3. A Modelagem Matemática
+    </h2>
+    <p>
+     O resfriamento do conjunto em função do tempo t é descrito por
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [15]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [15] L.E. Sisson, D.R. Pitts, Fenômenos de Transporte (Guanabara Dois, Rio de Janeiro, 1996).
+       </span>
+      </span>
+     </span>
+     :
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           ρ
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            f
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           c
+          </mi>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            e
+           </mi>
+           <mi>
+            f
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <mi>
+          V
+         </mi>
+         <mo>
+          .
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msub>
+            <mi>
+             T
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msub>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          =
+         </mo>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mi>
+           ϕ
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde,
+     <math>
+      <msub>
+       <mi>
+        ρ
+       </mi>
+       <mi>
+        ef
+       </mi>
+      </msub>
+     </math>
+     é a densidade efetiva, c
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         p
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi mathvariant="italic">
+         e
+        </mi>
+        <mi mathvariant="italic">
+         f
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a capacidade térmica efetiva, V o volume e T
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        m
+       </mi>
+      </msub>
+     </math>
+     a temperatura média do corpo, e
+     <math>
+      <msub>
+       <mi>
+        φ
+       </mi>
+       <mi>
+        ext
+       </mi>
+      </msub>
+     </math>
+     é o fluxo de calor líquido com o meio externo na superfície do corpo. A quantidade
+     <math>
+      <msub>
+       <mi>
+        ρ
+       </mi>
+       <mi>
+        ef
+       </mi>
+      </msub>
+     </math>
+     .c
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         p
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi mathvariant="italic">
+         e
+        </mi>
+        <mi mathvariant="italic">
+         f
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .V, para este modelo, pode ser expressa por
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           ρ
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            f
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           c
+          </mi>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            e
+           </mi>
+           <mi>
+            f
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <mi>
+          V
+         </mi>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          =
+         </mo>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <msub>
+          <mi>
+           m
+          </mi>
+          <mi>
+           c
+          </mi>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           c
+          </mi>
+          <mi>
+           c
+          </mi>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mi>
+           m
+          </mi>
+          <mi>
+           a
+          </mi>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           c
+          </mi>
+          <mi>
+           a
+          </mi>
+         </msub>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     como função das massas, m
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        c
+       </mi>
+      </msub>
+     </math>
+     e m
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        a
+       </mi>
+      </msub>
+     </math>
+     , e dos calores específicos, c
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        c
+       </mi>
+      </msub>
+     </math>
+     e c
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        a
+       </mi>
+      </msub>
+     </math>
+     , dos vasos cerâmicos e da areia saturada, respectivamente.
+    </p>
+    <p>
+     No entanto, esse fluxo, que é o motor da taxa de variação da temperatura no corpo, é resultado do balanço entre a taxa de transferência do calor latente de evaporação da água presente na superfície do corpo, de dentro para fora, e a taxa de transferência de calor devido à diferença de temperatura, de fora para dentro, entre as superfícies w-w, T
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        i
+       </mi>
+      </msub>
+     </math>
+     , e
+     <math>
+      <mi>
+       ∞
+      </mi>
+     </math>
+     -
+     <math>
+      <mi>
+       ∞
+      </mi>
+     </math>
+     , T
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi>
+        amb
+       </mi>
+      </msub>
+     </math>
+     , expressos na equação
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+     :
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           ϕ
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           ϕ
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <mi>
+          ϕ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     com
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           ϕ
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          λ
+         </mi>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           k
+          </mi>
+          <mrow>
+           <mi>
+            f
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           A
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mi>
+             c
+            </mi>
+            <mrow>
+             <mi>
+              s
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              T
+             </mi>
+             <mi>
+              s
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            −
+           </mo>
+           <mi>
+            ă
+           </mi>
+           <mspace width="3.33333pt">
+           </mspace>
+           <msub>
+            <mi>
+             c
+            </mi>
+            <mrow>
+             <mi>
+              a
+             </mi>
+             <mi>
+              m
+             </mi>
+             <mi>
+              b
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          ϕ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           h
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           A
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mi>
+             T
+            </mi>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mo>
+            −
+           </mo>
+           <msub>
+            <mi>
+             T
+            </mi>
+            <mrow>
+             <mi>
+              a
+             </mi>
+             <mi>
+              m
+             </mi>
+             <mi>
+              b
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A energia para a evaporação da película de água na superfície externa do conjunto é obtida, principalmente, do próprio vaso, removida com o vapor d'água na corrente de ar para além da fase considerada, a uma taxa, proporcional ao produto da área dessa interface pela diferença de concentração do vapor d′ água junto à superfície do corpo e no ambiente, conforme equação 4, equação teórica da convecção com base na Equação de Difusão da Massa. Na equação, o coeficiente de transferência convectiva de massa, k
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         f
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         ext
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     (m.s
+     <math>
+      <mrow>
+       <msup>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msup>
+       <mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , está associado à facilidade da umidade se difundir na convecção do ar, da superfície do conjunto até o ambiente, e o calor de vaporização da água,
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     , transforma a equação de transferência de massa em transferência de energia
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] R.L. Garcia, J. Zabadal, R.A. Amaral, J.A.D.G. Neto, A. Schmitz, Rev. Bras. Ensino Fís. 39, 3 (2017).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A taxa de transferência de calor na interface sólida, conforme equação 5, derivada da Equação de Transferência de Calor, é diretamente proporcional ao produto da área dessa interface pela diferença de temperatura entre a parede do sólido e o ambiente. O coeficiente de película, h
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi>
+        ext
+       </mi>
+      </msub>
+     </math>
+     (W.m
+     <math>
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mo>
+         −
+        </mo>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     .K
+     <math>
+      <mrow>
+       <msup>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msup>
+       <mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , a constante de proporcionalidade, expressa a taxa de transferência de calor entre uma superfície sólida e um fluido por unidade de área de superfície, por unidade de diferença de temperatura
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] R.L. Garcia, J. Zabadal, R.A. Amaral, J.A.D.G. Neto, A. Schmitz, Rev. Bras. Ensino Fís. 39, 3 (2017).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A multiplicidade de variáveis independentes associadas aos valores dos coeficientes de transferência convectiva de massa e de película conduz àadoção de uma série de hipóteses simplificativas, sendo possível encontrar na literatura uma grande variedade de correlações empíricas, aplicadas a situações específicas, para esses coeficientes
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] R.L. Garcia, J. Zabadal, R.A. Amaral, J.A.D.G. Neto, A. Schmitz, Rev. Bras. Ensino Fís. 39, 3 (2017).
+       </span>
+      </span>
+     </span>
+     . Em um experimento com refrigerador de vaso cerâmico em estado estacionário os coeficientes de transferência convectiva de massa e de película foram adequadamente relacionados com a umidade relativa do ar
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A concentração do vapor d'água, pela Lei dos Gases Ideais, equação 6, e pela definição de Umidade Relativa, equação 7, é dada pela equação 8:
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          P
+         </mi>
+         <mo>
+          .
+         </mo>
+         <mi>
+          V
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mi>
+           m
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mfrac>
+         <mo>
+          .
+         </mo>
+         <mi>
+          R
+         </mi>
+         <mo>
+          .
+         </mo>
+         <mi>
+          T
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          U
+         </mi>
+         <mi>
+          R
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mi>
+           P
+          </mi>
+          <msub>
+           <mi>
+            P
+           </mi>
+           <mi>
+            S
+           </mi>
+          </msub>
+         </mfrac>
+         <mo>
+          .
+         </mo>
+         <mn>
+          100
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          c
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            U
+           </mi>
+           <mi>
+            R
+           </mi>
+           <mo>
+            .
+           </mo>
+           <msub>
+            <mi>
+             P
+            </mi>
+            <mi>
+             S
+            </mi>
+           </msub>
+           <mo>
+            .
+           </mo>
+           <mi>
+            M
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            R
+           </mi>
+           <mo>
+            .
+           </mo>
+           <mi>
+            T
+           </mi>
+           <mo>
+            .
+           </mo>
+           <mn>
+            100
+           </mn>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde, UR, P
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        S
+       </mi>
+      </msub>
+     </math>
+     , M, R e T, correspondem, respectivamente, àumidade relativa do ar, à pressão de vapor de saturação, à massa molar da água, à constante universal dos gases e à temperatura.
+    </p>
+    <p>
+     A suposição da saturação do ar junto ao corpo, superfície w-w, sendo c
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         s
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         Ts
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     a concentração de vapor d'água na temperatura de saturação, simplifica significativamente o tratamento teórico do processo de resfriamento evaporativo. Assim, a diferença de concentrações pode ser encontrada por
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+     :
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mi>
+             ă
+            </mi>
+            <mspace width="3.33333pt">
+            </mspace>
+            <mfenced close=")" open="(" separators="">
+             <mrow>
+              <msub>
+               <mi>
+                c
+               </mi>
+               <mrow>
+                <mi>
+                 s
+                </mi>
+                <mo>
+                 ,
+                </mo>
+                <mi>
+                 T
+                </mi>
+                <mi>
+                 s
+                </mi>
+               </mrow>
+              </msub>
+              <mo>
+               −
+              </mo>
+              <msub>
+               <mi>
+                c
+               </mi>
+               <mrow>
+                <mi>
+                 a
+                </mi>
+                <mi>
+                 m
+                </mi>
+                <mi>
+                 b
+                </mi>
+               </mrow>
+              </msub>
+              <mi>
+               ă
+              </mi>
+              <mspace width="3.33333pt">
+              </mspace>
+             </mrow>
+            </mfenced>
+            <mo>
+             =
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               M
+              </mi>
+              <mo>
+               .
+              </mo>
+              <msub>
+               <mi>
+                P
+               </mi>
+               <mrow>
+                <mi>
+                 S
+                </mi>
+                <mo>
+                 ,
+                </mo>
+                <mi>
+                 T
+                </mi>
+                <mi>
+                 a
+                </mi>
+                <mi>
+                 m
+                </mi>
+                <mi>
+                 b
+                </mi>
+               </mrow>
+              </msub>
+             </mrow>
+             <mrow>
+              <mi>
+               R
+              </mi>
+              <mo>
+               .
+              </mo>
+              <msub>
+               <mi>
+                T
+               </mi>
+               <mrow>
+                <mi>
+                 a
+                </mi>
+                <mi>
+                 m
+                </mi>
+                <mi>
+                 b
+                </mi>
+               </mrow>
+              </msub>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             ×
+            </mo>
+            <mfenced close=")" open="(" separators="">
+             <mrow>
+              <mfrac>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow>
+                 <mi>
+                  S
+                 </mi>
+                 <mo>
+                  ,
+                 </mo>
+                 <mi>
+                  T
+                 </mi>
+                 <mi>
+                  s
+                 </mi>
+                </mrow>
+               </msub>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mrow>
+                 <mi>
+                  S
+                 </mi>
+                 <mo>
+                  ,
+                 </mo>
+                 <mi>
+                  T
+                 </mi>
+                 <mi>
+                  a
+                 </mi>
+                 <mi>
+                  m
+                 </mi>
+                 <mi>
+                  b
+                 </mi>
+                </mrow>
+               </msub>
+              </mfrac>
+              <mfrac>
+               <msub>
+                <mi>
+                 T
+                </mi>
+                <mrow>
+                 <mi>
+                  a
+                 </mi>
+                 <mi>
+                  m
+                 </mi>
+                 <mi>
+                  b
+                 </mi>
+                </mrow>
+               </msub>
+               <msub>
+                <mi>
+                 T
+                </mi>
+                <mi>
+                 s
+                </mi>
+               </msub>
+              </mfrac>
+              <mo>
+               −
+              </mo>
+              <mfrac>
+               <mrow>
+                <mi>
+                 U
+                </mi>
+                <msub>
+                 <mi>
+                  R
+                 </mi>
+                 <mrow>
+                  <mi>
+                   a
+                  </mi>
+                  <mi>
+                   m
+                  </mi>
+                  <mi>
+                   b
+                  </mi>
+                 </mrow>
+                </msub>
+               </mrow>
+               <mn>
+                100
+               </mn>
+              </mfrac>
+             </mrow>
+            </mfenced>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo P
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         s
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         Tamb
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e P
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         s
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         Ts
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     (atm) as pressões de saturação de vapor d' água no ar para, respectivamente, as temperaturas do ar ambiente e na superfície do refrigerador. Essas pressões podem ser estimadas, com uma boa aproximação, pela equação empírica de Tetens
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [15]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [15] L.E. Sisson, D.R. Pitts, Fenômenos de Transporte (Guanabara Dois, Rio de Janeiro, 1996).
+       </span>
+      </span>
+     </span>
+     :
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <msub>
+             <mi>
+              P
+             </mi>
+             <mi>
+              S
+             </mi>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mn>
+             610
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             8
+            </mn>
+            <mo>
+             .
+            </mo>
+            <msup>
+             <mi>
+              e
+             </mi>
+             <mfrac>
+              <mrow>
+               <mn>
+                17
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mn>
+                3
+               </mn>
+               <mo>
+                .
+               </mo>
+               <mi>
+                T
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                237
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mn>
+                3
+               </mn>
+               <mo>
+                +
+               </mo>
+               <mi>
+                T
+               </mi>
+              </mrow>
+             </mfrac>
+            </msup>
+            <mi>
+             ă
+            </mi>
+            <mspace width="3.33333pt">
+            </mspace>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A temperatura T é dada em graus Celsius (
+     <math>
+      <msup>
+       <mrow>
+       </mrow>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     C).
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Execução dos Ensaios
+    </h1>
+    <p>
+     A sequência de ensino descrita foi desenvolvida ao longo de duas aulas, em 19 e 26 de julho de 2019, na disciplina de “Instrumentação para o Ensino de Física” do curso de licenciatura em Física da Universidade Federal de Mato Grosso. O período coincide com a época mais quente e seca do ano no estado, condição necessária para o sucesso da atividade.
+    </p>
+    <p>
+     O experimento teve por finalidade estimar a temperatura no interior do refrigerador de vaso cerâmico em função das temperatura e umidade relativa do ar ambiente, em equilíbrio dinâmico com este.
+    </p>
+    <p>
+     Na primeira aula aconteceu a montagem do aparato experimental, seguida da disposição dos equipamentos para o monitoramento da temperatura (°C) e da umidade relativa do ar (%), medições que ocorreram das 8 h às 20 h deste dia.
+    </p>
+    <p>
+     Para o protótipo (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     ) foram utilizados dois vasos de cerâmica porosa vermelha, com tampa, e areia peneirada, cujas características e propriedades físicas consideradas são apresentadas na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/fe1e12b729f18b529a5a70cf88cf09a5b45640f7.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      O protótipo
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Parâmetros do conjunto mostrado na
+      <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 3
+      </a>
+      <br/>
+     </div>
+    </div>
+    <p>
+     A areia deve ser disposta, ainda seca, no fundo do vaso maior, até que as extremidades superiores dos dois vasos estejam niveladas. A seguir, criteriosamente, deve-se dispor mais areia no espaço entre os vasos, garantindo uma uniformidade de espessura em todo o seu perímetro, até próximo do nível dos vasos. Com o conjunto pronto, deve adicionar água àareia até sua saturação. Sugere-se ainda que os vasos sejam dispostos em água, desde o dia anterior, para saturá-los em água, de forma a reduzir a inércia do processo.
+    </p>
+    <p>
+     Com o protótipo pronto, foram dispostos os equipamentos para o monitoramento da temperatura (°C) e da umidade relativa do ar (%). Para tanto foram utilizados dois termohigrômetros com data loggers, idênticos, da marca Testo, modelo 174H, um dentro do refrigerador, para registrar a temperatura interna do refrigerador, e o outro fora, distante do refrigerador, para registrar os parâmetros do ambiente. O sensor de umidade desses aparelhos opera na faixa de 0% a 100%, com precisão de ±3%, e resolução de 0,1%, enquanto que o sensor de temperatura opera na faixa de temperaturas de -20,0
+     <math>
+      <msup>
+       <mrow>
+       </mrow>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     C a 70,0
+     <math>
+      <msup>
+       <mrow>
+       </mrow>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     C, com precisão de ±0,5
+     <math>
+      <msup>
+       <mrow>
+       </mrow>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     C, na faixa de operação, e resolução de 0,1
+     <math>
+      <msup>
+       <mrow>
+       </mrow>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     C.
+    </p>
+    <p>
+     Os termohigrômetros foram configurados para registrar os valores das temperatura e umidade relativa do ar a cada 1,0 min, durante 12 h, das 8 h às 20 h, do dia 19 de julho de 2019.
+    </p>
+    <p>
+     Ao longo de todo o período do ensaio, a cada 30 min, água foi cuidadosamente injetada no espaço entre os vasos, mantendo a saturação do conjunto, em uma taxa considerada igual à taxa de evaporação da água.
+    </p>
+    <p>
+     Ainda na primeira aula os alunos, em grupos, deram início a elaboração do modelo matemático em planilha eletrônica.
+    </p>
+    <p>
+     Na segunda aula, em 26 de julho de 2019, os dados registrados foram extraídos com o software ComSoft Basic 5 SP5, da Testo. Importados para uma planilha eletrônica, os registros sequenciais das variáveis, foram utilizados pelos alunos para avaliar o comportamento do sistema a partir da consistência dos resultados experimentais frente ao modelo teórico utilizado.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Metodologia Utilizada
+    </h1>
+    <p>
+     Nesta seção são apresentadas as rotinas de cálculo, elaboradas na planilha eletrônica, para a estimativa dos coeficientes de transferência de massa, k
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         f
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         ext
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , e calor, h
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi>
+        ext
+       </mi>
+      </msub>
+     </math>
+     , externos, exigidos no modelo, considerando sua relação com a umidade relativa do ar, conforme referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] R.M. Damle, A.W. Date, Int. J. Heat Mass Transf. 37, 11 (2015).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] A. Fouda, Z. Melikyan, Appl. Therm. Eng. 31, 5 (2011).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] A. Chemin, V.D. Vehel, A. Caussarieu, N. Plihon, N. Taberleta, Am. J. Phys. 86, 3 (2018).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] K. Vafai, Handbook of Porous Media (Taylor and Francis, Boca Raton, 2005).
+       </span>
+      </span>
+     </span>
+     -
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] R.G.M. van der Sman, J. Food Eng. 60, 4 (2003).
+       </span>
+      </span>
+     </span>
+     ], e para, com esses, a construção do modelo matemático simplificado de funcionamento do refrigerador, cujo desempenho foi avaliado pela comparação com os dados experimentais obtidos.
+    </p>
+    <h2>
+     4.1. Primeira rotina de cálculos
+    </h2>
+    <p>
+     A rotina foi repetida para cada intervalo de tempo de 30 min, tempo entre reposições sucessivas de água ao conjunto, em função da quantidade de água evaporada do refrigerador, da temperatura do refrigerador, da temperatura e da umidade relativa do ambiente, registrados a cada início de novo ciclo.
+    </p>
+    <p>
+     A quantidade de calor líquida, trocada com o meio externo, Q
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi>
+        ext
+       </mi>
+      </msub>
+     </math>
+     , a partir do balanço térmico, durante o intervalo de tempo considerado, de 30 min, é estimada pela equação da quantidade de calor sensível
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (11)
+     </a>
+     :
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block">
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mi>
+           Q
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          =
+         </mo>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mi>
+             m
+            </mi>
+            <mi>
+             c
+            </mi>
+           </msub>
+           <mo>
+            .
+           </mo>
+           <msub>
+            <mi>
+             c
+            </mi>
+            <mi>
+             c
+            </mi>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             m
+            </mi>
+            <mi>
+             a
+            </mi>
+           </msub>
+           <mo>
+            .
+           </mo>
+           <msub>
+            <mi>
+             c
+            </mi>
+            <mi>
+             a
+            </mi>
+           </msub>
+          </mrow>
+         </mfenced>
+         <mo>
+          .
+         </mo>
+         <mi>
+          ă
+         </mi>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mi>
+          Δ
+         </mi>
+         <mi>
+          T
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <mi>
+       Δ
+      </mi>
+     </math>
+     T é a diferença entre as temperaturas inicial e final do refrigerador em cada repetição.
+    </p>
+    <p>
+     Uma fração dessa energia transferida entre o ar circundante e o refrigerador resulta na evaporação da água da superfície porosa, Q
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        m
+       </mi>
+      </msub>
+     </math>
+     , e pode ser estimada, a partir da massa m de água injetada no espaço entre os vasos, em cada intervalo de tempo considerado, pela equação da quantidade de calor latente
+     <a class="open-asset-modal" data-target="#ModalSchemeeq12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (12)
+     </a>
+     :
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           Q
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mo>
+          .
+         </mo>
+         <mi>
+          λ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Logo, a partir do balanço de energia na superfície do conjunto, é possível estimar o total de calor, Q, transferido entre o ar circundante e o conjunto, devido à diferença de temperatura entre estes, conforme a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (13)
+     </a>
+     :
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           Q
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          Q
+         </mi>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mi>
+           Q
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os resultados obtidos nas
+     <a class="open-asset-modal" data-target="#ModalSchemeeq12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (12)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (13)
+     </a>
+     permitem estimar os valores das constantes de proporcionalidade, respectivamente, o coeficiente de transferência convectiva de massa (k
+     <math>
+      <mrow>
+       <msub>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          f
+         </mi>
+         <mo>
+          ,
+         </mo>
+         <mi>
+          ext
+         </mi>
+        </mrow>
+       </msub>
+       <mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e o coeficiente de película (h
+     <math>
+      <mrow>
+       <msub>
+        <mrow>
+        </mrow>
+        <mi>
+         ext
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , em cada intervalo de tempo considerado, respectivamente, a partir das
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (14)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (15)
+     </a>
+     :
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          Q
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           h
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           A
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mi>
+             T
+            </mi>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mo>
+            −
+           </mo>
+           <msub>
+            <mi>
+             T
+            </mi>
+            <mrow>
+             <mi>
+              a
+             </mi>
+             <mi>
+              m
+             </mi>
+             <mi>
+              b
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           Q
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          λ
+         </mi>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           k
+          </mi>
+          <mrow>
+           <mi>
+            f
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mi>
+           A
+          </mi>
+          <mrow>
+           <mi>
+            e
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mi>
+             c
+            </mi>
+            <mrow>
+             <mi>
+              s
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              T
+             </mi>
+             <mi>
+              s
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            −
+           </mo>
+           <msub>
+            <mi>
+             c
+            </mi>
+            <mrow>
+             <mi>
+              a
+             </mi>
+             <mi>
+              m
+             </mi>
+             <mi>
+              b
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     apresenta os valores das propriedades físicas adotados para a rotina de cálculo dos coeficientes de transferência de massa e calor externos, conforme as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (14)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (15)
+     </a>
+     .
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Propriedades Físicas
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com os valores dos coeficientes em cada intervalo de tempo foi possível estabelecer uma correlação entre esses e a umidade relativa do ar, a partir da correlação linear simples. Essa estatística estabelece a força da relação entre dois conjuntos de valores, que pode ser expressa pelo coeficiente de determinação, R
+     <math>
+      <msup>
+       <mrow>
+       </mrow>
+       <mn>
+        2
+       </mn>
+      </msup>
+     </math>
+     , que quantifica a variação da variável y que pode ser explicada pela variação da variável x
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [16]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [16] S.F. Costa, Introdução Ilustrada à Estatística (Harbra, São Paulo, 1998).
+       </span>
+      </span>
+     </span>
+     . As
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 4
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     apresentam os diagramas de dispersão e respectivas equações obtidas a partir da correlação linear simples.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/64b361f99408f0ce714eb807c44180ddd04fb4d8.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Variação do coeficiente de transferência de massa externa do refrigerador com a umidade do ar.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/9646b65ae7052d84b06df72999abe716972627e1.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Variação do coeficiente de transferência de calor externa do refrigerador com a umidade do ar.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.2. Segunda rotina de cálculos
+    </h2>
+    <p>
+     A segunda rotina de cálculos na planilha eletrônica foi desenvolvida para um passo de 1 min, mesmo intervalo de tempo entre dois registros sucessivos dos medidores. O único dado de entrada, referente ao refrigerador, é a temperatura inicial deste, e para o ambiente, as temperatura e umidade relativa do ar.
+    </p>
+    <p>
+     Em sentido inverso ao realizado na primeira rotina, a construção do modelo matemático tem início com a determinação dos valores dos coeficientes para o intervalo de tempo considerado, em função do valor da umidade relativa, utilizando as equações obtidas a partir da correlação linear simples.
+    </p>
+    <p>
+     A seguir, entrando com valores da temperatura e umidade ambientais, conforme as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (14)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (15)
+     </a>
+     são obtidos, respectivamente, os valores da quantidade de calor transferida entre o ar circundante e o conjunto, Q, devido à diferença de temperatura interna e ambiental, e a fração desta que resulta na evaporação da água superficial do corpo, Q
+     <math>
+      <msub>
+       <mrow>
+       </mrow>
+       <mi mathvariant="normal">
+        m
+       </mi>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Assim, com o balanço de energia na superfície do corpo, conforme
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (13)
+     </a>
+     , pode se estimar a quantidade de calor líquida absorvida pelo refrigerador, e com esta, enfim, estimar a sua temperatura ao final de cada intervalo de tempo considerado, de 1 min, pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (11)
+     </a>
+     .
+    </p>
+    <p>
+     Os resultados de cada rotina na planilha permitem uma comparação, minuto a minuto, do desempenho do modelo com os dados experimentais. O gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     ilustra as evoluções das temperaturas no interior do refrigerador, valores experimentais, e das temperaturas estimadas pelo modelo para o interior do refrigerador ao longo de todo o período de medições.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/2da3493b78aacccb65997cc93e9a2c1d3965689d.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Temperatura do refrigerador, experimental e estimada, ao longo do período de medições.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Análise dos Resultados
+    </h1>
+    <p>
+     O desvio entre os dados experimentais da temperatura no interior do refrigerador e os valores teóricos previstos no modelo adotado foi de, no máximo, 0,2 °C (
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     ). Os desvios constatados podem estar associados a modificações no valor do coeficiente de película, pela movimentação de pessoas no entorno do experimento, uma vez que na convecção natural o escoamento do fluido ocorre a velocidades baixas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] R.L. Garcia, J. Zabadal, R.A. Amaral, J.A.D.G. Neto, A. Schmitz, Rev. Bras. Ensino Fís. 39, 3 (2017).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/e01304d310cbf6458deeea6905bd8a505625f90d.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Diferença entre as temperaturas do refrigerador e estimadas pelo modelo ao longo do período de medições.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Contudo, essa diferença é significativamente baixa, de forma que é possível sugerir que o modelo simplificado adotado representa adequadamente, para o fim a que se destina, o comportamento do sistema objeto de análise.
+    </p>
+    <p>
+     A construção do modelo na planilha eletrônica permitiu ainda que os alunos fizessem previsões a respeito da capacidade de refrigeração do refrigerador cerâmico em períodos mais secos e quentes, a partir da entrada com os valores das temperatura e umidade relativa do ar dos dias em questão.
+    </p>
+    <p>
+     A análise geral dos resultados, em termos da refrigeração obtida, indica uma elevação progressiva da temperatura no interior do refrigerador. De fato, o refrigerador tem funcionamento no princípio da refrigeração passiva, respondendo, com certo atraso, às variações das condições ambientais.
+    </p>
+    <p>
+     Assim, a redução de temperatura inicial está associada às menores temperaturas que ocorrem no início da manhã, quando, no balanço de energia, a transferência de calor resultante da evaporação da água superficial do corpo deve ter prevalecido. Em seguida, por volta das 10 h, a temperatura do refrigerador inverte de tendência, quando passa a prevalecer a transferência de calor do ar circundante para o conjunto, devido à diferença de temperatura entre estes.
+    </p>
+    <p>
+     Como deve parecer óbvio, essa observação trouxe à discussão entre os alunos sobre a eficiência do refrigerador. No entanto, os resultados da diferença entre as temperaturas do ambiente e do refrigerador, a refrigeração produzida pelo aparato (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     ), que variou entre 2,0 °C e 5,8 °C, confirma a sua utilidade histórica, em manter a temperatura interna inferior à temperatura ambiente.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8Lz4Bzqz8vd3BgG6k4S8LBj/76d43535c449306008d55140e33763dc12f92dce.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Refrigeração produzida.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Ainda é possível destacar a maior eficiência do refrigerador no período vespertino, condição de maior temperatura e menor umidade do ar, credenciando a sua aplicação em diversas situações nas condições ambientais de grande parte do território brasileiro.
+    </p>
+    <p>
+     No entanto, essa alta dependência das condições atmosféricas, a força motora do resfriamento evaporativo, limitadora da capacidade de arrefecimento de um sistema, também é a principal desvantagem desse processo
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy. 3, 4 (2006).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Outro fator de destaque na proposta foi a construção do aparato, o refrigerador cerâmico. Atividades de construção de protótipos podem favorecer o desenvolvimento de indivíduos cinestésicos, que precisam sentir e entrar em contato físico com o objeto ou com seu interlocutor, para ter seu aprendizado facilitado.
+    </p>
+    <p>
+     Apesar do uso de data-loggers na aplicação aqui descrita, a simplicidade do experimento permite a utilização dessa estratégia didática no estudo das transferências de calor e massa. O experimento poderia ser conduzido com instrumentos analógicos, por exemplo, desde que a tampa do refrigerador fosse de vidro, que permitisse a leitura da temperatura interna no passo determinado para o experimento.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Conclusões
+    </h1>
+    <p>
+     A modelagem do processo de resfriamento do refrigerador de vaso cerâmico, a partir das transferências de calor e massa entre a superfície porosa saturada do mesmo e o ambiente, foi o aspecto mais relevante desse trabalho. No modelo simplificado, as funções das constantes de proporcionalidade, tomadas variando em função da umidade relativa do ar, foram determinadas com base na perda de água por evaporação no refrigerador.
+    </p>
+    <p>
+     Pode-se afirmar, em função das diferenças verificadas entre os dados teóricos e experimentais, que o modelo matemático simplificado proposto foi adequado para simular o comportamento térmico do conjunto. O trabalho ainda confirma descobertas anteriores na literatura de que um efeito de resfriamento de vários graus Celsius pode ser realizado através do resfriamento evaporativo e esse efeito será potencializado em um ambiente mais seco e quente.
+    </p>
+    <p>
+     A análise do experimento, utilizado como estratégia de ensino, sugere que a modelagem de cenários simples do mundo físico, como a realizada em planilhas eletrônicas, disponíveis em quase todos os computadores, possibilita uma investigação mais detalhada dos processos físicos, o que pode facilitar o domínio e a retenção do conteúdo com mais eficiência do que as instruções tradicionais.
+    </p>
+    <p>
+     Por fim, espera-se que a estratégia didática descrita seja útil para avaliarmos a necessidade de projetos de desenvolvimento curricular orientados por pesquisa, protótipos e modelagem para o ensino de Física, em especial em cursos de formação de professores.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] E. Brewe, V. Sawtelle, L.H. Kramer, G.E. O'Brien, I. Rodriguez, P. Pamelá, Phys. Rev. ST Phys. Educ. Res.
+        <b>
+         6
+        </b>
+        , 010106 (2010).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] J.L. Jenkins, E.M. Howard, Sci. Educ. Int.
+        <b>
+         30
+        </b>
+        , 2 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] D. Hestenes, Am. J. Phys.
+        <b>
+         55
+        </b>
+        , 5 (1987).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] M. Wells, D. Hestenes, G. Swackhamer, Am. J. Phys.
+        <b>
+         63
+        </b>
+        , 7 (1995).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] E.A. Veit, V.D. Teodoro, Rev. Bras. Ens. Fís.
+        <b>
+         24
+        </b>
+        , 2 (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] A. Chemin, V.D. Vehel, A. Caussarieu, N. Plihon, N. Taberleta, Am. J. Phys.
+        <b>
+         86
+        </b>
+        , 3 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] J.I. Zubizarreta, G. Pinto, Eng. Edu.
+        <b>
+         29
+        </b>
+        , 96 (1995).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] R.M. Damle, A.W. Date, Int. J. Heat Mass Transf.
+        <b>
+         37
+        </b>
+        , 11 (2015).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] A. Mittal, T. Katariaa, G.K. Dasb, S.G. Chatterjeea, Int. J. Green Energy.
+        <b>
+         3
+        </b>
+        , 4 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] A. Fouda, Z. Melikyan, Appl. Therm. Eng.
+        <b>
+         31
+        </b>
+        , 5 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] A. Chemin, V.D. Vehel, A. Caussarieu, N. Plihon, N. Taberleta, Am. J. Phys.
+        <b>
+         86
+        </b>
+        , 3 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] K. Vafai,
+        <i>
+         Handbook of Porous Media
+        </i>
+        (Taylor and Francis, Boca Raton, 2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] R.G.M. van der Sman, J. Food Eng.
+        <b>
+         60
+        </b>
+        , 4 (2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] R.L. Garcia, J. Zabadal, R.A. Amaral, J.A.D.G. Neto, A. Schmitz, Rev. Bras. Ensino Fís.
+        <b>
+         39
+        </b>
+        , 3 (2017).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] L.E. Sisson, D.R. Pitts,
+        <i>
+         Fenômenos de Transporte
+        </i>
+        (Guanabara Dois, Rio de Janeiro, 1996).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] S.F. Costa,
+        <i>
+         Introdução Ilustrada à Estatística
+        </i>
+        (Harbra, São Paulo, 1998).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        19 Out 2020
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        03 Abr 2020
+       </li>
+       <li>
+        <strong>
+         rev-received
+        </strong>
+        <br/>
+        29 Jul 2020
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        15 Set 2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0186" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0186
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0186">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Construção de um kit experimental com arduino para ensino de oscilações em tempo real
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Experimental kit for studing real-time oscilations using arduino
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Pedro Davi Matos Pereira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:pedrophysicist@gmail.com">
+      pedrophysicist@gmail.com
+     </a>
+    </div>
+    Instituto de Física, Universidade Federal da Bahia, Campus Universitário de Ondina, Salvador, BA, Brasil.Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano, Grupo de Pesquisa em Ensino de Ciências, Salgueiro, PE, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-0425-2451">
+     http://orcid.org/0000-0003-0425-2451
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Marcelo Souza da Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano, Grupo de Pesquisa em Ensino de Ciências, Salgueiro, PE, Brasil.
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     O estudo das oscilações pode se configurar como uma rica oportunidade para o desenvolvimento de atividades experimentais. Entretanto, devido a uma série de dificuldades instrumentais, muitos professores optam por trabalhar apenas com um cronometro para obtenção da frequência média das oscilações. A aquisição dos dados de posição em função do tempo está disponível, em geral, para quem tem acesso a kits experimentais caros. Neste artigo propomos a construção e utilização de um kit experimental para estudo de oscilações utilizando arduino. Por meio de um sensor ultrassônico HC-SR04, pode-se construir gráficos de posição (velocidade e aceleração) em tempo real, permitindo a visualização do comportamento senoidal apresentado pela teoria, e possibilitando maior compreensão do fenômeno além da determinação de grandezas físicas envolvidas. O kit inclui um
+     <i>
+      software
+     </i>
+     desenvolvido em C + ⁣ + , denominado
+     <i>
+      PMOscillator
+     </i>
+     , responsável pela aquisição, processamento, plotagem em tempo real e análise dos dados.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Arduino; oscilações; kit didático
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The study of oscillations can be configured as a rich opportunity for the development of experimental activities. However, due to a series of instrumental difficulties, many teachers choose to work only with a stopwatch to obtain the average frequency of the oscillations. To obtain from the data of position versus time is generally available for those who have access to expensive experimental kits. In this article we propose the construction and use of an experimental kit for study of oscillations using arduino, as well as a proposal of use. With a ultrassonic sensor HC-SR04, we can construct real position graphs, allowing a visualization of the sinusoidal behavior visualized in the theory, and also enabling a greater understanding of the phenomenon and the determination of the physical quantities involved. The kit includes a
+     <i>
+      software
+     </i>
+     developed in C + ⁣ + , called
+     <i>
+      PMOscillator
+     </i>
+     , responsible for the acquisition, processing, real-time plotting and data analysis.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Arduinox; oscilations; didatic instrumentation
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     O desenvolvimento de atividades experimentais educativas que possam exemplificar a intima relação entre os aspectos teóricos e experimentais que permeiam a construção do saber científico pode fomentar um ambiente de investigação que desperte a atenção e curiosidade dos alunos acerca do tema em questão. Quando se trata do estudo de oscilações mecânicas, no geral, adotam-se práticas experimentais baseadas na medição do período e da amplitude do sistema com os instrumentos régua e cronômetro. Embora esse tipo de estudo seja eficiente para verificar o comportamento periódico do movimento, não consegue explicitar o comportamento senoidal esperado para o gráfico da posição em função do tempo, devido à dificuldade na medição simultânea destas duas grandezas utilizando os instrumentos mencionados. Neste cenário, a necessidade de propor uma instrumentação acessível, e que permita a obtenção de dados mais fidedignos do sistema em estudo, podem tornar o estudo do tema mais estimulante. Algumas abordagens presentes na literatura utilizam ferramentas de videoanálise, como o Tracker [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        D. Brown, Tracker: Free Video Analysis and Modeling Tool for Physics Education, https://physlets.org/tracker/.
+       </span>
+       <br/>
+       <a href="https://physlets.org/tracker/" target="_blank">
+        https://physlets.org/tracker/...
+       </a>
+      </span>
+     </span>
+     ]. Uma outra alternativa para isto é a utilização de ferramentas iterativas, como experiências assistidas pelo PC [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33 , 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Uma importante ferramenta nesta proposta é o arduino, placa de prototipagem eletrônica
+     <i>
+      open source
+     </i>
+     de baixo custo, fácil utilização e implementação [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        Página Oficial do Arduíno, disponível em: https://www.arduino.cc.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc" target="_blank">
+        https://www.arduino.cc...
+       </a>
+      </span>
+     </span>
+     ]. Ela é amplamente utilizado em diversas áreas quando há a necessidade da elaboração de um dispositivo eletrônico; a exemplo, para o desenvolvimento de um sensor barato para monitoramento de líquidos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        D.K. Fisher e R. Sui, IGR J. Agr. Eng. Int. 15 , 328 (2013).
+       </span>
+      </span>
+     </span>
+     ], e a construção de um audiotermômetro para inclusão de estudantes cegos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        H.P. Cordova, C.E. Aguiar, H.S. Amorim, K.S.O.M. Sathler e A.C.F. Santos, Revista Brasileira de Ensino de Física 40 , e2505 (2018).
+       </span>
+      </span>
+     </span>
+     ]. Também encontra-se na literatura trabalhos na área de física e ensino de física, tendo como exemplo a construção de um dispositivo barato para análise do movimento de magnetos em tubos verticalmente orientados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        R.M. Szmoski, A. Doff, V.M. Lenart, S.K. Schwiderke e L.V.G Fachini, Caderno Brasileiro de Ensino de Física 40 , e1505 (2017).
+       </span>
+      </span>
+     </span>
+     ], onde se estudou a queda retardada do imã no tubo condutor com o sensor ultrassônico HC-SR04, e um dispositivo para construção de gráficos de movimento em tempo real [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T Dorneles, Revista Brasileira de Ensino de Física 38 , 33503 (2016).
+       </span>
+      </span>
+     </span>
+     ], onde se utilizou o arduino em conjunto com um sensor ultrassônico HC-SR04 e o software PLX-DAQ, que agrupa os dados recebidos numa planilha do Microsoft Excel para que depois possam ser plotados. No estudo de oscilações, mais uma vez, também é possível encontrar a aplicação do arduino, como a construção de instrumentação para análise de vibração no espaço da posição e das frequências estudando-se a oscilação de uma haste metálica com acelerômetro e giroscópio acoplados a ela [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        M. Varanis, A.L. Silva, P.H.A. Brunetto e R.F. Gregolin, Revista Brasileira de Ensino de Física 38 , 1301 (2016).
+       </span>
+      </span>
+     </span>
+     ]. Contudo, quando utilizado para fins didáticos, na maioria das vezes os trabalhos são na área de eletrônica ou, na física, para eletricidade ou física moderna [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        S. Silveira, Desenvolvimento de um kit experimental com Arduino para o ensino de física moderna no ensino médio. Dissertação de Mestrado, Universidade Federal de Santa Catarina, Araranguá (2016).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        S. Silveira e M. Girardi, Revista Brasileira de Ensino de Física 39 , e4502 (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        C.J.M. Souza e M.S. Silva, LINKSCIENCEPLACE-Interdisciplinary Scientific Journal 3, 82 (2016).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     2. O Kit Didático
+    </h1>
+    <p>
+     O kit proposto visa tornar o ensino de oscilações por meio da experimentação mais lúdico, permitindo relacionar o fenômeno de forma mais evidente com a teoria através da construção em tempo real de gráficos da posição em função do tempo de forma totalmente interativa.
+    </p>
+    <p>
+     O kit didático é pode ser subdivido em quatro partes:
+    </p>
+    <ol type="i">
+     <li>
+      <p>
+       Um módulo medidor de distância;
+      </p>
+     </li>
+     <li>
+      <p>
+       Software
+       <i>
+        PMOscillator
+       </i>
+       , responsável pela aquisição, por armazenar, plotar e analisar os dados medidos pelo módulo;
+      </p>
+     </li>
+     <li>
+      <p>
+       Osciladores nos tipos pêndulo e massa-mola;
+      </p>
+     </li>
+     <li>
+      <p>
+       Suportes para o oscilador e detector.
+      </p>
+     </li>
+    </ol>
+    <h2>
+     2.1. Medidor de distância
+    </h2>
+    <p>
+     O módulo medidor de distância, mostrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     , é a parte do kit capaz de verificar a posição do corpo oscilante em tempo real. Para isto, foi utilizado um sensor ultrassônico HC-SR04 ligado a um Arduino modelo Nano v3.0 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        A. Nano, disponível em: https://store.arduino.cc/arduino-nano, acessado em 16/05/2021.
+       </span>
+       <br/>
+       <a href="https://store.arduino.cc/arduino-nano" target="_blank">
+        https://store.arduino.cc/arduino-nano...
+       </a>
+      </span>
+     </span>
+     ], como ilustrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     . Ambos componentes foram armazenados numa caixa de montagem na cor preta, adaptada para o posicionamento do sensor e saída do cabo USB.
+    </p>
+    <div class="row fig" id="S2F1">
+     <a name="S2F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/1062e55096b01519f5e5e3837d2b00a3afa7bd34.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Foto do módulo detetor de distância montado.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="S2F2">
+     <a name="S2F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/ec28f4e17020294e5a80c9fa5ccce2804023b75b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Arduino nano conectado so sensor HC-SR04.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O HC-SR04 é um sensor de distância do tipo ultrassônico capaz de medir distâncias de 3 cm a 4 m com precisão de 3 mm [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        Datasheet do HC-SR04, disponível em: http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf.
+       </span>
+       <br/>
+       <a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">
+        http://elecfreaks.com/estore/download/EF...
+       </a>
+      </span>
+     </span>
+     ]. O módulo possui um conjunto emissor-receptor de ondas sonoras na frequência de 40 kHz (ultrassom). Quando acionado, através de um sinal de 10 ms na porta Trigger, o dispositivo emite 8 pulsos ultrassônicos que refletirão no anteparo e retornarão ao detetor. O tempo entre a emissão e detecção é registrado e, conhecendo-se velocidade do som, a distância poderá ser determinada através da relação
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2E1">
+     <a name="S2E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             v
+            </mi>
+            <mi>
+             s
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que o
+     <i>
+      d
+     </i>
+     é a distância do sensor ao anteparo,
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       s
+      </i>
+     </sub>
+     é a velocidade do som no ar e
+     <i>
+      t
+     </i>
+     é o tempo referente a ida e volta do pulso, que deverá ser compensado pelo termo 1/2 presente na expressão. O processo descrito é melhor representado pelo diagrama da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S2F3">
+     <a name="S2F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/77cb74e52d04c86b07eedd3c9496b4bcbde23381.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Diagrama de tempo do HC-SR04.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O arduino é o componente do medidor capaz de acionar o sensor a cada 0,1 s e verificar o tempo de deslocamento do pulso ultrassônico. O valor registrado é enviado via comunicação serial [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        Especificações da comunicação serial, disponível em: http://i2c.info/i2c-bus-specification, acessado em 16/05/2021.
+       </span>
+       <br/>
+       <a href="http://i2c.info/i2c-bus-specification" target="_blank">
+        http://i2c.info/i2c-bus-specification...
+       </a>
+      </span>
+     </span>
+     ] através do cabo USB conectado a ele, que também é responsável por alimentar todo o circuito. O código programado na placa pode ser encontrado no apêndice.
+    </p>
+    <p>
+     Não obstante, o sensor ultrassônico HC-SR04 utilizado para medir distâncias possui abertura de campo de aproximadamente 15° para direita e para esquerda, como informado em seu
+     <i>
+      datasheet
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        Datasheet do HC-SR04, disponível em: http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf.
+       </span>
+       <br/>
+       <a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">
+        http://elecfreaks.com/estore/download/EF...
+       </a>
+      </span>
+     </span>
+     ], e representado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     e na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     . Isto significa que, a depender da distância e das dimensões do anteparo, outros objetos na abertura posicionados na região de alcance do detector poderão interferir nas medidas, reduzindo a precisão na aquisição dos dados. De acordo com Dworakowski et al. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T Dorneles, Revista Brasileira de Ensino de Física 38 , 33503 (2016).
+       </span>
+      </span>
+     </span>
+     ], na prática a região que pode causar interferência é ainda menor, mas para garantir qualidade na produção e coleta de dados é aconselhável seguir as recomendações do fabricante.
+    </p>
+    <div class="row fig" id="S2F4">
+     <a name="S2F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/153b6c1c81989cbcbb3d991874aa064c912c1ffb.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Representação da região do ângulo de abertura do sensor HC-SR04.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="S2F5">
+     <a name="S2F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/698209fcbfd32b76f1732121f6ec68735ba9ea41.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Visão superior da região de aquisição do sensor HC-SR04, com anteparos posicionados a 10 cm e 20 cm de distância.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.2. Software
+    </h2>
+    <p>
+     As informações adquiridas pelo módulo medidor de distância deverão ser processadas e armazenadas pelo computador através de um software externo ao circuito. Para isto, foi desenvolvido um
+     <i>
+      software
+     </i>
+     em C + ⁣ + , denominado PMOscillator, com interface gráfica interativa e de fácil manuseio totalmente dedicado ao kit, como apresentado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     . O professor poderá obtê-lo no repositório indicado na referência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        Repositório do software PMOscillator, disponível em https://github.com/pmat0s/pmoscillator/, acessado em 16/05/2021.
+       </span>
+       <br/>
+       <a href="https://github.com/pmat0s/pmoscillator/" target="_blank">
+        https://github.com/pmat0s/pmoscillator/...
+       </a>
+      </span>
+     </span>
+     ]. O software oferece ferramentas de análise dos dados aferidos, relacionando-os à teoria de oscilações, mas também pode ser utilizado para plotar a posição em função do tempo para outros experimentos em geral.
+    </p>
+    <div class="row fig" id="S2F6">
+     <a name="S2F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/acb1d0f7649999debf2e8c468170e332a36b1e02.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Gráfico de posição plotado em tempo real.
+      <br/>
+     </div>
+    </div>
+    <h3>
+     2.2.1. Aquisição e processamento
+    </h3>
+    <p>
+     Para utilizar o kit, basta conectar o módulo medidor de distância ao computador via USB que o
+     <i>
+      PMOscillator
+     </i>
+     o reconhece automaticamente. O software recebe do arduino o intervalo de tempo, em milissegundos, que um dos pulsos emitidos leva entre a saída e o retorno ao receptor. Esta informação é processada, de forma a transformá-la na distância do corpo até o sensor, através da aplicação da relação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ).
+    </p>
+    <p>
+     Para isto, uma informação necessária é a velocidade do som no ar. O software estabelece como valor padrão 340
+     <i>
+      m
+     </i>
+     /
+     <i>
+      s
+     </i>
+     , que pode ser alterado através da opção de calibração. Posicionando-se um anteparo a uma distância conhecida, afere-se o tempo de deslocamento do pulso e, com isso, a velocidade do som é determinada.
+    </p>
+    <h3>
+     2.2.2. Análise
+    </h3>
+    <p>
+     O software também possui uma ferramenta de análise, mostrada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     , capaz de determinar a equação horária que melhor descreve um conjunto de pontos. Tomando como referência a curva senoidal
+    </p>
+    <div class="row fig" id="S2F7">
+     <a name="S2F7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/32c56a30ae55b2491c93c2f834429191d95bd793.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Valores dos parâmetros e seus respectivos erros na curva ajustada (em vermelho) no intervalo de tempo especificado pelo usuário.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row formula" id="eS2E2">
+     <a name="S2E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           y
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mi>
+             A
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mi>
+              sin
+             </mi>
+             <mo>
+              ⁡
+             </mo>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <mrow>
+                <mi>
+                 B
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 x
+                </mi>
+               </mrow>
+               <mo>
+                +
+               </mo>
+               <mi>
+                C
+               </mi>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mrow>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mi>
+            D
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     o método consiste em encontrar os valores dos parâmetros
+     <i>
+      A
+     </i>
+     ,
+     <i>
+      B
+     </i>
+     ,
+     <i>
+      C
+     </i>
+     e
+     <i>
+      D
+     </i>
+     que minimizem a função
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2E3">
+     <a name="S2E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           δ
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <munderover>
+            <mo largeop="true" movablelimits="false" symmetric="true">
+             ∑
+            </mo>
+            <mrow>
+             <mi>
+              i
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mn>
+              0
+             </mn>
+            </mrow>
+            <mi>
+             N
+            </mi>
+           </munderover>
+           <msup>
+            <mrow>
+             <mo stretchy="false">
+              |
+             </mo>
+             <mrow>
+              <mrow>
+               <mi>
+                y
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <msub>
+                 <mi>
+                  x
+                 </mi>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+              <mo>
+               -
+              </mo>
+              <msub>
+               <mi>
+                y
+               </mi>
+               <mi>
+                i
+               </mi>
+              </msub>
+             </mrow>
+             <mo stretchy="false">
+              |
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      x
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     e
+     <i>
+      y
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     são as coordenadas do i-ésimo ponto dentre os
+     <i>
+      N
+     </i>
+     compreendido no intervalo tomado para análise.
+    </p>
+    <p>
+     Para minimização, foi utilizado um o método de Levenberg-Marquardt [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        K. Levenberg, Quart. Appl. Math. 2 , 164 (1944).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        D. Marquardt, SIAM J. Appl. Math. 11 , 431 (1963)
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        P.R. Gill, W. Murray e M.H. Wright, em: Practical Optimization (Academic Press, London, 1981), p. 136.
+       </span>
+      </span>
+     </span>
+     ], utilizando-se o algoritmo implementado na biblioteca
+     <i>
+      GNU Scientific Library
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        B. Gough, GNU scientific library reference manual (Network Theory Ltd. s.l, 2009).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     2.3. Osciladores
+    </h2>
+    <p>
+     Como objetos de estudo, o kit permite, a princípio,
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        O kit pode ser facilmente adaptado para estudo de outros sistemas. A título de exemplo, o pêndulo amortecido.
+       </span>
+      </span>
+     </span>
+     o estudo de osciladores do tipo pêndulo simples e massa-mola vertical. Ele permitirá determinar a posição do pêndulo ou da massa em função do tempo, e analisar os dados obtidos.
+    </p>
+    <h3>
+     2.3. Pêndulo simples
+    </h3>
+    <p>
+     Para montagem do pêndulo, utiliza-se o suporte, massas e cordão inextensível, além do detetor de distâncias. O suporte oferece a possibilidade de pêndulos com fio de até 140 cm de comprimento. As massas contidas no kit foram construídas cada uma com duas unidades de cap PVC de 40 mm de diâmetro preenchidos com pesos de pesca; a menor massa possui 100 g e a maior, 420 g. As dimensões finais das massas foram 6 cm de altura e 4 cm de largura. A construção de massas nestas dimensões facilita a aquisição do detetor. Como a distribuição dos pesos de pesca não é necessariamente uniforme, é necessário considerar a localização do centro de massa nos resultados obtidos.
+    </p>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     ilustra o aspecto final da montagem. Note que é necessário a utilização de um suporte auxiliar para o módulo detetor de distâncias, pois é necessário estar no nível das oscilações para que as medidas sejam realizadas corretamente.
+    </p>
+    <div class="row fig" id="S2F8">
+     <a name="S2F8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/dd8cc743b349dd3ddf031d4b398177b6011c3a5f.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Montagem para estudo do oscilador tipo pêndulo simples.
+      <br/>
+     </div>
+    </div>
+    <h3>
+     2.3.2. Massa-mola vertical
+    </h3>
+    <p>
+     Para montagem do massa-mola vertical, utiliza-se o suporte, massas e molas, além do detetor de distâncias. Os pesos utilizados são os mesmos do pêndulo. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     ilustra o aspecto final da montagem. Note que neste caso a altura do suporte deve se adequar ao comprimento da mola distendida, uma vez não há ajuste de altura no posicionamento do detetor. Este é uma sugestão para testes iniciais, mas o suporte pode ser adaptado para outras configurações.
+    </p>
+    <div class="row fig" id="S2F9">
+     <a name="S2F9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2F9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/e9a29d4d264156c1ba75df031b941ca3e625dc1d.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Montagem para estudo do oscilador massa-mola. O suporte para o sensor não é necessário neste caso.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.4. Suportes
+    </h2>
+    <p>
+     Os suportes foram feitos com tubos de PVC, devido ao baixo custo e facilidade de montagem. Além disto, a portabilidade oferecida pela utilização dos canos facilita o manuseio e transporte do kit pelo professor. O que seria diferente no caso da utilização de suportes feitos de alumínio, madeira ou ferro.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Proposta de Experimento
+    </h1>
+    <p>
+     Da teoria, sabe-se que a função horária da posição relacionada ao movimento tanto do pêndulo quanto do oscilador massa mola possui comportamento senoidal. Ou seja,
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3E4">
+     <a name="S3E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            A
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mi>
+             sin
+            </mi>
+            <mo>
+             ⁡
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mrow>
+               <mi>
+                ω
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+              <mo>
+               +
+              </mo>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mn>
+                0
+               </mn>
+              </msub>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      A
+     </i>
+     é a amplitude da oscilação,
+     <i>
+      φ
+     </i>
+     <sub>
+      0
+     </sub>
+     é a fase inicial, relacionada à posição inicial do corpo, e ω é a frequência angular.
+    </p>
+    <p>
+     Tanto a amplitude quanto a posição são parâmetros de ajuste do sistema. Contudo, ω é intrínseco às características físicas do mesmo. No caso do pêndulo, ele se relaciona com o comprimento do fio e a aceleração gravitacional, podendo ser escrito como
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3E5">
+     <a name="S3E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          ω
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mfrac>
+           <mi>
+            g
+           </mi>
+           <mi>
+            L
+           </mi>
+          </mfrac>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     ou, no caso do oscilador massa mola, ele se relaciona com a massa e a constante elástica da mola utilizada, dada pela expressão
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3E6">
+     <a name="S3E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           ω
+          </mi>
+          <mo>
+           =
+          </mo>
+          <msqrt>
+           <mfrac>
+            <mi>
+             K
+            </mi>
+            <mi>
+             m
+            </mi>
+           </mfrac>
+          </msqrt>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Com o kit é possível encontrar a função horária da posição, em tempo real, no formato
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3E7">
+     <a name="S3E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mi>
+             A
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mi>
+              sin
+             </mi>
+             <mo>
+              ⁡
+             </mo>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <mrow>
+                <mi>
+                 B
+                </mi>
+                <mo>
+                 *
+                </mo>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+               <mo>
+                +
+               </mo>
+               <mi>
+                C
+               </mi>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mrow>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mi>
+            D
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Por comparação direta com (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ), podemos relacionar os parâmetros do ajuste às grandezas físicas do sistema. Em especial, o parâmetro
+     <i>
+      B
+     </i>
+     , que corresponde à frequência angular, e o parâmetro
+     <i>
+      D
+     </i>
+     , relacionado à distância do ponto de equilíbrio do corpo até o sensor.
+    </p>
+    <p>
+     Com isto, pode-se variar as grandezas físicas envolvidas e investigar o comportamento da função horária, bem como período de oscilação. Para isto, o professor terá a autonomia de escolher uma teoria do laboratório didático para aplicar com seus alunos.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados do Experimento
+    </h1>
+    <p>
+     A precisão do sensor ultrassônico HC-SR04 de até 3
+     <i>
+      m
+     </i>
+     <i>
+      m
+     </i>
+     oferece a possibilidade de obtenção de valores bem próximos da realidade. Por exemplo, realizando-se o experimento do pêndulo com comprimento do fio de 40
+     <i>
+      c
+     </i>
+     <i>
+      m
+     </i>
+     , ajustando uma amplitude de 2
+     <i>
+      c
+     </i>
+     <i>
+      m
+     </i>
+     e posicionando a uma distância inicial de 8,5
+     <i>
+      c
+     </i>
+     <i>
+      m
+     </i>
+     obtivemos, através do ajuste não linear, os seguintes valores para as constantes:
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS4Ex1">
+     <a name="S4Ex1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           A
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mrow>
+             <mn>
+              0
+             </mn>
+             <mo>
+              ±
+             </mo>
+             <mn>
+              0
+             </mn>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             2
+            </mn>
+            <mo rspace="4.2pt" stretchy="false">
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            m
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4Ex2">
+     <a name="S4Ex2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           B
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mn>
+             4
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mrow>
+             <mn>
+              84
+             </mn>
+             <mo>
+              ±
+             </mo>
+             <mn>
+              0
+             </mn>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             04
+            </mn>
+            <mo rspace="4.2pt" stretchy="false">
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             s
+            </mi>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4Ex3">
+     <a name="S4Ex3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           C
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mn>
+            225
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mrow>
+            <mn>
+             8
+            </mn>
+            <mo>
+             ±
+            </mo>
+            <mn>
+             7
+            </mn>
+           </mrow>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            6
+           </mn>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4Ex4">
+     <a name="S4Ex4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           D
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mn>
+             8
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mrow>
+             <mn>
+              6
+             </mn>
+             <mo>
+              ±
+             </mo>
+             <mn>
+              0
+             </mn>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo rspace="4.2pt" stretchy="false">
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            m
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     como mostrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     . Os desvios associados são os erros estimados na regressão, que também são fornecidos pelo software. Os pontos obtidos na realização deste experimento apresentam baixo resíduo em relação à curva ajustada. A qualidade desta medida está associada à dimensão do oscilador, cujo diâmetro é próximo de 4 cm, ocupando quase toda a abertura de 4,5 cm do detetor à distância de 8,5 cm.
+    </p>
+    <p>
+     Note que a amplitude obtida neste caso é igual à que foi utilizada na configuração inicial e a distância
+     <i>
+      D
+     </i>
+     da posição de equilíbrio até o sensor foi determinada com discrepância de 1%. Com efeito, a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ) com os parâmetros ajustados pode ser expressa por
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS4E8">
+     <a name="S4E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mrow>
+            <mrow>
+             <mn>
+              0
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <mrow>
+              <mi>
+               sin
+              </mi>
+              <mo>
+               ⁡
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mn>
+                4
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mrow>
+                <mrow>
+                 <mpadded width="+1.7pt">
+                  <mn>
+                   84
+                  </mn>
+                 </mpadded>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  t
+                 </mi>
+                </mrow>
+                <mo>
+                 +
+                </mo>
+                <mn>
+                 225
+                </mn>
+               </mrow>
+               <mo>
+                ,
+               </mo>
+               <mn>
+                8
+               </mn>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mo>
+             +
+            </mo>
+            <mn>
+             8
+            </mn>
+           </mrow>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            6
+           </mn>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Sendo
+     <i>
+      B
+     </i>
+     a frequência angular, representada por ω na expressão (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ), podemos determinar o comprimento do pêndulo com base nos dados experimentais. Para isto, é necessário conhecer o valor da aceleração gravitacional no local
+     <i>
+      g
+     </i>
+     .
+    </p>
+    <p>
+     Para efeito de comparação, o valor da gravidade no local pode ser obtida por vias tradicionais utilizando o próprio pêndulo e um cronômetro. Uma forma precisa de fazer isto é aferir a frequência de oscilação através da medição do intervalo de tempo sobre 10 oscilações, por exemplo, e a repetição estatística da medida. Com esta, determina-se
+     <i>
+      g
+     </i>
+     utilizando-se a expressão (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ).
+    </p>
+    <p>
+     Ao realizar este experimento, com um pêndulo de comprimento
+     <i>
+      L
+     </i>
+     = (1,000 ± 0,002)
+     <i>
+      m
+     </i>
+     , com período de uma oscilação
+     <i>
+      T
+     </i>
+     = (2,004 ± 0,006), obtivemos como resultado
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS4Ex5">
+     <a name="S4Ex5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           g
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mn>
+              9
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mrow>
+              <mn>
+               830
+              </mn>
+              <mo>
+               ±
+              </mo>
+              <mn>
+               0
+              </mn>
+             </mrow>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              062
+             </mn>
+             <mo rspace="7.5pt" stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             m
+            </mi>
+           </mrow>
+           <mo>
+            /
+           </mo>
+           <msup>
+            <mi>
+             s
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Este resultado está de acordo com valores obtidos em trabalho recente explorando diferentes métodos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        F.M.L de Souza e S.C. Cardoso, Revista Brasileira de Ensino de Física 42, e20200202 (2020).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Utilizando-se o valor de
+     <i>
+      B
+     </i>
+     ajustado com sua incerteza estimada, considerando o valor da aceleração gravitacional determinado e propagando as devidas incertezas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        J.H. Vuolo, Fundamentos da Teoria dos Erros, (Edgard Blücher LTDA, São Paulo, 1996), 2 ed., p. 113.
+       </span>
+      </span>
+     </span>
+     ], pode-se chegar ao resultado
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS4Ex6">
+     <a name="S4Ex6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msup>
+           <mi>
+            L
+           </mi>
+           <mo>
+            ′
+           </mo>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mrow>
+             <mn>
+              42
+             </mn>
+             <mo>
+              ±
+             </mo>
+             <mn>
+              0
+             </mn>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             01
+            </mn>
+            <mo rspace="7.5pt" stretchy="false">
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            m
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que possui discrepância de apenas 5% do comprimento do fio utilizado. Por outro lado, levando em conta as dimensões do corpo oscilante e considerando que o centro de massa esteja aproximadamente no centro geométrico, a expectativa teórica é
+     <i>
+      L
+     </i>
+     ≈ 43
+     <i>
+      cm
+     </i>
+     , o que torna a discrepância próxima de 2%.
+    </p>
+    <p>
+     O experimento apresenta excelente reprodutibilidade. Além disso, a depender da forma como o aluno realiza o experimento e a obtenção dos dados, é possível obter resultados ainda mais acurados. É importante ressaltar que a qualidade das medidas está diretamente ligada ao conjunto de pontos analisados, e o desenvolvimento da perspicácia investigativa envolvida na produção dos dados é uma das habilidades científicas que podem ser aprimoradas na execução de atividades como a que se propõe aqui.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusões
+    </h1>
+    <p>
+     Possibilitar que professores e estudantes que convivem com as mais diversas condições estruturais em laboratórios didáticos tenham acesso a um experimento que forneça dados com boa fidedignidade, que representem bem o fenômeno em estudo por um baixo custo, é um grande desafio para a área de instrumentação para o ensino de física. Neste artigo propomos a construção e utilização de um kit experimental utilizando arduino e disponibilizamos o software
+     <i>
+      PMOscillator
+     </i>
+     dedicado ao kit, possibilitando a plotagem em tempo real e análise dos dados. Este barato dispositivo permite, por meio de um sensor ultrassônico HC-SR04, construir gráficos de posição (velocidade e aceleração) em tempo real. A visualização do comportamento senoidal constatado pode ser comparado com a modelagem apresentada pela teoria, ou até mesmo determinado somente pela experimentação. Um outro aspecto que pode ser viabilizado com a utilização do kit proposto, é que o estudante pode participar da montagem do protótipo para aquisição de dados, conforme o processo de familiarização com as novas tecnologias ocorram, podem também surgir adaptações, novas propostas de investigações, características da apropriação do saber.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     A Karla Pedroza Oliveira pela leitura crítica. Aos avaliadores pelas considerações realizadas que muito contribuíram para a melhoria de nosso trabalho. Ao programa PIBID – subprojeto de Física do IFSertãoPE, pelo fomento. À Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), pelo apoio financeiro.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Apêndice">
+    <h1 class="articleSectionTitle">
+     Apêndice
+    </h1>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/0b46738bb616afbb000c04e200202d90c8b77a32.pdf" target="_blank">
+     <span class="REPLACE_BY_SUPPLEMENTARY_MATERIAL_TEXT">
+      https://minio.scielo.br/documentstore/1806-9126/yDycLpWkwRzgWDKk5djT3mB/0b46738bb616afbb000c04e200202d90c8b77a32.pdf
+     </span>
+    </a>
+   </div>
+   <div class="articleSection" data-anchor="References">
+    <h1 class="articleSectionTitle">
+     References
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        D. Brown,
+        <i>
+         Tracker: Free Video Analysis and Modeling Tool for Physics Education
+        </i>
+        , https://physlets.org/tracker/
+        <br/>
+        <a href="https://physlets.org/tracker/" target="_blank">
+         » https://physlets.org/tracker/
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. Amorim, Revista Brasileira de Ensino de Física 33 , 1702 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        Página Oficial do Arduíno, disponível em: https://www.arduino.cc
+        <br/>
+        <a href="https://www.arduino.cc" target="_blank">
+         » https://www.arduino.cc
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        D.K. Fisher e R. Sui, IGR J. Agr. Eng. Int. 15 , 328 (2013).
+       </div>
+      </li>
+      <li>
+       <div>
+        H.P. Cordova, C.E. Aguiar, H.S. Amorim, K.S.O.M. Sathler e A.C.F. Santos, Revista Brasileira de Ensino de Física 40 , e2505 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        R.M. Szmoski, A. Doff, V.M. Lenart, S.K. Schwiderke e L.V.G Fachini, Caderno Brasileiro de Ensino de Física 40 , e1505 (2017).
+       </div>
+      </li>
+      <li>
+       <div>
+        L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T Dorneles, Revista Brasileira de Ensino de Física 38 , 33503 (2016).
+       </div>
+      </li>
+      <li>
+       <div>
+        M. Varanis, A.L. Silva, P.H.A. Brunetto e R.F. Gregolin, Revista Brasileira de Ensino de Física 38 , 1301 (2016).
+       </div>
+      </li>
+      <li>
+       <div>
+        S. Silveira,
+        <i>
+         Desenvolvimento de um kit experimental com Arduino para o ensino de física moderna no ensino médio
+        </i>
+        Dissertação de Mestrado, Universidade Federal de Santa Catarina, Araranguá (2016).
+       </div>
+      </li>
+      <li>
+       <div>
+        S. Silveira e M. Girardi, Revista Brasileira de Ensino de Física 39 , e4502 (2017).
+       </div>
+      </li>
+      <li>
+       <div>
+        C.J.M. Souza e M.S. Silva, LINKSCIENCEPLACE-Interdisciplinary Scientific Journal 3, 82 (2016).
+       </div>
+      </li>
+      <li>
+       <div>
+        A. Nano, disponível em: https://store.arduino.cc/arduino-nano, acessado em 16/05/2021.
+        <br/>
+        <a href="https://store.arduino.cc/arduino-nano" target="_blank">
+         » https://store.arduino.cc/arduino-nano
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        Datasheet do HC-SR04, disponível em: http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf
+        <br/>
+        <a href="http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf" target="_blank">
+         » http://elecfreaks.com/estore/download/EF03085-HC-SR04_Ultrasonic_Module_User_Guide.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        Especificações da comunicação serial, disponível em: http://i2c.info/i2c-bus-specification, acessado em 16/05/2021.
+        <br/>
+        <a href="http://i2c.info/i2c-bus-specification" target="_blank">
+         » http://i2c.info/i2c-bus-specification
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        Repositório do software PMOscillator, disponível em https://github.com/pmat0s/pmoscillator/, acessado em 16/05/2021.
+        <br/>
+        <a href="https://github.com/pmat0s/pmoscillator/" target="_blank">
+         » https://github.com/pmat0s/pmoscillator/
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        K. Levenberg, Quart. Appl. Math. 2 , 164 (1944).
+       </div>
+      </li>
+      <li>
+       <div>
+        D. Marquardt, SIAM J. Appl. Math. 11 , 431 (1963)
+       </div>
+      </li>
+      <li>
+       <div>
+        P.R. Gill, W. Murray e M.H. Wright, em:
+        <i>
+         Practical Optimization
+        </i>
+        (Academic Press, London, 1981), p. 136.
+       </div>
+      </li>
+      <li>
+       <div>
+        B. Gough,
+        <i>
+         GNU scientific library reference manual
+        </i>
+        (Network Theory Ltd. s.l, 2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        F.M.L de Souza e S.C. Cardoso, Revista Brasileira de Ensino de Física 42, e20200202 (2020).
+       </div>
+      </li>
+      <li>
+       <div>
+        J.H. Vuolo,
+        <i>
+         Fundamentos da Teoria dos Erros
+        </i>
+        , (Edgard Blücher LTDA, São Paulo, 1996), 2 ed., p. 113.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        O kit pode ser facilmente adaptado para estudo de outros sistemas. A título de exemplo, o pêndulo amortecido.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        08 Out 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        18 Maio 2021
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        06 Jul 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        26 Ago 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

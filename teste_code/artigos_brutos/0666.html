@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173812115" target="_blank">
+    https://doi.org/10.1590/S1806-11173812115
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812115">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0" data-toggle="tooltip">
+  </span>
+  Introdução à cinemática via cálculo de Lagrange: Discutindo os conceitos de velocidades média e instantânea
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Introduction to kinematics through Lagrange calculus: Discussing the concepts of average and instantaneous speed
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Wagner T. Jardim
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais, Juiz de Fora, MG, Brasil
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:wagner.jardim@ifsudestemg.edu.br">
+      wagner.jardim@ifsudestemg.edu.br
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Victor J. Vasquez Otoya
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais, Juiz de Fora, MG, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     José Rogério de Souza
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais, Juiz de Fora, MG, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Este trabalho visa introduzir ideias elementares no estudo da cinemática sob o ponto de vista do cálculo algébrico descrito por Lagrange. Pretendemos demostrar que esta seria uma alternativa ao caminho usualmente adotado no qual se utiliza o cálculo diferencial como base para discutir conceitos como "velocidade instantânea" e "velocidade média".
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     cálculo algébrico de Lagrange; cinemática; plano inclinado de Galileu
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     This paper aims to introduce basic ideas about kinematics using the algebraic calculus described by Lagrange. We show that this approach is an alternative way to the usually adopted approach that uses diﬀerential calculus as a basis for discussing concepts such instantaneous and average speed.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Lagrange's algebraic calculus; kinematics; Galileu's inclined plan
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Em diversos livros de Ciências, deparamo-nos com a falta de precisão na definição de grandezas ou com uma linguagem que desfavorece um entendimento mais aprofundado de alguns conceitos. No caso da Física, conceitos ditos básicos -tais como força, massa, velocidade, aceleração e espaço -, muitas vezes são definidos de forma superficial e apresentados a estudantes e a professores em formação sem um aprofundamento adequado, o que pode comprometer discussões futuras que se referem a temas tanto da Física Clássica, quanto da Física Moderna
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] W.T. Jardim, V.J.V. Otoya e C.G.S. Oliveira, Revista Brasileira de Ensino de Física, 37 , 2506 (2015).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Tais definições e conceitos, apesar de utilizados de forma recorrente por estudantes, podem carregar dificuldades conceituais subtendidas. Podemos citar, como exemplo, a definição de velocidade, na qual, em sua introdução, seria relevante discutir de forma mais rigorosa, diferenciando-a do conceito de rapidez
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] P.M. Mors, Revista Brasileira de Ensino de Física 30 , 2101 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Uma das definições utilizadas sem o devido rigor é a de velocidade média (
+     <i>
+      ν
+      <sub>
+       m
+      </sub>
+     </i>
+     ) usualmente apresentada por
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/33ebb4ce51fe4b1911fc2818a5c07b1d5aa30e60.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que, em um percurso, Δx representa o deslocamento e Δt, o intervalo de tempo decorrido. A velocidade média -
+     <i>
+      ν
+      <sub>
+       m
+      </sub>
+     </i>
+     - pouco nos permite analisar ou extrair informações relevantes sobre o movimento em si por se tratar da média estatística (temporal) de uma grandeza somada ponto a ponto à qual, comumente, referenciamos como velocidade instantânea (
+     <i>
+      ν
+      <sub>
+       i
+      </sub>
+     </i>
+     ). Esta, por sua vez, geralmente nos é apresentada em livros didáticos como
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/972a660c05f2ea65ff3cc1349e6cfde39c4e5e90.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa representação do que chamamos de "velocidade instantânea" carrega consigo possíveis problemas conceituais referentes à própria formulação matemática que lhe embasa: a tentativa de expressar o valor de uma função em um ponto através de uma aproximação (limite). Durante muito tempo, o cálculo formalizado por Newton e Leibniz foi alvo de muitas críticas devido à difícil compreensão de conceitos envolvidos nessa formulação, tais como fluxões, infinitésimos e diferenciais
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M.B.W. Tent Leonhard Euler and the Bernoullis (AA K Peters/CRC Press, Natick, 2009).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [4] J.V. Garbinet, The Origins of Cauchy's Rigourous Calcullus (The MIT Press, Cambridge, 1981).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [5] V.J. Katz, A History of Mathematics: An Introduction (Harper Collins College Publishers, New York, 1993).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [6] H.J. Keisler, Foundations of Infinitesumal Calculus(Prindle, Weber &amp; Shmidt. Inc., Boston, 1976).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] B. Vermeulen, Berkley Newsletter 8 , 1 (1985).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Alguns desses conceitos incitaram muitas discussões ao longo da história, sendo, mesmo antes de Newton e Leibniz, utilizados e questionados
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] J.M.F. Bassalo, Revista Brasileira de Ensino de Física18 , 103 (1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     As barreiras conceituais ao se trabalhar com os infinitesimais que estruturam as bases do cálculo refletem-se em diversas discussões acerca do assunto e dos seus obstáculos epistemológicos
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] A. Sierpinska, Educational Studies in Mathematics 18 , 371 (1987).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [10] D. Tall in: Handbook of Research on Mathematics Teaching and Learning, editado por D. Grouws (Macmillan Publishing Co, New York, 1992), p. 495-511.
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] I. Zuchi, A Abordagem do Conceito de Limite via Sequência Didática. Tese de Doutorado, Universidade Federal de Santa Catarina, 2005.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Em particular, nos resultados de cálculos referentes a taxas de variação de uma função (derivadas), existem termos (de segunda ordem) que são desconsiderados de forma automática, entretanto, se analisarmos a fundo, percebemos que o porquê de desprezarmos tais termos não é trivial
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] K. Marx, Mathematical Manuscripts of Karl Marx (New York Publication Ltd., New York, 1983).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] C.I. Castillo Analisis Matematico, disponível emhttp://www.uv.es/ivorra/Libros/Libros.htm acesso 25/08/2015.
+       </span>
+       <br/>
+       <a href="http://www.uv.es/ivorra/Libros/Libros.htm" target="_blank">
+        http://www.uv.es/ivorra/Libros/Libros.ht...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Assim, em uma pri meira abordagem do conceito de velocidade a partir do cálculo diferencial, ou negligenciamos a desconsideração de termos matemáticos de ordem superiores sem maiores cuidados (o que geralmente é feito), ou nos deparamos com um formalismo mais detalhado que pode fugir aos objetivos de disciplinas básicas em que a velocidade é discutida inicialmente. O formalismo utilizado no desenvolvimento do cálculo diferencial e problemas relacionados interessaram grandes matemáticos como Euler e Lagrange, o primeiro estruturou o chamado cálculo racional e o segundo, o cálculo algébrico. No presente trabalho, pretendemos mostrar como o formalismo desenvolvido por Lagrange no início do Século XIX
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] J.L. Lagrange Leçons sur Lel Calcul Des Functions(Impr Libraire pour le Mathématiques, Paris, 1806).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] J.L. Lagrange, Théorie des Functions Analytiques(Impr Libraire pour le Mathématiques, Paris, 1813).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     pode contribuir como alternativa ou complementação na exploração inicial do conceito de velocidade a partir de estudos como o plano inclinado de Galileu, uma vez que, partindo de uma formulação algébrica, os conceitos envolvidos apresentam-se menos abstratos.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. O cálculo algébrico de Lagrange
+    </h1>
+    <p>
+     Nesta seção, apresentaremos como um tratamento algébrico baseado na obra de Lagrange
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] J.L. Lagrange Leçons sur Lel Calcul Des Functions(Impr Libraire pour le Mathématiques, Paris, 1806).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] J.L. Lagrange, Théorie des Functions Analytiques(Impr Libraire pour le Mathématiques, Paris, 1813).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     pode se constituir em uma alternativa ao uso do conceito de limite.
+    </p>
+    <p>
+     Para toda função que pode ser (ao menos localmente) expresada como série de potências, temos:
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/91106f1da5c8459e9c70470b607e8b533426bf26.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     avaliando no ponto
+     <i>
+      x = x
+      <sub>
+       0
+      </sub>
+     </i>
+     , temos:
+    </p>
+    <div class="row formula" id="ee4">
+     <a name="e4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/6a5b06c4d98605727bbe56f83a3283e49ba9d06a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Inserindo um acréscimo ξ,
+    </p>
+    <div class="row formula" id="ee5">
+     <a name="e5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/3ba07c2a8caaf744b1f7777d77b7526f929f592a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     tomando ξ =
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     , obtemos:
+    </p>
+    <div class="row formula" id="ee6">
+     <a name="e6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/a0b7329449bcbf4b7f70f25a5bca2b2987b44577.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que temos definido: D
+     <sub>
+      0
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     )= ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     )= α
+     <sub>
+      0
+     </sub>
+     + α
+     <sub>
+      1
+     </sub>
+     x
+     <sub>
+      0
+     </sub>
+     + α
+     <sub>
+      2
+     </sub>
+     x
+     <sub>
+      0
+     </sub>
+     <sup>
+      2
+     </sup>
+     + …, D
+     <sub>
+      1
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ) = α
+     <sub>
+      1
+     </sub>
+     + 2α
+     <sub>
+      2
+     </sub>
+     x
+     <sub>
+      0
+     </sub>
+     + 3α
+     <sub>
+      3
+     </sub>
+     x
+     <sup>
+      2
+     </sup>
+     + …, D
+     <sub>
+      2
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ) = 2α
+     <sub>
+      2
+     </sub>
+     + 2 × 3α
+     <sub>
+      2
+     </sub>
+     x
+     <sup>
+      0
+     </sup>
+     + …. Esta série é chamada de série de Taylor.
+    </p>
+    <p>
+     Definamos a quantidade, T
+     <sub>
+      <i>
+       x
+      </i>
+      0
+     </sub>
+     [(ƒ (
+     <i>
+      x
+     </i>
+     )] = D
+     <sub>
+      0
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ) + D
+     <sub>
+      1
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     )(
+     <i>
+      x
+     </i>
+     −
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ), esta descreve uma reta tangente à curva ƒ (
+     <i>
+      x
+     </i>
+     ) no ponto
+     <i>
+      x
+      <sub>
+       0
+      </sub>
+     </i>
+     , e D
+     <sub>
+      1
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ) é o coeficiente angular ou tangente, o qual chamaremos de derivada.
+    </p>
+    <p>
+     Observe que, no caso de
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ser uma quantidade muito pequena e pudermos desconsiderar os termos de ordens superiores nessa série, teremos ƒ(
+     <i>
+      x
+     </i>
+     ) ≈ T
+     <sub>
+      x0
+     </sub>
+     [(ƒ(
+     <i>
+      x
+     </i>
+     )] = D
+     <sub>
+      0
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ) + D
+     <sub>
+      1
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     )(
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ), neste caso, ƒ(
+     <i>
+      x
+     </i>
+     ) ≈ ƒ(
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ) + D
+     <sub>
+      1
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     )(
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ), que podemos escrever de forma equivalente como
+    </p>
+    <div class="row formula" id="ee7">
+     <a name="e7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/17ee60922bf513c33ed6506e3348d75a256a6e90.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo Δ
+     <i>
+      x
+     </i>
+     =
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     , recuperamos o conceito de derivada. A vantagem do método anterior é alcançarmos os resultados precisos sem a necessidade do conceito formal de limite.
+    </p>
+    <p>
+     É facil ver, ainda, que para o caso particular ƒ(
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      x
+      <sup>
+       n
+      </sup>
+     </i>
+     , para
+     <i>
+      n
+     </i>
+     ∈ℕ,
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     ƒ(
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      nx
+     </i>
+     <sup>
+      <i>
+       n
+      </i>
+      −1
+     </sup>
+     <i>
+      D
+     </i>
+     <sub>
+      2
+     </sub>
+     ƒ(
+     <i>
+      x
+     </i>
+     )=
+     <i>
+      n
+     </i>
+     (
+     <i>
+      n
+     </i>
+     − 1)
+     <i>
+      x
+     </i>
+     <sup>
+      <i>
+       n
+      </i>
+      -2
+     </sup>
+     , D
+     <sub>
+      3
+     </sub>
+     ƒ(
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      n
+     </i>
+     (
+     <i>
+      n
+     </i>
+     − 1)(
+     <i>
+      n
+     </i>
+     − 2)
+     <i>
+      x
+     </i>
+     <sup>
+      <i>
+       n
+      </i>
+      -3
+     </sup>
+     , etc.
+    </p>
+    <p>
+     Observemos como é simples obter, como exemplo, o que conhecemos como derivada do produto de duas funções. Sejam ƒ(
+     <i>
+      x
+     </i>
+     ) = α
+     <sub>
+      0
+     </sub>
+     + α
+     <sub>
+      1
+     </sub>
+     <i>
+      x
+     </i>
+     + α
+     <sub>
+      2
+     </sub>
+     <i>
+      x
+     </i>
+     <sup>
+      2
+     </sup>
+     + ··· e
+     <i>
+      g
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      b
+     </i>
+     <sub>
+      0
+     </sub>
+     +
+     <i>
+      b
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      x
+     </i>
+     +
+     <i>
+      b
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      x
+     </i>
+     <sup>
+      2
+     </sup>
+     + ··· , logo;
+    </p>
+    <div class="row formula" id="ee8">
+     <a name="e8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/2367312376f6a968a7acd5d4d40594006ed66b73.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     por outro lado
+    </p>
+    <div class="row formula" id="ee9">
+     <a name="e9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/b6a535795a9ef28c7da6a48451407466f22bfdec.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     assim,
+    </p>
+    <div class="row formula" id="ee10">
+     <a name="e10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/b6b9463b5b17659aa260e774fb59bceb2f55a9c7.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     que é a chamada regra de Leibniz ou regra do produto (regra fundamental que define uma derivação).
+    </p>
+    <p>
+     Lagrange
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] J.L. Lagrange Leçons sur Lel Calcul Des Functions(Impr Libraire pour le Mathématiques, Paris, 1806).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] J.L. Lagrange, Théorie des Functions Analytiques(Impr Libraire pour le Mathématiques, Paris, 1813).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     demonstra que este procedimento pode ser realizado com diferentes tipos de funções, tais como racionais, exponênciais, logaritmicas, trigonométricas, etc.
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Apresentaremos alguns exemplos adicionais nos Apêndices do presente artigo.
+       </span>
+      </span>
+     </span>
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Cinemática via Lagrange e o Plano Inclinado de Galileu
+    </h1>
+    <p>
+     Na introdução de conceitos relacionados à Cinemática no Ensino, podemos destacar a queda dos corpos tratada por Galileu e a inserção da análise do plano inclinado em sua obra
+     <i>
+      Duas novas ciências
+     </i>
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] A. Zylbersztajn, Caderno Brasileiro de Ensino de Física,5 , 36 (1988).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Essa análise é refenciada em diversos trabalhos que indicam discussões acerca dos estudos desenvolvidos por Galileu Galilei como caminho viável no ensino da Física, seja sob um enfoque histórico
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] T. Peron, A. Guerra e T.C. Forato, in: Anais do VIII Encontro Nacional De Pesquisa Em Educação E Ciências, Campinas, 2011, disponível em http://www.nutes.ufrj.br/abrapec/ viiienpec/resumos/R0411-2.pdf.
+       </span>
+       <br/>
+       <a href="http://www.nutes.ufrj.br/abrapec/%20viiienpec/resumos/R0411-2.pdf" target="_blank">
+        http://www.nutes.ufrj.br/abrapec/ viiien...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] M.C.D. Neves, J.M. Batista, J.R. Costa, L.C. Gomes. M.C. Batista, P.A. Fusinato. F.R. Almeida, R.G.R. Silva, A.A. Savi y R.F. Pereira, Revista Electrónica de Enseñanza de las Ciencias, 7 , 226 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     ou experimental
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] P. Cerreta, Science &amp; Education, 23, 747 (2014).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [20] R.R. Soares e P.F. Borges, Revista Brasileira de Ensino de Física,32 , 2501 (2010).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] S. Straulino, Physics Education, 43 , 316 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     ). Galileu observou que o módulo da velocidade de um corpo ao descer por um plano inclinado aumenta à medida em que descreve sua trajetória descendente, percebendo a relação entre a distância percorrida e o tempo em um movimento uniformemente acelerado. Galileu demonstrou que o gráfico da distância pelo tempo constitui uma parábola, observando, ainda, que, ao subir o plano inclinado, a velocidade diminui até chegar a zero e a relação distância por tempo continua a descrever uma parábola. A diferença entre os gráficos nas funções que representam os dois casos considerados é a inclinação das curvas que varia ponto a ponto. No primeiro caso (descida), a inclinação aumenta e no segundo caso (subida), a inclinação da curva diminui ponto a ponto. Galileu também observou que a velocidade poderia se manter constante (desde que não sofresse influências externas), uma das grandes contribuições à lei da inércia. Mostraremos a seguir que utilizar a formulação algébrica de Lagrange consiste em um caminho conceitualmente simples de se obter as equações básicas do movimento. No último caso mencionado (velocidade constante), o gráfico "distância percorrida em função do tempo" é representado por uma linha reta, tendo sua inclinação mantida constante para todo instante de tempo. A equação que descreve esta linha reta é dada por
+    </p>
+    <div class="row formula" id="ee11">
+     <a name="e11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/2e623b86e7a847060a03a368242cb00bd02fe76c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     =
+     <i>
+      x
+     </i>
+     (0) e
+     <i>
+      ν
+     </i>
+     é a inclinação da reta. Como a inclinação não varia, é fácil ver que outra forma de obtermos a descrição para a mesma inclinação é tomando dois pontos quaisquer
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      x
+     </i>
+     <sub>
+      2
+     </sub>
+     , nos instantes
+     <i>
+      t
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      t
+     </i>
+     <sub>
+      2
+     </sub>
+     , com isto
+     <i>
+      x
+     </i>
+     =
+     <i>
+      x
+     </i>
+     <sub>
+      2
+     </sub>
+     −
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     , e Δ
+     <i>
+      t
+     </i>
+     =
+     <i>
+      t
+     </i>
+     <sub>
+      2
+     </sub>
+     -
+     <i>
+      t
+     </i>
+     <sub>
+      1
+     </sub>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/ced5a881c044820b53f6d2791f948cdc8c4d6737.jpg" style="max-width:100%"/>
+     = ν, em que Δ
+    </p>
+    <p>
+     Assim, definimos a velocidade em um ponto como a inclinação da curva neste ponto.Vemos que, no caso particular do movimento retilíneo, podemos obter a velocidade como a distância percorrida dividida pelo tempo, mas isso nao é verdade no caso geral. Vejamos, por exemplo, o caso do plano inclinado. Seja a parábola
+    </p>
+    <div class="row formula" id="ee12">
+     <a name="e12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/61ea93b36a652039ab25e2e5f7679075c2a1ff5d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para calcular a velocidade no instante
+     <i>
+      t
+      <sub>
+       0
+      </sub>
+     </i>
+     , tomemos
+     <i>
+      x
+     </i>
+     (
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     ),
+    </p>
+    <div class="row formula" id="ee13">
+     <a name="e13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/10c1992ef2743c784562099917e4985323205269.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     logo, tomemos a posição para tempos
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     + τ,
+    </p>
+    <div class="row formula" id="ee14">
+     <a name="e14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/8a1895c69112060988ba6248ee52d503c4ff0995.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee15">
+     <a name="e15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/8e5aa9a01f399d3224ec0febc409101ccd7f9302.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para τ =
+     <i>
+      t
+     </i>
+     -
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+    </p>
+    <div class="row formula" id="ee16">
+     <a name="e16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/85d6a97b724500a6004d332a6cc927f0c260dbb7.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para encontrar a velocidade no instante
+     <i>
+      t
+      <sub>
+       0
+      </sub>
+     </i>
+     , tomemos a aproximação linear, ou seja, a reta tangente que passa pelo ponto no instante
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+    </p>
+    <div class="row formula" id="ee17">
+     <a name="e17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/85ff7a4180a9b09414d510290d2e870a1e791ce7.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     logo, obtemos a velocidade neste ponto como sendo a inclinação desta reta, ou seja,
+    </p>
+    <div class="row formula" id="ee18">
+     <a name="e18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/8fc5e1543f38cf47a96f88a9d6ee9b603503829b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para qualquer instante arbitrário
+    </p>
+    <div class="row formula" id="ee19">
+     <a name="e19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/9f6ea4bd5459f6e9e42341ea8b911ed4b7dbe917.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     observe que, neste caso, o gráfico da velocidade por tempo descreve uma linha reta com interseção em
+     <i>
+      B
+     </i>
+     =
+     <i>
+      ν
+     </i>
+     (0) =
+     <i>
+      ν
+     </i>
+     <sub>
+      0
+     </sub>
+     e inclinação
+     <i>
+      α
+     </i>
+     = 2
+     <i>
+      C
+     </i>
+     . A inclinação desta reta é chamada aceleração que, no caso particular (aceleração constante), pode ser encontrada da mesma forma que no movimento com velocidade uniforme, tomando dois pontos quaisquer, logo α =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/b4d5e5395f67ffacc67cd5b9a4c3c53cc4220eb1.jpg" style="max-width:100%"/>
+    </p>
+    <p>
+     Finalmente, substituindo os resultados,
+    </p>
+    <div class="row formula" id="ee20">
+     <a name="e20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/c319bc5d8ca742be2da649f4eec4ee702a866239.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee21">
+     <a name="e21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/a5d85560203cbf7806a57ddf2e62400f4b4f0632.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Podemos realizar o procedimento inverso, isto é: dado o campo de velocidades
+     <i>
+      ν
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )=
+     <i>
+      ν
+     </i>
+     <sub>
+      0
+     </sub>
+     +
+     <i>
+      at
+     </i>
+     , qual é a forma da trajetória em função do tempo?
+    </p>
+    <p>
+     Desde que a trajetória possa ser expressa por uma série de Taylor ao redor do ponto
+     <i>
+      t
+     </i>
+     =
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     , temos
+    </p>
+    <div class="row formula" id="ee22">
+     <a name="e22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/4cd29a05bd7b5f1ea4ebbcaab465d02c6f423a40.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em
+     <i>
+      t
+     </i>
+     = 0,
+    </p>
+    <div class="row formula" id="ee23">
+     <a name="e23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/c293e85f08cc183c2df30fc8f183eb1e8f83b7b7.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     logo,
+    </p>
+    <div class="row formula" id="ee24">
+     <a name="e24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/9282f1b68a6e9b220fc6f6116260bd2ff20abfa5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     substituindo ẋ(
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     )= ν
+     <sub>
+      0
+     </sub>
+     +
+     <i>
+      αt
+     </i>
+     <sub>
+      0
+     </sub>
+     e
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     arbitrário,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/8359d6445be1c5079ade01f52e195a654ee87d7d.jpg" style="max-width:100%"/>
+     = ··· = 0, logo para
+    </p>
+    <div class="row formula" id="ee25">
+     <a name="e25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/f58bf5057a673350c2e09717578cad745547f7bc.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee26">
+     <a name="e26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/08e53e02aea213d407e6f135d343433c7f3e29e3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     reobtendo a expressão conhecida como a descrição da trajetória de uma partícula sob aceleração constante sem a necessidade do processo de cálculo integral.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados e conclusões
+    </h1>
+    <p>
+     Discutimos no presente trabalho uma forma alternativa de abordar conceitos envolvidos no estudo da Cinemática através da formulação algébrica proposta por Lagrange. Apesar de encontramos na literatura relevantes trabalhos que apontem a obra de Galileu, e em específico o estudo do plano inclinado como um interessante background na análise do movimento acelerado como prática de ensino, muitas vezes, conceitos básicos envolvidos - como o de velocidade - são apresentados sem a devida atenção. Ao introduzir conceitos como o de velocidade instântanea através do cálculo de limite, partimos da defininção de velocidade média em que fazemos o valor de
+     <i>
+      t
+     </i>
+     tender a
+     <i>
+      t
+      <sub>
+       0
+      </sub>
+     </i>
+     , obtendo um resultado aproximado que pode carregar algumas implicações conceituais. O método algébrico de Lagrange se mostra uma interessante alternativa, pois:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       Não precisamos nos ater à definição de limite, podendo utilizar um formalismo alternativo que leva a resultados finais matematicamente equivalentes aos do cálculo diferencial.
+      </p>
+     </li>
+     <li>
+      <p>
+       Traz estruturas matemáticas mais ricas, tais como a Série de Taylor e a regra de Leibniz (estrutura de derivação).
+      </p>
+     </li>
+    </ol>
+    <p>
+     Pretendemos, assim, resgatar o formalismo algébrico de Lagrange apresentando uma possibilidade alternativa (ou complementar) de abordagem que não necessite de se apoiar na definição de velocidade média nem na formulação baseada no estudo de limites. Além disso, com base nos argumentos desenvolvidos ao longo do presente trabalho, podemos concluir que a utilização do termo instantânea como acréscimo à velocidade se mostra redundante, uma vez que velocidade já supõe algo definido em um ponto, o que pode se apresentar confuso ao citarmos diferentes conceitos de velocidade sem a devida atenção.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Apêndice">
+    <h1 class="articleSectionTitle">
+     Apêndice
+    </h1>
+    <p>
+     Apresentaremos aqui alguns casos particulares importantes a partir do formalismo Algébrico de Lagrange.
+    </p>
+    Funções racionais
+    <p>
+     Seja por exemplo ƒ(
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      x
+      <sup>
+       p
+      </sup>
+     </i>
+     , para
+     <i>
+      p
+     </i>
+     racional, logo
+    </p>
+    <div class="row formula" id="ee27">
+     <a name="e27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/fe9029b86b41029a270a3f2cc7a682e78d1cc504.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que δ=
+     <sup>
+      <i>
+       p
+      </i>
+     </sup>
+     = 1
+     <i>
+      F(p)
+     </i>
+     δ + ···. Em que
+     <i>
+      F(p)
+     </i>
+     é uma função arbitrária. Vejamos o produto,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/6154d1546856450b9404b949b8b09c4f03a83f03.jpg" style="max-width:100%"/>
+     . Observe que (1 + δ)
+    </p>
+    <div class="row formula" id="ee28">
+     <a name="e28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/1b27244622bb871e1f392c03b3bbd18892790a67.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     por outro lado,
+    </p>
+    <div class="row formula" id="ee29">
+     <a name="e29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/943be10f1c87cb933d81c1e45e4d3aac6ad7ef51.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     assim temos
+    </p>
+    <div class="row formula" id="ee30">
+     <a name="e30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/aa7f32ae0de8a18364c11406c4963a5e29924b14.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Usando esta última identidade obtemos
+    </p>
+    <div class="row formula" id="ee31">
+     <a name="e31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/1b47134836265bfc661d286dc74a27122e284611.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     desenvolvendo em série de Taylor
+    </p>
+    <div class="row formula" id="ee32">
+     <a name="e32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/44a217dbdef90c81b5eceaf98cb7657f478e5f1c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee33">
+     <a name="e33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/19d3baf1481ff36d6005f480c1e7bf06917ac5e3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     substituindo, temos que
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      F
+     </i>
+     (
+     <i>
+      p
+     </i>
+     ) − D
+     <sub>
+      1
+     </sub>
+     <i>
+      F
+     </i>
+     (q) = 0,
+     <i>
+      D
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      F
+     </i>
+     (p)+ D
+     <sub>
+      2
+     </sub>
+     <i>
+      F
+     </i>
+     (q) = 0,... , logo escolhemos consistentemente
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      F (p)
+     </i>
+     = D
+     <sub>
+      1
+     </sub>
+     <i>
+      F
+     </i>
+     (q)= α,
+     <i>
+      D
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      F
+     </i>
+     (p)= D
+     <sub>
+      2
+     </sub>
+     <i>
+      F
+     </i>
+     (q) = 0, ... . Com isto,
+    </p>
+    <div class="row formula" id="ee34">
+     <a name="e34">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/edbe4257f7697072d97a72bdee1b7b82de3c95b9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     escolhendo
+     <i>
+      r
+     </i>
+     =
+     <i>
+      −p
+     </i>
+     , temos
+     <i>
+      F
+     </i>
+     (0) =
+     <i>
+      F (p)
+     </i>
+     -
+     <i>
+      ap
+     </i>
+     , ou seja,
+     <i>
+      F(p)
+     </i>
+     =
+     <i>
+      F
+     </i>
+     (0) +
+     <i>
+      ap
+     </i>
+     . Voltando para
+    </p>
+    <div class="row formula" id="ee35">
+     <a name="e35">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/380f60a4236aaf64e8dfa4cf58fff963baf9fadb.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para
+     <i>
+      p
+     </i>
+     = 0, vemos imediatamente que
+     <i>
+      F
+     </i>
+     (0) = 0; para
+     <i>
+      p
+     </i>
+     = 1, vemos que
+     <i>
+      α
+     </i>
+     = 1. Concluimos que para
+     <i>
+      p
+     </i>
+     arbitrario (1 + δ)
+     <sup>
+      <i>
+       p
+      </i>
+     </sup>
+     = 1 +
+     <i>
+      p
+     </i>
+     δ + ···
+    </p>
+    <div class="row formula" id="ee36">
+     <a name="e36">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/9bd0ef3203f15ace48804de0052bb9b9f5e4050d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que ξ =
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     , assim
+    </p>
+    <div class="row formula" id="ee37">
+     <a name="e37">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/e88e54aaab100d5cf9ce219dced654cb22b01e40.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee38">
+     <a name="e38">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/57dab70342354083f3d676813db4e6a87c5fa530.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee39">
+     <a name="e39">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/4db897f59f6d11f7261aac3eafc62f042102b2cb.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Funções exponenciais e logarítimicas
+    <p>
+     Outro exemplo importante é a função ƒ(
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      α
+      <sup>
+       x
+      </sup>
+     </i>
+     ,
+    </p>
+    <div class="row formula" id="ee40">
+     <a name="e40">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/c55b480310bd442d826c0e1825a8d71e6aee0d56.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     seja
+     <i>
+      α
+     </i>
+     = 1 +
+     <i>
+      b
+     </i>
+     , logo,
+    </p>
+    <div class="row formula" id="ee41">
+     <a name="e41">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/c2afd0eed37a237271d1c40eca8cccee6b7ad9cf.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     ou
+    </p>
+    <div class="row formula" id="ee42">
+     <a name="e42">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/94d38a477acac7d0a3904aa73c7f1fdf0c296eeb.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     escrevemos
+     <i>
+      α
+     </i>
+     <sup>
+      ξ
+     </sup>
+     = 1 + cξ + ···, em que
+     <i>
+      c
+     </i>
+     = (
+     <i>
+      α
+     </i>
+     − 1) − ½ (
+     <i>
+      α
+     </i>
+     − 1)
+     <sup>
+      2
+     </sup>
+     +
+     <i>
+      α
+     </i>
+     − 1)
+     <sup>
+      3
+     </sup>
+     + ···, logo
+     <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/b616dccf6a65c6ddb729bd34b60572dc00c66c25.jpg" style="max-width:100%"/>
+     (
+    </p>
+    <div class="row formula" id="ee43">
+     <a name="e43">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/25cd9f791fec8af3f3cdc87ac2cc06f6dd0a22a4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para ξ =
+     <i>
+      x
+     </i>
+     −
+     <i>
+      x
+     </i>
+     0,
+    </p>
+    <div class="row formula" id="ee44">
+     <a name="e44">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/75275043d7d1aca50a213198ccf383dd013378d4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     assim temos que
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     ƒ =
+     <i>
+      cα
+      <sup>
+       x
+      </sup>
+     </i>
+     , logo
+     <i>
+      D
+     </i>
+     <sub>
+      2
+     </sub>
+     ƒ = c
+     <sup>
+      2
+     </sup>
+     α
+     <sup>
+      x
+     </sup>
+     ,
+     <i>
+      D
+     </i>
+     <sub>
+      3
+     </sub>
+     ƒ = c
+     <sup>
+      3
+     </sup>
+     α
+     <sup>
+      x
+     </sup>
+     . o que nos leva a
+    </p>
+    <div class="row formula" id="ee45">
+     <a name="e45">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/56e0dd83d8c1c7f64b7ac358ad29b40435574886.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para
+     <i>
+      x
+     </i>
+     = 0, logo
+    </p>
+    <div class="row formula" id="ee46">
+     <a name="e46">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/780b86b87c853948bcdee8f2feabe343a8adf774.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para ξ = 1, o número a pode ser escrito como a série
+    </p>
+    <div class="row formula" id="ee47">
+     <a name="e47">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/c563979ce30575eff8635fbd1cad4e611ba5f366.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     para
+     <i>
+      c
+     </i>
+     = 1,
+    </p>
+    <div class="row formula" id="ee48">
+     <a name="e48">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/80d00d03c535454f8372fc53ad8330d836e8dfa8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     assim,
+    </p>
+    <div class="row formula" id="ee49">
+     <a name="e49">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/e8be73f17fe20db460c171cc39ec9e1ffbd57501.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Voltemos a α
+     <sup>
+      ξ
+     </sup>
+     e escolhemos ξ =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/a8fddfb02b681a973b14d5870ddc6e826057fca0.jpg" style="max-width:100%"/>
+     , temos
+    </p>
+    <div class="row formula" id="ee50">
+     <a name="e50">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/f96aa9714ec3d8a9dcf69d24cb83afcf96587275.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     logo,
+    </p>
+    <div class="row formula" id="ee51">
+     <a name="e51">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/598af18beaf0fd2967a31bbd6b7b35e438f402bc.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee52">
+     <a name="e52">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/1a90631ff0257099f86e9787521c5fdacb28a1a8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     assim, obtém-se
+    </p>
+    <div class="row formula" id="ee53">
+     <a name="e53">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/80c88083b2299cad44b3c1366b819e16c6c92214.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee54">
+     <a name="e54">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/81e5f38b8499c596225defa4899769c16ee8b53d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Da última equação, temos
+    </p>
+    <div class="row formula" id="ee55">
+     <a name="e55">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/2fb52110a51ab938bf9452f3efef5c6463b9fe56.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     usando o resultado obtido anteriormente para funções racioanais
+    </p>
+    <div class="row formula" id="ee56">
+     <a name="e56">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/66a447ddfaa1c6342659d81aaa7b00b3f1329fde.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     logo
+    </p>
+    <div class="row formula" id="ee57">
+     <a name="e57">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/d29161a8d1822dfd4f63246ac27a276d36f510f5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Funções trigonométricas
+    <p>
+     Para encontrar a derivada das funções trigonométricas, partimos da fórmula de euler
+    </p>
+    <div class="row formula" id="ee58">
+     <a name="e58">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/8ccbac44d44242280c3584ffab5bc2e73ef0f4d5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     É facil identificar as funções sinθ; e cosθ, com a expansão da exponencial
+    </p>
+    <div class="row formula" id="ee59">
+     <a name="e59">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/e2008ac45a90066872cfbb5b3048f0a7548968e6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee60">
+     <a name="e60">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/ec642b737f904e11db8cf02ef0ccbf4e87827145.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     usando
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     ƒ (
+     <i>
+      x
+     </i>
+     ) = nx
+     <sup>
+      n−1
+     </sup>
+     , vemos que
+    </p>
+    <div class="row formula" id="ee61">
+     <a name="e61">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/30c29947674c2bd8d633f9e740ad97363d5b5d25.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Função implícita (Regra da cadeia)
+    <p>
+     Seja ƒ = ƒ (
+     <i>
+      g
+     </i>
+     (
+     <i>
+      x
+     </i>
+     )), logo
+    </p>
+    <div class="row formula" id="ee62">
+     <a name="e62">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/443d8826bc34d879f2c8236e442b938b60d44a04.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     vemos então que
+    </p>
+    <div class="row formula" id="ee63">
+     <a name="e63">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/cf7ee573d09d7bf027c4ef2bbc4956cb047470cc.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     com
+    </p>
+    <div class="row formula" id="ee64">
+     <a name="e64">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/JMNPZZQWgrWDTQNz7KGXyrq/6a8768e6dd7d095a97f1f2772ba4c62680bf0db0.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        W.T. Jardim, V.J.V. Otoya e C.G.S. Oliveira, Revista Brasileira de Ensino de Física,
+        <b>
+         37
+        </b>
+        , 2506 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        P.M. Mors, Revista Brasileira de Ensino de Física
+        <b>
+         30
+        </b>
+        , 2101 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        M.B.W.
+        <i>
+         Tent Leonhard Euler and the Bernoullis
+        </i>
+        (AA K Peters/CRC Press, Natick, 2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        J.V. Garbinet,
+        <i>
+         The Origins of Cauchy's Rigourous Calcullus
+        </i>
+        (The MIT Press, Cambridge, 1981).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        V.J. Katz,
+        <i>
+         A History of Mathematics: An Introduction
+        </i>
+        (Harper Collins College Publishers, New York, 1993).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        H.J. Keisler,
+        <i>
+         Foundations of Infinitesumal Calculus
+        </i>
+        (Prindle, Weber &amp; Shmidt. Inc., Boston, 1976).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        B. Vermeulen, Berkley Newsletter
+        <b>
+         8
+        </b>
+        , 1 (1985).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        J.M.F. Bassalo, Revista Brasileira de Ensino de Física
+        <b>
+         18
+        </b>
+        , 103 (1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        A. Sierpinska, Educational Studies in Mathematics
+        <b>
+         18
+        </b>
+        , 371 (1987).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        D. Tall in:
+        <i>
+         Handbook of Research on Mathematics Teaching and Learning
+        </i>
+        , editado por D. Grouws (Macmillan Publishing Co, New York, 1992), p. 495-511.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        I. Zuchi,
+        <i>
+         A Abordagem do Conceito de Limite via Sequência Didática
+        </i>
+        Tese de Doutorado, Universidade Federal de Santa Catarina, 2005.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        K. Marx,
+        <i>
+         Mathematical Manuscripts of Karl Marx
+        </i>
+        (New York Publication Ltd., New York, 1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        C.I. Castillo
+        <i>
+         Analisis Matematico
+        </i>
+        , disponível emhttp://www.uv.es/ivorra/Libros/Libros.htm acesso 25/08/2015.
+        <br/>
+        <a href="http://www.uv.es/ivorra/Libros/Libros.htm" target="_blank">
+         » http://www.uv.es/ivorra/Libros/Libros.htm
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        J.L. Lagrange
+        <i>
+         Leçons sur Lel Calcul Des Functions
+        </i>
+        (Impr Libraire pour le Mathématiques, Paris, 1806).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        J.L. Lagrange,
+        <i>
+         Théorie des Functions Analytiques
+        </i>
+        (Impr Libraire pour le Mathématiques, Paris, 1813).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        A. Zylbersztajn, Caderno Brasileiro de Ensino de Física,
+        <b>
+         5
+        </b>
+        , 36 (1988).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        T. Peron, A. Guerra e T.C. Forato, in:
+        <i>
+         Anais do VIII Encontro Nacional De Pesquisa Em Educação E Ciências
+        </i>
+        , Campinas, 2011, disponível em http://www.nutes.ufrj.br/abrapec/ viiienpec/resumos/R0411-2.pdf
+        <br/>
+        <a href="http://www.nutes.ufrj.br/abrapec/%20viiienpec/resumos/R0411-2.pdf" target="_blank">
+         » http://www.nutes.ufrj.br/abrapec/ viiienpec/resumos/R0411-2.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        M.C.D. Neves, J.M. Batista, J.R. Costa, L.C. Gomes. M.C. Batista, P.A. Fusinato. F.R. Almeida, R.G.R. Silva, A.A. Savi y R.F. Pereira, Revista Electrónica de Enseñanza de las Ciencias,
+        <b>
+         7
+        </b>
+        , 226 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        P. Cerreta, Science &amp; Education, 23, 747 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        R.R. Soares e P.F. Borges, Revista Brasileira de Ensino de Física,
+        <b>
+         32
+        </b>
+        , 2501 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        S. Straulino, Physics Education,
+        <b>
+         43
+        </b>
+        , 316 (2008).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Apresentaremos alguns exemplos adicionais nos Apêndices do presente artigo.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        29 Ago 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        24 Out 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        <img alt="Creative Common - by 4.0" src="https://licensebuttons.net/l/by/4.0/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

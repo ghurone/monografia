@@ -1,0 +1,8583 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 40 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2018
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2018-0083" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2018-0083
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2018-0083">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Aplicação do Problema Restrito de Três Corpos no estudo do movimento de astros do sistema solar
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Application of the Restricted Three Bodies Problem in the study of the move the objects of the solar system
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Gabriel da Silva Macedo
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Alfenas, Departamento de Física, Alfenas, MG, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Artur Justiniano Roberto Junior
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Alfenas, Departamento de Física, Alfenas, MG, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:arturjustiniano@gmail.com">
+      arturjustiniano@gmail.com
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-8935-2843">
+     http://orcid.org/0000-0001-8935-2843
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Após uma revisão na literatura vimos que o Problema Restrito de Três Corpos (PRTC) é um tema com algumas publicações voltadas, principalmente, para a resolução do problema matemático, com muito poucas aplicações em situações reais e contextualizadas. Além disso, ao analisarmos alguns livros textos de mecânica clássica utilizados nos cursos de física, observamos que o PRTC não é desenvolvido e explorado didaticamente. Apoiados nessas análises o nosso objetivo neste trabalho é apresentar, desenvolver e aplicar o PRTC para simular as órbitas de dois astros do sistema solar: a do asteroide troiano da Terra, 2010 TK7, e a libração de Plutão devido a Netuno. Para resolver as equações diferencias do PRTC utilizamos o método de Cauchy em um código escrito na linguagem de programação Python. Nos dois casos estudados conseguimos verificar as trajetórias, valores e comportamentos orbitais dos astros. Por isso, entendemos que o PRTC pode ser aplicado para simular o movimento de diversos astros do sistema solar e, consequentemente, ser utilizado como um recurso pedagógico para contextualizar conceitos de mecânica celeste e dinâmica orbital. Uma vez que ele se relaciona com o estudo das equações diferencias, com a gravitação universal e com os métodos numéricos.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Mecânica celeste; Problema restrito dos três corpos; Ensino de astronomia
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     After a review in the literature we have seen that the Restricted Three-Body Problem (RTBP) is a topic with some publications focused, primarily, on resolution of the mathematical problem, with very few application in real and contextualized situations. In addition, in analyzing textbooks of classical mechanics we observed that the RTBP is not developed and didactically explored. Based on this facts, our objective in this work is to present, develop and apply the RTBP to simulate the orbits of two objects in the solar system : motion of Earth-trojan asteroid 2010 TK7 and libration of pluto due to Neptune. To solve differential equations of RTBP we uses the cauchy method in a code written in the Python programming language. With this work we hope to demonstrate that the study of the RTBP can be used to contextualize some concepts of celestial mechanics and orbital dynamics.Since it is related to the study of differential equations, with universal gravitation and numerical methods.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Celestial mechanics; Restricted problem of the three bodies; Teaching of astronomy
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A mecânica celeste é o ramo da Astronomia que estuda os movimentos dos corpos celestes sob a influência da gravidade. Seus fundamentos foram estabelecidos a partir do século XVII mas ela é bem mais antiga e está ligada as observações e registros das posições dos astros em seu deslocamento diário na abóbada celeste
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] A.S.T. Pires, Evolução das idéias da física (Livraria da Física, São Paulo, 2011) 2ª ed.
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Johannes Kepler (1571-1630) foi quem formulou as três leis que descrevem o movimento dos planetas e as publicou no livro,
+     <i>
+      “Harmonice Mundi”
+     </i>
+     em 1619
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] A.S.T. Pires, Evolução das idéias da física (Livraria da Física, São Paulo, 2011) 2ª ed.
+       </span>
+      </span>
+     </span>
+     . A demonstração matemática dessas leis foi feita por Isaac Newton (1643-1727) na sua obra
+     <i>
+      “Philosophiae Naturalis Principia Mathematica”
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] http://astro.if.ufrgs.br/newton/principia.pdf, acessado em 18/05/2018.
+       </span>
+       <br/>
+       <a href="http://astro.if.ufrgs.br/newton/principia.pdf" target="_blank">
+        http://astro.if.ufrgs.br/newton/principi...
+       </a>
+      </span>
+     </span>
+     , marcando o início do desenvolvimento da mecânica celeste moderna. Nessa obra Newton formulou o principal problema da mecânica celeste, o problema de N corpos. Esse problema pode ser descrito da seguinte forma: dado um sistema com N massas puntiformes, ou seja, pontos de massas que têm seus movimentos governados por gravitação mútua e também dados suas condições iniciais, posição e velocidade, o que se deseja é saber sua posição e velocidade em um instante futuro. Para fazer isso é necessário resolver as Equações Diferenciais Ordinárias (EDO's) que governam o movimento dos N corpos. Trata-se de problema extremamente complexo e que não possui uma solução analítica fechada. Uma solução desse tipo só é encontrada quando N = 2. Nesse caso, trata-se do problema de 2 corpos, também conhecido como Problema de Kepler
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] J.B. Marion e S.T. Thornton, Dinâmica clássica de partículas e Sistema (Cengage Learning, São Paulo, 2014) 1ª ed.
+       </span>
+      </span>
+     </span>
+     , em homenagem a esse cientista.
+    </p>
+    <p>
+     Já o problema de três corpos (N = 3) é considerado um dos problemas mais importantes da mecânica celeste e tem sido estudado tanto analiticamente quanto numericamente a vários séculos. O primeiro a fazê-lo foi Newton ao resolver o problema de dois corpos para o movimento da Lua ao redor da Terra e considerar os efeitos do Sol sobre o sistema
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] http://astro.if.ufrgs.br/newton/principia.pdf, acessado em 18/05/2018.
+       </span>
+       <br/>
+       <a href="http://astro.if.ufrgs.br/newton/principia.pdf" target="_blank">
+        http://astro.if.ufrgs.br/newton/principi...
+       </a>
+      </span>
+     </span>
+     . Entretanto, desde essa época esse problema continua sem uma solução geral analítica e fechada [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E. Figueiredo e A.S. Castro, Rev. Bras. Ens. Fis. 23, 289 (2001).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] A.F.B.A. Prado, Trajetórias Espaciais e Manobras Assistidas por Gravidade (INPE, São José dos Campos, 2001).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Um caso especial desse problema é o Problema Restrito de Três Corpos (PRCT) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] R.F. Prazeres, Métodos Clássicos e Qualitativos no Estudo do Problema dos Três Corpos. Dissertação de Mestrado, Universidade Federal do Rio de Janeiro, Rio de Janeiro (2010).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] V. Szebehely, Theory of Orbits: The Restricted Problem of Three Bodies (Academic Press, New York, 1967)
+       </span>
+      </span>
+     </span>
+     ]. Trata-se de uma simplificação do problema geral de três corpos e que é de grande interesse científico porque ele pode ser utilizado em diversas aplicações práticas como na astronomia e na astronáutica. Como por exemplo as que serão apresentadas nesse artigo.
+    </p>
+    <p>
+     O nosso interesse em estudar o PRTC vem do fato de que esse assunto está diretamente relacionado aos conteúdos da disciplina mecânica clássica dos cursos de graduação em física. Trata-se de um tópico do assunto mecânica celeste. Entretanto, ao analisar alguns livros textos que são utilizados nessa disciplina [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] J.B. Marion e S.T. Thornton, Dinâmica clássica de partículas e Sistema (Cengage Learning, São Paulo, 2014) 1ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] H. Goldstein, C.P. Poole e J.L. Safko, Classical mechanics (Addison-Wesley, New York, 2000), 3ª ed.
+       </span>
+      </span>
+     </span>
+     -
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] A.O. Lopes, Introdução à mecânica clássica (Edusp, São Paulo, 2006).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] K.R. Symon, Mechanics (Addison-Wesley, 1960 ), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ] notamos que o PRTC é poucas vezes citado e quase nunca desenvolvido didaticamente. Quando é, observamos que o enfoque maior está no desenvolvimento matemático do problema e não na sua aplicação e contextualização. Esse fato pode ser visto, por exemplo, nos artigos publicados neste periódico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E. Figueiredo e A.S. Castro, Rev. Bras. Ens. Fis. 23, 289 (2001).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] F.A.C. Martins e M. Zanotello, Rev. Bras. Ens. Fis. 40, e2310 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Nesse artigo nós vamos apresentar e desenvolver matematicamente o PRTC buscando o aprimoramento da transposição didática do problema, em seguida vamos mostrar que ele pode ser utilizado para descrever o movimento do asteroide troiano da Terra e a libração de Plutão, como exemplos de aplicação contextualizada.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. O problema de três corpos
+    </h1>
+    <p>
+     O problema dos três corpos pode ser descrito da seguinte forma: dados três corpos de massa
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     ,
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     que se movem sobre mútua atração gravitacional e sabendo suas condições iniciais, posição
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mi>
+        r
+       </mi>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     e velocidade
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mover accent="true">
+        <mi>
+         r
+        </mi>
+        <mo>
+         ˙
+        </mo>
+       </mover>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     , o que se deseja é determinar os valores dessas grandezas no tempo futuro.
+    </p>
+    <p>
+     As EDO's que descrevem o movimento do problema de três corpos são:
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           3
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                3
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           3
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                3
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           1
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           1
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                3
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                3
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde
+     <math>
+      <mi>
+       G
+      </mi>
+     </math>
+     é a constante gravitacional,
+     <math>
+      <mover accent="true">
+       <msub>
+        <mi>
+         r
+        </mi>
+        <mi>
+         i
+        </mi>
+       </msub>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     e
+     <math>
+      <mover accent="true">
+       <mover accent="true">
+        <msub>
+         <mi>
+          r
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mo>
+        ¨
+       </mo>
+      </mover>
+     </math>
+     são os vetores posição e aceleração dos corpos.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. O problema restrito de três corpos
+    </h1>
+    <p>
+     Euler, em 1772, foi o primeiro a propor uma reformulação do problema de três corpos. Mais tarde essa reformulação foi nomeada por Henri Poincaré (1854-1912) como Problema Restrito de Três Corpos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] R.F. Prazeres, Métodos Clássicos e Qualitativos no Estudo do Problema dos Três Corpos. Dissertação de Mestrado, Universidade Federal do Rio de Janeiro, Rio de Janeiro (2010).
+       </span>
+      </span>
+     </span>
+     . Nesse problema os corpos
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     são chamados de primárias e o que se busca é estudar o movimento do terceiro corpo,
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     . Uma particularidade do PRTC está no fato de que
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mtext mathvariant="italic">
+         m
+        </mtext>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        &gt;
+       </mo>
+       <mo>
+        &gt;
+       </mo>
+       <mo>
+        &gt;
+       </mo>
+       <msub>
+        <mtext mathvariant="italic">
+         m
+        </mtext>
+        <mn>
+         3
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     De uma forma geral o PRTC tem as seguintes restrições:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       A massa do terceiro corpo é considerada nula.
+      </p>
+     </li>
+     <li>
+      <p>
+       As órbitas das primárias são círculos ao redor do centro de gravidade do sistema.
+      </p>
+     </li>
+     <li>
+      <p>
+       O terceiro corpo se move no plano orbital das primárias.
+      </p>
+     </li>
+    </ol>
+    <p>
+     A primeira restrição implica que o terceiro corpo não exerce influência gravitacional nas órbitas das primárias. Portanto, as órbitas das primárias podem ser determinadas como se o terceiro corpo estivesse ausente, o problema geral de dois corpos. A segunda restrição simplifica o problema, uma vez que as órbitas circulares possuem um raio constante e velocidade angular constante. Por fim, a última restrição implica uma importante simplificação matemática, já que agora a descrição completa do problema se torna bidimensional.
+    </p>
+    <p>
+     Com essas restrições as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações 1
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     podem ser escritas da seguinte forma:
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           1
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           1
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                3
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mover accent="true">
+            <msub>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             →
+            </mo>
+           </mover>
+          </mrow>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                3
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <msub>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               →
+              </mo>
+             </mover>
+            </mfenced>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msup>
+         </mfrac>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como pode ser visto nas equações acima, no PRTC ocorre o desacoplamentos das
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (1)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (2)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (3)
+     </a>
+     pois é possível determinar o movimento das primárias e depois estudar o movimento do terceiro corpo.
+    </p>
+    <p>
+     Neste trabalho nós optamos por trabalhar com o PRTC circular que é mais simples do que o PRTC elíptico. A principal diferença entre eles está no fato de que no segundo, as órbitas das primárias em torno do centro de gravidade do sistema são elípticas. Característica que tem implicações importantes na descrição matemática do problema, já que, neste caso,
+     <math>
+      <msub>
+       <mi>
+        r
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        r
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     não são constantes e o problema fica mais complexo. Para os leitores interessados no PRTC elíptico recomendamos a leitura das referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] A.F.B.A. Prado, Trajetórias Espaciais e Manobras Assistidas por Gravidade (INPE, São José dos Campos, 2001).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] R.F. Prazeres, Métodos Clássicos e Qualitativos no Estudo do Problema dos Três Corpos. Dissertação de Mestrado, Universidade Federal do Rio de Janeiro, Rio de Janeiro (2010).
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <h2>
+     3.1. A descrição matemática do PRTC
+    </h2>
+    <p>
+     Vamos supor aqui que as órbitas circulares de
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     tenham raios
+     <math>
+      <mi>
+       b
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       a
+      </mi>
+     </math>
+     , com origem no centro de gravidade do sistema, como mostra a
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     . Nesta figura
+     <math>
+      <mrow>
+       <mi>
+        X
+       </mi>
+       <mo>
+        −
+       </mo>
+       <mi>
+        Y
+       </mi>
+      </mrow>
+     </math>
+     é o sistema de coordenadas inercial e
+     <math>
+      <mrow>
+       <mover accent="true">
+        <mi>
+         x
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        −
+       </mo>
+       <mover accent="true">
+        <mi>
+         y
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     é o sistema em que as primárias giram com velocidade angular
+     <math>
+      <mi>
+       ω
+      </mi>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Sistemas de coordenadas utilizado para descrever o PRTC.
+      <math>
+       <mrow>
+        <mi>
+         X
+        </mi>
+        <mo>
+         −
+        </mo>
+        <mi>
+         Y
+        </mi>
+       </mrow>
+      </math>
+      é o sistema inercial e
+      <math>
+       <mrow>
+        <mover accent="true">
+         <mi>
+          x
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mo>
+         −
+        </mo>
+        <mover accent="true">
+         <mi>
+          y
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+       </mrow>
+      </math>
+      o não inercial.
+      <br/>
+     </div>
+    </div>
+    <p>
+     No sistema inercial vamos definir as coordenadas das primárias por
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <msub>
+        <mi>
+         X
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        ,
+       </mo>
+       <msub>
+        <mi>
+         Y
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <msub>
+        <mi>
+         X
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        ,
+       </mo>
+       <msub>
+        <mi>
+         Y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     e de
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     por
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mi>
+        X
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        Y
+       </mi>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     . Neste sistema as equações de movimento orbital das primárias são:
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m7">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <msub>
+             <mi>
+              X
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mi>
+             b
+            </mi>
+            <mo form="prefix">
+             cos
+            </mo>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ;
+            </mo>
+           </mrow>
+          </mtd>
+          <mtd>
+           <mrow>
+            <msub>
+             <mi>
+              Y
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mi>
+             b
+            </mi>
+            <mspace width="2.0pt">
+            </mspace>
+            <mrow>
+             <mi mathvariant="normal">
+              sen
+             </mi>
+            </mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m8">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <msub>
+             <mi>
+              X
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mo>
+             −
+            </mo>
+            <mi>
+             a
+            </mi>
+            <mo form="prefix">
+             cos
+            </mo>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mtd>
+          <mtd>
+           <mrow>
+            <msub>
+             <mi>
+              Y
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mo>
+             −
+            </mo>
+            <mi>
+             a
+            </mi>
+            <mspace width="2.0pt">
+            </mspace>
+            <mrow>
+             <mi mathvariant="normal">
+              sen
+             </mi>
+            </mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Já as equações de movimento de
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     são:
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m9">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            X
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <mfenced close="]" open="[" separators="">
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              m
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              X
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mo form="prefix">
+              cos
+             </mo>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mi>
+               ω
+              </mi>
+              <mi>
+               t
+              </mi>
+              <mo>
+               )
+              </mo>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <msubsup>
+            <mi>
+             r
+            </mi>
+            <mrow>
+             <mn>
+              13
+             </mn>
+            </mrow>
+            <mn>
+             3
+            </mn>
+           </msubsup>
+          </mfrac>
+          <mo>
+           +
+          </mo>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              m
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              X
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo form="prefix">
+              cos
+             </mo>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mi>
+               ω
+              </mi>
+              <mi>
+               t
+              </mi>
+              <mo>
+               )
+              </mo>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <msubsup>
+            <mi>
+             r
+            </mi>
+            <mrow>
+             <mn>
+              23
+             </mn>
+            </mrow>
+            <mn>
+             3
+            </mn>
+           </msubsup>
+          </mfrac>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m10">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            Y
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <mfenced close="]" open="[" separators="">
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              m
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              Y
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mspace width="2.0pt">
+             </mspace>
+             <mrow>
+              <mi mathvariant="normal">
+               sen
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mi>
+               ω
+              </mi>
+              <mi>
+               t
+              </mi>
+              <mo>
+               )
+              </mo>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <msubsup>
+            <mi>
+             r
+            </mi>
+            <mrow>
+             <mn>
+              13
+             </mn>
+            </mrow>
+            <mn>
+             3
+            </mn>
+           </msubsup>
+          </mfrac>
+          <mo>
+           +
+          </mo>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              m
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              Y
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mspace width="2.0pt">
+             </mspace>
+             <mrow>
+              <mi mathvariant="normal">
+               sen
+              </mi>
+             </mrow>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mi>
+               ω
+              </mi>
+              <mi>
+               t
+              </mi>
+              <mo>
+               )
+              </mo>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <msubsup>
+            <mi>
+             r
+            </mi>
+            <mrow>
+             <mn>
+              23
+             </mn>
+            </mrow>
+            <mn>
+             3
+            </mn>
+           </msubsup>
+          </mfrac>
+         </mfenced>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde:
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m11">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <msub>
+            <mi>
+             r
+            </mi>
+            <mn>
+             13
+            </mn>
+           </msub>
+          </mtd>
+          <mtd>
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <msqrt>
+            <mrow>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                X
+               </mi>
+               <mo>
+                −
+               </mo>
+               <msub>
+                <mi>
+                 X
+                </mi>
+                <mn>
+                 1
+                </mn>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                Y
+               </mi>
+               <mo>
+                −
+               </mo>
+               <msub>
+                <mi>
+                 Y
+                </mi>
+                <mn>
+                 1
+                </mn>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </msqrt>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <msqrt>
+            <mrow>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                X
+               </mi>
+               <mo>
+                −
+               </mo>
+               <mi>
+                b
+               </mi>
+               <mo form="prefix">
+                cos
+               </mo>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mi>
+                 t
+                </mi>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                Y
+               </mi>
+               <mo>
+                −
+               </mo>
+               <mi>
+                b
+               </mi>
+               <mspace width="2.0pt">
+               </mspace>
+               <mrow>
+                <mi mathvariant="normal">
+                 sen
+                </mi>
+               </mrow>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mi>
+                 t
+                </mi>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </msqrt>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m12">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <msub>
+            <mi>
+             r
+            </mi>
+            <mn>
+             23
+            </mn>
+           </msub>
+          </mtd>
+          <mtd>
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <msqrt>
+            <mrow>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                X
+               </mi>
+               <mo>
+                −
+               </mo>
+               <msub>
+                <mi>
+                 X
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                Y
+               </mi>
+               <mo>
+                −
+               </mo>
+               <msub>
+                <mi>
+                 Y
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </msqrt>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <msqrt>
+             <mrow>
+              <msup>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 X
+                </mi>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 a
+                </mi>
+                <mo form="prefix">
+                 cos
+                </mo>
+                <mrow>
+                 <mo>
+                  (
+                 </mo>
+                 <mi>
+                  ω
+                 </mi>
+                 <mi>
+                  t
+                 </mi>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mo>
+               +
+              </mo>
+              <msup>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 Y
+                </mi>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 a
+                </mi>
+                <mspace width="2.0pt">
+                </mspace>
+                <mrow>
+                 <mi mathvariant="normal">
+                  sen
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mo>
+                  (
+                 </mo>
+                 <mi>
+                  ω
+                 </mi>
+                 <mi>
+                  t
+                 </mi>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mrow>
+            </msqrt>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Estas são as equações de movimento de
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     no sistema fixo de referência. Vamos agora transportá-las para o sistema de referência não inercial (que gira junto com
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     ). Isso nos dá a vantagem da eliminação explícita do tempo, já que no referencial girante as posições de
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     permanecem fixas.
+    </p>
+    <p>
+     Para fazer isso vamos partir das equações de rotação de
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     entre os sistema de referência,
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m13">
+        <mrow>
+         <mi>
+          X
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo form="prefix">
+          cos
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           ω
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          −
+         </mo>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mspace width="2.0pt">
+         </mspace>
+         <mrow>
+          <mi mathvariant="normal">
+           sen
+          </mi>
+         </mrow>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           ω
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m14">
+        <mrow>
+         <mi>
+          Y
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mspace width="2.0pt">
+         </mspace>
+         <mrow>
+          <mi mathvariant="normal">
+           sen
+          </mi>
+         </mrow>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           ω
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo form="prefix">
+          cos
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           ω
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e escrevê-las da seguinte forma:
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m15">
+        <mrow>
+         <mi>
+          Z
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mi>
+          z
+         </mi>
+         <msup>
+          <mi>
+           e
+          </mi>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mi>
+            ω
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde
+     <math>
+      <mi>
+       Z
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       z
+      </mi>
+     </math>
+     indicam a posição do corpo
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     nos dois sistemas de referência e são definidos assim:
+     <math>
+      <mrow>
+       <mi>
+        z
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mover accent="true">
+        <mi>
+         x
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        +
+       </mo>
+       <mi>
+        i
+       </mi>
+       <mover accent="true">
+        <mi>
+         y
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        Z
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        X
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        i
+       </mi>
+       <mi>
+        Y
+       </mi>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     A partir dessas definições temos que a segunda derivada de
+     <math>
+      <mi>
+       Z
+      </mi>
+     </math>
+     pode ser escrita da seguinte forma:
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m16">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mfrac>
+            <mrow>
+             <msup>
+              <mi>
+               d
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mi>
+              Z
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msup>
+              <mi>
+               t
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </mfrac>
+          </mtd>
+          <mtd>
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <mfenced close="" open="[" separators="">
+            <mfenced close=")" open="(" separators="">
+             <mfrac>
+              <mrow>
+               <msup>
+                <mi>
+                 d
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mover accent="true">
+                <mi>
+                 x
+                </mi>
+                <mo>
+                 ¯
+                </mo>
+               </mover>
+              </mrow>
+              <mrow>
+               <mi>
+                d
+               </mi>
+               <msup>
+                <mi>
+                 t
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+             </mfrac>
+             <mo>
+              −
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              ω
+             </mi>
+             <mfrac>
+              <mrow>
+               <mi>
+                d
+               </mi>
+               <mover accent="true">
+                <mi>
+                 y
+                </mi>
+                <mo>
+                 ¯
+                </mo>
+               </mover>
+              </mrow>
+              <mrow>
+               <mi>
+                d
+               </mi>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <mi>
+               x
+              </mi>
+              <mo>
+               ¯
+              </mo>
+             </mover>
+             <msup>
+              <mi>
+               ω
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mfenced>
+           </mfenced>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+           <mo>
+            +
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mfenced close="]" open="" separators="">
+             <mi>
+              i
+             </mi>
+             <mfenced close=")" open="(" separators="">
+              <mfrac>
+               <mrow>
+                <msup>
+                 <mi>
+                  d
+                 </mi>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+                <mover accent="true">
+                 <mi>
+                  y
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+               </mrow>
+               <mrow>
+                <mi>
+                 d
+                </mi>
+                <msup>
+                 <mi>
+                  t
+                 </mi>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+               </mrow>
+              </mfrac>
+              <mo>
+               +
+              </mo>
+              <mn>
+               2
+              </mn>
+              <mi>
+               ω
+              </mi>
+              <mfrac>
+               <mrow>
+                <mi>
+                 d
+                </mi>
+                <mover accent="true">
+                 <mi>
+                  x
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+               </mrow>
+               <mrow>
+                <mi>
+                 d
+                </mi>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+              </mfrac>
+              <mo>
+               −
+              </mo>
+              <mover accent="true">
+               <mi>
+                y
+               </mi>
+               <mo>
+                ¯
+               </mo>
+              </mover>
+              <msup>
+               <mi>
+                ω
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mfenced>
+            </mfenced>
+            <msup>
+             <mi>
+              e
+             </mi>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ω
+              </mi>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </msup>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Agora vamos multiplicar a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação 10
+     </a>
+     por
+     <math>
+      <mi>
+       i
+      </mi>
+     </math>
+     e somar com a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação 9
+     </a>
+     . Fazendo isso obtemos a seguinte expressão:
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m17">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mfrac>
+             <mrow>
+              <msup>
+               <mi>
+                d
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                X
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mi>
+                Y
+               </mi>
+               <mi>
+                i
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+             <mrow>
+              <mi>
+               d
+              </mi>
+              <msup>
+               <mi>
+                t
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mrow>
+            </mfrac>
+            <mo>
+             =
+            </mo>
+            <mo>
+             −
+            </mo>
+            <mi>
+             G
+            </mi>
+            <mfenced close="" open="[" separators="">
+             <msub>
+              <mi>
+               m
+              </mi>
+              <mn>
+               1
+              </mn>
+             </msub>
+             <mfenced close=")" open="(" separators="">
+              <mfrac>
+               <mrow>
+                <mi>
+                 X
+                </mi>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 i
+                </mi>
+                <mi>
+                 Y
+                </mi>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 b
+                </mi>
+                <mo>
+                 (
+                </mo>
+                <mo form="prefix">
+                 cos
+                </mo>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mi>
+                 t
+                </mi>
+                <mo>
+                 )
+                </mo>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 i
+                </mi>
+                <mspace width="2.0pt">
+                </mspace>
+                <mrow>
+                 <mi mathvariant="normal">
+                  sen
+                 </mi>
+                </mrow>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mi>
+                 t
+                </mi>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mrow>
+                 <mn>
+                  13
+                 </mn>
+                </mrow>
+                <mn>
+                 3
+                </mn>
+               </msubsup>
+              </mfrac>
+             </mfenced>
+            </mfenced>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mfenced close="]" open="" separators="">
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mi>
+               m
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msub>
+             <mfenced close=")" open="(" separators="">
+              <mfrac>
+               <mrow>
+                <mi>
+                 X
+                </mi>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 i
+                </mi>
+                <mi>
+                 Y
+                </mi>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 a
+                </mi>
+                <mo>
+                 (
+                </mo>
+                <mo form="prefix">
+                 cos
+                </mo>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mi>
+                 t
+                </mi>
+                <mo>
+                 )
+                </mo>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 i
+                </mi>
+                <mspace width="2.0pt">
+                </mspace>
+                <mrow>
+                 <mi mathvariant="normal">
+                  sen
+                 </mi>
+                </mrow>
+                <mo>
+                 (
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mi>
+                 t
+                </mi>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mrow>
+                 <mn>
+                  23
+                 </mn>
+                </mrow>
+                <mn>
+                 3
+                </mn>
+               </msubsup>
+              </mfrac>
+             </mfenced>
+            </mfenced>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A partir da definição de
+     <math>
+      <mi>
+       Z
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       z
+      </mi>
+     </math>
+     e sabendo que
+     <math>
+      <mrow>
+       <msup>
+        <mi>
+         e
+        </mi>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mi>
+          θ
+         </mi>
+        </mrow>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <mo form="prefix">
+        cos
+       </mo>
+       <mi>
+        θ
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        i
+       </mi>
+       <mspace width="2.0pt">
+       </mspace>
+       <mrow>
+        <mi mathvariant="normal">
+         sen
+        </mi>
+       </mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+     </math>
+     podemos reescrever a expressão acima da seguinte forma:
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block" id="m18">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mfrac>
+             <mrow>
+              <msup>
+               <mi>
+                d
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mi>
+               Z
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               d
+              </mi>
+              <msup>
+               <mi>
+                t
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mrow>
+            </mfrac>
+            <mo>
+             =
+            </mo>
+            <mo>
+             −
+            </mo>
+            <mi>
+             G
+            </mi>
+            <mfenced close="" open="[" separators="">
+             <mfenced close=")" open="(" separators="">
+              <msub>
+               <mi>
+                m
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mfrac>
+               <mrow>
+                <mover accent="true">
+                 <mi>
+                  x
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 b
+                </mi>
+               </mrow>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mrow>
+                 <mn>
+                  13
+                 </mn>
+                </mrow>
+                <mn>
+                 3
+                </mn>
+               </msubsup>
+              </mfrac>
+              <mo>
+               +
+              </mo>
+              <msub>
+               <mi>
+                m
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mfrac>
+               <mrow>
+                <mover accent="true">
+                 <mi>
+                  x
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 a
+                </mi>
+               </mrow>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mrow>
+                 <mn>
+                  23
+                 </mn>
+                </mrow>
+                <mn>
+                 3
+                </mn>
+               </msubsup>
+              </mfrac>
+             </mfenced>
+            </mfenced>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mfenced close="]" open="" separators="">
+             <mo>
+              +
+             </mo>
+             <mi>
+              i
+             </mi>
+             <mfenced close=")" open="(" separators="">
+              <msub>
+               <mi>
+                m
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mfrac>
+               <mover accent="true">
+                <mi>
+                 y
+                </mi>
+                <mo>
+                 ¯
+                </mo>
+               </mover>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mrow>
+                 <mn>
+                  13
+                 </mn>
+                </mrow>
+                <mn>
+                 3
+                </mn>
+               </msubsup>
+              </mfrac>
+              <mo>
+               +
+              </mo>
+              <msub>
+               <mi>
+                m
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mfrac>
+               <mover accent="true">
+                <mi>
+                 y
+                </mi>
+                <mo>
+                 ¯
+                </mo>
+               </mover>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mrow>
+                 <mn>
+                  23
+                 </mn>
+                </mrow>
+                <mn>
+                 3
+                </mn>
+               </msubsup>
+              </mfrac>
+             </mfenced>
+            </mfenced>
+            <msup>
+             <mi>
+              e
+             </mi>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ω
+              </mi>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </msup>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Ao compararmos as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações 16
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      18
+     </a>
+     concluímos que:
+    </p>
+    <div class="row formula" id="eeq19">
+     <a name="eq19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block" id="m19">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           1
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mi>
+            b
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             13
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mfrac>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            +
+           </mo>
+           <mi>
+            a
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             23
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          ω
+         </mi>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mover accent="true">
+            <mi>
+             y
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <msup>
+          <mi>
+           ω
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq20">
+     <a name="eq20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <math display="block" id="m20">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <mi>
+             y
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>
+             m
+            </mi>
+            <mn>
+             1
+            </mn>
+           </msub>
+           <mover accent="true">
+            <mi>
+             y
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             13
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          G
+         </mi>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>
+             m
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msub>
+           <mover accent="true">
+            <mi>
+             y
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             23
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          ω
+         </mi>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <msup>
+          <mi>
+           ω
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     As
+     <a class="open-asset-modal" data-target="#ModalSchemeeq19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (19)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq20" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (20)
+     </a>
+     descrevem o movimento de
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     no referencial não inercial. Note leitor que aparecem dois termos nas equações de movimento que não existem no referencial inercial (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. 9
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      10
+     </a>
+     ). Os dois primeiros são conhecidos, trata-se das forças gravitacionais exercidas pelas primárias, já o terceiro termo é a força centrífuga e o quarto a força de Coriolis.
+    </p>
+    <p>
+     Para simplificar os parâmetros do problema definimos o seguinte sistema de unidades:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       A unidade de massa passa a ser a soma das massas das primárias
+       <math>
+        <mrow>
+         <mtext mathvariant="italic">
+          m
+         </mtext>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           1
+          </mn>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mtext mathvariant="italic">
+           m
+          </mtext>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </math>
+       . Neste caso optamos por trabalhar com a massa reduzida do sistema
+       <math>
+        <mrow>
+         <mi>
+          μ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <msub>
+           <mi>
+            m
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msub>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <msub>
+            <mi>
+             m
+            </mi>
+            <mn>
+             1
+            </mn>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             m
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msub>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+       . Assim
+       <math>
+        <mrow>
+         <msub>
+          <mi>
+           m
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          μ
+         </mi>
+        </mrow>
+       </math>
+       e
+       <math>
+        <mrow>
+         <msub>
+          <mi>
+           m
+          </mi>
+          <mn>
+           1
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo>
+          −
+         </mo>
+         <mi>
+          μ
+         </mi>
+        </mrow>
+       </math>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       A unidade de comprimento passa a ser a distância entre as primárias,
+       <math>
+        <mrow>
+         <mi>
+          a
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          b
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </math>
+       . Neste caso as coordenadas das primárias são:
+       <math>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+       para
+       <math>
+        <msub>
+         <mi>
+          m
+         </mi>
+         <mn>
+          1
+         </mn>
+        </msub>
+       </math>
+       e
+       <math>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+       para
+       <math>
+        <msub>
+         <mi>
+          m
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msub>
+       </math>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       A velocidade angular passa a ser
+       <math>
+        <mrow>
+         <mi>
+          ω
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </math>
+       . Neste caso a unidade tempo passa a ser
+       <math>
+        <mfrac>
+         <mn>
+          1
+         </mn>
+         <mi>
+          ω
+         </mi>
+        </mfrac>
+       </math>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       A constante gravitacional passa a ser
+       <math>
+        <mrow>
+         <mi>
+          G
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </math>
+       .
+      </p>
+     </li>
+    </ol>
+    <p>
+     Com esses novos parâmetros as equações de movimento de
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     passam a ser:
+    </p>
+    <div class="row formula" id="eeq21">
+     <a name="eq21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <math display="block" id="m21">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           −
+          </mo>
+          <mi>
+           μ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mi>
+            μ
+           </mi>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             13
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mfrac>
+          <mrow>
+           <mi>
+            x
+           </mi>
+           <mo>
+            +
+           </mo>
+           <mn>
+            1
+           </mn>
+           <mo>
+            −
+           </mo>
+           <mi>
+            μ
+           </mi>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             23
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          +
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mover accent="true">
+            <mi>
+             y
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq22">
+     <a name="eq22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <math display="block" id="m22">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mi>
+             d
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mover accent="true">
+            <mi>
+             y
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           −
+          </mo>
+          <mi>
+           μ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mfrac>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mfrac>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          −
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+    </p>
+    <div class="row formula" id="eeq23">
+     <a name="eq23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <math display="block" id="m23">
+        <mrow>
+         <msub>
+          <mi>
+           r
+          </mi>
+          <mn>
+           13
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <msup>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mover accent="true">
+              <mi>
+               x
+              </mi>
+              <mo>
+               ¯
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mi>
+              μ
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mover accent="true">
+             <mi>
+              y
+             </mi>
+             <mo>
+              ¯
+             </mo>
+            </mover>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq24">
+     <a name="eq24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <math display="block" id="m24">
+        <mrow>
+         <msub>
+          <mi>
+           r
+          </mi>
+          <mn>
+           23
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <msup>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mover accent="true">
+              <mi>
+               x
+              </mi>
+              <mo>
+               ¯
+              </mo>
+             </mover>
+             <mo>
+              +
+             </mo>
+             <mn>
+              1
+             </mn>
+             <mo>
+              −
+             </mo>
+             <mi>
+              μ
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mover accent="true">
+             <mi>
+              y
+             </mi>
+             <mo>
+              ¯
+             </mo>
+            </mover>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como pode ser visto as equações de movimento de
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     são equações diferencias de segunda ordem. Para resolvê-las numericamente vamos reduzi-las para equações de primeira ordem. Nesse caso, chamaremos
+     <math>
+      <mrow>
+       <mfrac>
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+        </mrow>
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+        </mrow>
+       </mfrac>
+       <mo>
+        =
+       </mo>
+       <mi>
+        u
+       </mi>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mfrac>
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+        </mrow>
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+        </mrow>
+       </mfrac>
+       <mo>
+        =
+       </mo>
+       <mi>
+        v
+       </mi>
+      </mrow>
+     </math>
+     . Fazendo isso as equações de movimento de
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     passam a ser:
+    </p>
+    <div class="row formula" id="eeq25">
+     <a name="eq25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (25)
+       </span>
+       <math display="block" id="m25">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            u
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           −
+          </mo>
+          <mi>
+           μ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            −
+           </mo>
+           <mi>
+            μ
+           </mi>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            +
+           </mo>
+           <mn>
+            1
+           </mn>
+           <mo>
+            −
+           </mo>
+           <mi>
+            μ
+           </mi>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          +
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          v
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq26">
+     <a name="eq26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (26)
+       </span>
+       <math display="block" id="m26">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            v
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           −
+          </mo>
+          <mi>
+           μ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mfrac>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mfrac>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          +
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          u
+         </mi>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Neste trabalho nós utilizamos o método de Cauchy, também conhecido como método do ponto médio, para resolver numericamente essas EDOs. Uma descrição detalhada desse método pode ser encontrada nas referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] P. Hellings, Astrophysics with a PC: An Introduction to Computational Astrophysics (Willmann-Bell, Richmond, 1994).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] S.C. Chapra, Métodos Numéricos Aplicados com MATLAB para Engenheiros e Cientistas (AMGH, Porto Alegre, 2013) 3ª ed.
+       </span>
+      </span>
+     </span>
+     ]. Nele, a solução numérica das EDO's é calculada a partir de quatro condições inicias (x(0),y(0),v(0) e u(0)). Para determinar essas condições nós utilizamos o método de Rabe
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] E. Rabe, Astron. Astronomical Journal 66, 500 (1961).
+       </span>
+      </span>
+     </span>
+     . No apêndice desse artigo nós apresentamos um código, escrito em Python, para determinar essas condições iniciais e resolve r as EDO's por esse método numérico. Aqui é importante salientar que existem outros métodos, como por exemplo o Runge Kutta [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] P. Hellings, Astrophysics with a PC: An Introduction to Computational Astrophysics (Willmann-Bell, Richmond, 1994).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] S.C. Chapra, Métodos Numéricos Aplicados com MATLAB para Engenheiros e Cientistas (AMGH, Porto Alegre, 2013) 3ª ed.
+       </span>
+      </span>
+     </span>
+     ], que também produz resultados muito bons para a simulação do PRTC.
+    </p>
+    <h2>
+     3.2. Pontos de Lagrange
+    </h2>
+    <p>
+     No PRTC existem cinco pontos estacionários, comumente referidos como pontos de Lagrange,
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        O primeiro a propor a existência desses pontos foi Euler em 1776 com a indicação da existência dos três pontos colineares, L1, L2 e L3. Em 1772 Joseph Louis Lagrange previu os pontos L4 e L5 e em uma obra posterior, em 1773, ele previu a existência dos cinco pontos [15].
+       </span>
+      </span>
+     </span>
+     onde a força sobre
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     é zero. Esses pontos existem porque a força gravitacional resultante exercida pelas primárias sobre
+     <math>
+      <msub>
+       <mtext mathvariant="italic">
+        m
+       </mtext>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     , apontada na direção do centro de gravidade do sistema, é balanceada pela força centrífuga que está na mesma direção da anterior mas em sentido contrário.
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     mostra a posição dos pontos de Lagrange para o sistema formado pelas primárias Terra e Lua. Os três pontos colineares (
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     ,
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     ) são pontos instáveis para qualquer valor de
+     <math>
+      <mi>
+       μ
+      </mi>
+     </math>
+     e os outros dois (
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        5
+       </mn>
+      </msub>
+     </math>
+     ) são estáveis quando
+     <math>
+      <mi>
+       μ
+      </mi>
+     </math>
+     &lt; ≈ 0.0385208965
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [16]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [16] F.J.T. Salazar, C.F. Melo, E.E.N. Macau e O.C. Winter. Celestial Mechanics and Dynamical Astronomy 114, 201 (2012).
+       </span>
+      </span>
+     </span>
+     . Os pontos colineares são instáveis porque se um corpo estiver sobre
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     ,
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     ou
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     e sofrer a ação de uma força externa ele sairá da posição de equlíbrio e não retornará. Já em
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     ou
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        5
+       </mn>
+      </msub>
+     </math>
+     o corpo retorna à sua posição de equilíbrio ou librará ao seu redor em uma órbita fechada, como a que veremos na próxima sessão.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Ilustração dos Pontos de Lagrange do sistema Terra-Lua.
+      <br/>
+     </div>
+    </div>
+    <p>
+     As coordenadas dos pontos de Lagrange podem ser obtidas a partir das equações de movimento de
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq21" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      21
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq22" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      22
+     </a>
+     , quando sua aceleração e velocidade são zero. Nesta situação temos:
+    </p>
+    <div class="row formula" id="eeq27">
+     <a name="eq27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (27)
+       </span>
+       <math display="block" id="m27">
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           −
+          </mo>
+          <mi>
+           μ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mfrac>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            +
+           </mo>
+           <mi>
+            μ
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             13
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mfrac>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            +
+           </mo>
+           <mn>
+            1
+           </mn>
+           <mo>
+            −
+           </mo>
+           <mi>
+            μ
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             23
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq28">
+     <a name="eq28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (28)
+       </span>
+       <math display="block" id="m28">
+        <mrow>
+         <mo>
+          −
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           −
+          </mo>
+          <mi>
+           μ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mfrac>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             13
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          −
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mfrac>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ¯
+           </mo>
+          </mover>
+          <msubsup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             23
+            </mn>
+           </mrow>
+           <mn>
+            3
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mi>
+          y
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Quando
+     <math>
+      <mrow>
+       <mover accent="true">
+        <mi>
+         y
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     as soluções de equilíbrio da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações 27
+     </a>
+     são as coordenadas de
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     ,
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     . Métodos para determinar as coordenadas desses pontos podem ser encontrados nas referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] E.C.F. Fortes e F.A.M. Kolland, Rev. Bras. Ens. Fis. 40, e3306 (2018).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] J. Worthington, A Study of the Planar Circular Restricted Three Body Problem and the Vanishing Twist. Tese de Doutorado, University of Sydney, 2012.
+       </span>
+      </span>
+     </span>
+     ]. No apêndice apresentamos um código para calcular essas coordenadas. Como
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        5
+       </mn>
+      </msub>
+     </math>
+     formam um triângulo equilátero com as primárias, temos que
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         r
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi>
+         r
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     . Por isso as coordenadas de
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        5
+       </mn>
+      </msub>
+     </math>
+     são:
+    </p>
+    <div class="row formula" id="eeq29">
+     <a name="eq29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (29)
+       </span>
+       <math display="block" id="m29">
+        <mrow>
+         <msub>
+          <mi>
+           L
+          </mi>
+          <mn>
+           4
+          </mn>
+         </msub>
+         <mo>
+          :
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mo>
+          −
+         </mo>
+         <mn>
+          0.5
+         </mn>
+         <mo>
+          ;
+         </mo>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <mspace width="2.0pt">
+         </mspace>
+         <mrow>
+          <mi mathvariant="normal">
+           sen
+          </mi>
+         </mrow>
+         <msup>
+          <mn>
+           60
+          </mn>
+          <mo>
+           ∘
+          </mo>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq30">
+     <a name="eq30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (30)
+       </span>
+       <math display="block" id="m30">
+        <mrow>
+         <msub>
+          <mi>
+           L
+          </mi>
+          <mn>
+           5
+          </mn>
+         </msub>
+         <mo>
+          :
+         </mo>
+         <mover accent="true">
+          <mi>
+           x
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <mi>
+          μ
+         </mi>
+         <mo>
+          −
+         </mo>
+         <mn>
+          0.5
+         </mn>
+         <mo>
+          ;
+         </mo>
+         <mover accent="true">
+          <mi>
+           y
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mspace width="2.0pt">
+         </mspace>
+         <mrow>
+          <mi mathvariant="normal">
+           sen
+          </mi>
+         </mrow>
+         <msup>
+          <mn>
+           60
+          </mn>
+          <mo>
+           ∘
+          </mo>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como exemplos da relevância de se estudar os pontos de Lagrange podemos citar o telescópio SOHO
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [19]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [19] https://sohowww.nascom.nasa.gov/home.html, acessado em 18/05/2018.
+       </span>
+       <br/>
+       <a href="https://sohowww.nascom.nasa.gov/home.html" target="_blank">
+        https://sohowww.nascom.nasa.gov/home.htm...
+       </a>
+      </span>
+     </span>
+     , que faz observações do Sol estacionado em
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     , a investigação da face oculta da lua quando um satélite é estacionado em
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] A.F.B.A. Prado, Trajetórias Espaciais e Manobras Assistidas por Gravidade (INPE, São José dos Campos, 2001).
+       </span>
+      </span>
+     </span>
+     , o telescópio James Webb(JWST), no L2 do sistema Sol-Terra, que substituirá o telescópio espacial Hubble, e a utilização de
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        5
+       </mn>
+      </msub>
+     </math>
+     do sistema Terra-Lua para abrigar estações espaciais
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [17]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [17] E.C.F. Fortes e F.A.M. Kolland, Rev. Bras. Ens. Fis. 40, e3306 (2018).
+       </span>
+      </span>
+     </span>
+     . A vantagem de colocar um satélite em um dos pontos de Lagrange é que ele permanece estacionário em relação ao referencial não inercial das primárias. Por exemplo, o SOHO, em
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     , está preso em uma órbita na linha Sol-Terra e direcionado para o Sol o tempo todo. O mesmo acontece quando um satélite é estacionado em
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     do sistema Terra-Lua. Nesse caso é possível observar a face oculta da Lua o tempo todo, ou, como no caso do JWST, observar o universo sem se preocupar com a radiação do Sol e da Terra. Mais exemplos de objetos naturais e artificiais nos pontos de Lagrange podem ser vistos na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 1
+     </a>
+     da referência
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [17]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [17] E.C.F. Fortes e F.A.M. Kolland, Rev. Bras. Ens. Fis. 40, e3306 (2018).
+       </span>
+      </span>
+     </span>
+     . Além dessas áreas há também o interesse na determinação e análise da estabilidade desses pontos quando são estudados os objetos menores do sistema solar, planetas anões e os asteroides [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] E. Rabe, Astron. Astronomical Journal 66, 500 (1961).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] J. Worthington, A Study of the Planar Circular Restricted Three Body Problem and the Vanishing Twist. Tese de Doutorado, University of Sydney, 2012.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] S. Diniega, K.M. Sayanagi, J. Balcerski, B. Carande, R.A.D. Silva, A.A. Fraeman, S.D. Guzewich, J. Hudson, A.L. Nahm, S.P. Mcintyre et al. Planetary and Space Science 76, 68 (2013).
+       </span>
+      </span>
+     </span>
+     ], e também o estudo da troca de material pelo ponto
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     em sistemas estelares binários
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [20]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [20] C. Hellier, Cataclysmic Variables Stars: How and why they vary (Spring, New York, 2001).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Sistema de unidades do PRTC
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Aplicação 1: Determinação da órbita de 2010 TK7
+    </h1>
+    <p>
+     Os troianos são asteroides que possuem órbitas que libram em torno do ponto
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     ou
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        5
+       </mn>
+      </msub>
+     </math>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ). Eles foram previstos por Lagrange em 1772 mas o primeiro só foi descoberto em 1906 por Max Wolf
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [21]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [21] S. Diniega, K.M. Sayanagi, J. Balcerski, B. Carande, R.A.D. Silva, A.A. Fraeman, S.D. Guzewich, J. Hudson, A.L. Nahm, S.P. Mcintyre et al. Planetary and Space Science 76, 68 (2013).
+       </span>
+      </span>
+     </span>
+     . Trata-se do asteroide 588 Achilles. Atualmente são conhecidos diversos asteroides troianos, por exemplo os associados a Marte, Júpiter e Netuno [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] http://www.skyandtelescope.com/astronomy-news/mars-trojans-possible-source-found/, acessado em 18/05/2018.
+       </span>
+       <br/>
+       <a href="http://www.skyandtelescope.com/astronomy-news/mars-trojans-possible-source-found/" target="_blank">
+        http://www.skyandtelescope.com/astronomy...
+       </a>
+      </span>
+     </span>
+     -
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] https://home.dtm.ciw.edu/users/sheppard/L5trojan/, acessado em 18/05/2018.
+       </span>
+       <br/>
+       <a href="https://home.dtm.ciw.edu/users/sheppard/L5trojan/" target="_blank">
+        https://home.dtm.ciw.edu/users/sheppard/...
+       </a>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] https://www.nasa.gov/content/goddard/lucy-the-first-mission-to-jupiter-s-trojans, acessado em 18/05/2018.
+       </span>
+       <br/>
+       <a href="https://www.nasa.gov/content/goddard/lucy-the-first-mission-to-jupiter-s-trojans" target="_blank">
+        https://www.nasa.gov/content/goddard/luc...
+       </a>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Composição das órbitas dos asteroides troianos do sistema Sol-Júpiter em
+      <math>
+       <msub>
+        <mi>
+         L
+        </mi>
+        <mn>
+         4
+        </mn>
+       </msub>
+      </math>
+      e
+      <math>
+       <msub>
+        <mi>
+         L
+        </mi>
+        <mn>
+         5
+        </mn>
+       </msub>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A existência de troianos nesses planetas levantou a questão de se esses objetos não deveriam existir também no sistema Sol-Terra. Weissman e Wetherill (1974)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [25]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [25] P.R. Weissman e G.W. Wetherill, Periodic Astronomical Journal 79, 404 (1974).
+       </span>
+      </span>
+     </span>
+     fizeram um estudo teórico e simularam a existência desses objetos para esse sistema. Entretanto, só em 2010 após a análise de observações no infravermelho feitas pelo satélite WISE é que foi descoberto o primeiro asteroide troiano do sistema Sol-Terra. Trata-se do objeto denominado 2010 TK7 em uma órbita confinada em torno de
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     (órbita do tipo girino) e com um período de 365.3947 dias
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [26]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [26] M. Connors, P. Wiegert e C. Veillet, Nature 475, 481 (2011).
+       </span>
+      </span>
+     </span>
+     . Ou seja, uma ressonância de movimento médio do tipo 1:1 com a Terra.
+    </p>
+    <p>
+     Para traçar a órbita de 2010 TK7 a partir do PRTC nós utilizamos o sistema de unidades definido na sessão 3.1. Na
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela (2)
+     </a>
+     apresentamos os parâmetros determinados a partir das massas das primárias, Sol (de
+     <math>
+      <mrow>
+       <mn>
+        1.988
+       </mn>
+       <mo>
+        ×
+       </mo>
+       <msup>
+        <mn>
+         10
+        </mn>
+        <mn>
+         30
+        </mn>
+       </msup>
+       <mi>
+        k
+       </mi>
+       <mi>
+        g
+       </mi>
+      </mrow>
+     </math>
+     ) e Terra (
+     <math>
+      <mrow>
+       <mn>
+        5.973332
+       </mn>
+       <mo>
+        ×
+       </mo>
+       <msup>
+        <mn>
+         10
+        </mn>
+        <mn>
+         24
+        </mn>
+       </msup>
+       <mi>
+        k
+       </mi>
+       <mi>
+        g
+       </mi>
+      </mrow>
+     </math>
+     ), o período orbital do sistema (365.2425 dias) e as condições inicias de 2010 TK7, determinadas pelo o método de Rabe e utilizadas na simulação.
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Parâmetros orbitais do PRTC do sistema Sol-Terra e condições inicias de 2010 TK7 utilizadas para simular a sua órbita
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     é a órbita de 2010 TK7 traçada a partir das
+     <a class="open-asset-modal" data-target="#ModalSchemeeq27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações 27
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      28
+     </a>
+     com os parâmetros da
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 1
+     </a>
+     . Trata-se de uma órbita fechada ao redor do ponto
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     , com período de 395 anos, e que vai desde próximo da Terra até próximo do ponto
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     . No detalhe é possível observar a libração alongada superposta aos loops de curto período, os laços epicíclicos. Comportamento previsto de acontecer na órbita de asteroides troianos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [27]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [27] R.G. Stacey e M. Connors, Planetary and Space Science 56, 358 (2008).
+       </span>
+      </span>
+     </span>
+     e foi que foi observado em 2010 TK7 por Conor e colaboradores
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [26]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [26] M. Connors, P. Wiegert e C. Veillet, Nature 475, 481 (2011).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Órbita tipo girino do asteroide troiano 2010 TK7. Como a unidade de tempo do sistema Sol-Terra é 0,16 anos, com o
+      <math>
+       <mrow>
+        <mi>
+         Δ
+        </mi>
+        <mi>
+         t
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         05
+        </mn>
+       </mrow>
+      </math>
+      foram necessárias 49375 interações para reproduzir uma libração completa, 395 anos. No canto superior direito a ampliação de um pedaço da órbita mostra os laços epicíclicos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Quando comparamos essa simulação com a dos descobridores do asteroide notamos que, apesar de termos utilizado a aproximação do PRTC e um método numérico modesto para simular a órbita de 2010 TK7, nosso resultado se assemelha muito com o daquele artigo, que utilizou um método numérico muito mais sofisticado, o integrador simplético variável
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [28]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [28] E. C. Nogueira, Revista TECCEN 2, 21 (2009).
+       </span>
+      </span>
+     </span>
+     . Esse tipo de integrador é uma ferramenta computacional muito poderosa para modelar sistemas dinâmicos por um longo intervalo de tempo, fornecendo informações dinâmicas globais, tais como, pontos de equilíbrio e regiões de instabilidade, que o nosso modelo não é capaz de reproduzir.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Aplicação II: Libração de Plutão
+    </h1>
+    <p>
+     Plutão é um planeta anão que possui uma configuração orbital diferente dos planetas do sistema solar. Sua excentricidade orbital (
+     <math>
+      <mrow>
+       <mi>
+        e
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        2488
+       </mn>
+      </mrow>
+     </math>
+     ) e sua inclinação orbital em relação ao plano da eclíptica (
+     <math>
+      <mrow>
+       <mi>
+        i
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        17
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mn>
+         1417
+        </mn>
+        <mo>
+         ∘
+        </mo>
+       </msup>
+      </mrow>
+     </math>
+     ) são muito superiores a dos planetas, que possuem órbitas quase circulares ao redor do Sol e próximas do plano da eclíptica (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     ). Devido a essa excentricidade, no periélio Plutão fica mais próximo do Sol do que Netuno, no entanto, o valor elevado de
+     <math>
+      <mi>
+       i
+      </mi>
+     </math>
+     faz com ele passe bem acima da órbita de Netuno, cerca de 8 UA.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Visão superior das órbitas dos planetas e de Plutão.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Mesmo assim é de se imaginar que Plutão possa em algum momento colidir com Netuno, uma vez que a perturbação gravitacional desse planeta poderia alterar aspectos da órbita de Plutão ao longo de milhões de anos, tornando possível uma colisão. Entretanto, isso não acontece porque existe uma ressonância orbital
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Ressonância orbital é um fenômeno que ocorre quando dois ou mais corpos, em órbita, exercem influência gravitacional mútua. Isso faz com que o movimento médio dos corpos, por exemplo, os de Netuno e Plutão, fiquem relacionados pela razão dos seus períodos orbitais. No caso desses planetas, 3:2, porque a cada três órbitas que Netuno (PN=165 anos) faz ao redor do Sol, Plutão (PP=248 anos) faz duas.
+       </span>
+      </span>
+     </span>
+     3:2 entre as órbitas desses planetas (
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         P
+        </mi>
+        <mi>
+         N
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        165
+       </mn>
+      </mrow>
+     </math>
+     anos e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         P
+        </mi>
+        <mi>
+         P
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        248
+       </mn>
+      </mrow>
+     </math>
+     anos). Isto é, a cada três órbitas que Netuno faz ao redor do Sol, Plutão faz duas. Em 1965 Cohen e Hubbard
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [29]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [29] C.J. Cohen e E.C. Hubbard, Astronomical Journal 70, 10 (1965).
+       </span>
+      </span>
+     </span>
+     propuseram que essa ressonância assegura que a distância mínima entre Plutão e Netuno, no periélio, sempre será superior a 18 UA, eliminando assim, por milhões de anos, a possibilidade a colisão entre eles. Essa previsão foi confirmada em 1971 por Williams e Benson
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [30]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [30] J.G. Williams e G.S. Benson, Astronomical Journal 76, 167 (1971).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Esses autores mostraram que devido a ressonância orbital 3:2 o periélio de Plutão libra com uma amplitude de
+     <math>
+      <msup>
+       <mn>
+        76
+       </mn>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     em um período de cerca de
+     <math>
+      <mrow>
+       <mn>
+        20.000
+       </mn>
+      </mrow>
+     </math>
+     anos. Essa libração ocorre porque há uma troca de momento angular entre Netuno e Plutão, fazendo esse planeta anão oscilar entre uma órbita mais alta, quando ganha momento angular orbital e mais baixa quando perde.
+    </p>
+    <p>
+     Nós utilizamos o PRTC para simular essa libração e o comportamento da órbita de Plutão, relativa ao sistema de referência Sol-Netuno (primárias). Podemos utilizar o PRTC porque a massa de Plutão é desprezível em relação as massas das primárias. Neste caso nós utilizamos o sistema de unidades definido na sessão 3.1 para simular a órbita. Na
+     <a class="open-asset-modal" data-target="#ModalTablet3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela (3)
+     </a>
+     apresentamos os parâmetros determinados a partir das massas das primárias, Sol (
+     <math>
+      <mrow>
+       <mn>
+        1.988
+       </mn>
+       <mo>
+        ×
+       </mo>
+       <msup>
+        <mn>
+         10
+        </mn>
+        <mn>
+         30
+        </mn>
+       </msup>
+       <mi>
+        k
+       </mi>
+       <mi>
+        g
+       </mi>
+      </mrow>
+     </math>
+     ) e Netuno (
+     <math>
+      <mrow>
+       <mn>
+        1.024
+       </mn>
+       <mo>
+        ×
+       </mo>
+       <msup>
+        <mn>
+         10
+        </mn>
+        <mn>
+         26
+        </mn>
+       </msup>
+       <mi>
+        k
+       </mi>
+       <mi>
+        g
+       </mi>
+      </mrow>
+     </math>
+     ), e o período orbital do sistema (165 anos). Além disso, as condições inicias de Plutão que foram utilizadas no método de Cauchy.
+    </p>
+    <div class="row table" id="t3">
+     <a name="t3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3
+      </strong>
+      <br/>
+      Parâmetros orbitais do PRTC do sistema Sol-Netuno e condições inicias de Plutão utilizadas para simular a sua órbita.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     mostra duas revoluções de Plutão, 496 anos, ao redor do sistema Sol - Netuno. Como pode ser visto, no periélio Plutão está a uma distância angular mínima de
+     <math>
+      <msup>
+       <mn>
+        52
+       </mn>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     e máxima de
+     <math>
+      <msup>
+       <mn>
+        128
+       </mn>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     em relação a Netuno, o que corresponde a uma distância superior a 18 UA.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Duas órbitas completas de Plutão no sistema de referência Sol-Netuno. As marcações mostram a distância angular mínima e a máxima entre Plutão e Netuno quando esse planeta anão está no periélio.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     é a figura anterior após uma libração completa de Plutão, cerca de 20.297 anos. Como se trata de um movimento periódico, pode-se afirmar que no periélio a distância entre Plutão e Netuno permanece superior a 18 AU, como previsto por Cohen e Hubbard
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [29]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [29] C.J. Cohen e E.C. Hubbard, Astronomical Journal 70, 10 (1965).
+       </span>
+      </span>
+     </span>
+     . A distância mínima entre Plutão e Netuno, cerca de 17 UA, ocorre quando esse planeta anão está no afélio, aproximadamente a
+     <math>
+      <mrow>
+       <mn>
+        49.000
+       </mn>
+      </mrow>
+     </math>
+     UA do Sol. Além disso, podemos observar que a menor distância entre Plutão e o Sol ocorre quando este planeta anão está a
+     <math>
+      <msup>
+       <mn>
+        90
+       </mn>
+       <mo>
+        ∘
+       </mo>
+      </msup>
+     </math>
+     de Netuno. Na figura é possível observar que esse menor periélio ocorre quando Plutão passa a cerca de 29.5 UA do Sol, penetrando assim na órbita de Netuno. Por fim, ao observarmos a órbita de Urano relativa ao sistema Sol-Netuno vemos que a distância mínima entre Plutão e esse planeta é de 11 UA, muito menor do que a distância em relação a Netuno.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Uma libração completa da órbita de Plutão no sistema de referência Sol-Netuno e a órbita de Urano nesse sistema de referência. Como a unidade de tempo do sistema Sol-Netuno é 26,36 anos, com o
+      <math>
+       <mrow>
+        <mi>
+         Δ
+        </mi>
+        <mi>
+         t
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         05
+        </mn>
+       </mrow>
+      </math>
+      foram necessárias 15400 interações para reproduzir uma libração completa, 20.297 anos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os resultados obtidos na simulação da órbita de Plutão com o PRTC estão de acordo com os da literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [29] C.J. Cohen e E.C. Hubbard, Astronomical Journal 70, 10 (1965).
+       </span>
+      </span>
+     </span>
+     -
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [30] J.G. Williams e G.S. Benson, Astronomical Journal 76, 167 (1971).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [31] Y. Kozai, Astronomical Journal 67, 591 (1962).
+       </span>
+      </span>
+     </span>
+     ] e nos mostra que é possível estimar diversas valores relevantes a respeito desse planeta anão, sem precisar considerar a pertubação gravitacional dos demais corpos do sistema solar, o problema de N corpos, muito mais complicado e que requer um código numérico muito mais sofisticado.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Conclusão
+    </h1>
+    <p>
+     O objetivo desse trabalho foi apresentar, desenvolver didaticamente e aplicar o PRTC para simular as órbitas de dois astros do sistema solar, para mostrar que o estudo desse assunto pode ir além do desenvolvimento matemático do problema, que também é importante. Além disso, procuramos mostrar a relação entre o PRTC e a existência dos pontos de Lagrange. Reunimos todos esses assuntos em um código numérico, escrito na linguagem de programação Python e que está no apêndice desse trabalho, para simular a órbita do asteroide troiano da Terra 2010 TK7 e a órbita de Plutão, relativa ao sistema de referência Sol-Netuno. Ambos como exemplos de aplicação contextualizada do PRTC. Nos dois casos estudados conseguimos verificar as trajetórias, valores de grandezas e comportamentos orbitais dos astros, já bem conhecidas em virtude de trabalhos de pesquisa avançados e que utilização técnicas computacionais muito mais sofisticadas. Por isso, entendemos que esses resultados validam os procedimentos adotados nesse trabalho como um instrumento pedagógico que pode ser utilizado no ensino do PRTC.
+    </p>
+    <p>
+     Para além dos resultados obtidos aqui neste trabalho, defendemos, inclusive, que esse assunto seja mais explorado na disciplina de mecânica clássica, pelo fato de entendermos que ele tem um caráter interdisciplinar. Isto porque o PRTC se relaciona com o estudo das equações diferencias, com a gravitação universal e com os métodos numéricos. Conteúdos presentes no estudo dos movimentos dos astros do sistema solar e dos satélites artificias, assuntos que costumam desperta grande interesse dos estudantes.
+    </p>
+    <p>
+     Nesse sentido, deixamos aqui como sugestão o estudo de duas aplicações do PRTC para o sistema Sol - Júpiter. Primeiro a simulação da órbita de um asteroide troiano em torno de
+     <math>
+      <msub>
+       <mi>
+        L
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     , cujas condições inicias são :
+     <math>
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mn>
+        0.524046125
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0.909326674
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        u
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0.0646761399
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0.0367068277
+       </mn>
+      </mrow>
+     </math>
+     . Segundo a simulação da órbita do asteroide Hilda, que libra no sistema Sol-Júpiter com um período de 270 anos. As condições iniciais de Hilda são :
+     <math>
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mn>
+        0.4952265404
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mn>
+        0.4163448036
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        u
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0.4389046359
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        (
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mn>
+        0.5230661767
+       </mn>
+      </mrow>
+     </math>
+     . As duas aplicações podem ser testadas com os códigos que disponibilizamos no apêndice deste trabalho.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Material Suplementar">
+    <h1 class="articleSectionTitle">
+     Material Suplementar
+    </h1>
+    <p>
+     O seguinte material suplementar está disponível online:
+    </p>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/ngrxHPwZ6bDbbhvPnnLQ8LL/1f602485f734b2b2380602fdec9a10cd389c4d46.pdf" target="_blank">
+     Apêndice
+    </a>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        O primeiro a propor a existência desses pontos foi Euler em 1776 com a indicação da existência dos três pontos colineares,
+        <math>
+         <msub>
+          <mi>
+           L
+          </mi>
+          <mn>
+           1
+          </mn>
+         </msub>
+        </math>
+        ,
+        <math>
+         <msub>
+          <mi>
+           L
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msub>
+        </math>
+        e
+        <math>
+         <msub>
+          <mi>
+           L
+          </mi>
+          <mn>
+           3
+          </mn>
+         </msub>
+        </math>
+        . Em 1772 Joseph Louis Lagrange previu os pontos
+        <math>
+         <msub>
+          <mi>
+           L
+          </mi>
+          <mn>
+           4
+          </mn>
+         </msub>
+        </math>
+        e
+        <math>
+         <msub>
+          <mi>
+           L
+          </mi>
+          <mn>
+           5
+          </mn>
+         </msub>
+        </math>
+        e em uma obra posterior, em 1773, ele previu a existência dos cinco pontos
+        <span class="ref">
+         <strong class="xref xrefblue">
+          [15]
+         </strong>
+         <span class="refCtt closed">
+          <span>
+           [15] http://www.spaceacademy.net.au/library/notes/.htm, acessado em 18/05/2018.
+          </span>
+          <br/>
+          <a href="http://www.spaceacademy.net.au/library/notes/.htm" target="_blank">
+           http://www.spaceacademy.net.au/library/n...
+          </a>
+         </span>
+        </span>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Ressonância orbital é um fenômeno que ocorre quando dois ou mais corpos, em órbita, exercem influência gravitacional mútua. Isso faz com que o movimento médio dos corpos, por exemplo, os de Netuno e Plutão, fiquem relacionados pela razão dos seus períodos orbitais. No caso desses planetas, 3:2, porque a cada três órbitas que Netuno (
+        <math>
+         <mrow>
+          <msub>
+           <mi>
+            P
+           </mi>
+           <mi>
+            N
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mn>
+           165
+          </mn>
+         </mrow>
+        </math>
+        anos) faz ao redor do Sol, Plutão (
+        <math>
+         <mrow>
+          <msub>
+           <mi>
+            P
+           </mi>
+           <mi>
+            P
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mn>
+           248
+          </mn>
+         </mrow>
+        </math>
+        anos) faz duas.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        A.S.T. Pires,
+        <i>
+         Evolução das idéias da física
+        </i>
+        (Livraria da Física, São Paulo, 2011) 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        http://astro.if.ufrgs.br/newton/principia.pdf, acessado em 18/05/2018.
+        <br/>
+        <a href="http://astro.if.ufrgs.br/newton/principia.pdf" target="_blank">
+         » http://astro.if.ufrgs.br/newton/principia.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        J.B. Marion e S.T. Thornton,
+        <i>
+         Dinâmica clássica de partículas e Sistema
+        </i>
+        (Cengage Learning, São Paulo, 2014) 1ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        E. Figueiredo e A.S. Castro, Rev. Bras. Ens. Fis.
+        <b>
+         23
+        </b>
+        , 289 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        A.F.B.A. Prado,
+        <i>
+         Trajetórias Espaciais e Manobras Assistidas por Gravidade
+        </i>
+        (INPE, São José dos Campos, 2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        R.F. Prazeres,
+        <i>
+         Métodos Clássicos e Qualitativos no Estudo do Problema dos Três Corpos
+        </i>
+        Dissertação de Mestrado, Universidade Federal do Rio de Janeiro, Rio de Janeiro (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        V. Szebehely,
+        <i>
+         Theory of Orbits: The Restricted Problem of Three Bodies
+        </i>
+        (Academic Press, New York, 1967)
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        H. Goldstein, C.P. Poole e J.L. Safko,
+        <i>
+         Classical mechanics
+        </i>
+        (Addison-Wesley, New York, 2000), 3ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        A.O. Lopes,
+        <i>
+         Introdução à mecânica clássica
+        </i>
+        (Edusp, São Paulo, 2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        K.R. Symon,
+        <i>
+         Mechanics
+        </i>
+        (Addison-Wesley, 1960 ), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        F.A.C. Martins e M. Zanotello, Rev. Bras. Ens. Fis.
+        <b>
+         40
+        </b>
+        , e2310 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        P. Hellings,
+        <i>
+         Astrophysics with a PC: An Introduction to Computational Astrophysics
+        </i>
+        (Willmann-Bell, Richmond, 1994).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        S.C. Chapra,
+        <i>
+         Métodos Numéricos Aplicados com MATLAB para Engenheiros e Cientistas
+        </i>
+        (AMGH, Porto Alegre, 2013) 3ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        E. Rabe, Astron. Astronomical Journal
+        <b>
+         66
+        </b>
+        , 500 (1961).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        http://www.spaceacademy.net.au/library/notes/.htm, acessado em 18/05/2018.
+        <br/>
+        <a href="http://www.spaceacademy.net.au/library/notes/.htm" target="_blank">
+         » http://www.spaceacademy.net.au/library/notes/.htm
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        F.J.T. Salazar, C.F. Melo, E.E.N. Macau e O.C. Winter. Celestial Mechanics and Dynamical Astronomy
+        <b>
+         114
+        </b>
+        , 201 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        E.C.F. Fortes e F.A.M. Kolland, Rev. Bras. Ens. Fis.
+        <b>
+         40
+        </b>
+        , e3306 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        J. Worthington,
+        <i>
+         A Study of the Planar Circular Restricted Three Body Problem and the Vanishing Twist
+        </i>
+        Tese de Doutorado, University of Sydney, 2012.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        https://sohowww.nascom.nasa.gov/home.html, acessado em 18/05/2018.
+        <br/>
+        <a href="https://sohowww.nascom.nasa.gov/home.html" target="_blank">
+         » https://sohowww.nascom.nasa.gov/home.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        C. Hellier,
+        <i>
+         Cataclysmic Variables Stars: How and why they vary
+        </i>
+        (Spring, New York, 2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        S. Diniega, K.M. Sayanagi, J. Balcerski, B. Carande, R.A.D. Silva, A.A. Fraeman, S.D. Guzewich, J. Hudson, A.L. Nahm, S.P. Mcintyre et al. Planetary and Space Science
+        <b>
+         76
+        </b>
+        , 68 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        http://www.skyandtelescope.com/astronomy-news/mars-trojans-possible-source-found/, acessado em 18/05/2018.
+        <br/>
+        <a href="http://www.skyandtelescope.com/astronomy-news/mars-trojans-possible-source-found/" target="_blank">
+         » http://www.skyandtelescope.com/astronomy-news/mars-trojans-possible-source-found/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [23]
+       </sup>
+       <div>
+        https://home.dtm.ciw.edu/users/sheppard/L5trojan/, acessado em 18/05/2018.
+        <br/>
+        <a href="https://home.dtm.ciw.edu/users/sheppard/L5trojan/" target="_blank">
+         » https://home.dtm.ciw.edu/users/sheppard/L5trojan/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [24]
+       </sup>
+       <div>
+        https://www.nasa.gov/content/goddard/lucy-the-first-mission-to-jupiter-s-trojans, acessado em 18/05/2018.
+        <br/>
+        <a href="https://www.nasa.gov/content/goddard/lucy-the-first-mission-to-jupiter-s-trojans" target="_blank">
+         » https://www.nasa.gov/content/goddard/lucy-the-first-mission-to-jupiter-s-trojans
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [25]
+       </sup>
+       <div>
+        P.R. Weissman e G.W. Wetherill, Periodic Astronomical Journal
+        <b>
+         79
+        </b>
+        , 404 (1974).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [26]
+       </sup>
+       <div>
+        M. Connors, P. Wiegert e C. Veillet, Nature
+        <b>
+         475
+        </b>
+        , 481 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [27]
+       </sup>
+       <div>
+        R.G. Stacey e M. Connors, Planetary and Space Science
+        <b>
+         56
+        </b>
+        , 358 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [28]
+       </sup>
+       <div>
+        E. C. Nogueira, Revista TECCEN
+        <b>
+         2
+        </b>
+        , 21 (2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [29]
+       </sup>
+       <div>
+        C.J. Cohen e E.C. Hubbard, Astronomical Journal
+        <b>
+         70
+        </b>
+        , 10 (1965).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [30]
+       </sup>
+       <div>
+        J.G. Williams e G.S. Benson, Astronomical Journal
+        <b>
+         76
+        </b>
+        , 167 (1971).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [31]
+       </sup>
+       <div>
+        Y. Kozai, Astronomical Journal
+        <b>
+         67
+        </b>
+        , 591 (1962).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        21 Mar 2018
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        18 Maio 2018
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        25 Maio 2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

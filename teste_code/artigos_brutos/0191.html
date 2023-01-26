@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0185" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0185
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0185">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Polaridade magnética e sensor Hall: uma proposta de experimento para os ensinos fundamental e médio
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Magnetic polarity and Hall sensor: an experiment proposal for elementary and high school
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Antonio Augusto Soares
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:aasoares@ufscar.br">
+      aasoares@ufscar.br
+     </a>
+    </div>
+    Universidade Federal de São Carlos, Departamento de Física, Química e Matemática, Sorocaba, SP, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-2728-124X">
+     http://orcid.org/0000-0002-2728-124X
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Jefferson Buonafina Pereira Junior
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de São Carlos, Departamento de Física, Química e Matemática, Sorocaba, SP, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Ana Paula Furquim Moreira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de São Carlos, Departamento de Física, Química e Matemática, Sorocaba, SP, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Luiz Cláudio Chiavini
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de São Carlos, Departamento de Física, Química e Matemática, Sorocaba, SP, Brasil.
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Apresentamos uma proposta de montagem experimental utilizando o Arduino e dois sensores Hall a3144 para o estudo da polaridade magnética de fontes de campo magnético. O uso do sensor Hall permite ao professor discutir junto a seus estudantes esse importante fenômeno da física moderna que se alicerça nos conceitos de campo elétrico e magnético. A montagem é simples e de relativo baixo custo, permitindo aos estudantes determinarem a polaridade (norte ou sul) de imãs e eletroímãs, por exemplo. Este experimento, de cunho qualitativo,é aplicável aos ensinos fundamental e médio e pode levar a uma maior concretização de conceitos relativos ao eletromagnetismo e, consequentemente, permitir um aprendizado num contexto de maior significação.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Efeito Hall; polos magnéticos; Arduino; experimentação
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We present na experiment proposal using a prototyping Arduino board andtwo a3144 Hall sensor to study the magnetic polarity of magnetic field sources. Using Hall sensors allow teachers to discuss along with the students this important modern physic’s phenomenon that is anchored on the electric and magnetic Field concepts. It is a simple experimental setup and relatively low cost allowing students to determine the magnetic polarity of magnets and electromagnets. This qualitative experiment is suitable for elementary and high school and can lead to a large concretization about concepts related to magnetism allowing more meaningful learning.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Hall effect; magnetic poles; Arduino; experimentation
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     As Tecnologias da Informação e Comunicação (TIC) têm desempenhado um papel bastante importante na vida das pessoas, incluídas aí aquelas situações relacionadas ao ensino. Um dos elementos que tem apresentado boa envergadura no desenvolvimento e aplicação especificamente no ensino de física é a placa de prototipagem Arduino associada a diversos sensores disponíveis no mercado por preços bastante acessíveis. Tal placa tem permitido o acesso a uma série de experimentos outrora não factíveis devido à ausência de equipamentos, muitas vezes por conta do alto custo.
+    </p>
+    <p>
+     Um exemplo de uso do Arduino em projetos experimentais para o ensino de física é o trabalho desenvolvido por Ilibio e Girardi [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1. M.B. Ilibio e M. Girardi, A Física na Escola 18, 49 (2020).
+       </span>
+      </span>
+     </span>
+     ] que, usando o Arduino e um sensor ultrasônico, propuseram um experimento para determinar a velocidade do som no ar em função da temperatura. Em outro trabalho, Buj e Revuelta [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. M.S. Alegre Buj e M.J. Cuetos Revuelta, Revista Eureka sobre Enseñanza yDivulgación de las Ciencias 18, 1202–1 (2021).
+       </span>
+      </span>
+     </span>
+     ] apresentam um conjunto de possibilidades de experimentos utilizando diferentes sensores conectados ao Arduino tanto para o ensino de física como de química. Dentre os temas relacionados à física, esse trabalho aborda experimentos sobre energia e temperatura, comunicação sem fio, intensidade sonora, dentre outros.
+    </p>
+    <p>
+     No que tange a conteúdo, como apontado por Terrazzan [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. E.A. Terrazzan, Caderno Catarinense de Ensino de Física 9, 209(1992).
+       </span>
+      </span>
+     </span>
+     ], muitos dos fenômenos físicos do dia a dia da sociedade bem como elementos tecnológicos deles decorrentes só podem ser estudados e compreendidos quando exploramos conceitos físicos que foram devidamente estabelecidos a partir do início do século passado, isto é, conceitos relacionados à física contemporânea. Ainda segundo esse autor, o fato de o conhecimento acerca da física moderna e contemporânea ser mandatório para a compreensão do mundo (tecnológico) atual exige que nos enveredemos na busca por formas de inserir, de maneira adequada e completa, tais temas no ensino médio (EM).
+    </p>
+    <p>
+     Por sua vez, a Base Nacional Comum Curricular (BNCC) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. MINISTÉRIO DA EDUCAÇÃO. Base Nacional Comum Curricular,Brasília, 2018. Disponível em:http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf.
+       </span>
+       <br/>
+       <a href="http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf" target="_blank">
+        http://basenacionalcomum.mec.gov.br/imag...
+       </a>
+      </span>
+     </span>
+     ] indica que a compreensão, utilização e criação relacionadas às tecnologias digitais de informação e comunicação devem ocorrer, dentre outras, de forma crítica e significativa permitindo ao cidadão resolver problemas e produzir conhecimento. De forma explícita, esse mesmo documento orienta que se deve desenvolver junto aos estudantes a habilidade de investigar equipamentos eletrônicos e de automação de modo a compreender as tecnologias contemporâneas e suas implicações no dia a dia da sociedade.
+    </p>
+    <p>
+     Nessa linha, este trabalho tem como objetivo contribuir através da apresentação de uma proposta de abordagem de um tema relacionado ao eletromagnetismo – polaridade magnética e efeito Hall – através da aplicação do Arduino no ensino de física. Apresentamos e discutimos um experimento para o estudo da polaridade de fontes de campo magnético utilizando sensores que se valem do efeito Hall. Por tratar-se de um tema, como muitos outros do eletromagnetismo, com alto grau de abstração, nos alinhamos com Gaspar [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. A. Gaspar, Atividades experimentais no Ensino de Física (Livrariada Física, São Paulo, 2014).
+       </span>
+      </span>
+     </span>
+     ] que destaca que a experimentação apresenta as vantagens da motivação e concretização perante outras práticas didáticas. Dessa forma, as dificuldades relacionadas à compreensão sobre os polos de diferentes fontes de campo magnético podem ser reduzidas a partir da concretização que esta proposta experimental permite atingir.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Montagem Experimental
+    </h1>
+    <p>
+     O fenômeno físico responsável pelo funcionamento de sensores do tipo Hall, incluindo o utilizado nesta proposta de experimento, foi observado primeiramente por Edwin Herbert Hall (1855–1938). No efeito Hall há o surgimento de uma diferença de potencial elétrico devido à separação de cargas em uma tira metálica que é percorrida por uma corrente elétrica
+     <i>
+      i
+     </i>
+     e encontra-se na presença de um campo magnético de intensidade
+     <i>
+      B
+     </i>
+     , orientado perpendicularmente ao fluxo dos portadores de carga (elétrons neste caso) que constituem a corrente elétrica.
+    </p>
+    <p>
+     A imagem do topo da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (a) mostra a vista superior de uma representação de uma fita condutora de largura
+     <i>
+      d
+     </i>
+     que é atravessada por uma corrente elétrica
+     <i>
+      i
+     </i>
+     no exato momento (
+     <i>
+      t = 0
+     </i>
+     ) em que um campo magnético de intensidade
+     <i>
+      B
+     </i>
+     , perpendicular à folha e saindo dela, é ligado.
+    </p>
+    <div class="row fig" id="S2_F1">
+     <a name="S2_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Bh6jbvqdrrfPN6B6hjjjhrn/b5b8d053bb8346ee81ef0ebec5315c027a1483ea.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      (a) Na parte superior, fita condutora atravessada por uma corrente elétrica i em t = 0 (instante no qual o campo magnético é ligado). Na parte inferior (t &gt; 0), fita condutora mostrando a polarização devido à ação do campo
+      <math id="INEQ4">
+       <mover accent="true">
+        <mi mathvariant="normal">
+         B
+        </mi>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+      </math>
+      (vetor em azul e saindo da folha). Em (b), ilustração da protoboard onde os componentes estão montados e a placa do Arduino. No destaque são mostrados os terminais do sensor Hall a3144.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A corrente representada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (a) é a real e podemos observar um elétron típico (com carga elétrica
+     <i>
+      q
+     </i>
+     ) movendo-se da esquerda para a direita devido à diferença de potencial Δ
+     <i>
+      V
+     </i>
+     =
+     <i>
+      V
+     </i>
+     <sub>
+      +
+     </sub>
+     −
+     <i>
+      V
+     </i>
+     <sub>
+      −
+     </sub>
+     . Desta forma, esses elétrons que constituem a corrente estão sujeitos a uma força magnética de intensidade
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       m
+      </i>
+     </sub>
+     , perpendicular ao plano formado pelos vetores velocidade e campo magnético dada por:
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E1">
+     <a name="S2_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            F
+           </mi>
+           <mi>
+            m
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            q
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            v
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            B
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa força magnética, como ilustrado na parte superior da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (a), desvia os elétrons para uma das bordas da fita (neste caso, parte de cima da figura) gerando um excesso de cargas negativas desse lado e de positivas na borda oposta como ilustrado na imagem inferior da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (a). Essa polarização, por sua vez, leva ao surgimento de um campo elétrico de módulo
+     <i>
+      E
+     </i>
+     , indicado pelo vetor em laranja nessa mesma figura. Esse campo elétrico faz com que os elétrons experimentem uma força elétrica de módulo
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       e
+      </i>
+     </sub>
+     =
+     <i>
+      qE
+     </i>
+     que se equilibra com a força magnética conforme ilustrado na parte inferior da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (a). Ao se igualar à
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       m
+      </i>
+     </sub>
+     ,
+     <i>
+      F
+     </i>
+     <sub>
+      <i>
+       e
+      </i>
+     </sub>
+     impede que o acúmulo de cargas nas bordas da fita condutora aumente, estabilizando-se: e a corrente elétrica volta a seguir seu fluxo normal.
+    </p>
+    <p>
+     A polarização gerada devido à presença do campo magnético leva ao surgimento de uma diferença de potencial (V
+     <sub>
+      <i>
+       Hall
+      </i>
+     </sub>
+     ) entre as duas bordas da fita. Essa ddp é proporcional à largura d da fita e ao campo elético e é conhecida como potencial Hall. Por exemplo, medindo-se essa diferença de potencial e a corrente elétrica que flui e conhecendo-se as características geométricas do condutor, é possível determinar o campo magnético aplicado, configurando-se num sensor de campo magnético.
+    </p>
+    <p>
+     O sensor a3144, esquematicamente ilustrado no destaque da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (b), se vale de tal fenômeno físico. O terminal 1 é o de alimentação (de 4,5V até 24V), o 2 é o terra e o 3 é o terminal de saída (sinal). Na ausência de campo magnético, o estado do sensor é “high”, isto é, o terminal 3 apresenta estado lógico 1. Por outro lado, na presença de um campo magnético o sensor passa para um estado “low”, e o terminal 3 passa a apresentar estado lógico 0.
+    </p>
+    <p>
+     Nesta proposta experimental utilizamos uma placa Arduino Uno, 2 sensores Hall a3144, 2 leds difusos de 5 mm (azul e vermelho) e 2 resistores de 220Ω. O objetivo é que quando o par de sensores Hall detectarem a presença de um polo magnético norte, o led vermelho seja acionado. Por outro lado, a detecção de um polo magnético sul será indicada pelo acionamento do led azul.
+    </p>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (b) mostra uma representação esquemática da montagem dos sensores com o Arduino. Como é possível observar, trata-se um circuito relativamente simples. Na parte inferior está a placa Arduino conectada ao computador para programação e alimentação elétrica. Acima está a protoboard utilizada para a fixação e conexão dos componentes. Os leds azul e vermelho estão ligados às portas digitais 5 e 6 do Arduino e para limitação de tensão estão, cada um, associados em série a um resistor de 220Ω. Os sensores Hall são alimentados com 5 V (terminal 1) pelo Arduino estando seus terminais 2 (terra) conectados ao GND. O sinal de cada um dos sensores são enviados às portas digitais 9 e 10 do Arduino.
+    </p>
+    <p>
+     Outra característica importante do sensor Hall a3144 – e que o torna adequado a esta proposta experimental – é que a face frontal do sensor (lado chanfrado onde estão impressas informações acerca do sensor) é sensibilizada apenas por um polo magnético sul de forma que se aproximarmos um polo norte à face frontal o estado lógico não se altera, isto é, mantém-se em 1. Por sua vez, com a face traseira do sensor (não chanfrada) ocorre o oposto, sendo sensibilizada apenas na presença de um polo norte magnético.
+    </p>
+    <p>
+     É essa característica do sensor Hall a3144 que exige que usemos dois deles na composição de nosso experimento, colocando-os lado a lado, porém um com as faces invertidas, isto é, um “olhando” para frente e outro para trás como pode ser observado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (b) (A1 e A2). Com isso e conforme indicado pela seta no topo da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     (b), se aproximarmos do par A1 e A2 um pólo sul, o sensor A2 que está com a parte chanfrada voltada para o lado do objeto magnético, terá seu estado lógico alterado de 1 para 0 enquanto A1 permanecerá no estado 1 gerando, então, um sinal binário do tipo “0 1”. Por outro lado, se aproximarmos um polo norte do conjunto, apenas o sensor A1, voltado para trás, terá seu estado lógico alterado de 1 para 0 e o sinal binário obtido será “1 0”. Na ausência de campo magnético ambos permanecerão no estado 1 e o sinal binário lógico será “1 1”.
+    </p>
+    <p>
+     Desta forma é possível programar o Arduino (ver código no apêndice) para identificar tal sinal binário e, a depender do resultado, acionar um dos leds ou nenhum deles. A Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS2_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     apresenta as combinações possíveis de estados lógicos e o resultado que deve ser indicado pelo acionamento (ou não) dos leds.
+    </p>
+    <div class="row table" id="S2_T1">
+     <a name="S2_T1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS2_T1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Combinação dos estados lógicos do terminal 3 dos sensores A1 e A2 e respectivas ações a serem realizadas pelo Arduíno em relação aos leds para a indicação da polaridade magnética.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     apresenta uma fotografia da montagem experimental, pronta para a execução do experimento, com os sensores já devidamente montados e conectados ao Arduino. Na parte inferior é possível ver a protoboard com os leds azul e vermelho bem como o par de sensores a3144 (A1 e A2). Na execução do experimento, a parte do elemento gerador de campo magnético que se deseja determinar a polaridade deve ser aproximada pelo lado indicado pela ponta do lápis. Uma vez que o Arduino já está programado com o código mostrado no apêndice, ele é alimentado por uma bateria de 9V, não mais sendo necessária a conexão com o computador através do cabo USB. Isto dá ao dispositivo maior mobilidade, permitindo ao professor dirigir-se a diferentes grupos de estudantes em sala de aula para que cada um deles faça seu experimento.
+    </p>
+    <div class="row fig" id="S2_F2">
+     <a name="S2_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Bh6jbvqdrrfPN6B6hjjjhrn/190df33da8cc57688c8b969b070963a7c7d41007.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Fotografia do circuito montado e pronto para utilização em sala de aula. O Arduino é alimentado por uma bateria de 9V. Os sensores a3144 estão rotulados por A1 e A2 na região indicada pela ponta do lápis.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Resultados
+    </h1>
+    <p>
+     Como a proposta aqui apresentada é de um experimento de cunho qualitativo e que tem como objetivo determinar o polo magnético de um dado elemento gerador de campo magnético, discutimos na sequência algumas propostas de aplicação junto a turmas do EM e EF.
+    </p>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     apresenta o resultado obtido utilizando a montagem aqui proposta para duas situações diferentes. Utilizamos como elemento gerador de campo magnético um dispositivo que faz parte do conteúdo do EM, o eletroímã.
+    </p>
+    <div class="row fig" id="S3_F3">
+     <a name="S3_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/Bh6jbvqdrrfPN6B6hjjjhrn/a2f5f05f8539a6b1d134d8b1034d981bac6f5563.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Determinação da polaridade magnética de um eletroímã formado por um prego (núcleo ferromagnético) e um solenóide com 200 voltas de fio de cobre esmaltado AWG-25 (ver destaque da figura (a)). P1(N1) indica o terminal positivo (negativo) do conjunto de 2 pilhas AA de 1,5 V cada uma. P2 e N2 indicam os conectores de alimentação do eletroímã. Em (a) um pólo norte é identificado (led vermelho aceso) e em (b) um polo sul (led azul aceso).
+      <br/>
+     </div>
+    </div>
+    <p>
+     O eletroímã, mostrado no destaque da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (a), é constituído de 200 voltas (espiras justapostas) de fio de cobre esmaltado AWG-25 enroladas em um prego que atua como núcleo ferromagnético. Nesse contexto, o professor pode discutir as características e os parâmetros envolvidos na determinação do campo magnético do solenóide explorando, inclusive, a questão das linhas do campo magnético, dando ênfase em sua relação com a intensidade do campo. Com isto é possível avaliar junto aos estudantes a questão relativa à sensibilidade dos sensores a3144, isto é, quão próximo ao par de sensores deve estar a fonte de campo magnético para que aquele polo seja “medido”.
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (a) é possível observar que dispositivo detectou um polo magnético norte uma vez que o led vermelho foi acionado devido à proximidade da ponta do prego ao par de sensores. Isso devido ao fato de o sensor A1 (ver Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     ) ter sido acionado tendo seu estado lógico mudado de 1 para 0 e levando ao sinal lógico “0 1” para o par de sensores. Por outro lado, a Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (b) indica que o dispositivo detectou um polo magnético sul dado que o led azul foi acionado. Nesta segunda situação, o sensor A1 não sofreu alteração em seu estado lógico, diferentemente o sensor A2 que mudou para o estado 0, fazendo com que o sinal lógico do par passasse para “1 0”.
+    </p>
+    <p>
+     Do ponto de vista físico, a diferença entre as situação mostradas nas Figuras
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (a) e
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (b) pode ser percebida ao se analisar as conexões elétricas da alimentação do eletroímã que é feita por um par de pilhas AA de 1,5 V cada uma. Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (b) há uma inversão de polaridade da alimentação quando comparada à situação da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (a). Em
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (a) o terminal P1(N1) da pilha está ligado ao conector P2(N2) do eletroímã enquanto que na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     (b) essas conexões estão invertidas. Essa inversão resulta em uma mudança na direção da corrente elétrica que atravessa cada espira que constitui o eletroímã levando, consequentemente, a uma inversão da polaridade magnética. O professor pode, portanto, discutir experimentalmente junto a seus estudantes a influência do sentido da corrente elétrica nas características do campo magnético por ela gerado.
+    </p>
+    <p>
+     Outra abordagem possível junto aos estudantes é a remoção do núcleo ferromagnético (prego) deixando apenas o solenóide constituído pelas espiras justapostas do fio de cobre. O núcleo ferromagnético aumenta a intensidade do campo magnético devido ao alinhamento de seus dipolos magnéticos. Na ausência do núcleo ferromagnético, o campo magnético na extremidade do solenóide apresenta menor intensidade. Nessa nova configuração o professor pode aproximar uma das extremidades do solenóide ao par de sensores A1 e A2 verificando que o campo não é suficientemente intenso para acionar o sensor. Em seguida, repete-se o experimento com o prego recolocado no interior do solenóide discutindo a questão da presença do núcleo de material ferromagnético.
+    </p>
+    <p>
+     Além do eletroímã, o professor pode analisar junto aos estudantes a polaridade de imãs de diferentes formatos e aplicações como geladeira, alto-falante etc.
+    </p>
+    <p>
+     Já no contexto do EF o professor pode, por exemplo, discutir as características magnéticas de diferentes materiais e avaliar junto aos estudantes que materiais são atraídos por um imã (“grudam”) e quais não são e, em seguida, avaliar a polaridade magnética do próprio imã e de diferentes materiais que podem ser magnetizados (ou não) pelo imã.
+    </p>
+    <p>
+     Aqui usamos o sensor Hall A3144 que não apresenta sensibilidade suficiente para detectar o campo magnético terrestre cuja componente horizontal na região onde realizamos os testes é da ordem de 0,18G. Porém existem outros sensores que se valem do mesmo fenômeno físico (o A1120, por exemplo) e que são mais sensíveis, conseguindo detectar campos magnéticos de menor intensidade. A depender da sensibilidade do sensor Hall utilizado o professor pode, por exemplo, utilizar a montagem aqui proposta como uma “bússola” eletrônica. Outra característica que deve ser levada em conta é se o sensor é do tipo
+     <i>
+      non-latching
+     </i>
+     ou
+     <i>
+      latching
+     </i>
+     . O primeiro, cujo A3144 é um exemplo, tem seu estado inicial alterado na presença do campo magnético, mas ao se remover o campo, o estado volta à condição inicial. Já o segundo caso, quando na presença do campo magnético o estado inicial é alterado e assim permanece mesmo com a remoção do campo.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Conclusões
+    </h1>
+    <p>
+     A escolha desse sensor, advindo da descoberta do efeito Hall, para a atividade experimental aqui proposta ocorreu devido à sua relação direta com os conteúdos explorados nos EF e EM e por se tratar de um fenômeno relacionado à física contemporânea. Desta forma, a proposta permite a realização de atividade experimental que pode levar à concretização em relação ao conceito físico da polaridade magnética, principalmente de elementos que não apresentam de forma natural tal fenômeno (eletroímã, por exemplo). Além disso, coloca os estudantes em condições de aprender de forma crítica e significativa sobre um fenômeno que está presente em diversas situações de seu dia a dia. Esta proposta pode, portanto, colaborar com o ensino dos fenômenos aqui explorados e contribuir com o alinhamento do ensino de física praticado nas escolas com as orientações constantes da BNCC no que tange à área das Ciências da Natureza e suas Tecnologias.
+    </p>
+    <p>
+     Há um considerável volume de aplicações de sensores do tipo Hall em elementos do cotidiano dos estudantes como, por exemplo, sensores de rotação e velocidade, sensor de corrente elétrica, smartphones, dentre outros. Isso faz com que esta proposta apresente o potencial de despertar a motivação intrínseca dos estudantes e pode levar a um processo de aprendizagem com maior significação.
+    </p>
+    <p>
+     A montagem experimental é relativamente simples e de relativo baixo custo e o experimento é de fácil execução, tanto por conta do custo dos materiais assim como pelo fato de a placa do Arduino ser aplicável a outras propostas de experimento, bastando trocar os sensores, por exemplo. Em relação à facilidade de construção, pode ser aplicado como projeto a ser desenvolvido pelos próprios estudantes para feiras de ciências levando, desta forma, a investigação e análises mais profundas do funcionamento dos elementos envolvidos e da lógica de programação.
+    </p>
+    <p>
+     A proposta é aplicável tanto no contexto do EM quando do EF, bastando que o professor faça a abordagem considerando aquele nível de ensino. Em ambos os casos, esta abordagem experimental tem potencial para aumentar o engajamento dos estudantes dada a utilização de elementos relacionados às TIC bem como a concretização relacionada aos pólos magnéticos que se pode obter.
+    </p>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/Bh6jbvqdrrfPN6B6hjjjhrn/998004636653e3c28595292bf3436c56a03225e5.pdf" target="_blank">
+     Apêndice
+    </a>
+   </div>
+   <div class="articleSection" data-anchor="References">
+    <h1 class="articleSectionTitle">
+     References
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1.
+       </sup>
+       <div>
+        M.B. Ilibio e M. Girardi, A Física na Escola
+        <b>
+         18
+        </b>
+        , 49 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2.
+       </sup>
+       <div>
+        M.S. Alegre Buj e M.J. Cuetos Revuelta, Revista Eureka sobre Enseñanza yDivulgación de las Ciencias
+        <b>
+         18
+        </b>
+        , 1202–1 (2021).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3.
+       </sup>
+       <div>
+        E.A. Terrazzan, Caderno Catarinense de Ensino de Física
+        <b>
+         9
+        </b>
+        , 209(1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4.
+       </sup>
+       <div>
+        MINISTÉRIO DA EDUCAÇÃO.
+        <i>
+         Base Nacional Comum Curricular
+        </i>
+        ,Brasília, 2018. Disponível em:http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf
+        <br/>
+        <a href="http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf" target="_blank">
+         » http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5.
+       </sup>
+       <div>
+        A. Gaspar,
+        <i>
+         Atividades experimentais no Ensino de Física
+        </i>
+        (Livrariada Física, São Paulo, 2014).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        14 Jul 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        18 Maio 2021
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        23 Jun 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        24 Jun 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

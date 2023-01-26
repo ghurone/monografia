@@ -1,0 +1,3321 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2015-0018" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2015-0018
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2015-0018">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Desenvolvimento e análise de um Protótipo Coilgun
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Design and analysis of a Coilgun Prototype
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Marcelo B. Perotoni
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas, Universidade Federal do ABC, Santo André, SP, Brasil
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:mperoconsult@gmail.com">
+      mperoconsult@gmail.com
+     </a>
+    </div>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Mateus Mergl
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas, Universidade Federal do ABC, Santo André, SP, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     O artigo descreve a construção e modelagem simples de um protótipo de pequenas dimensões de um Coilgun – arma eletromagnética que dispara um projétil metálico cuja operação se assemelha aos motores elétricos lineares, que também acionam fechaduras magnéticas e atuadores. O projeto apresenta baixo custo, envolve construção com elementos facilmente encontráveis contudo envolve conceitos relativamente sofisticados de eletromagnetismo. O sistema pode ser empregado para estudos de física e também motores elétricos lineares, em Engenharia. O artigo discute modelos circuitais, análise da força magnética exercida no projétil e figuras do campo produzido a partir de um simulador eletromagnético. A instrumentação usada para medida da velocidade também é apresentada, com dados de medidas.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     eletromagnetismo aplicado; instrumentação eletrônica
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The article describes the construction and simplified analysis of a small-scale Coilgun prototype – electromagnetic weapon that launches a metallic slug whose operation is similar to linear electric motors, also seen in magnetic locks. The design can be constructed with low cost and easily available components, though it involves sophisticated electromagnetism concepts. The system can be employed to Laboratory experiments on Physics as well as on Engineering, to address Electromagnetic Conversion of Energy, namely linear electric motors and actuators. The article discusses circuit models, the electromagnetic force on the slug and also field plots generated from a commercial simulator. The used instrumentation for velocity measurement is also presented, alongside with measured data.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Applied Electromagnetics; electronic instrumentation
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Coilguns são estruturas que operam – como aponta o nome – a partir do efeito de movimento mecânico (“gun”) a partir de uma bobina (“coil”), conforme apresenta a
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     . Um pulso de corrente de alta intensidade gera um campo magnético no interior de uma bobina linear (solenóide). Havendo um objeto metálico no seu interior, correntes são induzidas no mesmo, e devido ao efeito das forças de Lorentz (
+     <b>
+      <i>
+       J
+      </i>
+     </b>
+     <math display="inline" id="m1">
+      <mi>
+       x
+      </mi>
+     </math>
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     ) ocorre uma aceleração [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] B. Marder and A. Coilgun, IEEE Transactions on Magnetics 27, 701 (1993).
+       </span>
+      </span>
+     </span>
+     ]. Coilguns podem ser classificados como motores lineares homopolares ou heteropolares, dependendo do sentido do campo magnético [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E. Levi, J.L. He, Z. Zabar and L. Birenbaum, IEEE Transactions on Magnetics 27, 628 (1993).
+       </span>
+      </span>
+     </span>
+     ]. O projétil comporta-se como a armadura, e a bobina é encarada como estator na terminologia usual de motores elétricos.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Ilustração dos elementos do Coilgun – bobina e projétil.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A energia cinética do projétil, que o acelera a partir do repouso, provém da descarga rápida de um pulso de corrente no indutor. Usualmente, condensadores de altas capacitâncias e voltagens nominais são carregados com uma tensão DC (
+     <i>
+      Direct Current
+     </i>
+     , corrente contínua) por uma fonte da alta tensão e são rapidamente chaveados no indutor.
+    </p>
+    <p>
+     Coilguns possuem aplicações como armamento na área de defesa, como, por exemplo, acionando morteiros eletromagnéticos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] R. Kaye, B. Turman, M. Aubuchon, D. Lamppa, G. Mann, Edward van Reuth, K. Fulton, G. Malejko, P. Magnotti, D. Nguyen, D. Borgwarth, A. Johnson and R. Poppe, in: 16th IEEE International Pulsed Power Conference (IEEE, Piscataway, 2007), p. 1810-1813.
+       </span>
+      </span>
+     </span>
+     ] a serem embarcados em veículos de combate. A não necessidade de explosivos para propulsão traz maior segurança à operação, além de maior precisão e repetibilidade em função da instrumentação mais simples, em contraste com sistemas tradicionais baseados em explosivos. Outra aplicação seria o uso para disparo de mísseis [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] T.R. Lockner, R.J. Kaye and Bob N. Turman, in: Modulator Symposium (IEEE, Piscataway, 2004), p. 119-121.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] B.D. Skurdal and R.L. Gaigler, IEEE Transactions on Magnetics 45, 458 (2009).
+       </span>
+      </span>
+     </span>
+     ], microssatélites [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] U. Hasirci and A. Balikci, in: 4th International Conference on Recent Advances in Space Technologis (IEEE, Piscataway, 2009), p. 233-236.
+       </span>
+      </span>
+     </span>
+     ] e mesmo veículos para exploração espacial [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] H.D. Fair, IEEE Transactions on Magnetics 45, 225 (2009).
+       </span>
+      </span>
+     </span>
+     ] [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] J.M. Schroeder, J.H. Gully and M.D. Driga, IEEE Transactions in Magnetics 25, 504, (1989).
+       </span>
+      </span>
+     </span>
+     ]. Na área de nanocompósitos, Coilguns foram empregados para testes balísticos em tecidos a prova de balas, baseados em Kevlar [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Pastore, G. Giannini, R.B. Morles, M. Marchetti and D. Micheli, in: Nanocomposites – New Trends and Developments (INTECH Open Access Publisher, Croatia, 2012), chap. 9.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Assim que o projétil cruza o meio da bobina a força devido à interação magnética muda sua orientação, em vez de acelerar o efeito é de frenagem. Assim para que a velocidade de escape do projétil seja maximizada (i.e. que o máximo da energia eletrostática armazenada no capacitor se transforme em energia cinética) é necessário que não haja corrente circulando na bobina quando o projétil cruza a metade do comprimento do estator. Trata-se de um problema complexo, pois envolve materiais magnéticos cujas características dificilmente são totalmente conhecidas (curva de histerese). Além disso, uma vez que há movimento envolvido, simulações computacionais estáticas tem que levar em consideração estados anteriores.
+    </p>
+    <p>
+     O artigo trata de de um Coilgun e sua instrumentação associada para medida de velocidade, com tópicos cobrindo o modelo circuital e a respectiva expressão simplificada para a força exercida no projétil (justificando o fato de que a força passa a ser de frenagem após passado o ponto médio da bobina). Simulações estáticas mostram figuras da densidade de corrente computada no sistema, e medições de velocidade apontam os pontos ótimos para máxima velocidade de escape no protótipo construído.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Modelo circuital
+    </h1>
+    <p>
+     O Coilgun pode ser visualizado como um circuito RLC (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      fig. 2
+     </a>
+     ), onde o capacitor encontra-se carregado com uma tensão (condição inicial), e o conjunto estator-armadura é representado por um indutor com uma resistência representando as perdas por efeito Joule. Ambas estruturas estão acopladas magneticamente, efeito representado pelo fator M (indutância mútua). Na realidade a bobina ou estator apresenta em seus terminais uma indutância variável no tempo, uma vez que ao ser acelerado o projétil ocupa posições diferentes no núcleo. Esse efeito de variação temporal da indutância, para efeitos de simplificação, é desprezado.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Representação de circuito do Coilgun; a esquerda o efeito da indutância mutual e a direita a indutância total é representada por um indutor cujo valor é variante no tempo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A equação do circuito é a de um circuito RLC sem fonte, com as condições iniciais de
+     <i>
+      Vc(0)=Vo
+     </i>
+     (tensão no capacitor) e
+     <math display="inline" id="m2">
+      <mi>
+       i
+      </mi>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     :
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m3">
+        <mfrac>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             d
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <mi>
+           i
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <msup>
+           <mrow>
+            <mi>
+             t
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mo>
+         +
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           R
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mi>
+             t
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+        </mfrac>
+        <mfrac>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           i
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         +
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+          <mfenced close=")" open="(" separators="">
+           <mrow>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mfenced>
+          <mi>
+           C
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Para efeitos de simplificação, a característica variante no tempo de
+     <math display="inline" id="m4">
+      <mi>
+       L
+      </mi>
+     </math>
+     é desprezada. O fator de amortecimento
+     <math display="inline" id="m5">
+      <mi>
+       α
+      </mi>
+     </math>
+     e a frequência de oscilação natural
+     <i>
+      <math display="inline" id="m6">
+       <msub>
+        <mi>
+         ω
+        </mi>
+        <mi>
+         o
+        </mi>
+       </msub>
+      </math>
+     </i>
+     são definidos respectivamente como:
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m7">
+        <mi>
+         α
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           R
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           L
+          </mi>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m8">
+        <msub>
+         <mrow>
+          <mi>
+           ω
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           o
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <msqrt>
+           <mrow>
+            <mi>
+             L
+            </mi>
+            <mi>
+             C
+            </mi>
+           </mrow>
+          </msqrt>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Para o caso particular sobreamortecido (onde
+     <math display="inline" id="m9">
+      <mi>
+       α
+      </mi>
+      <mo>
+       &gt;
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         o
+        </mi>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>
+       </mo>
+      </mrow>
+     </math>
+     ) a solução para a equação diferencial pode ser escrita como:
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m10">
+        <mi>
+         i
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           t
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           A
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <msup>
+         <mrow>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             s
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msub>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           A
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msub>
+        <msup>
+         <mrow>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             s
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msub>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde os fatores
+     <math display="inline" id="m11">
+      <msub>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m12">
+      <msub>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     são definidos como:
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m13">
+        <msub>
+         <mrow>
+          <mi>
+           s
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mo>
+         −
+        </mo>
+        <mi>
+         α
+        </mi>
+        <mo>
+         ±
+        </mo>
+        <msqrt>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             α
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <mo>
+           −
+          </mo>
+          <msubsup>
+           <mrow>
+            <mi>
+             ω
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msubsup>
+         </mrow>
+        </msqrt>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     As constantes
+     <math display="inline" id="m14">
+      <msub>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m15">
+      <msub>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     são encontradas a partir das condições iniciais do problema. Para esse caso, a corrente em
+     <math display="inline" id="m16">
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     é zero (resultando em
+     <math display="inline" id="m17">
+      <msub>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     = -
+     <math display="inline" id="m18">
+      <msub>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     . Sendo considerada a tensão inicial no capacitor
+     <math display="inline" id="m19">
+      <msub>
+       <mrow>
+        <mi>
+         V
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é possível escrever a tensão no capacitor como:
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m20">
+        <msub>
+         <mrow>
+          <mi>
+           v
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           c
+          </mi>
+         </mrow>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mi>
+           C
+          </mi>
+         </mrow>
+        </mfrac>
+        <msup>
+         <mrow>
+          <mo>
+           ∫
+          </mo>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msup>
+        <mi>
+         d
+        </mi>
+        <mi>
+         t
+        </mi>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           V
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Escrevendo a queda de tensão ao longo da malha em
+     <math display="inline" id="m21">
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     :
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m22">
+        <mi>
+         R
+        </mi>
+        <mi>
+         i
+        </mi>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </mfenced>
+        <mo>
+         +
+        </mo>
+        <mi>
+         L
+        </mi>
+        <msub>
+         <mrow>
+          <mfenced close="|" open="" separators="">
+           <mrow>
+            <mfrac>
+             <mrow>
+              <mi>
+               d
+              </mi>
+              <mi>
+               i
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               d
+              </mi>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </mfenced>
+         </mrow>
+         <mrow>
+          <mi>
+           t
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           V
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo a derivada da corrente avaliada em
+     <math display="inline" id="m23">
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     resulta em:
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m24">
+        <mi>
+         R
+        </mi>
+        <mi>
+         i
+        </mi>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </mfenced>
+        <mo>
+         +
+        </mo>
+        <mi>
+         L
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             A
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msub>
+          <msub>
+           <mrow>
+            <mi>
+             s
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msub>
+          <mo>
+           −
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             A
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msub>
+          <msub>
+           <mrow>
+            <mi>
+             s
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           V
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A corrente em
+     <math display="inline" id="m25">
+      <mi>
+       t
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     é nula, assim a constante
+     <math display="inline" id="m26">
+      <msub>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     pode ser escrita como:
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m27">
+        <msub>
+         <mrow>
+          <mi>
+           A
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             V
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               s
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msub>
+            <mo>
+             −
+            </mo>
+            <msub>
+             <mrow>
+              <mi>
+               s
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     De maneira que resulta na expressão:
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m28">
+        <mi>
+         i
+        </mi>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </mfenced>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             V
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             0
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               s
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msub>
+            <mo>
+             −
+            </mo>
+            <msub>
+             <mrow>
+              <mi>
+               s
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+        </mfrac>
+        <mfenced close="]" open="[" separators="">
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             e
+            </mi>
+           </mrow>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               s
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </msup>
+          <mo>
+           −
+          </mo>
+          <msup>
+           <mrow>
+            <mi>
+             e
+            </mi>
+           </mrow>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               s
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msub>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A máxima energia cinética
+     <math display="inline" id="m29">
+      <msub>
+       <mrow>
+        <mi>
+         E
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         E
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     disponível para ser transferida ao projétil é proveniente da energia eletrostática armazenada no capacitor
+     <math display="inline" id="m30">
+      <mi>
+       C
+      </mi>
+     </math>
+     , carregado com tensão
+     <math display="inline" id="m31">
+      <mi>
+       V
+      </mi>
+     </math>
+     :
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m32">
+        <msub>
+         <mrow>
+          <mi>
+           E
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           E
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </mfrac>
+        <mi>
+         C
+        </mi>
+        <msup>
+         <mrow>
+          <mi>
+           V
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação 11
+     </a>
+     mostra que a energia aumenta com o quadrado da tensão de alimentação, e apenas linearmente com o valor da capacitância. Assim é preferível operar com maiores tensões a valores altos de capacitores. Naturalmente fontes que forneçam tensões elevadas são razoavelmente custosas, e o uso dessas tensões impõe restrições nos componentes usados, particularmente chaves e interruptores.
+    </p>
+    <p>
+     A energia cinética
+     <math display="inline" id="m33">
+      <msub>
+       <mrow>
+        <mi>
+         E
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     pode ser calculada a partir da velocidade de escape
+     <math display="inline" id="m34">
+      <msub>
+       <mrow>
+        <mi>
+         v
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     do projétil e de sua massa
+     <math display="inline" id="m35">
+      <mi>
+       m
+      </mi>
+     </math>
+     .
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m36">
+        <msub>
+         <mrow>
+          <mi>
+           E
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           C
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </mfrac>
+        <mi>
+         m
+        </mi>
+        <msubsup>
+         <mrow>
+          <mi>
+           v
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msubsup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A eficiência do sistema pode ser descrita como a razão entre as energias cinéticas e eletrostáticas:
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m37">
+        <mi>
+         η
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             E
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             C
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             E
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             E
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           m
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           C
+          </mi>
+         </mrow>
+        </mfrac>
+        <msup>
+         <mrow>
+          <mfenced close=")" open="(" separators="">
+           <mrow>
+            <mfrac>
+             <mrow>
+              <msub>
+               <mrow>
+                <mi>
+                 v
+                </mi>
+               </mrow>
+               <mrow>
+                <mi>
+                 e
+                </mi>
+               </mrow>
+              </msub>
+             </mrow>
+             <mrow>
+              <mi>
+               V
+              </mi>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </mfenced>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Expressão da força devido ao campo magnético
+    </h1>
+    <p>
+     A força exercida no projétil é proporcional à derivada com campo magnético, e não a sua magnitude [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] E.M. Purcell, Electricity and Magnetism (McGraw Hill, New York, 1985), 2a ed.
+       </span>
+      </span>
+     </span>
+     ]. A força de Lorentz exercida no projétil pode ser escrita como [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] K. Chan, G. Clark, D. Helmlinger and D. Ng, Electromagnetic Coil Gun: Final Report, disponível em http://gdclark.com/wp-content/uploads/2014/08/FinalReport1.pdf, acesso em 12/11/2015.
+       </span>
+       <br/>
+       <a href="http://gdclark.com/wp-content/uploads/2014/08/FinalReport1.pdf" target="_blank">
+        http://gdclark.com/wp-content/uploads/20...
+       </a>
+      </span>
+     </span>
+     ],
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m38">
+        <mi>
+         F
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         J
+        </mi>
+        <mo>
+         ×
+        </mo>
+        <mi>
+         B
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde
+     <b>
+      <i>
+       J
+      </i>
+     </b>
+     é o vetor densidade de corrente no projétil e
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     o vetor indução magnética, causado pelo solenóide. A equação de Faraday (com o termo da corrente de descolocamente adicionado por Maxwell posteriormente) a seguir permite obter uma expressão para a densidade de corrente:
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m39">
+        <mo>
+         ∇
+        </mo>
+        <mo>
+         ×
+        </mo>
+        <mi>
+         B
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         μ
+        </mi>
+        <mfenced close="]" open="[" separators="">
+         <mrow>
+          <mi>
+           J
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mi>
+           ε
+          </mi>
+          <mfrac>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+            <mi>
+             E
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Sendo
+     <math display="inline" id="m40">
+      <mi>
+       ε
+      </mi>
+     </math>
+     e
+     <math display="inline" id="m41">
+      <mi>
+       μ
+      </mi>
+     </math>
+     respectivamente a permissivade elétrica e permeabilidade magnética. Substituindo
+     <b>
+      <i>
+       J
+      </i>
+     </b>
+     de 15 em 14 resulta em:
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m42">
+        <mstyle>
+         <mtext>
+          F
+         </mtext>
+        </mstyle>
+        <mo>
+         =
+        </mo>
+        <mfenced close="]" open="[" separators="">
+         <mrow>
+          <mfrac>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mrow>
+            <mi>
+             μ
+            </mi>
+           </mrow>
+          </mfrac>
+          <mo>
+           ∇
+          </mo>
+          <mo>
+           ×
+          </mo>
+          <mi>
+           B
+          </mi>
+          <mo>
+           −
+          </mo>
+          <mi>
+           ε
+          </mi>
+          <mfrac>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+            <mi>
+             E
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </mfenced>
+        <mo>
+         ×
+        </mo>
+        <mi>
+         B
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Desprezando o efeito da força causado pelo campo elétrico pode-se expressar a equação anterior como:
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m43">
+        <mstyle>
+         <mtext>
+          F
+         </mtext>
+        </mstyle>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+        </mfrac>
+        <mfenced close="]" open="[" separators="">
+         <mrow>
+          <mo>
+           ∇
+          </mo>
+          <mo>
+           ×
+          </mo>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </mfenced>
+        <mo>
+         ×
+        </mo>
+        <mi>
+         B
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Usando a propriedade de cálculo:
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block" id="m44">
+        <mfenced close="]" open="[" separators="">
+         <mrow>
+          <mo>
+           ∇
+          </mo>
+          <mo>
+           ×
+          </mo>
+          <mstyle>
+           <mtext>
+            B
+           </mtext>
+          </mstyle>
+         </mrow>
+        </mfenced>
+        <mo>
+         ×
+        </mo>
+        <mi>
+         B
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo>
+         ∇
+        </mo>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mstyle>
+           <mtext>
+            B
+           </mtext>
+          </mstyle>
+          <mo>
+           •
+          </mo>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </mfenced>
+        <mo>
+         −
+        </mo>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mo>
+           ∇
+          </mo>
+          <mo>
+           •
+          </mo>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </mfenced>
+        <mi>
+         B
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O divergente do campo
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     é nulo, de acordo com a Lei de Gauss (devido a não existência de fontes ou sorvedouros de campo magnético, ou monopolos magnéticos), logo a força
+     <b>
+      <i>
+       F
+      </i>
+     </b>
+     pode ser expressa como relacionada diretamente ao operador Laplaciano do vetor
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     :
+    </p>
+    <div class="row formula" id="eeq19">
+     <a name="eq19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block" id="m45">
+        <mstyle>
+         <mtext>
+          F
+         </mtext>
+        </mstyle>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         ∇
+        </mo>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mi>
+           B
+          </mi>
+          <mo>
+           •
+          </mo>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </mfenced>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+        </mfrac>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mo>
+           ∇
+          </mo>
+          <msup>
+           <mrow>
+            <mfenced close="|" open="|" separators="">
+             <mrow>
+              <mi>
+               B
+              </mi>
+             </mrow>
+            </mfenced>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Considerando a solenóide orientado com eixo ao longo da direção
+     <math display="inline" id="m46">
+      <mi>
+       z
+      </mi>
+     </math>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     ), o vetor
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     dentro da estrutura estará majoritariamente alinhado nessa mesma direção. Utilizando coordenadas cilíndricas haverá uma componente
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     <math display="inline" id="m47">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi>
+         r
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e outra
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     <math display="inline" id="m48">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi>
+         z
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <div class="row formula" id="eeq20">
+     <a name="eq20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <math display="block" id="m49">
+        <mrow>
+         <mtext>
+          F
+         </mtext>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mn>
+           1
+          </mn>
+          <mi>
+           μ
+          </mi>
+         </mfrac>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mfrac>
+          <mo>
+           ∂
+          </mo>
+          <mrow>
+           <mo>
+            ∂
+           </mo>
+           <mi>
+            r
+           </mi>
+          </mrow>
+         </mfrac>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <msubsup>
+            <mi>
+             B
+            </mi>
+            <mi>
+             r
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo>
+            +
+           </mo>
+           <msubsup>
+            <mi>
+             B
+            </mi>
+            <mi>
+             z
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <msup>
+          <mi>
+           r
+          </mi>
+          <mo>
+           ″
+          </mo>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Arte do vetor indução magnética (
+      <b>
+       <i>
+        B
+       </i>
+      </b>
+      ) em um solenóide alinhado com o eixo z.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Considerando que no interior da bobina há apenas a componente
+     <b>
+      <i>
+       B
+      </i>
+     </b>
+     <math display="inline" id="m50">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi>
+         z
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     a equação se simplifica da forma:
+    </p>
+    <div class="row formula" id="eeq21">
+     <a name="eq21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <math display="block" id="m51">
+        <mstyle>
+         <mtext>
+          F
+         </mtext>
+        </mstyle>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+        </mfrac>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <msub>
+           <mrow>
+            <mi>
+             B
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             z
+            </mi>
+           </mrow>
+          </msub>
+          <mfrac>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             ∂
+            </mi>
+            <mi>
+             z
+            </mi>
+           </mrow>
+          </mfrac>
+          <mfenced close="]" open="[" separators="">
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               B
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               z
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfenced>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <msup>
+         <mrow>
+          <mi>
+           z
+          </mi>
+         </mrow>
+         <mrow>
+          <mo>
+           ″
+          </mo>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O resultado mostra que embora a magnitude do campo seja máxima no meio geométrico da bobina a força exercida no projétil não o é. Além disso, a força exercida pelo campo magnético no projétil muda de direção após a metade do comprimento da bobina. A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 4
+     </a>
+     apresenta de maneira qualitativa ambas grandezas – o campo e sua derivada. A maximização da velocidade de escape do projétil passa principalmente por evitar que ele atravesse o meio da bobina enquanto a mesma estiver energizada, para evitar a força de frenagem. Isso pode ser obtido ou através de uma bobina mais comprida ou via capacitâncias menores, que produzam pulsos de corrente mais curtos no tempo.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Magnitude do vetor
+      <b>
+       <i>
+        B
+       </i>
+      </b>
+      ao longo da bobina e sua derivada (proporcional à força exercida no projétil). Figura meramente ilustrativa, para análise qualitativa.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Simulações de campo eletromagnético
+    </h1>
+    <p>
+     A simulação eletromagnética completa do sistema apresenta dificuldades uma vez que há a dependência temporal na resposta, i.e., as diferentes posições do projétil dependem das posições anteriores e da corrente instantânea que circula na bobina. Ou seja, o movimento temporal do projétil deveria ser levado em consideração, configurando um típico problema de simulação acoplada (por exemplo avaliação circuital e eletromagnética atuando em conjunto).
+    </p>
+    <p>
+     Além do problema associado ao moviemento, a correta avaliação da força no projétil depende também de caracterização precisa do material – sua permeabilidade magnética. Metais comumente encontrados em laboratórios e oficinas possuem permeabilidades que podem variar algumas ordens de grandeza, assim a simulação, para produzir resultados satisfatórios, devereia ser precedida pela medida laboratorial da permeabilidade complexa do material do projétil.
+    </p>
+    <p>
+     Um modelo computacional foi modelado dentro do pacote CST EM Studio®[
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] CST, www.cst.com. Versão 2015.
+       </span>
+       <br/>
+       <a href="www.cst.com" target="_blank">
+        www.cst.com...
+       </a>
+      </span>
+     </span>
+     ], de acordo com as dimensões do protótipo efetivamente construído (apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 6
+     </a>
+     ). O pacote emprega o Método de Elementos Finitos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] M.N.O. Sadiku, Numerical Techniques in Electromagnetics (CRC Press, Boca Raton, 2000), 2a ed.
+       </span>
+      </span>
+     </span>
+     ]. A
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 5
+     </a>
+     apresenta um detalhe da malha tetraédrica empregada pelo simulador, bem como a amplitude do campo para diferentes posições do projétil. O material do projétil foi considerado como tendo permeabilidade relativa de 100, sem perdas (parte imaginária nula), e a corrente circulando na bobina assumida como sendo 1 A. Pode ser visualizada que a maior densidade de corrente situa-se espacialmente nos extremos do projétil.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Parte superior; detalhe da malha usada na simulação eletromagnética e parte inferior, densidade de corrente simulada para diferentes posições do projétil.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Protótipo (topo, detalhe da bobina; foto intermediária sistema completo) e (parte inferior) dimensões da bobina e projétil usado.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 5
+     </a>
+     percebe-se tambem que quando o projétil encontra-se no meio geométrico da bobina (frame superior) a densidade de corrente encontra-se distribuída de maneira simétrica no projétil – configurando ser essa a posição de repouso, onde as forças de aceleração e frenagem se equivalem.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Protótipo: medidas
+    </h1>
+    <p>
+     Um sistema teste foi montado (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      fig. 6
+     </a>
+     ), com opções de capacitores de 10 mF e 3 mF, suportando tensões nominais de 250 V. A bobina possui uma indutância de 384
+     <math display="inline" id="m52">
+      <mi>
+       μ
+      </mi>
+     </math>
+     H (medida sem projétil), com resistência associada de 1,22
+     <math display="inline" id="m53">
+      <mo>
+       Ω
+      </mo>
+     </math>
+     (400 espiras de fio esmaltado com diâmetro 0,5 mm). A
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela I
+     </a>
+     apresenta as características do circuito RLC obtido. O projétil apresentado na figura foi obtido a partir de um prego de aço, tendo sido serrado para que atingisse as dimensões dadas.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Características do modelo RLC, R= 1,21
+      <math display="inline" id="m54">
+       <mo>
+        Ω
+       </mo>
+      </math>
+      e L = 384
+      <math display="inline" id="m55">
+       <mi>
+        μ
+       </mi>
+      </math>
+      H (sem armadura)
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      fig. 7
+     </a>
+     apresenta a simulação do circuito para as duas condições de capacitância, realizadas no software CST Design Studio™[
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] CST, www.cst.com. Versão 2015.
+       </span>
+       <br/>
+       <a href="www.cst.com" target="_blank">
+        www.cst.com...
+       </a>
+      </span>
+     </span>
+     ], com a forma de onda da corrente circulante na malha.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      (topo) esquemático do circuito simulado. O ponto P1 amostra a corrente na malha; (parte inferior) corrente circulante na malha para os dois capacitores.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A partir da
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 7
+     </a>
+     é possível perceber que a capacitância maior (10 mF) produz um pulso com tempo de duração maior, resultando em um campo magnético na bobina que persiste após o projétil ter atingido o ponto médio do solenóide. Naturalmente a análise apresentada possui a simplificação de que o indutor não possui valor fixo, sendo variante no tempo.
+    </p>
+    <p>
+     O sistema foi ensaiado com os capacitores carregados até a tensão de 250 V, e o projétil foi disparado tendo 5 mm de seu comprimento posicionado dentro da bobina (experimentalmente verificado como produzindo alta velocidade de escape). A medida de corrente foi executada com uma ponta de osciloscópio apropriada para corrente (tipo “
+     <i>
+      clamp
+     </i>
+     ”), que produz uma tensão proporcional à corrente circulante. A
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 8
+     </a>
+     apresenta a comparação entre a medida de corrente e a simulação, executada de acordo com o modelo circuital da
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      fig. 7
+     </a>
+     . Três disparos sucessivos foram executados, para confirmar que a corrente apresente pouca variação. A comparação de ambas curvas mostra que o modelo circuital, embora apresente uma indutância invariante no tempo, permite prever com razoável precisão o comportamento real do sistema.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Comparação entre a corrente medida e simulada, para o projétil posicionado conforme o detalhe superior esquerda. O modelo elétrico correspondente é apresentado na parte superior direita.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     6. Instrumentação para medida de velocidade
+    </h1>
+    <p>
+     Inicialmente, a velocidade do projétil foi estimada como o tempo decorrido entre o sinal de disparo (descarga dos capacitores) e o som causado pelo impacto do projétil contra um alvo plástico colocado a uma distância definida do Coilgun (aproximadamente 1 metro). O som do impacto era captado por um microfone de eletreto simples enquanto o disparo era amostrado eletricamente na chave, ambos sinais lidos em um osciloscópio, para extração do tempo entre ambos pulsos. O sistema operou satisfatoriamente, contudo a velocidade calculada era a velocidade média em função da grande distância (distâncias menores impunham perigos de perfuração e ricocheteio do projétil).
+    </p>
+    <p>
+     Como o interesse consiste em captar a velocidade de escape do projétil exatamente na saída do Coilgun, foi implementada a medida através da indução da tensão devido ao acoplamento do campo do projétil em duas bobinas colocadas na saída do Coilgun – sendo a distância entre as bobinas conhecidas bastava determinar o tempo transcorrido entre os picos de tensão (
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 9
+     </a>
+     ) algo semelhante ao implementado em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] P. Fiala, M. Friedl, M. Kovac, V. Benes, R. Koci and I. Behunek, in: PIERS Proceedings (PIERS, Cambridge, 2013), p. 1238-1241.
+       </span>
+      </span>
+     </span>
+     ]. Contudo foi observado que na prática havia um acoplamento grande entre ambas bobinas leitoras, de maneira que era impossível distinguir dois pulsos com clareza no osciloscópio – a não ser que a distância
+     <math display="inline" id="m60">
+      <mi>
+       d
+      </mi>
+     </math>
+     entre ambas bobinas fosse estendida, o que recairia numa medida de velocidade não tão próxima da instantânea no ponto de escape, mesmo caso do método anterior. Filtros passa-baixa e passa-alta implementados para condicionamento do sinal não possibilitaram melhora na clareza da identificação dos pulsos, sendo portanto esse segundo método abandonado.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Arte mostrando o sistema de medida de velocidade a partir da tensão induzida pelo projétil em duas bobinas separadas por uma distância
+      <math display="inline" id="m61">
+       <mi>
+        d
+       </mi>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     O método final para a medição de velocidade foi baseado em dois lasers posicionados diretamente na saída da bobina, separados por 1,5 cm (conforme
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 9
+     </a>
+     , associada ao parâmetro
+     <math display="inline" id="m62">
+      <mi>
+       d
+      </mi>
+      <mrow>
+       <mo>
+       </mo>
+      </mrow>
+     </math>
+     ). Associado a cada laser há um fototransistor devidamente polarizado que na passagem do projétil muda de estado lógico, sendo assim possível calcular a velocidade através do tempo entre os pulsos, medido em um osciloscópio (
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 10
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Detalhe dos dois lasers acoplados para medir a velocidade de escape do projétil, foto (esquerda) e esquema elétrico simplificado (direita).
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 2
+     </a>
+     apresenta a velocidade medida para diferentes posições inciais do projétil dentro da bobina, parâmetro denominado
+     <math display="inline" id="m63">
+      <msub>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , para valor de capacitância de 3 mF (apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 11
+     </a>
+     ). Há uma posição inicial ótima, que produz a excitação com aceleração apenas em uma direção (i.e. não há força de frenagem devido ao projétil passar pelo ponto médio da bobina). O projétil usado possui uma massa de 2.5 gramas.
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Medida de velocidade e eficiência para diferentes pontos iniciais do projétil dentro da bobina.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Definição do parâmetro
+      <math display="inline" id="m69">
+       <msub>
+        <mrow>
+         <mi>
+          x
+         </mi>
+        </mrow>
+        <mrow>
+         <mi>
+          o
+         </mi>
+        </mrow>
+       </msub>
+      </math>
+      – a distância inicial de penetração do projétil dentro da bobina.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O rendimento extremamente baixo mostra que grande parte da energia se converte em calor, na forma de atrito do projétil com o solenóide e mesmo dissipação nos fios (o interruptor de disparo frequentemente tem seus contatos fundidos em caso de disparos consecutivos sem devido tempo de resfriamento). O ponto de máxima velocidade (
+     <math display="inline" id="m70">
+      <msub>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         o
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     = 5 mm) foi testado também com o capacitor de 10 mF, resultados apresentados na
+     <a class="open-asset-modal" data-target="#ModalTablet3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 3
+     </a>
+     .
+    </p>
+    <div class="row table" id="t3">
+     <a name="t3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3
+      </strong>
+      <br/>
+      Medida de velocidade e para as capacitâncias de 3 mF e 10 mF.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Conforme apresentado anteriormente, embora a capacitância maior apresente uma quantidade de energia eletrostática armazenada a velocidade é menor, uma vez que provavelmente o projétil atravesse a metade da comprimento do solenóide ainda com campo magnético intenso, sendo assim submetido a uma força de frenagem. Para obter melhor uso da capacitância maior seria necessária uma bobina (estator) mais longo.
+    </p>
+    <h1 class="articleSectionTitle">
+     7. Conclusões
+    </h1>
+    <p>
+     O artigo trata do projeto e análise de um Coilgun de pequenas dimensões. Análises relativamente simplificadas possibilitam compreensão dos fenômenos de aceleração do projétil metálico inserido no interior de um solenóide com núcleo de ar. Um protótipo de baixo custo foi desenvolvido e testado, com diferentes aspectos constructivos e operacionais avaliados. Finalmente, a instrumentação necessária para medida da velocidade de escape foi desenvolvida após três tentativas diferentes de implementação, possibilitando avaliar o desempenho do sistema de maneira quantitativa.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] B. Marder and A. Coilgun, IEEE Transactions on Magnetics
+        <b>
+         27
+        </b>
+        , 701 (1993).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] E. Levi, J.L. He, Z. Zabar and L. Birenbaum, IEEE Transactions on Magnetics
+        <b>
+         27
+        </b>
+        , 628 (1993).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] R. Kaye, B. Turman, M. Aubuchon, D. Lamppa, G. Mann, Edward van Reuth, K. Fulton, G. Malejko, P. Magnotti, D. Nguyen, D. Borgwarth, A. Johnson and R. Poppe, in:
+        <i>
+         16th IEEE International Pulsed Power Conference
+        </i>
+        (IEEE, Piscataway, 2007), p. 1810-1813.
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] T.R. Lockner, R.J. Kaye and Bob N. Turman, in:
+        <i>
+         Modulator Symposium
+        </i>
+        (IEEE, Piscataway, 2004), p. 119-121.
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] B.D. Skurdal and R.L. Gaigler, IEEE Transactions on Magnetics
+        <b>
+         45
+        </b>
+        , 458 (2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] U. Hasirci and A. Balikci, in:
+        <i>
+         4th International Conference on Recent Advances in Space Technologis
+        </i>
+        (IEEE, Piscataway, 2009), p. 233-236.
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] H.D. Fair, IEEE Transactions on Magnetics
+        <b>
+         45
+        </b>
+        , 225 (2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] J.M. Schroeder, J.H. Gully and M.D. Driga, IEEE Transactions in Magnetics
+        <b>
+         25
+        </b>
+        , 504, (1989).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] R. Pastore, G. Giannini, R.B. Morles, M. Marchetti and D. Micheli, in:
+        <i>
+         Nanocomposites – New Trends and Developments
+        </i>
+        (INTECH Open Access Publisher, Croatia, 2012), chap. 9.
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] E.M. Purcell,
+        <i>
+         Electricity and Magnetism
+        </i>
+        (McGraw Hill, New York, 1985), 2a ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] K. Chan, G. Clark, D. Helmlinger and D. Ng,
+        <i>
+         Electromagnetic Coil Gun: Final Report
+        </i>
+        , disponível em http://gdclark.com/wp-content/uploads/2014/08/FinalReport1.pdf, acesso em 12/11/2015.
+        <br/>
+        <a href="http://gdclark.com/wp-content/uploads/2014/08/FinalReport1.pdf" target="_blank">
+         » http://gdclark.com/wp-content/uploads/2014/08/FinalReport1.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] CST, www.cst.com Versão 2015.
+        <br/>
+        <a href="http://www.cst.com" target="_blank">
+         » www.cst.com
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] M.N.O. Sadiku,
+        <i>
+         Numerical Techniques in Electromagnetics
+        </i>
+        (CRC Press, Boca Raton, 2000), 2a ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] P. Fiala, M. Friedl, M. Kovac, V. Benes, R. Koci and I. Behunek, in:
+        <i>
+         PIERS Proceedings
+        </i>
+        (PIERS, Cambridge, 2013), p. 1238-1241.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Jun 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        09 Dez 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        17 Jan 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

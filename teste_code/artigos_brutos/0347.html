@@ -1,0 +1,3897 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2020-0313" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2020-0313
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0313">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Uma ferramenta para simulação de sistemas superparamagnéticos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  A tool for simulating superparamagnetic systems
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Suriel Artur Rogowski Gonçalves
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Regional do Noroeste do Estado do Rio Grande do Sul, Ijuí, RS, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Benjamim Zucolotto
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Regional do Noroeste do Estado do Rio Grande do Sul, Ijuí, RS, Brasil.
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:benjamimz@yahoo.com.br">
+      benjamimz@yahoo.com.br
+     </a>
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-9129-7206">
+     http://orcid.org/0000-0001-9129-7206
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Apresentamos um software desenvolvido com o objetivo de proporcionar um melhor entendimento acerca do comportamento de sistemas superparamagnéticos sujeitos a campos magnéticos externos, sem a necessidade de conhecimento prévio em programação. O simulador reproduz o comportamento da magnetização em função de diversas variáveis, tais como temperatura, magnetização de saturação e diâmetro médio dos momentos magnéticos. O problema é abordado de forma simplificada através da função de Langevin. Nosso trabalho busca auxiliar no estudo de materiais magnéticos nanoestruturados, normalmente de difícil abordagem experimental no âmbito do ensino, assim também servindo de base para futuros pesquisadores da área.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     superparamagnetismo; Langevin; simulador
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     We introduce a software aimed to provide with a better understanding over the behavior of superparamagnetic systems under external magnetic fields that does not require previous knowledge in coding. Our simulator generates the magnetization behavior according to many variables such as temperature, saturation magnetization, and the average diameter of the magnetic moment. The problem is tackled in a very simple way via the Langevin function. Our work ultimately seeks to assist learning in nanostructured magnetic materials, quite often a bit hard to grasp by many students, thereby also being of use for prominent researchers in the field.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     superparamagnetism; Langevin; simulator
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A Física nos permite observar, descrever e entender a regularidade dos fenômenos naturais. Entretanto, ferramentas de ensino disponíveis são muitas vezes limitadas, afetando a plenitude do processo de aprendizagem devido a dificuldades na experimentação. Logo, a educação está passando por mudanças consideráveis nas últimas décadas. A experimentação através de simulação tem sido amplamente utilizada na construção de materiais didáticos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.S. Figueira, Revista Brasileira de Ensino de Física 27, 613 (2005).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] V. Heckler, M.F.O. Saraiva e K.S. Oliveira Filho, Revista Brasileira de Ensino de Física 29, 267 (2007).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] A. Gelir, M. Kocaman e I. Pekacar, Physics Education 54, 055012 (2019).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] V. Mehta e D.C. Lane, Physics Education 53, 045016 (2018).
+       </span>
+      </span>
+     </span>
+     ]. É neste sentido que a modelagem computacional se insere como uma ferramenta poderosa, além de ser aliada ao desenvolvimento científico.
+    </p>
+    <p>
+     !O uso de ferramentas interativas que permitem a inserção de dados pelo usuário para visualização do comportamento de sistemas físicos tem sido usado na consolidação do conhecimento. A simulação criada por modelo a partir do GUIDE do MATLAB é usada na análise da propagação de ondas de tensão em uma linha de transmissão [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] F.M. Cruz, A.A.F. Moura, A.P. Moura, E.P. Rocha, D.C.C. Crisóstomo e H.T.Q. Lemos, Revista Brasileira de Ensino de Física 41, e20190123 (2019).
+       </span>
+      </span>
+     </span>
+     ]. O
+     <i>
+      JARVES
+     </i>
+     juntamente com o
+     <i>
+      OpenFOAM
+     </i>
+     é empregado na simulação de fluidinâmica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] T.F.D. Fernandes e N.L. Moreira, Revista Brasileira de Ensino de Física 41, e20180304 (2019).
+       </span>
+      </span>
+     </span>
+     ]. A simulação computacional via cálculo de soluções numéricas é muito empregado em problemas clássicos de transmissão de calor [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] L.M. Holanda, I.R.O. Ramos, A.P. Lima, J.P.M. Braga e H.T.C.M. Souza, Revista Brasileira de Ensino de Física 40, e2313 (2018).
+       </span>
+      </span>
+     </span>
+     ]. Não obstante, o
+     <i>
+      Java
+     </i>
+     tem sido usado na animação de modelagem via software
+     <i>
+      Modellus
+     </i>
+     para simples estudo qualitativo de hidrostática [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] R.B. Werlang, R.S. Schneider e F.L. Silveira, Revista Brasileira de Ensino de Física 30, 1503 (2008).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A aplicação desse tipo de metodologia no estudo de materiais magnéticos, por exemplo, torna-se bastante útil quando o primeiro e único contato com a teoria, por parte do estudante, frequentemente se dá através de uma abordagem que envolve apenas conceitos das principais propriedade magnéticas sem a realização de simulação ou experimentação [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] G.A.P. Ribeiro, Revista Brasileira de Ensino de Física 22, 299 (2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] L.M. Holanda, I.R.O. Ramos, A.P. Lima, J.P.M. Braga e H.T.C.M. Souza, Revista Brasileira de Ensino de Física 42, e20190196 (2000).
+       </span>
+      </span>
+     </span>
+     ]. O estudo de materiais magnéticos está em evidência nos últimos anos pois estes desempenham um papel muito importante tanto no aspecto científico quanto tecnológico. Por exemplo, materiais superparamagnéticos são importantes no desenvolvimento de fármacos para tratamento de câncer [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] S. Palanisamy e Y.M. Wang, Dalton Transactions 48, 9490 (2019).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] D. Cai, L. Liu, C. Han, X. Ma, J. Qian, J. Zhou e W. Zhu, Scientific Reports 9, 14475 (2019).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] D. Maity e G. Kandasamy, in: Nanotechnology Characterization Tools for Tissue Engineering and Medical Therapy, editado por S.S.R.C. Kumar (Springer, Berlin, 2019).
+       </span>
+      </span>
+     </span>
+     ], dentre inúmeras outras aplicações. Alguns trabalhos tem ido nessa direção ao tratar de sistemas magnéticos nanoestruturados voltado ao ensino da Física, o que abre portas para uma gama de possibilidades [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] A.P. Guimarães, Revista Brasileira de Ensino de Física 22, 382 (2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] M. Knobel, Revista Brasileira de Ensino de Física 22, 387 (2000).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Neste artigo, apresentamos um software intitulado SPmag Tools 1.0, desenvolvido com o objetivo de proporcionar uma visão do comportamento de sistemas superparamagnéticos sujeitos a campos magnéticos externos por meio de simulações que reproduzem o comportamento da magnetização em função de diversas variáveis, tais como temperatura, magnetização de saturação e diâmetro médio dos momentos magnéticos.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Fundamentos do Magnetismo
+    </h1>
+    <p>
+     Na presente seção apresentamos os fundamentos do magnetismo de interesse uma vez que, para compreender o comportamento superparamagnético (Seção 2.3), é interessante o entendimento de outros dois comportamentos que aparecem parcialmente nos materiais superparamagnéticos; o paramagnetismo e o ferromagnetismo.
+    </p>
+    <h2>
+     2.1. Paramagnetismo
+    </h2>
+    <p>
+     Uma vasta gama de íons magnéticos apresenta um comportamento de interação entre íons vizinhos extremamente fraco, considerando-se inexistente o acoplamento de seus momentos magnéticos, deixando os mesmo com orientações aleatórias. Estes materiais configuram-se em um estado paramagnético. Eles apresentam uma grande sensibilidade magnética a aplicação de um campo magnético externo, que tende a alinhar os momentos magnéticos tornando suas magnetizações diferentes de zero. Entretanto, quanto maior a temperatura à qual o material encontra-se exposto, maior a agitação térmica que tende a desalinhar seus momentos magnéticos; é uma espécie de competição entre energia magnética, oriunda do campo magnético externo, e a energia térmica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] K.H.J. Buschow e F.R. Boer, Physics of Magnetism and Magnetic Materials (Kluwer Academic/Plenum Publishers, New York, 2003).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] C. Kittel, Introduction to Solid State Physics (Wiley, New York, 2005).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Um sistema paramagnético pode ser representado por um
+     <i>
+      ensamble
+     </i>
+     canônico. Supondo que o campo magnético externo seja aplicado na direção do eixo
+     <i>
+      Z
+     </i>
+     , a energia de interação dos dipolos magnéticos de cada íon com o campo assume
+     <math>
+      <mn>
+       2
+      </mn>
+      <mi>
+       J
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     valores quantizados, com o número quântico magnético
+     <math>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mrow>
+        <mi>
+         z
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     variando de
+     <math>
+      <mo>
+       −
+      </mo>
+      <mi>
+       j
+      </mi>
+      <mo>
+       ≤
+      </mo>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mrow>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       ≤
+      </mo>
+      <mi>
+       j
+      </mi>
+     </math>
+     , sendo
+     <i>
+      J
+     </i>
+     o momento angular orbital. Assim, a função de partição de cada íon independente é dada por
+     <math>
+      <msub>
+       <mi>
+        Z
+       </mi>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <munderover>
+       <mo>
+        ∑
+       </mo>
+       <mrow>
+        <msub>
+         <mi>
+          m
+         </mi>
+         <mrow>
+          <mi>
+           z
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         j
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </munderover>
+      <mrow>
+       <mi mathvariant="normal">
+        e
+       </mi>
+       <mi mathvariant="normal">
+        x
+       </mi>
+       <mi mathvariant="normal">
+        p
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mo>
+       −
+      </mo>
+      <msub>
+       <mi>
+        ε
+       </mi>
+       <mrow>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <msub>
+       <mi>
+        k
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       T
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     , na qual a energia do estado quântico de um orbital pode ser escrita como
+     <math>
+      <msub>
+       <mi>
+        ε
+       </mi>
+       <mrow>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mo>
+       −
+      </mo>
+      <msub>
+       <mi>
+        m
+       </mi>
+       <mrow>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       g
+      </mi>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       H
+      </mi>
+     </math>
+     quando submetido a um campo magnético. Nesta situação, o momento magnético médio é
+     <math>
+      <mi>
+       μ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        k
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       T
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi mathvariant="normal">
+       ∂
+      </mi>
+      <mrow>
+       <mi mathvariant="normal">
+        l
+       </mi>
+       <mi mathvariant="normal">
+        n
+       </mi>
+      </mrow>
+      <msub>
+       <mi>
+        Z
+       </mi>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mi mathvariant="normal">
+       ∂
+      </mi>
+      <mi>
+       H
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     . Observa-se que a função de partição trata da soma dos termos de uma progressão geométrica. Com isso, podemos determinar a magnetização total de um sistema paramagnético multiplicando o momento magnético médio pelo número de íons por unidade de volume. Desta forma temos
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           P
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ≅
+        </mo>
+        <mi>
+         N
+        </mi>
+        <mi>
+         g
+        </mi>
+        <mi>
+         J
+        </mi>
+        <msub>
+         <mi>
+          μ
+         </mi>
+         <mrow>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          B
+         </mi>
+         <mrow>
+          <mi>
+           J
+          </mi>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         X
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde,
+     <i>
+      g
+     </i>
+     é a constante denominada fator giromagnético de Landé e
+     <math>
+      <msub>
+       <mi>
+        B
+       </mi>
+       <mrow>
+        <mi>
+         J
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       X
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     é conhecida como a função de Brillouin, a qual é dada por
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mtable columnalign="right center left" columnspacing="0 thickmathspace" displaystyle="true" rowspacing="3pt">
+         <mtr>
+          <mtd>
+           <msub>
+            <mi>
+             B
+            </mi>
+            <mrow>
+             <mi>
+              J
+             </mi>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            X
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               J
+              </mi>
+              <mo>
+               +
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+             <mn>
+              2
+             </mn>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mrow>
+            <mi mathvariant="normal">
+             c
+            </mi>
+            <mi mathvariant="normal">
+             o
+            </mi>
+            <mi mathvariant="normal">
+             t
+            </mi>
+            <mi mathvariant="normal">
+             h
+            </mi>
+           </mrow>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mn>
+               2
+              </mn>
+              <mi>
+               J
+              </mi>
+              <mo>
+               +
+              </mo>
+              <mi>
+               X
+              </mi>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               J
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            −
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              J
+             </mi>
+            </mrow>
+           </mfrac>
+           <mrow>
+            <mi mathvariant="normal">
+             c
+            </mi>
+            <mi mathvariant="normal">
+             o
+            </mi>
+            <mi mathvariant="normal">
+             t
+            </mi>
+            <mi mathvariant="normal">
+             h
+            </mi>
+           </mrow>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mi>
+              X
+             </mi>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               J
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde,
+     <math>
+      <mi>
+       X
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       g
+      </mi>
+      <mi>
+       J
+      </mi>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       H
+      </mi>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <msub>
+       <mi>
+        k
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       T
+      </mi>
+     </math>
+     é a razão entre a energia de interação do momento magnético com o campo, e a energia térmica.
+    </p>
+    <p>
+     Observa-se que a grandeza
+     <i>
+      X
+     </i>
+     é adimensional, caso considerarmos
+     <math>
+      <mi>
+       X
+      </mi>
+      <mo>
+       ≫
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     obtemos
+     <math>
+      <msub>
+       <mi>
+        B
+       </mi>
+       <mrow>
+        <mi>
+         J
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       X
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     . Essa situação é existente quando o sistema magnético está exposto a um campo magnético à baixa temperatura e/ou alto campo. Nestas condições a magnetização do sistema tende a um valor de saturação. Consequentemente, temos
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           P
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           S
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          B
+         </mi>
+         <mrow>
+          <mi>
+           J
+          </mi>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         X
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde a magnetização de saturação é dada por
+     <math>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       N
+      </mi>
+      <mi>
+       g
+      </mi>
+      <mi>
+       J
+      </mi>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Normalmente, considera-se as condições em que são realizadas medições em paramagnetos como sendo “normais” e “moderadas”, quando a temperatura de medição é próxima da ambiente e o máximo valor do campo aplicado encontra-se na faixa entre 5000 e 10000 Oe, respectivamente. Ou seja, as medições são realizadas em regiões das curvas de magnetização que possuem comportamento aproximadamente linear [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] B.D. Cullity e C.D. Graham, Introduction to Magnetic Materials (John Wiley &amp; Sons, New Jersey, 2009).
+       </span>
+      </span>
+     </span>
+     ]. Neste caso, podemos considerar um
+     <i>
+      X
+     </i>
+     muito pequeno e expandir
+     <math>
+      <mrow>
+       <mi mathvariant="normal">
+        c
+       </mi>
+       <mi mathvariant="normal">
+        o
+       </mi>
+       <mi mathvariant="normal">
+        t
+       </mi>
+       <mi mathvariant="normal">
+        h
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       X
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     , da função de Brillouin, em série de Taylor até segunda ordem e teremos sua substituição por
+     <math>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mi>
+       X
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mi>
+       X
+      </mi>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mn>
+       3
+      </mn>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     , logo, teremos
+     <math>
+      <msub>
+       <mi>
+        B
+       </mi>
+       <mrow>
+        <mi>
+         J
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       X
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       J
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mi>
+       X
+      </mi>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mn>
+       3
+      </mn>
+      <mi>
+       J
+      </mi>
+     </math>
+     . Portanto, a magnetização paramagnética nestas condições é dada por
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           P
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ≈
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           N
+          </mi>
+          <msup>
+           <mi>
+            g
+           </mi>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <msub>
+           <mi>
+            μ
+           </mi>
+           <mrow>
+            <mi>
+             B
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           J
+          </mi>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           J
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo stretchy="false">
+           )
+          </mo>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           3
+          </mn>
+          <msub>
+           <mi>
+            k
+           </mi>
+           <mrow>
+            <mi>
+             b
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           T
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Outra forma de caracterização magnética pode ser realizada por meio de análise da sensibilidade da magnetização de um sistema a um campo magnético aplicado, chamada susceptibilidade magnética,
+     <math>
+      <mi>
+       χ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi mathvariant="normal">
+       ∂
+      </mi>
+      <mi>
+       M
+      </mi>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mi mathvariant="normal">
+       ∂
+      </mi>
+      <mi>
+       H
+      </mi>
+     </math>
+     . Nesse contexto, considerando a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação (4)
+     </a>
+     podemos representar a susceptibilidade magnética como sendo
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mi>
+         χ
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           N
+          </mi>
+          <msup>
+           <mi>
+            g
+           </mi>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+          <msub>
+           <mi>
+            μ
+           </mi>
+           <mrow>
+            <mi>
+             B
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           J
+          </mi>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           J
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+         <mrow>
+          <mn>
+           3
+          </mn>
+          <msub>
+           <mi>
+            k
+           </mi>
+           <mrow>
+            <mi>
+             B
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           T
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Observando a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação (5)
+     </a>
+     , verifica-se que apenas a temperatura é variável, sendo constante a quantidade
+     <math>
+      <mi>
+       C
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       N
+      </mi>
+      <msup>
+       <mi>
+        g
+       </mi>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       J
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       J
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mn>
+       3
+      </mn>
+      <msub>
+       <mi>
+        k
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     , conhecida como constante de Curie. Sendo assim, a susceptibilidade recíproca dos paramagnetos varia linearmente com a temperatura, Lei de Curie, dada por
+     <math>
+      <mi>
+       χ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       C
+      </mi>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mi>
+       T
+      </mi>
+     </math>
+     .
+    </p>
+    <p>
+     Estas relações aqui expressas são válidas para sistemas em regime paramagnético típico, não obstante, mediante algumas modificações, são também válidas para sistemas ferromagnéticos, ferrimagnéticos e antiferromagnéticos acima de certa temperatura crítica. Isso ocorre quando a agitação térmica é alta o suficiente para vencer o acoplamento existente entre os momentos magnéticos, em outras palavras, quando os momentos magnéticos do sistema passam a ter orientação aleatória entre si devido à alta energia térmica.
+    </p>
+    <h2>
+     2.2. Ferromagnetismo
+    </h2>
+    <p>
+     Nesta seção, inicialmente vamos apresentar um comportamento experimental típico em sistemas ferromagnéticos, a conhecida curva de histerese magnética. Os momentos magnéticos de um sistema ferromagnético tendem a se acoplar entre si formando regiões no interior do material dentro das quais todos se encontram alinhados em uma mesma direção e sentido. Tais regiões são chamadas de domínios magnéticos. Quando um campo magnético externo é aplicado sobre o material, as superfícies fronteiriças entre tais domínios, denominadas paredes de domínio, começam a ser mover à medida em que o campo aplicado aumenta, de forma a maximizar o volume dos domínios cujos momentos de dipolo já se encontravam relativamente bem alinhados com o campo aplicado e a diminuir o volume daqueles cujos momentos de dipolo não se encontravam favoravelmente alinhados na direção do mesmo. A magnetização do sistema irá aumentar até que os momentos magnéticos presentes em todos os domínios se encontrem com o melhor alinhamento possível em relação ao campo aplicado. Este valor de magnetização é chamado de magnetização de saturação (
+     <math>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     ). No entanto, partindo da situação anterior e decrescendo este campo até zerá-lo, a trajetória descrita pela curva de desmagnetização não é a mesma que a descrita quando o campo aplicado foi aumentado (curva de magnetização). Isso ocorre porque os movimentos das paredes de domínio são frequentemente detidos por defeitos na estrutura cristalina do material, dando origem ao que chamamos de histerese magnética. Isso significa que o material possui uma memória magnética, também conhecida como magnetização remanente (
+     <math>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         R
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     ). Para zerar esta remanência magnética é necessário que se aplique um campo magnético de certa intensidade no sentido contrário ao inicial, conhecido como coercivo ou coercitivo (
+     <math>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     ). Caso o campo aplicado extrapole o valor do campo coercivo, a magnetização aumentará progressivamente no sentido oposto até atingir a saturação. Para zerar novamente a magnetização basta fazer o processo inverso, com isso, alternando o campo magnético de altos valores de um sentido para outro, ver-se-á uma curva de histerese sendo delineada pela trajetória da magnetização da amostra em função do campo magnético aplicado.
+    </p>
+    <p>
+     Nos materiais ferromagnéticos, a Lei de Curie perde sua validade, pois seus momentos de dipolo magnéticos apresentam interação de troca positiva entre vizinhos favorecendo o alinhamento em direções e sentidos iguais. Entretanto, assim como em sistemas paramagnéticos, o comportamento ferromagnético é dependente da temperatura, uma vez que a agitação térmica é capaz de suplantar o acoplamento magnético. Portanto, considerando o mencionado na Sec. 2.1, o comportamento ferromagnético só é observado em temperaturas abaixo de certa temperatura crítica
+     <math>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Weiss [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] B.D. Cullity, Introduction to Magnetic Materials (Addison-Wesley, New York, 1972).
+       </span>
+      </span>
+     </span>
+     ] propôs uma teoria com pressupostos clássicos. De forma sucinta, foi o primeiro a propor que nos sistemas ferromagnéticos os momentos magnéticos estão completamente alinhados dentro de certas regiões que ficaram conhecidas como domínios de Weiss. Em sua teoria, considerou a presença de um campo magnético interno extremamente forte nestes domínios, cuja origem está na interação entre os spins atômicos, o qual denominou campo molecular
+     <math>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , o qual pode ser descrito de forma simples como sendo
+     <math>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        N
+       </mi>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       M
+      </mi>
+     </math>
+     , sendo
+     <math>
+      <msub>
+       <mi>
+        N
+       </mi>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     conhecida como constante molecular de Weiss. Weiss substituiu o campo
+     <i>
+      H
+     </i>
+     aplicado externamente no caso paramagnético por um campo efetivo
+     <math>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mrow>
+        <mi>
+         e
+        </mi>
+        <mi>
+         f
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     dado pela soma do campo aplicado em certa direção
+     <math>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mrow>
+        <mi>
+         e
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mi>
+         t
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     com o campo molecular interno
+     <math>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     . Com isso, considerando a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação (3)
+     </a>
+     e substituindo o argumento
+     <i>
+      X
+     </i>
+     da função de Brillouin por
+     <i>
+      Y
+     </i>
+     , definido por
+     <math>
+      <mi>
+       Y
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       g
+      </mi>
+      <mi>
+       J
+      </mi>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mrow>
+        <mi>
+         e
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mi>
+         t
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       +
+      </mo>
+      <msub>
+       <mi>
+        N
+       </mi>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       M
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <msub>
+       <mi>
+        k
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       T
+      </mi>
+     </math>
+     , obtemos a seguinte expressão:
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mfrac>
+         <mi>
+          M
+         </mi>
+         <msub>
+          <mi>
+           M
+          </mi>
+          <mrow>
+           <mi>
+            S
+           </mi>
+          </mrow>
+         </msub>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           g
+          </mi>
+          <msub>
+           <mi>
+            μ
+           </mi>
+           <mrow>
+            <mi>
+             B
+            </mi>
+           </mrow>
+          </msub>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           J
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+         <mrow>
+          <mn>
+           3
+          </mn>
+          <msub>
+           <mi>
+            k
+           </mi>
+           <mrow>
+            <mi>
+             B
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+        </mfrac>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>
+            H
+           </mi>
+           <mrow>
+            <mi>
+             e
+            </mi>
+            <mi>
+             x
+            </mi>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mi>
+            N
+           </mi>
+           <mrow>
+            <mi>
+             w
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           M
+          </mi>
+         </mrow>
+         <mi>
+          T
+         </mi>
+        </mfrac>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Utilizando a mesma analogia considerada na obtenção da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação (4)
+     </a>
+     , porém, considerando o efeito do campo molecular, podemos descrever da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação 6
+     </a>
+     a magnetização como sendo
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mi>
+         M
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>
+            T
+           </mi>
+           <mrow>
+            <mi>
+             C
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>
+            N
+           </mi>
+           <mrow>
+            <mi>
+             w
+            </mi>
+           </mrow>
+          </msub>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           T
+          </mi>
+          <mo>
+           −
+          </mo>
+          <msub>
+           <mi>
+            T
+           </mi>
+           <mrow>
+            <mi>
+             C
+            </mi>
+           </mrow>
+          </msub>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mfrac>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a temperatura crítica ou temperatura de Curie, a qual é dada por
+     <math>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       g
+      </mi>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       J
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mo stretchy="false">
+       )
+      </mo>
+      <msub>
+       <mi>
+        N
+       </mi>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+      </msub>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mn>
+       3
+      </mn>
+      <msub>
+       <mi>
+        k
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     . Portanto, a curva de magnetização para os sistemas ferromagnéticos decai com o aumento da temperatura, sendo válidas as equações acima para temperaturas inferiores a
+     <math>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , pois acima desta, o comportamento do sistema magnético passa a ser paramagnético, como dito anteriormente. Não obstante, fazendo uma analogia com a Lei de Curie do paramagnetismo, a susceptibilidade magnética de um ferromagneto, em temperaturas acima de
+     <math>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é dada pela Lei de Curie-Weiss:
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mi>
+         χ
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi mathvariant="normal">
+           ∂
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           ∂
+          </mi>
+          <mi>
+           H
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mi>
+          C
+         </mi>
+         <mrow>
+          <mi>
+           T
+          </mi>
+          <mo>
+           −
+          </mo>
+          <msub>
+           <mi>
+            T
+           </mi>
+           <mrow>
+            <mi>
+             C
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+        </mfrac>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <mi>
+       C
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <msub>
+       <mi>
+        N
+       </mi>
+       <mrow>
+        <mi>
+         w
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     . Observa-se que a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação (8)
+     </a>
+     é válida apenas para
+     <math>
+      <mi>
+       T
+      </mi>
+      <mo>
+       &gt;
+      </mo>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Uma metodologia utilizada por pesquisadores que buscam interpretar o comportamento magnético destes sistemas via medidas de magnetização em função da temperatura é representando graficamente o inverso da susceptibilidade em função da temperatura. Quando os dados interceptam o eixo da temperatura na origem, o sistema apresenta um comportamento paramagnético (Lei de Curie); e quando interceptam em certo valor positivo de temperatura (
+     <math>
+      <msub>
+       <mi>
+        T
+       </mi>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     ), o sistema apresenta um comportamento ferromagnético (Lei de Curie-Weiss).
+    </p>
+    <h2>
+     2.3. Superparamagnetismo
+    </h2>
+    <p>
+     Em 1930, Frankel e Doefman [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [20] J. Frenkel e J. Doefman, Nature 126, 274 (1930).
+       </span>
+      </span>
+     </span>
+     ] apresentaram um trabalho pioneiro sobre o estudo de amostras magnéticas com tamanhos nanométricos. Mostraram que abaixo de certo tamanho crítico de partícula, energeticamente é mais favorável que as partículas apresentem um único domínio magnético, chamado monodomínio magnético. Posteriormente, muitos trabalhos consideraram e aprimoraram este trabalho. Podemos destacar o estudo de Néel [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] L. Néel, Annales Geophysicae (C.N.R.S.) 5, 99 (1949).
+       </span>
+      </span>
+     </span>
+     ] de 1949, no qual mostrou uma grande importância da flutuação térmica capaz de alterar a direção dos momentos magnéticos, desde que a energia térmica
+     <math>
+      <msub>
+       <mi>
+        k
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       T
+      </mi>
+     </math>
+     seja suficiente para superar a barreira de energia de anisotropia magnética destes domínios magnéticos, desconsiderando a relaxação temporal [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] L. Néel, Superparamagnétisme des grains très fins antiferromagnétiques (Comptes Rendus Hebdomadaires Des Seances De L'Academie Des Sciences, Paris, 1961), v. 252.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] L. Néel, OEuvres scientifiques de Louis Neel (Centre national de la recherche scientifique, Paris, 1978).
+       </span>
+      </span>
+     </span>
+     ]. Quando isso acontece, estes materiais se comportam de forma similar aos paramagnéticos. Entretanto, quando a energia térmica é da ordem da energia de anisotropia, uma curva similar à função de Brillouin começa a surgir devido à lenta reorientação dos domínios magnéticos, mas não pode ser representada pela mesma
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        A função de Brillouin representa curvas M(H) para sistemas paramagnéticos, sendo J da ordem do momento angular total do íon magnético. Entretanto, com base nesta função obtém-se uma aproximação clássica para função de Langevin, a qual descreve estas curvas para sistemas superparamagnéticos, que será apresentada em breve.
+       </span>
+      </span>
+     </span>
+     . Logo, quando a energia térmica é inferior a energia de anisotropia magnética, surge remanência e coercividade magnética, ou seja, o
+     <i>
+      loop
+     </i>
+     de histerese se torna evidente. Estes materiais foram nomeados por Bean e Livingston [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] C.P. Bean e J.D. Livingston, Journal of Applied Physics 30, S120 (1959).
+       </span>
+      </span>
+     </span>
+     ] como superparamagnéticos.
+    </p>
+    <p>
+     As partículas de um sistema superparamagnético são compostas pelo agrupamento de pequenos momentos magnéticos na forma de domínios magnéticos não interagentes. Estes agrupamentos podem ser formados por multi ou monodomínios magnéticos. Quando as partículas possuem um tamanho significativo, estes agrupamentos podem ser divididos em dois os mais grupos com interfaces entre vizinhos que tornam a mudança de orientação gradual, pois ocorre o favorecimento da formação das paredes de Bloch, estes são os multidomínios. Entretanto, quando as partículas possuem um tamanho muito reduzido, abaixo de um volume crítico, a formação das paredes de Bloch é desfavorecida energeticamente tornando as direções de magnetização dos momentos alinhadas em um único sentido, ou seja, formam-se monodomínios magnéticos.
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        O tamanho crítico é aquele de dimensões da ordem das paredes de Bloch do sistema.
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     De modo geral, em um sistema superparamagnético monodomínio, a energia de interação de troca entre os momentos magnéticos de uma partícula é muito maior que a energia térmica. Logo, a energia térmica é muito maior que as possíveis energias de interações dipolares clássicas entre as partículas. Matematicamente isso pode ser expresso da seguinte maneira:
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mo fence="false" stretchy="false">
+         |
+        </mo>
+        <msub>
+         <mi>
+          J
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           n
+          </mi>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">
+         |
+        </mo>
+        <mo>
+         ≫
+        </mo>
+        <msub>
+         <mi>
+          k
+         </mi>
+         <mrow>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </msub>
+        <mi>
+         T
+        </mi>
+        <mo>
+         ≫
+        </mo>
+        <mo fence="false" stretchy="false">
+         |
+        </mo>
+        <msub>
+         <mi>
+          J
+         </mi>
+         <mrow>
+          <mi>
+           e
+          </mi>
+          <mi>
+           x
+          </mi>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">
+         |
+        </mo>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Com isso, podemos representar este tipo de sistema tendo domínios interagindo internamente de forma ferromagnética, mas entre si, interagindo paramagneticamente.
+    </p>
+    <p>
+     Supondo que uma partícula superparamagnética possui em seu interior momentos magnéticos que se comportam de forma análoga, acoplados uns com os outros, podemos considerar que cada partícula possui um momento de dipolo total dado pela soma dos momentos magnéticos moleculares (ou atômicos) em seu interior,
+     <math>
+      <mi>
+       μ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         a
+        </mi>
+        <mi>
+         t
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       N
+      </mi>
+     </math>
+     , sendo
+     <math>
+      <msub>
+       <mi>
+        μ
+       </mi>
+       <mrow>
+        <mi>
+         a
+        </mi>
+        <mi>
+         t
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     o momento magnético de cada íon e
+     <i>
+      N
+     </i>
+     o número de íons presentes na partícula. Portanto, o comportamento da magnetização total de um sistema superparamagnético submetido a um campo magnético externo pode ser representado pela aproximação da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação 1
+     </a>
+     considerando
+     <math>
+      <mi>
+       J
+      </mi>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mi mathvariant="normal">
+       ∞
+      </mi>
+     </math>
+     ,
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block">
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           S
+          </mi>
+          <mi>
+           P
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <munder>
+         <mo form="prefix" movablelimits="true">
+          lim
+         </mo>
+         <mrow>
+          <mi>
+           J
+          </mi>
+          <mo stretchy="false">
+           →
+          </mo>
+          <mi mathvariant="normal">
+           ∞
+          </mi>
+         </mrow>
+        </munder>
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           P
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     ou seja,
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block">
+        <mtable columnalign="right center left" columnspacing="0 thickmathspace" displaystyle="true" rowspacing="3pt">
+         <mtr>
+          <mtd>
+           <munder>
+            <mo form="prefix" movablelimits="true">
+             lim
+            </mo>
+            <mrow>
+             <mi>
+              J
+             </mi>
+             <mo stretchy="false">
+              →
+             </mo>
+             <mi mathvariant="normal">
+              ∞
+             </mi>
+            </mrow>
+           </munder>
+           <msub>
+            <mi>
+             B
+            </mi>
+            <mrow>
+             <mi>
+              J
+             </mi>
+            </mrow>
+           </msub>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mi>
+             X
+            </mi>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <munder>
+            <mo form="prefix" movablelimits="true">
+             lim
+            </mo>
+            <mrow>
+             <mi>
+              J
+             </mi>
+             <mo stretchy="false">
+              →
+             </mo>
+             <mi mathvariant="normal">
+              ∞
+             </mi>
+            </mrow>
+           </munder>
+           <msub>
+            <mi>
+             B
+            </mi>
+            <mrow>
+             <mi>
+              J
+             </mi>
+            </mrow>
+           </msub>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               g
+              </mi>
+              <mi>
+               J
+              </mi>
+              <msub>
+               <mi>
+                μ
+               </mi>
+               <mrow>
+                <mi>
+                 B
+                </mi>
+               </mrow>
+              </msub>
+              <mi>
+               H
+              </mi>
+             </mrow>
+             <mrow>
+              <msub>
+               <mi>
+                k
+               </mi>
+               <mrow>
+                <mi>
+                 B
+                </mi>
+               </mrow>
+              </msub>
+              <mi>
+               T
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            =
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mrow>
+            <mi mathvariant="normal">
+             c
+            </mi>
+            <mi mathvariant="normal">
+             o
+            </mi>
+            <mi mathvariant="normal">
+             t
+            </mi>
+            <mi mathvariant="normal">
+             h
+            </mi>
+           </mrow>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               μ
+              </mi>
+              <mi>
+               H
+              </mi>
+             </mrow>
+             <mrow>
+              <msub>
+               <mi>
+                k
+               </mi>
+               <mrow>
+                <mi>
+                 B
+                </mi>
+               </mrow>
+              </msub>
+              <mi>
+               T
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            −
+           </mo>
+           <mfrac>
+            <mrow>
+             <msub>
+              <mi>
+               k
+              </mi>
+              <mrow>
+               <mi>
+                B
+               </mi>
+              </mrow>
+             </msub>
+             <mi>
+              T
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              μ
+             </mi>
+             <mi>
+              H
+             </mi>
+            </mrow>
+           </mfrac>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Observando a equação obtida, percebe-se que se trata da equação de Langevin, ou seja,
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block">
+        <mi>
+         L
+        </mi>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         x
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mi mathvariant="normal">
+          c
+         </mi>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          t
+         </mi>
+         <mi mathvariant="normal">
+          h
+         </mi>
+        </mrow>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          x
+         </mi>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         −
+        </mo>
+        <mfrac>
+         <mn>
+          1
+         </mn>
+         <mi>
+          x
+         </mi>
+        </mfrac>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Logo, a magnetização total de sistemas superparamagnéticos é, expressa em função da equação de Langevin, dada por
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block">
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           S
+          </mi>
+          <mi>
+           P
+          </mi>
+          <mi>
+           M
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          M
+         </mi>
+         <mrow>
+          <mi>
+           S
+          </mi>
+         </mrow>
+        </msub>
+        <mi>
+         L
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            μ
+           </mi>
+           <mi>
+            H
+           </mi>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>
+             k
+            </mi>
+            <mrow>
+             <mi>
+              B
+             </mi>
+            </mrow>
+           </msub>
+           <mi>
+            T
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Software SPmag Tools 1.0
+    </h1>
+    <p>
+     comportamento de sistemas superparamagnéticos possuem dependência de variáveis, como, temperatura, magnetização de saturação e diâmetro médio dos momentos magnéticos. Logo, as curvas de magnetização podem ser obtidas utilizando a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação 13
+     </a>
+     considerando
+     <math>
+      <mi>
+       μ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       π
+      </mi>
+      <mfrac>
+       <msup>
+        <mrow>
+         <msub>
+          <mi>
+           D
+          </mi>
+          <mi>
+           M
+          </mi>
+         </msub>
+        </mrow>
+        <mrow>
+         <mn>
+          3
+         </mn>
+        </mrow>
+       </msup>
+       <mn>
+        6
+       </mn>
+      </mfrac>
+     </math>
+     . Para avaliar o comportamento magnético de sistemas superparamagnéticos no regime desbloqueado desenvolvemos o software SPmag Tools 1.0. O software permite realizarmos simulações de curvas de magnetização com diferentes variáveis.
+    </p>
+    <p>
+     O desenvolvimento do software foi em linguagem
+     <i>
+      JAVA 1.8
+     </i>
+     com a ferramenta
+     <i>
+      JavaFX 8
+     </i>
+     . Para o ambiente de desenvolvimento utilizamos o
+     <i>
+      Netbeans IDE
+     </i>
+     por ser integrado e gratuito, sendo executado em muitas plataformas. Para ajudar a visualizar o caminho de desenvolvimento aplicamos o uso da
+     <i>
+      Unified Modeling Language
+     </i>
+     . O design foi realizado por código
+     <i>
+      Cascating Style Sheet
+     </i>
+     que o próprio
+     <i>
+      JavaFX
+     </i>
+     disponibiliza e que pode ser obtido pelos documentos da
+     <i>
+      Oracle
+     </i>
+     (
+     <i>
+      JavaFX CSS Reference Guide
+     </i>
+     ).
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     mostramos uma operação no SPmag.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/fFxkkfztP9c59ySsCZkmM6w/f2aa58b7eb555b41e381c1c09b8572983d9b97a5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Interface do software SPmag Tools 1.0.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Ao explorar o SPmag pela primeira vez o usuário poderá acessar o
+     <i>
+      Help
+     </i>
+     <math>
+      <mo stretchy="false">
+       →
+      </mo>
+     </math>
+     <i>
+      Quick Tutorial
+     </i>
+     e terá a opção de fazer um pequeno passeio direcionado autoexplicativo pelas principais operações do software. Em
+     <i>
+      File
+     </i>
+     terá a opção
+     <i>
+      New Input Control File
+     </i>
+     na qual poderá iniciar um novo projeto de visualização (
+     <i>
+      Vizualization Project
+     </i>
+     ) de curvas de Langevin (
+     <i>
+      Langevin Curves
+     </i>
+     ). Ao acessar a opção descrita poderá nomear a curva a ser realizada em
+     <i>
+      Curve Title
+     </i>
+     e parametrizar os valores de temperatura, diâmetro médio e magnetização de saturação da curva recém intitulada, observando que os valores inseridos deverão estar no SI. Em seguida poderá delimitar os valores de campo magnético no intervalo e incremento desejado em
+     <i>
+      From
+     </i>
+     ,
+     <i>
+      To
+     </i>
+     e
+     <i>
+      Increment
+     </i>
+     , respectivamente. Logo, ao clicar em
+     <i>
+      Run
+     </i>
+     , no cabeçalho do software, terá a geração da curva desejada. O usuário poderá gerar novas curvas, basta alterar o título da curva e os parâmetros e clicar em
+     <i>
+      Apply
+     </i>
+     .
+    </p>
+    <p>
+     As curvas podem ser editadas gráficamente, basta selecionar a curva gerada em
+     <i>
+      Curve
+     </i>
+     e escolher as opções de tipo de símbolo, linha e cor, e ao final da escolha clicar no
+     <i>
+      Apply
+     </i>
+     ao lado. Observa-se que a esquerda deste
+     <i>
+      Apply
+     </i>
+     possui a opção
+     <i>
+      Delete
+     </i>
+     que tem a função de remover alguma curva indesejada, bastando para isso selecionar a curva nesta opção e aceitar sua remoção. Construída uma série de curvas o usuário poderá salvar os dados no mesmo momento que os exporta, pois, ao salvar em
+     <i>
+      File
+     </i>
+     <math>
+      <mo stretchy="false">
+       →
+      </mo>
+     </math>
+     <i>
+      Save as
+     </i>
+     , será gerado um arquivo em formato .txt que conterá todas as informações das curvas geradas. O arquivo salvo poderá ser novamente aberto no SPmag em
+     <i>
+      File
+     </i>
+     <math>
+      <mo stretchy="false">
+       →
+      </mo>
+     </math>
+     <i>
+      Open Input Control File
+     </i>
+     e reeditado, além de que pode ser usados em outros softwares de tratamento de dados.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Análise da Função de Langevin
+    </h1>
+    <p>
+     O comportamento da magnetização pode ser simulado com variações dos parâmetros realizando diferentes curvas como mostram os resultados na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.2
+     </a>
+     via SPmag.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/fFxkkfztP9c59ySsCZkmM6w/4c005a14235cc3825e53ffc16019442b48acb278.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Simulação da função de Langevin com variação da (a) temperatura, (b) magnetização de saturação e (c) diâmetro médio.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.2(a)
+     </a>
+     fixamos os valores de
+     <math>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       2
+      </mn>
+      <mo>
+       ×
+      </mo>
+      <msup>
+       <mn>
+        10
+       </mn>
+       <mn>
+        3
+       </mn>
+      </msup>
+     </math>
+     A/m e
+     <math>
+      <msub>
+       <mi>
+        D
+       </mi>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       10
+      </mn>
+      <mo>
+       ×
+      </mo>
+      <msup>
+       <mn>
+        10
+       </mn>
+       <mrow>
+        <mo>
+         −
+        </mo>
+        <mn>
+         9
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     m e variamos os valores de
+     <i>
+      T
+     </i>
+     para o intervalo entre 2–300 K. Utilizamos o menor valor de 2 K para temperatura, pois esse é aproximadamente o menor valor de temperatura medida por aparelhos convencionais de medidas magnéticas. Logo, observamos claramente a dependência da magnetização com a temperatura. Quanto menor a temperatura, mais rapidamente o sistema atinge a saturação. Isso ocorre por se tratar de uma competição entre ordenamento, ocasionado pelo campo magnético, e o desordenamento, ocasionado pela temperatura. Ou seja, necessita-se menor campo magnético para saturar um sistema em baixas temperaturas.
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.2(b)
+     </a>
+     fixamos os valores de
+     <math>
+      <mi>
+       T
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       300
+      </mn>
+     </math>
+     K e
+     <math>
+      <msub>
+       <mi>
+        D
+       </mi>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       10
+      </mn>
+      <mo>
+       ×
+      </mo>
+      <msup>
+       <mn>
+        10
+       </mn>
+       <mrow>
+        <mo>
+         −
+        </mo>
+        <mn>
+         9
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     m e variamos os valores de
+     <math>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     para o intervalo entre 2–
+     <math>
+      <mn>
+       7
+      </mn>
+      <mo>
+       ×
+      </mo>
+      <msup>
+       <mn>
+        10
+       </mn>
+       <mn>
+        3
+       </mn>
+      </msup>
+     </math>
+     A/m. Neste caso, observamos que as curvas tem mesmo comportamento, tendendo para saturação de cada respectiva curva, e isso pode ser evidente fazendo uma normalização da magnetização de todas as curvas, i.e. dividindo todos os dados de cada curva por seu valor máximo de magnetização, assim elas ficariam sobrepostas. Logo, a magnetização de saturação não altera o formato das curvas de magnetização, apenas saturam a seus valores. Isso também pode ser observado junto a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação 13
+     </a>
+     , na qual observa-se que
+     <math>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+        <mi>
+         P
+        </mi>
+        <mi>
+         M
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       ∝
+      </mo>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig.2(c)
+     </a>
+     fixamos os valores de
+     <math>
+      <mi>
+       T
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       300
+      </mn>
+     </math>
+     K e
+     <math>
+      <msub>
+       <mi>
+        M
+       </mi>
+       <mrow>
+        <mi>
+         S
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       2
+      </mn>
+      <mo>
+       ×
+      </mo>
+      <msup>
+       <mn>
+        10
+       </mn>
+       <mn>
+        3
+       </mn>
+      </msup>
+     </math>
+     A/m e variamos os valores de
+     <math>
+      <msub>
+       <mi>
+        D
+       </mi>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     para o intervalo entre 10–
+     <math>
+      <mn>
+       35
+      </mn>
+      <mo>
+       ×
+      </mo>
+      <msup>
+       <mn>
+        10
+       </mn>
+       <mrow>
+        <mo>
+         −
+        </mo>
+        <mn>
+         9
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     m. Observamos que ao aumentar o diâmetro médio a magnetização tende abruptamente para o valor da saturação, ou seja, partículas maiores estão mais susceptíveis ao ordenamento magnético. Entretanto, observando no sentido oposto, ao diminuir o diâmetro médio a tendência das curvas é perder o comportamento clássico da curva de Langevin e tendendo ao comportamento linear por ampla faixa de campo magnético. Isso pode ser comparado a partículas pequenas com momentos de dipolos pequenos que tendem ao comportamento paramagnético. Isso mostra a correta associação do modelo do superparamagnetismo onde temos o limite de
+     <math>
+      <mi>
+       J
+      </mi>
+      <mo stretchy="false">
+       ⟶
+      </mo>
+      <mi mathvariant="normal">
+       ∞
+      </mi>
+     </math>
+     da função de Brillouin, discutido na 2.3.
+    </p>
+    <p>
+     Caso fossem escolhidos outros valores de diêmetro médio, poderíamos perceber muita semelhança entre algumas curvas. Isso ocorre devido a dependência mútua entre temperatura e tamanho de constituintes no processo de magnetização, pois maior o diâmetro e menor a temperatura, mais rapidamente atingisse a saturação magnética.
+    </p>
+    <p>
+     Experimentalmente, dada certas condições existe a possibilidade da curva não alcançar a saturação (ou tendência de saturação) podendo ser interpretado como a presença de partículas paramagnéticas contidas no sistema. Isso pode ocorrer devido a questões experimentais da coleta de dados, i.e. intervalo de campo magnético pequeno. Neste momento, ajusta-se uma reta na região de campos mais altos que representaria a presença da contribuição paramagnética e desconta-se esta contribuição de todos os pontos experimentais, para que a curva passe a ser representada saturada. Logo, isso é o mesmo que associar simultaneamente a função de Brillouin do paramagnetismo com uma função de Langevin. Entretando, devemos estar atentos aos comportamentos possíveis das curvas de magnetização para que não ocorrem interpretações errôneas nos dados. Entretanto, outras técnicas de caracterização associadas as medidas magnéticas podem auxiliar na interpretação do sistema magnético.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusão
+    </h1>
+    <p>
+     A partir de uma revisão do conceito de superparamagnetismo desenvolvemos o software SPmag Tools 1.0 com o qual podesse realizar simulações das curvas de magnetização de forma rápida, sem a necessidade de conhecimento em programação.
+    </p>
+    <p>
+     O software desenvolvido constitui uma importante ferramenta para consolidação dos conhecimentos acerca do comportamento da magnetização de sistemas superparamagnéticos no regime desbloqueado sujeitos a campos magnéticos externos. Ressalta-se que a possibilidade de análise de variáveis é um importante acréscimo como apoio didático.
+    </p>
+    <p>
+     O superparamagnetismo, apesar de ser estudado a muitos anos, ainda possui muitos aspectos inexplorados e esperamos que este artigo possa incentivar os leitores ao aprofundamento no estudo destes materiais magnéticos. Logo, o software é livre e pode ser encontrado gratuitamente no endereço http://gca.unijui.edu.br/downloads/bd818e51323107fb230b931c99e77f56.exe
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem ao apoio da FAPERGS (concessão n° 19/2551-0001225-0), CNPQ (concessão n° 152026/2016-9) e UNIJUÍ.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] J.S. Figueira, Revista Brasileira de Ensino de Física
+        <b>
+         27
+        </b>
+        , 613 (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] V. Heckler, M.F.O. Saraiva e K.S. Oliveira Filho, Revista Brasileira de Ensino de Física
+        <b>
+         29
+        </b>
+        , 267 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] A. Gelir, M. Kocaman e I. Pekacar, Physics Education
+        <b>
+         54
+        </b>
+        , 055012 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] V. Mehta e D.C. Lane, Physics Education
+        <b>
+         53
+        </b>
+        , 045016 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] F.M. Cruz, A.A.F. Moura, A.P. Moura, E.P. Rocha, D.C.C. Crisóstomo e H.T.Q. Lemos, Revista Brasileira de Ensino de Física
+        <b>
+         41
+        </b>
+        , e20190123 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] T.F.D. Fernandes e N.L. Moreira, Revista Brasileira de Ensino de Física
+        <b>
+         41
+        </b>
+        , e20180304 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] L.M. Holanda, I.R.O. Ramos, A.P. Lima, J.P.M. Braga e H.T.C.M. Souza, Revista Brasileira de Ensino de Física
+        <b>
+         40
+        </b>
+        , e2313 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] R.B. Werlang, R.S. Schneider e F.L. Silveira, Revista Brasileira de Ensino de Física
+        <b>
+         30
+        </b>
+        , 1503 (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] G.A.P. Ribeiro, Revista Brasileira de Ensino de Física
+        <b>
+         22
+        </b>
+        , 299 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] L.M. Holanda, I.R.O. Ramos, A.P. Lima, J.P.M. Braga e H.T.C.M. Souza, Revista Brasileira de Ensino de Física
+        <b>
+         42
+        </b>
+        , e20190196 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] S. Palanisamy e Y.M. Wang, Dalton Transactions
+        <b>
+         48
+        </b>
+        , 9490 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] D. Cai, L. Liu, C. Han, X. Ma, J. Qian, J. Zhou e W. Zhu, Scientific Reports
+        <b>
+         9
+        </b>
+        , 14475 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] D. Maity e G. Kandasamy, in:
+        <i>
+         Nanotechnology Characterization Tools for Tissue Engineering and Medical Therapy
+        </i>
+        , editado por S.S.R.C. Kumar (Springer, Berlin, 2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] A.P. Guimarães, Revista Brasileira de Ensino de Física
+        <b>
+         22
+        </b>
+        , 382 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] M. Knobel, Revista Brasileira de Ensino de Física
+        <b>
+         22
+        </b>
+        , 387 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] K.H.J. Buschow e F.R. Boer,
+        <i>
+         Physics of Magnetism and Magnetic Materials
+        </i>
+        (Kluwer Academic/Plenum Publishers, New York, 2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] C. Kittel,
+        <i>
+         Introduction to Solid State Physics
+        </i>
+        (Wiley, New York, 2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] B.D. Cullity e C.D. Graham,
+        <i>
+         Introduction to Magnetic Materials
+        </i>
+        (John Wiley &amp; Sons, New Jersey, 2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] B.D. Cullity,
+        <i>
+         Introduction to Magnetic Materials
+        </i>
+        (Addison-Wesley, New York, 1972).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20] J. Frenkel e J. Doefman, Nature
+        <b>
+         126
+        </b>
+        , 274 (1930).
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] L. Néel, Annales Geophysicae (C.N.R.S.)
+        <b>
+         5
+        </b>
+        , 99 (1949).
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] L. Néel,
+        <i>
+         Superparamagnétisme des grains très fins antiferromagnétiques
+        </i>
+        (Comptes Rendus Hebdomadaires Des Seances De L'Academie Des Sciences, Paris, 1961), v. 252.
+       </div>
+      </li>
+      <li>
+       <div>
+        [23] L. Néel,
+        <i>
+         OEuvres scientifiques de Louis Neel
+        </i>
+        (Centre national de la recherche scientifique, Paris, 1978).
+       </div>
+      </li>
+      <li>
+       <div>
+        [24] C.P. Bean e J.D. Livingston, Journal of Applied Physics
+        <b>
+         30
+        </b>
+        , S120 (1959).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        A função de Brillouin representa curvas M(H) para sistemas paramagnéticos, sendo
+        <i>
+         J
+        </i>
+        da ordem do momento angular total do íon magnético. Entretanto, com base nesta função obtém-se uma aproximação clássica para função de Langevin, a qual descreve estas curvas para sistemas superparamagnéticos, que será apresentada em breve.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        O tamanho crítico é aquele de dimensões da ordem das paredes de Bloch do sistema.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        23 Set 2020
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        26 Jul 2020
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        06 Ago 2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

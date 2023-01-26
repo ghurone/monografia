@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173812097" target="_blank">
+    https://doi.org/10.1590/S1806-11173812097
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812097">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0" data-toggle="tooltip">
+  </span>
+  Medindo a aceleração de um elevador
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Measuring the acceleration of an elevator
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Rodrigo da Silva Franco
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Campus Bagé, Universidade Federal do Pampa, Bagé, RS, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Guilherme Frederico Marranghello
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:gfmarranghello@gmail.com">
+      gfmarranghello@gmail.com
+     </a>
+     .
+    </div>
+    Campus Bagé, Universidade Federal do Pampa, Bagé, RS, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Fábio Saraiva da Rocha
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Centro de Integração do Mercosul, Universidade Federal de Pelotas, Eldorado do Sul, RS, Brasil.
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Apresentamos neste trabalho o processo de medição da aceleração de um elevador utilizando recursos eletrônicos e computacionais disponíveis em um
+     <i>
+      tablet
+     </i>
+     através de um aplicativo chamado
+     <i>
+      Physics Toolbox Accelerometer
+     </i>
+     desenvolvido para o sistema operacional Android. Os dados coletados com o uso dos sensores eletrônicos embarcados no
+     <i>
+      tablet
+     </i>
+     foram convenientemente tratados através do programa computacional
+     <i>
+      SciDAVis
+     </i>
+     . A metodologia utilizada se mostra potencialmente promissora para práticas de ensino de física que busquem a inovação no laboratório didático através do uso de tecnologias emergentes e de baixo custo.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     ensino de física; M-learning; aceleração
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We present the process of measuring the acceleration of an elevator developed with the use of electronic and computing resources available on a tablet and the use of an application called Physics Toolbox Accelerometer developed for the Android operating system. The data collected with the use of electronic sensors embedded in the tablet were conveniently treated by the computer program SciDAVis. The methodology has shown to be potentially promising for practices of teaching physics that seek innovation in the teaching laboratory through the use of emerging technologies with low costs.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     physics teaching; M-learning; acceleration
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     O ensino de física, assim como de outras áreas do conhecimento, continua essencialmente centrado nos conteúdos, sem apresentar contextualização com o dia a dia dos estudantes, baseando-se, na maioria das vezes, apenas em aulas expositivas tradicionais. Nesta perspectiva verifica-se que alguns livros didáticos de física trazem seus conteúdos basicamente centrados em cálculos matemáticos, sendo esse um dos possíveis fatores pela desmotivação dos estudantes
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M.C. Scorsatto, Uma Abordagem Alternativa para o Ensino da Física: Consumo Racional de Energia. Dissertação de Mestrado, Univates, 2010.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Buscando vencer essa barreira, partimos de um exercício facilmente encontrado em livros de Física 1, exemplificado aqui
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] D.H. Young e A.R. Freedman, Física I (Pearson, São Paulo, 2006) v. 1, p.57.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     :
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       Estime a velocidade máxima e o módulo da aceleração de um elevador. Você precisa usar suas observações sobre o tempo que o elevador leva para ir de um andar para outro e a distância percorrida quando o elevador acelera até sua velocidade máxima ou quando diminui de velocidade até parar.
+      </p>
+     </li>
+    </ol>
+    <p>
+     O número de propostas para o ensino de física através do uso de
+     <i>
+      tablets
+     </i>
+     e
+     <i>
+      smartphones
+     </i>
+     vem crescendo. Dentre algumas propostas, podemos destacar o trabalho de Vieira, Lara e Amaral
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] L.P. Vieira, V.O.M. Lara e D.F. Amaral, Revista Brasileira de Ensino de Física 36, 3505 (2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     que buscam auxílio em um recurso bastante comum nestes equipamentos, a câmera fotográfica, para investigar a lei do inverso do quadrado para a intensidade luminosa. Monteiro, Cabeza e Marti
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] M. Monteiro, C. Cabeza e A.C. Marti, Revista Brasileira de Ensino de Física 37, 1303 (2015).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     trazem um estudo sobre as potencialidades de um sensor comumente presente nestes equipamentos, o acelerômetro. Por fim, vale ressaltar a dissertação de mestrado de Vieira
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] 5 L.P. Vieira, Experimentos de Física com Tablets e Smartphones. Dissertação de Mestrado, UFRJ, 2013.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     onde é possível encontrar uma grande variedade de experimentos relacionados à s mais diversas potencialidades que um
+     <i>
+      tablet
+     </i>
+     ou
+     <i>
+      smartphone
+     </i>
+     tem a oferecer.
+    </p>
+    <p>
+     Desenvolvemos este trabalho com o objetivo de medir a aceleração de um elevador utilizando recursos computacionais disponíveis gratuitamente na internet. Para realizarmos a medição da aceleração do elevador, foi necessário instalar em um
+     <i>
+      tablet
+     </i>
+     o aplicativo
+     <i>
+      Physics Toolbox Accelerometer
+     </i>
+     , recurso computacional que mede a aceleração de objetos em unidades de g (aceleração da gravidade). Os dados experimentais de aceleração foram convenientemente analisamos utilizando o programa computacional de uso gratuito
+     <i>
+      Scientific Data Visualization
+     </i>
+     (SciDAVis) visando a confecção de tabelas, gráficos e mudança de unidades de medida.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Recursos utilizados
+    </h1>
+    <p>
+     O processo de medida apresentado neste trabalho utilizou um
+     <i>
+      tablet
+     </i>
+     da marca Samsung, modelo Galaxy Note 10.1, que possui um acelerômetro LSM330DLC que mede até 19,6133 m/s
+     <sup>
+      2
+     </sup>
+     com uma resolução de 0,00957 m/s
+     <sup>
+      2
+     </sup>
+     . Neste dispositivo móvel foi instalado um aplicativo chamado
+     <i>
+      Physics Toolbox Accelerometer
+     </i>
+     , encontrado no repositório de aplicativos
+     <i>
+      Play Store
+     </i>
+     (
+     <a href="https://play.google.com/store/apps?hl=pt%7B_%7DBR" target="_blank">
+      https://play.google.com/store/apps?hl=pt{_}BR
+     </a>
+     ). O sensor acelerômetro apresenta o resultado de medidas de aceleração em três eixos de coordenadas (
+     <i>
+      x, y, z
+     </i>
+     ). Pode-se usar qualquer eixo para medir a aceleração gravitacional em unidades de 1 g (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     ), bastando orientar convenientemente o dispositivo com o eixo escolhido na direção do movimento que se deseja sondar. Nos
+     <i>
+      tablets
+     </i>
+     e
+     <i>
+      smartphones
+     </i>
+     em geral, o posicionamento padrão do sensor de aceleração é no centro de massa do aparelho, tendo os eixos
+     <i>
+      x
+     </i>
+     e
+     <i>
+      y
+     </i>
+     dispostos no plano do aparelho e o eixo
+     <i>
+      z
+     </i>
+     perpendicular a
+     <i>
+      x
+     </i>
+     e
+     <i>
+      y
+     </i>
+     . O sensor de aceleração é construído na tecnologia MEMS (
+     <i>
+      Microelectromechanical Systems
+     </i>
+     ). Tipicamente, o sensor que mede aceleração de um dispositivo móvel é capaz de alcançar valores desta grandeza entre ±2 g, onde
+     <i>
+      g
+     </i>
+     é a aceleração da gravidade. Esta escala de medidas se mostra satisfatória para nossos objetivos se refere sempre a um referencial inercial que pode ser o chão do laboratório. A descrição física básica de um acelerômetro está documentada na literatura
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] 6 F.S. Da Rocha, G.F. Marranghello e M.M. Lucchese, Caderno Brasileiro de Ensino de Física 31, 98 (2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . O programa SciDA- Vis (
+     <a href="http://scidavis.sourceforge.net/" target="_blank">
+      http://scidavis.sourceforge.net/
+     </a>
+     ) foi utilizado para a construção dos gráficos e análises dos dados.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Imagem da tela do aplicativo "Physics Toolbox Accelerometer".
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Realizando as medidas
+    </h1>
+    <p>
+     Para encontrar os valores de aceleração de um elevador, primeiramente deve-se ir até o móvel que será o alvo de estudo, juntamente com o
+     <i>
+      tablet
+     </i>
+     " ou outro aparelho que tenha instalado o aplicativo
+     <i>
+      Physics Toolbox Accelerometer.
+     </i>
+     O
+     <i>
+      tablet
+     </i>
+     deve ser
+     <i>
+      colocado
+     </i>
+     na base do elevador para fazer as medidas no sentido subida/descida. É importante salientar que a cada variação de aceleração do elevador se grave a medida obtida operando convenientemente o aplicativo que irá gerar um arquivo de dados relativos às grandezas aceleração e tempo. Nesta primeira etapa do trabalho apenas colhemos e gravamos os dados.
+    </p>
+    <p>
+     Na segunda etapa importamos os dados do aplicativo gravados em um cartão de memória através de um computador. Os dados experimentais podem ser dispostos numa tabela usando, por exemplo, o programa
+     <i>
+      Calc
+     </i>
+     do pacote de programas de uso livre chamado
+     <i>
+      LibreOffice
+     </i>
+     , fazendo as conversões necessárias para expressar os resultados em m/s
+     <sup>
+      2
+     </sup>
+     , pois o aplicativo
+     <i>
+      Physics Toolbox Accelerometer
+     </i>
+     mede a aceleração em unidades de 1 g. Na terceira e ultima etapa deste trabalho, útilizando-se o programa SciDAVis, analisa-se os resultados gráficos de aceleração
+     <i>
+      versus
+     </i>
+     tempo para cada medida de dados coletados.
+    </p>
+    <p>
+     Na terceira e última etapa deste trabalho, utilizando-se o programa
+     <i>
+      SciDAVis
+     </i>
+     , analisa-se os resultados gráficos de aceleração
+     <i>
+      versus
+     </i>
+     tempo para cada medida de dados coletados.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Discussão e análise dos dados a partir da representação gráfica
+    </h1>
+    <p>
+     Como podemos obter o valor da aceleração de um elevador? A resposta é bem simples: analisando um gráfico de aceleração
+     <i>
+      versus
+     </i>
+     tempo. Apresentaremos dois gráficos, mostrando diferentes fases dos movimentos (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2a
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2b
+     </a>
+     ).
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      a. Gráfico da aceleração versus tempo para um elevador subindo. b. - Gráfico da aceleração versus tempo para um elevador descendo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2a
+     </a>
+     fornece o valor da aceleração do elevador ao subir do quinto ao décimo andar de um prédio. É possível observar no intervalo entre 3 e 4 s um ruído, provavelmente oriundo do fechamento das portas do elevador. Em seguida, o elevador arranca com grande aceleração, de forma abrupta, e, em seguida, vai reduzindo gradativamente a sua aceleração, até que por volta de 7 s podemos considerar o elevador como um objeto que se move com velocidade constante. Ao final do trajeto percebemos uma forte aceleração com sinal negativo, o que indica a frenagem do elevador. Esta primeira frenagem é seguida por outra, ainda mais intensa. Um passageiro do elevador pode, em alguns casos, dependendo da idade do elevador ou da existência de janelas, identificar a primeira frenagem como o momento em que o elevador reduz sua velocidade para que, na segunda frenagem, pare na posição correta. Podemos ver no gráfico um movimento oscilatório fortemente amortecido ao final da segunda frenagem, quando o elevador estabiliza em sua posição final.
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2b
+     </a>
+     fornece o valor da aceleração do elevador ao descer do oitavo ao quarto andar do mesmo prédio. Em ambos os casos observamos três grandes picos. Esses representam dois tipos de aceleração, sendo de arrancada e de freada. A única diferença entre as
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 2a
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2b
+     </a>
+     é o sinal da aceleração nos diferentes trechos do trajeto devido ao fato de uma figura representar um elevador no movimento de subida e o outro no movimento de descida.
+    </p>
+    <p>
+     Analisando a oscilação final da
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2b
+     </a>
+     e escrevendo uma equação matemática da mesma, chegamos à
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (1)
+     </a>
+     .
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     apresenta o gráfico (em vermelho na versão eletrônica) gerado pela
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (1)
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Bqz7tBWrVWgXcv3Qvd7WNps/48f69cbbce13767861ebe9fac7d017808dfdf5a6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Gráfico da aceleração versus tempo para um elevador descendo e o traçado (em vermelho na versão eletrônica) da função cuja forma analítica está dada na
+      <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (1)
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     apresenta o módulo da aceleração dos três picos para um conjunto de cinco medidas, lembrando que: os valores da aceleração do 1° pico referem-se à aceleração de arrancada do elevador; os valores do 2° pico referem-se à primeira freada do elevador e; os valores da aceleração do 3° pico referem-se à freada final do elevador. Também apresentamos a média destes valores, estando de acordo com os resultados encontrados em livros-texto direcionados à componente curricular de graduação e voltados ao estudo da mecânica, geralmente nomeadas Física I ou Física Geral I.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Valor da aceleração de arrancada e freada. Destaca-se a média aritmética dos valores das acelerações dos cinco andares em cada pico.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Considerações finais
+    </h1>
+    <p>
+     Apresentamos os resultados de medida da aceleração de um elevador obtidos através do uso de um dispositivo
+     <i>
+      tablet
+     </i>
+     que tem instalado um aplicativo de leitura do sensor de aceleração embarcado. Podemos pensar num maior espaço para estes dispositivos computacionais dentro de um laboratório didático de física ou mesmo fora dele, aproveitando a mobilidade que este representa. A prática proposta pode estimular o desenvolvimento de experimentos em que coleta, armazenamento e apresentação da informação é realizada com maior dinamismo, mobilidade e simplicidade que quando comparamos com os processos de medida relativos aos laboratórios didáticos. A possibilidade do aluno utilizar um dispositivo móvel em experimentos de física pode abrir muitas perspectivas de estudo de fenômenos físicos que fazem parte do cotidiano do aluno e o desenvolvimento de novas ações investigativas. Acreditamos que, através de propostas do tipo apresentada aqui, é possível que aparelhos computacionais móveis tipo
+     <i>
+      tablet
+     </i>
+     e
+     <i>
+      smartphone
+     </i>
+     com aplicativos de leitura multisensores e armazenamento de dados conquistem maior espaço dentro de nossas propostas educacionais.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        M.C.
+        <i>
+         Scorsatto, Uma Abordagem Alternativa para o Ensino da Física: Consumo Racional de Energia
+        </i>
+        Dissertação de Mestrado, Univates, 2010.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        D.H. Young e A.R. Freedman,
+        <i>
+         Física I
+        </i>
+        (Pearson, São Paulo, 2006) v. 1, p.57.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        L.P. Vieira, V.O.M. Lara e D.F. Amaral, Revista Brasileira de Ensino de Física 36, 3505 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        M. Monteiro, C. Cabeza e A.C. Marti, Revista Brasileira de Ensino de Física 37, 1303 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        5 L.P. Vieira,
+        <i>
+         Experimentos de Física com Tablets e Smartphones
+        </i>
+        Dissertação de Mestrado, UFRJ, 2013.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        6 F.S. Da Rocha, G.F. Marranghello e M.M. Lucchese, Caderno Brasileiro de Ensino de Física 31, 98 (2014).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        17 Ago 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        15 Set 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        <img alt="Creative Common - by 4.0" src="https://licensebuttons.net/l/by/4.0/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

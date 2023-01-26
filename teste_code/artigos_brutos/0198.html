@@ -1,0 +1,4049 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0060" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0060
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0060">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Propagação de incertezas usando planilhas eletrônicas
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Propagation of uncertainties using spreadsheets
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Rodrigo P. R. Figueiredo
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de São Paulo, Departamento de Física, FFCLRP, Ribeirão Preto, SP, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-8102-8897">
+     http://orcid.org/0000-0001-8102-8897
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     George C. Cardoso
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:gcc@usp.br">
+      gcc@usp.br
+     </a>
+    </div>
+    Universidade de São Paulo, Departamento de Física, FFCLRP, Ribeirão Preto, SP, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-8459-9812">
+     http://orcid.org/0000-0001-8459-9812
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Propomos uma metodologia de propagação de incertezas por diferenças finitas para atividades de laboratório de ensino. O público-alvo da abordagem proposta são alunos que já adquiriram alguma maturidade na teoria de medidas e propagação de incertezas experimentais. O próprio aluno poderá implementar a metodologia em planilhas eletrônicas para análise de dados e propagação de incertezas. Visamos assim aumentar o controle e sofisticação do processamento dos dados pelo aluno, diminuir sua carga cognitiva e o tempo gasto na tarefa. Dessa forma, outras etapas também importantes da atividade de laboratório, incluindo planejamento, análise, e entendimento dos resultados e limitações do experimento, poderão ser desenvolvidas com mais cuidado.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave
+     </strong>
+     <br/>
+     Incertezas experimentais; propagação de incertezas; laboratório de ensino
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We propose a methodology for uncertainty propagation by finite differences for teaching laboratory activities. The public for the proposed approach is students who already have some maturity in measurement theory and experimental uncertainty propagation. The students themselves may implement the methodology in electronic spreadsheets for data analysis and uncertainty propagation. This way, we hope to increase student control and sophistication in data processing, and to decrease their cognitive load and time spent in the task. Thus, other also important parts of the laboratory assignments, such as planning, analysis, and understanding the results and limitations of the experiment, may be more carefully developed.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Experimental uncertainties; Propagation of uncertainties; Teaching laboratory
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Medidas, incertezas, e propagação de incertezas experimentais através de funções matemáticas são conteúdos fundamentais nas disciplinas básicas de laboratório de ciências naturais e exatas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1. E.M. Smith, M.M. Stein, C. Walsh e N. Holmes, Physical Review X 10, 011029 (2020).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. R.J. Moffat, Experimental thermal and fluid science 1, 3 (1988).
+       </span>
+      </span>
+     </span>
+     ]. Entretanto, o ensino convencional de propagação de incertezas experimentais exige conhecimento básico de derivadas parciais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. J.H. Vuolo, Fundamentos da teoria de erros (Editora Blucher, São Paulo, 1996).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. O.A. Helene e V.R. Vanin, Tratamento estatístico de dados em física experimental (Editora Blucher, São Paulo, 1991).
+       </span>
+      </span>
+     </span>
+     ]. Frequentemente, o aluno de primeiro ano não está matematicamente preparado e fica refratário em relação à aplicação da teoria de medidas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. F. Marineli e J.L.A. Pacca, Revista Brasileira de Ensino de Física 28, 497 (2006).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. T.S. Volkwyn, S. Allie, A. Buffler e F. Lubben, Physical Review Special Topics-Physics Education Research 4, 010108 (2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. R.L. Kung, American Journal of Physics, 73, 771 (2005).
+       </span>
+      </span>
+     </span>
+     ]. Almejamos diminuir a aversão contra as disciplinas experimentais, em particular de alunos que não são de física, ao oferecer uma alternativa ao formalismo que exige derivar para propagar incertezas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. J. de Pinho Alves Filho, Caderno brasileiro de ensino de Física 17, 174 (2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. N. Holmes, J. Olsen, J.L. Thomas e C.E. Wieman, Physical Review Physics Education Research 13, 010129 (2017).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Neste artigo apresentamos um método para propagação de incertezas experimentais por diferenças finitas que evita o uso de derivadas e permite implementação em planilhas eletrônicas. Sugerimos que nas atividades onde o foco do ensino não sejam incertezas experimentais, automação do cálculo da propagação incertezas beneficia o aprendizado porque reduz a carga cognitiva do aluno. Isso o permite se concentrar na apresentação correta dos resultados tais como algarismos significativos, e no entendimento e discussão do experimento. A compatibilidade da metodologia proposta com planilhas eletrônicas permite integrar todas as análises no mesmo software onde os dados são tipicamente registrados.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Incertezas de medição
+    </h1>
+    <p>
+     Medir consiste em determinar características quantitativas de uma grandeza, o que normalmente corresponde a estimar a estatística de uma distribuição de valores de leituras de um mensurando com uma dada metodologia experimental. As propriedades mais simplificadoras de uma estatística são o valor médio aritmético, quando existe
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Para distribuições estatísticas tais como a de Cauchy ou de Breit-Wigner (curva Lorentizana) a média é indefinida, pois não converge. É preciso usar a mediana.
+       </span>
+      </span>
+     </span>
+     , e sua mediana. Assim, em primeira aproximação, medir é estimar o valor médio ou mediano verdadeiro da grandeza que seria estritamente obtido somente incluindo um número infinito de leituras na estatística. Neste artigo usaremos como
+     <i>
+      valor medido
+     </i>
+     a estimativa do valor médio das leituras, adequado para a maioria das medidas típicas, onde a média tende a seu valor verdadeiro à medida que o número de leituras aumenta. Porém, na prática, o número de leituras é sempre finito impossibilitando a obtenção do valor médio verdadeiro. Para quantificar a falta de conhecimento do valor médio verdadeiro da medida, utilizamos o conceito de incerteza de medição.
+    </p>
+    <p>
+     Incerteza de medição não se refere a erros operacionais ou problemas metodológicos. Flutuações aleatórias nas leituras são inevitáveis e intrínsecas de qualquer processo de medida. Para estimar incerteza, múltiplas leituras são necessárias em uma medição. A dispersão de valores observados pode ser visualizada em um histograma que, com o aumento do número de leituras, tende à distribuição estatística da variável medida com a metodologia adotada. A largura desse histograma se relaciona com a variabilidade no valor do mensurando e sua incerteza estatística.
+    </p>
+    <p>
+     Sempre que escrevemos uma incerteza, precisamos especificar sua definição sem ambiguidade. Porque os principais usos de incerteza de medição são determinar o número de algarismos significativos na apresentação do valor medido, e estimar concordância ou discrepância entre o valor medido e outro valor medido ou esperado. Convencionalmente, escreve-se um resultado de medida experimental como
+     <math id="INEQ1">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         x
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        ±
+       </mo>
+       <mi>
+        α
+       </mi>
+      </mrow>
+     </math>
+     , onde
+     <math id="INEQ2">
+      <mover accent="true">
+       <mi>
+        x
+       </mi>
+       <mo>
+        ¯
+       </mo>
+      </mover>
+     </math>
+     representa o valor médio do mensurando
+     <i>
+      x
+     </i>
+     , e α é a incerteza correspondente, cuja definição precisa ser especificada. As incertezas de medição tipicamente usadas são desvios padrões e incertezas padrões (desvios padrões da média), ambas incertezas estatísticas.
+    </p>
+    <p>
+     O
+     <i>
+      desvio padrão
+     </i>
+     (DP) é a forma mais usada para medir incertezas. Como em uma medida o número
+     <i>
+      N
+     </i>
+     de leituras é finito, o que se pode determinar é a
+     <i>
+      estimativa do DP
+     </i>
+     (DP amostral,
+     <i>
+      s
+     </i>
+     ):
+    </p>
+    <div class="row formula" id="eS2_E1">
+     <a name="S2_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           s
+          </mi>
+          <mo>
+           =
+          </mo>
+          <msup>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mfrac>
+              <mn>
+               1
+              </mn>
+              <mrow>
+               <mi>
+                N
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </mfrac>
+             <mo>
+              ⁢
+             </mo>
+             <mrow>
+              <munderover>
+               <mo largeop="true" movablelimits="false" symmetric="true">
+                ∑
+               </mo>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+                <mo>
+                 =
+                </mo>
+                <mn>
+                 1
+                </mn>
+               </mrow>
+               <mi>
+                N
+               </mi>
+              </munderover>
+              <msup>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mrow>
+                 <msub>
+                  <mi>
+                   x
+                  </mi>
+                  <mi>
+                   i
+                  </mi>
+                 </msub>
+                 <mo>
+                  -
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   x
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                </mrow>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mrow>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+            <mo>
+             /
+            </mo>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      x
+      <sub>
+       i
+      </sub>
+     </i>
+     é o valor lido na
+     <i>
+      i
+     </i>
+     -ésima observação, e
+     <math id="INEQ3">
+      <mover accent="true">
+       <mi>
+        x
+       </mi>
+       <mo>
+        ¯
+       </mo>
+      </mover>
+     </math>
+     é a estimativa do valor médio do mensurando
+     <i>
+      x
+     </i>
+     obtida com as
+     <i>
+      N
+     </i>
+     leituras. DP é uma característica combinada do sistema de medida com o mensurando. No laboratório de ensino de física, o mensurando tipicamente se mantém constante durante as medições e o DP é uma característica apenas da metodologia de medida, um exemplo de mensurando constante é o comprimento de uma mesa. O DP, estimado por
+     <i>
+      s
+     </i>
+     , equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ), é equivalente ao valor eficaz da flutuação das leituras em torno do valor médio (valor quadrático médio, RMS), e converge para uma constante σ para
+     <i>
+      N
+     </i>
+     grande. O valor σ é uma característica combinada da metodologia de medida e do mensurando. O valor
+     <i>
+      s
+     </i>
+     <sup>
+      2
+     </sup>
+     , chamado variância da amostra, é proporcional à potência média do ruído da medida [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. G.L. de Sousa e G.C. Cardoso, Physics Education 53, 055001 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A interpretação do DP depende da distribuição estatística das leituras na medida. Por exemplo, na medida:
+    </p>
+    <div class="row formula" id="eS2_Ex1">
+     <a name="S2_Ex1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mi>
+          L
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mn>
+           2
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           11
+          </mn>
+          <mo>
+           ±
+          </mo>
+          <mn>
+           0
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           19
+          </mn>
+          <mo rspace="5.8pt" stretchy="false">
+           )
+          </mo>
+         </mrow>
+         <mpadded width="+3.3pt">
+          <mtext>
+           m
+          </mtext>
+         </mpadded>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mpadded width="+3.3pt">
+           <mn>
+            1
+           </mn>
+          </mpadded>
+          <mtext>
+           DP
+          </mtext>
+          <mo rspace="7.5pt">
+           ,
+          </mo>
+          <mtext>
+           N
+          </mtext>
+          <mo>
+           =
+          </mo>
+          <mpadded width="+3.3pt">
+           <mn>
+            80
+           </mn>
+          </mpadded>
+          <mtext>
+           medidas
+          </mtext>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     temos a incerteza de 1 DP. Se a estatística da distribuição das leituras for gaussiana,
+     <i>
+      f
+     </i>
+     = 68% das leituras ficam no intervalo entre (2,11 − 0,19) m e (2,11 + 0,19) m. Para distribuições não gaussianas (uniforme, lognormal, Poisson, etc.), a fração
+     <i>
+      f
+     </i>
+     muda para um dado intervalo de ±1 DP. A rigor a distribuição estatística das medidas precisa ser estimada. Porém, para simplificar, no laboratório de ensino assumimos distribuições gaussianas – mais encontradas experimentalmente. Para uma interpretação mais cuidadosa, a necessidade do conhecimento da distribuição estatística das variáveis ou da distribuição de uma função após propagação das variáveis, é uma desvantagem do uso do DP para descrever incertezas. Em particular, mesmo quando variáveis têm distribuições estatísticas gaussianas, mas a função é não-linear nessas variáveis, a distribuição dos valores da função será não-gaussiana quando incertezas grandes são propagadas. Contudo, o DP é a incerteza mais comumente utilizada, e é especialmente adequado para descrever a incerteza da metodologia de medida, ou das flutuações médias do próprio mensurando, ou ambos.
+    </p>
+    <p>
+     O
+     <i>
+      desvio padrão da média
+     </i>
+     (DPM) é outra descrição para incertezas. O DPM é também conhecido como
+     <i>
+      incerteza padrão
+     </i>
+     , antigamente chamado
+     <i>
+      erro padrão
+     </i>
+     . Descreve a flutuação no valor médio entre repetições do experimento com mesma metodologia e número N de leituras ou observações. O DPM é calculado por:
+    </p>
+    <div class="row formula" id="eS2_E2">
+     <a name="S2_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            σ
+           </mi>
+           <mover accent="true">
+            <mi>
+             x
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mfrac>
+           <mi>
+            s
+           </mi>
+           <msqrt>
+            <mi>
+             N
+            </mi>
+           </msqrt>
+          </mfrac>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math id="INEQ160">
+      <mrow>
+       <msub>
+        <mi mathsize="90%">
+         σ
+        </mi>
+        <mover accent="true">
+         <mi mathsize="90%">
+          x
+         </mi>
+         <mo mathsize="90%" stretchy="true">
+          ¯
+         </mo>
+        </mover>
+       </msub>
+      </mrow>
+     </math>
+     é o DPM,
+     <i>
+      s
+     </i>
+     é o DP estimado (equação
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ). Teoricamente, usando uma mesma metodologia, duas medidas independentes do mesmo observável obterão o mesmo valor médio – o valor médio verdadeiro – quando em ambas medidas o número
+     <i>
+      N
+     </i>
+     de leituras tender a infinito. Portanto, o DPM tende a zero quando
+     <i>
+      N
+     </i>
+     tende a infinito, em contraste com o DP que é uma constante e depende do sistema de medida e do mensurando.
+    </p>
+    <p>
+     O DPM tem a vantagem de sempre apresentar uma distribuição gaussiana (para
+     <i>
+      N
+     </i>
+     grande), mesmo que a distribuição estatística das medidas seja não-gaussiana [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. G.L. de Sousa e G.C. Cardoso, Physics Education 53, 055001 (2018).
+       </span>
+      </span>
+     </span>
+     ]. Vejamos como o valor de
+     <i>
+      L
+     </i>
+     , mostrado no exemplo acima com DP, fica quando descrito por DPM:
+    </p>
+    <div class="row formula" id="eS2_Ex2">
+     <a name="S2_Ex2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mrow>
+              <mn>
+               11
+              </mn>
+              <mo>
+               ±
+              </mo>
+              <mn>
+               0
+              </mn>
+             </mrow>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              02
+             </mn>
+             <mo rspace="5.8pt" stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mtext>
+             m
+            </mtext>
+           </mrow>
+           <mo rspace="7.5pt">
+            ,
+           </mo>
+           <mrow>
+            <mpadded width="+3.3pt">
+             <mtext>
+              IC
+             </mtext>
+            </mpadded>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mn>
+              68
+             </mn>
+             <mo>
+              %
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde o IC indica
+     <i>
+      intervalo de confiança
+     </i>
+     e em repetições do experimento de medida de
+     <i>
+      L
+     </i>
+     , 68% dos valores médios encontrados estarão entre (2,11 − 0,02) m, e (2,11 + 0,02) m. Para melhorar a estimativa, usamos tipicamente IC 95%. Para isso, para
+     <i>
+      N
+     </i>
+     ≥ 15, uma boa aproximação é usar 2 DPMs
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        Para N menor, o fator multiplicador aumenta. No caso geral, para N ≥ 2, o IC de 95% é obtido multiplicando-se o DPM pelo inverso bicaudal da distribuição t de Student (TINV( ), em planilhas MS Excel e OpenOffice), com p = 5%, e (N − 1) graus de liberdade.
+       </span>
+      </span>
+     </span>
+     :
+     <i>
+      L
+     </i>
+     = (2,11 ± 0,04) m, IC 95%. Significa que, por exemplo, em uma turma com 20 grupos experimentais, em média 5% dos grupos (1 grupo) obterá um resultado fora do IC de 95% caso o mesmo equipamento, o mesmo objeto medido, e a mesma metodologia sejam utilizados. O DPM descreve a incerteza do valor médio, e não o valor eficaz das flutuações como o DP. Assim, em física e engenharia o DPM é mais útil. Além do DPM sempre apresentar distribuição gaussiana, o que simplifica na prática.
+    </p>
+    <p>
+     O DP e o DPM são incertezas estatísticas, chamadas incertezas do
+     <i>
+      tipo A
+     </i>
+     . Existem ainda incertezas instrumentais, chamadas do
+     <i>
+      tipo B
+     </i>
+     , devidas a limitações de resolução ou de calibração da instrumentação de medida. A incerteza total de uma medida é a soma em quadratura das incertezas do tipo A e do tipo B, ou seja:
+     <math id="INEQ11">
+      <mrow>
+       <msubsup>
+        <mi>
+         σ
+        </mi>
+        <mi>
+         T
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msubsup>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <msubsup>
+         <mi>
+          σ
+         </mi>
+         <mi>
+          A
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msubsup>
+        <mo>
+         +
+        </mo>
+        <msubsup>
+         <mi>
+          σ
+         </mi>
+         <mi>
+          B
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msubsup>
+       </mrow>
+      </mrow>
+     </math>
+     . Neste artigo, nos concentramos em incertezas do tipo A.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Propagação de incertezas
+    </h1>
+    <p>
+     Nesta seção derivamos uma expressão para propagação de incertezas por diferenças finitas. Todas as fórmulas usadas aqui são válidas tanto para desvios padrões (DP) quanto para incertezas padrões (DPM), desde que a mesma fórmula contenha somente incertezas de mesma definição e intervalos de confiança. Assim, no que se segue omitiremos as especificações do que chamaremos simplesmente de
+     <i>
+      incertezas
+     </i>
+     . Lembremos que para valores numéricos precisamos sempre especificar o significado das incertezas, como nos exemplos da seção anterior.
+    </p>
+    <p>
+     Ilustramos o problema de propagação de incertezas com um exemplo de pêndulo simples. Ao final desta seção, generalizamos a discussão para uma função qualquer. No pêndulo simples, para pequenas oscilações, determinamos a aceleração
+     <i>
+      g
+     </i>
+     da gravidade através de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11. R.D. Knight, Física-1: Uma Abordagem Estratégica-Mecânica Newtoniana, Gravitação, Oscilações e Ondas (Editora Bookman, São Paulo, 2000).
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <div class="row formula" id="eS3_E3">
+     <a name="S3_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            g
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             L
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             T
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mn>
+            4
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             π
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mfrac>
+            <mi>
+             L
+            </mi>
+            <msup>
+             <mi>
+              T
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mfrac>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      L
+     </i>
+     é a medida do comprimento do fio do pêndulo e
+     <i>
+      T
+     </i>
+     é a medida do seu período de oscilação. Experimentalmente, fazem-se leituras repetidas das variáveis
+     <i>
+      L
+     </i>
+     e
+     <i>
+      T
+     </i>
+     para determinar
+     <math id="INEQ38">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         L
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        ±
+       </mo>
+       <msub>
+        <mi>
+         σ
+        </mi>
+        <mi>
+         L
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math id="INEQ39">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         T
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        ±
+       </mo>
+       <msub>
+        <mi>
+         σ
+        </mi>
+        <mi>
+         T
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     , onde a barra sobre as variáveis indica valores médios, e
+     <i>
+      <i>
+       σ
+      </i>
+     </i>
+     <sub>
+      <i>
+       L
+      </i>
+     </sub>
+     ,
+     <i>
+      <i>
+       σ
+      </i>
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     representam as incertezas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. G.L. de Sousa e G.C. Cardoso, Physics Education 53, 055001 (2018).
+       </span>
+      </span>
+     </span>
+     ]. Um dos objetivos acadêmicos do experimento do pêndulo simples é determinar o valor médio esperado para
+     <i>
+      g
+     </i>
+     (
+     <i>
+      L
+     </i>
+     ,
+     <i>
+      T
+     </i>
+     ) e sua respectiva incerteza
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       g
+      </i>
+     </sub>
+     , consequência das incertezas nos parâmetros
+     <i>
+      L
+     </i>
+     e
+     <i>
+      T
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12. L. Flansburg, American Journal of Physics 40, 1607 (1972).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13. B. Priemer e J. Hellwig, International Journal of Science and Mathematics Education 16, 45 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     No laboratório de ensino,
+     <i>
+      L
+     </i>
+     e
+     <i>
+      T
+     </i>
+     são mensurados de forma independente para ficarem descorrelacionados, e não apresentarem covariância [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. G.L. de Sousa e G.C. Cardoso, Physics Education 53, 055001 (2018).
+       </span>
+      </span>
+     </span>
+     ]. Nessa condição, a variância
+     <math id="INEQ42">
+      <msubsup>
+       <mi>
+        σ
+       </mi>
+       <mi>
+        g
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msubsup>
+     </math>
+     é a soma das variâncias de
+     <i>
+      g
+     </i>
+     devidas às flutuações estatísticas nas leituras das variáveis
+     <i>
+      L
+     </i>
+     e
+     <i>
+      T
+     </i>
+     :
+    </p>
+    <div class="row formula" id="eS3_E4">
+     <a name="S3_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mrow>
+             <msubsup>
+              <mi>
+               σ
+              </mi>
+              <mi>
+               g
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+             <mo>
+              =
+             </mo>
+             <mrow>
+              <msubsup>
+               <mi>
+                σ
+               </mi>
+               <mrow>
+                <mi>
+                 g
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  L
+                 </mi>
+                 <mo>
+                  ,
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   T
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msubsup>
+              <mo>
+               +
+              </mo>
+              <msubsup>
+               <mi>
+                σ
+               </mi>
+               <mrow>
+                <mi>
+                 g
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   L
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo>
+                  ,
+                 </mo>
+                 <mi>
+                  T
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msubsup>
+             </mrow>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que é uma soma em quadratura das incertezas parciais devidas a cada uma das variáveis. Para
+     <math id="INEQ43">
+      <mrow>
+       <msub>
+        <mi>
+         σ
+        </mi>
+        <mi>
+         L
+        </mi>
+       </msub>
+       <mo>
+        /
+       </mo>
+       <mover accent="true">
+        <mi>
+         L
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     , e
+     <math id="INEQ44">
+      <mrow>
+       <msub>
+        <mi>
+         σ
+        </mi>
+        <mi>
+         T
+        </mi>
+       </msub>
+       <mo>
+        /
+       </mo>
+       <mover accent="true">
+        <mi>
+         T
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     muito pequenos,
+     <i>
+      g
+     </i>
+     (
+     <i>
+      L
+     </i>
+     ,
+     <i>
+      T
+     </i>
+     ) em torno do ponto (
+     <math id="INEQ46">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         L
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        ,
+       </mo>
+       <mover accent="true">
+        <mi>
+         T
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     ) fica aproximadamente linear nas variáveis
+     <i>
+      L
+     </i>
+     e
+     <i>
+      T
+     </i>
+     (Exemplo na seção
+     <strong>
+      4
+     </strong>
+     ). Podemos então usar derivadas para determinar o efeito das pequenas variações
+     <i>
+      <i>
+       σ
+      </i>
+     </i>
+     <sub>
+      <i>
+       L
+      </i>
+     </sub>
+     , e
+     <i>
+      <i>
+       σ
+      </i>
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     nos termos do lado direito da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. J.H. Vuolo, Fundamentos da teoria de erros (Editora Blucher, São Paulo, 1996).
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="eS3_E5">
+     <a name="S3_E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mtable displaystyle="true">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mrow>
+             <msubsup>
+              <mi>
+               σ
+              </mi>
+              <mi>
+               g
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+             <mo rspace="7.5pt">
+              ≈
+             </mo>
+             <mrow>
+              <msup>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <mrow>
+                 <mfrac>
+                  <mrow>
+                   <mo>
+                    ∂
+                   </mo>
+                   <mo>
+                    ⁡
+                   </mo>
+                   <mi>
+                    g
+                   </mi>
+                  </mrow>
+                  <mrow>
+                   <mo>
+                    ∂
+                   </mo>
+                   <mo>
+                    ⁡
+                   </mo>
+                   <mi>
+                    L
+                   </mi>
+                  </mrow>
+                 </mfrac>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <msub>
+                  <mi>
+                   σ
+                  </mi>
+                  <mi>
+                   L
+                  </mi>
+                 </msub>
+                </mrow>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mo>
+               +
+              </mo>
+              <msup>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <mrow>
+                 <mfrac>
+                  <mrow>
+                   <mo>
+                    ∂
+                   </mo>
+                   <mo>
+                    ⁡
+                   </mo>
+                   <mi>
+                    g
+                   </mi>
+                  </mrow>
+                  <mrow>
+                   <mo>
+                    ∂
+                   </mo>
+                   <mo>
+                    ⁡
+                   </mo>
+                   <mi>
+                    T
+                   </mi>
+                  </mrow>
+                 </mfrac>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <msub>
+                  <mi>
+                   σ
+                  </mi>
+                  <mi>
+                   T
+                  </mi>
+                 </msub>
+                </mrow>
+                <mo>
+                 )
+                </mo>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mrow>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math id="INEQ47">
+      <mrow>
+       <mrow>
+        <mrow>
+         <mo>
+          ∂
+         </mo>
+         <mo>
+          ⁡
+         </mo>
+         <mi>
+          g
+         </mi>
+        </mrow>
+        <mo>
+         /
+        </mo>
+        <mrow>
+         <mo>
+          ∂
+         </mo>
+         <mo>
+          ⁡
+         </mo>
+         <mi>
+          L
+         </mi>
+        </mrow>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           g
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            L
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mover accent="true">
+            <mi>
+             T
+            </mi>
+            <mo>
+             ¯
+            </mo>
+           </mover>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          /
+         </mo>
+         <mi>
+          d
+         </mi>
+        </mrow>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         L
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     é a derivada parcial de
+     <i>
+      g
+     </i>
+     (
+     <i>
+      L
+     </i>
+     ,
+     <i>
+      T
+     </i>
+     ) em relação a
+     <i>
+      L
+     </i>
+     , e ∂⁡
+     <i>
+      g
+     </i>
+     /∂⁡
+     <i>
+      T
+     </i>
+     é análogo. Na prática do ensino, calculam-se as derivadas de forma tradicional, substituem-se as expressões das derivadas na equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ), e finaliza-se o cálculo usando calculadora ou planilha eletrônica para determinar
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       g
+      </i>
+     </sub>
+     .
+    </p>
+    <p>
+     Podemos citar imediatamente duas desvantagens no uso rotineiro da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ) no âmbito das atividades de laboratório de ensino. A primeira, são as derivadas parciais. Porque alguns alunos ainda estão pouco familiarizados com o cálculo diferencial. A segunda, são os possíveis erros operacionais na transcrição das derivadas obtidas para a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ), mesmo que as derivadas parciais tenham sido calculadas corretamente. A relativa complexidade operacional da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ) depende da descrição matemática do fenômeno físico em estudo. Erros de derivação e de digitação das expressões encontradas são de difícil identificação por inspeção do valor obtido para
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       g
+      </i>
+     </sub>
+     .
+    </p>
+    <p>
+     Vamos agora explicar a metodologia para propagação de incertezas por diferenças finitas. Por definição de derivadas, ∂⁡
+     <i>
+      g
+     </i>
+     /∂⁡
+     <i>
+      L
+     </i>
+     = Δ
+     <i>
+      g
+     </i>
+     /Δ
+     <i>
+      L
+     </i>
+     , para Δ
+     <i>
+      L
+     </i>
+     muito pequeno. Usando
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       L
+      </i>
+     </sub>
+     , que assumimos ser muito pequeno e que tem dimensão de
+     <i>
+      L
+     </i>
+     , no lugar de Δ
+     <i>
+      L
+     </i>
+     no denominador de Δ
+     <i>
+      g
+     </i>
+     /Δ
+     <i>
+      L
+     </i>
+     , a derivada parcial fica Δ
+     <i>
+      g
+     </i>
+     /
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       L
+      </i>
+     </sub>
+     . Usando esse artifício no primeiro termo do lado direito da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ), ficamos apenas com a variação Δ
+     <i>
+      g
+     </i>
+     causada por uma variação
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       L
+      </i>
+     </sub>
+     . Usando raciocínio análogo para o segundo termo da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ), obtemos uma equação de
+     <i>
+      diferenças finitas
+     </i>
+     :
+    </p>
+    <div class="row formula" id="eS3_E6">
+     <a name="S3_E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mtable displaystyle="true" rowspacing="0pt">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <msubsup>
+             <mi>
+              σ
+             </mi>
+             <mi>
+              g
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msubsup>
+            <mo>
+             ≈
+            </mo>
+            <msup>
+             <mrow>
+              <mo>
+               |
+              </mo>
+              <mrow>
+               <mrow>
+                <mi>
+                 g
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   L
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo>
+                  ,
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   T
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <mo>
+                -
+               </mo>
+               <mrow>
+                <mi>
+                 g
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mrow>
+                  <mover accent="true">
+                   <mi>
+                    L
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo>
+                   ±
+                  </mo>
+                  <msub>
+                   <mi>
+                    σ
+                   </mi>
+                   <mi>
+                    L
+                   </mi>
+                  </msub>
+                 </mrow>
+                 <mo>
+                  ,
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   T
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+              </mrow>
+              <mo>
+               |
+              </mo>
+             </mrow>
+             <mn>
+              2
+             </mn>
+            </msup>
+            <mtext>
+            </mtext>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mrow>
+             <mo rspace="4.2pt">
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <mrow>
+                <mrow>
+                 <mi>
+                  g
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mover accent="true">
+                   <mi>
+                    L
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo>
+                   ,
+                  </mo>
+                  <mover accent="true">
+                   <mi>
+                    T
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+                <mo>
+                 -
+                </mo>
+                <mrow>
+                 <mi>
+                  g
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mover accent="true">
+                   <mi>
+                    L
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo>
+                   ,
+                  </mo>
+                  <mrow>
+                   <mover accent="true">
+                    <mi>
+                     T
+                    </mi>
+                    <mo>
+                     ¯
+                    </mo>
+                   </mover>
+                   <mo>
+                    ±
+                   </mo>
+                   <msub>
+                    <mi>
+                     σ
+                    </mi>
+                    <mi>
+                     T
+                    </mi>
+                   </msub>
+                  </mrow>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+               </mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     No limite em que
+     <i>
+      <i>
+       σ
+      </i>
+     </i>
+     <sub>
+      <i>
+       L
+      </i>
+     </sub>
+     e
+     <i>
+      <i>
+       σ
+      </i>
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     são pequenos o resultado da (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ) é idêntico ao da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ). Porém, enquanto a (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ) é uma aproximação linear rigorosamente correta apenas para incertezas infinitesimais, a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ) é mais robusta e permite incertezas finitas.
+    </p>
+    <p>
+     Análogo à equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ), para uma função
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     ) qualquer temos:
+    </p>
+    <div class="row formula" id="eS3_E7">
+     <a name="S3_E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mtable displaystyle="true" rowspacing="0pt">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <msubsup>
+             <mi>
+              σ
+             </mi>
+             <mi>
+              f
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msubsup>
+            <mo>
+             ≈
+            </mo>
+            <msup>
+             <mrow>
+              <mo>
+               |
+              </mo>
+              <mrow>
+               <mrow>
+                <mi>
+                 f
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   x
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo>
+                  ,
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   y
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <mo>
+                -
+               </mo>
+               <mrow>
+                <mi>
+                 f
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mrow>
+                  <mover accent="true">
+                   <mi>
+                    x
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo>
+                   ±
+                  </mo>
+                  <msub>
+                   <mi>
+                    σ
+                   </mi>
+                   <mi>
+                    x
+                   </mi>
+                  </msub>
+                 </mrow>
+                 <mo>
+                  ,
+                 </mo>
+                 <mover accent="true">
+                  <mi>
+                   y
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+              </mrow>
+              <mo>
+               |
+              </mo>
+             </mrow>
+             <mn>
+              2
+             </mn>
+            </msup>
+            <mtext>
+            </mtext>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mrow>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <mrow>
+                <mrow>
+                 <mi>
+                  f
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mover accent="true">
+                   <mi>
+                    x
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo>
+                   ,
+                  </mo>
+                  <mover accent="true">
+                   <mi>
+                    y
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+                <mo>
+                 -
+                </mo>
+                <mrow>
+                 <mi>
+                  f
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mover accent="true">
+                   <mi>
+                    x
+                   </mi>
+                   <mo>
+                    ¯
+                   </mo>
+                  </mover>
+                  <mo>
+                   ,
+                  </mo>
+                  <mrow>
+                   <mover accent="true">
+                    <mi>
+                     y
+                    </mi>
+                    <mo>
+                     ¯
+                    </mo>
+                   </mover>
+                   <mo>
+                    ±
+                   </mo>
+                   <msub>
+                    <mi>
+                     σ
+                    </mi>
+                    <mi>
+                     y
+                    </mi>
+                   </msub>
+                  </mrow>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+               </mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math id="INEQ61">
+      <mover accent="true">
+       <mi>
+        x
+       </mi>
+       <mo>
+        ¯
+       </mo>
+      </mover>
+     </math>
+     ,
+     <math id="INEQ62">
+      <mover accent="true">
+       <mi>
+        y
+       </mi>
+       <mo>
+        ¯
+       </mo>
+      </mover>
+     </math>
+     são os valores médios dos mensurandos, e
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     ,
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     , suas respectivas incertezas. Para valores não desprezíveis de
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     ,
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     , o valor de
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       f
+      </i>
+     </sub>
+     pode depender do sinal (±) utilizado. Essa assimetria na incerteza [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        14. D.C. Bailey, Royal Society open science 4, 160600 (2017).
+       </span>
+      </span>
+     </span>
+     ] desaparece para
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       x
+      </i>
+     </sub>
+     ,
+     <i>
+      σ
+     </i>
+     <sub>
+      <i>
+       y
+      </i>
+     </sub>
+     pequenos, ou se a incerteza precisa ser escrita com poucos algarismos significativos ou para uma combinação dessas condições.
+    </p>
+    <p>
+     Para incertezas pequenas e funções monotônicas em torno de
+     <math id="INEQ70">
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mover accent="true">
+        <mi>
+         x
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        ,
+       </mo>
+       <mover accent="true">
+        <mi>
+         y
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     , podemos evitar escrever incertezas assimétricas calculando, para cada termo da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     ), a média das incertezas obtidas com sinais positivos e negativos. Tal simetrização é prática comum na literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        15. JCGM, Evaluation of measurement data—Guide to the expression of uncertainty in measurement, Int. Organ. Stand. Geneva 50, 134 (2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16. INMETRO, Avaliação de dados de medição – Guia para a expressão de incerteza de medição – GUM 2008. Disponível em: http://www.inmetro.gov.br/inovacao/publicacoes/gum_final.pdf.
+       </span>
+       <br/>
+       <a href="http://www.inmetro.gov.br/inovacao/publicacoes/gum_final.pdf" target="_blank">
+        http://www.inmetro.gov.br/inovacao/publi...
+       </a>
+      </span>
+     </span>
+     ]. Assim o primeiro termo do lado direito da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     ) fica:
+    </p>
+    <div class="row formula" id="eS3_E8">
+     <a name="S3_E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mpadded width="+1.7pt">
+            <msubsup>
+             <mi>
+              f
+             </mi>
+             <mi>
+              x
+             </mi>
+             <mi>
+              S
+             </mi>
+            </msubsup>
+           </mpadded>
+          </mrow>
+          <mo rspace="4.2pt">
+           ≈
+          </mo>
+          <mfrac>
+           <mrow>
+            <mrow>
+             <mo stretchy="false">
+              |
+             </mo>
+             <mrow>
+              <mrow>
+               <mi>
+                f
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mrow>
+                 <mover accent="true">
+                  <mi>
+                   x
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo>
+                  +
+                 </mo>
+                 <msub>
+                  <mi>
+                   σ
+                  </mi>
+                  <mi>
+                   x
+                  </mi>
+                 </msub>
+                </mrow>
+                <mo>
+                 ,
+                </mo>
+                <mover accent="true">
+                 <mi>
+                  y
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo rspace="4.2pt" stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+              <mo rspace="4.2pt">
+               -
+              </mo>
+              <mrow>
+               <mi>
+                f
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mover accent="true">
+                 <mi>
+                  x
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo>
+                 ,
+                </mo>
+                <mover accent="true">
+                 <mi>
+                  y
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mrow>
+             <mo stretchy="false">
+              |
+             </mo>
+            </mrow>
+            <mo>
+             +
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              |
+             </mo>
+             <mrow>
+              <mrow>
+               <mi>
+                f
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mrow>
+                 <mover accent="true">
+                  <mi>
+                   x
+                  </mi>
+                  <mo>
+                   ¯
+                  </mo>
+                 </mover>
+                 <mo>
+                  -
+                 </mo>
+                 <msub>
+                  <mi>
+                   σ
+                  </mi>
+                  <mi>
+                   x
+                  </mi>
+                 </msub>
+                </mrow>
+                <mo>
+                 ,
+                </mo>
+                <mover accent="true">
+                 <mi>
+                  y
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo rspace="4.2pt" stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+              <mo rspace="4.2pt">
+               -
+              </mo>
+              <mrow>
+               <mi>
+                f
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mover accent="true">
+                 <mi>
+                  x
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo>
+                 ,
+                </mo>
+                <mover accent="true">
+                 <mi>
+                  y
+                 </mi>
+                 <mo>
+                  ¯
+                 </mo>
+                </mover>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mrow>
+             <mo stretchy="false">
+              |
+             </mo>
+            </mrow>
+           </mrow>
+           <mn>
+            2
+           </mn>
+          </mfrac>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde o sobrescrito
+     <i>
+      S
+     </i>
+     em
+     <math id="INEQ71">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <msubsup>
+        <mi>
+         f
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mi>
+         S
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+     indica incertezas simetrizadas, e o subscrito
+     <i>
+      x
+     </i>
+     em
+     <math id="INEQ72">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <msubsup>
+        <mi>
+         f
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mi>
+         S
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+     indica o primeiro termo do lado direito da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     ), onde a diferença finita é na variável
+     <i>
+      x
+     </i>
+     . Construindo uma expressão análoga
+     <math id="INEQ73">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <msubsup>
+        <mi>
+         f
+        </mi>
+        <mi>
+         y
+        </mi>
+        <mi>
+         S
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+     , a incerteza em
+     <math id="INEQ74">
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mover accent="true">
+         <mi>
+          x
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mo>
+         ,
+        </mo>
+        <mover accent="true">
+         <mi>
+          y
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     dada pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     ) fica:
+    </p>
+    <div class="row formula" id="eS3_E9">
+     <a name="S3_E9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msubsup>
+           <mi>
+            σ
+           </mi>
+           <mi>
+            f
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msubsup>
+          <mo>
+           ≈
+          </mo>
+          <mrow>
+           <msup>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mrow>
+              <mi mathvariant="normal">
+               Δ
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msubsup>
+               <mi>
+                f
+               </mi>
+               <mi>
+                x
+               </mi>
+               <mi>
+                S
+               </mi>
+              </msubsup>
+             </mrow>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mrow>
+              <mi mathvariant="normal">
+               Δ
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msubsup>
+               <mi>
+                f
+               </mi>
+               <mi>
+                y
+               </mi>
+               <mi>
+                S
+               </mi>
+              </msubsup>
+             </mrow>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS3_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     mostra um passo-a-passo para implementação da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     ) em planilha eletrônica. Generalizando a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     ) para
+     <i>
+      N
+     </i>
+     variáveis, um análogo à Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS3_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     terá 2
+     <sup>
+      <i>
+       N
+      </i>
+     </sup>
+     combinações de incertezas.
+    </p>
+    <div class="row table" id="S3_T1">
+     <a name="S3_T1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS3_T1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Esquema para implementação da propagação de incertezas por diferenças finitas em planilhas. As quatro primeiras colunas são auxiliares. A coluna Δ
+      <i>
+       f
+      </i>
+      <sup>
+       <i>
+        S
+       </i>
+      </sup>
+      contém os dois termos para uso no lado direito da equação
+      <a class="open-asset-modal" data-target="#ModalSchemeS3_E9" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       9
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Exemplo em planilha eletrônica
+    </h1>
+    <p>
+     Implementamos a Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS3_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     e a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     ) em planilha eletrônica (Material suplementar). Na implementação em planilha, basta escrever
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     ) uma única vez e copiá-la para as células inferiores. Isso permite encontrar rapidamente possíveis erros, evitando o cálculo incorreto das incertezas. Por exemplo, no pêndulo simples sabemos que o valor da aceleração da gravidade é cerca de
+     <i>
+      g = 10
+     </i>
+     m/s
+     <sup>
+      2
+     </sup>
+     . Se
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     ) for digitada errada, por exemplo, é possível que o valor de
+     <math id="INEQ79">
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mover accent="true">
+         <mi>
+          x
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mo>
+         ,
+        </mo>
+        <mover accent="true">
+         <mi>
+          y
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     fique discrepante, revelando um erro grosseiro.
+    </p>
+    <p>
+     Comparamos agora a metodologia de diferenças finitas com a tradicional. Usaremos valores de um experimento simulado de pêndulo simples onde
+     <i>
+      L
+     </i>
+     = (2,1 ± 0,2) m e
+     <i>
+      T
+     </i>
+     = (3,00 ± 0,10) s, com médias calculadas de 80 leituras simuladas, e incertezas representando DPs. Esses DPs são bem maiores que os tipicamente encontrados em laboratórios de ensino. Mesmo assim, observamos que a incerteza na função
+     <i>
+      g
+     </i>
+     é idêntica para ambas metodologias, para um ou dois algarismos significativos na incerteza de
+     <i>
+      g
+     </i>
+     (Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     ). Lembremos que devido à incerteza da própria incerteza
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         3
+        </strong>
+        Devido à distribuição estatística das leituras, inerente ao processo de medida, e ao fato de fazermos um número finito de leituras, numa repetição do experimento tanto a estimativa do valor médio quanto a do desvio padrão mudarão um pouco. A incerteza da incerteza é devida a essa variabilidade na estimativa do desvio padrão de um experimento de medida para outro.
+       </span>
+      </span>
+     </span>
+     , para experimentos com menos do que milhares de leituras, a incerteza no resultado deve ser arredondada para apenas um ou dois algarismos significativos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. G.L. de Sousa e G.C. Cardoso, Physics Education 53, 055001 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="S4_F1">
+     <a name="S4_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/cvkhwYXbRJ3cL9FnnbDhsQc/955ae2a71e85c30ade0992aa99aece2b9f192dab.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Propagação de incertezas de
+      <i>
+       g
+      </i>
+      obtidas pelo método das diferenças finitas e pelo método convencional das derivadas. Valores medidos:
+      <i>
+       L
+      </i>
+      = (2,1 ± 0,2) m, e
+      <i>
+       T
+      </i>
+      = (3,00 ± 0,10) s, onde as incertezas representam 1 DP, e N = 80 leituras foram usadas para cada medição. Note os passos intermediários conforme a Tabela
+      <a class="open-asset-modal" data-target="#ModalTableS3_T1" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       1
+      </a>
+      . Os valores em negrito no quadro acima estão arredondados para apresentar o número correto de algarismos significativos. Observe que as duas metodologias dão o mesmo resultado.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para esclarecer equivalência entre as duas técnicas, mostramos na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     como uma pequena incerteza em
+     <math id="INEQ90">
+      <mover accent="true">
+       <mi>
+        T
+       </mi>
+       <mo>
+        ¯
+       </mo>
+      </mover>
+     </math>
+     projeta uma incerteza em
+     <i>
+      g
+     </i>
+     (
+     <i>
+      T
+     </i>
+     ). Indicamos as incertezas em torno de
+     <math id="INEQ92">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         T
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mn>
+         3
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         00
+        </mn>
+       </mrow>
+      </mrow>
+     </math>
+     s por linhas pontilhadas verticais. Os prolongamentos horizontais das interseções das linhas verticais com a curva
+     <i>
+      g
+     </i>
+     (
+     <i>
+      T
+     </i>
+     ) para o eixo vertical, indicam os intervalos das incertezas de
+     <i>
+      g
+     </i>
+     . A linha tracejada tangente à curva
+     <i>
+      g
+     </i>
+     (
+     <i>
+      T
+     </i>
+     ) indica a derivada
+     <i>
+      g
+     </i>
+     ′(
+     <i>
+      T
+     </i>
+     ). Embora
+     <i>
+      g
+     </i>
+     (
+     <i>
+      L
+     </i>
+     ,
+     <i>
+      T
+     </i>
+     ) seja não-linear em
+     <i>
+      T
+     </i>
+     , para intervalos pequenos em torno de
+     <math id="INEQ97">
+      <mover accent="true">
+       <mi>
+        T
+       </mi>
+       <mo>
+        ¯
+       </mo>
+      </mover>
+     </math>
+     as duas metodologias são equivalentes, ou seja, as linhas contínua
+     <i>
+      g
+     </i>
+     (
+     <i>
+      T
+     </i>
+     ) e tracejada
+     <i>
+      g
+     </i>
+     ′(
+     <i>
+      T
+     </i>
+     ) se superpõem quase perfeitamente (Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="S4_F2">
+     <a name="S4_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/cvkhwYXbRJ3cL9FnnbDhsQc/e9bda593b023cf63c6a0e5b8e31c095aa4ef03b9.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Exemplo de propagação de incertezas de uma variável
+      <i>
+       T
+      </i>
+      na função
+      <math id="INEQ84">
+       <mrow>
+        <mi>
+         g
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mover accent="true">
+          <mi>
+           L
+          </mi>
+          <mo>
+           ¯
+          </mo>
+         </mover>
+         <mo>
+          ,
+         </mo>
+         <mi>
+          T
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </mrow>
+      </math>
+      , para
+      <i>
+       T
+      </i>
+      = (3,00 ± 0,10) s, onde a incerteza representa 1 DP, e
+      <math id="INEQ86">
+       <mrow>
+        <mover accent="true">
+         <mi>
+          L
+         </mi>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mn>
+          2
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </mrow>
+      </math>
+      m. Note que para a incerteza em
+      <math id="INEQ87">
+       <mover accent="true">
+        <mi>
+         T
+        </mi>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+      </math>
+      relativamente pequena como mostrada, as projeções
+      <i>
+       g
+      </i>
+      (
+      <i>
+       T
+      </i>
+      ) e
+      <i>
+       g
+      </i>
+      ′(
+      <i>
+       T
+      </i>
+      ) são aproximadamente idênticas, levando a mesma incerteza em
+      <i>
+       g
+      </i>
+      quando poucos algarismos significativos são usados.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para resultados que requerem até um ou dois algarismos significativos na incerteza propagada, como é o caso encontrado nos laboratórios de ensino, não haverá diferença entre os métodos. Haverá potencial discrepância quando as incertezas forem maiores que cerca de 10% do valor médio da variável correspondente. Nesse caso, as curvas
+     <i>
+      g
+     </i>
+     ’(
+     <i>
+      T
+     </i>
+     ) e
+     <i>
+      g
+     </i>
+     (
+     <i>
+      T
+     </i>
+     ) diferem entre si ao redor de
+     <math id="INEQ102">
+      <mover accent="true">
+       <mi>
+        T
+       </mi>
+       <mo>
+        ¯
+       </mo>
+      </mover>
+     </math>
+     , como pode ser inferido da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     . Porém, o tratamento de grandes incertezas experimentais não pertence ao laboratório introdutório de ensino, e fica fora do escopo deste artigo.
+    </p>
+    <p>
+     As limitações no uso da equação (9) e da equação (5) são as mesmas: o experimento precisa ter sido planejado de tal forma que as leituras das várias variáveis devem ser feitas para serem independentes e descorrelacionadas, e as incertezas relativas devem ser menores que cerca de 10%.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Considerações finais
+    </h1>
+    <p>
+     O uso de diferenças finitas na propagação de incertezas visa diminuir a carga cognitiva [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        17. J.J. Van Merriënboer, P.A. Kirschner e L. Kester, Educational psychologist 38, 5 (2003).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        18. A. Buffler, S. Allie e F. Lubben, The Physics Teacher 46, 539 (2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19. J.J. Van Merriënboer e P.A. Kirschner, Ten steps to complex learning: A systematic approach to four-component instructional design (Routledge, Londres, 2017).
+       </span>
+      </span>
+     </span>
+     ] do aluno do laboratório de ensino de física experimental. Nossa abordagem é adequada após o aluno ter entendido e dominado a propagação de incerteza, e permite a análise dos dados de forma relativamente sofisticada, usando planilhas de autoria própria.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     RPRF agradece apoio do programa unificado de bolsas de estudo para estudantes de graduação (PUB – USP). Agradecemos a Renata Pazzini e ao Eduardo L. Dias pela leitura crítica do manuscrito.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Material suplementar">
+    <h1 class="articleSectionTitle">
+     Material suplementar
+    </h1>
+    <p>
+     Exemplos da metodologia implementada estão disponíveis em:
+     <a href="https://github.com/gccardoso/incertezas.git" target="_blank">
+      https://github.com/gccardoso/incertezas.git
+     </a>
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="References">
+    <h1 class="articleSectionTitle">
+     References
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1.
+       </sup>
+       <div>
+        E.M. Smith, M.M. Stein, C. Walsh e N. Holmes, Physical Review X
+        <b>
+         10
+        </b>
+        , 011029 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2.
+       </sup>
+       <div>
+        R.J. Moffat, Experimental thermal and fluid science
+        <b>
+         1
+        </b>
+        , 3 (1988).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3.
+       </sup>
+       <div>
+        J.H. Vuolo,
+        <i>
+         Fundamentos da teoria de erros
+        </i>
+        (Editora Blucher, São Paulo, 1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4.
+       </sup>
+       <div>
+        O.A. Helene e V.R. Vanin,
+        <i>
+         Tratamento estatístico de dados em física experimental
+        </i>
+        (Editora Blucher, São Paulo, 1991).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5.
+       </sup>
+       <div>
+        F. Marineli e J.L.A. Pacca, Revista Brasileira de Ensino de Física
+        <b>
+         28
+        </b>
+        , 497 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        6.
+       </sup>
+       <div>
+        T.S. Volkwyn, S. Allie, A. Buffler e F. Lubben, Physical Review Special Topics-Physics Education Research
+        <b>
+         4
+        </b>
+        , 010108 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        7.
+       </sup>
+       <div>
+        R.L. Kung, American Journal of Physics,
+        <b>
+         73
+        </b>
+        , 771 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        8.
+       </sup>
+       <div>
+        J. de Pinho Alves Filho, Caderno brasileiro de ensino de Física
+        <b>
+         17
+        </b>
+        , 174 (2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        9.
+       </sup>
+       <div>
+        N. Holmes, J. Olsen, J.L. Thomas e C.E. Wieman, Physical Review Physics Education Research
+        <b>
+         13
+        </b>
+        , 010129 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        10.
+       </sup>
+       <div>
+        G.L. de Sousa e G.C. Cardoso, Physics Education
+        <b>
+         53
+        </b>
+        , 055001 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        11.
+       </sup>
+       <div>
+        R.D. Knight,
+        <i>
+         Física-1: Uma Abordagem Estratégica-Mecânica Newtoniana, Gravitação, Oscilações e Ondas
+        </i>
+        (Editora Bookman, São Paulo, 2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        12.
+       </sup>
+       <div>
+        L. Flansburg, American Journal of Physics
+        <b>
+         40
+        </b>
+        , 1607 (1972).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        13.
+       </sup>
+       <div>
+        B. Priemer e J. Hellwig, International Journal of Science and Mathematics Education
+        <b>
+         16
+        </b>
+        , 45 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        14.
+       </sup>
+       <div>
+        D.C. Bailey, Royal Society open science
+        <b>
+         4
+        </b>
+        , 160600 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        15.
+       </sup>
+       <div>
+        JCGM, Evaluation of measurement data—Guide to the expression of uncertainty in measurement, Int. Organ. Stand. Geneva
+        <b>
+         50
+        </b>
+        , 134 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        16.
+       </sup>
+       <div>
+        INMETRO,
+        <i>
+         Avaliação de dados de medição – Guia para a expressão de incerteza de medição – GUM 2008
+        </i>
+        Disponível em: http://www.inmetro.gov.br/inovacao/publicacoes/gum_final.pdf
+        <br/>
+        <a href="http://www.inmetro.gov.br/inovacao/publicacoes/gum_final.pdf" target="_blank">
+         » http://www.inmetro.gov.br/inovacao/publicacoes/gum_final.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        17.
+       </sup>
+       <div>
+        J.J. Van Merriënboer, P.A. Kirschner e L. Kester, Educational psychologist
+        <b>
+         38
+        </b>
+        , 5 (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        18.
+       </sup>
+       <div>
+        A. Buffler, S. Allie e F. Lubben, The Physics Teacher
+        <b>
+         46
+        </b>
+        , 539 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        19.
+       </sup>
+       <div>
+        J.J. Van Merriënboer e P.A. Kirschner,
+        <i>
+         Ten steps to complex learning: A systematic approach to four-component instructional design
+        </i>
+        (Routledge, Londres, 2017).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div>
+    <h1>
+    </h1>
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Para distribuições estatísticas tais como a de Cauchy ou de Breit-Wigner (curva Lorentizana) a média é indefinida, pois não converge. É preciso usar a mediana.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Para
+        <i>
+         N
+        </i>
+        menor, o fator multiplicador aumenta. No caso geral, para
+        <i>
+         N
+        </i>
+        ≥ 2, o IC de 95% é obtido multiplicando-se o DPM pelo inverso bicaudal da distribuição t de Student (TINV( ), em planilhas MS Excel e OpenOffice), com p = 5%, e (
+        <i>
+         N
+        </i>
+        − 1) graus de liberdade.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        Devido à distribuição estatística das leituras, inerente ao processo de medida, e ao fato de fazermos um número finito de leituras, numa repetição do experimento tanto a estimativa do valor médio quanto a do desvio padrão mudarão um pouco. A incerteza da incerteza é devida a essa variabilidade na estimativa do desvio padrão de um experimento de medida para outro.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        06 Set 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        18 Fev 2021
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        04 Jul 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        15 Jul 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

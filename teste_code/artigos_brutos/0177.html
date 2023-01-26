@@ -1,0 +1,6900 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2020-0360" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2020-0360
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0360">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Experimento de baixo custo para medição da dissipação da energia em um pêndulo
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Low-cost experiment for measuring energy dissipation on a pendulum
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Marcos M. de Almeida
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:marcosma@ufba.br">
+      marcosma@ufba.br
+     </a>
+    </div>
+    Universidade Federal da Bahia, Instituto de Física, Salvador, BA, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-0923-6151">
+     http://orcid.org/0000-0003-0923-6151
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste artigo apresentamos um sistema para aquisição de intervalos de tempo e estimativas da velocidade a partir de sensores de luz infravermelha acoplados à placa Arduíno. Devido à precisão das medidas de tempo, que apresentam incertezas da ordem de 10
+     <sup>
+      −4
+     </sup>
+     <i>
+      s
+     </i>
+     , somos capazes de determinar a taxa de amortecimento para o pêndulo devido à resistência do ar em um regime de pequenos ângulos. Estudamos o sistema físico formado por um pequeno frasco de vidro suspenso por um fio. Este sistema foi modelado por diferentes pêndulos, como o pêndulo físico, o pêndulo simples e o pêndulo amortecido, onde discutimos sobre os limites de validade destes modelos.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave
+     </strong>
+     <br/>
+     Pêndulos; dissipação de energia; medidas de tempo; Arduíno
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this paper we present an acquisition system of time intervals and estimates of velocity by infrared light sensors connected to Arduíno board. Because of precision in time measurements, which present uncertainty in time on the order of 10
+     <sup>
+      −4
+     </sup>
+     <i>
+      s
+     </i>
+     , we are able to determine the damping ratio for pendulum produced by air friction in a small angles regime. We studied the physical system formed by a small glass bottle suspended by a wire. This system was modeled as different pendulum kinds,
+     <i>
+      e. g.
+     </i>
+     , compound pendulum, simple pendulum and damped pendulum, where we discuss about validity limits of these models.
+    </p>
+    <p>
+     Pendulums; energy loss; time measures; Arduíno
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Neste trabalho apresentamos um sistema para aquisição de dados de intervalos de tempo e estimativas da velocidade para experimentos nos laboratórios didáticos e salas de aula de Física. Em particular, estamos interessados em estudar o pêndulo amortecido. O sistema de aquisição é baseado na utilização da plataforma embarcada Arduíno [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1. https://www.arduino.cc/, acessado em 02/07/2020.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc/" target="_blank">
+        https://www.arduino.cc/...
+       </a>
+      </span>
+     </span>
+     ] juntamente com sensores de luz infravermelha.
+    </p>
+    <p>
+     Entre as vantagens da plataforma Arduíno podemos citar a sua enorme comunidade em fóruns, que compartilha seus códigos e diagramas de circuitos, sua facilidade de utilização e a possibilidade de emprego dela sem estar acoplada ao computador, onde o uso de LCD’s pode ser feito para leitura dos dados adquiridos. Um livro bastante interessante em português, no qual alguém interessado em iniciar trabalhos na plataforma Arduíno pode ter um primeiro contato é o “Arduíno Básico” de Michael McRoberts [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. M. McRoberts, Arduíno Básico (Novatec Editora, São Paulo, 2011), 1a ed.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A proposta de utilização do Arduíno no Ensino de Física tem sido vista com uma frequência cada vez maior nos periódicos especializados. Podemos citar trabalhos, somente nesta revista, em eletricidade [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fís. 33, 4503 (2011).
+       </span>
+      </span>
+     </span>
+     ;
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. G. Dionisio e L.E.S. Spalding, Rev. Bras. Ensino Fís. 39, e1501 (2017).
+       </span>
+      </span>
+     </span>
+     ], transferência de calor [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev. Bras. Ens. Fís. 33, 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ], amortecimento de vibrações em corpos extensos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev. Bras. Ens. Fís. 33, 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ;
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fís. 33, 4503 (2011).
+       </span>
+      </span>
+     </span>
+     ], ondas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. M.V. da Silveira, R.B. Barthem e A.C. dos Santos, Rev. Bras. Ens. Fís. 41, e20180084 (2019).
+       </span>
+      </span>
+     </span>
+     ], estudo do impulso sobre corpos em uma colisão [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ens. Fís. 41, e20180219 (2019).
+       </span>
+      </span>
+     </span>
+     ], Física Moderna [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. S. Silveira e M. Girardi, Rev. Bras. Ens. Fís. 39, e4502 (2017).
+       </span>
+      </span>
+     </span>
+     ], entre outras áreas.
+    </p>
+    <p>
+     O estudo particular de oscilações empregando uma interface computacional associada a diferentes tipos de sensores para a aquisição de dados não é nada novo. Os trabalhos de Figueira e Veit [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. J.S. Figueira e E.A. Veit, Rev. Bras. Ens. Fís. 26, 203 (2004).
+       </span>
+      </span>
+     </span>
+     ], Haag [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11. R. Haag, Rev. Bras. Ens. Fis. 23, 176 (2001).
+       </span>
+      </span>
+     </span>
+     ] e Aguiar e Laudares [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12. C.E. Aguiar e F.A. Laudares, Rev. Bras. Ens. Fís. 23, 371 (2001).
+       </span>
+      </span>
+     </span>
+     ] têm apresentado um sistema de aquisição de dados baseado na leitura obtida pela porta de jogos de placas de som. Com algumas diferenças entre as montagens, eles conseguem medir tanto o período de oscilação como estimar a velocidade com que os pêndulos passam no ponto mais baixo da trajetória. Uma dificuldade em montar estes dispositivos atualmente é que, em um intervalo de menos de 20 anos, estas entradas não são mais encontradas nos computadores atuais, que utilizam, em sua maioria, portas USB e HDMI.
+    </p>
+    <p>
+     Trabalhos para estudo de osciladores utilizando Arduíno também são encontrados, destacamos o de Hinrichsen [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13. P.F. Hinrichsen, The Physics Teacher 57, 250 (2019).
+       </span>
+      </span>
+     </span>
+     ] que acopla um acelerômetro em um sistema massa-mola e Silva et al. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        14. C.B.C. da Silva, B.B. Fagundes, J.D. Ribeiro, A.P. Tonel, F.L. Silveira e P.F. Dorneles, Rev. Bras. Ens. Fís. 42, e20190085 (2020).
+       </span>
+      </span>
+     </span>
+     ] que o acopla a um pêndulo físico, para determinação da aceleração dos sistemas, e Rinaldi e Fauzi [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        15. R.G. Rinaldi e A. Fauzi, Phys. Educ. 55, 015024 (2020).
+       </span>
+      </span>
+     </span>
+     ] que utilizam um sensor ultrassônico para determinação das amplitudes de oscilação em um sistema massa-mola amortecido. Em particular, temos o trabalho de Carvalho Neto et al. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16. J.T. de Carvalho Neto, F.R. Apolinário e A.A. Soares, Rev. Bras. Ens. Fís. 40, e1504 (2018).
+       </span>
+      </span>
+     </span>
+     ] que aplica sensores de luz infravermelha na construção de um sistema
+     <i>
+      photogate
+     </i>
+     , semelhante aos trabalhos com porta de jogos acima citados. Uma vantagem na estimativa da velocidade instantânea por nosso sistema, comparando com os outros similares citados acima, é a independência que temos com relação às dimensões do corpo. Todos os sistemas estimam a velocidade instantânea através do cálculo da velocidade média durante um trecho da trajetória. Quanto mais extenso for o trecho, pior a aproximação teórica da velocidade instantânea pela velocidade média. Assim, em trechos definidos pela extensão do corpo, quanto mais extenso este for, pior é a aproximação. No nosso sistema, o trecho é independente do corpo, já que ele é definido pelas duas linhas de fotossensores, e a separação entre estas duas linhas tendo como limitação apenas a dimensão dos sensores. Uma representação gráfica destes sensores e suas linhas é encontrada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS1_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S1_F1">
+     <a name="S1_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS1_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/da3ad1d8724945ad4e1ea18fdb4d48e894c19026.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Representação gráfica dos elementos de circuito do dispositivo de aquisição e suas ligações.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Comparando os nossos resultados com os obtidos por Figueira e Veit e Aguiar e Laudares, podemos dizer que observamos o amortecimento do pêndulo em diferentes situações. Nas medições realizadas por eles, o amortecimento do pêndulo foi verificado quando este oscilava em uma situação de grandes aberturas angulares, de forma que ao passar para um regime de pequenas aberturas, as curvas dos tempos de duração dos diferentes ciclos em função do tempo por eles determinadas apresentavam um comportamento assintótico para o valor determinado teoricamente pelo modelo do pêndulo simples. Nas medições que realizamos, devido à grande precisão na medida dos tempos, com incertezas da ordem de 10
+     <sup>
+      −4
+     </sup>
+     <i>
+      s
+     </i>
+     , fomos capazes de observar uma tendência de diminuição dos tempos de duração dos diferentes ciclos no regime de pequenas aberturas angulares. Nesta situação, teoricamente o pêndulo simples descreveria um movimento periódico caso não houvesse forças dissipativas agindo sobre ele.
+    </p>
+    <p>
+     Apresentamos na seção
+     <strong>
+      2
+     </strong>
+     um diagrama do dispositivo montado para ser o sistema de aquisição, onde apresentamos algumas das suas características. Na seção
+     <strong>
+      3
+     </strong>
+     discutimos a teoria do pêndulo, apresentando três diferentes modelos para este: o pêndulo físico, o pêndulo simples e o pêndulo amortecido. Determinamos as soluções horárias da posição e as energias mecânicas em função do tempo. Os resultados são discutidos na seção
+     <strong>
+      4
+     </strong>
+     , onde um tratamento dos dados é feito a partir da definição do modelo teórico representando o sistema, e algumas constantes importantes na construção destes modelos são determinadas, como a gravidade para um pêndulo simples e o fator de amortecimento para o pêndulo fracamente amortecido. Por fim, na seção
+     <strong>
+      5
+     </strong>
+     apresentamos as nossas considerações finais sobre o trabalho.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Montagem do sistema de medição
+    </h1>
+    <p>
+     Não trataremos aqui dos detalhes de projeto do dispositivo de aquisição. Este não é o objetivo do trabalho. Pretendemos apresentar um dispositivo de aquisição simples, barato e de fácil montagem.
+    </p>
+    <p>
+     O dispositivo de aquisição de dados montado para determinação dos tempos de duração dos diferentes ciclos e estimativa da velocidade do pêndulo no ponto mais baixo de sua trajetória é bastante simples. Este é formado pelos seguintes elementos:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       1 placa Mega 2560,
+      </p>
+     </li>
+     <li>
+      <p>
+       1 protoboard,
+      </p>
+     </li>
+     <li>
+      <p>
+       2 resistores de 2,2 kΩ,
+      </p>
+     </li>
+     <li>
+      <p>
+       2 resistores de 330Ω,
+      </p>
+     </li>
+     <li>
+      <p>
+       2 LED’s infravermelhos,
+      </p>
+     </li>
+     <li>
+      <p>
+       2 fototransistores infravermelhos e
+      </p>
+     </li>
+     <li>
+      <p>
+       fios para a conexão.
+      </p>
+     </li>
+    </ul>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS1_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     é apresentada uma representação gráfica destes elementos e suas ligações.
+    </p>
+    <p>
+     No Apêndice é encontrado o
+     <i>
+      sketch
+     </i>
+     carregado na placa Arduíno Mega 2560.
+    </p>
+    <p>
+     As entradas analógicas desta placa fazem a leitura das tensões entre o coletor e o emissor dos fototransistores. Para uma discussão mais detalhada sobre o funcionamento dos transistores, e consequentemente dos fototransistores também, o leitor interessado pode ver em Malvino e Bates [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        17. A. Malvino e D.J. Bates Eletrônica – volume I (AMGH Editora Ltda., Porto Alegre, 2016), 8a ed.
+       </span>
+      </span>
+     </span>
+     ]. Ao passar em frente aos fototransistores, o pêndulo interrompe o fluxo da luz infravermelha dos LED’s na base destes. A base do fototransistor ao deixar de ser iluminada aumenta a barreira para a passagem da corrente entre o emissor e o coletor. Deste modo, a tensão entre o coletor e o emissor do fototransistor aumenta e a corrente elétrica no circuito do fototransistor deixa de circular. Isto ocorre sempre quando o frasco de vidro interrompe a linha de luz infravermelha emitida pelo LED e que chega à base do fototransistor. Monitorando as variações na tensão entre o coletor e o emissor poderemos medir as diferenças de tempo entre as passagens sucessivas do pêndulo em frente aos fototransistores. Tomamos o cuidado de alterar as posições do fototransistor e do LED infravermelho de uma linha para outra, de forma a evitar interferência entre as linhas de sensores.
+    </p>
+    <p>
+     Montamos o circuito do nosso protótipo em uma placa protoboard, mas a confecção de uma placa de circuito para montagem deste não é uma tarefa complexa e pode ser pensada de forma a manter os LED’s e fototransistores fixos e protegidos em uma caixa. Uma outra estratégia é fazer como Figueira e Veit [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. J.S. Figueira e E.A. Veit, Rev. Bras. Ens. Fís. 26, 203 (2004).
+       </span>
+      </span>
+     </span>
+     ], que utilizaram peças plásticas de brinquedos de montagem para construir seus sensores. Assim você terá um sensor sempre montado para utilização. Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     é possível ver o pêndulo junto aos fotossensores utilizados.
+    </p>
+    <div class="row fig" id="S2_F2">
+     <a name="S2_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/45a7ce2f9d5f5a63e8181f1bbb0b30141077f39c.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Pêndulo e os fotossensores utilizados no trabalho.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Discussão teórica
+    </h1>
+    <p>
+     A modelagem do objeto que estamos interessado é o primeiro passo para a construção de um modelo teórico. Podemos pensar o pêndulo concreto, utilizado no experimento, a partir do modelo do pêndulo físico como descrito por Nussenzveig [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        18. H.M. Nussenzveig, Curso de Física Básica 2: Fluidos, Oscilações e Ondas, Calor (Ed. Edgard Blücher, São Paulo, 2002), 4a ed.
+       </span>
+      </span>
+     </span>
+     ]. Porém, podemos descrever o período de oscilação deste pêndulo físico associando a ele um pêndulo simples equivalente. Como nos alerta Silveira [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19. F.L. da Silveira, Cad. Cat. Ens. Fís. 9, 86 (1992).
+       </span>
+      </span>
+     </span>
+     ], o comprimento deste pêndulo equivalente é maior do que somente a distância entre o ponto fixo PF e o centro de gravidade do pêndulo concreto, que aqui assumiremos coincidir com o centro de massa CM, já que assumiremos a aceleração da gravidade percebida pelo sistema como constante. Uma representação esquemática do pêndulo físico e dos pontos definidos acima pode ser visualizada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S3_F3">
+     <a name="S3_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/88e01e0788c012c925ac404a8c6718afe4082f79.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Representação esquemática do pêndulo físico e o sistema de referência utilizado para descrição das posições.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Da equação para o torque resultante sobre o pêndulo físico em relação ao eixo perpendicular ao plano de oscilação passando por PF temos
+    </p>
+    <div class="row formula" id="eS3_E1">
+     <a name="S3_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            I
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mover accent="true">
+            <mi>
+             θ
+            </mi>
+            <mo>
+             ¨
+            </mo>
+           </mover>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mi>
+             M
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             g
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             D
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mtext>
+             sen
+            </mtext>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             θ
+            </mi>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      I
+     </i>
+     é o momento de inércia com relação ao eixo passando por PF,
+     <i>
+      M
+     </i>
+     é a massa do objeto,
+     <i>
+      g
+     </i>
+     é o módulo da aceleração gravitacional e
+     <i>
+      D
+     </i>
+     é a distância entre PF e CM.
+    </p>
+    <p>
+     Comparando a Equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) com a equação associada à componente da aceleração tangencial à trajetória do pêndulo simples:
+    </p>
+    <div class="row formula" id="eS3_Ex1">
+     <a name="S3_Ex1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            l
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mover accent="true">
+            <mi>
+             θ
+            </mi>
+            <mo>
+             ¨
+            </mo>
+           </mover>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mi>
+             g
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mtext>
+             sen
+            </mtext>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             θ
+            </mi>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      l
+     </i>
+     é o comprimento do pêndulo simples, podemos escrever que
+    </p>
+    <div class="row formula" id="eS3_Ex2">
+     <a name="S3_Ex2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mi>
+          l
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            M
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            D
+           </mi>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Aplicando o teorema de Steiner ou teorema dos eixos paralelos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        20. H.M. Nussenzveig, Curso de Física Básica 1: Mecânica (Ed. Edgard Blücher, São Paulo, 2002), 4a ed.
+       </span>
+      </span>
+     </span>
+     ], podemos escrever o momento de inércia
+     <i>
+      I
+     </i>
+     em função do momento de inércia com relação ao eixo paralelo passando pelo CM,
+     <i>
+      I
+     </i>
+     <sub>
+      <i>
+       CM
+      </i>
+     </sub>
+     :
+    </p>
+    <div class="row formula" id="eS3_Ex3">
+     <a name="S3_Ex3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mi>
+          l
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mrow>
+            <mi>
+             M
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              D
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             I
+            </mi>
+            <mrow>
+             <mi>
+              C
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              M
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mrow>
+           <mi>
+            M
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            D
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi>
+           D
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mfrac>
+           <msub>
+            <mi>
+             I
+            </mi>
+            <mrow>
+             <mi>
+              C
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              M
+             </mi>
+            </mrow>
+           </msub>
+           <mrow>
+            <mi>
+             M
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             D
+            </mi>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo o comprimento do pêndulo equivalente igual à distância entre o ponto fixo PF e o ponto conhecido como centro de oscilação, CO, do pêndulo físico. A separação entre CM e CO é dada pelo termo
+     <i>
+      I
+     </i>
+     <sub>
+      <i>
+       CM
+      </i>
+     </sub>
+     /
+     <i>
+      MD
+     </i>
+     . Segundo Silveira, para que o valor da distância entre CO e o ponto que fixa o objeto ao fio “não se altere significativamente durante o experimento é necessário que não apenas o peso do fio seja desprezível frente ao peso do objeto suspenso, mas que também sejam desprezíveis as dimensões do objeto suspenso frente ao comprimento do fio” (ver página 87 em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19. F.L. da Silveira, Cad. Cat. Ens. Fís. 9, 86 (1992).
+       </span>
+      </span>
+     </span>
+     ]). E mais, ele afirma que se o termo
+     <i>
+      I
+     </i>
+     <sub>
+      <i>
+       CM
+      </i>
+     </sub>
+     /
+     <i>
+      MD
+     </i>
+     for da mesma ordem de grandeza, ou de ordem menor, que o erro na determinação do comprimento do fio, podemos investigar a razoabilidade de quase invariância na determinação do centro de oscilação. Daremos um passo a mais. Considerando o resultado acima, vamos assumir que se o termo
+     <i>
+      I
+     </i>
+     <sub>
+      <i>
+       CM
+      </i>
+     </sub>
+     /
+     <i>
+      MD
+     </i>
+     for da ordem de grandeza da incerteza da medida do comprimento do fio, a aproximação do CO ao CM será razoável e poderemos modelar o pêndulo concreto como um pêndulo simples de comprimento
+     <i>
+      D
+     </i>
+     para estudar o período de oscilação deste.
+    </p>
+    <h2>
+     3.1. Análise da aproximação por um pêndulo simples
+    </h2>
+    <p>
+     Primeiramente vamos assumir que a massa do fio é desprezível com relação à massa da pequena garrafa de vidro utilizada, sendo esta última representada por uma casca cilíndrica com duas tampas em forma de disco. Assim poderemos definir numericamente o momento de inércia deste objeto com relação a um eixo
+     <i>
+      z
+     </i>
+     ′ perpendicular ao plano de oscilação e passando pelo seu centro de massa CM:
+    </p>
+    <div class="row formula" id="eS3_Ex4">
+     <a name="S3_Ex4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            C
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            M
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            I
+           </mi>
+           <mrow>
+            <mi>
+             c
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             a
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             s
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             c
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             a
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             I
+            </mi>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              i
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              s
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              c
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              o
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O momento de inércia da casca cilíndrica com relação ao eixo
+     <i>
+      z
+     </i>
+     ′ é:
+    </p>
+    <div class="row formula" id="eS3_Ex5">
+     <a name="S3_Ex5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <msup>
+           <mi>
+            z
+           </mi>
+           <mo>
+            ′
+           </mo>
+          </msup>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi>
+           ρ
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <msub>
+            <mo largeop="true" symmetric="true">
+             ∫
+            </mo>
+            <mrow>
+             <mi>
+              v
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              o
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              l
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              u
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              m
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              e
+             </mi>
+            </mrow>
+           </msub>
+           <mrow>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <msup>
+               <mi>
+                x
+               </mi>
+               <mrow>
+                <mo mathsize="142%" stretchy="false">
+                 ′
+                </mo>
+                <mo>
+                 ⁣
+                </mo>
+                <mn>
+                 2
+                </mn>
+               </mrow>
+              </msup>
+              <mo>
+               +
+              </mo>
+              <msup>
+               <mi>
+                y
+               </mi>
+               <mrow>
+                <mo mathsize="142%" stretchy="false">
+                 ′
+                </mo>
+                <mo>
+                 ⁣
+                </mo>
+                <mn>
+                 2
+                </mn>
+               </mrow>
+              </msup>
+             </mrow>
+             <mo rspace="4.2pt" stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mtext>
+             d
+            </mtext>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              x
+             </mi>
+             <mo>
+              ′
+             </mo>
+            </msup>
+            <mo>
+             ⁢
+            </mo>
+            <mtext>
+             d
+            </mtext>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              y
+             </mi>
+             <mo>
+              ′
+             </mo>
+            </msup>
+            <mo>
+             ⁢
+            </mo>
+            <mtext>
+             d
+            </mtext>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              z
+             </mi>
+             <mo>
+              ′
+             </mo>
+            </msup>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde ρ é a densidade de massa do objeto, e
+     <i>
+      x
+     </i>
+     ′ e
+     <i>
+      y
+     </i>
+     ′ são os outros dois eixos principais, sendo o último o eixo axial do cilindro. O plano
+     <i>
+      z
+     </i>
+     ′
+     <i>
+      x
+     </i>
+     ′ é paralelo às tampas deste objeto, e devido à simetria axial da casca vamos transformar estas coordenadas cartesianas nas coordenadas polares
+     <i>
+      r
+     </i>
+     e θ:
+    </p>
+    <div class="row formula" id="eS3_Ex10">
+     <a name="S3_Ex10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <msub>
+            <mi>
+             I
+            </mi>
+            <mrow>
+             <msup>
+              <mi>
+               z
+              </mi>
+              <mo>
+               ′
+              </mo>
+             </msup>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mi>
+            ρ
+           </mi>
+           <mstyle displaystyle="true">
+            <mrow>
+             <msubsup>
+              <mo>
+               ∫
+              </mo>
+              <mrow>
+               <msub>
+                <mi>
+                 r
+                </mi>
+                <mn>
+                 1
+                </mn>
+               </msub>
+              </mrow>
+              <mrow>
+               <msub>
+                <mi>
+                 r
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msub>
+              </mrow>
+             </msubsup>
+             <mrow>
+             </mrow>
+            </mrow>
+           </mstyle>
+           <mstyle displaystyle="true">
+            <mrow>
+             <msubsup>
+              <mo>
+               ∫
+              </mo>
+              <mn>
+               0
+              </mn>
+              <mrow>
+               <mn>
+                2
+               </mn>
+               <mi>
+                π
+               </mi>
+              </mrow>
+             </msubsup>
+             <mrow>
+             </mrow>
+            </mrow>
+           </mstyle>
+           <mstyle displaystyle="true">
+            <mrow>
+             <msubsup>
+              <mo>
+               ∫
+              </mo>
+              <mrow>
+               <mo>
+                −
+               </mo>
+               <mi>
+                h
+               </mi>
+               <mo>
+                /
+               </mo>
+               <mn>
+                2
+               </mn>
+              </mrow>
+              <mrow>
+               <mi>
+                h
+               </mi>
+               <mo>
+                /
+               </mo>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msubsup>
+             <mrow>
+             </mrow>
+            </mrow>
+           </mstyle>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msup>
+            <mi>
+             r
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <msup>
+            <mi>
+             cos
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            θ
+           </mi>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mi>
+             y
+            </mi>
+            <mrow>
+             <mo>
+              ′
+             </mo>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msup>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mtext>
+           </mtext>
+           <mi>
+            r
+           </mi>
+           <mtext>
+           </mtext>
+           <mtext>
+            d
+           </mtext>
+           <mi>
+            r
+           </mi>
+           <mtext>
+           </mtext>
+           <mtext>
+            d
+           </mtext>
+           <mi>
+            θ
+           </mi>
+           <mtext>
+           </mtext>
+           <mtext>
+            d
+           </mtext>
+           <msup>
+            <mi>
+             y
+            </mi>
+            <mo>
+             ′
+            </mo>
+           </msup>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mtext>
+           </mtext>
+           <mo>
+            =
+           </mo>
+           <mi>
+            ρ
+           </mi>
+           <mtext>
+           </mtext>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mstyle displaystyle="true">
+              <mrow>
+               <msubsup>
+                <mo>
+                 ∫
+                </mo>
+                <mrow>
+                 <msub>
+                  <mi>
+                   r
+                  </mi>
+                  <mn>
+                   1
+                  </mn>
+                 </msub>
+                </mrow>
+                <mrow>
+                 <msub>
+                  <mi>
+                   r
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msub>
+                </mrow>
+               </msubsup>
+               <mrow>
+               </mrow>
+              </mrow>
+             </mstyle>
+             <mstyle displaystyle="true">
+              <mrow>
+               <msubsup>
+                <mo>
+                 ∫
+                </mo>
+                <mn>
+                 0
+                </mn>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  π
+                 </mi>
+                </mrow>
+               </msubsup>
+               <mrow>
+               </mrow>
+              </mrow>
+             </mstyle>
+             <mstyle displaystyle="true">
+              <mrow>
+               <msubsup>
+                <mo>
+                 ∫
+                </mo>
+                <mrow>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  h
+                 </mi>
+                 <mo>
+                  /
+                 </mo>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mi>
+                  h
+                 </mi>
+                 <mo>
+                  /
+                 </mo>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msubsup>
+               <mrow>
+               </mrow>
+              </mrow>
+             </mstyle>
+             <mtext>
+             </mtext>
+             <msup>
+              <mi>
+               r
+              </mi>
+              <mn>
+               3
+              </mn>
+             </msup>
+             <msup>
+              <mrow>
+               <mi>
+                cos
+               </mi>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mi>
+              θ
+             </mi>
+             <mtext>
+             </mtext>
+             <mtext>
+              d
+             </mtext>
+             <mi>
+              r
+             </mi>
+             <mtext>
+             </mtext>
+             <mtext>
+              d
+             </mtext>
+             <mi>
+              θ
+             </mi>
+             <mtext>
+             </mtext>
+             <mtext>
+              d
+             </mtext>
+             <msup>
+              <mi>
+               y
+              </mi>
+              <mo>
+               ′
+              </mo>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <mtext>
+             </mtext>
+             <mstyle displaystyle="true">
+              <mrow>
+               <msubsup>
+                <mo>
+                 ∫
+                </mo>
+                <mrow>
+                 <msub>
+                  <mi>
+                   r
+                  </mi>
+                  <mn>
+                   1
+                  </mn>
+                 </msub>
+                </mrow>
+                <mrow>
+                 <msub>
+                  <mi>
+                   r
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msub>
+                </mrow>
+               </msubsup>
+               <mrow>
+               </mrow>
+              </mrow>
+             </mstyle>
+             <mstyle displaystyle="true">
+              <mrow>
+               <msubsup>
+                <mo>
+                 ∫
+                </mo>
+                <mn>
+                 0
+                </mn>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  π
+                 </mi>
+                </mrow>
+               </msubsup>
+               <mrow>
+               </mrow>
+              </mrow>
+             </mstyle>
+             <mstyle displaystyle="true">
+              <mrow>
+               <msubsup>
+                <mo>
+                 ∫
+                </mo>
+                <mrow>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  h
+                 </mi>
+                 <mo>
+                  /
+                 </mo>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mi>
+                  h
+                 </mi>
+                 <mo>
+                  /
+                 </mo>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msubsup>
+               <mrow>
+               </mrow>
+              </mrow>
+             </mstyle>
+             <mtext>
+             </mtext>
+             <mi>
+              r
+             </mi>
+             <mtext>
+             </mtext>
+             <msup>
+              <mi>
+               y
+              </mi>
+              <mrow>
+               <mo>
+                ′
+               </mo>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msup>
+             <mtext>
+              d
+             </mtext>
+             <mi>
+              r
+             </mi>
+             <mtext>
+             </mtext>
+             <mtext>
+              d
+             </mtext>
+             <mi>
+              θ
+             </mi>
+             <mtext>
+             </mtext>
+             <mtext>
+              d
+             </mtext>
+             <msup>
+              <mi>
+               y
+              </mi>
+              <mo>
+               ′
+              </mo>
+             </msup>
+            </mrow>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mtext>
+           </mtext>
+           <mo>
+            =
+           </mo>
+           <mi>
+            ρ
+           </mi>
+           <mtext>
+           </mtext>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mfrac>
+              <mrow>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mn>
+                 2
+                </mn>
+                <mn>
+                 4
+                </mn>
+               </msubsup>
+               <mo>
+                −
+               </mo>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mn>
+                 1
+                </mn>
+                <mn>
+                 4
+                </mn>
+               </msubsup>
+              </mrow>
+              <mn>
+               4
+              </mn>
+             </mfrac>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mtext>
+             </mtext>
+             <mi>
+              π
+             </mi>
+             <mi>
+              h
+             </mi>
+             <mtext>
+             </mtext>
+             <mo>
+              +
+             </mo>
+             <mtext>
+             </mtext>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mfrac>
+              <mrow>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mn>
+                 2
+                </mn>
+                <mn>
+                 2
+                </mn>
+               </msubsup>
+               <mo>
+                −
+               </mo>
+               <msubsup>
+                <mi>
+                 r
+                </mi>
+                <mn>
+                 1
+                </mn>
+                <mn>
+                 2
+                </mn>
+               </msubsup>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </mfrac>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mtext>
+             </mtext>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mfrac>
+              <mrow>
+               <msup>
+                <mi>
+                 h
+                </mi>
+                <mn>
+                 3
+                </mn>
+               </msup>
+              </mrow>
+              <mrow>
+               <mn>
+                24
+               </mn>
+              </mrow>
+             </mfrac>
+             <mo>
+              −
+             </mo>
+             <mfrac>
+              <mrow>
+               <mo>
+                −
+               </mo>
+               <msup>
+                <mi>
+                 h
+                </mi>
+                <mn>
+                 3
+                </mn>
+               </msup>
+              </mrow>
+              <mrow>
+               <mn>
+                24
+               </mn>
+              </mrow>
+             </mfrac>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mtext>
+           </mtext>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <msub>
+              <mi>
+               m
+              </mi>
+              <mrow>
+               <mi>
+                c
+               </mi>
+               <mi>
+                a
+               </mi>
+               <mi>
+                s
+               </mi>
+               <mi>
+                c
+               </mi>
+               <mi>
+                a
+               </mi>
+              </mrow>
+             </msub>
+            </mrow>
+            <mrow>
+             <mn>
+              12
+             </mn>
+            </mrow>
+           </mfrac>
+           <mo stretchy="false">
+            [
+           </mo>
+           <mn>
+            3
+           </mn>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msubsup>
+            <mi>
+             r
+            </mi>
+            <mn>
+             2
+            </mn>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo>
+            +
+           </mo>
+           <msubsup>
+            <mi>
+             r
+            </mi>
+            <mn>
+             1
+            </mn>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mi>
+             h
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo stretchy="false">
+            ]
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Assumimos que a altura da casca é
+     <i>
+      h
+     </i>
+     e os raios externo e interno são respectivamente
+     <i>
+      r
+      <sub>
+       2
+      </sub>
+     </i>
+     e
+     <i>
+      r
+      <sub>
+       1
+      </sub>
+     </i>
+     , tal que o volume da casca é igual a
+     <math id="INEQ13">
+      <mrow>
+       <mi>
+        π
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mrow>
+         <msubsup>
+          <mi>
+           r
+          </mi>
+          <mn>
+           2
+          </mn>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+         <mo>
+          -
+         </mo>
+         <msubsup>
+          <mi>
+           r
+          </mi>
+          <mn>
+           1
+          </mn>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+        </mrow>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        h
+       </mi>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     O momento de inércia de um disco em relação ao eixo axial de simetria é igual a
+     <math id="INEQ14">
+      <mrow>
+       <mrow>
+        <msub>
+         <mi>
+          m
+         </mi>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           i
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           s
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           c
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           o
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ⁢
+        </mo>
+        <msubsup>
+         <mi>
+          r
+         </mi>
+         <mn>
+          2
+         </mn>
+         <mn>
+          2
+         </mn>
+        </msubsup>
+       </mrow>
+       <mo>
+        /
+       </mo>
+       <mn>
+        2
+       </mn>
+      </mrow>
+     </math>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        20. H.M. Nussenzveig, Curso de Física Básica 1: Mecânica (Ed. Edgard Blücher, São Paulo, 2002), 4a ed.
+       </span>
+      </span>
+     </span>
+     ]. Utilizando o teorema dos eixos perpendiculares e novamente o teorema dos eixos paralelos ou teorema de Steiner apresentados em Symon [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21. K.R. Symon, Mechanics (Addison-Wesley Publishing Company, Inc., Reading, 1971), 3a ed.
+       </span>
+      </span>
+     </span>
+     ], temos que o momento de inércia dos discos com relação ao eixo
+     <i>
+      z
+     </i>
+     ′ passando pelo centro de massa do objeto é igual a
+    </p>
+    <div class="row formula" id="eS3_Ex11">
+     <a name="S3_Ex11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            i
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            s
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            o
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            m
+           </mi>
+           <mrow>
+            <mi>
+             d
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             i
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             s
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             c
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             o
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           ⁢
+          </mo>
+          <mfrac>
+           <mrow>
+            <msubsup>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+             <mn>
+              2
+             </mn>
+            </msubsup>
+            <mo>
+             +
+            </mo>
+            <msup>
+             <mi>
+              h
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mrow>
+           <mn>
+            4
+           </mn>
+          </mfrac>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Fazendo uma estimativa para a separação entre o CM e o CO do nosso pêndulo temos
+    </p>
+    <div class="row formula" id="eS3_Ex12">
+     <a name="S3_Ex12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mfrac>
+          <msub>
+           <mi>
+            I
+           </mi>
+           <mrow>
+            <mi>
+             C
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             M
+            </mi>
+           </mrow>
+          </msub>
+          <mrow>
+           <mi>
+            M
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            D
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mrow>
+            <msub>
+             <mi>
+              m
+             </mi>
+             <mrow>
+              <mi>
+               c
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               a
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               s
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               c
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               a
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo>
+              [
+             </mo>
+             <mrow>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <msubsup>
+                 <mi>
+                  r
+                 </mi>
+                 <mn>
+                  2
+                 </mn>
+                 <mn>
+                  2
+                 </mn>
+                </msubsup>
+                <mo>
+                 +
+                </mo>
+                <msubsup>
+                 <mi>
+                  r
+                 </mi>
+                 <mn>
+                  1
+                 </mn>
+                 <mn>
+                  2
+                 </mn>
+                </msubsup>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               +
+              </mo>
+              <mrow>
+               <msup>
+                <mi>
+                 h
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                /
+               </mo>
+               <mn>
+                3
+               </mn>
+              </mrow>
+             </mrow>
+             <mo>
+              ]
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <msub>
+             <mi>
+              m
+             </mi>
+             <mrow>
+              <mi>
+               d
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               i
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               s
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               c
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               o
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <msubsup>
+               <mi>
+                r
+               </mi>
+               <mn>
+                2
+               </mn>
+               <mn>
+                2
+               </mn>
+              </msubsup>
+              <mo>
+               +
+              </mo>
+              <msup>
+               <mi>
+                h
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+          <mrow>
+           <mn>
+            4
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            M
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            D
+           </mi>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS3_Ex13">
+     <a name="S3_Ex13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mi>
+         </mi>
+         <mo>
+          &lt;
+         </mo>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <mrow>
+             <mn>
+              3
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <msubsup>
+              <mi>
+               r
+              </mi>
+              <mn>
+               2
+              </mn>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+            </mrow>
+            <mo>
+             +
+            </mo>
+            <msubsup>
+             <mi>
+              r
+             </mi>
+             <mn>
+              1
+             </mn>
+             <mn>
+              2
+             </mn>
+            </msubsup>
+           </mrow>
+           <mrow>
+            <mn>
+             4
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             D
+            </mi>
+           </mrow>
+          </mfrac>
+          <mo>
+           +
+          </mo>
+          <mfrac>
+           <mrow>
+            <mn>
+             7
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              h
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mrow>
+           <mrow>
+            <mn>
+             12
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             D
+            </mi>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     já que
+     <i>
+      M
+     </i>
+     =
+     <i>
+      m
+     </i>
+     <sub>
+      <i>
+       casca
+      </i>
+     </sub>
+     + 2
+     <i>
+      m
+     </i>
+     <sub>
+      <i>
+       disco
+      </i>
+     </sub>
+     . Agora, somente para efeito de cálculo da estimativa da separação, vamos assumir
+     <i>
+      r
+      <sub>
+       2
+      </sub>
+      = r
+      <sub>
+       1
+      </sub>
+     </i>
+     . Esta assunção deve-se ao fato de não conhecermos a espessura das paredes da garrafa, ela aumentará o valor da nossa estimativa, assim estimaremos um valor máximo para a separação entre o CM e o CO.
+    </p>
+    <div class="row formula" id="eS3_Ex14">
+     <a name="S3_Ex14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mfrac>
+           <msub>
+            <mi>
+             I
+            </mi>
+            <mrow>
+             <mi>
+              C
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              M
+             </mi>
+            </mrow>
+           </msub>
+           <mrow>
+            <mi>
+             M
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             D
+            </mi>
+           </mrow>
+          </mfrac>
+          <mo>
+           &lt;
+          </mo>
+          <mrow>
+           <mfrac>
+            <msubsup>
+             <mi>
+              r
+             </mi>
+             <mn>
+              2
+             </mn>
+             <mn>
+              2
+             </mn>
+            </msubsup>
+            <mi>
+             D
+            </mi>
+           </mfrac>
+           <mo>
+            +
+           </mo>
+           <mfrac>
+            <mrow>
+             <mn>
+              7
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <msup>
+              <mi>
+               h
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mrow>
+             <mn>
+              12
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              D
+             </mi>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Seja
+     <i>
+      r
+     </i>
+     <sub>
+      2
+     </sub>
+     = 1,5
+     <i>
+      cm
+     </i>
+     e
+     <i>
+      h
+     </i>
+     = 7,5
+     <i>
+      cm
+     </i>
+     . Temos para o pêndulo com o menor comprimento que utilizamos, com uma distância entre o ponto fixo e o centro de gravidade igual a 50,0
+     <i>
+      cm
+     </i>
+     , que
+    </p>
+    <div class="row formula" id="eS3_Ex15">
+     <a name="S3_Ex15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mfrac>
+           <msub>
+            <mi>
+             I
+            </mi>
+            <mrow>
+             <mi>
+              C
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              M
+             </mi>
+            </mrow>
+           </msub>
+           <mrow>
+            <mi>
+             M
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             D
+            </mi>
+           </mrow>
+          </mfrac>
+          <mo>
+           &lt;
+          </mo>
+          <mrow>
+           <mn>
+            7
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mrow>
+            <mpadded width="+1.7pt">
+             <mn>
+              0
+             </mn>
+            </mpadded>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             m
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             m
+            </mi>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Este seria o maior valor estimado para a separação entre os diferentes comprimentos de pêndulos utilizados neste trabalho. Além disto, este limite máximo para a separação é da mesma ordem de grandeza da incerteza na medida dos comprimentos do fio e da determinação da posição do centro de gravidade da garrafa. Este resultado justifica a utilização de um modelo mais simples para descrição do movimento oscilatório do pêndulo concreto.
+    </p>
+    <h2>
+     3.2. Pêndulo simples
+    </h2>
+    <p>
+     O pêndulo simples é um modelo teórico bastante simplificado e utilizado com frequência no ensino de Física como representação do Movimento Harmônico Simples (MHS), um movimento periódico tomado como primeira aproximação na descrição de inúmeros fenômenos físicos associados ao movimento de um objeto confinado em uma região de equilíbrio estável. Como exemplo podemos citar o movimento de vibração de átomos em moléculas. Uma representação gráfica deste pêndulo é apresentada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S3_F4">
+     <a name="S3_F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/b0bff53d9c3405cfd0a080bae96fe4d671e2f2bd.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Representação esquemática do pêndulo simples e o sistema de referência utilizado para descrição das posições.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nesta representação assumimos que a origem do sistema de coordenadas encontra-se no ponto mais baixo da trajetória do pêndulo. Desta forma podemos assumir que ao passar por este ponto, a energia potencial do sistema pêndulo-Terra é nula, isto é,
+     <i>
+      U
+     </i>
+     (
+     <i>
+      y
+     </i>
+     = 0) = 0, e a sua energia mecânica é numericamente igual à sua energia cinética.
+    </p>
+    <p>
+     Segundo Bunge [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        22. M. Bunge, Teoria e Realidade (Ed. Perspectiva, São Paulo, 2017), 3a reimpressão, 1a ed.
+       </span>
+      </span>
+     </span>
+     ], “um
+     <i>
+      modelo teórico
+     </i>
+     é um sistema hipotético-dedutivo que concerne a um objeto-modelo, que é, por sua vez, uma representação conceitual esquemática de uma coisa ou de uma situação real ou suposta como tal.” (BUNGE, 2017, página 16). No caso do pêndulo simples, o sistema hipotético-dedutivo ou teoria geral aqui empregada é a Mecânica Clássica newtoniana. O objeto-modelo, como representação de uma coisa, é um objeto conceitual concebido a partir de abstrações e idealizações: as dimensões do corpo são reduzidas a um ponto que concentra a sua massa, isto é, o corpo é idealizado como uma partícula, que está suspensa por um fio inextensível de comprimento
+     <i>
+      l
+     </i>
+     e de massa desprezível. Estas são algumas destas abstrações e idealizações.
+    </p>
+    <p>
+     Desenvolvendo este modelo teórico, deduzimos a equação do movimento para o pêndulo simples [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        18. H.M. Nussenzveig, Curso de Física Básica 2: Fluidos, Oscilações e Ondas, Calor (Ed. Edgard Blücher, São Paulo, 2002), 4a ed.
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="eS3_E2">
+     <a name="S3_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            θ
+           </mi>
+           <mo>
+            ¨
+           </mo>
+          </mover>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mpadded width="+1.7pt">
+            <mstyle displaystyle="true">
+             <mfrac>
+              <mi>
+               g
+              </mi>
+              <mi>
+               l
+              </mi>
+             </mfrac>
+            </mstyle>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <mtext>
+            sen
+           </mtext>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ) está associada à componente tangencial à trajetória da aceleração da partícula. A componente radial da aceleração, também conhecida como aceleração centrípeta, dependerá da taxa de variação temporal da posição angular da partícula e do comprimento do pêndulo em uma relação bastante conhecida.
+    </p>
+    <p>
+     Uma aproximação utilizada no caso do pêndulo simples, conhecida como aproximação de pequenos ângulos, permite aproximar o senθ por θ, e a Equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ) se transforma na equação do MHS, que tem o seu período dado por:
+    </p>
+    <div class="row formula" id="eS3_E3">
+     <a name="S3_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          T
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           π
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <msqrt>
+           <mstyle displaystyle="true">
+            <mfrac>
+             <mi>
+              l
+             </mi>
+             <mi>
+              g
+             </mi>
+            </mfrac>
+           </mstyle>
+          </msqrt>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A solução geral do MHS para o caso do pêndulo simples é dada por:
+    </p>
+    <div class="row formula" id="eS3_Ex16">
+     <a name="S3_Ex16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           θ
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi mathvariant="normal">
+           Θ
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mi>
+            cos
+           </mi>
+           <mo>
+            ⁡
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mrow>
+             <mrow>
+              <msub>
+               <mi>
+                ω
+               </mi>
+               <mn>
+                0
+               </mn>
+              </msub>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+             <mo>
+              +
+             </mo>
+             <mi>
+              δ
+             </mi>
+            </mrow>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde as constantes arbitrárias Θ e
+     <i>
+      δ
+     </i>
+     serão determinadas pelas condições iniciais do problema e
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     é a frequência angular do pêndulo simples, dada por
+     <math id="INEQ22">
+      <msqrt>
+       <mrow>
+        <mi>
+         g
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mi>
+         l
+        </mi>
+       </mrow>
+      </msqrt>
+     </math>
+     .
+    </p>
+    <p>
+     Vamos assumir que no instante inicial
+     <i>
+      θ
+     </i>
+     (0) = 0 e
+     <math id="INEQ24">
+      <mrow>
+       <mrow>
+        <mover accent="true">
+         <mi>
+          θ
+         </mi>
+         <mo>
+          .
+         </mo>
+        </mover>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mover accent="true">
+         <mi>
+          θ
+         </mi>
+         <mo>
+          .
+         </mo>
+        </mover>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     . Dadas estas condições iniciais, temos que
+    </p>
+    <div class="row formula" id="eS3_Ex17">
+     <a name="S3_Ex17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           θ
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo rspace="4.2pt" stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi mathvariant="normal">
+           Θ
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mi>
+            cos
+           </mi>
+           <mo>
+            ⁡
+           </mo>
+           <mi>
+            δ
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ⇒
+         </mo>
+         <mi>
+          δ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           -
+          </mo>
+          <mrow>
+           <mi>
+            π
+           </mi>
+           <mo>
+            /
+           </mo>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS3_Ex18">
+     <a name="S3_Ex18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            θ
+           </mi>
+           <mo>
+            .
+           </mo>
+          </mover>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo rspace="4.2pt" stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           -
+          </mo>
+          <mrow>
+           <mi mathvariant="normal">
+            Θ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mpadded width="+1.7pt">
+            <msub>
+             <mi>
+              ω
+             </mi>
+             <mn>
+              0
+             </mn>
+            </msub>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <mtext>
+            sen
+           </mtext>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            δ
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mover accent="true">
+           <mi>
+            θ
+           </mi>
+           <mo>
+            .
+           </mo>
+          </mover>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          ⇒
+         </mo>
+         <msub>
+          <mover accent="true">
+           <mi>
+            θ
+           </mi>
+           <mo>
+            .
+           </mo>
+          </mover>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            ω
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+          <mo>
+           ⁢
+          </mo>
+          <mi mathvariant="normal">
+           Θ
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math id="INEQ25">
+      <msub>
+       <mover accent="true">
+        <mi>
+         θ
+        </mi>
+        <mo>
+         .
+        </mo>
+       </mover>
+       <mn>
+        0
+       </mn>
+      </msub>
+     </math>
+     é a velocidade angular inicial do pêndulo.
+    </p>
+    <p>
+     Uma outra hipótese do modelo teórico em questão é assumir que forças dissipativas não atuam sobre o sistema. Mais uma idealização. Uma hipótese interessante e simplificadora, e que em muitas experiências realizadas em salas de aula e em nossos laboratórios didáticos se ajustam muito bem aos dados. Desta forma podemos afirmar que a energia mecânica do sistema pêndulo-Terra
+    </p>
+    <div class="row formula" id="eS3_E4">
+     <a name="S3_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           E
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mstyle displaystyle="true">
+            <mfrac>
+             <mi>
+              m
+             </mi>
+             <mn>
+              2
+             </mn>
+            </mfrac>
+           </mstyle>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             l
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mover accent="true">
+             <mi>
+              θ
+             </mi>
+             <mo>
+              .
+             </mo>
+            </mover>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            g
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            l
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mn>
+              1
+             </mn>
+             <mo>
+              -
+             </mo>
+             <mrow>
+              <mi>
+               cos
+              </mi>
+              <mo>
+               ⁡
+              </mo>
+              <mi>
+               θ
+              </mi>
+             </mrow>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     é conservada.
+    </p>
+    <h2>
+     3.3. Pêndulo fracamente amortecido
+    </h2>
+    <p>
+     Quando uma força dissipativa passa a fazer parte da explicação, o modelo teórico deve ser reformulado para dar conta dos fenômenos observados. Assim, a equação do movimento para o pêndulo amortecido é dada por
+    </p>
+    <div class="row formula" id="eS3_Ex19">
+     <a name="S3_Ex19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            l
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mover accent="true">
+            <mi>
+             θ
+            </mi>
+            <mo>
+             ¨
+            </mo>
+           </mover>
+          </mrow>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mi>
+            γ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            l
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mover accent="true">
+            <mi>
+             θ
+            </mi>
+            <mo>
+             .
+            </mo>
+           </mover>
+          </mrow>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mpadded width="+1.7pt">
+            <mi>
+             g
+            </mi>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <mtext>
+            sen
+           </mtext>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde o termo dissipativo na equação acima é proporcional ao módulo da velocidade da massa suspensa,
+     <math id="INEQ26">
+      <mrow>
+       <mi>
+        l
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mover accent="true">
+        <mi>
+         θ
+        </mi>
+        <mo>
+         .
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        23. M.M. de Almeida, Rev. Bras. Ens. Fís. 41, e20190039 (2019).
+       </span>
+      </span>
+     </span>
+     ]. Utilizando novamente a aproximação de pequenos ângulos, a equação acima passa a ser escrita como:
+    </p>
+    <div class="row formula" id="eS3_E5">
+     <a name="S3_E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             θ
+            </mi>
+            <mo>
+             ¨
+            </mo>
+           </mover>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mi>
+             γ
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mover accent="true">
+             <mi>
+              θ
+             </mi>
+             <mo>
+              .
+             </mo>
+            </mover>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <msubsup>
+             <mi>
+              ω
+             </mi>
+             <mn>
+              0
+             </mn>
+             <mn>
+              2
+             </mn>
+            </msubsup>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             θ
+            </mi>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mn>
+           0
+          </mn>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde γ é conhecido como o fator de amortecimento do sistema e
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     é a frequência angular teórica do pêndulo simples.
+    </p>
+    <p>
+     A solução geral desta equação é dada por (ver o capítulo 4 de Nussenzveig [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        18. H.M. Nussenzveig, Curso de Física Básica 2: Fluidos, Oscilações e Ondas, Calor (Ed. Edgard Blücher, São Paulo, 2002), 4a ed.
+       </span>
+      </span>
+     </span>
+     ] para determinação da solução geral e uma discussão sobre o balanço de energia do sistema.)
+    </p>
+    <div class="row formula" id="eS3_Ex20">
+     <a name="S3_Ex20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            θ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msup>
+            <mi>
+             e
+            </mi>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mrow>
+              <mfrac>
+               <mi>
+                γ
+               </mi>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </mrow>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mrow>
+             <mrow>
+              <mi>
+               a
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msup>
+               <mi>
+                e
+               </mi>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+              </msup>
+             </mrow>
+             <mo>
+              +
+             </mo>
+             <mrow>
+              <mi>
+               b
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <msup>
+               <mi>
+                e
+               </mi>
+               <mrow>
+                <mo>
+                 -
+                </mo>
+                <mrow>
+                 <mi>
+                  i
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  ω
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  t
+                 </mi>
+                </mrow>
+               </mrow>
+              </msup>
+             </mrow>
+            </mrow>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math id="INEQ28">
+      <mrow>
+       <msup>
+        <mi>
+         ω
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <msubsup>
+         <mi>
+          ω
+         </mi>
+         <mn>
+          0
+         </mn>
+         <mn>
+          2
+         </mn>
+        </msubsup>
+        <mo>
+         -
+        </mo>
+        <mrow>
+         <msup>
+          <mi>
+           γ
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          /
+         </mo>
+         <mn>
+          4
+         </mn>
+        </mrow>
+       </mrow>
+      </mrow>
+     </math>
+     . No regime que trataremos, de um amortecimento fraco, temos que
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     ≫
+     <i>
+      γ
+     </i>
+     /2. Este regime de oscilação do pêndulo é também conhecido como amortecimento subcrítico.
+    </p>
+    <p>
+     Tomando a parte real da solução acima, podemos escrever
+    </p>
+    <div class="row formula" id="eS3_E6">
+     <a name="S3_E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            θ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi mathvariant="normal">
+            Θ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             e
+            </mi>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mrow>
+              <mfrac>
+               <mi>
+                γ
+               </mi>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </mrow>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mi>
+             cos
+            </mi>
+            <mo>
+             ⁡
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mrow>
+               <mi>
+                ω
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+              <mo>
+               +
+              </mo>
+              <mi>
+               δ
+              </mi>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     As condições iniciais são as mesmas do problema do pêndulo simples, o que nos leva às relações
+     <math id="INEQ30">
+      <mrow>
+       <mi mathvariant="normal">
+        Θ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <msub>
+         <mover accent="true">
+          <mi>
+           θ
+          </mi>
+          <mo>
+           .
+          </mo>
+         </mover>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         /
+        </mo>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <i>
+      δ
+     </i>
+     = −
+     <i>
+      π
+     </i>
+     /2 para as constantes arbitrárias.
+    </p>
+    <p>
+     Consequências bem conhecidas deste modelo: 1) o movimento não é mais periódico e 2) a energia mecânica do sistema é dissipada com o tempo.
+    </p>
+    <p>
+     Assumindo a aproximação para ângulos pequenos e substituindo a solução geral (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ) na Equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ), temos:
+    </p>
+    <div class="row formula" id="eS3_Ex21">
+     <a name="S3_Ex21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <mi>
+            E
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mi>
+             m
+            </mi>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <msup>
+            <mi>
+             l
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <msup>
+            <mover accent="true">
+             <mi>
+              θ
+             </mi>
+             <mo>
+              ˙
+             </mo>
+            </mover>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <mi>
+            m
+           </mi>
+           <mi>
+            g
+           </mi>
+           <mi>
+            l
+           </mi>
+           <mfrac>
+            <mrow>
+             <msup>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mtext>
+           </mtext>
+           <mtext>
+           </mtext>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mi>
+             m
+            </mi>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <msup>
+            <mi>
+             l
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <msubsup>
+            <mover accent="true">
+             <mi>
+              θ
+             </mi>
+             <mo>
+              ˙
+             </mo>
+            </mover>
+            <mn>
+             0
+            </mn>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <msup>
+            <mi>
+             e
+            </mi>
+            <mrow>
+             <mo>
+              −
+             </mo>
+             <mi>
+              γ
+             </mi>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </msup>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mn>
+              1
+             </mn>
+             <mo>
+              +
+             </mo>
+             <mfrac>
+              <mi>
+               γ
+              </mi>
+              <mrow>
+               <mn>
+                2
+               </mn>
+               <msub>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 0
+                </mn>
+               </msub>
+              </mrow>
+             </mfrac>
+             <mi>
+              s
+             </mi>
+             <mi>
+              e
+             </mi>
+             <mi>
+              n
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              +
+             </mo>
+             <mfrac>
+              <mrow>
+               <msup>
+                <mi>
+                 γ
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+              <mrow>
+               <mn>
+                4
+               </mn>
+               <msubsup>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 0
+                </mn>
+                <mn>
+                 2
+                </mn>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <msup>
+              <mrow>
+               <mi>
+                cos
+               </mi>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mi>
+              ϕ
+             </mi>
+            </mrow>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      ϕ
+     </i>
+     =
+     <i>
+      ωt
+     </i>
+     +
+     <i>
+      δ
+     </i>
+     . Implicitamente, ao escrever a equação acima, também assumimos
+     <i>
+      ω
+     </i>
+     ≈
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     , tal que
+     <i>
+      g
+     </i>
+     /
+     <i>
+      lω
+     </i>
+     <sup>
+      2
+     </sup>
+     ≈1.
+    </p>
+    <p>
+     Como estamos admitindo um amortecimento subcrítico, vamos assumir que
+     <i>
+      exp
+     </i>
+     (−
+     <i>
+      γt
+     </i>
+     ) não vai alterar significativamente dentro de uma oscilação. Além disto, o fator
+     <math id="INEQ36">
+      <mrow>
+       <mrow>
+        <mrow>
+         <msup>
+          <mi>
+           γ
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          /
+         </mo>
+         <mn>
+          4
+         </mn>
+        </mrow>
+        <mo>
+         ⁢
+        </mo>
+        <msubsup>
+         <mi>
+          ω
+         </mi>
+         <mn>
+          0
+         </mn>
+         <mn>
+          2
+         </mn>
+        </msubsup>
+       </mrow>
+       <mo>
+        ≪
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     e o termo associado ao quadrado do cosseno será desconsiderado. Desta forma, ao tomarmos o valor médio da energia mecânica em um ciclo, este fator será considerado constante durante a integração:
+    </p>
+    <div class="row formula" id="eS3_Ex23">
+     <a name="S3_Ex23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            E
+           </mi>
+           <mo stretchy="false">
+            ¯
+           </mo>
+          </mover>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mfrac>
+           <mi>
+            m
+           </mi>
+           <mn>
+            2
+           </mn>
+          </mfrac>
+          <mo>
+           ⁢
+          </mo>
+          <msup>
+           <mi>
+            l
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msup>
+          <mo>
+           ⁢
+          </mo>
+          <msubsup>
+           <mover accent="true">
+            <mi>
+             θ
+            </mi>
+            <mo>
+             .
+            </mo>
+           </mover>
+           <mn>
+            0
+           </mn>
+           <mn>
+            2
+           </mn>
+          </msubsup>
+          <mo>
+           ⁢
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mrow>
+             <mi>
+              γ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mrow>
+          </msup>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo>
+            {
+           </mo>
+           <mrow>
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mi>
+              τ
+             </mi>
+            </mfrac>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <msubsup>
+              <mo largeop="true" symmetric="true">
+               ∫
+              </mo>
+              <mi>
+               t
+              </mi>
+              <mrow>
+               <mi>
+                t
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mi>
+                τ
+               </mi>
+              </mrow>
+             </msubsup>
+             <mrow>
+              <mrow>
+               <mo>
+                [
+               </mo>
+               <mrow>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 +
+                </mo>
+                <mrow>
+                 <mfrac>
+                  <mi>
+                   γ
+                  </mi>
+                  <mrow>
+                   <mn>
+                    2
+                   </mn>
+                   <mo>
+                    ⁢
+                   </mo>
+                   <msub>
+                    <mi>
+                     ω
+                    </mi>
+                    <mn>
+                     0
+                    </mn>
+                   </msub>
+                  </mrow>
+                 </mfrac>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mtext>
+                  sen
+                 </mtext>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mrow>
+                   <mn>
+                    2
+                   </mn>
+                   <mo>
+                    ⁢
+                   </mo>
+                   <mi>
+                    ϕ
+                   </mi>
+                  </mrow>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+               </mrow>
+               <mo rspace="4.2pt">
+                ]
+               </mo>
+              </mrow>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo mathvariant="italic" rspace="0pt">
+                d
+               </mo>
+               <msup>
+                <mi>
+                 t
+                </mi>
+                <mo>
+                 ′
+                </mo>
+               </msup>
+              </mrow>
+             </mrow>
+            </mrow>
+           </mrow>
+           <mo>
+            }
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde τ é a duração do ciclo.
+    </p>
+    <p>
+     Como o valor médio das funções trigonométricas seno e cosseno são nulas dentro de um número inteiro de ciclos, o valor médio da energia mecânica em uma oscilação é dado por
+    </p>
+    <div class="row formula" id="eS3_Ex24">
+     <a name="S3_Ex24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            E
+           </mi>
+           <mo stretchy="false">
+            ¯
+           </mo>
+          </mover>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mfrac>
+           <mi>
+            m
+           </mi>
+           <mn>
+            2
+           </mn>
+          </mfrac>
+          <mo>
+           ⁢
+          </mo>
+          <msup>
+           <mi>
+            l
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msup>
+          <mo>
+           ⁢
+          </mo>
+          <msubsup>
+           <mover accent="true">
+            <mi>
+             θ
+            </mi>
+            <mo>
+             .
+            </mo>
+           </mover>
+           <mn>
+            0
+           </mn>
+           <mn>
+            2
+           </mn>
+          </msubsup>
+          <mo>
+           ⁢
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mrow>
+             <mi>
+              γ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            E
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+          <mo>
+           ⁢
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mrow>
+             <mi>
+              γ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mrow>
+          </msup>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math id="INEQ37">
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mrow>
+         <mi>
+          m
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <msup>
+          <mi>
+           l
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          ⁢
+         </mo>
+         <msubsup>
+          <mover accent="true">
+           <mi>
+            θ
+           </mi>
+           <mo>
+            .
+           </mo>
+          </mover>
+          <mn>
+           0
+          </mn>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+        </mrow>
+        <mo>
+         /
+        </mo>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </mrow>
+     </math>
+     é a energia mecânica inicial do pêndulo amortecido. Considerando a energia mecânica dos outros ciclos com relação à energia do ciclo inicial, podemos escrever uma expressão para a energia mecânica relativa:
+    </p>
+    <div class="row formula" id="eS3_E7">
+     <a name="S3_E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mover accent="true">
+            <mi>
+             E
+            </mi>
+            <mo stretchy="false">
+             ¯
+            </mo>
+           </mover>
+           <mi>
+            r
+           </mi>
+          </msub>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             E
+            </mi>
+            <mo stretchy="false">
+             ¯
+            </mo>
+           </mover>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           /
+          </mo>
+          <msub>
+           <mi>
+            E
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mi>
+           e
+          </mi>
+          <mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mi>
+             γ
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mrow>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como o amortecimento é subcrítico, aproximaremos o valor médio da energia mecânica no ciclo para o valor da energia mecânica em um instante de tempo
+     <i>
+      t
+     </i>
+     durante este ciclo:
+    </p>
+    <div class="row formula" id="eS3_E8">
+     <a name="S3_E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <msub>
+            <mover accent="true">
+             <mi>
+              E
+             </mi>
+             <mo stretchy="false">
+              ¯
+             </mo>
+            </mover>
+            <mi>
+             r
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mrow>
+             <mi>
+              γ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mrow>
+          </msup>
+          <mo>
+           ≈
+          </mo>
+          <mrow>
+           <mrow>
+            <mi>
+             E
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            /
+           </mo>
+           <msub>
+            <mi>
+             E
+            </mi>
+            <mn>
+             0
+            </mn>
+           </msub>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Esta será uma quantidade com um papel relevante na experiência que realizaremos para determinação do fator de amortecimento γ.
+    </p>
+    <h2>
+     3.4. Determinação experimental da energia do pêndulo
+    </h2>
+    <p>
+     Assumindo que a energia mecânica no ponto mais baixo da trajetória é numericamente igual à energia cinética, se formos capazes de estimar a velocidade neste ponto, podemos inferir indiretamente a energia mecânica do pêndulo.
+    </p>
+    <p>
+     Para isto aproximaremos a velocidade instantânea à velocidade média entre dois pontos próximos na região mais baixa da trajetória. Somos capazes de determinar o intervalo de tempo na passagem do pêndulo por estas linhas e conhecendo a separação entre as duas linhas de sensores da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS1_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     , podemos estimar a velocidade instantânea. No nosso caso, como estamos interessados na energia relativa, a separação entre as linhas de sensores não influencia explicitamente na determinação desta. Seja Δ
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     o tempo de passagem entre as linhas de sensores no
+     <i>
+      i
+     </i>
+     -ésimo ciclo. A energia mecânica relativa do pêndulo é aproximada por
+    </p>
+    <div class="row formula" id="eS3_Ex25">
+     <a name="S3_Ex25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mover accent="true">
+            <mi>
+             E
+            </mi>
+            <mo stretchy="false">
+             ¯
+            </mo>
+           </mover>
+           <mi>
+            r
+           </mi>
+          </msub>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            t
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mi>
+           e
+          </mi>
+          <mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mi>
+             γ
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mrow>
+         </msup>
+         <mo>
+          ≈
+         </mo>
+         <mfrac>
+          <mrow>
+           <msubsup>
+            <mi>
+             v
+            </mi>
+            <mi>
+             i
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <msubsup>
+           <mi>
+            v
+           </mi>
+           <mn>
+            0
+           </mn>
+           <mn>
+            2
+           </mn>
+          </msubsup>
+         </mfrac>
+         <mo>
+          ≈
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msubsup>
+            <mi>
+             t
+            </mi>
+            <mn>
+             0
+            </mn>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msubsup>
+            <mi>
+             t
+            </mi>
+            <mi>
+             i
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      v
+      <sub>
+       i
+      </sub>
+     </i>
+     é a velocidade medida quando o ciclo se completa, isto é, no ponto mais baixo da trajetória, e Δ
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     é o tempo de passagem do pêndulo no primeiro ciclo medido. Assumimos este primeiro ciclo completo como referência para o instante inicial e consequente inferência da energia mecânica inicial.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados
+    </h1>
+    <p>
+     Agora passamos a apresentar os resultados obtidos para o pêndulo simples com 5 diferentes comprimentos
+     <i>
+      l
+     </i>
+     = 0,500
+     <i>
+      m
+     </i>
+     , 0,650
+     <i>
+      m
+     </i>
+     , 0,800
+     <i>
+      m
+     </i>
+     , 0,950
+     <i>
+      m
+     </i>
+     e 1,100
+     <i>
+      m
+     </i>
+     . O comprimento do pêndulo simples equivalente com período igual ao pêndulo físico que modela o objeto real ou concreto deve levar em consideração a posição do centro de oscilação deste último, como afirmado por Silveira [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19. F.L. da Silveira, Cad. Cat. Ens. Fís. 9, 86 (1992).
+       </span>
+      </span>
+     </span>
+     ] e Silveira e Ostermann [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24. F.L. da Silveira e F. Ostermann, Cad. Bras. Ens. Fís. 19, 7 (2002).
+       </span>
+      </span>
+     </span>
+     ]. Porém, como discutido na subseção
+     <strong>
+      3.1
+     </strong>
+     , a separação entre o CM e CO do pêndulo concreto que estamos utilizando é da ordem de grandeza da nossa incerteza na medidas do comprimento. Assim, estimamos a posição do centro de gravidade para determinação do comprimento do pêndulo simples deixando o frasco suspenso por um eixo, e depois repetimos o procedimento para outros dois eixos distintos. O cruzamento entre estes três eixos determinou a posição do centro de gravidade a 3,0
+     <i>
+      cm
+     </i>
+     da base do frasco de vidro. Como o frasco possui uma altura de 7,5
+     <i>
+      cm
+     </i>
+     , mais 4,5
+     <i>
+      cm
+     </i>
+     foram adicionados ao comprimento do fio para definir o comprimento do pêndulo.
+    </p>
+    <p>
+     Foram medidas 50 oscilações para cada comprimento dos pêndulos. Na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS4_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     apresentamos o valor médio do conjunto de oscilações.
+    </p>
+    <div class="row table" id="S4_T1">
+     <a name="S4_T1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      O valor médio das 50 oscilações medidas para diferentes comprimentos do pêndulo. Entre parênteses encontramos a incerteza avaliada para os comprimentos e a incerteza estimada para os períodos dado pelo valor de desvio padrão da amostra.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     são apresentados, em forma gráfica, os resultados experimentais e o ajuste realizado para os dados da Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS4_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     . Para realizar o ajuste, primeiro linearizamos a Equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     ) utilizando uma transformação logarítmica:
+    </p>
+    <div class="row fig" id="S4_F5">
+     <a name="S4_F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/d112edecbb7d9db47d55780e5ed3d62034a8d6b5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Gráfico em escala logarítmica dos valores médios do período das oscilações em função do comprimento do pêndulo. A linha contínua representa o ajuste realizado e os círculos representam os dados experimentais.
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_Ex26">
+     <a name="S4_Ex26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mtable>
+         <mtr>
+          <mtd>
+           <mi>
+            log
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            T
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mi>
+            log
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mfrac>
+              <mrow>
+               <mn>
+                2
+               </mn>
+               <mi>
+                π
+               </mi>
+              </mrow>
+              <mrow>
+               <msqrt>
+                <mi>
+                 g
+                </mi>
+               </msqrt>
+              </mrow>
+             </mfrac>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <mi>
+            log
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            l
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mi>
+            Y
+           </mi>
+           <mo>
+            =
+           </mo>
+           <msub>
+            <mi>
+             a
+            </mi>
+            <mn>
+             0
+            </mn>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             a
+            </mi>
+            <mn>
+             1
+            </mn>
+           </msub>
+           <mi>
+            X
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mtext>
+           </mtext>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      Y
+     </i>
+     =
+     <i>
+      log
+     </i>
+     ⁡(
+     <i>
+      T
+     </i>
+     ),
+     <i>
+      a
+     </i>
+     <sub>
+      0
+     </sub>
+     =
+     <i>
+      log
+     </i>
+     ⁡(2
+     <i>
+      π
+     </i>
+     /
+     <i>
+      g
+     </i>
+     <sup>
+      1/2
+     </sup>
+     ),
+     <i>
+      a
+     </i>
+     <sub>
+      1
+     </sub>
+     = 1/2 e
+     <i>
+      X
+     </i>
+     =
+     <i>
+      log
+     </i>
+     ⁡(
+     <i>
+      l
+     </i>
+     ).
+    </p>
+    <p>
+     Os parâmetros ajustados aos dados experimentais utilizando o método dos mínimos quadrados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25. J.H. Vuolo, Fundamentos da teoria de erros (Ed. Edgard Blücher, São Paulo, 1996), 2a ed.
+       </span>
+      </span>
+     </span>
+     ] são encontrados na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS4_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     .
+    </p>
+    <div class="row table" id="S4_T2">
+     <a name="S4_T2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Parâmetros do ajuste linear de
+      <i>
+       log
+      </i>
+      ⁡(
+      <i>
+       T
+      </i>
+      ) em função do
+      <i>
+       log
+      </i>
+      ⁡(
+      <i>
+       l
+      </i>
+      ). Entre parênteses encontramos o valor da incerteza estimada pelo ajuste.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os parâmetros do ajuste encontram-se em excelente acordo com os resultados esperados, apresentando um valor para o coeficiente de determinação
+     <i>
+      R
+     </i>
+     <sup>
+      2
+     </sup>
+     igual a 0,9999991. O parâmetro linear
+     <i>
+      a
+      <sub>
+       0
+      </sub>
+     </i>
+     produzindo um valor para a aceleração da gravidade local igual a 9,81(2)
+     <i>
+      m
+     </i>
+     /
+     <i>
+      s
+     </i>
+     <sup>
+      2
+     </sup>
+     , onde a aceleração da gravidade local medida pelo sensor G de um
+     <i>
+      tablet
+     </i>
+     utilizando o sistema Android através do aplicativo
+     <i>
+      Gravity Meter
+     </i>
+     foi de 9,807(1)
+     <i>
+      m
+     </i>
+     /
+     <i>
+      s
+     </i>
+     <sup>
+      2
+     </sup>
+     , próximo ao nível do mar em Salvador-BA.
+    </p>
+    <p>
+     Uma análise da duração dos 50 ciclos medidos nos mostra que os valores apresentam uma tendência de redução, como pode ser visto através da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S4_F6">
+     <a name="S4_F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/c239c39a2a3373048cf3b063ba0e64265ab21502.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Diferença entre os períodos medidos nos diferentes ciclos e o seu valor teórico determinado pelo modelo do pêndulo simples para diferentes comprimentos do pêndulo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O instrumento de medida desenvolvido neste trabalho apresenta uma incerteza estimada de 0,2
+     <i>
+      ms
+     </i>
+     . Esta estimativa foi realizada considerando o tempo de 100
+     <i>
+      μs
+     </i>
+     que cada uma das entradas analógicas utilizadas leva para responder ao chamado da função
+     <i>
+      AnalogRead
+     </i>
+     incorporadas no
+     <i>
+      sketch
+     </i>
+     carregado na placa Mega 2560, conforme podemos ver no sítio do projeto Arduíno [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        26. https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/, acessado em 03/07/2020.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/" target="_blank">
+        https://www.arduino.cc/reference/en/lang...
+       </a>
+      </span>
+     </span>
+     ]. Observamos uma diferença entre as durações do primeiro e último ciclos medidos na ordem de grandeza de unidades de milissegundos. Esta variação no período dos pêndulos a cada ciclo explica o fato das incertezas encontradas na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS4_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     serem maiores que 3 vezes a incerteza associada ao instrumento de medida. Para dar conta da diminuição do período de oscilação com o tempo, o modelo do pêndulo simples deve ser modificado para o modelo do pêndulo amortecido. É fato que a diminuição do tempo vem acompanhada de uma diminuição da amplitude angular máxima em cada ciclo, como apresentado por Silveira [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19. F.L. da Silveira, Cad. Cat. Ens. Fís. 9, 86 (1992).
+       </span>
+      </span>
+     </span>
+     ] na correção para o período em função da amplitude angular máxima, porém esta diminuição da amplitude está associada diretamente à dissipação de energia do pêndulo.
+    </p>
+    <p>
+     Um outro detalhe que podemos investigar é o fato da diferença entre os períodos medidos e o período estimado para o pêndulo simples apresentar um desvio maior nos primeiros ciclos para os menores comprimentos, mantendo a tendência nos ciclos seguintes. Num primeiro momento, podemos supor que este desvio deve-se à separação entre o centro de massa e o centro de oscilação que não foi levada em conta nos modelos, mas não é isto. Ao calcular os períodos levando em conta a separação entre o centro de massa e o centro de oscilação no comprimento do pêndulo, notamos que a diferença entre eles e os períodos calculados sem considerar esta separação é de 10
+     <i>
+      ms
+     </i>
+     para o menor comprimento do pêndulo, e vai diminuindo até ser de apenas 3
+     <i>
+      ms
+     </i>
+     para o pêndulo com maior comprimento. Quando comparamos estes dois resultados com os períodos médios obtidos experimentalmente, vemos que o desvio é menor entre os valores médios e os períodos estimados sem considerar a separação no cálculo do comprimento. Podemos imaginar duas coisas aqui: a primeira é que a aproximação do pêndulo simples foi boa, a segunda é que devemos considerar as aberturas angulares para a determinação dos períodos, como sugerido por Silveira no trabalho citado acima, se conseguimos descrever cada ciclo individualmente como neste trabalho. Acreditamos que esta tendência dos períodos para os comprimentos de pêndulos mais curtos diferirem mais do período estimado teoricamente deve-se ao fato do deslocamento linear na direção
+     <i>
+      x
+     </i>
+     do pêndulo de sua posição de equilíbrio antes de ser liberado, ter sido muito parecido para os diferentes comprimentos do pêndulo. Isto produziu ângulos máximos maiores para os pêndulos com comprimentos mais curtos, e consequentemente períodos maiores foram medidos.
+    </p>
+    <p>
+     Heidemann et al., em um trabalho nesta revista [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        27. L.A. Heidemann, I.S. Araujo e E.A. Veit, Rev. Bras. Ens. Fís. 38, 1504 (2016).
+       </span>
+      </span>
+     </span>
+     ], apresentaram uma proposta de episódios de modelagem, inspirada nos trabalhos dos ciclos de modelagem de Hestenes [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28; 29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        28. L.A. Heidemann, I.S. Araujo e E.A. Veit, Cad. Bras. Ens. de Fís. 29, 965 (2012).
+       </span>
+      </span>
+     </span>
+     ], no qual os limites das aproximações para um pêndulo simples eram testados e os modelos propostos analisados. Nos episódios de modelagem propostos por Heidemann, a discussão sobre os limites das aproximações era baseada nas características físicas do pêndulo. Acreditamos que com este dispositivo, uma análise da dissipação da energia de um pêndulo fracamente amortecido pode ser realizada e a limitação do modelo de pêndulo simples discutida em sala de aula em função também das limitações impostas pelo equipamento de medida.
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     , encontramos os dados da energia relativa obtida experimentalmente de forma indireta pelos tempos de passagem entre as duas linhas de sensores e as curvas encontradas a partir dos ajustes para os diferentes pêndulos.
+    </p>
+    <div class="row fig" id="S4_F7">
+     <a name="S4_F7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/abdf8d7956193bf41a24b512ea8773b459b93ec5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      À esquerda, o gráfico representando a energia relativa do pêndulo após cada ciclo. À direita, o mesmo gráfico com o eixo
+      <i>
+       y
+      </i>
+      em escala logarítmica. As linhas contínuas representam os ajustes realizados e os diferentes marcadores representam os dados experimentais.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS4_T3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      3
+     </a>
+     apresenta os fatores de amortecimento determinados pelo ajuste dos dados obtidos para a energia mecânica relativa. O parâmetro γ ajustado é o coeficiente angular obtido na linearização da Equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ),
+     <math id="INEQ61">
+      <mrow>
+       <mrow>
+        <mi>
+         ln
+        </mi>
+        <mo>
+         ⁡
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <msub>
+          <mover accent="true">
+           <mi>
+            E
+           </mi>
+           <mo stretchy="false">
+            ¯
+           </mo>
+          </mover>
+          <mi>
+           r
+          </mi>
+         </msub>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mrow>
+         <mi>
+          ln
+         </mi>
+         <mo>
+          ⁡
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mrow>
+           <msub>
+            <mover accent="true">
+             <mi>
+              E
+             </mi>
+             <mo stretchy="false">
+              ¯
+             </mo>
+            </mover>
+            <mi>
+             r
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         -
+        </mo>
+        <mrow>
+         <mi>
+          γ
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <mi>
+          t
+         </mi>
+        </mrow>
+       </mrow>
+      </mrow>
+     </math>
+     , onde o valor teórico de
+     <math id="INEQ62">
+      <mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          E
+         </mi>
+         <mo stretchy="false">
+          ¯
+         </mo>
+        </mover>
+        <mi>
+         r
+        </mi>
+       </msub>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     é 1. O ajuste de γ foi realizado permitindo-se o ajuste do coeficiente linear da retas representadas à direita da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     .
+    </p>
+    <div class="row table" id="S4_T3">
+     <a name="S4_T3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3
+      </strong>
+      <br/>
+      Os fatores de amortecimento ajustados e as estimativas da energia relativa inicial,
+      <math id="INEQ63">
+       <mrow>
+        <msub>
+         <mover accent="true">
+          <mi>
+           E
+          </mi>
+          <mo stretchy="false">
+           ¯
+          </mo>
+         </mover>
+         <mi>
+          r
+         </mi>
+        </msub>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </mrow>
+      </math>
+      , para diferentes comprimentos do pêndulo com os respectivos coeficientes de determinação
+      <i>
+       R
+      </i>
+      <sup>
+       2
+      </sup>
+      para os ajustes. Entre parênteses encontramos os valores da incerteza estimados pelo ajuste.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Tomando os diferentes valores γ, encontramos o seu valor médio,
+     <math id="INEQ68">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         γ
+        </mi>
+        <mo stretchy="false">
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mrow>
+         <mrow>
+          <mrow>
+           <mn>
+            44
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mn>
+             8
+            </mn>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           ×
+          </mo>
+          <mpadded width="+1.7pt">
+           <msup>
+            <mn>
+             10
+            </mn>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msup>
+          </mpadded>
+         </mrow>
+         <mo>
+          ⁢
+         </mo>
+         <msup>
+          <mi>
+           s
+          </mi>
+          <mrow>
+           <mo>
+            -
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </msup>
+        </mrow>
+       </mrow>
+      </mrow>
+     </math>
+     , onde o número entre parênteses é o desvio padrão da amostra. Os valores ajustados de
+     <math id="INEQ69">
+      <mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          E
+         </mi>
+         <mo stretchy="false">
+          ¯
+         </mo>
+        </mover>
+        <mi>
+         R
+        </mi>
+       </msub>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     estão próximos de 1, mas não tem o valor igual à unidade dentro do intervalo definido pela incerteza. Eles possuem um valor médio igual a 0,95 com um desvio padrão da amostra igual a 0,04.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Considerações finais
+    </h1>
+    <p>
+     Apresentamos um sistema de baixo custo e alta precisão para medidas de intervalos de tempo e estimativas da velocidade instantânea independente das dimensões do corpo, diferente do que geralmente é realizado em propostas de experimentos didáticos. Além da fácil montagem do dispositivo, há também uma facilidade no seu transporte devido ao baixo peso e dimensões.
+    </p>
+    <p>
+     Com ele foi possível medir, em um regime de pequenos ângulos, a dissipação da energia mecânica em um pêndulo de maneira rápida e eficiente. Os resultados apresentam um excelente acordo com a teoria e o resultado obtido para a gravidade local quando comparada com o resultado apresentado pelo aplicativo Gravity Meter é ótimo, apresentando uma precisão excelente quando comparada com os resultados tradicionais obtidos dentro do laboratório didático, onde cronômetros acionados manualmente ainda são muito utilizados. Esta precisão nos permitiu observar a dissipação da energia mecânica.
+    </p>
+    <p>
+     Apesar dos resultados excelentes, para uma descrição mais completa dos resultados teremos que levar em consideração as aberturas angulares descritas pelo movimento dos pêndulos. Assim, acreditamos poder explicar alguns desvios encontrados nos dados experimentais que não pudemos explicar com o modelo teórico empregado.
+    </p>
+    <p>
+     O baixo custo e facilidades que o Arduíno tem oferecido para a realização de experimentos em Física tem se mostrado uma excelente alternativa para construção de equipamentos de aquisição de dados para montagens de experimentos de baixo custo. O crescente número de publicações e pessoas interessadas na sua utilização tem trazido para a sala de aula novas possibilidades de experimentos e discussões que não seriam permitidas anteriormente pelo custo ou complexidade na montagem dos equipamentos.
+    </p>
+    <p>
+     Por fim, o autor gostaria de expressar o seu agradecimento ao(a) revisor(a) anônimo(a) deste trabalho pelas sugestões, que contribuíram enormemente para o resultado final apresentado aqui.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Apêndice: Sketch carregado no Arduíno">
+    <h1 class="articleSectionTitle">
+     Apêndice:
+     <i>
+      Sketch
+     </i>
+     carregado no Arduíno
+    </h1>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/218fecd5121c85be8fdb03579c9c7ff35746d91d.jpg" style="max-width:100%"/>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/ccac4bae1b0fdbbad1a4cc885c79aec1f685aa03.jpg" style="max-width:100%"/>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/1dc6382c7445d732faf2096a7714d826649f8584.jpg" style="max-width:100%"/>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/dc6e22ddc235d51deaf1e836bb592de84ce82b19.jpg" style="max-width:100%"/>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/V9xnWPmTSHxDRZhLSXZgYXc/c189b2a6021c1eb0b7b95df8d9d51839fb34cb4b.jpg" style="max-width:100%"/>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1.
+       </sup>
+       <div>
+        https://www.arduino.cc/, acessado em 02/07/2020.
+        <br/>
+        <a href="https://www.arduino.cc/" target="_blank">
+         » https://www.arduino.cc/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2.
+       </sup>
+       <div>
+        M. McRoberts,
+        <i>
+         Arduíno Básico
+        </i>
+        (Novatec Editora, São Paulo, 2011), 1
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3.
+       </sup>
+       <div>
+        M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ens. Fís.
+        <b>
+         33
+        </b>
+        , 4503 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4.
+       </sup>
+       <div>
+        G. Dionisio e L.E.S. Spalding, Rev. Bras. Ensino Fís.
+        <b>
+         39
+        </b>
+        , e1501 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5.
+       </sup>
+       <div>
+        A.R. Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte e H.S. de Amorim, Rev. Bras. Ens. Fís.
+        <b>
+         33
+        </b>
+        , 1702 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        6.
+       </sup>
+       <div>
+        M. Varanis, A.L. Silva, P.H.A. Brunetto e R.F. Gregolin, Rev. Bras. Ens. Fís.
+        <b>
+         38
+        </b>
+        , 1301 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        7.
+       </sup>
+       <div>
+        M.V. da Silveira, R.B. Barthem e A.C. dos Santos, Rev. Bras. Ens. Fís.
+        <b>
+         41
+        </b>
+        , e20180084 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        8.
+       </sup>
+       <div>
+        J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ens. Fís.
+        <b>
+         41
+        </b>
+        , e20180219 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        9.
+       </sup>
+       <div>
+        S. Silveira e M. Girardi, Rev. Bras. Ens. Fís.
+        <b>
+         39
+        </b>
+        , e4502 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        10.
+       </sup>
+       <div>
+        J.S. Figueira e E.A. Veit, Rev. Bras. Ens. Fís.
+        <b>
+         26
+        </b>
+        , 203 (2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        11.
+       </sup>
+       <div>
+        R. Haag, Rev. Bras. Ens. Fis.
+        <b>
+         23
+        </b>
+        , 176 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        12.
+       </sup>
+       <div>
+        C.E. Aguiar e F.A. Laudares, Rev. Bras. Ens. Fís.
+        <b>
+         23
+        </b>
+        , 371 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        13.
+       </sup>
+       <div>
+        P.F. Hinrichsen, The Physics Teacher
+        <b>
+         57
+        </b>
+        , 250 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        14.
+       </sup>
+       <div>
+        C.B.C. da Silva, B.B. Fagundes, J.D. Ribeiro, A.P. Tonel, F.L. Silveira e P.F. Dorneles, Rev. Bras. Ens. Fís.
+        <b>
+         42
+        </b>
+        , e20190085 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        15.
+       </sup>
+       <div>
+        R.G. Rinaldi e A. Fauzi, Phys. Educ.
+        <b>
+         55
+        </b>
+        , 015024 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        16.
+       </sup>
+       <div>
+        J.T. de Carvalho Neto, F.R. Apolinário e A.A. Soares, Rev. Bras. Ens. Fís.
+        <b>
+         40
+        </b>
+        , e1504 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        17.
+       </sup>
+       <div>
+        A. Malvino e D.J. Bates
+        <i>
+         Eletrônica – volume I
+        </i>
+        (AMGH Editora Ltda., Porto Alegre, 2016), 8
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        18.
+       </sup>
+       <div>
+        H.M. Nussenzveig,
+        <i>
+         Curso de Física Básica 2: Fluidos, Oscilações e Ondas, Calor
+        </i>
+        (Ed. Edgard Blücher, São Paulo, 2002), 4
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        19.
+       </sup>
+       <div>
+        F.L. da Silveira, Cad. Cat. Ens. Fís.
+        <b>
+         9
+        </b>
+        , 86 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        20.
+       </sup>
+       <div>
+        H.M. Nussenzveig,
+        <i>
+         Curso de Física Básica 1: Mecânica
+        </i>
+        (Ed. Edgard Blücher, São Paulo, 2002), 4
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        21.
+       </sup>
+       <div>
+        K.R. Symon,
+        <i>
+         Mechanics
+        </i>
+        (Addison-Wesley Publishing Company, Inc., Reading, 1971), 3
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        22.
+       </sup>
+       <div>
+        M. Bunge,
+        <i>
+         Teoria e Realidade
+        </i>
+        (Ed. Perspectiva, São Paulo, 2017), 3
+        <sup>
+         a
+        </sup>
+        reimpressão, 1
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        23.
+       </sup>
+       <div>
+        M.M. de Almeida, Rev. Bras. Ens. Fís.
+        <b>
+         41
+        </b>
+        , e20190039 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        24.
+       </sup>
+       <div>
+        F.L. da Silveira e F. Ostermann, Cad. Bras. Ens. Fís.
+        <b>
+         19
+        </b>
+        , 7 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        25.
+       </sup>
+       <div>
+        J.H. Vuolo,
+        <i>
+         Fundamentos da teoria de erros
+        </i>
+        (Ed. Edgard Blücher, São Paulo, 1996), 2
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        26.
+       </sup>
+       <div>
+        https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/, acessado em 03/07/2020.
+        <br/>
+        <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/" target="_blank">
+         » https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        27.
+       </sup>
+       <div>
+        L.A. Heidemann, I.S. Araujo e E.A. Veit, Rev. Bras. Ens. Fís.
+        <b>
+         38
+        </b>
+        , 1504 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        28.
+       </sup>
+       <div>
+        L.A. Heidemann, I.S. Araujo e E.A. Veit, Cad. Bras. Ens. de Fís.
+        <b>
+         29
+        </b>
+        , 965 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        29.
+       </sup>
+       <div>
+        J. Jackson, L. Dukerich e D. Hestenes, Science Educator
+        <b>
+         17
+        </b>
+        , 10 (2008).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        16 Dez 2020
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        25 Abr 2020
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        05 Nov 2020
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        17 Nov 2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

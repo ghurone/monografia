@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 39 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   2017
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2016-0121" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2016-0121
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0121">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Visualização da forma de onda e conteúdo harmônico da corrente elétrica alternada em eletrodomésticos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Display of the waveform and harmonic content of alternating electrical current in home appliances
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Guilherme Dionisio
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:guilherme.dionisio@bol.com.br">
+      guilherme.dionisio@bol.com.br
+     </a>
+     .
+    </div>
+    Universidade de Passo Fundo, Passo Fundo, Rio Grande do Sul, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Luiz Eduardo Schardong Spalding
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de Passo Fundo, Passo Fundo, Rio Grande do Sul, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     O estudo da eletricidade nos cursos de graduação em Física pode ser mais motivador e eficiente se agregar novos desafios, como o uso de circuitos eletrônicos. Neste trabalho, exploramos os recursos eletrônicos do Arduino, de sensores de corrente elétrica baseados em indução eletromagnética, de resistores, de capacitores e de programas de computador. Apresentamos os resultados obtidos e os métodos para visualizar a forma de onda da corrente elétrica de alguns eletrodomésticos e o espectro de frequência destas formas de onda.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave
+     </strong>
+     <br/>
+     Corrente alternada; Forma de onda; Arduino; Python; transformada discreta de Fourier
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The study of electricity in undergraduate programs in physics can be more motivating and efficient if to add new challenges such as the use of electronic circuits. In this paper, we explore the electronic resources of Arduino, electric current sensors based on electromagnetic induction, resistors, capacitors and computer software. We present the results and the methods to display the waveform of the electric current of some home appliances and the spectrum of frequency of these waveforms.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Alternating current; Waveform; Arduino; Python; Direct Fourier Transform
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Neste trabalho é apresentada uma proposta experimental para o estudo de corrente elétrica alternada, tendo em vista que este é um conteúdo que apresenta alguma dificuldade para alunos do ensino médio e, além disso, encontram-se na literatura poucas práticas experimentais relacionadas a este tema [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.P.C. Erthal e A. Gaspar, Caderno Brasileiro de Ensino de Física 23, 345 (2006).
+       </span>
+      </span>
+     </span>
+     ]. O texto é preparado para estudantes de cursos de licenciatura em Física, de tal forma que possa trazer subsídios para que estes possam utilizar os experimentos em suas aulas no ensino médio.
+    </p>
+    <p>
+     Desta forma, foi criado um aparato experimental que permite medir a corrente elétrica e observar como ela varia em função do tempo. Esta variação dos valores de corrente em função do tempo produz um gráfico cujos valores no eixo vertical são os valores de corrente e no eixo horizontal os valores de tempo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R.C. Viscovini, Dayson de Mello Silva, Eduardo Alexandrino Ávila, Ítalo Leonardo de Alencar Marton, Marcio Anicete dos Santos, Marcos Paulo Baliscei, Marina Aparecida Ferreira de Oliveira, Renato Rodrigues dos Santos, Ana Cláudia Sabino, Eliane da Silva Gomes, et al., Caderno Brasileiro de Ensino de Física 32, 856 (2015).
+       </span>
+      </span>
+     </span>
+     ]. Este gráfico é chamado de forma de onda (FO) da corrente elétrica. Neste experimento, o gráfico é construído a partir de uma tabela de dados com 128 medições de corrente realizados em 33,3 milissegundos. A partir dos dados da tabela, também é possível decompor o sinal elétrico em suas componentes harmônicas pelo método da Transformada Discreta de Fourier (DFT, do inglês
+     <i>
+      Direct Fourier Transform
+     </i>
+     ) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] C. Scherer, Métodos Computacionais da Física (Livraria da Física, São Paulo, 2010), 299 p.
+       </span>
+      </span>
+     </span>
+     ]. Este processo gera uma segunda tabela e um segundo gráfico, que contêm no eixo horizontal os valores de frequência múltiplos de 60 Hz e no eixo vertical a amplitude de cada harmônica senoidal. De posse desta segunda tabela pode-se reconstruir o sinal de corrente original, mas selecionando apenas as frequências que desejamos incluir na reconstrução. Isto caracteriza um filtro digital, pois a reconstrução matemática é feita com um número finito de componentes. Este número escolhido determina a menor ou maior precisão na reconstrução da FO. Para estes procedimentos foi usada uma placa Arduino como plataforma de captura de dados, um programa escrito em Python para cálculo da DFT e visualização da FO e uma planilha eletrônica para análise e reconstrução do sinal.
+    </p>
+    <p>
+     O uso do Arduino como plataforma de aquisição de dados já é amplamente difundido em experimentos de física [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] R.F. Rodrigues e S.L.S. Cunha, Arduino Para Físicos: Uma Ferramenta Prática Para Aquisição de Dados Automáticos (UFRGS, Porto Alegre, 2014), 34 p.
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física 33, 4503 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Por outro lado, trazemos como alternativa de análise de dados o Python, uma linguagem de programação de alto nível, multiplataforma e que agrega bibliotecas de computação científica e gráfica. A comunicação em tempo real entre o Arduino e a planilha de cálculo eletrônica Excel pode ser feita por uso do programa PLX-DAQ [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] Software PLX-DAQ, disponível em https://www.parallax.com/downloads/plx-daq, acessado 14/3/2016.
+       </span>
+       <br/>
+       <a href="https://www.parallax.com/downloads/plx-daq" target="_blank">
+        https://www.parallax.com/downloads/plx-d...
+       </a>
+      </span>
+     </span>
+     ]. Contudo, testes feitos durante a pesquisa apontam para sua incompatibilidade com o sistema operacional Windows 10. Ainda, por tratar-se de um programa para sistemas Windows, inviabiliza uma proposta aplicável por usuários do sistema Linux. Desta forma, apresenta-se uma solução que suporta todas as versões mais recentes do Windows e sistemas baseados em Linux.
+    </p>
+    <p>
+     Nas seções que seguem são descritos o princípio da conversão de sinais analógicos em digitais e o princípio da transformada de Fourier, o aparato experimental e o método de aquisição e análise de dados. Posteriormente, são apresentados os resultados de testes do experimento, nos quais são analisados os sinais elétricos produzidos por uma lâmpada incandescente, por um ventilador e por um carregador de telefone celular.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Fundamentos teóricos
+    </h1>
+    <h2>
+     2.1. Sinais analógicos-digitais
+    </h2>
+    <p>
+     A comunicação entre o mundo físico e o computador é realizada por meio de sensores. Na prática, estes dispositivos transformam as informações físicas em pulsos elétricos que o computador pode detectar.
+    </p>
+    <p>
+     Como na natureza grande parte das grandezas físicas tem caráter analógico - ou seja, variam continuamente podendo assumir infinitos valores - se estas precisam ser enviadas para processamento pelo computador, necessita-se de um mecanismo que faça a conversão em seus equivalentes digitais. Este mecanismo é chamado de Conversor Analógico-Digital (ADC, do inglês
+     <i>
+      Analogic Digital Converter
+     </i>
+     ); e o processo de conversão de valores analógicos em seus equivalentes digitais, de digitalização.
+    </p>
+    <p>
+     O processamento de informações pelo computador é executado através de uma sequência de pulsos elétricos e pausas, os quais representam os dois estados possíveis do sistema binário. Na prática, todo sinal analógico é convertido em tensões digitais, que podem assumir valores discretos de 0 V (estado baixo) e, normalmente, +5 V (estado alto). Ao estado "alto" atribui-se o valor 1, e ao "baixo", o valor 0, chamados dígitos binários ou
+     <i>
+      bits
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] Willis J. Tompkins, and John G. Webster, Interfacing Sensors to the IBM PC (Prentice-Hall, New Jersey, 1987), 447 p.
+       </span>
+      </span>
+     </span>
+     ]. Estes são os coeficientes possíveis no sistema binário, cuja base é 2. O número decimal 25, por exemplo, é representado no sistema binário pelo número 11001, pois
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mn>
+         11001
+        </mn>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ⋅
+        </mo>
+        <msup>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           4
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ⋅
+        </mo>
+        <msup>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           3
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ⋅
+        </mo>
+        <msup>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ⋅
+        </mo>
+        <msup>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ⋅
+        </mo>
+        <msup>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         =
+        </mo>
+        <mn>
+         25
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     está representado o sistema de conversão analógico-digital. Nele, a medida de uma grandeza física é feita por um sensor que a transforma em sinais elétricos analógicos. A conversão em seus equivalentes digitais é feita pelo ADC e processados pelo computador.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Sistema de digitalização de um sinal analógico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Neste experimento, a grandeza física é a corrente elétrica que alimenta um eletrodoméstico. O sensor transforma esta variação de corrente em uma variação de tensão proporcional que é digitalizada para ser enviada ao computador. O computador utiliza estes dados enviados para realizar cálculos e nos apresentar informações, entre elas, a FO da corrente elétrica que alimenta o eletrodoméstico.
+    </p>
+    <h2>
+     2.2. A transformada discreta de Fourier
+    </h2>
+    <p>
+     Um gerador de energia de uma usina hidrelétrica, por exemplo, produz uma tensão alternada cuja FO é senoidal [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R.C. Viscovini, Dayson de Mello Silva, Eduardo Alexandrino Ávila, Ítalo Leonardo de Alencar Marton, Marcio Anicete dos Santos, Marcos Paulo Baliscei, Marina Aparecida Ferreira de Oliveira, Renato Rodrigues dos Santos, Ana Cláudia Sabino, Eliane da Silva Gomes, et al., Caderno Brasileiro de Ensino de Física 32, 856 (2015).
+       </span>
+      </span>
+     </span>
+     ]. A
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. 2
+     </a>
+     descreve a FO da tensão
+     <i>
+      v
+     </i>
+     em relação ao tempo
+     <i>
+      t
+     </i>
+     :
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mi>
+         v
+        </mi>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </mfenced>
+        <mo>
+         =
+        </mo>
+        <mi>
+         A
+        </mi>
+        <mo>
+         ⋅
+        </mo>
+        <mspace width="0.3em">
+        </mspace>
+        <mstyle>
+         <mtext>
+          sen
+         </mtext>
+        </mstyle>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           π
+          </mi>
+          <mi>
+           f
+          </mi>
+          <mo>
+           ⋅
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mi>
+           δ
+          </mi>
+         </mrow>
+        </mfenced>
+        <mo>
+         ;
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo
+     <i>
+      A
+     </i>
+     a amplitude
+     <i>
+      ; f
+     </i>
+     , a frequência; e
+     <math display="inline" id="m3">
+      <mi>
+       δ
+      </mi>
+     </math>
+     , o ângulo de fase.
+    </p>
+    <p>
+     Entretanto, quando aplica-se esta
+     <i>
+      v(t)
+     </i>
+     a um equipamento elétrico, uma corrente elétrica
+     <i>
+      i(t)
+     </i>
+     circulará por ele. Esta
+     <i>
+      i(t)
+     </i>
+     é uma função periódica assim como
+     <i>
+      v(t)
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] H.D. Young, Física III (Addison Wesley, São Paulo, 2009), 426 p.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] J.B. Marion e S.T. Thornton, Classical Dynamics of Particles and Systems (Saunders, Fort Worth, 1995), 638 p.
+       </span>
+      </span>
+     </span>
+     ], mas sua FO pode não ser senoidal. Esta alteração da FO da corrente é produzida, por exemplo, pela presença de componentes semicondutores para fazer o chaveamento da corrente, como é o caso do uso de tiristores (Triacs) usados para controle de potência de chuveiros elétricos, diodos em secadores de cabelo, e também o uso de fontes chaveadas de computadores, luminárias com lâmpadas LED e televisores modernos. A presença de apenas resistências, capacitores e indutores alteram a defasagem entre a FO da tensão e a FO da corrente nestes equipamentos eletrodomésticos, mas a corrente se mantém senoidal.
+    </p>
+    <p>
+     A presença de apenas correntes senoidais nos equipamentos eletrodomésticos era uma realidade da primeira metade do século passado. Hoje, temos outra realidade e as tecnologias de chaveamento de corrente estão presentes nas residências. Se esta é a nossa realidade, é necessário discutir formas de apresentá-la aos estudantes. Uma destas formas é usar ferramentas matemáticas já consolidadas como a Série de Fourier. Com esta ferramenta é possível descrever uma FO não senoidal como uma soma de diversas senoides com amplitudes, defasagens e frequências determinadas por coeficientes desta série. Assim,
+     <i>
+      i(t)
+     </i>
+     também pode ser escrita por:
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m4">
+        <mtable columnalign="right center left">
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd>
+           <mi>
+            i
+           </mi>
+           <mfenced close=")" open="(" separators="">
+            <mrow>
+             <mi>
+              t
+             </mi>
+            </mrow>
+           </mfenced>
+           <mo>
+            =
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              A
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              0
+             </mn>
+            </mrow>
+           </msub>
+           <mspace width="0.3em">
+           </mspace>
+           <mstyle>
+            <mtext>
+             sen
+            </mtext>
+           </mstyle>
+           <mfenced close=")" open="(" separators="">
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <msub>
+              <mrow>
+               <mi>
+                f
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                0
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              ⋅
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                δ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                0
+               </mn>
+              </mrow>
+             </msub>
+            </mrow>
+           </mfenced>
+           <mo>
+            +
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd>
+           <msub>
+            <mrow>
+             <mi>
+              A
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mspace width="0.3em">
+           </mspace>
+           <mstyle>
+            <mtext>
+             sen
+            </mtext>
+           </mstyle>
+           <mfenced close=")" open="(" separators="">
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <msub>
+              <mrow>
+               <mi>
+                f
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              ⋅
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                δ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+            </mrow>
+           </mfenced>
+           <mo>
+            +
+           </mo>
+          </mtd>
+          <mtd>
+           <mtext>
+           </mtext>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+          </mtd>
+          <mtd>
+          </mtd>
+          <mtd>
+           <msub>
+            <mrow>
+             <mi>
+              A
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mspace width="0.3em">
+           </mspace>
+           <mstyle>
+            <mtext>
+             sen
+            </mtext>
+           </mstyle>
+           <mfenced close=")" open="(" separators="">
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <msub>
+              <mrow>
+               <mi>
+                f
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              ⋅
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                δ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+            </mrow>
+           </mfenced>
+           <mo>
+            +
+           </mo>
+           <mo>
+            …
+           </mo>
+          </mtd>
+          <mtd>
+           <mtext>
+           </mtext>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. 3
+     </a>
+     , cada parcela é um harmônico do sinal original. Os coeficientes
+     <i>
+      A
+     </i>
+     ,
+     <i>
+      f
+     </i>
+     e
+     <math display="inline" id="m5">
+      <mi>
+       δ
+      </mi>
+     </math>
+     destas componentes são obtidas pela DFT, um método matemático que decompõe um sinal periódico em uma série trigonométrica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] J.B. Marion e S.T. Thornton, Classical Dynamics of Particles and Systems (Saunders, Fort Worth, 1995), 638 p.
+       </span>
+      </span>
+     </span>
+     ]. Observa-se que não sendo o objetivo deste trabalho o desenvolvimento do método, e sim o estudo da FO, utilizou-se uma implementação em Python para decomposição do sinal em seus harmônicos e para cálculo dos respectivos coeficientes.
+    </p>
+    <p>
+     Neste trabalho, foi feita a captura da FO da corrente elétrica de alguns aparelhos domésticos (utilizando a conversão do sinal analógico para digital) e, a partir dela, descobriu-se quais são as harmônicas que compõem esta FO. Na sequência é demonstrado como estes procedimentos foram realizados.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Materiais e métodos
+    </h1>
+    <p>
+     A parte experimental segue o diagrama de etapas da
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     . A tensão gerada nos terminais A e B do toroide (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ) é lida pela placa Arduino, que faz a conversão do sinal analógico em digital; e o tratamento destes dados é realizado pelos programas Python e Excel.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Esquema gráfico mostrando as etapas do sistema de aquisição e tratamento das informações.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Conjunto de peças que compõem a parte de instalação do sensor de corrente toroidal. Os terminais A e B do sensor serão conectados ao circuito eletrônico que vai fazer a conversão do sinal analógico em digital.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Neste sistema, um toroide é usado como sensor de corrente, cujo sinal analógico é convertido para o seu equivalente digital pela placa Arduino. Uma implementação na linguagem Python recebe estes dados e executa o cálculo da DFT alimentando um arquivo de extensão CSV (
+     <i>
+      Comma Separated Values
+     </i>
+     ). Este tipo de arquivo possibilita a troca de dados entre aplicativos e planilhas eletrônicas. Assim, fazendo uma conexão de dados com este arquivo no Excel, a planilha é atualizada sempre que o algoritmo for novamente executado.
+    </p>
+    <h2>
+     3.1. Aparato experimental
+    </h2>
+    <p>
+     Para capturar uma amostra da FO da corrente elétrica de um eletrodoméstico, foi usado como sensor um toroide de material ferromagnético que é sensível ao campo magnético produzido pelo condutor de corrente que passa pelo seu interior (que chamamos de enrolamento primário, embora o enrolamento seja de apenas uma passagem do fio pelo interior do toroide). Na prática, ele funciona como um transformador de corrente, pois no enrolamento secundário (condutores A e B da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ) surge uma corrente proporcional à corrente que circula pelo eletrodoméstico que será conectado à tomada elétrica da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     . Desta forma, uma corrente elétrica alternada passando pelo interior do toroide produz variação do fluxo magnético (
+     <math display="inline" id="m6">
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     ) induzindo uma diferença de potencial (
+     <i>
+      v
+     </i>
+     <math display="inline" id="m7">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi>
+         A
+        </mi>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     nos terminais A e B [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] H.D. Young, Física III (Addison Wesley, São Paulo, 2009), 426 p.
+       </span>
+      </span>
+     </span>
+     ]. A
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. 4
+     </a>
+     mostra que
+     <i>
+      v
+     </i>
+     <math display="inline" id="m8">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi>
+         A
+        </mi>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , medida nos terminais do toroide, depende da derivada do fluxo magnético
+     <math display="inline" id="m9">
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     sobre as N espiras.
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m10">
+        <msub>
+         <mrow>
+          <mi>
+           v
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           A
+          </mi>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mo>
+         -
+        </mo>
+        <mi>
+         N
+        </mi>
+        <mo>
+         ⋅
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           ϕ
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Sendo assim, se
+     <math display="inline" id="m11">
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     tem um comportamento senoidal, a tensão
+     <i>
+      v
+     </i>
+     <math display="inline" id="m12">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi>
+         A
+        </mi>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     será uma cossenoide.
+    </p>
+    <p>
+     O toroide, com o seu enrolamento, utilizado nestas medições é fabricado pela empresa Toroid, possui núcleo de material ferromagnético e relação de corrente de 20/0,04 A entre o primário e o secundário. Isto significa que o enrolamento do secundário (ligado aos terminais A e B da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ) foi dimensionado para conduzir uma corrente de 0,04 A quando circular uma corrente de 20 A pelo condutor que passa pelo furo (orifício central) do toroide.
+    </p>
+    <p>
+     Esta redução de corrente é necessária para não causar danos à placa Arduino. Dessa forma, pode-se medir valores de corrente elétrica ao longo do tempo obtendo a FO da corrente no primário e decompô-la em suas harmônicas através do método da DFT.
+    </p>
+    <p>
+     O circuito que conecta o toroide ao Arduino (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     ) possui três elementos importantes:
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Circuito para ajustar os valores de corrente que chegam do enrolamento secundário do toroide (A e B) aos valores de tensão elétrica que o Arduino necessita (0,0 V a 5,0 V).
+      <br/>
+     </div>
+    </div>
+    <ol type="1">
+     <li>
+      <p>
+       Os dois resistores de 10 k
+       <math display="inline" id="m13">
+        <mi>
+         Ω
+        </mi>
+       </math>
+       estão no circuito para proporcionar uma tensão de 2,5 V no pino A0 da placa Arduino. Isto é necessário porque as tensões neste pino somente podem variar entre os limites de 0,0 V e +5,0 V quando a tensão no terminal A do resistor de 1,0 k
+       <math display="inline" id="m14">
+        <mi>
+         Ω
+        </mi>
+       </math>
+       variar entre valores negativos e positivos. Ou seja, a porta A0 do Arduino não aceita valores negativos.
+      </p>
+     </li>
+     <li>
+      <p>
+       O capacitor de 4,7
+       <math display="inline" id="m15">
+        <mi>
+         μ
+        </mi>
+       </math>
+       F é utilizado para evitar que a tensão de 2,5 V no pino A0 produza uma corrente contínua circulando pelo resistor de 1 k
+       <math display="inline" id="m16">
+        <mi>
+         Ω
+        </mi>
+       </math>
+       e pelo enrolamento secundário do toroide.
+      </p>
+     </li>
+     <li>
+      <p>
+       O capacitor de 10
+       <i>
+        n
+       </i>
+       F é um capacitor de filtro. Ele produz uma impedância capacitiva muito baixa para frequências muito mais altas do que 60 Hz, que é a frequência de interesse. Se a impedância é baixa, a tensão também será e estes sinais de alta frequência serão atenuados pela presença deste capacitor. Ou seja, as frequências de 60 Hz terão uma tensão maior do que aquelas de frequências maiores. Este capacitor de filtro é necessário para diminuir a tensão a partir da frequência de corte, o que é uma exigência para o uso correto dos conversores analógicos-digitais.
+      </p>
+     </li>
+    </ol>
+    <h2>
+     3.2. Placa Arduino
+    </h2>
+    <p>
+     A placa Arduino Uno é utilizada como interface para leitura das tensões analógicas presentes nos terminais A e B do toroide e conversão em seus equivalentes digitais. O Arduino possui portas digitais e analógicas. As portas digitais são usadas para acionar dispositivos, como LED, motores,
+     <i>
+      buzzer
+     </i>
+     , etc. Isto é feito alterando o estado da porta entre dois valores discretos: 0,0 V e +5,0 V. Já as portas analógicas podem receber valores de qualquer tensão entre 0,0 V e +5,0 V, sendo usadas comumente para leitura de sensores ligados a elas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] R.F. Rodrigues e S.L.S. Cunha, Arduino Para Físicos: Uma Ferramenta Prática Para Aquisição de Dados Automáticos (UFRGS, Porto Alegre, 2014), 34 p.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] Anderson R. de Souza, Alexsander C. Paixão, Diego D. Uzêda, Marco A. Dias, Sergio Duarte e Helio S. de Amorim, Revista Brasileira de Ensino de Física 33, 1702 (2011).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Nesta aplicação o sensor é o toroide e a porta analógica A0 do Arduino é utilizada para fazer a leitura da tensão elétrica que é proporcional à corrente elétrica que vai circular pelo equipamento que será ligado na tomada elétrica da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     . Esta corrente varia em relação ao tempo e pode-se visualizar esta variação em um gráfico. Para fazer a leitura da tensão instantânea em A0 é necessário fazer o Arduino executar um programa que será detalhado a seguir:
+    </p>
+    <h2>
+     3.3. Código de aquisição
+    </h2>
+    <p>
+     O programa seguinte é carregado no Arduino e é responsável pela aquisição das tensões instantâneas, conversão destas tensões em seus equivalentes digitais e transmissão destes dados para o computador.
+    </p>
+    <p>
+     Inicialmente é necessário fazer definições de variáveis:
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Após inicia-se um ciclo continuo:
+    </p>
+    <div class="row fig" id="f18">
+     <a name="f18">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf18" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     O código apresentado acima faz a leitura da porta analógica A0 (linha 11), armazena o valor numa matriz DADO[i] (linha 12) e posteriormente escreve estes dados na porta serial (linha 17).
+    </p>
+    <p>
+     A frequência da rede elétrica é 60 Hz e para se obter uma FO da tensão sobre o dispositivo ligado à tomada da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , é preciso fazer coincidir 64 leituras no período de 1/60 s = 16,67
+     <i>
+      m
+     </i>
+     s. Sendo assim, o intervalo entre cada medida deverá ser de 260
+     <math display="inline" id="m17">
+      <mi>
+       μ
+      </mi>
+     </math>
+     s. Como o tempo de execução das funções de leitura (linha 11) e de armazenamento do valor lido (linha 12) consome cerca de 112
+     <math display="inline" id="m18">
+      <mi>
+       μ
+      </mi>
+     </math>
+     s, é preciso incluir um atraso de 148
+     <math display="inline" id="m19">
+      <mi>
+       μ
+      </mi>
+     </math>
+     s entre leituras (linha 13) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] G. Dionisio e L.E.S. Spalding, in: VI Encontro Estadual de Ensino de Física, Porto Alegre (2015).
+       </span>
+      </span>
+     </span>
+     ]. A escolha por fazer 64 amostras por ciclo é necessária para o cálculo da DFT. Nos experimentos foi realizada a captura de dois ciclos completos, ou seja, 128 amostras (linha 2).
+    </p>
+    <p>
+     Para realizar a aquisição dos valores lidos no pino A0 utiliza-se a função
+     <i>
+      analogRead( )
+     </i>
+     , que retorna valores entre 0 e 1023 e podem ser relacionados respectivamente a 0,0 V e +5,0 V. Assim, calcula-se a tensão por uma relação de proporcionalidade:
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m20">
+        <msub>
+         <mrow>
+          <mi>
+           v
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           A
+          </mi>
+          <mi>
+           B
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mfenced close=")" open="(" separators="">
+           <mrow>
+            <mstyle>
+             <mtext>
+              valor lido
+             </mtext>
+            </mstyle>
+           </mrow>
+          </mfenced>
+         </mrow>
+         <mrow>
+          <mn>
+           1023
+          </mn>
+         </mrow>
+        </mfrac>
+        <mo>
+         ×
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           5
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           0
+          </mn>
+          <mstyle>
+           <mtext>
+            Volts
+           </mtext>
+          </mstyle>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h2>
+     3.4. Código de análise dos dados
+    </h2>
+    <p>
+     Após a coleta dos valores e transferência dos dados para o computador, emprega-se a linguagem de programação Python para cálculo da DFT e visualização dos resultados.
+    </p>
+    <p>
+     Foi adotado o pacote de instalação Python(x,y) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] Distribuição Python(x,y), disponível em https://python-xy.github.io, acessado em 14/3/2016.
+       </span>
+       <br/>
+       <a href="https://python-xy.github.io" target="_blank">
+        https://python-xy.github.io...
+       </a>
+      </span>
+     </span>
+     ] que é uma distribuição voltada a computação científica compatível com o sistema operacional Windows 10. Ela inclui a versão Python 2.7, bibliotecas de cálculo numérico e bibliotecas gráficas.
+    </p>
+    <p>
+     O programa em Python utilizado é mostrado abaixo:
+    </p>
+    <div class="row fig" id="f19">
+     <a name="f19">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf19" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para o tratamento dos dados, utilizou-se o pacote de computação científica
+     <i>
+      NumPy
+     </i>
+     , que possui a função
+     <i>
+      fft( )
+     </i>
+     , um algoritmo de cálculo da DFT; e a biblioteca
+     <i>
+      matplotlib
+     </i>
+     para o traçado de gráficos.
+    </p>
+    <p>
+     A porta serial serve de ponte entre a placa Arduino e o Python. O código de análise lê na porta serial os dados enviados pelo Arduino e armazena na matriz "dado[ ]" (linhas 6-12). Nas linhas 20, 21 e 22 são calculadas as amplitudes das componentes harmônicas e seus respectivos ângulos de fase. Entre as linhas 24 e 28 do código, é gerado o arquivo de extensão CSV para a troca de dados com a planilha de cálculo. O arquivo gerado contém os valores das tensões digitais em cada instante e as frequências das harmônicas, com as respectivas amplitudes e ângulos de fase. As linhas seguintes do código fazem o traçado dos gráficos (FO e componentes harmônicas) para visualização dos resultados.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados e discussão
+    </h1>
+    <p>
+     Após a ligação dos terminais A e B (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ) ao circuito condicionador de sinais (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     ) e ao Arduino, foi feita a ligação do Arduino ao computador. Em seguida, foram realizados os testes com alguns equipamentos elétricos comuns em residências. Paralelamente à aquisição dos valores de tensão com o Arduino, foram realizadas também aquisições da FO da corrente utilizando um osciloscópio digital. Desta forma, foi possível comparar visualmente as duas FO. A medida com o osciloscópio foi realizada medindo-se a tensão sobre um resistor de 1,0
+     <math display="inline" id="m21">
+      <mi>
+       Ω
+      </mi>
+     </math>
+     . Este resistor, em série com o equipamento sob teste, não interfere de forma significativa nas medidas e na FO, pois seu valor é muito baixo em relação aos valores de resistências das cargas. A seguir, são apresentados os resultados mais significativos.
+    </p>
+    <h2>
+     4.1. Forma de onda produzida por uma lâmpada incandescente de 15W
+    </h2>
+    <p>
+     Conectando uma lâmpada elétrica à tomada da montagem mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , capturou-se a variação da corrente que circula por ela. A tensão aplicada à lâmpada é fornecida pela concessionária de energia. Esta concessionária tem como obrigação ao consumidor fornecer uma tensão senoidal de 60 Hz [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R.C. Viscovini, Dayson de Mello Silva, Eduardo Alexandrino Ávila, Ítalo Leonardo de Alencar Marton, Marcio Anicete dos Santos, Marcos Paulo Baliscei, Marina Aparecida Ferreira de Oliveira, Renato Rodrigues dos Santos, Ana Cláudia Sabino, Eliane da Silva Gomes, et al., Caderno Brasileiro de Ensino de Física 32, 856 (2015).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] H.D. Young, Física III (Addison Wesley, São Paulo, 2009), 426 p.
+       </span>
+      </span>
+     </span>
+     ]. Uma lâmpada incandescente é construída com um filamento de material de alto ponto de fusão e que, ao ser aquecido pelo movimento dos elétrons em seu interior, oferece uma resistência à circulação da corrente. Por se comportar como uma resistência, a lâmpada é percorrida por uma corrente que varia também de forma senoidal, da mesma forma como a tensão. Utilizando o sistema descrito obteve-se na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     uma FO senoidal. Esta FO é equivalente àquela obtida com um osciloscópio (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Forma de onda produzida por uma lâmpada incandescente, sendo seu gráfico construído a partir dos 128 valores capturados em 33,3
+      <i>
+       m
+      </i>
+      s e transferidos para o programa em Python.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Sinal superior: medida direta da tensão sobre um resistor em série com a lâmpada incandescente. Sinal inferior: medida da tensão nos terminais A e B do toroide. A figura não mostra a real diferença de fase entre as duas tensões em função da posição das ponteiras do osciloscópio.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A forma senoidal era a esperada, pois a lâmpada se comporta como um resistor ôhmico depois de aquecida. Os valores de amplitude ainda estão na escala entre 0 a 1023 (obtidos pela conversão analógica para digital) e será necessário, depois de importados pela planilha Excel, fazer a conversão destes para valores de corrente elétrica, ou seja, valores em Ampères.
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     representa as componentes harmônicas e suas respectivas amplitudes que constituem a FO obtidas pela transformada de Fourier. Nota-se a predominância da frequência fundamental 60 Hz.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Componentes harmônicas para a lâmpada incandescente de 15W. As amplitudes ainda não estão em Ampères.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A partir das frequências de cada harmônica e dos respectivos valores de amplitude, é possível reconstruir a FO original que gerou estas harmônicas, executando a Transformada Inversa Discreta de Fourier. Para esta reconstrução foi utilizado o programa Excel, da Microsoft. A
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     mostra uma comparação entre as duas FO: a original, plotando-se os 128 pontos, e a reconstruída somente com a harmônica de 60 Hz.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Comparação entre a FO original e reconstruída. A curva contínua é a onda original; e a curva pontilhada, a harmônica 60 Hz.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.2. Forma de onda produzida por um ventilador
+    </h2>
+    <p>
+     Um segundo teste foi realizado com um tipo de equipamento doméstico que não se comporta como um resistor ôhmico, pois possui indutores e circuitos magnéticos envolvidos no seu funcionamento. No caso, obteve-se a FO da tensão sobre um ventilador doméstico de potência 60 W mostrada nas
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Tela do programa em Python mostrando dois períodos da FO de corrente elétrica produzidos por um ventilador.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Tela do osciloscópio: a curva amarela representa a medida da tensão diretamente sobre o resistor em série com o ventilador; e a curva azul, a medida da tensão de saída nos terminais A e B do toroide.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O cálculo da DFT mostra as frequências de 60 Hz e 180 Hz (frequência fundamental e 3° harmônico) como predominantes na formação do sinal elétrico produzido pela inserção do ventilador no circuito de aquisição (
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Harmônicos da corrente elétrica de um ventilador doméstico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O arquivo gerado pelo algoritmo escrito em Python fornece uma lista das frequências harmônicas com suas respectivas amplitudes e diferenças de fase. Com estes dados, reconstrói-se o sinal original pela soma dessas ondas (
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Reconstrução da forma de onda produzida pelo ventilador. Em cima, a aproximação com a frequência fundamental 60 Hz; em baixo, a aproximação com a influência do 3° harmônico.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.3. Forma de onda produzida por uma fonte (carregador) de telefone celular
+    </h2>
+    <p>
+     Um carregador de celular constitui-se de uma fonte chaveada, a qual substitui o circuito tradicional com transformador de 60 Hz por um circuito eletrônico que utiliza um circuito integrado que regula a tensão de saída através da modulação por largura do pulso (PWM, do inglês
+     <i>
+      Pulse-Width Modulation
+     </i>
+     ). Isto é, durante o ciclo de chaveamento, ocorre a carga e descarga de energia armazenada por componentes como indutores, capacitores ou transformadores [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] E.L.M. Mehl, Fontes Chaveadas (UFPR), disponível em http://www.eletrica.ufpr.br/mehl/downloads/FontesChaveadas.pdf, acessado em 15/5/2016.
+       </span>
+       <br/>
+       <a href="http://www.eletrica.ufpr.br/mehl/downloads/FontesChaveadas.pdf" target="_blank">
+        http://www.eletrica.ufpr.br/mehl/downloa...
+       </a>
+      </span>
+     </span>
+     , p. 4-7]. Este comportamento pode ser observado na FO da corrente obtida de um carregador de telefone celular, mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Dois períodos de onda produzidos pelo carregador de celular 5V/750mA.
+      <br/>
+     </div>
+    </div>
+    <p>
+     No sinal mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     e na
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 14
+     </a>
+     percebe-se que a frequência permanece em 60 Hz, porém aparecem picos de tensão e regiões referentes a carga e descarga dos componentes eletrônicos.
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 14
+      </strong>
+      <br/>
+      Tela do osciloscópio mostrando, em amarelo, a medida direta da tensão sobre o resistor em série com o carregador e, em azul, a medida da tensão de saída nos terminais A e B do toroide.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nas fontes chaveadas, a frequência de 60 Hz da rede é elevada à ordem de quilohertz na operação do circuito. E, com frequências maiores, pode-se reduzir as dimensões físicas dos componentes magnéticos, em especial o transformador, o que representa uma das vantagens no uso deste tipo de fonte nos equipamentos modernos. Entretanto, o aparecimento de outras frequências na rede devido à fonte chaveada do carregador de celular é vista no resultado obtido pela DFT do sinal (
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 15
+     </a>
+     ) e na reconstrução da FO (
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 15
+      </strong>
+      <br/>
+      Harmônicos da corrente elétrica do carregador de celular.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 16
+      </strong>
+      <br/>
+      Reconstrução do sinal (curva pontilhada) com a frequência fundamental, 3°, 5° e 7° harmônicos (60 Hz, 180 Hz, 300 Hz e 420 Hz).
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.4. Considerações finais
+    </h2>
+    <p>
+     Neste trabalho foi apresentado um sistema de aquisição e análise de dados para o estudo da corrente elétrica alternada que julgamos importante para a formação de alunos de graduação em física, podendo também ser avaliado para uso em cursos de matemática e engenharias.
+    </p>
+    <p>
+     Para a aquisição de dados, foram empregados um toroide, como sensor magnético de corrente, e o Arduino, como conversor analógico-digital; e para a análise, um programa escrito em Python e a planilha de cálculo Excel. Os resultados dos testes realizados com uma lâmpada incandescente, com um ventilador e com uma fonte chaveada demonstram ser suficientes para a finalidade aqui apresentada - estudar a FO produzida pela corrente elétrica de eletrodomésticos.
+    </p>
+    <p>
+     Não se teve interesse em fazer a calibração e apresentar os gráficos com valores reais de corrente, em Ampères. Pretende-se fazer a calibração em um trabalho futuro, onde se fará a inclusão de mais componentes eletrônicos para o condicionamento do sinal a partir dos terminais A e B do toroide. No momento, o foco é mostrar a FO de equipamentos e um método de reconstruir estas FO a partir de recursos de fácil acesso aos alunos e professores de física.
+    </p>
+    <p>
+     Apesar da motivação pelo trabalho ter sido a indisponibilidade de
+     <i>
+      softwares
+     </i>
+     para a versão mais recente do sistema operacional Windows, elaboramos uma solução compatível também com sistemas baseados em Linux. A linguagem de programação utilizada, o Python, além de ser multiplataforma, não exige adaptações do código quando o programa é rodado em um ou em outro sistema, o que ocorre também na programação do Arduino. Isto facilita o uso desta proposta por usuários tanto do Windows quanto do Linux. Além disto, caso seja realizada a substituição do Excel por outro
+     <i>
+      software
+     </i>
+     de planilha de cálculo, o sistema pode ser totalmente desenvolvido e executado em
+     <i>
+      software
+     </i>
+     e
+     <i>
+      hardware
+     </i>
+     livres. Acreditamos que um aluno de graduação em física ou um professor pode realizar este mesmo experimento, seguindo as sugestões e experiências que apresentamos. A maior dificuldade foi escolher o sensor, mas a intenção de associar o estudo da corrente alternada com a indução eletromagnética, nos levou naturalmente ao transformador de corrente.
+    </p>
+    <p>
+     Desta forma, procuramos contribuir com o ensino de física partindo de uma problematização centrada no tema corrente elétrica alternada e o uso de um experimento físico assistido por tecnologias digitais.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        J.P.C. Erthal e A. Gaspar, Caderno Brasileiro de Ensino de Física
+        <b>
+         23
+        </b>
+        , 345 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        R.C. Viscovini, Dayson de Mello Silva, Eduardo Alexandrino Ávila, Ítalo Leonardo de Alencar Marton, Marcio Anicete dos Santos, Marcos Paulo Baliscei, Marina Aparecida Ferreira de Oliveira, Renato Rodrigues dos Santos, Ana Cláudia Sabino, Eliane da Silva Gomes,
+        <i>
+         et al.
+        </i>
+        , Caderno Brasileiro de Ensino de Física
+        <b>
+         32
+        </b>
+        , 856 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        C. Scherer,
+        <i>
+         Métodos Computacionais da Física
+        </i>
+        (Livraria da Física, São Paulo, 2010), 299 p.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        R.F. Rodrigues e S.L.S. Cunha,
+        <i>
+         Arduino Para Físicos: Uma Ferramenta Prática Para Aquisição de Dados Automáticos
+        </i>
+        (UFRGS, Porto Alegre, 2014), 34 p.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        Anderson R. de Souza, Alexsander C. Paixão, Diego D. Uzêda, Marco A. Dias, Sergio Duarte e Helio S. de Amorim, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 1702 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 4503 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        <i>
+         Software
+        </i>
+        PLX-DAQ, disponível em https://www.parallax.com/downloads/plx-daq, acessado 14/3/2016.
+        <br/>
+        <a href="http://www.parallax.com/downloads/plx-daq" target="_blank">
+         » https://www.parallax.com/downloads/plx-daq
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        Willis J. Tompkins, and John G. Webster,
+        <i>
+         Interfacing Sensors to the IBM PC
+        </i>
+        (Prentice-Hall, New Jersey, 1987), 447 p.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        H.D. Young,
+        <i>
+         Física III
+        </i>
+        (Addison Wesley, São Paulo, 2009), 426 p.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        J.B. Marion e S.T. Thornton,
+        <i>
+         Classical Dynamics of Particles and Systems
+        </i>
+        (Saunders, Fort Worth, 1995), 638 p.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        G. Dionisio e L.E.S. Spalding, in:
+        <i>
+         VI Encontro Estadual de Ensino de Física
+        </i>
+        , Porto Alegre (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        Distribuição Python(x,y), disponível em https://python-xy.github.io, acessado em 14/3/2016.
+        <br/>
+        <a href="http://python-xy.github.io" target="_blank">
+         » https://python-xy.github.io
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        E.L.M. Mehl,
+        <i>
+         Fontes Chaveadas (UFPR)
+        </i>
+        , disponível em http://www.eletrica.ufpr.br/mehl/downloads/FontesChaveadas.pdf, acessado em 15/5/2016.
+        <br/>
+        <a href="http://www.eletrica.ufpr.br/mehl/downloads/FontesChaveadas.pdf" target="_blank">
+         » http://www.eletrica.ufpr.br/mehl/downloads/FontesChaveadas.pdf
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        29 Maio 2016
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        05 Ago 2016
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        09 Ago 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>
