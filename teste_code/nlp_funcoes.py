@@ -1,5 +1,3 @@
-import os
-
 import spacy
 from nltk.corpus import stopwords
 from spacy.lang.pt.stop_words import STOP_WORDS
@@ -19,7 +17,7 @@ def token_lemma(texto):
     doc = nlp(texto)
     temp = []
     for token in doc:
-        if not (token.orth_ in stop or token.lemma_ in stop) and token.is_alpha and len(token) > 1:
+        if not (token.orth_ in stop or token.lemma_ in stop) and token.is_alpha and len(token) > 2:
             temp.append(token.lemma_.lower())
     return temp
 
