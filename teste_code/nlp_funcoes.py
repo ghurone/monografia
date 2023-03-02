@@ -1,6 +1,6 @@
 import spacy
-from nltk.corpus import stopwords
 from spacy.lang.pt.stop_words import STOP_WORDS
+from nltk.corpus import stopwords
 from gensim.models import Phrases
 from gensim.corpora import Dictionary
 from gensim.models import LdaModel
@@ -26,7 +26,7 @@ def add_bigram(documentos: list, min_count=5) -> None:
     bigram = Phrases(documentos, min_count=min_count)
     for idx in range(len(documentos)):
         for token in bigram[documentos[idx]]:
-            if '_' in token:  # se for um n-gram, adiciona no documento
+            if '_' in token:  
                 documentos[idx].append(token)
 
 
@@ -50,14 +50,14 @@ class ModelLDA:
     def __init__(self, corpus, id2word, chunksize=1000, iterations=400, passes=50, eval_every=None):
         self.corpus = corpus
         self.id2word = id2word
-        
+
         self.chunksize = chunksize
         self.iterations = iterations
         self.passes = passes
         self.eval_every = eval_every
-        
+
         self.SEED = 99
-        
+
     def run(self, n_topic, alpha='auto', eta='auto'):
         return LdaModel(
                     corpus=self.corpus,
