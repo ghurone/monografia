@@ -9,7 +9,11 @@ from gensim.models.coherencemodel import CoherenceModel
 
 nlp = spacy.load("pt_core_news_lg")
 my = {'fig', 'p.', 'cm', 'et', 'al', 'of', 'the', 'eq', 'figura', 'pi',
-      'ref', 'km', 'kg', 'ii', 'iii', 'iv', 'xix', 'mm', 'in', 'and'}
+      'ref', 'km', 'kg', 'ii', 'iii', 'iv', 'xix', 'mm', 'in', 'and',
+      'nele', 'nela', 'nesse', 'nessa', 'neste', 'nesta', 'naquele',
+      'naquela', 'consigo', 'nisso', 'nisto', 'daqui', 'daquilo',
+      'dele', 'dela', 'disto', 'disso', 'desse', 'dessa', 'daquele',
+      'daquela', 'àquela', 'daí'}
 stop = set(stopwords.words('portuguese')).union(STOP_WORDS).union(my)
 
 
@@ -17,13 +21,15 @@ def token_lemma(texto):
     doc = nlp(texto)
     temp = []
     for token in doc:
-        if not (token.orth_ in stop or token.lemma_ in stop) and token.is_alpha and len(token) > 2:
-            temp.append(token.lemma_.lower())
+        lemma = token.lemma_
+        if not (token.orth_ in stop or lemma in stop) and token.is_alpha and len(token) > 2:
+            if not (' ' in lemma):
+                temp.append(lemma.lower())
     return temp
 
 
 def add_bigram(documentos: list, min_count=5) -> None:
-    bigram = Phrases(documentos, min_count=min_count)
+    bigram = Phrases(documentos, min_count=min_count, threshold=5)
     for idx in range(len(documentos)):
         for token in bigram[documentos[idx]]:
             if '_' in token:  
