@@ -1,0 +1,5516 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (3)
+   <span class="_separator">
+    •
+   </span>
+   Set 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2016-0019" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2016-0019
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0019">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Explorando a transformada wavelet contínua
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Exploring the continuous wavelet transform
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     M.O. Domingues
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:margarete.domingues@inpe.br">
+      margarete.domingues@inpe.br
+     </a>
+     .
+    </div>
+    Laboratório Associado de Computação e Matemática Aplicada, Instituto Nacional de Pesquisas Espaciais, São José dos Campos, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     O. Mendes
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Divisão de Geofísica Espacial, Instituto Nacional de Pesquisas Espaciais, São José dos Campos, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     M.K. Kaibara
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto de Matemática e Estatística, Universidade Federal Fluminense, Niterói, Rio de Janeiro
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     V.E. Menconi
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Divisão de Geofísica Espacial, Instituto Nacional de Pesquisas Espaciais, São José dos Campos, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor5">
+    <span>
+     E. Bernardes
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor5" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    PIBIC-CNPq-INPE / Instituto de Engenharia Elétrica, Universidade Estadual de Maringá, Maringá, Paraná
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     A transformada
+     <i>
+      wavelet
+     </i>
+     contínua constitui poderosa ferramenta para análise multiescala de dados. Ela tem amplas aplicações na Física, na Matemática, nas Ciências Naturais e, inclusive, grande apelo nas engenharias, computação e áreas de tecnologia e inovação. Do ponto de vista introdutório, a transformada wavelet tem sido abordada amplamente em trabalhos anteriores. Assim, esta apresentação dá ênfase ao uso dessa técnica em situações teóricas e práticas que normalmente não são exploradas; porém fundamentais para um uso mais adequado, ou mesmo correto, dessa ferramenta. Um embasamento consistente possibilita, sobretudo, uma extensão de sua aplicação para novas pesquisas, facilitadas pela disponibilidade de programas e ferramentas gratuitas e, até, várias dessas sob a forma de recursos de livre distribuição (
+     <i>
+      free softwares
+     </i>
+     ). Por critério de escolha dos autores, apresentam-se, neste artigo, conceitos e exemplos de técnicas que podem ser de grande interesse para vários tipos de estudos na Física e em outras áreas correlatas. Este texto destina-se a pesquisadores, professores e estudantes de pós-graduação, com a possibilidade de atender ainda necessidades de estudantes dos últimos anos de graduação.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     wavelet; sinais multiescala; análise de sinais
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The continuous wavelet transform is a powerful tool for multiscale data analysis. It has wide applications in physics, mathematics, natural sciences and even great appeal in engineering, computing and areas of technology and innovation. As an introductory point of view, the wavelet transform has been widely addressed in previous works. Thus, this presentation emphasizes the use of this technique in theoretical and practical situations that are not usually explored, but situations that are fundamental to a better use, or even a correct use, of this tool. Consistent bases enable mainly extensions of wavelet application to new investigations, that are facilitated by the availability of free programs and tools, and even several of these in completely available distribution of resources (free softwares). The content of this article, by the authors' choice criteria, presents concepts and examples of techniques that can be of great interest for various studies in physics and other related areas. This text is aimed at researchers, teachers and graduate students, with the possibility of still meet the preparation needs of students at last undergraduation stage.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     wavelet; multiscale signals; signal analysis
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A teoria
+     <i>
+      wavelet
+     </i>
+     causou um
+     <i>
+      frenesi
+     </i>
+     na comunidade científica nas últimas décadas e gerou um fenômeno de interesse, na pesquisa e na aplicação, com crescimento exponencial, gerando dezenas de milhares de publicações, patentes e prêmios internacionais associados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] B.B. Hubbard, The World According to Wavelets: The Story of a Mathematical Technique in the Making (A.K. Peters/CRC Press, Natick, 1998), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ]. O leitor e sua família já participam e conhecem os efeitos desse fenômeno, tanto ao utilizar as imagens jpeg de um celular que podem ser enviadas por internet, quanto ao assistir os filmes de animação 3D, ou mesmo a ter seus dados biométricos, por meio das características digitais, identificados, ou talvez ainda até a ter sua placa de carro identificada por uma câmera numa rua com pouca luminosidade. Todas essas inovações e muitas outras do nosso cotidiano atual são consequências da sinergia entre a matemática, a física e as engenharias no contexto multi-escala que a teoria
+     <i>
+      wavelet
+     </i>
+     propicia.
+    </p>
+    <p>
+     Uma das ferramentas principais da teoria
+     <i>
+      wavelet
+     </i>
+     é a transformada
+     <i>
+      wavelet
+     </i>
+     . A transformada
+     <i>
+      wavelet
+     </i>
+     , como coloca [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] E. Foufoula-Georgiou and P. Kumar, Wavelets in Geophysics (Academic Press, San Diego, 1994), v. 4.
+       </span>
+      </span>
+     </span>
+     ], equivale a um microscópio matemático cuja ampliação é dada pelo inverso do parâmetro de dilatação, designado
+     <i>
+      a
+     </i>
+     , e a capacidade óptica pela escolha da função
+     <i>
+      wavelet
+     </i>
+     analisadora escolhida, designada
+     <i>
+      ψ
+     </i>
+     . No contexto histórico, a transformada
+     <i>
+      wavelet
+     </i>
+     contínua foi a motivadora da formalização da teoria
+     <i>
+      wavelet
+     </i>
+     . Na década de 80, os trabalhos do pesquisador geofísico francês J. Morlet e seus colaboradores A. Grossmann e P. Goupillaud [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] J. Morlet, NATO ASI Series 1, 233 (1983).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] P. Goupillaud, A. Grossmann and J. Morlet, Geoexploration 23, 85 (1984).
+       </span>
+      </span>
+     </span>
+     ] destacaram-se como trabalhos precursores. A partir deles, iniciaram-se outras importantes aplicações já na área de turbulência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] M. Farge, Annual Review of Fluid Mechanics 24, 395 (1992).
+       </span>
+      </span>
+     </span>
+     ], com diversas extensões para diferentes áreas da física [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] S. Jaffard, Y. Meyer and R.D. Ryan, Wavelets: Tools for Science &amp; Technology (Society for Industrial Mathematics, Philadelphia, 2001).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] C. Chui, An introduction to Wavelets (Academic Press, San Diego, 1992), v. 1.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Os objetivos básicos deste artigo consistem na apresentação dos conceitos relacionados à transformada
+     <i>
+      wavelet
+     </i>
+     contínua e na exploração das suas interpretações e algumas ferramentas associadas, visando a análise de sinais não lineares de uma forma mais atual. Assim, com uma visão melhor fundamentada, pesquisadores e professores, estudantes de pós-graduação e, mesmo, de graduação podem tirar um benefício maior de tais tipos de ferramentas de análises exploratórias.
+    </p>
+    <p>
+     O presente trabalho compõe-se das partes seguintes. Na Seção 2., faz-se uma breve revisão da transformada de Fourier como ponto de partida para a introdução da transformada wavelet, que está apresentada na Seção 3. Na Seção 4., descrevem-se propriedades de algumas funções
+     <i>
+      wavelets
+     </i>
+     analisadoras mais populares e suas características principais. Apresenta-se ainda concisamente o conceito de tempo-frequência e a sua relação com a transformada
+     <i>
+      wavelet
+     </i>
+     . Nas Seções de 3. a 8., apresentam-se a definição da transformada
+     <i>
+      wavelet
+     </i>
+     contínua CWT e a evolução dessa ferramenta de análise para estudos de sinais, bem como as características de sua utilização. Ilustram-se situações por meio de exemplos de análise de alguns sinais. Na Seção 9., como uma extensão prática da seção anterior, apresenta-se como utilizar a CWT para estudos de relações entre sinais. Na Seção 10., faz-se as considerações finais. De maneira complementar, incluem-se ainda dois apêndices. O primeiro contendo informações sobre o cálculo da fase em sinais e o segundo sobre como melhorar a escolha de paletas de cores na construção de escalogramas.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. De Fourier à
+     <i>
+      wavelets
+     </i>
+    </h1>
+    <p>
+     O método de Fourier é uma técnica para o estudo de sinais que tem sido muito utilizada na ciência e na engenharia. A técnica consiste na transformação de um domínio em um outro domínio, em que muitas características do sinal analisado são revelados. O domínio transformado é denominado domínio espectral ou frequencial, enquanto o domínio original da função é chamado de domínio temporal ou domínio espacial.
+    </p>
+    <p>
+     Na teoria de Fourier incluem-se a transformada de Fourier e a série de Fourier. A série de Fourier é usada para analisar funções que são periódicas enquanto a transformada de Fourier é usada para representar funções aperiódicas. A transformada de Fourier pode ser vista como uma extensão da série de Fourier em que uma função aperiódica é considerada periódica no intervalo [-
+     <i>
+      L
+     </i>
+     ∕2,
+     <i>
+      L
+     </i>
+     ∕2], com
+     <i>
+      L
+     </i>
+     tendendo a infinito. Maiores detalhes podem ser obtidos em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] J.W. Brown and R.V. Churchill, Fourier Series and Boundary Value Problems (McGraw-Hill, New York, 1993).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Como a transformada wavelet é muito similar à transformada de Fourier em muitos aspectos, nesta seção faz-se uma breve revisão desta transformada.
+    </p>
+    <p>
+     A transformada de Fourier de um sinal
+     <i>
+      f
+     </i>
+     , de uma variável real
+     <i>
+      t
+     </i>
+     , é definida pela integral
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/25813ff71c80fd0ef1257227ef82cb291997732f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     f
+    </i>
+    satisfaz
+    <div class="row formula" id="ee25">
+     <a name="e25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/50cb19d824877fbc597eb5ffbdff8b9a32bf84f2.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Isto mostra que o uso de funções globais nem sempre é eficaz na representação local de sinais, como exemplificado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     , em que há duas frequências mas em intervalos distintos. Para obter uma representação deste tipo, necessita-se, então, de uma ferramenta de análise mais localizada, que seja uma combinação dos domínios frequencial e temporal. Isto é muito importante, pois na prática se está interessado em uma porção do espectro e, portanto, tem-se interesse em conhecer que porção do domínio temporal do sinal é responsável por aquela característica no espectro. A porção desejada do sinal pode ser obtida pela multiplicação do sinal original
+     <i>
+      f
+     </i>
+     por uma função que seja zero fora do intervalo desejado. Designa-se essa função por
+     <i>
+      g
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ), que é chamada função janela. Exige-se também que ela satifaça
+     <i>
+      f
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )
+     <i>
+      g
+     </i>
+     (
+     <i>
+      t
+     </i>
+     -
+     <i>
+      u
+     </i>
+     ) conterá informações de
+     <i>
+      f
+     </i>
+     perto de
+     <i>
+      t
+     </i>
+     =
+     <i>
+      u
+     </i>
+     . Variando o parâmetro
+     <i>
+      u
+     </i>
+     , desliza-se a janela ao longo do eixo temporal de modo que se possa analisar o comportamento local do sinal
+     <i>
+      f
+     </i>
+     em diferentes intervalos. Diz-se que
+     <i>
+      f
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )
+     <i>
+      g
+     </i>
+     (
+     <i>
+      t
+     </i>
+     -
+     <i>
+      u
+     </i>
+     ) é o sinal janelado.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/6856698ebdecf8910814d8e4309bc59ba15a27e3.jpg" style="max-width:100%"/>
+     . Desta forma, o produto
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Sinal com frequências de
+      <img src=".jpg" style="max-width:100%"/>
+      <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/38a3bc07e2e4f5c9205292a38e9a19c71b726f2c.jpg" style="max-width:100%"/>
+      e
+      <img src=".jpg" style="max-width:100%"/>
+      <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/97681056356af29a1e7e71e0ed0bf7477b6d6185.jpg" style="max-width:100%"/>
+      , a. Respectivo espectro de potência, b.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Define-se a Transformada Janelada de Fourier por
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8fedf6f09082eb912823b7794bb9559fb4b9d39c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     g
+    </i>
+    é a função que faz o papel da janela e
+    <i>
+     ĝ
+    </i>
+    (0) ≠ 0. Assim, na Transformada Janelada de Fourier, primeiro retira-se a parte desejada do sinal, e em seguida, calcula-se a Transformada de Fourier da parte retirada. Ou seja, diferentemente da Transformada de Fourier, em que, o sinal
+    <i>
+     f
+    </i>
+    (
+    <i>
+     t
+    </i>
+    ) deve ser conhecido em todo o eixo temporal antes que seu componente espectral em cada frequência possa ser calculado, na transformada janelada de Fourier precisa-se conhecer
+    <i>
+     f
+    </i>
+    (
+    <i>
+     t
+    </i>
+    ) apenas no intervalo em que
+    <i>
+     g
+    </i>
+    (
+    <i>
+     t
+    </i>
+    -
+    <i>
+     u
+    </i>
+    ) é diferente de zero. Assim,
+    <i>
+     f
+    </i>
+    perto de
+    <i>
+     t
+    </i>
+    =
+    <i>
+     u
+    </i>
+    .
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/36af4b7d66f1a64287a68f1bab6b8e07c4bcb872.jpg" style="max-width:100%"/>
+    fornece informações para o espectro de
+    <p>
+     A função janela desempenha, como pode ser observado, um papel relevante. Os parâmetros mais importantes em sua definição são o seu centro e seu comprimento. Para uma função janela
+     <i>
+      g
+     </i>
+     , define-se seu centro
+     <i>
+      t
+     </i>
+     <sup>
+      *
+     </sup>
+     por
+    </p>
+    <div class="row formula" id="ee26">
+     <a name="e26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/b454d12fa03ad1bb757405030257bf13bbb023f8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    e o seu raio por
+    <div class="row formula" id="ee27">
+     <a name="e27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/f51eb89c16abb4198332f217bee886be402276c2.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Nesse caso, diz que
+    <i>
+     g
+    </i>
+    é a janela temporal e que (3) fornece informações de
+    <i>
+     f
+    </i>
+    na janela
+    <div class="row formula" id="ee28">
+     <a name="e28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/d6aa2b9293f39f27d7eef107f99ac1e0ba94c146.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     De modo análogo, tem-se a janela frequencial
+     <i>
+      ĝ
+     </i>
+     com centro
+     <i>
+      ξ
+     </i>
+     <sup>
+      *
+     </sup>
+     e raio
+     <i>
+      Δξ
+     </i>
+     definidos por
+    </p>
+    <div class="row formula" id="ee29">
+     <a name="e29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/38835865aeb269e0bdc581d6a73b40f160532366.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Neste caso, tem-se a informação da função
+    </p>
+    <div class="row formula" id="ee30">
+     <a name="e30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/cd23ab23e107009f848fbab1682b8389d7bca5ad.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/28f3eedb9a42da3c6a1b5fd5cfc987698a71025c.jpg" style="max-width:100%"/>
+    no intervalo
+    <p>
+     Assim, a transformada janelada de Fourier fornece informação de
+     <i>
+      f
+     </i>
+     na janela tempo-frequência
+    </p>
+    <div class="row formula" id="ee31">
+     <a name="e31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/89c8d342590016076d9dd1f9924b8860061c50d0.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Teoricamente, o trabalho de Fourier mostra que um sinal não pode ser limitado em tempo e frequência simultaneamente, como discutido em detalhes em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] C. Chui, An introduction to Wavelets (Academic Press, San Diego, 1992), v. 1.
+       </span>
+      </span>
+     </span>
+     ]. A partir desse resultado, estabelece-se que as variações em tempo
+     <i>
+      Δt
+     </i>
+     e em frequência
+     <i>
+      Δξ
+     </i>
+     são inversamente proporcionais. Ou seja,
+    </p>
+    <div class="row formula" id="ee32">
+     <a name="e32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8213c1a430d6107b35d94cea4ea065ffd1de3487.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que a
+    <i>
+     constante
+    </i>
+    <i>
+     Δt
+    </i>
+    e
+    <i>
+     Δξ
+    </i>
+    da função janela independem de sua localização no plano
+    <i>
+     t
+    </i>
+    -
+    <i>
+     ξ
+    </i>
+    , conforme esquematizado na
+    <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Figura 2
+    </a>
+    . Uma vez que a função janela é escolhida, a resolução tempo-frequência é fixada.
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/aa7b6780020bc524d044ce129446ffc02e6ea273.jpg" style="max-width:100%"/>
+    pode assumir outros valores de acordo com a normalização utilizada na transformada de Fourier. Note que os valores dos raios
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Plano tempo-frequência e as representações das caixas para a Transformada Janela de Fourier.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Por exemplo, considere a função janela de Hanning discreta
+    </p>
+    <div class="row formula" id="ee33">
+     <a name="e33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/28d5a1dc3a208b18da4f5ef12428f15f13ce4812.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     n
+    </i>
+    é a posição na amostra discreta e
+    <i>
+     N
+    </i>
+    - 1 é o tamanho total da janela, com janelas de tamanho de 16s e 64s com uma superposição de 90
+    <i>
+     %
+    </i>
+    na translação pelo sinal discreto a ser analisado. Ao ser aplicada a transformada janelada de Fourier no sinal apresentado na
+    <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Figura 1
+    </a>
+    , obtêm-se os dois espectrogramas da
+    <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Figura 3
+    </a>
+    . Observa-se nessa figura que a localização em que ocorreu alteração da frequência é melhor detectada com a janela de 16s, enquanto a detecção das frequências é melhor com a janela de 32s.
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Transformadas janeladas de Fourier do sinal da
+      <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 1
+      </a>
+      com janelas de Hanning de 16 e 64 segundos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Caso se escolha
+     <i>
+      Δt
+     </i>
+     aproximadamente igual ao período da primeira senoide, então a transformada janelada de Fourier é capaz de resolver melhor regiões em que o sinal tem baixa frequência e tem uma resolução pobre em regiões de alta frequência. Por outro lado, se
+     <i>
+      Δt
+     </i>
+     é aproximadamente igual ao período da segunda senoide, então regiões de baixa frequência não são resolvidas adequadamente. Observe que se
+     <i>
+      Δt
+     </i>
+     é muito pequeno, então
+     <i>
+      Δξ
+     </i>
+     é proporcionalmente maior e, assim, a parte de baixa frequência é desfocada.
+    </p>
+    <p>
+     Assim, o objetivo é dar orientações sobre um método que possa fornecer uma boa resolução em tempo e frequência em qualquer localização no plano tempo-frequência, como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     . Ou seja, tem-se que ter tanto uma função janela cujo raio aumenta em tempo (reduz em frequência) enquanto resolve os conteúdos de baixa frequência e uma janela que decresce em tempo (aumenta em frequência) enquanto resolve o conteúdo de altas frequências de um sinal. Isto conduz ao desenvolvimento das funções wavelets e da transformada
+     <i>
+      wavelet
+     </i>
+     , em que existem variações proporcionais das janelas em intervalos de tempo e frequência. As relações tempo-frequência em analogia com o princípio da incerteza são discutidas nas referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] C. Chui, An introduction to Wavelets (Academic Press, San Diego, 1992), v. 1.
+       </span>
+      </span>
+     </span>
+     ] e [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] A. Papoulis, The Fourier Integral and its Applications (McGraw-Hill, New York, 1962).
+       </span>
+      </span>
+     </span>
+     ]. Vídeos muito interessantes sobre o conceito do tempo apresentados pelo Prêmio Nobel da Física Prof. Etienne Klein também são recomendados aos interessados nesses conceitos
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Que savons-nous du temps?:
+        <a href="http://www.youtube.com/watch?v=NDYIdBMLQR0" target="_blank">
+         https://www.youtube.com/watch?v=NDYIdBMLQR0
+        </a>
+        Le temps existe-il?:
+        <a href="http://www.youtube.com/watch?v=4lf9xFKoT8Y" target="_blank">
+         https://www.youtube.com/watch?v=4lf9xFKoT8Y
+        </a>
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Plano tempo-frequência e as representações das caixas para a Transformada wavelet.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Transformada contínua
+    </h1>
+    <p>
+     Nesta seção, define-se a transformada
+     <i>
+      wavelet
+     </i>
+     contínua, fazem-se considerações sobre a existência da transformada inversa e apresentam-se algumas de suas propriedades. Com isso, algumas características de sua utilização podem ser destacadas, como a representação bidimensional do módulo e da fase dos coeficientes
+     <i>
+      wavelet
+     </i>
+     e a extração de cristas a partir dos coeficientes desta transformada. Outras características podem ainda ser ressaltadas, como a obtenção de um análogo ao espectro de potência de Fourier, i. e., o escalograma global, uma entropia wavelet em analogia a proposição de Shannon, a capacidade de lidar com sinais não periódicos e, ainda, a distribuição de energia por escala que contribuem com a dinâmica de um sistema.
+    </p>
+    <h2>
+     3.1. Definição
+    </h2>
+    <p>
+     A transformada
+     <i>
+      wavelet
+     </i>
+     contínua, doravante chamada CWT, é uma transformada integral linear que pode ser utilizada na exploração de características de sinais não estacionários para extrair informações de variações em certas bandas de frequências e/ou detectar estruturas locais presentes [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] J.-P. Antoine, R. Murenzi, P. Vandergheynst and S.T. Ali, Two-Dimensional Wavelets and Their Relatives (Cambridge University, Cambrige, 2008).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Dado um sinal
+     <i>
+      f
+     </i>
+     , sua transformada integral é definida como:
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/b54c81f39b5a070a707c75486016b6aa58ca1e2b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que o parâmetro
+    <i>
+     a
+    </i>
+    (&gt; 0) se refere a escala e
+    <i>
+     τ
+    </i>
+    a translação ou localização da função
+    <i>
+     wavelet
+    </i>
+    -analisadora
+    <span class="ref footnote">
+     <sup class="xref">
+      2
+     </sup>
+     <span class="refCtt closed">
+      <span class="refCttPadding">
+       <strong class="fn-title">
+        2
+       </strong>
+       Em muitos trabalhos utiliza-se o termo wavelet -mãe também para essa função wavelet ψ.
+      </span>
+     </span>
+    </span>
+    <i>
+     ψ
+    </i>
+    , sendo
+    <i>
+     a
+    </i>
+    e
+    <i>
+     τ
+    </i>
+    ∈
+    <i>
+     ℝ
+    </i>
+    . O parâmetro
+    <i>
+     a
+    </i>
+    controla a dilatação/contração da função
+    <i>
+     wavelet
+    </i>
+    -analisadora. À medida que o parâmetro
+    <i>
+     τ
+    </i>
+    varia, o sinal
+    <i>
+     f
+    </i>
+    é analisado localmente em torno dele. Assim, podem-se analisar os aspectos multiescala do sinal não estacionário estudado. O traço superior em
+    <i>
+     ψ
+    </i>
+    e
+    <i>
+     wavelet
+    </i>
+    . Essa transformada é chamada de contínua, pois esses parâmetros de escala
+    <i>
+     a
+    </i>
+    e de localização
+    <i>
+     τ
+    </i>
+    assumem valores contínuos nessa representação.
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/12816d3b49497d3d7bb410e662e29b7a32382c59.jpg" style="max-width:100%"/>
+    é conhecido como coeficiente
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/7057828dc7b20ccc92583c88fb59374f6ee5e85d.jpg" style="max-width:100%"/>
+    denota o complexo conjugado da função
+    <p>
+     Para os fins práticos da análise de sinais discretos, tais valores podem ser discretizados tendo o cuidado de se manter o plano escala-tempo totalmente preenchido. Isso resulta numa representação redundante do sinal analisado em relação aos seus coeficientes
+     <i>
+      wavelets
+     </i>
+     . Por isso, essa transformada é pouco eficiente do ponto de vista computacional. Contudo, esse fato auxilia bastante o estudo exploratório de sinais, apesar de poder atenuar algumas estruturas encontradas no sinal dependendo da escolha da função
+     <i>
+      wavelet
+     </i>
+     , a ser discutido adiante, na Seção 4.
+    </p>
+    <h2>
+     3.2. Propriedades
+    </h2>
+    <p>
+     A transformada
+     <i>
+      wavelet
+     </i>
+     , por definição, é um operador linear. Ou seja, dada funções
+     <i>
+      f
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      g
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <i>
+      h
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ), suas transformadas
+     <i>
+      wavelet
+     </i>
+     satisfazem as seguintes relações:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       Superposição linear:
+      </p>
+      <div class="row formula" id="ee34">
+       <a name="e34">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/0e9fe42c0f0d19f8bcd40d81997a5503c938e739.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+      em que
+      <i>
+       f
+      </i>
+      (
+      <i>
+       t
+      </i>
+      ) =
+      <i>
+       g
+      </i>
+      (
+      <i>
+       t
+      </i>
+      ) +
+      <i>
+       h
+      </i>
+      (
+      <i>
+       t
+      </i>
+      ).
+     </li>
+     <li>
+      <p>
+       Transposição:
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="ee35">
+       <a name="e35">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/57e4c4aea8aace93315bd9a0b6133dd8b7795951.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+      em que
+      <i>
+       g
+      </i>
+      (
+      <i>
+       t
+      </i>
+      ) =
+      <i>
+       f
+      </i>
+      (
+      <i>
+       t
+      </i>
+      -
+      <i>
+       τ
+      </i>
+      ).
+     </li>
+     <li>
+      <p>
+       Escalonamento:
+      </p>
+      <div class="row formula" id="ee36">
+       <a name="e36">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/dfe845d044f59271de74f6f70df61b91185c8b2f.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+      em que
+      <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/293016358f1085bf75aa987206dcde3fd8a675d0.jpg" style="max-width:100%"/>
+      .
+     </li>
+    </ol>
+    <p>
+     Em geral, não se tem expressões analíticas para a transformada wavelet; exceto em alguns casos, como, por exemplo:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       Para funções constantes, a transformada
+       <i>
+        wavelet
+       </i>
+       é zero.
+      </p>
+     </li>
+     <li>
+      <p>
+       Para funções senoidais, a transformada wavelet é uma função senoidal com um delocamento
+       <i>
+        τ
+       </i>
+       , sendo seu módulo
+       <i>
+        a
+       </i>
+       . Por exemplo, se
+       <i>
+        f
+       </i>
+       (
+       <i>
+        t
+       </i>
+       ) = exp(
+       <i>
+        ιξt
+       </i>
+       ), então
+      </p>
+      <div class="row formula" id="ee37">
+       <a name="e37">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/9b821fad4b559c08246fb753cf3c848cdc9c3d4a.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+      <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/90b4f2dbd52e32ce40b9c5553e389f8104e0d954.jpg" style="max-width:100%"/>
+      dependente da escala
+     </li>
+     <li>
+      <p>
+       Para funções lineares, como, por exemplo,
+       <i>
+        f
+       </i>
+       (
+       <i>
+        t
+       </i>
+       ) =
+       <i>
+        t
+       </i>
+       , a transformada wavelet é proporcional à escala multiplicada pela transformada de Fourier da derivada da função
+       <i>
+        wavelet
+       </i>
+       analisadora em relação a frequência
+       <i>
+        ξ
+       </i>
+       , em
+       <i>
+        ξ
+       </i>
+       = 0, ou seja,
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="ee38">
+       <a name="e38">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8822d763ce6ce09a1f586e633741d0a2e4a05fd5.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+     </li>
+    </ol>
+    <h2>
+     3.3. Normalizações
+    </h2>
+    <p>
+     Para sinais cujo quadrado integrável da intensidade é finito, faz-se uma analogia com o conceito de energia cinética e atribui-se esse valor o nome de energia do sinal. Espectralmente falando, a decomposição da energia de um sinal em escalas permite explicitar as escalas que mais contribuem com o sinal analisado. Assim, a transformada
+     <i>
+      wavelet
+     </i>
+     permite, nesses casos, a determinação da variação temporal da distribuição de energia do sinal analisado por meio de suas escalas de decomposição. Esse conceito é baseado na fórmula
+    </p>
+    <div class="row formula" id="ee4">
+     <a name="e4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/ddbfa823b849677a6b2409a919a4067119f1cdf6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A normalização da CWT é muito importante nesse contexto e depende do estudo a ser realizado. A normalização usual é a dada na norma
+     <i>
+      L
+     </i>
+     <sup>
+      2
+     </sup>
+     , que assegura uma isometria entre o domínio aonde está o sinal a ser analisado e o domínio de seus coeficientes
+     <i>
+      wavelets
+     </i>
+     . Nesse caso, o termo de normalização
+     <i>
+      wavelet
+     </i>
+     sejam ortogonais em relação as suas funções dilatadas e transladadas e que o sinal em análise seja de quadrado integrável.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/0322b755a9349bb39e786facb4608242391efea9.jpg" style="max-width:100%"/>
+     é apresentado na transformada, como na Equação 4, e é válida a relação similar ao Teorema de Parseval da análise de Fourier, expressa na Equação 5. É requerido também, em geral, que as funções
+    </p>
+    <p>
+     Sinais fractais não são de quadrado integrável, assim a normalização é realizada na norma
+     <span class="ref">
+      <sup class="xref xrefblue">
+       29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [29] P. Abry, Ondelettes et Turbulences: Multirésolutions, Algorithmes de Décomposition, Invariance D'échelle et Signaux de Pression (Diderot Editeur, Paris, 1997).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       34
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [34] S. Jaffard, B. Lashermes and P. Abry, Wavelet Leaders in Multifractal Analysis. Wavelet Analysis and Applications (Birkhauser Verlag, Switzerland, 2006).
+       </span>
+      </span>
+     </span>
+     ]. Um exemplo de uso da CWT com essa normalização
+     <i>
+      scilab
+     </i>
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         3
+        </strong>
+        Endereço eletrônico:
+        <a href="http://www.scilab.org/" target="_blank">
+         http://www.scilab.org/
+        </a>
+        .
+       </span>
+      </span>
+     </span>
+     , que é indicado para estudos de sinais fractais, ou em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] P. Frick, A. Grossmann and P. Tchamitchian, Journal of Mathematical Physics 39, 4091 (1998).
+       </span>
+      </span>
+     </span>
+     ], em que estudos da amplitude do sinal são de interesse.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/996dd40c35fb10ccbd986b90e3f84e380170887b.jpg" style="max-width:100%"/>
+     apresentado na Equação 3 é substituído por
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/80556e52f85689ffcc86fca127ac5a1da4ab9516.jpg" style="max-width:100%"/>
+     . Do ponto de vista prático, o termo
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/80556e52f85689ffcc86fca127ac5a1da4ab9516.jpg" style="max-width:100%"/>
+     é encontrado no pacote FRACLAB, do ambiente
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/b430bce0b1d19e6e15fd2320bbe285887791df62.jpg" style="max-width:100%"/>
+     . Mais detalhes podem ser encontrados em [
+    </p>
+    <p>
+     Pode-se também optar por uma ou outra normalização em estudos específicos em que se tenha interesse na amplitude do sinal; e não em sua energia. Por exemplo, muitas vezes os valores dos coeficientes
+     <i>
+      wavelet
+     </i>
+     são usados para cálculos de correlação por escala, como descrito na Seção 9.4., e no cálculo do coeficiente de Hurst [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       35
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [35] I. Simonsen, A. Hansen and O.M. Nes, Physical Review E 58, 2779 (1998).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [37] R. López-Montes, R. Pérez-Enríquez, E.A. Araujo-Pradere and J.A.L. Cruz-Abeyro, Advances in Space Research 55, 586 (2015).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     3.4. Transformada
+     <i>
+      wavelet
+     </i>
+     inversa
+    </h2>
+    <p>
+     Escolhida a função
+     <i>
+      wavelet
+     </i>
+     , é possível obter uma constante
+     <i>
+      c
+      <sub>
+       ψ
+      </sub>
+     </i>
+     de modo que a transformada wavelet admita a transformada inversa
+    </p>
+    <div class="row formula" id="ee39">
+     <a name="e39">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/9baa8ea2d607aa7a74e1ca8a1954720a42e998a5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Essa constante
+    <i>
+     c
+     <sup>
+      ψ
+     </sup>
+    </i>
+    é algumas vezes conhecida como constante de admissibilidade da função
+    <i>
+     wavelet
+    </i>
+    e está expressa na Equação 6.
+    <h1 class="articleSectionTitle">
+     4. Funções
+     <i>
+      wavelets
+     </i>
+    </h1>
+    <p>
+     Na investigação de sinais, existem várias funções
+     <i>
+      wavelets
+     </i>
+     analisadoras que podem ser utilizadas. Entretanto, elas devem obedecer conceitos como admissibilidade, energia unitária e diferem intrinsecamente em vários aspectos como momentos nulos e regularidade. Esses últimos são muito importantes no propósito da sua utilização. Desta forma, uma breve descrição desses conceitos são apresentados, incluindo ainda o adequado entendimento do conceito de escala e pseudofrequência.
+    </p>
+    <h2>
+     4.1. Condição de admissibilidade
+    </h2>
+    <p>
+     A condição de admissibilidade de uma função
+     <i>
+      wavelet ψ
+     </i>
+     é dada por:
+    </p>
+    <div class="row formula" id="ee5">
+     <a name="e5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8bc4c30ed292d29c30a6df201ff68a295bc4e589.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    que também pode ser expressa no domínio de Fourier como
+    <div class="row formula" id="ee6">
+     <a name="e6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/92d60d51194372ec918e3f045e26298156025309.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     wavelet ψ
+    </i>
+    . Assim, preserva-se a característica ondulatória da função
+    <i>
+     wavelet
+    </i>
+    e determina-se seu suporte localizado (ou efetivo, do ponto de vista prático).
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/2096cc608006671f719a88627fde487e2af259e8.jpg" style="max-width:100%"/>
+    é a transformada de Fourier da função
+    <p>
+     Essa característica ondulatória dá origem ao nome
+     <i>
+      wavelet
+     </i>
+     , em inglês. O termo original veio do francês
+     <i>
+      ondelette
+     </i>
+     , proposto pelo físico Alex Grosman. Como referência histórica, nos trabalhos de Jean Morlet o termo original era
+     <i>
+      octave
+     </i>
+     ou, em português, oitava. Em português, dada a riqueza de nossa língua há várias designações usualmente utilizadas, como por exemplo: ondinha, ondeta, ondícula, ôndula, ondícula, ondaleta e ondeleta.
+    </p>
+    <h2>
+     4.2. Condição de energia unitária
+    </h2>
+    <p>
+     A função
+     <i>
+      wavelet
+     </i>
+     deve ter energia unitária, i.e.,
+    </p>
+    <div class="row formula" id="ee40">
+     <a name="e40">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/36c765e690ac9f92ecb4aeb5c6507e9d6253b5c9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Tal condição garante que a função
+    <i>
+     wavelet
+    </i>
+    possua suporte compacto, ou tenha um decaimento rápido de amplitude (
+    <i>
+     e-folding time
+    </i>
+    ), conhecido como suporte efetivo, garantindo a localização espacial.
+    <h2>
+     4.3. Momentos nulos
+    </h2>
+    <p>
+     Uma característica importante de uma função
+     <i>
+      wavelet
+     </i>
+     é o seu número de momentos nulos
+     <i>
+      M
+     </i>
+     , formalizado como:
+    </p>
+    <div class="row formula" id="ee7">
+     <a name="e7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8f897cfdc4557a2bcb242c2e2ff31d375fb45545.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Essa propriedade de momentos nulos torna possível a análise da regularidade local de um sinal. O teorema a seguir caracteriza os momentos nulos de uma função
+    <i>
+     wavelet
+    </i>
+    de decaimento rápido como as derivadas de ordem
+    <i>
+     M
+    </i>
+    de uma função de decaimento rápido.
+    <p>
+     <b>
+      Teorema 1.
+     </b>
+     <i>
+      Uma função wavelet ψ
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )
+     <i>
+      com um decaimento rápido possui M momentos nulos se e somente se existe uma função ϑ
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )
+     <i>
+      com um rápido decaimento tal que
+     </i>
+    </p>
+    <div class="row formula" id="ee8">
+     <a name="e8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/2756ca3be39293149ea4bd32a889ee9fd54e9e2d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     <i>
+      Como uma consequência
+     </i>
+    </p>
+    <div class="row formula" id="ee9">
+     <a name="e9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/3ebc315bcacf64b538c2bf4ea3c2f7daa5ddceb6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <i>
+     com
+    </i>
+    <i>
+     Além disso
+    </i>
+    ,
+    <i>
+     ψ possui no máximo M momentos nulos se e somente se
+    </i>
+    <div class="row formula" id="ee41">
+     <a name="e41">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/ae6dcf891377c35010a1348efc673d69bd5c5627.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8b70fd43edeb3e7e54be2b0a2ab1439af67916ca.jpg" style="max-width:100%"/>
+    .
+    <h2>
+     4.4. Detecção de regularidade
+    </h2>
+    <p>
+     Outra característica importante é a regularidade da função
+     <i>
+      wavelet
+     </i>
+     analisadora. Se a função
+     <i>
+      wavelet
+     </i>
+     analisadora é regular e de ordem
+     <i>
+      n
+     </i>
+     ≥ 1, tal que seus momentos nulos até essa ordem também sejam iguais a zero, i.e.,
+    </p>
+    <div class="row formula" id="ee42">
+     <a name="e42">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/25f489a8cd3231b597165e8dbe8b6983b1366d01.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    suas derivadas de primeira ordem também são zero em
+    <i>
+     ξ
+    </i>
+    = 0, ou seja:
+    <div class="row formula" id="ee43">
+     <a name="e43">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/d2f993f9c4110183a9673164b85df1be10f61310.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Neste caso, a transformada
+     <i>
+      wavelet
+     </i>
+     de uma função
+     <i>
+      f
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      t
+     </i>
+     também é igual a zero. Em outras palavras, a transformada wavelet de uma função linear é zero quando a função
+     <i>
+      wavelet
+     </i>
+     analisadora tem momentos nulos de primeira ordem. Similarmente, se a função
+     <i>
+      wavelet
+     </i>
+     analisadora tem momentos nulos de primeira e segunda ordem iguais a zero, a transformada
+     <i>
+      wavelet
+     </i>
+     de uma função constituída por funções quadráticas e lineares localmente também é zero.
+    </p>
+    <h2>
+     4.5. Escala e frequência central
+    </h2>
+    <p>
+     O termo escala refere-se ao comprimento (dilatação) da função
+     <i>
+      wavelet
+     </i>
+     , ou pode ser definido como a distância entre duas oscilações O período central (ou inverso da frequência-central) tem uma relação direta com a escala.
+    </p>
+    <p>
+     Buscando uma analogia com a análise de Fourier, pode-se matematicamente estabelecer uma relação entre a frequência central associada à função
+     <i>
+      wavelet ξ
+      <sub>
+       ψ
+      </sub>
+     </i>
+     e a pseudofrequência (ou frequência central) associada a escala
+     <i>
+      ξ
+      <sub>
+       a
+      </sub>
+     </i>
+     da seguinte forma:
+    </p>
+    <div class="row formula" id="ee10">
+     <a name="e10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/5390cff8ea792d127e5401260debbf3dedde945c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     Δt
+    </i>
+    é o período de amostragem, conforme descrito em [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      29
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [29] P. Abry, Ondelettes et Turbulences: Multirésolutions, Algorithmes de Décomposition, Invariance D'échelle et Signaux de Pression (Diderot Editeur, Paris, 1997).
+      </span>
+     </span>
+    </span>
+    ]. Assim, na escolha da wavelet, deve-se também levar em conta a relação da escala com a sua respectiva pseudofrequência. Analogamente, pode-se calcular dessa forma os pseudoperíodos.
+    <p>
+     Pode-se alternativamente, de uma forma mais rústica, calcular a transformada
+     <i>
+      wavelet
+     </i>
+     de sinais ondulatórios com períodos conhecidos e localizar sua respectiva escala de valor máximo de energia associada a esse período.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Escolha das funções
+     <i>
+      wavelets
+     </i>
+    </h1>
+    <p>
+     Existem inúmeras escolhas de funções que podem ser utilizadas como funções
+     <i>
+      wavelet
+     </i>
+     analisadoras, no contexto da transformada
+     <i>
+      wavelet
+     </i>
+     contínua. Essa escolhas podem alterar os resultados obtidos de forma a enfatizar uma certa característica do sinal analisado. Nesta seção, uma seleção de funções
+     <i>
+      wavelet
+     </i>
+     populares são apresentadas e, no decorrer do artigo, alguns exemplos comparando os resultados de alguns sinais com a análise dessas funções
+     <i>
+      wavelet
+     </i>
+     são discutidos. Mais detalhes sobre escolhas de funções
+     <i>
+      wavelet
+     </i>
+     analisadoras para ressaltar determinadas características do sinal, a ser analisado, podem ser encontradas, por exemplo, em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] M.O. Domingues, O. Mendes and A. Mendes da Costa, Advances in Space Research 35, 831 (2005).
+       </span>
+      </span>
+     </span>
+     ] e referências citadas.
+    </p>
+    <p>
+     Em particular, na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , são apresentados alguns valores para a frequência-central
+     <i>
+      ξ
+      <sub>
+       ψ
+      </sub>
+     </i>
+     , de acordo com o algoritmo proposto por [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [29] P. Abry, Ondelettes et Turbulences: Multirésolutions, Algorithmes de Décomposition, Invariance D'échelle et Signaux de Pression (Diderot Editeur, Paris, 1997).
+       </span>
+      </span>
+     </span>
+     ] para algumas das
+     <i>
+      wavelets
+     </i>
+     apresentadas a seguir.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      <i>
+       Wavelets
+      </i>
+      e suas frequências centrais
+      <br/>
+     </div>
+    </div>
+    <h2>
+     5.1.
+     <i>
+      wavelet
+     </i>
+     de Haar,
+     <i>
+      wavelet
+     </i>
+     de Shannon
+    </h2>
+    <p>
+     A função
+     <i>
+      wavelet
+     </i>
+     de Haar, descrita historicamente pelo matemático húngaro A. Haar [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [25] A. Haar, Mathematische Annales 69, 331 (1910).
+       </span>
+      </span>
+     </span>
+     ], embora muito simples, ilustra bem as características-chave da transformada
+     <i>
+      wavelet
+     </i>
+     . A sua função
+     <i>
+      wavelet
+     </i>
+     dual, no sentido de que as duas funções representam casos extremos opostos na relação tempo-frequência, é a
+     <i>
+      wavelet sinc
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] S. Mallat, A Wavelet Tour of Signal Processing (Academic Press, San Diego, 1999), 2nd ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [26] Y. Meyer, Wavelets (Springer Verlag, Berlin, 1989).
+       </span>
+      </span>
+     </span>
+     ]. A
+     <i>
+      wavelet
+     </i>
+     de Haar tem boa localização temporal; já a
+     <i>
+      wavelet sinc
+     </i>
+     tem boa localização frequencial. Cada uma delas é ortogonal às suas translações por inteiros. Tendo isso em vista, todas as outras funções de interesse ou funções exemplos têm um comportamento que se situa entre estes dois tipos de transformada.
+    </p>
+    <p>
+     A
+     <i>
+      wavelet
+     </i>
+     de Haar é definida por:
+    </p>
+    <div class="row formula" id="ee44">
+     <a name="e44">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/ceb69c5c17f085b2f651142bdbcafa037c5e2c14.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Logo, essa função é real e antissimétrica com respeito a
+     <i>
+      t
+     </i>
+     = 0, e o intervalo em que ela é diferente de zero é finito. Ou seja, ela possui boa localização no espaço temporal; porém não no espaço frequencial. Tal característica reduz bastante a sua aplicação prática no estudo de sinais. Como uma caracterização geral, essa função respeita a condição de admissibilidade e energia unitária, é descontínua e possui apenas um momento nulo. A
+     <i>
+      wavelet
+     </i>
+     de Haar é não regular, sua derivada primeira é descontínua, e seu momento de primeira ordem não é zero.
+    </p>
+    <p>
+     A transformada de Fourier da
+     <i>
+      wavelet
+     </i>
+     de Haar é complexa e simétrica em torno de
+     <i>
+      ξ
+     </i>
+     = 0,
+    </p>
+    <div class="row formula" id="ee45">
+     <a name="e45">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/7503e5a86eaf613398241f9aeb6cb0c13b7252dc.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que a função
+    <i>
+     sinc
+    </i>
+    (
+    <i>
+     t
+    </i>
+    ) denota (
+    <i>
+     πt
+    </i>
+    )∕ (π
+    <i>
+     t
+    </i>
+    ). A amplitude do espectro de Fourier da
+    <i>
+     wavelet
+    </i>
+    de Haar converge a zero lentamente com uma taxa 1∕
+    <i>
+     ξ
+    </i>
+    .
+    <p>
+     Por outro lado, tem-se a função
+     <i>
+      wavelet
+     </i>
+     sinc, também designada como
+     <i>
+      wavelet
+     </i>
+     de Shannon, definida por:
+    </p>
+    <div class="row formula" id="ee11">
+     <a name="e11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/7b9ff7a8766df88089e8ef1046a1ee07d619007e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Há também uma versão complexa da
+    <i>
+     wavelet
+    </i>
+    de Shannon, definida como:
+    <div class="row formula" id="ee12">
+     <a name="e12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/2ffc3dd7fff3ad2d1c77491e582e782504357f43.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Essa
+    <i>
+     wavelet
+    </i>
+    possui características ideais de filtragem de banda no espaço de Fourier. Isso gera uma descontinuidade em sua transformada de Fourier, que faz com que seu decaimento seja 1∕|
+    <i>
+     t
+    </i>
+    | no tempo, que é muito lento. Ela tem uma boa resolução frequencial; o que, em contrapartida, gera sua pobre resolução temporal. Além disso, essa função
+    <i>
+     wavelet
+    </i>
+    é infinitamente diferenciável e possui infinitos momentos nulos.
+    <h2>
+     5.2.
+     <i>
+      wavelet
+     </i>
+     de Meyer
+    </h2>
+    <p>
+     A
+     <i>
+      Wavelet
+     </i>
+     de Meyer acelera o decaimento da
+     <i>
+      Wavelet
+     </i>
+     de Shannon ao substituir as bordas com pouca regularidade por funções suaves. As taxas de decaimento estão associadas à ordem da
+     <i>
+      Wavelet
+     </i>
+     de Meyer. Em particular, a
+     <i>
+      wavelet
+     </i>
+     de Meyer possui as qualidades de ser infinitamente diferenciável e de ter infinitos momentos nulos, sendo também ortogonal às suas translações de inteiros. A função escala e a função
+     <i>
+      wavelet
+     </i>
+     de Meyer têm como características principais serem uma das primeiras bases ortogonais, nesse contexto, a terem rápida convergência no domínio de Fourier e serem infinitamente diferenciáveis.
+    </p>
+    <p>
+     Essa função escala é definida no domínio de Fourier da seguinte forma
+    </p>
+    <div class="row formula" id="ee46">
+     <a name="e46">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/140a3f16eb704147e8676b5640a28aaeed1f60b6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Sendo
+     <i>
+      ν
+     </i>
+     (
+     <i>
+      ξ
+     </i>
+     ) um polinômio interpolador que tem as seguintes propriedades:
+    </p>
+    <div class="row formula" id="ee13">
+     <a name="e13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/2c2ab2b9782b8fed2027bff4e3d93b01f0ad3e0e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    e
+    <div class="row formula" id="ee14">
+     <a name="e14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/f6822688f0a586046b58f5d93342f3e4412e7f86.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Na
+    <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+     <span class="sci-ico-fileTable">
+     </span>
+     Tabela 2
+    </a>
+    são apresentados alguns exemplos desse polinômio para diversas ordem de aproximação. Mais detalhes podem ser obtidos em [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      27
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [27] I. Daubechies, Ten Lectures on Wavelets (SIAM, Philadelfia, 1992).
+      </span>
+     </span>
+    </span>
+    ].
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Polinômios Interpoladores
+      <i>
+       ν
+      </i>
+      (
+      <i>
+       ξ
+      </i>
+      )
+      <br/>
+     </div>
+    </div>
+    <p>
+     A função
+     <i>
+      π
+     </i>
+     ,2
+     <i>
+      π
+     </i>
+     ) e boa localização em frequência. A função escala
+     <i>
+      ϕ
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) correspondente pode ser obtida de sua transformada inversa de Fourier e não têm suporte finito.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/5b9d2e3292bdda46933c6625d61b265300b2835c.jpg" style="max-width:100%"/>
+     ⊂ (-2
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8888e42ca2afbf741e4324ee7b1bf906597b885d.jpg" style="max-width:100%"/>
+     tem suporte no intervalo
+    </p>
+    <p>
+     Similarmente, a função
+     <i>
+      wavelet
+     </i>
+     de Meyer é definida no domínio de Fourier como:
+    </p>
+    <div class="row formula" id="ee15">
+     <a name="e15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/44c9defa445f43586b72fabd8a0738a1871b3697.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     wavelet
+    </i>
+    possui suporte compacto e sua regularidade é a mesma de
+    <i>
+     ν
+    </i>
+    (
+    <i>
+     ξ
+    </i>
+    ). A
+    <i>
+     wavelet ψ
+    </i>
+    (
+    <i>
+     t
+    </i>
+    ) correspondente pode ser obtida da transformada inversa de Fourier e não têm suporte finito, mas ela possui um decaimento para 0, quando
+    <i>
+     t
+    </i>
+    →
+    <i>
+     ∞
+    </i>
+    , mais rápido do que qualquer polinômio, i.e.,
+    <div class="row formula" id="ee47">
+     <a name="e47">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/9495711174f287cf28cb8a1585781e30be0f5714.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Essa última propriedade vale também para as suas derivadas. Ressalta-se aqui que cuidados devem ser tomados para a utilização dessa função com banco de filtros no domínio do tempo; pois o uso dessa função pode implicar perda de energia do sinal processado, i.e., não se tem mais a isometria entre o espaço dos dados e dos dados transformados.
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/e1d3e3017bb0c14ca973d9a4f6c3e5923259ca00.jpg" style="max-width:100%"/>
+    tal que
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8cf032ea8e86adafc0935a24e483592f52999a2f.jpg" style="max-width:100%"/>
+    ,
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/aa8e2950e6a03e3ce179c52c0bbfd1273ad3bee5.jpg" style="max-width:100%"/>
+    . Esse função
+    <p>
+     Uma implementação eficiente dessa
+     <i>
+      wavelet
+     </i>
+     no domínio de Fourier está disponível no pacote
+     <i>
+      Wavelab
+     </i>
+     que pode ser utilizado no
+     <i>
+      GNU/Octave
+     </i>
+     <span class="ref footnote">
+      <sup class="xref">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         4
+        </strong>
+        Endereço eletrônico do pacote Wavelab da Universidade de Stanford:
+        <a href="http://statweb.stanford.edu/~wavelab/" target="_blank">
+         http://statweb.stanford.edu/~wavelab/
+        </a>
+        .
+       </span>
+      </span>
+     </span>
+     . Muitas outras implementações de
+     <i>
+      wavelet
+     </i>
+     também estão disponíveis nesse pacote.
+    </p>
+    <h2>
+     5.3.
+     <i>
+      wavelet
+     </i>
+     chapéu mexicano
+    </h2>
+    <p>
+     Essa é outra
+     <i>
+      wavelet
+     </i>
+     analisadora bastante conhecida, as vezes designada de Marr. Ela é a derivada segunda da função de densidade de probabilidade gaussiana, e é expressa por
+    </p>
+    <div class="row formula" id="ee16">
+     <a name="e16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/04b4a124057aa3dede7e1e97526ff888f47ad34d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa função possui suporte infinito; entretanto, o seu suporte efetivo está no intervalo [-5,5]. Ela é muito utilizada em estudos onde a localização temporal é importante e pode-se abrir mão da localização frequencial.
+    </p>
+    <p>
+     Essa wavelet é uma função real; embora já haja uma função complexa, calculada a partir de uma transformada Hilbert.
+    </p>
+    <h2>
+     5.4.
+     <i>
+      wavelet
+     </i>
+     de Morlet
+    </h2>
+    <p>
+     Na literatura, existem várias formas de se escrever a
+     <i>
+      wavelet
+     </i>
+     de Morlet. De uma forma simplificada, essa
+     <i>
+      wavelet
+     </i>
+     consiste de uma onda plana modulada por uma função Gaussiana, escrita como:
+    </p>
+    <div class="row formula" id="ee17">
+     <a name="e17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/385c9456d55af401bed0d9139ce78e985b56edb5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A função
+     <i>
+      wavelet
+     </i>
+     de Morlet é uma função complexa, o que permite analisar a fase e o módulo do sinal decomposto. Em geral, escolhe-se a forma ortogonal que Jean Morlet usou, em que
+     <i>
+      σ
+     </i>
+     = 1 e
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     = 5, de tal forma que a condição de admissibilidade é satisfeita [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [27] I. Daubechies, Ten Lectures on Wavelets (SIAM, Philadelfia, 1992).
+       </span>
+      </span>
+     </span>
+     ] e tem-se, também, o equilíbrio no plano tempo-frequência (que está relacionado a igualdade da expressão no Princípio de Incerteza de Heisenberg). Nesse caso, a pseudofrequência é expressa por
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/49c0f94a67dc6e9c421823a85767890075014fa8.jpg" style="max-width:100%"/>
+     .
+    </p>
+    <p>
+     O parâmetro
+     <i>
+      σ
+     </i>
+     provê a informação de quão boa é a relação tempo-frequência. Valores pequenos de
+     <i>
+      σ
+     </i>
+     faz com que se tenha uma boa resolução temporal; enquanto valores maiores proveem uma boa resolução frequencial. Deve-se atentar para o fato de que, para
+     <i>
+      σ
+     </i>
+     &lt; 1, ocorre uma quebra na condição de admissibilidade.
+    </p>
+    <h2>
+     <i>
+      wavelet
+     </i>
+     de Morlet adaptada
+    </h2>
+    <p>
+     Do ponto de vista prático, sinais reais são geralmente discretos, finitos e possuem falhas. Essas restrições dificultam a análise pelas técnicas
+     <i>
+      wavelet
+     </i>
+     convencionais em muitos casos. Em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] P. Frick, A. Grossmann and P. Tchamitchian, Journal of Mathematical Physics 39, 4091 (1998).
+       </span>
+      </span>
+     </span>
+     ] é proposto um procedimento de ajuste da função
+     <i>
+      wavelet
+     </i>
+     de Morlet que se adapte tanto as falhas como ao início e final da série do sinal tratado. Com isso, supera-se os problemas de estimativa de energia nas escalas no cálculo dos coeficientes
+     <i>
+      wavelet
+     </i>
+     . À medida que a translação da função wavelet avança sobre o sinal desconhecido, uma nova função wavelet é criada a partir da função
+     <i>
+      wavelet
+     </i>
+     original e de uma função de transferência. A ideia principal desta técnica é restaurar a condição de admissibilidade com essa nova função
+     <i>
+      wavelet
+     </i>
+     ; uma vez que a condição de admissibilidade seria perdida quando a função
+     <i>
+      wavelet
+     </i>
+     original se sobrepusesse às lacunas de dados.
+    </p>
+    <p>
+     Para maior clareza, convém explicar mais detalhadamente. Mais precisamente, neste procedimento considera-se uma função
+     <i>
+      f
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) que é conhecida por algum intervalo de tempo
+     <i>
+      t
+     </i>
+     e, em seguida, tem-se
+     <i>
+      g
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      f
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )
+     <i>
+      G
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ), em que
+     <i>
+      G
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) é a função de transferência para as lacunas de dados. Nessa construção, a função
+     <i>
+      G
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) possui o valor um se o sinal está registrado corretamente; e zero caso contrário. Depois disso, pode-se construir a nova função
+    </p>
+    <div class="row formula" id="ee48">
+     <a name="e48">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/3fc60d3bb6f5fd11c7d0014d82c76f400ef07c28.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Nas regiões de falha, a função
+    <i>
+     wavelet ψ
+    </i>
+    . Então, em [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      28
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [28] P. Frick, A. Grossmann and P. Tchamitchian, Journal of Mathematical Physics 39, 4091 (1998).
+      </span>
+     </span>
+    </span>
+    ], desenvolveu-se uma função
+    <i>
+     wavelet
+    </i>
+    adaptativa
+    <i>
+     ψ
+    </i>
+    para a função
+    <i>
+     wavelet
+    </i>
+    de Morlet (dada na
+    <a class="open-asset-modal" data-target="#ModalSchemee17" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. 17
+    </a>
+    ), dada pela seguinte forma:
+    <div class="row formula" id="ee49">
+     <a name="e49">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/25b4622513251115ece1af1d009236a1c0bd20f5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    que adapta a parte oscilatória da função
+    <i>
+     wavelet
+    </i>
+    de Morlet para manter a condição de admissibilidade com uma nova função oscilatória
+    <i>
+     ϑ
+    </i>
+    (
+    <i>
+     a
+    </i>
+    ,
+    <i>
+     τ
+    </i>
+    ), definida como:
+    <div class="row formula" id="ee50">
+     <a name="e50">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/4d2be941417c48a5ee382cac7c239114b75493c4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Essa nova função
+    <i>
+     wavelet
+    </i>
+    depende também da própria escala
+    <i>
+     a
+    </i>
+    em que está a função
+    <i>
+     wavelet
+    </i>
+    de Morlet e, assim, deve ser continuamente construída com os parâmetros
+    <i>
+     a
+    </i>
+    e
+    <i>
+     τ
+    </i>
+    .
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8a5e3e8ceff975aaa9806e6491d0978b7e426bbe.jpg" style="max-width:100%"/>
+    é usada ao invés da função
+    <h1 class="articleSectionTitle">
+     6. Escalograma
+    </h1>
+    <p>
+     Os escalogramas são gráficos que representam a visualização bidimensional dos coeficientes
+     <i>
+      wavelets
+     </i>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/08f825e4c05585bac2097db452228a5358c0324a.jpg" style="max-width:100%"/>
+     . Estes podem ser visualizados por meio de um campo de isolinhas ou imagem. No último caso, em especial, é necessário um cuidado especial com as paletas de cores utilizadas. Uma breve discussão sobre esse assunto está apresentada no Apêndice 10.
+    </p>
+    <p>
+     Analogamente aos
+     <i>
+      espectrogramas
+     </i>
+     da Transformada Janelada de Fourier, que são representações das variações das amplitudes ou das energias dos coeficientes de Fourier em bandas de frequências fixas no tempo, os escalogramas em
+     <i>
+      wavelet
+     </i>
+     são a representação das amplitudes ou das energias associadas aos coeficientes
+     <i>
+      wavelet
+     </i>
+     simultaneamente em escalas e no tempo.
+    </p>
+    <p>
+     Em muitos trabalhos não está explícito como está sendo representado exatamente os valores dos coeficientes
+     <i>
+      wavelet
+     </i>
+     nos escalogramas. A desatenção a uma descrição mais completa, costuma suscitar, por exemplo, as perguntas seguintes.
+     <i>
+      Qual foi a normalização utilizada no cálculo dos coeficientes wavelets? Qual formulação da wavelet analisadora foi empregada? Como se visualiza e se interpreta realmente o gráfico apresentado?
+     </i>
+     Essas dúvidas dificultam em muito a análise dos resultados por terceiros e sua reprodutibilidade. A seguir são apresentados alguns exemplos de como apresentar os coeficientes
+     <i>
+      wavelets
+     </i>
+     e algumas formas de visualizar as estruturas presentes nos escalogramas.
+    </p>
+    <p>
+     Neste trabalho, todos os escalogramas consideram
+     <i>
+      log
+     </i>
+     <sub>
+      2
+     </sub>
+     (
+     <i>
+      a
+     </i>
+     ). Nesta área, é possível também um representação dos coeficientes
+     <i>
+      wavelets
+     </i>
+     em
+     <sub>
+      log10
+     </sub>
+     . Outros artifícios, desde que sejam bem informados, costumam ser usados também para dar destaque às características específicas de sinais analisados.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/5762ae6474af166316b32b8ffb77f35074a15863.jpg" style="max-width:100%"/>
+     e a escala a pode ter representação linear ou por um
+    </p>
+    <p>
+     Em geral, ou as amplitudes quadráticas dos módulo dos coeficientes
+     <i>
+      wavelets
+     </i>
+     originários de uma transformada com normalização no
+     <i>
+      wavelets
+     </i>
+     originários de uma transformada com normalização no
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/cb53d6e5e350708e057ba2a2e99e190ee175f30c.jpg" style="max-width:100%"/>
+     é utilizada.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/336277a95cc8881cca8f0883078d8c252fcf8b8a.jpg" style="max-width:100%"/>
+     são utilizadas; ou o módulo das amplitudes dos coeficientes
+    </p>
+    <p>
+     As amplitudes quadráticas dos módulo dos coeficientes
+     <i>
+      wavelets
+     </i>
+     podem ser interpretadas como a distribuição da energia do sinal no tempo por sua escala; enquanto o módulo das amplitudes dos coeficientes
+     <i>
+      wavelets
+     </i>
+     , como a variabilidade da amplitude no tempo por sua respectiva escala. Para permitir um entendimento básico, o termo
+     <i>
+      energia
+     </i>
+     é usado, neste contexto, como uma analogia a
+     <i>
+      energia cinética
+     </i>
+     usual da física, sem a constante
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/2474b3072493d6841313606712d571a179c10cb7.jpg" style="max-width:100%"/>
+     .
+    </p>
+    <p>
+     O programa YAWTb
+     <span class="ref footnote">
+      <sup class="xref">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         5
+        </strong>
+        YAWTb: Yet another wavelet toolbox, endereço eletrônico:
+        <a href="http://sites.uclouvain.be/ispgroup/yawtb/" target="_blank">
+         http://sites.uclouvain.be/ispgroup/yawtb/
+        </a>
+       </span>
+      </span>
+     </span>
+     pode ser utilizado para o cálculo dessa transformada com várias funções wavelets analisadoras, sendo um dos poucos programas abertos que também dispõe de transformadas multidimensionais.
+    </p>
+    <h2>
+     6.1. Extração de cristas
+    </h2>
+    <p>
+     A CWT de um sinal real utilizando uma
+     <i>
+      wavelet
+     </i>
+     analítica tem a propriedade de que a derivada em um ponto da crista é zero. Assim, calcula-se:
+    </p>
+    <div class="row formula" id="ee51">
+     <a name="e51">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/23b92243cbeee48745cf280152dec8eaaf713bd9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa condição é suficiente para localizar a crista de energia no escalograma. Por outro lado, pode ser caro computacionalmente calcular isso. Dessa forma, existem alguns algoritmos que facilitam esse trabalho, como o proposto em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [30] M. Liebling, T.-F. Bernhard, A.H. Bachmann, L. Froehly, T. Lasser and M. Unser, in: Proceedings in Biomedicine IX (San Jose, California, 2005), p. 397-402.
+       </span>
+      </span>
+     </span>
+     ]. Para exemplo, a
+     <i>
+      wavelet
+     </i>
+     de Morlet, descrita na Seção 4., é um exemplo de uma função
+     <i>
+      wavelet
+     </i>
+     analítica. No pacote
+     <i>
+      wavelab
+     </i>
+     há algoritmos para extração das cristas e, também, do esqueleto do escalograma. Maiores detalhes estão discutidos no livro de S. Mallat [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] S. Mallat, A Wavelet Tour of Signal Processing (Academic Press, San Diego, 1999), 2nd ed.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     6.2. Fase
+    </h2>
+    <p>
+     Quando a função
+     <i>
+      wavelet
+     </i>
+     é complexa, é possível com base nos coeficientes
+     <i>
+      wavelet
+     </i>
+     <i>
+      θ
+     </i>
+     (
+     <i>
+      a
+     </i>
+     ,
+     <i>
+      τ
+     </i>
+     ) além do módulo, utilizando as partes real e imaginária desses coeficientes. A fase contém informações importantes do comportamento do sinal analisado.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/871f5a0a28a2a5fc52c23c8cd8466d5a854caa96.jpg" style="max-width:100%"/>
+     definir a fase
+    </p>
+    <p>
+     Usualmente, os valores de fase podem ser representados graficamente ou como uma imagem, em uma visualização similar a do escalograma, ou como um campo vetorial. Vale a pena ressaltar que apenas os valores de fase em que os módulos sejam significativos devem ser analisados.
+    </p>
+    <p>
+     Em geral, essa fase é analisada no intervalo [0,2
+     <i>
+      π
+     </i>
+     ). Para dar completeza ao assunto, o Apêndice 10. descreve quais cuidados devem ser tomados, computacionalmente, para se obter o valor correto da fase. Exemplos de diferentes formas de visualização dessa quantidade estão nas
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 7
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      11
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      12
+     </a>
+     .
+    </p>
+    <h2>
+     6.3. Uso de diferentes funções
+     <i>
+      wavelets
+     </i>
+    </h2>
+    <p>
+     Os resultados apresentados nos escalogramas dependem, também, da função
+     <i>
+      wavelet
+     </i>
+     escolhida. Caso se deseje estudar mudanças de amplitude, uma
+     <i>
+      wavelet
+     </i>
+     complexa pode ser a mais adequada, como a de Morlet. Isso ajuda a capturar o comportamento oscilatório dos dados. Outras vezes,
+     <i>
+      wavelets
+     </i>
+     reais, como a chapéu mexicano ou a Morlet (módulo e fase), são mais úteis quando o interesse está em estudar a localização de eventos no tempo.
+    </p>
+    <p>
+     Ilustrativamente, considera-se um sinal não estacionário descrito pela função:
+    </p>
+    <div class="row formula" id="ee18">
+     <a name="e18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/6fcd662657555f85389919d42a2d4b490283fdd8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    que está apresentado na
+    <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Figura 5
+    </a>
+    . Ele é utilizado para ilustrar as propriedades de localização temporal e frequencial das
+    <i>
+     wavelets
+    </i>
+    , bem como suas habilidades de detectar a regularidade local.
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Sinal não estacionário com descontinuidade em
+      <i>
+       t
+      </i>
+      = 1 e com descontinuidade na derivada em
+      <i>
+       t
+      </i>
+      = 3 e
+      <i>
+       t
+      </i>
+      = 4, valores constantes entre
+      <i>
+       t
+      </i>
+      ∈ [0, 1),
+      <i>
+       t
+      </i>
+      ∈ [1, 3) e
+      <i>
+       t
+      </i>
+      ∈ [4, 5) e valores com um decaimento linear entre
+      <i>
+       t
+      </i>
+      ∈ [3, 4).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como resultados, nas
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 6
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     , observa-se que somente a
+     <i>
+      wavelet
+     </i>
+     de Haar é capaz de identificar a parte linear do sinal e que todas as funções
+     <i>
+      wavelet
+     </i>
+     são capazes de detectar a descontinuidade na função. Em resumo, a transformada wavelet de um sinal polinomial de grau
+     <i>
+      M
+     </i>
+     é igual a zero quando a função
+     <i>
+      wavelet
+     </i>
+     analisadora possui momentos nulos até a ordem
+     <i>
+      n
+     </i>
+     ≤
+     <i>
+      M
+     </i>
+     . Desta forma, a transformada
+     <i>
+      wavelet
+     </i>
+     é eficiente em detectar distúrbios locais, não-estacionaridades, singularidades localizadas e transientes no sinal analisado. As fases dos coeficientes
+     <i>
+      wavelets
+     </i>
+     indicam as variações apresentadas no sinal apenas nas regiões de maior energia. Assim, a fase relativa à
+     <i>
+      wavelet
+     </i>
+     de Morlet, nesse caso, identifica melhor a região de descontinuidade do sinal.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Escalograma do sinal não estacionário descrito pela função 19 para as funções
+      <i>
+       wavelet
+      </i>
+      analisadoras de Haar, Marr, Shannon e Meyer.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Escalograma e função da Equação de fase do sinal não estacionário descrito pela função 19 para as
+      <i>
+       wavelets
+      </i>
+      de Morlet e Shannon complexa.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nota-se que diferentes energias do sinal podem ser observadas dependendo da função
+     <i>
+      wavelet
+     </i>
+     escolhida.
+    </p>
+    <h2>
+     6.4. Significância dos resultados
+    </h2>
+    <p>
+     Para a determinação de quais amplitudes dos coeficientes
+     <i>
+      wavelets
+     </i>
+     , apresentados nos espectros
+     <i>
+      wavelets
+     </i>
+     , são realmente significativas alguns cuidados e testes são aplicados. Exemplos utilizando o cone de influência e os testes puntuais e de área apresentados a seguir estão nas
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 9
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig 10
+     </a>
+     .
+    </p>
+    <h2>
+     Cone de influência
+    </h2>
+    <p>
+     O cone de influência de um espectro wavelet é a região afetada pela fronteira desse espectro em que os valores dos coeficientes
+     <i>
+      wavelet
+     </i>
+     podem estar afetados. Esse cone é definido pelo decaimento (
+     <i>
+      e-folding time
+     </i>
+     ) do espectro
+     <i>
+      wavelet
+     </i>
+     em cada escala [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       32
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [32] C. Torrence and G.P. Compo, Bull. Amer. Meteor. Soc. 79, 61 (1998).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     Testes puntuais
+    </h2>
+    <p>
+     Os testes puntuais são estabelecidos a partir do trabalho de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       32
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [32] C. Torrence and G.P. Compo, Bull. Amer. Meteor. Soc. 79, 61 (1998).
+       </span>
+      </span>
+     </span>
+     ] assumindo um ruído vermelho de fundo no espectro para uma hipótese nula e testando cada ponto no plano tempo-escala separadamente, aceitando-se os casos em que a potência local do espectro assumisse um valor maior que um nível de significância escolhido. Essa técnica tem alguns desafios ligados a escolha do nível de significância e a escolha do ruído de fundo em se tratando da escala, conforme descrito em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       33
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [33] D. Maraun, J. Kurths and M. Holschneider, Phys. Rev. E 75, 016707 (2007).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     Testes de área
+    </h2>
+    <p>
+     A ideia básica do teste de significância de área é dar pesos diferenciados dependendo das escalas, ou seja, as áreas são calculadas como,
+    </p>
+    <div class="row formula" id="ee52">
+     <a name="e52">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/9fbccadffd3a443a3abfbfb9f859ad046115b99b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A medida refere-se ao fator
+     <i>
+      a
+     </i>
+     <sup>
+      2
+     </sup>
+     , considerando-se o
+     <i>
+      a
+     </i>
+     . O valor um menos a razão entre essas áreas é o nível de significância. É possivel também estabelecer algoritmos para avaliar os valores críticos para essas áreas. Mais detalhes podem ser obtidos em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] D. Maraun, What Can We Learn from Climate Data? Methods for Fluctuation, Time/Scale and Phase Analysis. PhD Thesis, University of Potsdam, 2006.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       33
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [33] D. Maraun, J. Kurths and M. Holschneider, Phys. Rev. E 75, 016707 (2007).
+       </span>
+      </span>
+     </span>
+     ].
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/09805e533e8b31c54f68237a8dbf2478d7274343.jpg" style="max-width:100%"/>
+     . Neste caso, calcula-se uma área crítica, i.e., de importância para a análise, e uma área compreendida pela região definida no teste puntual, para cada escala
+    </p>
+    <h2>
+     6.5. Sinais não periódicos
+    </h2>
+    <p>
+     A maioria dos algoritmos utilizados para calcular a transformada
+     <i>
+      wavelet
+     </i>
+     contínua necessita que se utilize dados periódicos para seu uso. No caso de dados não periódicos é necessária, em geral, uma periodização suave dos dados nas fronteira. Essa periodização pode ser realizada por filtros como a função de Hanning
+    </p>
+    <div class="row formula" id="ee53">
+     <a name="e53">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/84d34b0fdc963b4f939956fd15ccec4539466ad8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Esse filtro quando aplicado em cada uma das fronteiras reduz suavemente seus valores sem acrescentar artefatos computacionais aos coeficientes fora de sua regiões de influência nas decomposições multiescalas. Outras soluções podem ser praticadas, como por exemplo, introduzir um delta de Dirac nas fronteiras para ver a região de influência das diversas escalas dessa estrutura. Além dessas formas, pode-se também ajustar a função
+    <i>
+     wavelet
+    </i>
+    para que ela se adapte as fronteiras mantendo suas características.
+    <h1 class="articleSectionTitle">
+     7. Escalograma global
+    </h1>
+    <p>
+     Analogamente ao espectro de potência da transformada de Fourier, é possível fazer a integração do parâmetro
+     <i>
+      τ
+     </i>
+     dos escalogramas
+     <i>
+      wavelet
+     </i>
+     dados na Equação 3. Este resultado é conhecido como escalograma global, que representa as amplitudes quadráticas do módulo dos coeficientes
+     <i>
+      wavelet
+     </i>
+     , em que:
+    </p>
+    <div class="row formula" id="ee19">
+     <a name="e19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/954522b069d30bef5244cafe9fdcb8f8ac635b6e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    Os resultados do escalograma global podem ser interpretados como a distribuição da energia do sinal por sua escala
+    <i>
+     a
+    </i>
+    . Em geral, esses resultados, em especial em altas frequências, são mais suaves e possuem menor amplitude do que o espectro de potência calculado com Fourier. Assim, se o espectro de potência tiver picos estreitos, é melhor usá-lo para determinar a magnitude dos picos. O escalograma global tem contribuído no estudo de sinais turbulentos, quando, por exemplo, deseja-se avaliar o decaimento dos coeficientes e essa suavização facilita esta tarefa [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      6
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [6] M. Farge, Annual Review of Fluid Mechanics 24, 395 (1992).
+      </span>
+     </span>
+    </span>
+    ].
+    <h1 class="articleSectionTitle">
+     8. Entropia
+     <i>
+      wavelet
+     </i>
+    </h1>
+    <p>
+     Em analogia à definição de entropia colocada pelo matemático e engenheiro eletrônico Shannon, pesquisador destacado da
+     <i>
+      Teoria da informação
+     </i>
+     , a entropia
+     <i>
+      wavelet
+     </i>
+     contínua é definida por [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [31] S. Sello, New Astronomy 8, 105 (2003).
+       </span>
+      </span>
+     </span>
+     ] como:
+    </p>
+    <div class="row formula" id="ee54">
+     <a name="e54">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/be36d4a42648a4a3d14e8cbed009284b41f39923.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <div class="row formula" id="ee55">
+     <a name="e55">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/0276e55a2b3c026e91316dc26908559ac03361c5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    corresponde a distribuição da energia de probabilidade para cada escala
+    <i>
+     a
+    </i>
+    em um certo tempo
+    <i>
+     τ
+    </i>
+    .
+    <p>
+     Essa entropia
+     <i>
+      wavelet
+     </i>
+     é minima quando o sinal é caracterizado por uma atividade organizada e é máxima quando o sinal é constituído de superposições de um grande número de processos. Por exemplo, ao se considerar um sinal ordenado monofrequencial, a sua representação multinível é identificada em uma única escala (ou nível), que por sua vez concentra 100
+     <i>
+      %
+     </i>
+     da energia total do sinal e, consequentemente, a entropia wavelet contínua é próxima a zero. Por outro lado, se o sinal for constituído de um ruído branco, todas as escalas devem contribuir no total de energia e, assim, a entropia
+     <i>
+      wavelet
+     </i>
+     é máxima.
+    </p>
+    <p>
+     Por meio dessa abordagem multiescala, as escalas mais relevantes do sinal, ou seja, aquelas que contém os processos mais complexos, podem ser automaticamente detectadas.
+    </p>
+    <h1 class="articleSectionTitle">
+     9. Relações tempo-escala para dois sinais
+    </h1>
+    <p>
+     A transformada
+     <i>
+      wavelet
+     </i>
+     contínua é uma ferramenta adequada para se analisar oscilações localizadas e intermitentes usualmente em uma série temporal. Contudo, é muito comum a necessidade de examinar e caracterizar a interação de duas séries temporais. Dessa forma, alguns recursos muito procurados de análises, e que aqui estão fundamentados nas transformadas wavelets, são descritos a seguir. Inicialmente, consideram-se a transformada cruzada, os escalogramas e fases cruzadas, e os espectros cruzados wavelet. Para superar alguns desafios advindos do espectro cruzado, exploram-se ainda a coerência wavelet, a correlação cruzada wavelet e a correlação por escala.
+    </p>
+    <h2>
+     9.1. Transformada cruzada
+    </h2>
+    <p>
+     A transformada
+     <i>
+      wavelet
+     </i>
+     cruzada (XWT), denotada por
+     <span class="ref">
+      <sup class="xref xrefblue">
+       38
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [38] L. Hudgins, C. Friebe and M. Mayer, Physical Review Letters 71, 3279 (1993).
+       </span>
+      </span>
+     </span>
+     ], para dois sinais
+     <i>
+      f
+     </i>
+     e
+     <i>
+      g
+     </i>
+     ,é definida como sendo o produto das transformadas wavelet de
+     <i>
+      f
+     </i>
+     ,
+     <i>
+      g
+     </i>
+     ,
+    </p>
+    <div class="row formula" id="ee56">
+     <a name="e56">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/1f12a84d396194cd64525e275782122499b48598.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/642b045292d0dfa821f803bb77d8eeacb00c4214.jpg" style="max-width:100%"/>
+    , a partir de Hudgins et al. em [
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/60329c8349822c753aa7e3e42896f00aca423419.jpg" style="max-width:100%"/>
+    , com a complexa conjugada da transformada wavelet de
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8f0b0b5f7f73b932cecd88228b9df60e238c9995.jpg" style="max-width:100%"/>
+    , ou seja:
+    <h3>
+     9.1.1. Escalograma e fase cruzados
+    </h3>
+    <p>
+     Como a XWT pode ser complexa, segue que ela pode ser decomposta em termos da amplitude
+     <i>
+      Φ
+      <sub>
+       f,g
+      </sub>
+     </i>
+     , analogamente à CWT . A magnitude de XWT enfatiza o tempo e a escala em que as duas séries temporais interagem. Desta forma, os coeficientes em módulo da XWT são a decomposição em tempo-escala do espectro cruzado
+     <i>
+      wavelet
+     </i>
+     , e seu respectivo gráfico de densidade no plano
+     <i>
+      a
+     </i>
+     ×
+     <i>
+      τ
+     </i>
+     é o escalograma cruzado.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/bb7de2f816eb3f406a77c6dd59b8adb8ec256cca.jpg" style="max-width:100%"/>
+     e da fase
+    </p>
+    <p>
+     Neste caso, intepreta-se a fase como medida da diferença (ou da ordem de interação) entre os dois sinais
+     <i>
+      f
+     </i>
+     e
+     <i>
+      g
+     </i>
+     no tempo
+     <i>
+      τ
+     </i>
+     e na escala
+     <i>
+      a
+     </i>
+     . A fase captura a coordenação entre as componentes.
+    </p>
+    <h3>
+     9.1.2. Espectro cruzado
+     <i>
+      wavelet
+     </i>
+    </h3>
+    <p>
+     Em analogia com o espectro de potência
+     <i>
+      wavelet
+     </i>
+     , o espectro cruzado
+     <i>
+      wavelet
+     </i>
+     de dois sinais
+     <i>
+      f
+     </i>
+     e
+     <i>
+      g
+     </i>
+     é definido por:
+    </p>
+    <div class="row formula" id="ee57">
+     <a name="e57">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/19882bdfac7f62f68b241c93ca40a6efbfa9d7a2.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <h3>
+     9.1.3. Desafios da análise dos resultados
+    </h3>
+    <p>
+     Os resultados do espectro cruzado
+     <i>
+      wavelet
+     </i>
+     podem indicar resultados que não são verificados como verdadeiros nos testes de significância de interrelação entre duas séries temporais, o que dificulta a análise dos resultados. Uma alternativa, e também ferramenta auxiliar, é a aplicação da coerência wavelet [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       39
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [39] D. Maraun and J. Kurths, Nonlinear Processes in Geophysics 11, 505 (2004).
+       </span>
+      </span>
+     </span>
+     ]
+     <span class="ref footnote">
+      <sup class="xref">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         6
+        </strong>
+        Esses autores disponibilizam um programa gratuito chamado SOWAS para GNU/Octave e R que pode ser usado para o cálculo da XWT. Endereço eletrônico:
+        <a href="http://tocsy.pik-potsdam.de/wavelets.php" target="_blank">
+         http://tocsy.pik-potsdam.de/wavelets.php
+        </a>
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <h2>
+     9.2. Coerência
+     <i>
+      wavelet
+     </i>
+    </h2>
+    <p>
+     Há várias definições possíveis para coerência
+     <i>
+      wavelet
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       40
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [40] D. Labat, Journal of Hydrology 314, 275 (2005).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       41
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [41] J.P. Lachaux, A. Lutz, D. Rudrauf, D. Cosmelli, M. Le Van Quyen, J. Martinerie and F. Varela, Clinical Neurophysiology 32, 157 (2002).
+       </span>
+      </span>
+     </span>
+     ]. Segundo definido por Torrence e Webster em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       42
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [42] C. Torrence and P. Webster, Quart. J. Roy. Soc. 124, 1985 (1998).
+       </span>
+      </span>
+     </span>
+     ], a coerência pode ser expressa como:
+    </p>
+    <div class="row formula" id="ee20">
+     <a name="e20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/8b1387b2a54cca74004f9a0c31b442f216ad6465.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     S
+    </i>
+    =
+    <i>
+     S
+    </i>
+    (
+    <i>
+     a
+    </i>
+    ,
+    <i>
+     τ
+    </i>
+    ) é um operador de suavização na escala e no tempo. A média em escala é realizada com uma janela de tamanho fixo para cada escala, em que as escalas são usualmente representadas em logaritmos. Ou seja, considerando o cálculo dos coeficientes
+    <i>
+     wavelets
+    </i>
+    na posição
+    <div class="row formula" id="ee58">
+     <a name="e58">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/4777bc6fc682a1be319c964af868b6568fd3d2a8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     k
+    </i>
+    = 1, …,
+    <i>
+     N
+     <sub>
+      vozes
+     </sub>
+     N
+     <sub>
+      oitavas
+     </sub>
+    </i>
+    + 1,
+    <i>
+     a
+     <sub>
+      min
+     </sub>
+    </i>
+    =
+    <i>
+     a
+    </i>
+    <sub>
+     0
+    </sub>
+    e
+    <i>
+     a
+    </i>
+    <sub>
+     max
+    </sub>
+    =
+    <i>
+     a
+    </i>
+    <sub>
+     0
+    </sub>
+    2
+    <sup>
+     <i>
+      N
+     </i>
+     <sub>
+      <i>
+       oitavas
+      </i>
+     </sub>
+    </sup>
+    . Sendo que o valor
+    <i>
+     a
+    </i>
+    <sub>
+     0
+    </sub>
+    corresponde a frequência de Nyquist,
+    <i>
+     N
+     <sub>
+      oitavas
+     </sub>
+    </i>
+    é o número de oitavas e
+    <i>
+     N
+     <sub>
+      vozes
+     </sub>
+    </i>
+    é o número de vozes por escala. Enquanto, a média em tempo é feita com uma janela de tamanho proporcional a escala. Mais detalhes podem ser encontrados em [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      24
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [24] D. Maraun, What Can We Learn from Climate Data? Methods for Fluctuation, Time/Scale and Phase Analysis. PhD Thesis, University of Potsdam, 2006.
+      </span>
+     </span>
+    </span>
+    ,
+    <span class="ref">
+     <sup class="xref xrefblue">
+      33
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [33] D. Maraun, J. Kurths and M. Holschneider, Phys. Rev. E 75, 016707 (2007).
+      </span>
+     </span>
+    </span>
+    ].
+    <p>
+     A coerência wavelet fornece um estimador qualitativo da evolução temporal do grau de linearidade da interação entre duas séries temporais numa dada escala. O valor um significa uma relação linear entre as funções
+     <i>
+      f
+     </i>
+     e
+     <i>
+      g
+     </i>
+     em torno do tempo
+     <i>
+      τ
+     </i>
+     e da escala
+     <i>
+      a
+     </i>
+     ; enquanto o valor zero significa que a interação está desaparecendo.
+    </p>
+    <p>
+     Na expressão, o fator
+     <i>
+      a
+     </i>
+     <sup>
+      -1
+     </sup>
+     tem a função de normalizar a densidade de energia e a suavização
+     <i>
+      S
+     </i>
+     é feita usando uma convolução na direção do tempo e da escala para a
+     <i>
+      wavelet
+     </i>
+     em uso. Analogamente á CWT e na XWT, quando a função
+     <i>
+      wavelet
+     </i>
+     é complexa, pode-se também calcular a fase associada a coerência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       39
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [39] D. Maraun and J. Kurths, Nonlinear Processes in Geophysics 11, 505 (2004).
+       </span>
+      </span>
+     </span>
+     ]
+     <span class="ref footnote">
+      <sup class="xref">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         7
+        </strong>
+        O programa gratuito SOWAS pode ser usado para o cálculo da coerência.
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <h2>
+     9.3. Correlação cruzada
+     <i>
+      wavelet
+     </i>
+    </h2>
+    <p>
+     Os métodos clássicos de correlação cruzada são utilizados para determinar as estruturas coerentes de dois sinais apenas em relação a sua defasagem temporal e, desalentadoramente, falham quando existem múltiplos períodos. Devido a suas propriedades, a função de correlação wavelet cruzada,
+     <i>
+      f
+     </i>
+     e
+     <i>
+      g
+     </i>
+     sejam adequadamente analisados. Por definição,
+    </p>
+    <div class="row formula" id="ee21">
+     <a name="e21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/3611d56d195bca6d8cbb4caff127788b58eae832.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     τ
+    </i>
+    é a defasagem dos coeficientes
+    <i>
+     wavelets
+    </i>
+    no espaço de
+    <i>
+     wavelets
+    </i>
+    ou a defasagem dos dois sinais. A partir dos coeficientes
+    <i>
+     wavelets
+    </i>
+    de correlação cruzada
+    <div class="row formula" id="ee22">
+     <a name="e22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/ca15686b6f7611e9290ae925646208766f2a67d8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que
+    <div class="row formula" id="ee59">
+     <a name="e59">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/3996e190400f0261403f6bac1994fc968de6571f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/c95d48d0d317beeb72e743f8eba600fb692b7ec7.jpg" style="max-width:100%"/>
+    , auxilia em tais casos, propiciando que os sinais
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/034c00f2fc2dcddb523776bb5fef062c56106895.jpg" style="max-width:100%"/>
+    , obtêm-se coeficientes
+    <p>
+     Como duas propriedades importantes, têm-se que
+     <i>
+      τ
+     </i>
+     e os coeficientes
+     <span class="ref">
+      <sup class="xref xrefblue">
+       40
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [40] D. Labat, Journal of Hydrology 314, 275 (2005).
+       </span>
+      </span>
+     </span>
+     ] e referências citadas.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/1f23939918e20eb76217b0e8c6bd488ca9a7725f.jpg" style="max-width:100%"/>
+     são simétricas em relação a
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/cc1b7312ed1272d1d7e1b341b2e65f2b943c6851.jpg" style="max-width:100%"/>
+     e
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/71407bde76850e47d3190d3e415bc5e69b23a360.jpg" style="max-width:100%"/>
+     pertencem ao intervalo [-1,1]. Mais detalhes podem ser encontrados em [
+    </p>
+    <h2>
+     9.4. Correlação por escala
+    </h2>
+    <p>
+     A correlação por escala
+     <i>
+      f
+     </i>
+     e
+     <i>
+      g
+     </i>
+     analisados no domínio de
+     <i>
+      wavelets
+     </i>
+     . Essa correlação é calculada pela seguinte expressão:
+    </p>
+    <div class="row formula" id="ee23">
+     <a name="e23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/029101f2d027d3a55ec9ac61373bc06b7557a2e3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    em que o termo
+    <div class="row formula" id="ee24">
+     <a name="e24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/ce86f84b7ac3dc458195dc2a4578209119764161.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    sendo que
+    <i>
+     τ
+    </i>
+    de
+    <i>
+     f
+    </i>
+    . Se
+    <i>
+     f
+    </i>
+    =
+    <i>
+     g
+    </i>
+    , tem-se a autocorrelação por escala. Maiores detalhes desses procedimentos podem ser vistos em [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      28
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [28] P. Frick, A. Grossmann and P. Tchamitchian, Journal of Mathematical Physics 39, 4091 (1998).
+      </span>
+     </span>
+    </span>
+    ,
+    <span class="ref">
+     <sup class="xref xrefblue">
+      43
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [43] C. Meneveau, Journal of Fluid Mechanics 232, 469 (1991).
+      </span>
+     </span>
+    </span>
+    ] e nas referências citadas.
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/2d5be3727e33fa988222116ecec87dfcb2051c85.jpg" style="max-width:100%"/>
+    é utilizada no estudo das relações entre diferentes escalas de dois sinais
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/624287ec517a17db4ccf5ced8a1ba5645e54a84b.jpg" style="max-width:100%"/>
+    expressa:
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/e78af15d275890c118c11c8ee2a389cfa4f33fee.jpg" style="max-width:100%"/>
+    denota a média aritmética no tempo, denotado pela variável
+    <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/c594753b79524cbf51909adc6d500e8cddbef91f.jpg" style="max-width:100%"/>
+    para uma certa função
+    <h2>
+     9.5. Exemplos
+    </h2>
+    <p>
+     Para possibilitar uma apreciação prática de aplicações, consideram-se aqui dois exemplos. O primeiro envolve dois sinais não estacionários utilizados em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       40
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [40] D. Labat, Journal of Hydrology 314, 275 (2005).
+       </span>
+      </span>
+     </span>
+     ] para ilustrar a correlação
+     <i>
+      wavelet
+     </i>
+     e aqui estão sendo utilizados para o cálculo da wavelet cruzada e da coerência
+     <i>
+      wavelet
+     </i>
+     . O segundo exemplo usa a coerência
+     <i>
+      wavelet
+     </i>
+     para identificar defasagens entre sinais com o mesmo ruído aditivo.
+    </p>
+    <p>
+     <b>
+      Exemplo 1
+     </b>
+     Dois sinais não estacionários são utilizados para ilustrar o espectro cruzado e a corência
+     <i>
+      wavelet
+     </i>
+     . A
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8(a)
+     </a>
+     diz respeito às funcões distintas que possuem contribuições em simultaneidade no tempo. Já a
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8(b)
+     </a>
+     representa as suas diversas contribuições com defasagens temporais.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Funções distintas, (a) com contribuições em simultaneidade, e (b) com contribuições em defasagem.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     são apresentados os escalogramas e as diversas contribuições desses sinais nas escalas e localmente no tempo em que ocorreram, em que os valores estão expressos pelos coeficientes
+     <i>
+      wavelet
+     </i>
+     de maior amplitude.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Escalograma usando a
+      <i>
+       wavelet
+      </i>
+      de Morlet, incluindo o cone de influência (linha em vermelho), teste puntual(linha magenta) e área de significância (linha em verde), considerando os sinais apresentados na
+      <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig 8
+      </a>
+      (a, b) respectivament.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     estão plotados o módulo e fase da XWT. Os maiores valores indicam em que tempos e escalas os sinais estão simultaneamente relacionados, pois ambos possuem energia nessa região. Dando sequência a análise, na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 11
+     </a>
+     , o módulo e a fase da coerência wavelet estão apresentados confirmando os resultados do XWT. Para essas análises utilizou-se a
+     <i>
+      wavelet
+     </i>
+     de Morlet e incluiu-se o cone de influência, e testes puntuais e de área de significância nos escalogramas apresentados da CWT e da XWT.
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Módulo e fase da XWT usando a
+      <i>
+       wavelet
+      </i>
+      de Morlet, incluindo o cone de influência (linha vermelha), teste puntual (linha magenta) e de área de significância (linha verde), considerando os escalogramas apresentados na
+      <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig 9
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Módulo e fase da coerência wavelet calculada com a função
+      <i>
+       wavelet
+      </i>
+      de Morlet, incluindo o cone de influência e área de significância considerando os escalogramas apresentados na
+      <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig 10
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     <b>
+      Exemplo 2
+     </b>
+     Para a aplicação de coerência
+     <i>
+      wavelet
+     </i>
+     , sinais defasados com um mesmo nível de ruído, apresentados na parte superior da
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     , são considerados. Observa-se que a defasagem é identificada e que os ângulos de fase, representado pelas setas, indicam o atraso de um sinal com respeito ao outro sinal no escalograma, como apresentado na parte inferior da
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Sinais sintéticos (painel superior), coerência
+      <i>
+       wavelet
+      </i>
+      módulo e fase (painel inferior) calculada a partir da função
+      <i>
+       wavelet
+      </i>
+      de Morlet.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     10. Considerações finais
+    </h1>
+    <p>
+     O esforço deste texto foi permitir uma visão abrangente, contando com uma apresentação didaticamente mais compactada, sobre essas valiosas ferramentas, as wavelets.
+    </p>
+    <p>
+     A versão do texto aqui apresentada é uma complementação e uma significativa extensão do material apresentado em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [20] J.E. Castilho, M.O. Domingues, O. Mendes e A. Pagamisse, Introdução ao Mundo das Wavelets - Notas em Matemática Aplicada (SBMAC, São Carlos, 2012).
+       </span>
+      </span>
+     </span>
+     , Cap. 3], no tópico Transformada
+     <i>
+      wavelet
+     </i>
+     contínua
+     <span class="ref footnote">
+      <sup class="xref">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         8
+        </strong>
+        Esse material de 2012 está disponível gratuitamente no site da Sociedade Brasileira de Matemática Aplicada, na parte de publicações.
+       </span>
+      </span>
+     </span>
+     , do minicurso
+     <i>
+      Bem vindo ao mundo das wavelets
+     </i>
+     , na ELAC/INPE de 2010, e do artigo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] M.O. Domingues, O. Mendes and A. Mendes da Costa, Advances in Space Research 35, 831 (2005).
+       </span>
+      </span>
+     </span>
+     ]. Ao leitor interessado em uma imersão mais plena, aborda-se naquele material a evolução das ideias que motivaram a elaboração da transformada contínua e de uma série de outras ferramentas decorrentes dessas ideias, como também mencionam-se importantes bibliotecas públicas onde se podem obter implementações dessas ferramentas. Para um maior aprofundamento nessa transformada, as referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] J.-P. Antoine, R. Murenzi, P. Vandergheynst and S.T. Ali, Two-Dimensional Wavelets and Their Relatives (Cambridge University, Cambrige, 2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] S. Mallat, A Wavelet Tour of Signal Processing (Academic Press, San Diego, 1999), 2nd ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] M. Vetterli, J. Kovacevic and V.K. Goyal, Foundations of Signal Processing (Cambridge University Press, Cambridge 2014).
+       </span>
+      </span>
+     </span>
+     ] e [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] D. Maraun, What Can We Learn from Climate Data? Methods for Fluctuation, Time/Scale and Phase Analysis. PhD Thesis, University of Potsdam, 2006.
+       </span>
+      </span>
+     </span>
+     ] também são recomendadas.
+    </p>
+    <p>
+     Esclarece-se ainda que a transformada
+     <i>
+      wavelet
+     </i>
+     contínua apresenta uma série de ferramentas úteis e simples para serem utilizadas na análise de sinais não estacionários. Existem ainda inúmeras aplicações da transformada
+     <i>
+      wavelet
+     </i>
+     dentro da Física, como se mostra, em particular, nos exemplos apresentados em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.C. van den Berg, Wavelet in Physics (Cambridge University, Cambridge, 2004).
+       </span>
+      </span>
+     </span>
+     ] e nas referências citadas. Para caracterizar um exemplo prático de área de utilização, as Ciências Espaciais têm demandado metodologias ágeis de investigar processos eletrodinâmicos velados em um ambiente remoto e invisível de plasmas e, simultaneamente, possibilitar suas visualizações, ou formas de representação de processos, com localização espacial e temporal [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] O. Mendes, M.O. Domingues and A. Mendes da Costa, Advances in Space Research 35, 812 (2005).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] M.J.A. Bolzam, Brazilian Journal of Physics 35, 592 (2005).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Essas ferramentas contribuem, em especial na Física, para diversos estudos e são atualmente de fácil utilização, por consequência de ricas bibliotecas numéricas acessíveis (algumas foram descritas neste trabalho). Um dos propósitos principais deste esforço, no entanto, é fomentar uma adequada fundamentação nesta área de análise de dados e ajudar no enriquecimento de extração de informações e na correta interpretação de resultados. Assim, encorajamos os leitores interessados - sejam pesquisadores, professores, engenheiros ou estudantes - a explorarem as características e os potenciais dessas ferramentas na investigação de seus sinais.
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        <i>
+         Que savons-nous du temps?
+        </i>
+        :
+        <a href="http://www.youtube.com/watch?v=NDYIdBMLQR0" target="_blank">
+         https://www.youtube.com/watch?v=NDYIdBMLQR0
+        </a>
+        <i>
+         Le temps existe-il?
+        </i>
+        :
+        <a href="http://www.youtube.com/watch?v=4lf9xFKoT8Y" target="_blank">
+         https://www.youtube.com/watch?v=4lf9xFKoT8Y
+        </a>
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Em muitos trabalhos utiliza-se o termo
+        <i>
+         wavelet
+        </i>
+        -mãe também para essa função
+        <i>
+         wavelet ψ
+        </i>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        Endereço eletrônico:
+        <a href="http://www.scilab.org/" target="_blank">
+         http://www.scilab.org/
+        </a>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        4
+       </span>
+       <div>
+        Endereço eletrônico do pacote Wavelab da Universidade de Stanford:
+        <a href="http://statweb.stanford.edu/~wavelab/" target="_blank">
+         http://statweb.stanford.edu/~wavelab/
+        </a>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        5
+       </span>
+       <div>
+        YAWTb: Yet another wavelet toolbox, endereço eletrônico:
+        <a href="http://sites.uclouvain.be/ispgroup/yawtb/" target="_blank">
+         http://sites.uclouvain.be/ispgroup/yawtb/
+        </a>
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        6
+       </span>
+       <div>
+        Esses autores disponibilizam um programa gratuito chamado SOWAS para
+        <i>
+         GNU/Octave
+        </i>
+        e
+        <i>
+         R
+        </i>
+        que pode ser usado para o cálculo da XWT. Endereço eletrônico:
+        <a href="http://tocsy.pik-potsdam.de/wavelets.php" target="_blank">
+         http://tocsy.pik-potsdam.de/wavelets.php
+        </a>
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        7
+       </span>
+       <div>
+        O programa gratuito SOWAS pode ser usado para o cálculo da coerência.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        8
+       </span>
+       <div>
+        Esse material de 2012 está disponível gratuitamente no site da Sociedade Brasileira de Matemática Aplicada, na parte de publicações.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem aos Drs. L. Deane de Sá, M. Vianna, M. Farge, K. Schneider, P. Frick e G. Silva as discussões científicas que motivaram este trabalho; aos alunos dos curso CAP-384/INPE, CITE/INPE, DINCON, ELAC/INPE e aos revisores as sugestões e incentivos que melhoraram essa publicação. E. B. agradece ao PIBIC/INPE e V.M. agradece ao PCI/INPE-MCTI as bolsas. M.O.D. agradece a Ecole Centrale de Marseille-França, à CAPES (o apoio financeiro a eventos WWLET - Wavelet &amp; Aplicações). M.O.D. e O. M agradecem ao CNPq (proc. 306038/2015 – 3, 312246/2013 – 7) e à FAPESP (2015/25624 – 2) o auxílio dado às pesquisas, que motivaram os desenvolvimentos que serviram de base à realização deste material.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Apêndice">
+    <h1 class="articleSectionTitle">
+     Apêndice
+    </h1>
+    A. Cálculo da Fase
+    <p>
+     O argumento ou fase de um número complexo, que pode ser escrito na forma
+     <i>
+      z
+     </i>
+     =
+     <i>
+      x
+     </i>
+     +
+     <i>
+      ιy
+     </i>
+     , em que
+     <i>
+      I
+     </i>
+     <sup>
+      2
+     </sup>
+     = - 1 pode ser obtido por uma visão geométrica ou por uma visão algébrica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       44
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [44] M.R. Spiegel, S. Lipschutz, J.J. Schiller and D.S. Seymour, Schaum's Outline of Complex Variables (Schaum's Outline, New York, 2009).
+       </span>
+      </span>
+     </span>
+     ]. Geometricamente, da relação no plano complexo, ou diagrama de Argand,
+     <i>
+      arg
+     </i>
+     (
+     <i>
+      z
+     </i>
+     ) é o ângulo entre o eixo real e o vetor representando
+     <i>
+      z
+     </i>
+     , dado em radianos e positivo se medido no sentido anti-horário. Por outro lado, algebricamente, o argumento de
+     <i>
+      z
+     </i>
+     é a quantidade
+     <i>
+      θ
+     </i>
+     tal que
+     <i>
+      z
+     </i>
+     =
+     <i>
+      x
+     </i>
+     +
+     <i>
+      ιy
+     </i>
+     =
+     <i>
+      r
+     </i>
+     cos
+     <i>
+      ϕ
+     </i>
+     +
+     <i>
+      ιr
+     </i>
+     sin
+     <i>
+      θ
+     </i>
+     , em que a quantidade
+     <i>
+      r
+     </i>
+     é denominada módulo ou amplitude de
+     <i>
+      z
+     </i>
+     expressa por
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/6ee87185fc49c7d3312fa106853c9f6878ec15cc.jpg" style="max-width:100%"/>
+     .
+    </p>
+    <p>
+     Dada essa definição de argumento, qualquer número complexo não nulo pode ter vários valores possíveis. Por exemplo, considerando o ângulo geométrico, a rotação do círculo não muda os pontos, de tal forma que multiplicações inteiras dos ângulos pelo valor 2
+     <i>
+      π
+     </i>
+     radianos, ou seja, um ciclo completo de rotação, são os mesmos. O mesmo é válido no caso algébrico, considerando-se a periodicidade das funções seno e cosseno. Existem, então, muitas possibilidades para se expressar
+     <i>
+      θ
+     </i>
+     quando a origem é circundada múltiplas vezes. Quando se é necessário definir
+     <i>
+      θ
+     </i>
+     mais precisamente, utiliza-se por convenção o valor principal definido como o valor no intervalo [0,2
+     <i>
+      π
+     </i>
+     ) radianos (ou em alguns casos (-
+     <i>
+      π
+     </i>
+     ,
+     <i>
+      π
+     </i>
+     ]) e denotado usualmente por
+     <i>
+      Arg
+     </i>
+     (
+     <i>
+      z
+     </i>
+     ), em que:
+     <i>
+      arg
+     </i>
+     (
+     <i>
+      z
+     </i>
+     ) = {
+     <i>
+      Arg
+     </i>
+     (
+     <i>
+      z
+     </i>
+     ) + 2
+     <i>
+      πn
+     </i>
+     ,
+     <i>
+      n
+     </i>
+     ∈
+     <i>
+      ℤ
+     </i>
+     }.
+    </p>
+    <p>
+     O valor de
+     <i>
+      A
+     </i>
+     (
+     <i>
+      z
+     </i>
+     ) é normalmente disponível em bibliotecas das linguagens computacionais usando a função
+     <i>
+      atan2
+     </i>
+     , ou alguma variante desta, que normalmente calcula essa função no intervalo (-
+     <i>
+      π
+     </i>
+     ,
+     <i>
+      π
+     </i>
+     ]. Muitos textos associam esse valor ao arco-tangente (y/x), em que
+     <i>
+      y
+     </i>
+     ∕
+     <i>
+      x
+     </i>
+     é a inclinação. O arco-tangente converte esse valor para o ângulo; entretanto isso só é correto quando
+     <i>
+      x
+     </i>
+     &gt; 0, tal que o ângulo esteja entre
+     <i>
+      Arg ℂ
+     </i>
+     - {0}→ (-
+     <i>
+      π
+     </i>
+     ,
+     <i>
+      π
+     </i>
+     ],
+     <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/6952b9396796d78afcf2923e33d3cd1836275aa8.jpg" style="max-width:100%"/>
+     . Portanto, deve-se considerar os demais quadrantes. Assim, considera-se para
+    </p>
+    <div class="row formula" id="ee60">
+     <a name="e60">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/QG7xfTNbbWCbPkG3n9d6KRL/fc703d3e3511d8671e3cec234cc4b0d0af87ca76.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Para a aplicação no intervalo [0,2
+     <i>
+      π
+     </i>
+     ), soma-se o valor 2
+     <i>
+      π
+     </i>
+     ao Arg(z) quando seu valor é negativo.
+    </p>
+    <p>
+     Para sistemas que implementam o
+     <i>
+      signed zero
+     </i>
+     (como,
+     <i>
+      IEEE floating point
+     </i>
+     ), ao se considerar
+     <i>
+      x
+     </i>
+     &lt; 0, a função
+     <i>
+      atan2
+     </i>
+     (-0,
+     <i>
+      x
+     </i>
+     ) retorna o valor -
+     <i>
+      π
+     </i>
+     e
+     <i>
+      atan2
+     </i>
+     (+0,
+     <i>
+      x
+     </i>
+     ) retorna -
+     <i>
+      π
+     </i>
+     .
+    </p>
+    B. Paletas de cores
+    <p>
+     Ao se considerar gráficos, há diversas formas de se evidenciar as representações dos coeficientes
+     <i>
+      wavelets
+     </i>
+     . Por exemplo, pode-se utilizar diferentes paletas de cores para destacar os padrões locais nos escalogramas e diagramas de fase. Isto é, essas paletas são responsáveis por dar destaque ou não a certas características das visualizações, dado o seu efeito na própria percepção humana [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       45
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [45] M. Farge, L'Aéronautique et l'Astronautique 24, 1 (1990).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       47
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [47] C. Kelleher and T. Wagener, Environmental Modelling &amp; Software 26, 822 (2011).
+       </span>
+      </span>
+     </span>
+     ]. Algumas paletas podem ser apresentadas em uma distribuição linear e outras em logaritmo, essa última é a que mais se assemelha a percepção humana, ou, ainda, facilitar a identificação de certas bandas de cores para pessoas com síndromes de deficiência de percepção de cores, como discutido em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       48
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [48] M. Geissbuehler and T. Lasser, Optics Express 21, 9862 (2013).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Apesar desses recursos de alteração de paletas de cores serem disponíveis na maioria dos programas de visualizações atuais, muitos escalogramas apresentados em artigos científicos ainda não utilizam o potencial dessa ferramenta, o que muitas vezes limita ou dificulta a análise dos resultados. Um exemplo de um mesmo escalograma utilizando a
+     <i>
+      wavelet
+     </i>
+     de Haar com diferentes paletas de cores, visando distintas percepções, é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     . Nela utilizam-se as paletas de cores vermelha (hot) e sua versão modificada (hot modificada), a jet, a azul baseada na versão modificada da vermelha para facilitar a visualização de deficientes visuais e a Morgens-temning recomendada para certas deficiências visuais.
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Escalograma do sinal não estacionário descrito na Equação 19 utilizando a
+      <i>
+       wavelet
+      </i>
+      analisadora de Haar.
+      <br/>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        J.C. van den Berg,
+        <i>
+         Wavelet in Physics
+        </i>
+        (Cambridge University, Cambridge, 2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        E. Foufoula-Georgiou and P. Kumar,
+        <i>
+         Wavelets in Geophysics
+        </i>
+        (Academic Press, San Diego, 1994), v. 4.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        J. Morlet, NATO ASI Series
+        <b>
+         1
+        </b>
+        , 233 (1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        A. Grossmann and J. Morlet, SIAM J. Math. Anal.
+        <b>
+         15
+        </b>
+        , 723 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        P. Goupillaud, A. Grossmann and J. Morlet, Geoexploration
+        <b>
+         23
+        </b>
+        , 85 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        M. Farge, Annual Review of Fluid Mechanics
+        <b>
+         24
+        </b>
+        , 395 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        S. Jaffard, Y. Meyer and R.D. Ryan,
+        <i>
+         Wavelets: Tools for Science &amp; Technology
+        </i>
+        (Society for Industrial Mathematics, Philadelphia, 2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        B.B. Hubbard,
+        <i>
+         The World According to Wavelets: The Story of a Mathematical Technique in the Making
+        </i>
+        (A.K. Peters/CRC Press, Natick, 1998), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        J.C. Goswami and A.K. Chan,
+        <i>
+         Fundamentals of Wavelets. Microwave and Optical Engineering
+        </i>
+        (Wiley Interscience, New Jersey, 2011), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        J.-P. Antoine, R. Murenzi, P. Vandergheynst and S.T. Ali,
+        <i>
+         Two-Dimensional Wavelets and Their Relatives
+        </i>
+        (Cambridge University, Cambrige, 2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        C. Chui,
+        <i>
+         An introduction to Wavelets
+        </i>
+        (Academic Press, San Diego, 1992), v. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        J.W. Brown and R.V. Churchill,
+        <i>
+         Fourier Series and Boundary Value Problems
+        </i>
+        (McGraw-Hill, New York, 1993).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        A. Papoulis,
+        <i>
+         The Fourier Integral and its Applications
+        </i>
+        (McGraw-Hill, New York, 1962).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        O. Mendes, M.O. Domingues and A. Mendes da Costa, Advances in Space Research
+        <b>
+         35
+        </b>
+        , 812 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        O. Mendes and M.O. Domingues, Revista Brasileira de Ensino de Física
+        <b>
+         24
+        </b>
+        , 3 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        V. Klausner, O. Mendes, M.O. Domingues, A.R.P. Papa, R.H. Tyler, P. Frick and E.A. Kerani, Journal of Geophysical Research - Space Physics
+        <b>
+         119
+        </b>
+        , 3077 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        A. Lara, A. Borgazzi, O. Mendes, R.R. Rosa and M.O. Domingues, Solar Physics
+        <b>
+         248
+        </b>
+        , 155 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        L.E.A. Vieira, W.D. Gonzalez, E. Echer, F.L. Guarnieri, A. Prestes, A.L.C. Gonzalez, J.C. Santos, A. Dal Lago and N.J. Schuch, Solar Physics
+        <b>
+         217
+        </b>
+        , 383 (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        M.J.A. Bolzam, Brazilian Journal of Physics
+        <b>
+         35
+        </b>
+        , 592 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        J.E. Castilho, M.O. Domingues, O. Mendes e A. Pagamisse,
+        <i>
+         Introdução ao Mundo das Wavelets - Notas em Matemática Aplicada
+        </i>
+        (SBMAC, São Carlos, 2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        M.O. Domingues, O. Mendes and A. Mendes da Costa, Advances in Space Research
+        <b>
+         35
+        </b>
+        , 831 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        S. Mallat,
+        <i>
+         A Wavelet Tour of Signal Processing
+        </i>
+        (Academic Press, San Diego, 1999), 2nd ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [23]
+       </sup>
+       <div>
+        M. Vetterli, J. Kovacevic and V.K. Goyal,
+        <i>
+         Foundations of Signal Processing
+        </i>
+        (Cambridge University Press, Cambridge 2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [24]
+       </sup>
+       <div>
+        D. Maraun,
+        <i>
+         What Can We Learn from Climate Data? Methods for Fluctuation, Time/Scale and Phase Analysis
+        </i>
+        PhD Thesis, University of Potsdam, 2006.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [25]
+       </sup>
+       <div>
+        A. Haar, Mathematische Annales
+        <b>
+         69
+        </b>
+        , 331 (1910).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [26]
+       </sup>
+       <div>
+        Y. Meyer,
+        <i>
+         Wavelets
+        </i>
+        (Springer Verlag, Berlin, 1989).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [27]
+       </sup>
+       <div>
+        I. Daubechies,
+        <i>
+         Ten Lectures on Wavelets
+        </i>
+        (SIAM, Philadelfia, 1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [28]
+       </sup>
+       <div>
+        P. Frick, A. Grossmann and P. Tchamitchian, Journal of Mathematical Physics
+        <b>
+         39
+        </b>
+        , 4091 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [29]
+       </sup>
+       <div>
+        P. Abry,
+        <i>
+         Ondelettes et Turbulences: Multirésolutions, Algorithmes de Décomposition, Invariance D'échelle et Signaux de Pression
+        </i>
+        (Diderot Editeur, Paris, 1997).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [30]
+       </sup>
+       <div>
+        M. Liebling, T.-F. Bernhard, A.H. Bachmann, L. Froehly, T. Lasser and M. Unser, in:
+        <i>
+         Proceedings in Biomedicine IX
+        </i>
+        (San Jose, California, 2005), p. 397-402.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [31]
+       </sup>
+       <div>
+        S. Sello, New Astronomy
+        <b>
+         8
+        </b>
+        , 105 (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [32]
+       </sup>
+       <div>
+        C. Torrence and G.P. Compo, Bull. Amer. Meteor. Soc.
+        <b>
+         79
+        </b>
+        , 61 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [33]
+       </sup>
+       <div>
+        D. Maraun, J. Kurths and M. Holschneider, Phys. Rev. E
+        <b>
+         75
+        </b>
+        , 016707 (2007).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [34]
+       </sup>
+       <div>
+        S. Jaffard, B. Lashermes and P. Abry, Wavelet Leaders in Multifractal Analysis. Wavelet Analysis and Applications (Birkhauser Verlag, Switzerland, 2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [35]
+       </sup>
+       <div>
+        I. Simonsen, A. Hansen and O.M. Nes, Physical Review E
+        <b>
+         58
+        </b>
+        , 2779 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [36]
+       </sup>
+       <div>
+        P. Abry and D. Veitch, IEEE Transactions on Information Theory
+        <b>
+         44
+        </b>
+        , 1 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [37]
+       </sup>
+       <div>
+        R. López-Montes, R. Pérez-Enríquez, E.A. Araujo-Pradere and J.A.L. Cruz-Abeyro, Advances in Space Research
+        <b>
+         55
+        </b>
+        , 586 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [38]
+       </sup>
+       <div>
+        L. Hudgins, C. Friebe and M. Mayer, Physical Review Letters
+        <b>
+         71
+        </b>
+        , 3279 (1993).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [39]
+       </sup>
+       <div>
+        D. Maraun and J. Kurths, Nonlinear Processes in Geophysics
+        <b>
+         11
+        </b>
+        , 505 (2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [40]
+       </sup>
+       <div>
+        D. Labat, Journal of Hydrology
+        <b>
+         314
+        </b>
+        , 275 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [41]
+       </sup>
+       <div>
+        J.P. Lachaux, A. Lutz, D. Rudrauf, D. Cosmelli, M. Le Van Quyen, J. Martinerie and F. Varela, Clinical Neurophysiology
+        <b>
+         32
+        </b>
+        , 157 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [42]
+       </sup>
+       <div>
+        C. Torrence and P. Webster, Quart. J. Roy. Soc.
+        <b>
+         124
+        </b>
+        , 1985 (1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [43]
+       </sup>
+       <div>
+        C. Meneveau, Journal of Fluid Mechanics
+        <b>
+         232
+        </b>
+        , 469 (1991).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [44]
+       </sup>
+       <div>
+        M.R. Spiegel, S. Lipschutz, J.J. Schiller and D.S. Seymour,
+        <i>
+         Schaum's Outline of Complex Variables
+        </i>
+        (Schaum's Outline, New York, 2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [45]
+       </sup>
+       <div>
+        M. Farge, L'Aéronautique et l'Astronautique
+        <b>
+         24
+        </b>
+        , 1 (1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [46]
+       </sup>
+       <div>
+        S. Silva, B.S. Santos and J. Madeira, Cultural Heritage
+        <b>
+         35
+        </b>
+        , 320 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [47]
+       </sup>
+       <div>
+        C. Kelleher and T. Wagener, Environmental Modelling &amp; Software
+        <b>
+         26
+        </b>
+        , 822 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [48]
+       </sup>
+       <div>
+        M. Geissbuehler and T. Lasser, Optics Express
+        <b>
+         21
+        </b>
+        , 9862 (2013).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Set 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        21 Jan 2016
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        07 Mar 2016
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        19 Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

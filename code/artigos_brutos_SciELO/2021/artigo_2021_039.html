@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0191" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0191
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0191">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Demonstração e análise da interferência acústica utilizando um “tubo de Quincke” e a plataforma Arduino
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Demonstration and analysis of acoustic interference using a “Quincke tube” and the arduine platform
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Cícero Jailton de Morais Souza
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:cicero.souza@pesqueira.ifpe.edu.br">
+      cicero.souza@pesqueira.ifpe.edu.br
+     </a>
+    </div>
+    Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-3714-568X">
+     http://orcid.org/0000-0002-3714-568X
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Larissa Alexandre da Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Ibson José Maciel Leite
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Mário Anonio Alves Monteiro
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco, Recife, PE, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-4516-6031">
+     http://orcid.org/0000-0003-4516-6031
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     O presente trabalho apresenta uma aplicação do clássico interferômetro acústico de Quincke, conhecido como “tubo de Quincke”. O equipamento apresentado neste artigo foi construído com tubos de PVC e outros acessórios comumente utilizados em encanação. Como fonte sonora foi utilizada uma caixa de som convencional conectada a um
+     <i>
+      notebook
+     </i>
+     para a geração de ondas senoidais controladas pelo
+     <i>
+      software GoldWave
+     </i>
+     . Para medição da intensidade do som foi utilizado o sensor KY-038 junto a plataforma Arduino. O objetivo deste equipamento é auxiliar os estudos de interferência sonora em intervenções didáticas, tendo em vista a limitada existência de recursos didáticos para o processo de ensino e aprendizagem envolvendo ondas mecânicas, particularmente, nas aulas de interferência no ensino médio. Através do interferômetro acústico, foi possível calcular o comprimento de onda de cada frequência de som utilizada no experimento e, a partir destas medidas, determinar com boa precisão a velocidade do som no ar.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Interferômetro acústico; tubo de Quincke; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     This work presents an application of the classical Quincke acoustic interferometer, also known as “Quincke tube”. The equipment described in this paper was built with PVC pipes and commonly used plumbing accessories. As a sound source, we used a conventional speaker that are connected to a notebook was used for the generation of sine waves controlled by the
+     <i>
+      GoldWave
+     </i>
+     software. To measure the intensity of the sound we use the KY-038 sensor and Arduino platform. The purpose of this equipment is support for educational activity, due to limited teaching and learning resources involving mechanical waves, especially the interference study in high school. Through the acoustic interferometer, it was possible to calculate the wavelength of different frequencies and from that to determine, with good precision, the speed of sound in the air.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Acoustic interferometer; Quincke tube; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     O uso de estratégias experimentais no ensino de física vem sendo foco das pesquisas educacionais dos últimos anos. Isso demonstra o interesse dos profissionais da área em aprimorar a qualidade do seu ensino, tendo em vista a melhoria no índice de aprendizagem que recursos experimentais podem promover, e levando em consideração que a “realização das atividades experimentais […] não precisam, em hipótese alguma, serem condicionadas a bancadas, instrumentos sofisticados ou de alto custo” [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1. J.G.S.O. Junior, L.M. Gomes, E.R.P. de Novais e F.C.L. Ferreira, Scientia Plena 15, 7 (2019).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Um dos fenômenos mais estudados em atividades experimentais no ensino de física é a interferência da luz, sendo muito comum a utilização de interferômetros ópticos, como o interferômetro de Michelson-Morley, por exemplo. Cordova [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. H.P. Cordova, Construção de um interferômetro de Michelsone aplicações no ensino de óptica. Dissertação de Mestrado,Universidade Federal do Rio de Janeiro, Rio de Janeiro, 2016.
+       </span>
+      </span>
+     </span>
+     ], afirma que os interferômetros ópticos causam um impacto inicial positivo e que promovem uma atenção contínua e eficaz. No entanto, como se trata de um fenômeno ondulatório, a interferência também acontece com outros tipos de ondas, como as ondas sonoras. E quando se trata de conteúdos de ondas mecânicas, a visualização dos fenômenos estudados também é de alta importância para a construção do aprendizado.
+    </p>
+    <p>
+     Em 1866, em um artigo publicado na
+     <i>
+      Annalen der Physik
+     </i>
+     e intitulado
+     <i>
+      Ueber interferenz apparate für schallwellen
+     </i>
+     (“Sobre dispositivos de interferência para ondas sonoras”, o físico alemão Georg Hermann Quincke dissertou sobre um aparato experimental, criado por ele, para detectar a interferência em ondas sonoras [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. G.H. Quincke, Annalen der Physik 204, 177 (1866).
+       </span>
+      </span>
+     </span>
+     ]. Por sua simplicidade e clareza, o equipamento, que ficou conhecido como “tubo de Quincke” (ou “trombone de Quincke”), é ainda hoje utilizado como experimento demonstrativo em muitas escolas.
+    </p>
+    <p>
+     Pensando na dificuldade da inserção de recursos didáticos experimentais para o ensino de física, e mais designadamente para o ensino de ondas sonoras, desenvolvemos neste trabalho um interferômetro acústico de baixo custo, mais especificamente um “tubo de Quincke” acoplado a um sensor de som KY-038 conectado ao Arduino, para demonstrar a interferência em ondas sonoras e determinar comprimentos de onda para diferentes frequências e também a velocidade do som no ar.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Interferência do som: o “tubo de Quincke”
+    </h1>
+    <p>
+     O som “é uma propagação de vibrações longitudinais através de meios materiais […] e que propagam-se em três dimensões pelo espaço” [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. N. Villas Bôas. Tópicos de Física (Saraiva, SãoPaulo, 2004) v. 2, p. 264.
+       </span>
+      </span>
+     </span>
+     ]. Sua propagação ocorre pela variação de pressão do meio, se caracterizando assim como uma onda mecânica, que necessita de um meio para se propagar, diferentemente das ondas eletromagnéticas. Como o som é uma propagação ondulatória, possui as propriedades características de uma onda: reflexão, refração, difração e interferência. Assim como nas ondas eletromagnéticas, a “interferência é causada pela combinação (em fase ou fora de fase) de duas ou mais ondas, fazendo com que a onda resultante seja mais intensa que as ondas originais, ou que se cancelem, no caso de uma interferência destrutiva” [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. DAS Divisão de Astrofísica, disponível em:http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm.
+       </span>
+       <br/>
+       <a href="http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm" target="_blank">
+        http://www.das.inpe.br/~alex/FisicadaMus...
+       </a>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Durante uma interferência sonora pode-se ouvir variações significativas na intensidade do som. Em determinados posições de um ambiente com duas fontes sonoras (
+     <i>
+      F
+     </i>
+     e
+     <i>
+      G
+     </i>
+     , mostradas na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     ), em que uma crista e um vale se encontram (ponto
+     <i>
+      C
+     </i>
+     , por exemplo) a interferência destrutiva resulta em um ponto “surdo”, no qual não há som (ou quase não há, dependendo da fase); enquanto os pontos
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     , por exemplo, apresentam o encontro de dois vales ou de duas cristas, resultando em interferências construtivas, ou seja,
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     representam pontos nos quais o som é mais intenso. Um experimento bastante utilizado para demonstrar o princípio da interferência em ondas sonoras é o interferômetro acústico conhecido como “tubo de Quincke”.
+    </p>
+    <div class="row fig" id="S2_F1">
+     <a name="S2_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/cc1461f576a0c40e4f1c8c99c42b9ba27fd157b2.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Interferência de ondas sonoras.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Uma forma simples de se montar um “tubo Quincke” é com acessórios utilizados em encanação, como tubos de cobre ou PVC,
+     <i>
+      tês
+     </i>
+     , joelhos, redutores etc., e uma campânula capaz de projetar os sons do equipamento [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. G.R. Davies, The Physics Teacher 33, 244 (1995).
+       </span>
+      </span>
+     </span>
+     ]. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     apresenta um exemplo dessa montagem “clássica” do “tubo de Quincke”.
+    </p>
+    <div class="row fig" id="S2_F2">
+     <a name="S2_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/87179ecf594be1c2a16d006f53cee331b45e3e70.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Um exemplo “clássico” de um “tubo de Quincke”. Fonte: Davies, G. R. (1995).
+      <i>
+       Deck the Halls: Interference and diffraction corridor demonstrations
+      </i>
+      [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        6
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         6. G.R. Davies, The Physics Teacher 33, 244 (1995).
+        </span>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     O “tubo de Quincke” funciona da seguinte forma: uma fonte sonora emite uma onda que entra no sistema e se divide em duas, sendo que cada uma delas irá se propagar por um dos dois caminhos possíveis representados por cada tubo lateral em formato de U. O comprimento de um dos tubos em U é fixo e o comprimento do outro tubo em formato U é variável, uma vez que este tubo é construído de maneira semelhante a um trombone deslizante. Mover o tubo para dentro ou para fora muda o comprimento do caminho e, portanto, também muda a fase do som que chega à campânula em relação a onda que viaja através do tubo de comprimento fixo. Isso resulta em uma variação na intensidade do som que emerge da campânula, sendo mais fraco quando as fases dos dois componentes diferem por meio comprimento de onda e mais alto quando as duas ondas chegam em fase [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. W.E. Singer, The Physics Teacher 3, 282 (1965).
+       </span>
+      </span>
+     </span>
+     ]. Ou seja,
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       Para uma determinada frequência (por exemplo, 3,0 kHz) e com o ouvido próximo ao cone de saída [campânula], um som máximo é ouvido quando os dois caminhos têm comprimentos iguais. Conforme o tubo deslizante é empurrado para fora, mínimos e máximos são observados. A distância movida de um mínimo para o próximo pode ser lida em uma escala e, portanto, o comprimento de onda deduzido. O que por sua vez permite que seja feita uma estimativa da velocidade do som no ar, desde que a frequência seja conhecida [
+       <span class="ref">
+        <sup class="xref xrefblue">
+         6
+        </sup>
+        <span class="refCtt closed">
+         <span>
+          6. G.R. Davies, The Physics Teacher 33, 244 (1995).
+         </span>
+        </span>
+       </span>
+       ].
+      </p>
+     </blockquote>
+    </div>
+    <p>
+     Podemos descrever esquematicamente o “tubo de Quincke” como mostrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     . Ele é composto por um braço fixo de tamanho
+     <i>
+      L
+     </i>
+     e um braço móvel de tamanho variável
+     <i>
+      x
+     </i>
+     , ambos em forma de U. O tubo tem uma abertura em cada uma das extremidades (
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     ). O sistema funciona da seguinte forma: uma das aberturas (
+     <i>
+      A
+     </i>
+     , por exemplo) é utilizada como entrada do som da fonte de onda sonora, parte dessa onda percorre o caminho fixo (
+     <i>
+      L
+     </i>
+     ) e parte percorre o caminho variável (
+     <i>
+      x
+     </i>
+     ). As ondas que foram fracionadas inicialmente se sobrepõem e interferem uma na outra na saída de som (
+     <i>
+      B
+     </i>
+     ), onde está localizado um detector (microfone ou o próprio ouvido). Dessa forma é possível medir a intensidade do som emitido para os diferentes deslocamentos do braço variável.
+    </p>
+    <div class="row fig" id="S2_F3">
+     <a name="S2_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/0a9477e385e5c9f1db2d084f33a715e95fd56b7f.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Modelo simplificado do “tubo de Quincke”.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O cálculo do comprimento de onda deste experimento pode ser obtido através da análise da interferência entre as ondas sonoras dentro do tubo. Quando o tamanho do braço
+     <i>
+      x
+     </i>
+     é igual ao tamanho do braço
+     <i>
+      L
+     </i>
+     e as duas ondas fracionadas estão em fase, nota-se um som intenso na saída
+     <i>
+      B
+     </i>
+     devido a interferência construtiva. Quando se desloca o braço
+     <i>
+      x
+     </i>
+     ao ponto de perceber um mínimo de intensidade do som, a interferência é destrutiva. Assim para calcular o comprimento de onda pode-se utilizar as seguintes relações:
+    </p>
+    <div class="row formula" id="eS2_E1">
+     <a name="S2_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           d
+          </mi>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi>
+           n
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           λ
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS2_E2">
+     <a name="S2_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          λ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true">
+          <mfrac>
+           <mrow>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             d
+            </mi>
+           </mrow>
+           <mi>
+            n
+           </mi>
+          </mfrac>
+         </mstyle>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em que
+     <i>
+      d
+     </i>
+     =
+     <i>
+      x
+     </i>
+     −
+     <i>
+      L
+     </i>
+     e, como a onda percorre as distâncias
+     <i>
+      x
+     </i>
+     e
+     <i>
+      L
+     </i>
+     duas vezes (por cima e por baixo de acordo com o que é representado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     ),
+     <i>
+      2d
+     </i>
+     é a diferença total entre os caminhos que as ondas percorrem nos braços. Além disso, λ é o comprimento de onda e
+     <i>
+      n
+     </i>
+     = 0,1,2,3,… se a interferência é construtiva [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. H.M. Nussenzveig, in Curso de Física Básica 2: Fluidos,Oscilações e Ondas, Calor. (Edgard Blücher, São Paulo, 2002).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Dessa forma, os máximos de interferência acontecem quando
+     <i>
+      n
+     </i>
+     é zero ou um número inteiro. Assim a posição do primeiro máximo ocorre quando
+     <i>
+      n=0
+     </i>
+     (posição em que os braços do interferômetro têm o mesmo tamanho), o segundo máximo quando
+     <i>
+      n=1
+     </i>
+     , o terceiro quando
+     <i>
+      n=2
+     </i>
+     e assim por diante.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Descrição do “tubo de Quincke” construído
+    </h1>
+    <p>
+     O interferômetro acústico construído é composto por dois tipos de canos de água fria, de dois diâmetros diferentes (50 mm e 60 mm), de forma que um cano encaixe no outro, com um pouco de folga para facilitar o deslizamento do braço variável. As extremidades dos canos são conectadas à joelhos e
+     <i>
+      tês
+     </i>
+     de forma que sua estrutura se assemelhe a do “tubo de Quincke”, com os dois
+     <i>
+      tês
+     </i>
+     localizados na entrada e saída do som. Sua extensão máxima é de três metros de comprimento, sendo que o lado do braço fixo tem 1 metro de extensão e o outro lado, de tamanho variável, pode ter seu comprimento variado de 1 a 2 metros, o que faz com que as dimensões do interferômetro variem de 2 a 3 metros. Estas dimensões foram escolhidas para permitir a observação do maior número possível de máximos, uma vez que, para uma determinada frequência, quanto maior os braços do interferômetro, maior a ocorrência de nós e antinós das ondas sonoras dentro do tubo. Desse modo, para a faixa de frequências utilizadas (de 1000 Hz a 2000 Hz, escolhidas devido a melhor sensibilidade do sensor), a variação de 1 metro no braço móvel permitiu a medição de até 11 máximos. O experimentador pode ajustar o tamanho do braço variável conforme sua necessidade de observar os máximos de interferência, estando limitado pelos três metros totais de comprimento do equipamento. O som sofre interferências construtivas e destrutivas de acordo com a variação do braço ajustável.
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     apresentamos algumas imagens do interferômetro desenvolvido. Na entrada do equipamento, como fonte sonora, pela qual é emitida uma onda senoidal gerada pelo
+     <i>
+      software Gold Wave
+     </i>
+     , foi colocada uma caixa de som convencional, com dois canais estéreos, potência total de 4 W e conexão via porta USB e plugue P2 com o
+     <i>
+      notebook
+     </i>
+     . Na saída do som colocamos o sensor KY-038 conectado ao Arduino, que também é conectado ao
+     <i>
+      notebook
+     </i>
+     .
+    </p>
+    <div class="row fig" id="S3_F4">
+     <a name="S3_F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/887ec57ef2b0f4cc56ab24840961d7d4adc757af.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Interferômetro acústico (“tubo de Quincke”) construído pelos autores.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O sensor de som KY-038 possui um microfone que mede os picos do som; um chip LM393; um potenciômetro, para ajuste da sensibilidade do microfone; pinos VCC, GND, e saída digital e analógica, para conexão com o Arduino (ver Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     ). “O princípio de funcionamento é simples: ao detectar o som, o microfone varia a tensão na saída analógica A0, e aciona a saída digital D0, conforme a regulagem do potenciômetro presente no módulo” [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/.
+       </span>
+       <br/>
+       <a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">
+        https://www.arduinoecia.com.br/sensor-de...
+       </a>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="S3_F5">
+     <a name="S3_F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/7197018b0580a0dc3a3eb0835ee22ecacf96d0ba.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Módulo de som KY-038. Fonte: ARDUINO &amp; CIA [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        9
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         9. ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/.
+        </span>
+        <br/>
+        <a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">
+         https://www.arduinoecia.com.br/sensor-de...
+        </a>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     A conexão do sensor KY-038 com o Arduino é representada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     . Basta conectar diretamente os pinos VCC e GND do sensor, respectivamente, a saída regulada de 5 V e ao terminal negativo GND do Arduino. Além disso, a saída analógica do sensor deve ser conectada a entrada analógica A0 do Arduino. Não é necessário fazer nenhuma conexão do Arduino com a saída digital do sensor.
+    </p>
+    <div class="row fig" id="S3_F6">
+     <a name="S3_F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/5268a0db2c37344da8562d29cb60d34502633b7c.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Conexão do módulo de som KY-038 com o Arduino. Fonte: ARDUINO LEARNING [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        10
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         10. ARDUINO LEARNING, disponível em:http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php.
+        </span>
+        <br/>
+        <a href="http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php" target="_blank">
+         http://arduinolearning.com/code/ky038-mi...
+        </a>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     Quando conectado ao Arduino, o módulo de som KY-038 é capaz de medir a intensidade sonora relativa no local em que estiver posicionado. Dessa forma, colocando-o na saída de som do tubo, é possível determinar para que posições do braço
+     <i>
+      x
+     </i>
+     a intensidade sonora é máxima, ou seja, para que posições do braço variável ocorre interferência construtiva.
+    </p>
+    <p>
+     O código utilizado para medição da intensidade é mostrado no Quadro
+     <a class="open-asset-modal" data-target="#ModalFigF1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     .
+    </p>
+    <div class="row fig" id="F1">
+     <a name="F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigF1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/33dc2a7deed96610095b37848a4713b52c49963a.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Quadro 1
+      </strong>
+      <br/>
+      Código utilizado para leitura de dados do sensor de som.
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="S4_T1">
+     <a name="S4_T1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Resultados das medições para
+      <i>
+       <i>
+        f
+       </i>
+       <sub>
+        1
+       </sub>
+       = 2000
+       <i>
+        Hz
+       </i>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Destacamos que o código é bastante básico e não necessita da instalação de qualquer biblioteca. Com ele, a cada 50 amostras de intensidade sonora relativa, que pode variar de 0 a 1023, o Arduino calcula a média e imprime o resultado. Foi necessário realizar as médias das amostras porque os dados do sensor apresentavam muito ruído, o que dificultava a sua visualização quando eram plotados na IDE (
+     <i>
+      Integrated Development Environment
+     </i>
+     – Ambiente de Desenvolvimento Integrado) do Arduino. Dessa forma, a média dos pontos eliminou o problema e tornou a visualização das variações de intensidade bem mais claras.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados
+    </h1>
+    <p>
+     Ao mover o braço ajustável do tubo é possível, através da plataforma Arduino que plota um gráfico da média dos dados captados pelo sensor sonoro, detectar os máximos de interferência das frequências utilizadas no interferômetro acústico. Os dados obtidos através do sensor de som são plotados instantaneamente através da ferramenta
+     <i>
+      Serial Plotter
+     </i>
+     . Esta ferramenta vem pré-instalada na IDE do Arduino, sua função é capturar os dados seriais de entrada e os exibir na forma de um gráfico.
+    </p>
+    <p>
+     Conforme há mudança na distância do braço variável, há também interferências construtivas e destrutivas de acordo com o deslocamento realizado. A intensidade relativa medida é salva na variável
+     <i>
+      valor
+     </i>
+     , definida no código do Quadro
+     <a class="open-asset-modal" data-target="#ModalFigF1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     . O gráfico plotado pelo Arduino de intensidade sonora relativa em função do número da amostra, colhida a uma taxa de transmissão de dados de 9600 bps (bits por segundo), indica quando a interferência é máxima, como ilustrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     . O eixo vertical se ajusta conforme a variável
+     <i>
+      valor
+     </i>
+     aumenta ou diminui. O eixo horizontal tem 500 pontos e é atualizado quando um novo comando
+     <i>
+      Serial.println(valor)
+     </i>
+     é executado, também conforme o código mostrado no Quadro 1. Isso significa que o gráfico é atualizado toda vez que o comando
+     <i>
+      Serial.println(valor)
+     </i>
+     é executado e uma nova medida de intensidade é feita.
+    </p>
+    <div class="row fig" id="S4_F7">
+     <a name="S4_F7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/aedd9e5fc80ae1fe0e30ada4ee0410e4da785e92.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Gráfico dos máximos resultantes da interferência das ondas sonoras gerado automaticamente pela
+      <i>
+       Serial Plotter
+      </i>
+      da IDE do Arduino.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O gráfico da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     foi gerado quando movimentamos o braço do interferômetro de forma lenta e contínua, de modo a passar por duas regiões de máximo, representadas pelos picos de interferência. Ao atingir um ponto de máximo, as diferenças entre os comprimentos dos braços do tubo eram medidas.
+    </p>
+    <p>
+     Foram utilizadas cinco frequências diferentes no interferômetro acústico,
+     <i>
+      f
+     </i>
+     <sub>
+      1
+     </sub>
+     = 2000
+     <i>
+      Hz
+     </i>
+     ,
+     <i>
+      f
+     </i>
+     <sub>
+      2
+     </sub>
+     = 1750
+     <i>
+      Hz
+     </i>
+     ,
+     <i>
+      f
+     </i>
+     <sub>
+      3
+     </sub>
+     = 1500
+     <i>
+      Hz
+     </i>
+     ,
+     <i>
+      f
+     </i>
+     <sub>
+      4
+     </sub>
+     = 1250
+     <i>
+      Hz
+     </i>
+     e
+     <i>
+      f
+     </i>
+     <sub>
+      5
+     </sub>
+     = 1000
+     <i>
+      Hz
+     </i>
+     . As frequências utilizadas possuem uma incerteza relativa de ±0,5%. Os resultados obtidos para as medidas das diferenças entre as distâncias, (
+     <i>
+      2d
+     </i>
+     ), com uma incerteza de ±1 cm, em relação aos máximos de interferência,
+     <i>
+      n
+     </i>
+     , e para as diferentes frequências, são apresentados nas Tabelas
+     <a class="open-asset-modal" data-target="#ModalTableS4_T1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      1
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalTableS4_T2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalTableS4_T3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      3
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalTableS4_T4" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      4
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalTableS4_T5" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      5
+     </a>
+     , a seguir:
+    </p>
+    <div class="row table" id="S4_T2">
+     <a name="S4_T2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Resultados das medições para
+      <i>
+       <i>
+        f
+       </i>
+       <sub>
+        2
+       </sub>
+       = 1750
+       <i>
+        Hz
+       </i>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="S4_T3">
+     <a name="S4_T3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3
+      </strong>
+      <br/>
+      Resultados das medições para
+      <i>
+       <i>
+        f
+       </i>
+       <sub>
+        3
+       </sub>
+       = 1500
+       <i>
+        Hz
+       </i>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="S4_T4">
+     <a name="S4_T4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T4" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 4
+      </strong>
+      <br/>
+      Resultados das medições para
+      <i>
+       <i>
+        f
+       </i>
+       <sub>
+        4
+       </sub>
+       = 1250
+       <i>
+        Hz
+       </i>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="S4_T5">
+     <a name="S4_T5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T5" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 5
+      </strong>
+      <br/>
+      Resultados das medições para
+      <i>
+       <i>
+        f
+       </i>
+       <sub>
+        5
+       </sub>
+       = 1000
+       <i>
+        Hz
+       </i>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A partir destas tabelas, podemos plotar os gráficos das diferenças de distâncias, 2
+     <i>
+      d
+     </i>
+     (cm), medidas em função dos máximos,
+     <i>
+      n
+     </i>
+     , para cada frequência utilizada. Tais gráficos são apresentados nas figuras
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigS4_F11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      11
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigS4_F12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      12
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S4_F8">
+     <a name="S4_F8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/25e2c2961e9e09970eb677d900fdd03f2b4e070a.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Gráfico das diferenças entre as distâncias,
+      <i>
+       2d
+      </i>
+      (cm), em função dos máximos de interferência para uma frequência de 2000 Hz.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="S4_F9">
+     <a name="S4_F9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/54c66c1c0b6f03b6066ea654ac399bbea4cf7a00.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Gráfico das diferenças entre as distâncias,
+      <i>
+       2d
+      </i>
+      (cm), em função dos máximos de interferência para uma frequência de 1750 Hz.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="S4_F10">
+     <a name="S4_F10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/76ef49ecdcfe312bb0aaf9c036434fd8640fc9ba.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Gráfico das diferenças entre as distâncias,
+      <i>
+       2d
+      </i>
+      (cm), em função dos máximos de interferência para uma frequência de 1500 Hz.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="S4_F11">
+     <a name="S4_F11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F11" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/0585f6870bfca8b29de720a03a997cc8ad7dfe1a.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Gráfico das diferenças entre as distâncias,
+      <i>
+       2d
+      </i>
+      (cm), em função dos máximos de interferência para uma frequência de 1250 Hz.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="S4_F12">
+     <a name="S4_F12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F12" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/XV9bLmJgSZ48MJJfLVvpzmk/a64db3faea01abbea289af5c7d5a275937fcf7ab.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Gráfico das diferenças entre as distâncias,
+      <i>
+       2d
+      </i>
+      (cm), em função dos máximos de interferência para uma frequência de 1000 Hz.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A partir dos gráficos é possível afirmar que os dados medidos se ajustam muito bem às linhas de tendência, obtidas por regressão linear, o que pode ser visto pelos valores dos coeficientes de determinação (
+     <i>
+      R
+     </i>
+     <sup>
+      2
+     </sup>
+     ), que estão muito próximos de 1. Dessa forma, podemos obter os comprimentos de onda λ para cada frequência, comparando as equações das linhas de tendência de cada gráfico com a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ). E uma vez tendo obtido λ e conhecendo a frequência
+     <i>
+      f
+     </i>
+     , podemos determinar a velocidade do som no ar, a partir da equação:
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS4_E3">
+     <a name="S4_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          v
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi>
+           λ
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           f
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Utilizando a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS4_E3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     ), os comprimentos de onda obtidos a partir dos gráficos apresentados nas Figuras
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigS4_F11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      11
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigS4_F12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      12
+     </a>
+     , e as respectivas frequências para cada comprimento de onda, podemos determinar os valores de velocidade do som no ar para cada frequência. Os resultados para os comprimentos de onda de diferentes frequências e a velocidade do som no ar, juntamente com suas respectivas incertezas, são apresentados na Tabela
+     <a class="open-asset-modal" data-target="#ModalTableS4_T6" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      6
+     </a>
+     .
+    </p>
+    <div class="row table" id="S4_T6">
+     <a name="S4_T6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTableS4_T6" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 6
+      </strong>
+      <br/>
+      Comprimentos de onda para cada frequência e velocidade do som no ar a partir dos valores medidos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A velocidade do som no ar, obtida através da média dos valores das velocidades de cada frequência, foi de 339 m/s ± 2 m/s, onde a incerteza na medida foi determinada pelo desvio padrão da média.
+    </p>
+    <p>
+     Portanto, concluímos a partir dos dados obtidos que a velocidade do som no ar está de acordo com a literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. H.M. Nussenzveig, in Curso de Física Básica 2: Fluidos,Oscilações e Ondas, Calor. (Edgard Blücher, São Paulo, 2002).
+       </span>
+      </span>
+     </span>
+     ], segundo a qual tal velocidade é da ordem de 340 m/s, podendo variar de acordo com a temperatura do ar. O que demonstra que o aparelho é eficiente em estimar com boa precisão os comprimentos de onda para sons de diferentes frequências.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Considerações finais
+    </h1>
+    <p>
+     O equipamento desenvolvido é de fácil construção e montagem, e utiliza materiais acessíveis e que, em sua maioria, podem ser adquiridos a um baixo custo: tubos de PVC,
+     <i>
+      tês
+     </i>
+     e joelhos, comumente utilizados em encanação, e o sensor KY-038 junto a plataforma Arduino, que podem ser encontrados em lojas especializadas em eletrônica a preços acessíveis. Além disso, como fonte sonora, foi utilizada uma caixa de som simples USB/P2 e um
+     <i>
+      notebook
+     </i>
+     . O código utilizado no Arduino também é simples, o que significa que é necessário apenas um conhecimento básico de programação para realizar sua execução.
+    </p>
+    <p>
+     A simplicidade de montagem e execução do equipamento juntamente com a qualidade dos resultados, que obtiveram precisão significativa, demonstraram que o “tubo de Quincke” construído neste trabalho pode ser utilizado como uma boa ferramenta didática para o estudo da interferência de ondas sonoras.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     References
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1.
+       </sup>
+       <div>
+        J.G.S.O. Junior, L.M. Gomes, E.R.P. de Novais e F.C.L. Ferreira, Scientia Plena
+        <b>
+         15
+        </b>
+        , 7 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2.
+       </sup>
+       <div>
+        H.P. Cordova,
+        <i>
+         Construção de um interferômetro de Michelsone aplicações no ensino de óptica
+        </i>
+        Dissertação de Mestrado,Universidade Federal do Rio de Janeiro, Rio de Janeiro, 2016.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3.
+       </sup>
+       <div>
+        G.H. Quincke, Annalen der Physik
+        <b>
+         204
+        </b>
+        , 177 (1866).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4.
+       </sup>
+       <div>
+        N. Villas Bôas.
+        <i>
+         Tópicos de Física
+        </i>
+        (Saraiva, SãoPaulo, 2004) v. 2, p. 264.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5.
+       </sup>
+       <div>
+        DAS Divisão de Astrofísica, disponível em:http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm
+        <br/>
+        <a href="http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm" target="_blank">
+         » http://www.das.inpe.br/~alex/FisicadaMusica/fismus_props.htm
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        6.
+       </sup>
+       <div>
+        G.R. Davies, The Physics Teacher
+        <b>
+         33
+        </b>
+        , 244 (1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        7.
+       </sup>
+       <div>
+        W.E. Singer, The Physics Teacher
+        <b>
+         3
+        </b>
+        , 282 (1965).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        8.
+       </sup>
+       <div>
+        H.M. Nussenzveig, in
+        <i>
+         Curso de Física Básica 2: Fluidos,Oscilações e Ondas, Calor
+        </i>
+        (Edgard Blücher, São Paulo, 2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        9.
+       </sup>
+       <div>
+        ARDUINO E CIA, disponível em:https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/
+        <br/>
+        <a href="https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/" target="_blank">
+         » https://www.arduinoecia.com.br/sensor-de-som-ky-038-microfone-arduino/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        10.
+       </sup>
+       <div>
+        ARDUINO LEARNING, disponível em:http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php
+        <br/>
+        <a href="http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php" target="_blank">
+         » http://arduinolearning.com/code/ky038-microphone-module-and-arduino-example.php
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        14 Jul 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        21 Maio 2021
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        16 Jun 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        19 Jun 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

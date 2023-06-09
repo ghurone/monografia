@@ -1,0 +1,2620 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2020-0502" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2020-0502
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0502">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Construção de um luxímetro digital utilizando plataforma Arduino para uso em laboratórios didáticos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Arduino based digital luxmeter for didactical laboratory use
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     C. B. Pereira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Paraná, Departamento de Física, Centro Politécnico, Curitiba, PR, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     S. L. M. Berleze
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Paraná, Departamento de Física, Centro Politécnico, Curitiba, PR, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     W. A. Soares
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Paraná, Departamento de Física, Centro Politécnico, Curitiba, PR, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     J. P. M. Serbena
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:serbena@fisica.ufpr.br">
+      serbena@fisica.ufpr.br
+     </a>
+    </div>
+    Universidade Federal do Paraná, Departamento de Física, Centro Politécnico, Curitiba, PR, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-4286-5064">
+     http://orcid.org/0000-0003-4286-5064
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Este trabalho teve como finalidade a construção de um luxímetro utilizando um fotodetector/conversor luz em frequência (LTF, do inglês “light to frequency”) e plataforma Arduino. As etapas de execução consistiram no desenvolvimento do código de programação da comunicação e controle entre fotodetector e Arduino, na confecção de uma placa de circuito impresso caseira e no acabamento do luxímetro com a inserção de botões, display e demais componentes eletrônicos numa caixa Patola®. O luxímetro construído foi utilizado em três experimentos didáticos realizados na disciplina de laboratório dos cursos de graduação em Física e Engenharias cujo tema estudado é a Óptica. As medidas realizadas demonstraram que o luxímetro atende à necessidade do laboratório ao substituir equipamentos comerciais atualmente utilizados.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Óptica; difração em fenda única; luxímetro; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     This work aimed the construction of a luxmeter using a photodetector/light to frequency converter (LTF) and Arduino platform. The execution steps consisted on developing the communication and control programming code between photodetector and Arduino, manufacturing a homemade printed circuit board and finishing the assembled luxmeter with the insertion of buttons, display and all other electronic components in a Patola
+     <sup>
+      ®
+     </sup>
+     box. The built luxmeter was used in three didactic experiments carried out in the undergraduate laboratory discipline of Physics and Engineering courses whose studied topic is Optics. The performed measurements demonstrated that the luxmeter meets the laboratory’s needs when replacing commercial equipments that are currently in use.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Optics; single slit diffraction; luxmeter; Arduino
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Nos livros didáticos de Física Básica de graduação em Ensino Superior que abordam o tema Óptica, a difração é apresentada como um fenômeno associado à chamada ótica física, cujos efeitos óticos são explicados utilizando-se das propriedades da natureza ondulatória da luz [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1. H.D. Young e R.A. Freedman, Física IV: Ótica e Física Moderna (Pearson Universidades, São Paulo, 2015).
+       </span>
+      </span>
+     </span>
+     ]. Esse fenômeno é normalmente abordado tanto teoricamente quanto experimentalmente, visto que, além de sua importância para a compreensão de conceitos físicos mais avançados, é um fenômeno que pode ser facilmente observado e replicado na prática. Isto se deve à atual disponibilidade de fontes de luz laser baratas e acessíveis, sendo utilizados os mais diversos elementos do cotidiano como aberturas ou obstáculos para a difração da luz, desde CDs e tecidos a fios de cabelo. Uma boa revisão dos diferentes materiais e formas de se observar a difração é reportada por Ribeiro et al. em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. J.L.P. Ribeiro e M.F.S. Verdeaux, Rev. Bras. Ens. Fis. 34, 1 (2012).
+       </span>
+      </span>
+     </span>
+     ]. Vale ressaltar que neste trabalho, quando houver referência à difração da luz, será considerada a difração de Fraunhofer ou de campo longínquo, na qual as ondas incidente e difratada são aproximadamente planas sobre a região das aberturas ou obstáculos difratantes. Nesta situação já não é mais possível reconhecer a abertura ou obstáculo, o padrão de difração cobre uma região extensa e qualquer variação entre distâncias tem como única consequência a variação do tamanho do padrão mas não da sua forma [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. E. Hecht, Optics (Addison-Wesley, New York, 2002).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Uma atividade muito interessante, do ponto de vista experimental, é a obtenção da curva de intensidade luminosa em função do ângulo entre o eixo óptico e a linha que conecta a abertura ou obstáculo a um determinado ponto de observação do padrão de difração formado. Para as medidas experimentais, deve-se utilizar um sonda de medição relativamente pequena, da ordem de centenas de micrometros de diâmetro, para não impactar na resolução da medida da distância, o que pode ser conseguido com uma fibra óptica. Contudo, a intensidade luminosa do máximo secundário não chega a 5% da intensidade luminosa do máximo central, o que faz com que seja necessária a utilização ou de luxímetros de alta sensibilidade ou de fontes luminosas de alta potência para a coleta das medidas experimentais. A segundo opção proporciona um risco maior de acidentes, algo a ser seriamente considerado num laboratório didático, sendo a primeira opção normalmente escolhida. Isso implica num aumento de custos do experimento, visto que os luxímetros são mais caros quanto maior sua resolução.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Princípios do Projeto
+    </h1>
+    <p>
+     Particularmente no laboratório didático de Física Experimental IV do Departamento de Física da Universidade Federal do Paraná, a experiência “Difração da Luz” é realizada utilizando-se um luxímetro analógico PASCO
+     <sup>
+      ®
+     </sup>
+     OS-8020 de alta sensibilidade (resolução máxima aproximadamente 0,002 lux) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. PASCO, Instruction Sheet for the PASCO Model OS-8020, (1994).
+       </span>
+      </span>
+     </span>
+     ]. Especificamente este luxímetro é um modelo obsoleto, não sendo mais comercializado, o que impede uma possível substituição pelo mesmo modelo e encarece sua manutenção por necessitar de mão-de-obra especializada. Adicionalmente, estão operando no limite de sua vida útil. Luxímetros digitais com esta mesma resolução podem ser encontrados, mas a preços muitas vezes não acessíveis, como o modelo 07137-00 da PHYWE, cujo custo gira em torno de 650 Euros. Luxímetros mais baratos usualmente não possuem resolução suficiente para a realização deste experimento específico. Assim, a proposta deste trabalho é a substituição do luxímetro PASCO
+     <sup>
+      ®
+     </sup>
+     OS-8020 por uma alternativa mais barata e que possa permitir a manutenção no próprio laboratório, possibilitando o treinamento de alunos da graduação em eletrônica e programação.
+    </p>
+    <p>
+     Dentre as inúmeras possibilidades, optou-se pela utilização da plataforma Arduino pois é uma plataforma abundantemente difundida, simples, de baixo custo e de código livre, o que proporciona facilidade de uso, de melhoramentos e de reparos, principalmente devido ao fato de se trabalhar de modo modular. Sua linguagem de programação, baseada em C/C + ⁣ + , é normalmente ensinada nas aulas de programação de computadores dos cursos de graduação, facilitando ainda a familiarização dos discentes com a instrumentação. Uma excelente revisão sobre as contribuiçoes da plataforma Arduino no ensino de Física foi reportada por Moreira et al. em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. M. Moreira, M. Romeu, F.R. Alves e F.R. da Silva, Cad. Bras. Ens. Fís. 35, 721 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Contudo, o elemento central para o equipamento funcionar como desejado é o dispositivo fotosensível escolhido. Pedroso et al. construíram um luxímetro digital utilizando um transistor NPN de alta potência 2N3055 desencapado como elemento fotosensível [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. L.S. Pedroso, J.A. Macêdo, M.S.T de Araújo e M.R. Voelzke, Rev. Bras. Ens. Fis. 38, e2503 (2016).
+       </span>
+      </span>
+     </span>
+     ]. Apesar do baixo custo e facilidade de construção, dificilmente tal dispositivo teria resolução suficiente para ser aplicado com o propósito deste trabalho. Por isso, optou-se pela abordagem publicada por Patrik [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. Patrik, Highly Sensitive Arduino Light Sensor, disponível em https://www.instructables.com/id/Highly-sensitive-Arduino-light-sensor/, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://www.instructables.com/id/Highly-sensitive-Arduino-light-sensor/" target="_blank">
+        https://www.instructables.com/id/Highly-...
+       </a>
+      </span>
+     </span>
+     ], que faz uso de um fotodetector/conversor luz em frequência (LTF, do inglês “light to frequency”) TSL237s-LF [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. AMS, TSL237 High-Sensitivity Light-to-Frequency Converter, disponível em https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf" target="_blank">
+        https://br.mouser.com/datasheet/2/588/TS...
+       </a>
+      </span>
+     </span>
+     ]. Resumidamente, um circuito desse tipo usa uma versão CMOS do temporizador 555 para formar um conversor de intensidade luminosa em frequência e um pequeno fotodiodo como detector de luz. A corrente de fuga do fotodiodo reversamente polarizado é proporcional à intensidade da luz incidente. Esta corrente de fuga carrega um capacitor de 0,01 μF. Quando a tensão do capacitor atinge 2/3 da tensão de alimentação, a tensão de saída do circuito diminui. Como resultado, o capacitor descarrega através do fotodiodo. Quando a tensão do capacitor atinge 1/3 da tensão de alimentação, a tensão de saída aumenta, iniciando outra carga no capacitor. Esse ciclo continua, obtendo-se uma frequência na saída do circuito que é proporcional à intensidade da luz incidente no fotodiodo. Normalmente, a frequência do oscilador varia desde aproximadamente 1 Hz na escuridão total até cerca de 25 kHz na luz solar. Outros extremos de frequência são possíveis alterando-se o valor de capacitância do capacitor. Detalhes desse tipo de fotodetector podem ser encontrados, por exemplo, em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. D.A. Johnson, Light to Frequency converter circuit, disponível em http://www.circuitstoday.com/light-to-frequency-converter-circuit, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="http://www.circuitstoday.com/light-to-frequency-converter-circuit" target="_blank">
+        http://www.circuitstoday.com/light-to-fr...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. D.A. Johnson, Light to Frequency converter circuit, disponível em http://www.discovercircuits.com/H-Corner/lite-freq-con.htm, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="http://www.discovercircuits.com/H-Corner/lite-freq-con.htm" target="_blank">
+        http://www.discovercircuits.com/H-Corner...
+       </a>
+      </span>
+     </span>
+     ]. O fato é que a saída digital permite uma interface direta com um microcontrolador ou outro circuito lógico, no caso, o Arduino.
+    </p>
+    <p>
+     Com isso em mente, pode-se construir um luxímetro. Na literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11. M.V. Klein e T.E. Furtak, Optics (John Wiley and Sons, New York, 1986).
+       </span>
+      </span>
+     </span>
+     ] são apresentadas equações para a intensidade da luz emitida por uma fonte ou um sistema óptico, a qual pode depender da direção de propagação. Por sua vez, os luxímetros medem uma grandeza chamada iluminância. A intensidade luminosa e a iluminância fazem parte do sistema fotométrico, que se aplica no espectro visível e considera a sensação visual de um observador humano. É importante, então, conhecer como são definidas estas grandezas e de que forma elas estão relacionadas.
+    </p>
+    <p>
+     Uma fonte ou sistema óptico pode emitir certa quantidade de energia ao longo do tempo. A taxa de transferência dessa energia é chamada de fluxo luminoso, que é medido em lúmens (lm) no SI. O fluxo luminoso pode ser diferente para cada direção de propagação da luz a partir da fonte. O fenômeno da difração da luz é um exemplo, onde tem-se a variação entre máximos e mínimos. Em seguida, é necessário considerar uma região delimitada por uma superfície cônica imaginária com vértice no centro da fonte e eixo ao longo de uma dada direção. Esta superfície cônica subtende no seu interior um ângulo sólido. A intensidade luminosa da fonte numa certa direção é definida como o fluxo luminoso total naquela direção por unidade de ângulo sólido. Sua unidade no SI é o candela (cd). Outra grandeza importante é definida a partir do fluxo luminoso que incide sobre uma unidade de área. Como a superfície do sensor é receptora de luz, esta densidade superficial de fluxo define uma grandeza chamada iluminância, cuja unidade no SI é o lux (lx).
+    </p>
+    <p>
+     A equação que relaciona a intensidade luminosa e a iluminância contém integrais de superfície, cuja resolução pode ser difícil dependendo da geometria do sistema. Entretanto, quando o sensor está afastado da fonte e tem uma área pequena, os raios incidentes sobre ele são praticamente paralelos e a solução é bastante simples. Estas condições são satisfeitas nos experimentos realizados no laboratório de ensino. Considerando ainda que os raios incidam perpendicularmente à superfície do sensor, a iluminância dependerá da intensidade emitida pela fonte e da distância entre ambos seguindo a lei fotométrica da distância. Se a distância entre o sensor e a fonte for mantida constante, a iluminância dependerá apenas da intensidade luminosa, numa proporção direta. Esta relação permite o estudo de diferentes fenômenos a partir das medidas com o luxímetro.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Construção do Luxímetro
+    </h1>
+    <p>
+     A parte central do equipamento proposto reside no fotodetector TSL237s-LF. Para que ele possa operar corretamente, o fabricante recomenda que as linhas de alimentação do sensor sejam desacopladas do fotodetector por um capacitor cuja capacitância esteja entre 0,01 μF e 0,1 μF, com os terminais do capacitor conectados o mais próximo possível do TSL237s-LF [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. AMS, TSL237 High-Sensitivity Light-to-Frequency Converter, disponível em https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf" target="_blank">
+        https://br.mouser.com/datasheet/2/588/TS...
+       </a>
+      </span>
+     </span>
+     ]. Assim, o luxímetro construído consiste nos seguintes componentes: Arduino Nano, fotodetector TSL237s-LF, capacitor de 0,1 μF, botão liga-desliga, dois botões para medida (um para armazenamento da leitura residual e outro para leitura) e display LCD 16 × 2 para leitura da medida pelo experimentador, além de dois LEDs indicadores de “leitura em processo” e “pronto para leitura”. Para as aplicações desejadas neste trabalho, não há necessidade de obter valores calibrados da iluminância incidente, uma vez que estas serão normalizadas, conforme explicado na próxima sessão. Ainda assim, foi necessário inserir um botão adicional para medida da iluminância residual. Essa medida é armazenada na memória interna do Arduino e todas as leituras subsequentes têm este valor subtraído. Isso permite eliminar contribuições da luz ambiente, permitindo que os experimentos sejam realizados na penumbra.
+    </p>
+    <p>
+     Toda a montagem foi feita, inicialmente, utilizando-se um protoboard, como apresentado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     a, cujo esquema do circuito eletrônico é apresentado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     b. Nesta etapa, foi implementado o código de comunicação entre os diferentes componentes, em especial entre o TSL237s-LF e o Arduino. Para que possa ser apresentado um valor razoável (mas não calibrado) de iluminância, foi necessário inserir no código a seguinte linha de comando [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. AMS, TSL237 High-Sensitivity Light-to-Frequency Converter, disponível em https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf" target="_blank">
+        https://br.mouser.com/datasheet/2/588/TS...
+       </a>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row fig" id="S3_F1">
+     <a name="S3_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YbJ6d8WssYGknWMpSHhsXJM/0a40ee715706fb8f04000d3cc0693a35029975c0.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      a) Montagem do luxímetro utilizando o protoboard; b) esquema do circuito eletrônico construído.
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eS3_E1">
+     <a name="S3_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          E
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>
+             f
+            </mi>
+            <mn>
+             0
+            </mn>
+           </msub>
+           <mo>
+            -
+           </mo>
+           <msub>
+            <mi>
+             f
+            </mi>
+            <mi>
+             D
+            </mi>
+           </msub>
+          </mrow>
+          <mi>
+           R
+          </mi>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      E
+     </i>
+     é iluminância,
+     <i>
+      f
+     </i>
+     <sub>
+      <i>
+       0
+      </i>
+     </sub>
+     e
+     <i>
+      f
+     </i>
+     <sub>
+      <i>
+       D
+      </i>
+     </sub>
+     são as frequências de leitura e residual, respectivamente, e
+     <i>
+      R
+     </i>
+     é uma constante relacionada à responsividade do TSL237s-LF [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. AMS, TSL237 High-Sensitivity Light-to-Frequency Converter, disponível em https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf" target="_blank">
+        https://br.mouser.com/datasheet/2/588/TS...
+       </a>
+      </span>
+     </span>
+     ]. A menos que o luxímetro seja calibrado, o valor de
+     <i>
+      R
+     </i>
+     é arbitrário. Por simplicidade, foi utilizado o valor 2, 3 kHz/μlux, sugerido por Patrik [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. Patrik, Highly Sensitive Arduino Light Sensor, disponível em https://www.instructables.com/id/Highly-sensitive-Arduino-light-sensor/, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://www.instructables.com/id/Highly-sensitive-Arduino-light-sensor/" target="_blank">
+        https://www.instructables.com/id/Highly-...
+       </a>
+      </span>
+     </span>
+     ]. A rigor, numa equação similar à
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     relacionam-se as grandezas irradiância, frequência e responsividade.
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Irradiância é uma grandeza radiométrica, enquanto iluminância é sua equivalente fotométrica. As grandezas fotométricas são obtidas levando-se em conta uma função de eficiência luminosa espectral fotópica V(λ), definida pela Commission International de l’Éclairage (CIE), com o intuito de quantificar o efeito visual produzido pela radiação ótica como é percebida pelo olho humano. Ou seja, essencialmente considera somente a região visível do espectro eletromagnético.
+       </span>
+      </span>
+     </span>
+     Contudo, uma vez que serão utilizados valores relativos nos experimentos, que a responsividade espectral do fotodetector TSL237s-LF [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. AMS, TSL237 High-Sensitivity Light-to-Frequency Converter, disponível em https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf" target="_blank">
+        https://br.mouser.com/datasheet/2/588/TS...
+       </a>
+      </span>
+     </span>
+     ] não difere muito daquela do fotodetector no luxímetro PASCO
+     <sup>
+      ®
+     </sup>
+     OS-8020 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. PASCO, Instruction Sheet for the PASCO Model OS-8020, (1994).
+       </span>
+      </span>
+     </span>
+     ] e que os valores absolutos medidos pelos luxímetros comerciais só têm validade nos experimentos quando é utilizada a mesma fonte de sua calibração (normalmente esta é citada no manual e está presente nos kits comercializados), pode-se considerar a validade da equação
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     da maneira acima colocada.
+    </p>
+    <p>
+     Na sequência foi projetada uma placa de circuito impresso, em substituição ao protoboard, utilizando-se o software gratuito PCB Artist, conforme a Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     a. Para sua confecção foi utilizada uma placa virgem de circuito impresso, de fenolite e com face simples, dimensões 10, 2 cm ×9, 0 cm. Inicialmente, a superfície de cobre da placa foi limpa com uma esponja de lã de aço fina. O desenho do circuito, com suas trilhas e ilhas foi impresso em papel glossy numa impressora a laser comum. Em seguida, este desenho foi transferido para a placa usando o método térmico. Para isso colocou-se a face impressa do papel em contato com o cobre da placa e cobriu-se com um pedaço de papel sulfite. Passou-se com o ferro de passar roupa aquecido, fazendo leve pressão, de modo que o tonner do desenho ficasse aderido à placa. Esperou-se esfriar completamente, então o papel foi umedecido e depois retirado lentamente, deixando o tonner que compõe o desenho aderido à placa.
+    </p>
+    <div class="row fig" id="S3_F2">
+     <a name="S3_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YbJ6d8WssYGknWMpSHhsXJM/9434669406a2643acde40266de7b19c3f282f4c5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      a) Projeto da placa de circuito impresso feita no programa PCB Artist. b) Foto da placa de circuito impresso finalizada, com os componentes soldados a ela.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Feito isso, mergulhou-se a placa de fenolite com o circuito transferido numa solução de percloreto de ferro para ocorrer a corrosão das partes não cobertas do cobre. Terminada a corrosão, lavou-se a placa em água corrente. Mantendo-a molhada e usando uma esponja macia e sabão, o tonner foi removido deixando visível as trilhas de cobre. Após a placa estar seca, foram feitos os furos com uma mini-furadeira de mão. As trilhas de cobre foram limpas com uma esponja de aço fina até o metal ficar completamente exposto e, em seguida, foi aplicada uma demão de verniz caseiro preparado com breu e álcool isopropílico. Para finalizar foram soldados os componentes e pinos conectores conforme a Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     b.
+    </p>
+    <p>
+     Furos também foram feitos na caixa Patola
+     <sup>
+      ®
+     </sup>
+     usada para abrigar os componentes eletrônicos, botões, LEDs, display LCD e sensor TSL237s-LF. Optou-se por acoplar a entrada de luz do TSL237s-LF a uma conexão de fibra ótica usada na comunicação de áudio em DVDs. Isso permite uma certa mobilidade e flexibilidade na sonda de medição sem perda significativa de sensibilidade. Dessa forma, o TSL237s-LF foi adaptado a um conector BNC fêmea de painel e fixado à caixa Patola
+     <sup>
+      ®
+     </sup>
+     com cola instantânea Vonder e bicarbonato de sódio, como mostrado nas Figuras
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     a e
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     b. Para esta montagem foi necessário extrair a conexão elétrica e a parte isolante central do conector original. Uma das extremidades da fibra ótica foi fixada a um conector BNC macho, do qual também foram retirados o pino e o isolante central, como ilustrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     c. Com isso a fibra ótica pode ser facilmente conectada ao sensor TSL237s-LF. A sua outra extremidade, livre de conexões, se torna a sonda de medição. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     d mostra a caixa Patola
+     <sup>
+      ®
+     </sup>
+     fechada com todo o circuito dentro e o luxímetro finalizado pode ser observado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     e.
+    </p>
+    <div class="row fig" id="S3_F3">
+     <a name="S3_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YbJ6d8WssYGknWMpSHhsXJM/d29f6007ecc7dbdf43ccf2d3383bbef4362b30e5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      a) Fixação do TSL237s-LF junto a um conector BNC fêmea na caixa Patola®; b) visão exterior da conexão do TSL237s-LF; c) fibra óptica com o conector BNC macho para fácil acoplamento da sonda de medição; d) circuito e conexões internas do luxímetro finalizado; e) exterior do luxímetro finalizado.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Aplicação em Alguns Experimentos
+    </h1>
+    <p>
+     Como dito anteriormente, a motivação para a construção deste luxímetro é o levantamento experimental da intensidade da luz monocromática difratada por uma fenda única em função da posição com relação ao máximo central da difração. Usualmente o experimento da difração da luz visível em fenda única é conteúdo das disciplinas de laboratório dos cursos de graduação em Física e das Engenharias. Para facilitar a visualização e as medidas, é frequente o uso de lasers que produzem luz monocromática com intensidades razoáveis. Contudo, mesmo assim, é necessário um luxímetro suficientemente sensível para possibilitar a medida da intensidade luminosa, especialmente dos máximos secundários, cujas intensidades não chegam a 5% da intensidade do máximo central.
+    </p>
+    <p>
+     No caso mais simples, da difração da luz monocromática por um fenda única de geometria retangular, na qual uma das dimensões da abertura é muito maior que a outra, esta curva de intensidade é normalmente deduzida e apresentada nos livros didáticos de física básica, tendo uma forma matematicamente simples cuja expressão é dada por:
+    </p>
+    <div class="row formula" id="eS4_E2">
+     <a name="S4_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mfrac>
+          <mi>
+           I
+          </mi>
+          <msub>
+           <mi>
+            I
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              sin
+             </mi>
+             <mo>
+              ⁡
+             </mo>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mi>
+               α
+              </mi>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mrow>
+            <mi>
+             α
+            </mi>
+           </mfrac>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      I
+     </i>
+     é a intensidade luminosa,
+     <i>
+      I
+     </i>
+     <sub>
+      <i>
+       0
+      </i>
+     </sub>
+     é a intensidade luminosa do máximo central e α é dado por:
+    </p>
+    <div class="row formula" id="eS4_E3">
+     <a name="S4_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          α
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            π
+           </mi>
+           <mo>
+            ⋅
+           </mo>
+           <mi>
+            a
+           </mi>
+           <mo>
+            ⋅
+           </mo>
+           <mrow>
+            <mi>
+             sin
+            </mi>
+            <mo>
+             ⁡
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+          <mi>
+           λ
+          </mi>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      a
+     </i>
+     é a largura da fenda, λ é o comprimento de onda da luz difratada e θ é o ângulo formado entre o eixo óptico e a linha que conecta a abertura ou obstáculo ao ponto de observação. A verificação experimental desta expressão matemática pode ser facilmente realizada ao concentrar a análise em pontos próximos ao máximo central da figura de difração. Considerando ainda uma distância entre fenda e fibra ótica
+     <i>
+      L
+     </i>
+     muito maior que a distância entre o máximo central da figura de difração e a posição de observação
+     <i>
+      y
+     </i>
+     ,
+     <i>
+      L
+     </i>
+     &gt; &gt;
+     <i>
+      y
+     </i>
+     , pode-se fazer a aproximação
+     <i>
+      sin
+     </i>
+     ⁡(
+     <i>
+      θ
+     </i>
+     )≈
+     <i>
+      tan
+     </i>
+     ⁡(
+     <i>
+      θ
+     </i>
+     )≈
+     <i>
+      y
+     </i>
+     /
+     <i>
+      L
+     </i>
+     , o que leva à seguinte expressão para α, agora dependente diretamente de
+     <i>
+      y
+     </i>
+     :
+    </p>
+    <div class="row formula" id="eS4_E4">
+     <a name="S4_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          α
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <mi>
+             π
+            </mi>
+            <mo>
+             ⋅
+            </mo>
+            <mi>
+             a
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             L
+            </mi>
+            <mo>
+             ⋅
+            </mo>
+            <mi>
+             λ
+            </mi>
+           </mrow>
+          </mfrac>
+          <mo>
+           ⋅
+          </mo>
+          <mi>
+           y
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     o que faz com que a equação
+     <a class="open-asset-modal" data-target="#ModalSchemeS4_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     tome a seguinte forma:
+    </p>
+    <div class="row formula" id="eS4_E5">
+     <a name="S4_E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mfrac>
+          <mi>
+           I
+          </mi>
+          <msub>
+           <mi>
+            I
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              sin
+             </mi>
+             <mo>
+              ⁡
+             </mo>
+             <mrow>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mrow>
+               <mrow>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mrow>
+                  <mi>
+                   π
+                  </mi>
+                  <mo>
+                   ⋅
+                  </mo>
+                  <mi>
+                   a
+                  </mi>
+                 </mrow>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+                <mo>
+                 /
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mrow>
+                  <mi>
+                   L
+                  </mi>
+                  <mo>
+                   ⋅
+                  </mo>
+                  <mi>
+                   λ
+                  </mi>
+                 </mrow>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <mo>
+                ⋅
+               </mo>
+               <mi>
+                y
+               </mi>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </mrow>
+            </mrow>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 π
+                </mi>
+                <mo>
+                 ⋅
+                </mo>
+                <mi>
+                 a
+                </mi>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               /
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 L
+                </mi>
+                <mo>
+                 ⋅
+                </mo>
+                <mi>
+                 λ
+                </mi>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+             </mrow>
+             <mo>
+              ⋅
+             </mo>
+             <mi>
+              y
+             </mi>
+            </mrow>
+           </mfrac>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Assim, tem-se uma expressão que relaciona diretamente a intensidade luminosa em função da posição para a figura de difração obtida.
+    </p>
+    <p>
+     Como forma de verificar se o luxímetro construído pode substituir o PASCO
+     <sup>
+      ®
+     </sup>
+     OS-8020 nas aulas, foi montado o experimento “Difração da Luz em Fenda Única”. Neste experimento, apresentado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     a e realizado numa sala escura, luz com comprimento de onda 633 nm proveniente de um laser de He-Ne JDSU modelo 1508-1 e potência &lt;1 mW [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12. JDSU, JDSU Helium-Neon gas laser, disponível em https://www.laser2000.de/en/gas-lasers/248-jdsu-helium-neon-gas-laser.html, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://www.laser2000.de/en/gas-lasers/248-jdsu-helium-neon-gas-laser.html" target="_blank">
+        https://www.laser2000.de/en/gas-lasers/2...
+       </a>
+      </span>
+     </span>
+     ] incide numa fenda de largura nominal igual a 0,04 mm PASCO
+     <sup>
+      ®
+     </sup>
+     OS-8850 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13. PASCO, Diffraction Plate OS-8850, disponível em https://www.pasco.com/products/lab-apparatus/light-and-optics/diffraction/os-8850, acessado em 23/11/2020.
+       </span>
+       <br/>
+       <a href="https://www.pasco.com/products/lab-apparatus/light-and-optics/diffraction/os-8850" target="_blank">
+        https://www.pasco.com/products/lab-appar...
+       </a>
+      </span>
+     </span>
+     ], cuja figura de difração é projetada sobre um suporte da sonda de fibra óptica a 0, 5 m de distância. Todo o experimento é montado num trilho óptico. Inicialmente, acopla-se a fibra óptica ao luxímetro e a um transladador horizontal em sua posição central. O transladador é capaz de medir a posição da fibra óptica num intervalo de aproximadamente 50 mm, com precisão de 1 mm. Dessa maneira, é possível medir a intensidade luminosa em função da posição da fibra ótica. Em seguida, a fonte laser é posicionada no trilho óptico a uma distância de 70 cm da fibra óptica. O laser é ligado e ajustado para incidir diretamente sobre a fibra óptica. Com isso, o máximo central da difração coincide com esta posição, medida no transladador. Assim, é possível obter tanto uma curva simétrica com relação ao máximo central quanto a iluminância dos dois primeiros máximos secundários. Entre o laser e a fibra óptica é inserida a fenda única, a uma distância de 50 cm desta última, ajustando-a de tal forma a se obter uma figura de difração orientada horizontalmente. Isto permite que a fibra óptica possa percorrê-la. Na sequência, com o laser desligado, é feita a medida residual para descontar contribuições da luz ambiente. Liga-se novamente o laser e, a partir deste momento, medidas da iluminância da luz difratada são feitas transladando-se a fibra óptica de 2 mm em 2 mm, até que percorra todo seu trajeto disponível conforme a Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     b.
+    </p>
+    <div class="row fig" id="S4_F4">
+     <a name="S4_F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YbJ6d8WssYGknWMpSHhsXJM/7a4993d0cce3981e218a2e129bfbd632f0ddb421.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      a) Foto da montagem experimental utilizada; b) detalhe da figura de difração incidindo sobre o suporte com a fibra óptica, a qual pode se movimentar horizontalmente.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Uma vez coletados todos os dados, dividem-se os valores da iluminância pelo valor máximo medido, obtendo-se assim uma medida relativa em função da posição. Os resultados obtidos são apresentados na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     , onde o valor de posição zero foi arbitrariamente escolhido como o ponto de máxima iluminância.
+    </p>
+    <div class="row fig" id="S4_F5">
+     <a name="S4_F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YbJ6d8WssYGknWMpSHhsXJM/30b6d545c957508a6e9fec73088bc9b6d94b010e.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Curva de intensidade relativa em função da posição. Os pontos sólidos circulares são as medidas experimentais e a linha tracejada é o ajuste teórico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A linha tracejada na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     é o ajuste da curva teórica representada pela equação
+     <a class="open-asset-modal" data-target="#ModalSchemeS4_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     , de onde é possível extrair o valor da largura da fenda. Para realizar este ajuste, foi considerada a seguinte equação no processo de regressão por mínimos quadrados:
+    </p>
+    <div class="row formula" id="eS4_E6">
+     <a name="S4_E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           I
+          </mi>
+          <mo>
+           /
+          </mo>
+          <msub>
+           <mi>
+            I
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi mathvariant="normal">
+           A
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mi mathvariant="normal">
+            B
+           </mi>
+           <mo>
+            ⋅
+           </mo>
+           <msup>
+            <mrow>
+             <mo>
+              [
+             </mo>
+             <mfrac>
+              <mrow>
+               <mi>
+                sin
+               </mi>
+               <mo>
+                ⁡
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mrow>
+                 <mi mathvariant="normal">
+                  C
+                 </mi>
+                 <mo>
+                  ⋅
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mrow>
+                   <mi>
+                    y
+                   </mi>
+                   <mo>
+                    +
+                   </mo>
+                   <mi mathvariant="normal">
+                    D
+                   </mi>
+                  </mrow>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+              <mrow>
+               <mi mathvariant="normal">
+                C
+               </mi>
+               <mo>
+                ⋅
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mrow>
+                 <mi>
+                  y
+                 </mi>
+                 <mo>
+                  +
+                 </mo>
+                 <mi mathvariant="normal">
+                  D
+                 </mi>
+                </mrow>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mfrac>
+             <mo>
+              ]
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde A, B, C e D são constantes a determinar.
+    </p>
+    <p>
+     A constante A ajusta o valor mínimo de intensidade de luz no ambiente e é esperado que seja o mais próximo de zero. O botão para leitura de intensidade residual permite a obtenção de valores bem baixos para A. A constante B ajusta o valor máximo da intensidade que, neste caso de intensidade relativa, é esperado que seja próximo a um. O valor da constante D ajusta a posição em que ocorre o máximo de intensidade relativa, esperado próximo a zero. Como a intensidade é normalizada utilizando os pontos experimentais, é possível que B tenha uma leve diferença da unidade e D uma leve diferença do zero, implicando que o valor máximo da intensidade relativa ajustada não se encontra na posição zero e, consequentemente, é maior que a unidade. Finalmente, a constante C depende do sistema e é a partir de seu valor que se pode calcular a largura da fenda, uma vez que ela representa a seguinte expressão:
+    </p>
+    <div class="row formula" id="eS4_E7">
+     <a name="S4_E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi mathvariant="normal">
+          C
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            π
+           </mi>
+           <mo>
+            ⋅
+           </mo>
+           <mi>
+            a
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            L
+           </mi>
+           <mo>
+            ⋅
+           </mo>
+           <mi>
+            λ
+           </mi>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os valores obtidos são:
+    </p>
+    <div class="row formula" id="eS4_E8">
+     <a name="S4_E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi mathvariant="normal">
+          A
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mrow>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+            <mo>
+             ±
+            </mo>
+            <mn>
+             4
+            </mn>
+           </mrow>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+          <mo>
+           ×
+          </mo>
+          <msup>
+           <mn>
+            10
+           </mn>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mn>
+             3
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_E9">
+     <a name="S4_E9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi mathvariant="normal">
+          B
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mrow>
+           <mn>
+            03
+           </mn>
+           <mo>
+            ±
+           </mo>
+           <mn>
+            0
+           </mn>
+          </mrow>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           01
+          </mn>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_E10">
+     <a name="S4_E10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi mathvariant="normal">
+          C
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mrow>
+            <mn>
+             413
+            </mn>
+            <mo>
+             ±
+            </mo>
+            <mn>
+             4
+            </mn>
+           </mrow>
+           <mo rspace="3.9pt" stretchy="false">
+            )
+           </mo>
+          </mrow>
+          <mo>
+           ⁢
+          </mo>
+          <msup>
+           <mi mathvariant="normal">
+            m
+           </mi>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_E11">
+     <a name="S4_E11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi mathvariant="normal">
+          D
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mrow>
+             <mn>
+              47
+             </mn>
+             <mo>
+              ±
+             </mo>
+             <mn>
+              3
+             </mn>
+            </mrow>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ×
+           </mo>
+           <mpadded width="+1.4pt">
+            <msup>
+             <mn>
+              10
+             </mn>
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mn>
+               4
+              </mn>
+             </mrow>
+            </msup>
+           </mpadded>
+          </mrow>
+          <mo>
+           ⁢
+          </mo>
+          <mi mathvariant="normal">
+           m
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A largura da fenda obtida dessa forma é igual a 0,04158 mm, uma variação percentual de apenas 3,9% se comparado com o valor nominal.
+    </p>
+    <p>
+     Para verificar sua viabilidade nas demais atividades do laboratório didático, o luxímetro construído foi utilizado também nos experimentos que tratam sobre a polarização da luz e a lei fotométrica da distância. No primeiro, é verificada experimentalmente a Lei de Malus, que descreve como a intensidade
+     <i>
+      I
+     </i>
+     da luz transmitida através de dois polarizadores depende do ângulo θ entre seus eixos de polarização. Matematicamente, a Lei de Malus é expressa como:
+    </p>
+    <div class="row formula" id="eS4_E12">
+     <a name="S4_E12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          I
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            I
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+          <mo>
+           ⋅
+          </mo>
+          <mrow>
+           <msup>
+            <mi>
+             cos
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            ⁡
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             θ
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      I
+     </i>
+     <sub>
+      <i>
+       0
+      </i>
+     </sub>
+     será considerada como a intensidade máxima da luz emergente no segundo polarizador. A figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     mostra o gráfico obtido a partir da coleta de dados realizada utilizando-se o luxímetro construído, utilizando-se como fonte de luz uma lâmpada LED branca.
+    </p>
+    <div class="row fig" id="S4_F6">
+     <a name="S4_F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YbJ6d8WssYGknWMpSHhsXJM/158ef24cf5630e7f2635107451d6a34adaa50122.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Curva de intensidade relativa em função do ângulo entre os eixos de polarização dos dois polarizadores. Os pontos sólidos circulares são as medidas experimentais e a linha tracejada é o ajuste teórico para a Lei de Malus.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O ajuste aos dados experimentais foi feito através da seguinte equação:
+    </p>
+    <div class="row formula" id="eS4_E13">
+     <a name="S4_E13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           I
+          </mi>
+          <mo>
+           /
+          </mo>
+          <msub>
+           <mi>
+            I
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msup>
+           <mi mathvariant="normal">
+            A
+           </mi>
+           <mo>
+            ′
+           </mo>
+          </msup>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <msup>
+            <mi mathvariant="normal">
+             B
+            </mi>
+            <mo>
+             ′
+            </mo>
+           </msup>
+           <mo>
+            ⋅
+           </mo>
+           <mrow>
+            <msup>
+             <mi>
+              cos
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+            <mo>
+             ⁡
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mi>
+               θ
+              </mi>
+              <mo>
+               +
+              </mo>
+              <msup>
+               <mi mathvariant="normal">
+                C
+               </mi>
+               <mo>
+                ′
+               </mo>
+              </msup>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde A’, B’ e C’ são constantes e suas interpretações são muito similares ao discutido no experimento anterior. A constante A′ também ajusta o valor mínimo de intensidade e é esperado que seja o mais próximo possível de zero. A constante B′ também ajusta o valor máximo da intensidade que, neste caso de intensidade relativa, é esperado que seja próximo a um. A constante C′ ajusta a posição angular em que ocorre o máximo de intensidade relativa, esperada próxima a zero. Os valores obtidos são:
+    </p>
+    <div class="row formula" id="eS4_E14">
+     <a name="S4_E14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block">
+        <mrow>
+         <msup>
+          <mi mathvariant="normal">
+           A
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mo>
+            -
+           </mo>
+           <mn>
+            0
+           </mn>
+          </mrow>
+          <mo>
+           ,
+          </mo>
+          <mrow>
+           <mn>
+            020
+           </mn>
+           <mo>
+            ±
+           </mo>
+           <mn>
+            0
+           </mn>
+          </mrow>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           008
+          </mn>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_E15">
+     <a name="S4_E15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block">
+        <mrow>
+         <msup>
+          <mi mathvariant="normal">
+           B
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mrow>
+           <mn>
+            01
+           </mn>
+           <mo>
+            ±
+           </mo>
+           <mn>
+            0
+           </mn>
+          </mrow>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           02
+          </mn>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_E16">
+     <a name="S4_E16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block">
+        <mrow>
+         <msup>
+          <mi mathvariant="normal">
+           C
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mrow>
+            <mo>
+             -
+            </mo>
+            <mn>
+             2
+            </mn>
+           </mrow>
+           <mo>
+            ,
+           </mo>
+           <mrow>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ±
+            </mo>
+            <mn>
+             0
+            </mn>
+           </mrow>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            4
+           </mn>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+          <mo>
+           ∘
+          </mo>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Finalmente, no experimento para verificar a lei fotométrica da distância, a iluminância é medida em função da distância entre a fonte e fotodetector, sendo que a dependência entre elas é dada por:
+    </p>
+    <div class="row formula" id="eS4_E17">
+     <a name="S4_E17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          E
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mi>
+           I
+          </mi>
+          <msup>
+           <mi>
+            r
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msup>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      E
+     </i>
+     é a iluminância,
+     <i>
+      I
+     </i>
+     é a intensidade luminosa da lâmpada e
+     <i>
+      r
+     </i>
+     é a distância entre fonte e detector. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     apresenta os resultados obtidos das medidas utilizando-se uma lâmpada incandescente como fonte, assim como a linearização e o ajuste de reta obtidos a partir dos dados experimentais.
+    </p>
+    <div class="row fig" id="S4_F7">
+     <a name="S4_F7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/YbJ6d8WssYGknWMpSHhsXJM/407ea86f37812b122e9ae78bb016bebce7c7e1ab.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Curva linearizada de iluminância em função da posição. Os pontos sólidos circulares são as medidas experimentais e a linha tracejada é o ajuste linear.
+      <br/>
+     </div>
+    </div>
+    <p>
+     É possível observar que os dados obtidos são consistentes. O ajuste dos dados experimentais linearizados foi feito através da seguinte equação:
+    </p>
+    <div class="row formula" id="eS4_E18">
+     <a name="S4_E18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          E
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msup>
+           <mi mathvariant="normal">
+            A
+           </mi>
+           <mo>
+            ″
+           </mo>
+          </msup>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <msup>
+            <mi mathvariant="normal">
+             B
+            </mi>
+            <mo>
+             ″
+            </mo>
+           </msup>
+           <mo>
+            ⋅
+           </mo>
+           <msup>
+            <mi>
+             r
+            </mi>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msup>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde A″ e B″ são constantes, cujos valores obtidos são:
+    </p>
+    <div class="row formula" id="eS4_E19">
+     <a name="S4_E19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block">
+        <mrow>
+         <msup>
+          <mi mathvariant="normal">
+           A
+          </mi>
+          <mo>
+           ″
+          </mo>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mrow>
+            <mn>
+             174
+            </mn>
+            <mo>
+             ±
+            </mo>
+            <mn>
+             0
+            </mn>
+           </mrow>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            009
+           </mn>
+           <mo rspace="3.9pt" stretchy="false">
+            )
+           </mo>
+          </mrow>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           lux
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eS4_E20">
+     <a name="S4_E20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <math display="block">
+        <mrow>
+         <msup>
+          <mi mathvariant="normal">
+           B
+          </mi>
+          <mo>
+           ″
+          </mo>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mrow>
+            <mn>
+             1235
+            </mn>
+            <mo>
+             ±
+            </mo>
+            <mn>
+             0
+            </mn>
+           </mrow>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            0004
+           </mn>
+           <mo rspace="3.9pt" stretchy="false">
+            )
+           </mo>
+          </mrow>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           lm
+          </mi>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Do coeficiente angular, pode-se calcular o valor da intensidade luminosa da lâmpada, lembrando que este valor não deve ser o real devido ao luxímetro não estar calibrado.
+    </p>
+    <p>
+     Finalmente, conclui-se que o luxímetro construído atende as necessidades do laboratório didático de física experimental voltado a experimentos de Óptica. Além disso, o equipamento tem custo relativamente baixo, sua manutenção não necessita mão-de-obra especializada e pode ser excelente exercício de instrumentação científica para a graduação em Física.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusões
+    </h1>
+    <p>
+     Ao se trabalhar com a experiência “Difração da Luz” no laboratório didático de física experimental, há a necessidade de utilização de instrumentos sensíveis para a medição e análise quantitativa da luz difratada, particularmente luxímetros. Tendo como objetivo a construção de um luxímetro baseado em plataforma aberta Arduino, verificou-se que o mesmo atende aos requisitos necessários para sua aplicação neste experimento trabalhado em sala de aula, possibilitando a substituição de luxímetros comerciais em final de vida útil. Dessa forma, além de custos mais baixos de aquisição e manutenção, sua construção torna-se um excelente exercício de instrumentação a alunos de graduação tanto em Física quanto em Engenharias. Adicionalmente, o equipamento construído foi utilizado em outros experimentos que envolvem luxímetro: “Lei de Malus” e “Lei Fotométrica da Distância”. Conclui-se, deste trabalho, que o luxímetro construído utilizando o fotodetector TSL237s-LF e plataforma Arduino atende às necessidades do laboratório didático direcionado a experimentos de Óptica em nível dos cursos de graduação em Física e Engenharias. O equipamento é suficientemente preciso para medir intensidades luminosas até o segundo máximo secundário da curva de difração de luz laser em fenda única, assim como permite a verificação da Lei de Malus em polarizadores e a Lei Fotométrica da Distância utilizando fontes de luz convencionais. Assim, o luxímetro construído pode ser utilizado em sala de aula, em substituição a luxímetros comerciais mais custosos tanto na aquisição quanto na manutenção.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores gostariam de agradecer ao Conselho Nacional de Desenvolvimento Científico e Tecnológico – CNPq, através do Programa Institucional de Bolsas de Iniciação Tecnológica – PIBITI.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     REFERÊNCIAS
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1.
+       </sup>
+       <div>
+        H.D. Young e R.A. Freedman,
+        <i>
+         Física IV: Ótica e Física Moderna
+        </i>
+        (Pearson Universidades, São Paulo, 2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2.
+       </sup>
+       <div>
+        J.L.P. Ribeiro e M.F.S. Verdeaux, Rev. Bras. Ens. Fis.
+        <b>
+         34
+        </b>
+        , 1 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3.
+       </sup>
+       <div>
+        E. Hecht,
+        <i>
+         Optics
+        </i>
+        (Addison-Wesley, New York, 2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4.
+       </sup>
+       <div>
+        PASCO,
+        <i>
+         Instruction Sheet for the PASCO Model OS-8020
+        </i>
+        , (1994).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5.
+       </sup>
+       <div>
+        M. Moreira, M. Romeu, F.R. Alves e F.R. da Silva, Cad. Bras. Ens. Fís.
+        <b>
+         35
+        </b>
+        , 721 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        6.
+       </sup>
+       <div>
+        L.S. Pedroso, J.A. Macêdo, M.S.T de Araújo e M.R. Voelzke, Rev. Bras. Ens. Fis.
+        <b>
+         38
+        </b>
+        , e2503 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        7.
+       </sup>
+       <div>
+        Patrik,
+        <i>
+         Highly Sensitive Arduino Light Sensor
+        </i>
+        , disponível em https://www.instructables.com/id/Highly-sensitive-Arduino-light-sensor/, acessado em 23/11/2020.
+        <br/>
+        <a href="https://www.instructables.com/id/Highly-sensitive-Arduino-light-sensor/" target="_blank">
+         » https://www.instructables.com/id/Highly-sensitive-Arduino-light-sensor/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        8.
+       </sup>
+       <div>
+        AMS,
+        <i>
+         TSL237 High-Sensitivity Light-to-Frequency Converter
+        </i>
+        , disponível em https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf, acessado em 23/11/2020.
+        <br/>
+        <a href="https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf" target="_blank">
+         » https://br.mouser.com/datasheet/2/588/TSL237_DS000156_3-00-1513434.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        9.
+       </sup>
+       <div>
+        D.A. Johnson,
+        <i>
+         Light to Frequency converter circuit
+        </i>
+        , disponível em http://www.circuitstoday.com/light-to-frequency-converter-circuit, acessado em 23/11/2020.
+        <br/>
+        <a href="http://www.circuitstoday.com/light-to-frequency-converter-circuit" target="_blank">
+         » http://www.circuitstoday.com/light-to-frequency-converter-circuit
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        10.
+       </sup>
+       <div>
+        D.A. Johnson,
+        <i>
+         Light to Frequency converter circuit
+        </i>
+        , disponível em http://www.discovercircuits.com/H-Corner/lite-freq-con.htm, acessado em 23/11/2020.
+        <br/>
+        <a href="http://www.discovercircuits.com/H-Corner/lite-freq-con.htm" target="_blank">
+         » http://www.discovercircuits.com/H-Corner/lite-freq-con.htm
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        11.
+       </sup>
+       <div>
+        M.V. Klein e T.E. Furtak,
+        <i>
+         Optics
+        </i>
+        (John Wiley and Sons, New York, 1986).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        12.
+       </sup>
+       <div>
+        JDSU,
+        <i>
+         JDSU Helium-Neon gas laser
+        </i>
+        , disponível em https://www.laser2000.de/en/gas-lasers/248-jdsu-helium-neon-gas-laser.html, acessado em 23/11/2020.
+        <br/>
+        <a href="https://www.laser2000.de/en/gas-lasers/248-jdsu-helium-neon-gas-laser.html" target="_blank">
+         » https://www.laser2000.de/en/gas-lasers/248-jdsu-helium-neon-gas-laser.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        13.
+       </sup>
+       <div>
+        PASCO,
+        <i>
+         Diffraction Plate OS-8850
+        </i>
+        , disponível em https://www.pasco.com/products/lab-apparatus/light-and-optics/diffraction/os-8850, acessado em 23/11/2020.
+        <br/>
+        <a href="https://www.pasco.com/products/lab-apparatus/light-and-optics/diffraction/os-8850" target="_blank">
+         » https://www.pasco.com/products/lab-apparatus/light-and-optics/diffraction/os-8850
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Irradiância é uma grandeza radiométrica, enquanto iluminância é sua equivalente fotométrica. As grandezas fotométricas são obtidas levando-se em conta uma função de eficiência luminosa espectral fotópica
+        <i>
+         V
+        </i>
+        (
+        <i>
+         λ
+        </i>
+        ), definida pela Commission International de l’Éclairage (CIE), com o intuito de quantificar o efeito visual produzido pela radiação ótica como é percebida pelo olho humano. Ou seja, essencialmente considera somente a região visível do espectro eletromagnético.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        26 Fev 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        04 Dez 2020
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        16 Jan 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        25 Jan 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

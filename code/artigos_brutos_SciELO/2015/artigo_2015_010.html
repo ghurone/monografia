@@ -1,0 +1,6532 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ens.
+                    Fis. 37 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Jan-Mar 2015
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173711701" target="_blank">
+    https://doi.org/10.1590/S1806-11173711701
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173711701">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 3.0 " data-toggle="tooltip">
+  </span>
+  Entendendo a entropia de von Neumann
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Understanding von Neumann’s entropy
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Jonas Maziero
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     1E-mail:
+     <a href="mailto:jonas.maziero@ufsm.br">
+      jonas.maziero@ufsm.br
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Revisamos os postulados da mecânica quântica necessários para discutir a entropia
+                    de von Neumann, que é introduzida como uma generalização da entropia de Shannon
+                    e propomos um jogo simples que facilita o entendimento do seu significado
+                    físico.
+    </p>
+    <p>
+     mecânica quântica; operador densidade; entropia de von Neumann
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We review the postulates of quantum mechanics that are needed to discuss von
+                    Neumann’s entropy. We introduce it as a generalization of Shannon’s entropy and
+                    propose a simple game that makes it easier to understand itd physical
+                    meaning.
+    </p>
+    <p>
+     quantum mechanics; density operator; von Neumann’s entropy
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    1.
+    <h1 class="articleSectionTitle">
+     Introdução
+    </h1>
+    <p>
+     A entropia é uma função de estado de fundamental importância em física, em teoria da
+                informação e em várias outras áreas da ciência esteadas nestas duas. A entropia é,
+                em geral, primeiramente introduzida de maneira fenomenológica no contexto da
+                termodinâmica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       [1]
+       <span>
+        H.C. Van Ness, Understanding Themodynamics (Dover
+                    Publications, Nova York, 1983).
+       </span>
+      </span>
+     </span>
+     ]. Em mecânica estatística, a
+                entropia é obtida usando teoria de probabilidades em conjunção com as leis dinâmicas
+                que governam o movimento dos constituintes microscópicos do sistema [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       [2]
+       <span>
+        S.R.A. Salinas, Introdução à Física Estatística
+                    (Edusp, São Paulo, 2013).
+       </span>
+      </span>
+     </span>
+     ]. Investigações sobre a entropia geraram um
+                longa e interessante história, deixando pelo caminho algumas controversas e questões
+                em aberto. Para mais discussões sobre esses aspectos históricos, fundamentais e
+                também sobre temas atuais de pesquisa relacionados ao assunto, indicamos ao leitor
+                as seguintes referências bibliográficas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       [3]
+       <span>
+        J. von Neumann and R. Tumulka Eur. Phys. J. 35, 201
+                    (2010).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       [5]
+       <span>
+        E.T. Jaynes, Phys. Rev. 106, 620
+                    (1957).
+       </span>
+      </span>
+     </span>
+     ]. Neste artigo focaremos
+                nossa atenção na definição para a entropia fornecida no contexto do formalismo
+                matemático da mecânica quântica (MQ). Na sequência apresentamos uma breve revisão
+                sobre a MQ, com ênfase especial em aspectos necessários e motivacionais para a
+                introdução da entropia de von Neumann como uma medida de falta de conhecimento, ou
+                de incerteza, no contexto de preparações e testes. Por fim, introduzimos um jogo
+                simples que ajuda na compreensão dessa função.
+    </p>
+    2.
+    <h1 class="articleSectionTitle">
+     Postulados da mecânica quântica
+    </h1>
+    2.1
+    <h2>
+     Postulados dos estados
+    </h2>
+    <p>
+     Para descrever um certo sistema físico, começamos associando a ele um
+     <i>
+      espaço de Hilbert
+     </i>
+     , que, para nossas propostas nesse artigo,
+                    nada mais é do que o espaço vetorial formado por todas as listas com
+     <i>
+      n
+     </i>
+     números complexos, conhecido como
+                        ℂ
+     <i>
+      <sup>
+       n
+      </sup>
+     </i>
+     , com uma função produto interno bem definida
+                        [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       [16]
+       <span>
+        D.J. Griffiths, Mecânica Quântica (Pearson
+                    Education, São Paulo, 2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       [17]
+       <span>
+        A.F.R. de Toledo Piza, Mecânica Quântica (Edusp,
+                    São Paulo, 2009).
+       </span>
+      </span>
+     </span>
+     ]. O próximo passo é associar cada estado, ou configuração,
+                    possível do sistema com um único vetor de ℂ
+     <i>
+      <sup>
+       n
+      </sup>
+     </i>
+     . Aqui
+                    usaremos a notação de Dirac para estes vetores, ou seja, para
+     <b>
+      z
+     </b>
+     ∈
+                            ℂ
+     <i>
+      <sup>
+       n
+      </sup>
+     </i>
+     , denotaremos
+    </p>
+    <div class="row formula" id="ee01">
+     <a name="e01">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           z
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          ≡
+         </mo>
+         <mi mathvariant="bold">
+          z
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+               </msub>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mo>
+               ⋮
+              </mo>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+               </msub>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    ou seja,
+                        |
+    <i>
+     z
+    </i>
+    〉 é uma matriz coluna. É frequente também a utilização da
+                    adjunta (transposta conjugada) dessa matriz, que escreveremos como
+    <div class="row formula" id="ee02">
+     <a name="e02">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+          <mi>
+           z
+          </mi>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <mo>
+          ≡
+         </mo>
+         <msup>
+          <mrow>
+           <mrow>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <mi>
+              z
+             </mi>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+          <mo>
+           †
+          </mo>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mo>
+               ⋯
+              </mo>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    que é uma
+                    matriz linha.
+    <p>
+     A
+     <i>
+      função produto interno
+     </i>
+     entre dois vetores quaisquer
+                        |
+     <i>
+      z
+     </i>
+     〉, |
+     <i>
+      w
+     </i>
+     〉 ∈ ℂ
+     <i>
+      <sup>
+       n
+      </sup>
+     </i>
+     ,
+                    comentada anteriormente, é denotada por 〈
+     <i>
+      z
+     </i>
+     |
+     <i>
+      w
+     </i>
+     〉
+                    e é definida como o seguinte produto de matrizes
+    </p>
+    <div class="row formula" id="ee03">
+     <a name="e03">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mrow>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+          <mrow>
+           <mi>
+            z
+           </mi>
+           <mo>
+            |
+           </mo>
+           <mi>
+            w
+           </mi>
+          </mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          ≡
+         </mo>
+         <msup>
+          <mrow>
+           <mrow>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <mi>
+              z
+             </mi>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+          <mo>
+           †
+          </mo>
+         </msup>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           w
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mo>
+               ⋯
+              </mo>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+         </mo>
+         <mo>
+         </mo>
+         <mo>
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+               </msub>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mo>
+               ⋮
+              </mo>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+               </msub>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           n
+          </mi>
+         </munderover>
+         <mrow>
+          <msubsup>
+           <mrow>
+            <mi>
+             z
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            *
+           </mo>
+          </msubsup>
+          <msub>
+           <mrow>
+            <mi>
+             w
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Note que se trocarmos a ordem das matrizes no produto interno da última equação
+                    não teremos mais um número complexo, mas sim uma matriz
+     <i>
+      n
+     </i>
+     ×
+     <i>
+      n
+     </i>
+    </p>
+    <div class="row formula" id="ee04">
+     <a name="e04">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           w
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <msup>
+          <mrow>
+           <mrow>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <mi>
+              z
+             </mi>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+          <mo>
+           †
+          </mo>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           w
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+         </mo>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+          <mi>
+           z
+          </mi>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+               </msub>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mo>
+               ⋯
+              </mo>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+               </msub>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mo>
+               ⋮
+              </mo>
+             </mtd>
+             <mtd>
+              <mo>
+               ⋱
+              </mo>
+             </mtd>
+             <mtd>
+              <mo>
+               ⋮
+              </mo>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+               </msub>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mo>
+               ⋯
+              </mo>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+               </msub>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  z
+                 </mi>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+                <mo>
+                 *
+                </mo>
+               </msubsup>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    Este tipo de
+                    produto de matrizes, conhecido como
+    <i>
+     produto externo
+    </i>
+    , será
+                    utilizado na sequência para discutirmos a descrição de observáveis em MQ e
+                    também quando introduzirmos o operador (ou matriz) densidade para descrever o
+                    estado de um sistema.
+      
+      
+        2.2
+    <h2>
+     Postulado das medidas
+    </h2>
+    <p>
+     Este postulado nos fornece uma regra para calcular as probabilidades (as chances)
+                    de obtermos um certo valor de um observável quando montamos um experimento capaz
+                    de discernir entre seus possíveis valores. Do ponto de vista matemático, um
+                    observável é representado por um operador linear e hermitiano
+     <i>
+      Ô
+     </i>
+     , o que garante que este pode ser escrito na forma de uma
+                    decomposição espectral:
+     <math display="inline" id="m5">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         O
+        </mi>
+        <mo>
+         ^
+        </mo>
+       </mover>
+       <mo>
+        =
+       </mo>
+       <msubsup>
+        <mo>
+         ∑
+        </mo>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         n
+        </mi>
+       </msubsup>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           o
+          </mi>
+         </mrow>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             o
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          〉
+         </mo>
+        </mrow>
+        <mo>
+        </mo>
+        <mrow>
+         <mo>
+          〈
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             o
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          |
+         </mo>
+        </mrow>
+       </mrow>
+      </mrow>
+     </math>
+     ,
+                    com seus autovalores sendo números reais (
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     ∈ ℝ) e
+                    seus autovetores, normalizados, correspondentes a autovalores diferentes sendo
+                    ortogonais (〈
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     |
+     <i>
+      o
+      <sub>
+       j
+      </sub>
+     </i>
+     〉 =
+     <i>
+      δ
+      <sub>
+       ij
+      </sub>
+     </i>
+     ). Por simplicidade, consideramos somente
+                    espectros discretos e não degenerados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       [18]
+       <span>
+        G.B. Arfken and H.J. Weber, Mathematical Methods for
+                        Physicists (Elsevier, California, 2005).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Na MQ não há, em geral, como prever de antemão qual valor
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     será obtido em uma medida (em um teste) do
+                    observável
+     <i>
+      Ô
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       [19]
+       <span>
+        M. Bell, K. Gottfried and M. Veltman, John Bell on The
+                        Foundations of Quantum Mechanics (World Scientific, Singapura,
+                    2001).
+       </span>
+      </span>
+     </span>
+     ]. O que
+                    podemos computar é a probabilidade condicional de obter
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     quando o sistema foi preparado no estado
+                        |
+     <i>
+      z
+     </i>
+     〉. Para esse propósito usamos a
+     <i>
+      regra de
+                        Born
+     </i>
+    </p>
+    <div class="row formula" id="ee05">
+     <a name="e05">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <mtext>
+          Pr
+         </mtext>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              o
+             </mi>
+            </mrow>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mo>
+            |
+           </mo>
+           <mi mathvariant="bold">
+            z
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          ≡
+         </mo>
+         <msup>
+          <mrow>
+           <mrow>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <mrow>
+              <mrow>
+               <mo>
+                〈
+               </mo>
+               <mrow>
+                <mi>
+                 z
+                </mi>
+                <mo>
+                 |
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   o
+                  </mi>
+                 </mrow>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+               </mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+             <mo>
+              |
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Vocês devem estar se perguntando: Mas como determinamos que o sistema está
+                    preparado no estado |
+     <i>
+      z
+     </i>
+     〉? Aqui entra o papel fundamental do
+                    conceito de
+     <i>
+      preparações e testes
+     </i>
+     , enfatizado por Asher Peres em
+                    seu livro sobre MQ [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       [20]
+       <span>
+        A. Peres, Quantum Theory: Concepts and Methods
+                    (Kluwer Academic Publishers, Nova York, 2002).
+       </span>
+      </span>
+     </span>
+     ]. Um padrão
+                    importante que percebemos observando o que ocorre em experimentos é que se
+                    fizermos medidas subsequentes, uma imediatamente depois da outra, obteremos
+                    sempre o mesmo valor para o observável. Então, quando dizemos que o estado no
+                    qual o sistema foi preparado é |
+     <i>
+      z
+     </i>
+     〉, queremos dizer que um certo
+                    observável foi medido e que se obteve o valor dele correspondente ao seu
+                    autovetor |
+     <i>
+      z
+     </i>
+     〉. Ou seja,
+     <i>
+      o estado quântico de um sistema
+                        representa o conhecimento (a informação) que possuímos acerca de sua
+                        preparação
+     </i>
+     . Usando essa informação, e a regra de Born, podemos
+                    fazer previsões sobre medidas (testes) de outros observáveis.
+    </p>
+    2.3
+    <h2>
+     Princípio de superposição
+    </h2>
+    <p>
+     Este princípio é uma consequência imediata da estrutura do espaço de estados
+                    usado na MQ. Note que o conjunto de autovetores de qualquer observável de um
+                    certo sistema físico forma uma base para ℂ
+     <i>
+      <sup>
+       n
+      </sup>
+     </i>
+     , pois
+                    qualquer vetor desse espaço vetorial pode ser escrito como uma combinação linear
+                    (uma superposição) desses vetores,
+     <i>
+      i.e.
+     </i>
+     ,
+    </p>
+    <div class="row formula" id="ee06">
+     <a name="e06">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m7">
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           z
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           n
+          </mi>
+         </munderover>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             c
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               o
+              </mi>
+             </mrow>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    com
+    <i>
+     c
+     <sub>
+      i
+     </sub>
+    </i>
+    = 〈
+    <i>
+     o
+     <sub>
+      i
+     </sub>
+    </i>
+    |
+    <i>
+     z
+    </i>
+    〉 ∈ ℂ. Para um número muito
+                    grande de medidas do observável
+    <i>
+     Ô
+    </i>
+    , as probabilidades fornecidas
+                    pela regra de Born,
+                        |〈
+    <i>
+     z
+    </i>
+    |
+    <i>
+     o
+     <sub>
+      i
+     </sub>
+    </i>
+    〉|
+    <sup>
+     2
+    </sup>
+    , nos
+                    informam qual é a frequência relativa com que os autovalores correspondentes de
+    <i>
+     Ô
+    </i>
+    serão obtidos. Vemos assim que sempre que existir dois ou
+                    mais coeficientes não nulos na superposição, ou seja, sempre que o estado
+                    preparado não for um autovetor do observável, existirão também duas ou mais
+                    probabilidades não nulas. Isso implica que, no formalismo da MQ, há
+                    obrigatoriamente incerteza sobre qual será o resultado obtido em uma dada
+                    realização do experimento para medir o valor de
+    <i>
+     Ô
+    </i>
+    . Essa
+                    incerteza, que chamaremos de
+    <i>
+     incerteza quântica
+    </i>
+    , tem sua origem
+                    na existência de observáveis incompatíveis em MQ. Estes observáveis são
+                    representados por operadores que não comutam e que, portanto, não compartilham
+                    uma mesma base de autovetores [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      16
+     </sup>
+     <span class="refCtt closed">
+      [16]
+      <span>
+       D.J. Griffiths, Mecânica Quântica (Pearson
+                    Education, São Paulo, 2011).
+      </span>
+     </span>
+    </span>
+    ]. E é
+                    isso que possibilita, através da medida de um observável
+    <i>
+     Z^
+    </i>
+    , a
+                    preparação de um estado |
+    <i>
+     z
+    </i>
+    〉 que não é autovetor de
+    <i>
+     Ô
+    </i>
+    .
+      
+      
+        2.4
+    <h2>
+     Operador densidade
+    </h2>
+    <p>
+     Consideremos a possibilidade de existência de incerteza em relação ao estado no
+                    qual o sistema foi preparado. Por exemplo, considere que alguém, ou algo, com
+                    acesso a várias cópias idênticas de um sistema físico prepare essas cópias em um
+                    conjunto qualquer de estados
+     <math display="inline" id="m8">
+      <mrow>
+       <msubsup>
+        <mrow>
+         <mrow>
+          <mrow>
+           <mo>
+            {
+           </mo>
+           <mrow>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <mrow>
+              <msub>
+               <mrow>
+                <mi>
+                 ψ
+                </mi>
+               </mrow>
+               <mi>
+                j
+               </mi>
+              </msub>
+             </mrow>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            }
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         m
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+     de ℂ
+     <i>
+      <sup>
+       n
+      </sup>
+     </i>
+     com probabilidades respectivas
+     <math display="inline" id="m9">
+      <mrow>
+       <msubsup>
+        <mrow>
+         <mrow>
+          <mrow>
+           <mo>
+            {
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               p
+              </mi>
+             </mrow>
+             <mi>
+              j
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            }
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         m
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+     .
+                    Claro, se nenhum sistema for perdido,
+     <math display="inline" id="m10">
+      <mrow>
+       <msubsup>
+        <mo>
+         ∑
+        </mo>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         m
+        </mi>
+       </msubsup>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+         <mi>
+          j
+         </mi>
+        </msub>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     . Estes
+                    estados não precisam ser autovetores de observáveis compatíveis. Nossa tarefa é
+                    encontrar o objeto matemático que pode ser usado para obter a expressão mais
+                    simples possível para a probabilidade de medir o valor
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     de um observável
+     <i>
+      Ô
+     </i>
+     desse
+                    sistema. Sabemos que, para cada medida, o sistema foi preparado em um dos
+                    estados puros desse ensemble (desse conjunto) e que, por conseguinte, a regra de
+                    Born pode ser aplicada ao sub-ensemble preparado no estado
+                            |
+     <i>
+      ψ
+      <sub>
+       j
+      </sub>
+     </i>
+     〉. Ou seja, a probabilidade de medirmos
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     no conjunto de sistemas preparados no
+                    estado |
+     <i>
+      ψ
+      <sub>
+       j
+      </sub>
+     </i>
+     〉é:
+                            Pr(
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     |
+     <b>
+      <i>
+       ψ
+      </i>
+     </b>
+     <i>
+      <sub>
+       j
+      </sub>
+     </i>
+     )
+                    = |〈
+     <i>
+      ψ
+      <sub>
+       j
+      </sub>
+     </i>
+     |
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     〉|
+     <sup>
+      2
+     </sup>
+     .
+                    Com isso, a probabilidade que queremos calcular, que é a chance de medida de
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     considerando todo o ensemble, pode ser
+                    escrita como a média dessas probabilidades calculada usando as probabilidades de
+                    preparação
+     <i>
+      p
+      <sub>
+       j
+      </sub>
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       [21]
+       <span>
+        M.N. Magalhães e A.C.P. de Lima, Noções de Probabilidade e
+                        Estatística (Edusp, São Paulo, 1999).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       [22]
+       <span>
+        M.H. DeGroot, Probability and Statistics
+                    (Addison-Wesley, Massachusetts, 1975).
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <div class="row formula" id="ee07">
+     <a name="e07">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m11">
+        <mrow>
+         <mtable columnalign="right">
+          <mtr columnalign="right">
+           <mtd columnalign="right">
+            <mrow>
+             <mtext>
+              Pr
+             </mtext>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  o
+                 </mi>
+                </mrow>
+                <mi>
+                 i
+                </mi>
+               </msub>
+               <mo>
+                |
+               </mo>
+               <mrow>
+                <mo>
+                 {
+                </mo>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </mrow>
+                  <mi>
+                   j
+                  </mi>
+                 </msub>
+                 <mo>
+                  ,
+                 </mo>
+                 <msub>
+                  <mrow>
+                   <mi>
+                    ψ
+                   </mi>
+                  </mrow>
+                  <mi>
+                   j
+                  </mi>
+                 </msub>
+                </mrow>
+                <mo>
+                 }
+                </mo>
+               </mrow>
+              </mrow>
+              <mo>
+               )
+              </mo>
+             </mrow>
+             <mo>
+              =
+             </mo>
+             <munderover>
+              <mo>
+               ∑
+              </mo>
+              <mrow>
+               <mi>
+                j
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+              <mi>
+               m
+              </mi>
+             </munderover>
+             <mrow>
+              <msub>
+               <mrow>
+                <mi>
+                 p
+                </mi>
+               </mrow>
+               <mi>
+                j
+               </mi>
+              </msub>
+              <mtext>
+               Pr
+              </mtext>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   o
+                  </mi>
+                 </mrow>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+                <mo>
+                 |
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   ψ
+                  </mi>
+                 </mrow>
+                 <mi>
+                  j
+                 </mi>
+                </msub>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr columnalign="right">
+           <mtd columnalign="right">
+            <mrow>
+             <mo>
+              =
+             </mo>
+             <munder>
+              <mo>
+               ∑
+              </mo>
+              <mi>
+               j
+              </mi>
+             </munder>
+             <mrow>
+              <msub>
+               <mrow>
+                <mi>
+                 p
+                </mi>
+               </mrow>
+               <mi>
+                j
+               </mi>
+              </msub>
+              <mrow>
+               <mo>
+                〈
+               </mo>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   ψ
+                  </mi>
+                 </mrow>
+                 <mi>
+                  j
+                 </mi>
+                </msub>
+                <mo>
+                 |
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   o
+                  </mi>
+                 </mrow>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+               </mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+              <mrow>
+               <mo>
+                〈
+               </mo>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   o
+                  </mi>
+                 </mrow>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+                <mo>
+                 |
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   ψ
+                  </mi>
+                 </mrow>
+                 <mi>
+                  j
+                 </mi>
+                </msub>
+               </mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr columnalign="right">
+           <mtd columnalign="right">
+            <mrow>
+             <mo>
+              =
+             </mo>
+             <mrow>
+              <mo>
+               〈
+              </mo>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  o
+                 </mi>
+                </mrow>
+                <mi>
+                 i
+                </mi>
+               </msub>
+               <mo>
+                |
+               </mo>
+               <munder>
+                <mo>
+                 ∑
+                </mo>
+                <mi>
+                 j
+                </mi>
+               </munder>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   p
+                  </mi>
+                 </mrow>
+                 <mi>
+                  j
+                 </mi>
+                </msub>
+               </mrow>
+               <mrow>
+                <mo>
+                 |
+                </mo>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mi>
+                    ψ
+                   </mi>
+                  </mrow>
+                  <mi>
+                   j
+                  </mi>
+                 </msub>
+                </mrow>
+                <mo>
+                 〉
+                </mo>
+               </mrow>
+               <mrow>
+                <mo>
+                 〈
+                </mo>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mi>
+                    ψ
+                   </mi>
+                  </mrow>
+                  <mi>
+                   j
+                  </mi>
+                 </msub>
+                </mrow>
+                <mo>
+                 |
+                </mo>
+               </mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  o
+                 </mi>
+                </mrow>
+                <mi>
+                 i
+                </mi>
+               </msub>
+              </mrow>
+              <mo>
+               〉
+              </mo>
+             </mrow>
+             <mo>
+              =
+             </mo>
+             <mrow>
+              <mo>
+               〈
+              </mo>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  o
+                 </mi>
+                </mrow>
+                <mi>
+                 i
+                </mi>
+               </msub>
+              </mrow>
+              <mo>
+               |
+              </mo>
+             </mrow>
+             <mover accent="true">
+              <mi>
+               ρ
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mrow>
+              <mo>
+               |
+              </mo>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  o
+                 </mi>
+                </mrow>
+                <mi>
+                 i
+                </mi>
+               </msub>
+              </mrow>
+              <mo>
+               〉
+              </mo>
+             </mrow>
+             <mo>
+              ,
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+                    definimos o
+    <i>
+     operador densidade
+    </i>
+    , que descreve completamente o
+                    estado do sistema, como a seguinte mistura estatística dos estados do ensemble
+    <div class="row formula" id="ee08">
+     <a name="e08">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m12">
+        <mrow>
+         <mover accent="true">
+          <mi>
+           ρ
+          </mi>
+          <mo>
+           ^
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            j
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           m
+          </mi>
+         </munderover>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             p
+            </mi>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               ψ
+              </mi>
+             </mrow>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mrow>
+           <mo>
+            〈
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               ψ
+              </mi>
+             </mrow>
+             <mi>
+              j
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            |
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    Este processo
+                    de dedução de
+    <i>
+     ρ̂
+    </i>
+    está ilustrado na
+    <a class="open-asset-modal" data-target="#ModalFigf01" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Fig. 1
+    </a>
+    . Uma representação esquemática do espaço de
+                    estados pode ser vista na
+    <a class="open-asset-modal" data-target="#ModalFigf02" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Fig. 2
+    </a>
+    .
+    <p>
+     Note que, para um ensemble com um número
+     <i>
+      N
+     </i>
+     muito grande de
+                    elementos,
+     <i>
+      p
+      <sub>
+       j
+      </sub>
+      N
+     </i>
+     fornece o número de partículas
+                    preparadas no estado puro |
+     <i>
+      ψ
+      <sub>
+       j
+      </sub>
+     </i>
+     〉. Outra observação
+                    pertinente aqui é que nossa incerteza sobre a preparação do estado do sistema
+                    não tem nada de especial no que concerne a MQ. Isso porque a informação sobre
+                    qual estado foi preparado, para cada membro do ensemble, está presente na
+                    memória clássica do preparador. Por isso, essa incerteza é chamada de
+     <i>
+      incerteza clássica
+     </i>
+     .
+    </p>
+    3.
+    <h1 class="articleSectionTitle">
+     Entropia de von Neumann
+    </h1>
+    <p>
+     Por razões didáticas, abdicaremos da sequência histórica dos fatos e introduziremos a
+                entropia de Shannon antes da entropia de von Neumann. Para isso, começaremos
+                respondendo a seguinte pergunta: Se quisermos associar uma medida de informação a um
+                evento, que função matemática devemos usar? Podemos obter uma pista sobre tal função
+                notando que o que ocorre frequentemente (que possui grande chance de acontecer) não
+                nos chama a atenção. O nascer do Sol, apesar de bonito e de avisar que o dia começa,
+                não nos fornece nenhuma informação realmente nova. Por outro lado, se o céu estiver
+                sem nuvens às 14 h e 40 min do dia 14 de dezembro de 2020 em Montevidéu, quem perdeu
+                as notícias nos dias anteriores provavelmente vai ficar assustado quando perceber o
+                dia virando noite, até descobrir que está ocorrendo um eclipse solar. Esse evento,
+                que não ocorre frequentemente (é pouco provável), nos fornece bastante informação
+                pois nos causa surpresa. Este raciocínio nos induz a quantificar a informação,
+     <i>
+      I
+     </i>
+     , obtida ao tomarmos conhecimento da ocorrência de um evento
+                (ou, de forma equivalente, nossa incerteza sobre o evento antes dele acontecer)
+                usando o recíproco da sua probabilidade de ocorrência
+     <i>
+      p
+     </i>
+     ,
+     <i>
+      i.e.
+     </i>
+     ,
+     <i>
+      I
+     </i>
+     ≡1/
+     <i>
+      p
+     </i>
+     .
+    </p>
+    <p>
+     Uma exigência mínima que deve ser feita para uma função que quantifica informação é
+                que ela seja aditiva para eventos independentes. Ou seja, se
+     <i>
+      I
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      I
+     </i>
+     <sub>
+      2
+     </sub>
+     são as
+                informações obtidas ao tomarmos conhecimento dos eventos independentes 1 e 2, se
+                espera que a informação total obtida seja a soma das duas:
+     <i>
+      I
+     </i>
+     <sub>
+      12
+     </sub>
+     =
+     <i>
+      I
+     </i>
+     <sub>
+      1
+     </sub>
+     +
+     <i>
+      I
+     </i>
+     <sub>
+      2
+     </sub>
+     . Tratando esses eventos como variáveis
+                aleatórias, sabemos, da teoria de probabilidades [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       [21]
+       <span>
+        M.N. Magalhães e A.C.P. de Lima, Noções de Probabilidade e
+                        Estatística (Edusp, São Paulo, 1999).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       [22]
+       <span>
+        M.H. DeGroot, Probability and Statistics
+                    (Addison-Wesley, Massachusetts, 1975).
+       </span>
+      </span>
+     </span>
+     ], que a probabilidade
+                conjunta de eventos independentes é o produto das probabilidades individuais, ou
+                seja,
+     <i>
+      p
+     </i>
+     <sub>
+      12
+     </sub>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     . Mas isso implica que a informação total será:
+     <i>
+      I
+     </i>
+     <sub>
+      12
+     </sub>
+     = 1/
+     <i>
+      p
+     </i>
+     <sub>
+      12
+     </sub>
+     =
+                    1/
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     ≠
+                    1/
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     + 1/
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     =
+     <i>
+      I
+     </i>
+     <sub>
+      1
+     </sub>
+     +
+     <i>
+      I
+     </i>
+     <sub>
+      2
+     </sub>
+     . Para obter
+                aditividade da medida de informação, podemos aplicar a função logaritmo ao recíproco
+                da probabilidade
+    </p>
+    <div class="row formula" id="ee09">
+     <a name="e09">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m13">
+        <mrow>
+         <mi>
+          I
+         </mi>
+         <mo>
+          ≡
+         </mo>
+         <msub>
+          <mrow>
+           <mrow>
+            <mtext>
+             log
+            </mtext>
+           </mrow>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mn>
+            1
+           </mn>
+           <mo>
+            /
+           </mo>
+           <mi>
+            p
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mrow>
+            <mtext>
+             log
+            </mtext>
+           </mrow>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mo>
+         </mo>
+         <msup>
+          <mrow>
+           <mi>
+            p
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mrow>
+           <mrow>
+            <mtext>
+             log
+            </mtext>
+           </mrow>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mo>
+         </mo>
+         <mi>
+          p
+         </mi>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    É fácil verificar
+                que essa medida de informação é aditiva para eventos independentes (pois
+                    log
+    <sub>
+     2
+    </sub>
+    <i>
+     p
+    </i>
+    <sub>
+     1
+    </sub>
+    <i>
+     p
+    </i>
+    <sub>
+     2
+    </sub>
+    = log
+    <sub>
+     2
+    </sub>
+    <i>
+     p
+    </i>
+    <sub>
+     1
+    </sub>
+    + log
+    <sub>
+     2
+    </sub>
+    <i>
+     p
+    </i>
+    <sub>
+     2
+    </sub>
+    ). Na última equação e doravante utilizamos o
+                logaritmo na base dois para medir informação em bits (ao tomarmos conhecimento de um
+                evento que possui 50 % de chances de ocorrer,
+    <i>
+     i.e.
+    </i>
+    ,
+    <i>
+     p
+    </i>
+    = 1/2, adquirimos 1 bit de informação).
+    <p>
+     Vamos considerar uma variável aleatória
+     <i>
+      X
+     </i>
+     que pode assumir um
+                conjunto discreto e finito de valores
+     <math display="inline" id="m14">
+      <mrow>
+       <msubsup>
+        <mrow>
+         <mrow>
+          <mrow>
+           <mo>
+            {
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               x
+              </mi>
+             </mrow>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            }
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         n
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+     com probabilidades respectivas
+     <math display="inline" id="m15">
+      <mrow>
+       <msubsup>
+        <mrow>
+         <mrow>
+          <mrow>
+           <mo>
+            {
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               p
+              </mi>
+             </mrow>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            }
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         n
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+     .
+                Cada um desses valores é associado a um evento. Por exemplo,
+     <i>
+      X
+     </i>
+     pode
+                representar uma moeda, e os dois eventos seriam a ocorrência de cara ou de coroa em
+                um jogo dessa moeda. Podemos medir nossa incerteza média sobre o valor de
+     <i>
+      X
+     </i>
+     usando a média da informação dos eventos individuais
+                calculada usando a distribuição de probabilidades
+     <math display="inline" id="m16">
+      <mrow>
+       <msubsup>
+        <mrow>
+         <mrow>
+          <mrow>
+           <mo>
+            {
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               p
+              </mi>
+             </mrow>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            }
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         n
+        </mi>
+       </msubsup>
+      </mrow>
+     </math>
+    </p>
+    <div class="row formula" id="ee10">
+     <a name="e10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m17">
+        <mrow>
+         <mi>
+          H
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mrow>
+            <mo>
+             {
+            </mo>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                p
+               </mi>
+              </mrow>
+              <mi>
+               i
+              </mi>
+             </msub>
+            </mrow>
+            <mo>
+             }
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          ≡
+         </mo>
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           n
+          </mi>
+         </munderover>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             p
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <msub>
+            <mrow>
+             <mrow>
+              <mtext>
+               log
+              </mtext>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msub>
+           <mo>
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mi>
+             i
+            </mi>
+           </msub>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           n
+          </mi>
+         </munderover>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             p
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+          <mo>
+          </mo>
+          <msub>
+           <mrow>
+            <mrow>
+             <mtext>
+              log
+             </mtext>
+            </mrow>
+           </mrow>
+           <mn>
+            2
+           </mn>
+          </msub>
+          <mo>
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             p
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    Esta função, que
+                foi introduzida por Claude Shannon na Ref. [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      23
+     </sup>
+     <span class="refCtt closed">
+      [23]
+      <span>
+       C.E. Shannon, Bell Syst. Tech. J. 27, 379
+                    (1948).
+      </span>
+     </span>
+    </span>
+    ], é denominada
+    <i>
+     entropia de Shannon
+    </i>
+    e estabeleceu a
+                base para a teoria clássica da informação [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      24
+     </sup>
+     <span class="refCtt closed">
+      [24]
+      <span>
+       T.M. Cover and J.A. Thomas, Elements of Information
+                        Theory (John Wiley &amp; Sons, Nova Jersey,
+                    2006).
+      </span>
+     </span>
+    </span>
+    ].
+    <p>
+     Como os operadores densidade são operadores hermitianos e positivos semidefinidos
+                (seus autovalores são números reais maiores ou iguais a zero) e possuem traço igual
+                a um (o traço de uma matriz é a soma dos elementos na sua diagonal principal),
+                podemos escrever
+     <math display="inline" id="m18">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         ρ
+        </mi>
+        <mo>
+         ^
+        </mo>
+       </mover>
+       <mo>
+        =
+       </mo>
+       <msubsup>
+        <mo>
+         ∑
+        </mo>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         m
+        </mi>
+       </msubsup>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+         <mi>
+          j
+         </mi>
+        </msub>
+       </mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            ψ
+           </mi>
+          </mrow>
+          <mi>
+           j
+          </mi>
+         </msub>
+        </mrow>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mrow>
+        <mo>
+         〈
+        </mo>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            ψ
+           </mi>
+          </mrow>
+          <mi>
+           j
+          </mi>
+         </msub>
+        </mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <mo>
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mo>
+       </mo>
+       <msubsup>
+        <mo>
+         ∑
+        </mo>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         n
+        </mi>
+       </msubsup>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           λ
+          </mi>
+         </mrow>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             λ
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          〉
+         </mo>
+        </mrow>
+        <mo>
+        </mo>
+        <mrow>
+         <mo>
+          〈
+         </mo>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             λ
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          |
+         </mo>
+        </mrow>
+       </mrow>
+      </mrow>
+     </math>
+     ,
+                com
+     <i>
+      λ
+      <sub>
+       i
+      </sub>
+     </i>
+     ∈ ℝ,
+     <i>
+      λ
+      <sub>
+       i
+      </sub>
+     </i>
+     ≥ 0,
+     <math display="inline" id="m19">
+      <mrow>
+       <msubsup>
+        <mo>
+         ∑
+        </mo>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mi>
+         n
+        </mi>
+       </msubsup>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           λ
+          </mi>
+         </mrow>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </mrow>
+     </math>
+     e 〈
+     <i>
+      λ
+      <sub>
+       i
+      </sub>
+     </i>
+     |
+     <i>
+      λ
+      <sub>
+       j
+      </sub>
+     </i>
+     〉 =
+     <i>
+      δ
+      <sub>
+       ij
+      </sub>
+     </i>
+     . Ou seja, os autovalores de
+     <i>
+      ρ̂
+     </i>
+     formam uma distribuição de probabilidades. Então, operadores
+                densidade podem ser vistos como uma generalização para distribuições de
+                probabilidades. Como a função traço é independente da base usada na representação do
+                operador densidade, a
+     <i>
+      entropia de von Neumann
+     </i>
+     , que foi definida na
+                Ref. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       [25]
+       <span>
+        J. von Neumann, Mathematical Foundations of Quantum
+                        Mechanics (Princeton University Press, Princeton,
+                    1955).
+       </span>
+      </span>
+     </span>
+     ], pode ser escrita como
+    </p>
+    <div class="row formula" id="ee11">
+     <a name="e11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m20">
+        <mrow>
+         <mi>
+          S
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mover accent="true">
+           <mi>
+            ρ
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          ≡
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mtext>
+          Tr
+         </mtext>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             ρ
+            </mi>
+            <mo>
+             ^
+            </mo>
+           </mover>
+           <mo>
+           </mo>
+           <msub>
+            <mrow>
+             <mrow>
+              <mtext>
+               log
+              </mtext>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msub>
+           <mo>
+           </mo>
+           <mover accent="true">
+            <mi>
+             ρ
+            </mi>
+            <mo>
+             ^
+            </mo>
+           </mover>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           n
+          </mi>
+         </munderover>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             λ
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+          <mo>
+          </mo>
+          <msub>
+           <mrow>
+            <mrow>
+             <mtext>
+              log
+             </mtext>
+            </mrow>
+           </mrow>
+           <mn>
+            2
+           </mn>
+          </msub>
+          <mo>
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             λ
+            </mi>
+           </mrow>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    em que Tr é a
+                função traço. Ou seja, a entropia de von Neumann
+    <i>
+     S
+    </i>
+    (
+    <i>
+     ρ̂
+    </i>
+    ) é a entropia de Shannon da distribuição
+                de probabilidades obtida usando os autovalores de
+    <i>
+     ρ̂
+    </i>
+    ,
+    <i>
+     i.e.
+    </i>
+    ,
+    <div class="row formula" id="ee12">
+     <a name="e12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m21">
+        <mrow>
+         <mi>
+          S
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mover accent="true">
+           <mi>
+            ρ
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mi>
+          H
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mrow>
+            <mo>
+             {
+            </mo>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                λ
+               </mi>
+              </mrow>
+              <mi>
+               i
+              </mi>
+             </msub>
+            </mrow>
+            <mo>
+             }
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    Esta é uma das
+                funções mais utilizadas atualmente para medir incerteza sobre o estado de um sistema
+                quântico. Porém é válido observar que, embora na teoria quântica da informação
+                    [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      26
+     </sup>
+     <span class="refCtt closed">
+      [26]
+      <span>
+       M.A. Nielsen and I.L. Chuang, Quantum Computation and
+                        Quantum Information (Cambridge University Press, Cambridge,
+                    2000).
+      </span>
+     </span>
+    </span>
+    ,
+    <span class="ref">
+     <sup class="xref xrefblue">
+      27
+     </sup>
+     <span class="refCtt closed">
+      [27]
+      <span>
+       M.M. Wilde, Quantum Information Theory (Cambridge
+                    University Press, Cambridge, 2013).
+      </span>
+     </span>
+    </span>
+    ] exista uma interpretação operacional para essa função [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      28
+     </sup>
+     <span class="refCtt closed">
+      [28]
+      <span>
+       B. Schumacher, Phys. Rev. A 51, 2738
+                    (1995).
+      </span>
+     </span>
+    </span>
+    ], critérios mais fortes para quantificar
+                incerteza sobre o operador densidade são conhecidos, como por exemplo aquele obtido
+                via teoria de majoração [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      29
+     </sup>
+     <span class="refCtt closed">
+      [29]
+      <span>
+       M.A. Nielsen, An Introduction of Majorization and its
+                        Applications to Quantum Mechanics. Disponível em http://michaelnielsen.org/blog/talks/2002/maj/book.ps.
+      </span>
+      <br/>
+      <a href="http://michaelnielsen.org/blog/talks/2002/maj/book.ps" target="_blank">
+       http://michaelnielsen.org/blog/talks/200...
+      </a>
+     </span>
+    </span>
+    ]. Deixaremos para
+                discutir essas questões em uma outra oportunidade.
+    <p>
+     A entropia de von Neumann é comumente escrita na seguinte forma:
+     <i>
+      S
+     </i>
+     (
+     <i>
+      ρ̂
+     </i>
+     ) =
+                    −
+     <i>
+      k
+      <sub>
+       B
+      </sub>
+     </i>
+     Tr(
+     <i>
+      ρ̂
+     </i>
+     ln
+     <i>
+      ρ̂
+     </i>
+     ),
+                com
+     <i>
+      k
+      <sub>
+       B
+      </sub>
+     </i>
+     sendo a constante de Boltzmann e ln o logaritmo
+                natural. Vale observar que esta expressão, que aparece naturalmente no contexto da
+                mecânica estatística, difere daquela que usamos neste artigo (
+     <a class="open-asset-modal" data-target="#ModalSchemee11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (11)
+     </a>
+     ) somente por uma constante
+                multiplicativa [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       [30]
+       <span>
+        M.B. Plenio and V. Vitelli, Cont. Phys. 42, 25
+                    (2001).
+       </span>
+      </span>
+     </span>
+     ]. Ou seja, não há nenhuma
+                diferença fundamental entre elas, é só a unidade da entropia fornecida que muda. Por
+                isso usamos a expressão (11), que se encaixa melhor dentro do contexto de teoria de
+                informação quântica, onde recebe um significado operacional em termos número mínimo,
+                médio, de bits quânticos (sistemas quânticos com dois níveis de energia) necessários
+                para representar o estado de um sistema [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       [28]
+       <span>
+        B. Schumacher, Phys. Rev. A 51, 2738
+                    (1995).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    4.
+    <h1 class="articleSectionTitle">
+     O jogo
+    </h1>
+    <p>
+     Por simplicidade, vamos considerar um sistema com dois níveis de energia, cujo espaço
+                de estados é ℂ
+     <sup>
+      2
+     </sup>
+     . Das várias escolhas disponíveis, usaremos partículas de
+                spin 1/2 cujo momento magnético é medido utilizando um aparato de Stern e Gerlach
+                    [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       [31]
+       <span>
+        J.J. Sakurai e J. Napolitano, Mecânica Quântica
+                        Moderna (Bookman, Porto Alegre, 2013).
+       </span>
+      </span>
+     </span>
+     ]. Os observáveis que consideraremos
+                são as componentes do momento magnético dessas partículas na direção
+     <i>
+      z
+     </i>
+     ,
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     =
+                    (+
+     <i>
+      ħ
+     </i>
+     /2)|
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉
+                    〈
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     |
+                    +(−
+     <i>
+      ħ
+     </i>
+     /2)|
+     <i>
+      z
+     </i>
+     <sub>
+      −
+     </sub>
+     〉〈
+     <i>
+      z
+     </i>
+     <sub>
+      −
+     </sub>
+     |, e na direção
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      Ŝ
+      <sub>
+       x
+      </sub>
+     </i>
+     =
+                    (+
+     <i>
+      ħ
+     </i>
+     /2)|
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 〈
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     | +
+                    (−
+     <i>
+      ħ
+     </i>
+     /2)|
+     <i>
+      x
+     </i>
+     <sub>
+      −
+     </sub>
+     〉
+                    〈
+     <i>
+      x
+     </i>
+     <sub>
+      −
+     </sub>
+     |, em que
+     <i>
+      ħ
+     </i>
+     é a constante de
+                Planck,
+    </p>
+    <div class="row formula" id="ee13">
+     <a name="e13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m22">
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              z
+             </mi>
+            </mrow>
+            <mo>
+             +
+            </mo>
+           </msub>
+          </mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mn>
+               1
+              </mn>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mn>
+               0
+              </mn>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+         <mo>
+         </mo>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              z
+             </mi>
+            </mrow>
+            <mo>
+             −
+            </mo>
+           </msub>
+          </mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mn>
+               0
+              </mn>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mn>
+               1
+              </mn>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    e
+    <div class="row formula" id="ee14">
+     <a name="e14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m23">
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mo>
+             ±
+            </mo>
+           </msub>
+          </mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mn>
+            1
+           </mn>
+           <mo>
+            /
+           </mo>
+           <msqrt>
+            <mn>
+             2
+            </mn>
+           </msqrt>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mrow>
+            <mo>
+             |
+            </mo>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                z
+               </mi>
+              </mrow>
+              <mo>
+               +
+              </mo>
+             </msub>
+            </mrow>
+            <mo>
+             〉
+            </mo>
+           </mrow>
+           <mo>
+            ±
+           </mo>
+           <mrow>
+            <mo>
+             |
+            </mo>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                z
+               </mi>
+              </mrow>
+              <mo>
+               −
+              </mo>
+             </msub>
+            </mrow>
+            <mo>
+             〉
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div>
+     As
+     <i>
+      regras para o jogo
+     </i>
+     são as seguintes: Considere um ensemble de
+                partículas de spin 1/2 preparado no estado
+     <i>
+      ρ̂
+     </i>
+     =∑
+     <i>
+      <sub>
+       j
+      </sub>
+     </i>
+     <i>
+      p
+      <sub>
+       j
+      </sub>
+     </i>
+     |
+     <i>
+      ψ
+      <sub>
+       j
+      </sub>
+     </i>
+     〉〈
+     <i>
+      ψ
+      <sub>
+       j
+      </sub>
+     </i>
+     |.
+                Você poderá escolher um único observável do sistema para ser medido e precisará
+                escolher também um único autovetor desse observável. Cada vez que o valor do
+                observável correspondente a este autovetor for obtido você ganha um ponto, caso
+                contrário você perde um ponto. O objetivo é obter o maior saldo de pontos,
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     , possível para um número muito grande,
+     <i>
+      N
+     </i>
+     , de medidas realizadas. Queremos relacionar sua pontuação com
+                a entropia de von Neumann,
+     <i>
+      S
+     </i>
+     (
+     <i>
+      ρ̂
+     </i>
+     ). Para calculá-la,
+                você precisará escolher uma base, por exemplo {|
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉,
+                    |
+     <i>
+      z
+     </i>
+     <sub>
+      −
+     </sub>
+     〉}, obter a representação matricial de
+     <i>
+      ρ̂
+     </i>
+     nessa base (
+     <i>
+      ρ
+     </i>
+     <sub>
+      11
+     </sub>
+     =
+                    〈
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     |
+     <i>
+      ρ̂|z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉,
+     <i>
+      ρ
+     </i>
+     <sub>
+      12
+     </sub>
+     = 〈
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     |
+     <i>
+      ρ̂|z
+     </i>
+     <sub>
+      −
+     </sub>
+     〉,
+     <i>
+      ρ
+     </i>
+     <sub>
+      21
+     </sub>
+     =
+                    〈
+     <i>
+      z
+     </i>
+     <sub>
+      −
+     </sub>
+     |
+     <i>
+      ρ̂|z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 e
+     <i>
+      ρ
+     </i>
+     <sub>
+      22
+     </sub>
+     =
+                    〈
+     <i>
+      z
+     </i>
+     <sub>
+      −
+     </sub>
+     |
+     <i>
+      ρ̂|z
+     </i>
+     <sub>
+      −
+     </sub>
+     〉) e
+                diagonalizar essa matriz 2×2. Feito isso, precisarás ainda somar o produto dos
+                autovalores de
+     <i>
+      ρ̂
+     </i>
+     pelo seu logaritmo, como na
+     <a class="open-asset-modal" data-target="#ModalSchemee11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (11)
+     </a>
+     . Se
+     <i>
+      ρ̂
+     </i>
+     possuir um autovalor nulo, usamos lim
+     <sub>
+      <i>
+       x
+      </i>
+      →0
+     </sub>
+     <i>
+      x
+     </i>
+     log
+     <sub>
+      2
+     </sub>
+     <i>
+      x
+     </i>
+     = 0 para justificar 0 log
+     <sub>
+      2
+     </sub>
+     0 = 0. Com o objetivo de
+                criar intuição sobre o problema, vamos considerar alguns casos particulares de
+                ensembles preparados
+     <ul list-type="bullet">
+      <li>
+       <p>
+        <i>
+         ρ̂
+        </i>
+        <sub>
+         1
+        </sub>
+        = |
+        <i>
+         z
+        </i>
+        <sub>
+         +
+        </sub>
+        〉 〈
+        <i>
+         z
+        </i>
+        <sub>
+         +
+        </sub>
+        |
+       </p>
+      </li>
+     </ul>
+     Nesse caso,
+                como você sabe que todas as partículas do ensemble estão no mesmo estado, tudo fica
+                mais fácil. Você pode escolher medir o observável
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     e
+                pode escolher como seu autovetor o autoestado |
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 de
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     . Como a probabilidade de obter o valor
+                    +
+     <i>
+      ħ
+     </i>
+     /2 para
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     é um para um sistema
+                preparado no estado |
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉, você ganha em todas as medidas
+                e faz um saldo de
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     =
+     <i>
+      N
+     </i>
+     − 0=
+     <i>
+      N
+     </i>
+     pontos, o máximo possível. Isso é esperado pois não há
+                incerteza alguma sobre a preparação do sistema, o que é confirmado pelo valor da
+                entropia de von Neumann desse estado,
+     <i>
+      S
+     </i>
+     (
+     <i>
+      ρ̂
+     </i>
+     <sub>
+      1
+     </sub>
+     ) =
+     <i>
+      S
+     </i>
+     (|
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉)= −1 log
+     <sub>
+      2
+     </sub>
+     1−0
+                    log
+     <sub>
+      2
+     </sub>
+     0 = 0.
+    </div>
+    <div>
+     Note que, como ocorreu para este ensemble, a entropia de von Neumann é nula para
+                qualquer estado puro,
+     <i>
+      i.e.
+     </i>
+     ,
+     <i>
+      S
+     </i>
+     (|
+     <i>
+      ψ
+     </i>
+     〉) = 0. Entretanto, isso não significa que
+                podemos prever o resultado de qualquer medida que possa ser feita nesse sistema, mas
+                sim que existe um observável cujo valor é totalmente previsível, pois está definido
+                antes que testes sejam feitos (seu valor é o seu autovalor correspondente ao
+                autovetor |
+     <i>
+      ψ
+     </i>
+     〉).
+     <ul list-type="bullet">
+      <li>
+       <p>
+        <i>
+         ρ̂
+        </i>
+        <sub>
+         2
+        </sub>
+        =
+        <i>
+         p
+        </i>
+        <sub>
+         1
+        </sub>
+        |
+        <i>
+         z
+        </i>
+        <sub>
+         +
+        </sub>
+        〉 〈
+        <i>
+         z
+        </i>
+        <sub>
+         +
+        </sub>
+        | +
+        <i>
+         p
+        </i>
+        <sub>
+         2
+        </sub>
+        |
+        <i>
+         x
+        </i>
+        <sub>
+         +
+        </sub>
+        〉 〈
+        <i>
+         x
+        </i>
+        <sub>
+         +
+        </sub>
+        |
+       </p>
+      </li>
+     </ul>
+     Neste exemplo,
+                é aconselhável analisar com cuidado o estado preparado antes de fazer suas escolhas.
+                Veja que existe incerteza clássica sobre se |
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 ou se
+                    |
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 foi preparado. Além disso, esses estados são
+                autovetores de observáveis incompatíveis, o que implica na existência de incerteza
+                quântica (pois você pode escolher um único observável para medir). Para facilitar
+                sua escolha, use o fato de que |
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 é uma superposição
+                dos autovetores de
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     . Assim
+     <math display="inline" id="m24">
+      <mrow>
+       <mrow>
+        <mo>
+         〈
+        </mo>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            z
+           </mi>
+          </mrow>
+          <mo>
+           ±
+          </mo>
+         </msub>
+         <mo>
+          |
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            x
+           </mi>
+          </mrow>
+          <mo>
+           +
+          </mo>
+         </msub>
+        </mrow>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mn>
+          1
+         </mn>
+         <mo>
+          /
+         </mo>
+         <msqrt>
+          <mn>
+           2
+          </mn>
+         </msqrt>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mo>
+         </mo>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              z
+             </mi>
+            </mrow>
+            <mo>
+             ±
+            </mo>
+           </msub>
+           <mo>
+            |
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              z
+             </mi>
+            </mrow>
+            <mo>
+             +
+            </mo>
+           </msub>
+          </mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          +
+         </mo>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              z
+             </mi>
+            </mrow>
+            <mo>
+             ±
+            </mo>
+           </msub>
+           <mo>
+            |
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              z
+             </mi>
+            </mrow>
+            <mo>
+             −
+            </mo>
+           </msub>
+          </mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        /
+       </mo>
+       <msqrt>
+        <mn>
+         2
+        </mn>
+       </msqrt>
+      </mrow>
+     </math>
+     .
+                Usando a regra de Born vemos que, para as partículas preparadas no estado
+                    |
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     〉, a probabilidade de medir +
+     <i>
+      ħ
+     </i>
+     /2
+                ou −
+     <i>
+      ħ
+     </i>
+     /2 para
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     é 1/2. Por conseguinte,
+                se você escolher medir
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     e escolher
+                    |
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉, seu número de pontos será
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      N
+     </i>
+     +
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      N
+     </i>
+     (1/2) −
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      N
+     </i>
+     (1/2) =
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      N
+     </i>
+     . O primeiro termo dessa equação
+                aparece pois para todos os membros do ensemble preparados no estado
+                    |
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 você ganha. O segundo e terceiro termos são
+                obtidos notando que para as partículas preparadas no estado
+                    |
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 você ganha metade das vezes e perde em metade
+                das medidas. De forma análoga, podemos usar
+     <math display="inline" id="m25">
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            z
+           </mi>
+          </mrow>
+          <mo>
+           +
+          </mo>
+         </msub>
+        </mrow>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mn>
+          1
+         </mn>
+         <mo>
+          /
+         </mo>
+         <msqrt>
+          <mn>
+           2
+          </mn>
+         </msqrt>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mo>
+             +
+            </mo>
+           </msub>
+          </mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mo>
+          +
+         </mo>
+         <mrow>
+          <mo>
+           〈
+          </mo>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              x
+             </mi>
+            </mrow>
+            <mo>
+             −
+            </mo>
+           </msub>
+          </mrow>
+          <mo>
+           |
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     para verificar que se
+     <i>
+      Ŝ
+      <sub>
+       x
+      </sub>
+     </i>
+     e
+                    |
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 forem escolhidos, então
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      N
+     </i>
+     (1/2) −
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      N
+     </i>
+     (1/2) +
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      N
+     </i>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      N
+     </i>
+     . A diferença entre os
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     das duas escolhas é
+     <i>
+      N
+     </i>
+     (
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     −
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     ). Assim, usamos o viés nas probabilidades, ou
+                seja, verificamos se
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     −
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     é maior ou menor que zero, para fazer nossa escolha de forma apropriada a maximizar
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     . Por exemplo, se
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     = 3/4 e
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     = 1/4 a
+                primeira escolha nos fornece
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     = 0,
+                    75
+     <i>
+      N
+     </i>
+     e a segunda escolha resulta em
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     = 0, 25
+     <i>
+      N
+     </i>
+     . Por outro lado, se
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     = 1/2 as duas
+                escolhas resultarão em
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     = 0, 5
+     <i>
+      N
+     </i>
+     . Esse
+                será nosso pior saldo de pontos, pois a incerteza clássica é máxima nesse caso. Para
+                este ensemble a entropia de von Neumann é dada por
+     <i>
+      S
+     </i>
+     (
+     <i>
+      ρ̂
+     </i>
+     <sub>
+      2
+     </sub>
+     ) =
+                    −
+     <i>
+      λ
+     </i>
+     <sub>
+      1
+     </sub>
+     log
+     <sub>
+      2
+     </sub>
+     <i>
+      λ
+     </i>
+     <sub>
+      1
+     </sub>
+     − (1 −
+     <i>
+      λ
+     </i>
+     <sub>
+      1
+     </sub>
+     )
+                    log
+     <sub>
+      2
+     </sub>
+     (1 −
+     <i>
+      λ
+     </i>
+     <sub>
+      1
+     </sub>
+     ), com
+     <math display="inline" id="m26">
+      <mrow>
+       <msub>
+        <mrow>
+         <mi>
+          λ
+         </mi>
+        </mrow>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mn>
+          1
+         </mn>
+         <mo>
+          −
+         </mo>
+         <msqrt>
+          <mrow>
+           <mn>
+            1
+           </mn>
+           <mo>
+            −
+           </mo>
+           <mn>
+            2
+           </mn>
+           <msub>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mn>
+             1
+            </mn>
+           </msub>
+           <mo>
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msub>
+          </mrow>
+         </msqrt>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        /
+       </mo>
+       <mn>
+        2
+       </mn>
+      </mrow>
+     </math>
+     , e está
+                mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     .
+     <ul list-type="bullet">
+      <li>
+       <p>
+        <i>
+         ρ
+        </i>
+        ̂
+        <sub>
+         3
+        </sub>
+        =
+        <i>
+         p
+        </i>
+        <sub>
+         1
+        </sub>
+        |
+        <i>
+         z
+        </i>
+        <sub>
+         +
+        </sub>
+        〉
+                                〈
+        <i>
+         z
+        </i>
+        <sub>
+         +
+        </sub>
+        | +
+        <i>
+         p
+        </i>
+        <sub>
+         2
+        </sub>
+        |
+        <i>
+         z
+        </i>
+        <sub>
+         −
+        </sub>
+        〉
+                                〈
+        <i>
+         z
+        </i>
+        <sub>
+         −
+        </sub>
+        |
+       </p>
+      </li>
+     </ul>
+     Este ensemble
+                é obtido trocando-se |
+     <i>
+      x
+     </i>
+     <sub>
+      +
+     </sub>
+     〉 por
+                    |
+     <i>
+      z
+     </i>
+     <sub>
+      −
+     </sub>
+     〉 no último exemplo. Portanto a análise é, de
+                certa forma, parecida. Nesse caso é natural escolher
+     <i>
+      Ŝ
+      <sub>
+       z
+      </sub>
+     </i>
+     para ser medido. Então, se o autovetor escolhido for
+                |
+     <i>
+      z
+     </i>
+     <sub>
+      +
+     </sub>
+     〉, o saldo de pontos será
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      N
+     </i>
+     −
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      N
+     </i>
+     =
+                    (2
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     − 1)
+     <i>
+      N
+     </i>
+     . Se, no entanto,
+                escolhermos |
+     <i>
+      z
+     </i>
+     <sub>
+      −
+     </sub>
+     〉, então
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      N
+     </i>
+     −
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      N
+     </i>
+     =
+                    (2
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     − 1)
+     <i>
+      N
+     </i>
+     . A diferença entre essas
+                expressões para
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     é 2(
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     −
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     )
+     <i>
+      N
+     </i>
+     . Usamos o sinal desse número
+                para escolher o autovetor que maximiza nossa pontuação. Aqui é interessante
+                considerar o caso de equiprobabilidade
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      p
+     </i>
+     <sub>
+      2
+     </sub>
+     = 1/2, para o qual
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     = 0. Note que nossa pontuação nesse caso, além de ser menor quando comparada com o
+                mesmo caso no exemplo anterior, é a mínima possível. A entropia de von Neumann desse
+                ensemble é:
+     <i>
+      S
+     </i>
+     (
+     <i>
+      ρ̂
+     </i>
+     <sub>
+      3
+     </sub>
+     ) =
+                    −
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     log
+     <sub>
+      2
+     </sub>
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     − (1 −
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     )
+                    log
+     <sub>
+      2
+     </sub>
+     (1 −
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     ), e possui o máximo valor
+                possível quando
+     <i>
+      p
+     </i>
+     <sub>
+      1
+     </sub>
+     = 1/2 (veja a
+     <a class="open-asset-modal" data-target="#ModalFigf03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ).
+    </div>
+    <p>
+     A entropia de von Neumann,
+     <i>
+      S
+     </i>
+     , e o máximo saldo de pontos
+                normalizado,
+     <i>
+      P
+     </i>
+     ≡
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     /
+     <i>
+      N
+     </i>
+     ,
+                estão mostrados na
+     <a class="open-asset-modal" data-target="#ModalFigf03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     para os três
+                ensembles considerados. Note que, para um dado ensemble,
+     <i>
+      P
+     </i>
+     diminui
+                (aumenta) com o aumento (decrécimo) de
+     <i>
+      S
+     </i>
+     . Além disso, o aumento de
+     <i>
+      S
+     </i>
+     de
+     <i>
+      ρ̂
+     </i>
+     <sub>
+      3
+     </sub>
+     (que é uma mistura
+                estatística de estados ortogonais) em relação a
+     <i>
+      ρ̂
+     </i>
+     <sub>
+      2
+     </sub>
+     (que
+                é uma mistura estatística de estados não ortogonais) está associado a uma diminuição
+                relativa de
+     <i>
+      P
+     </i>
+     . Vale observar que
+     <i>
+      S
+     </i>
+     depende só do
+                estado do sistema, enquanto que
+     <i>
+      P
+     </i>
+     depende também do observável
+                medido e do autovalor escolhido. Mas a principal mensagem que gostaríamos de passar
+                com esses exemplos é que o seu saldo de pontos está relacionado com a sua capacidade
+                de, usando a informação que tens sobre como o sistema foi preparado, prever o que
+                acontecerá em uma medida de um observável desse sistema. Por sua vez, a falta dessa
+                informação, ou seja, a incerteza sobre o estado do sistema, que pode ser
+                quantificada usando a entropia de von Neumann, diminuirá sua capacidade de previsão
+                e por consequência o seu saldo de pontos.
+    </p>
+    <p>
+     Com esse jogo fica claro que o que é incerteza quântica quando o observável medido é
+                incompatível com o observável usado na preparação do sistema, na presença de
+                incerteza clássica torna-se informação que pode ser utilizada para aumentar nossa
+                pontuação no jogo, ou seja, para diminuir nossa incerteza sobre o estado do sistema
+                e aumentar nossa capacidade de previsão concernindo resultados de testes. Essas
+                observações podem ser generalizadas para sistemas discretos com um número finito
+     <i>
+      d
+     </i>
+     de níveis de energia. Nesse caso, se
+                    {|
+     <i>
+      o
+      <sub>
+       i
+      </sub>
+     </i>
+     〉} são autovetores do observável
+     <i>
+      Ô
+     </i>
+     ,
+     <math display="inline" id="m27">
+      <mrow>
+       <mi>
+        S
+       </mi>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <msubsup>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mi>
+           d
+          </mi>
+         </msubsup>
+         <mrow>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mn>
+             1
+            </mn>
+            <mo>
+             /
+            </mo>
+            <mi>
+             d
+            </mi>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               o
+              </mi>
+             </mrow>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mo>
+          </mo>
+          <mrow>
+           <mo>
+            〈
+           </mo>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               o
+              </mi>
+             </mrow>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            |
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mrow>
+         <mrow>
+          <mtext>
+           log
+          </mtext>
+         </mrow>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+       </mo>
+       <mi>
+        d
+       </mi>
+      </mrow>
+     </math>
+     é o valor
+                máximo que a entropia de von Neumann pode assumir. A presença de um ou mais estados
+                que não são autovetores de
+     <i>
+      Ô
+     </i>
+     nessa mistura diminuirá o valor de
+     <i>
+      S
+     </i>
+     .
+    </p>
+    5.
+    <h1 class="articleSectionTitle">
+     Considerações finais
+    </h1>
+    <p>
+     Nesse artigo apresentamos os postulados da mecânica quântica de forma orientada a
+                facilitar o entendimento da entropia de von Neumann. Um jogo simples foi proposto
+                para ajudar nessa tarefa. Com esse jogo enfatizamos o papel distinto da incerteza
+                clássica, que está relacionada com a falta de informação sobre a preparação do
+                sistema, e da incerteza quântica, que existe quando medimos um observável para um
+                sistema preparado em um estado que não é seu autovetor. Esperamos que essa exposição
+                ajude também na compreensão de vários outros tópicos interessantes relacionados à
+                entropia de von Neumann, como por exemplo a sua interpretação operacional [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       [28]
+       <span>
+        B. Schumacher, Phys. Rev. A 51, 2738
+                    (1995).
+       </span>
+      </span>
+     </span>
+     ] e seus vínculos em sistemas quânticos
+                compostos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       32
+      </sup>
+      <span class="refCtt closed">
+       [32]
+       <span>
+        E.A. Carlen and E. Lieb, Lett. Math. Phys. 101, 1
+                    (2012).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Esse trabalho foi parcialmente financiado pelo Conselho Nacional de Desenvolvimento
+                Científico e Tecnológico (CNPq), via o Instituto Nacional de Ciência e Tecnologia de
+                Informação Quântica (INCT-IQ), e pela Coordenação de Aperfeiçoamento de Pessoal de
+                Nível Superior (
+     <i>
+      CAPES
+     </i>
+     ). Agradecemos ao revisor pelas suas
+                observações pertinentes e cooperantes.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     References
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        H.C. Van Ness,
+        <i>
+         Understanding Themodynamics
+        </i>
+        (Dover
+                    Publications, Nova York, 1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        S.R.A. Salinas,
+        <i>
+         Introdução à Física Estatística
+        </i>
+        (Edusp, São Paulo, 2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        J. von Neumann and R. Tumulka Eur. Phys. J.
+        <b>
+         35
+        </b>
+        , 201
+                    (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        S. Goldstein, J.L. Lebowitz, R. Tumulka and N. Zanghí, Eur. Phys. J.
+        <b>
+         35
+        </b>
+        , 173 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        E.T. Jaynes, Phys. Rev.
+        <b>
+         106
+        </b>
+        , 620
+                    (1957).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        E.T. Jaynes, Phys. Rev.
+        <b>
+         108
+        </b>
+        , 171
+                    (1957).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        E.T. Jaynes, Am. J. Phys.
+        <b>
+         33
+        </b>
+        , 391
+                    (1965).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        A. Wehrl, Rev. Mod. Phys.
+        <b>
+         50
+        </b>
+        , 221
+                    (1978).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        D. Petz, http://arxiv.org/abs/math-ph/0102013
+        <br/>
+        <a href="http://arxiv.org/abs/math-ph/0102013" target="_blank">
+         » http://arxiv.org/abs/math-ph/0102013
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        S. Popescu, A. J. Short and A. Winter, Nature Physics
+        <b>
+         2
+        </b>
+        , 754 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        S. Popescu, A.J. Short and A. Winter, http://arxiv.org/abs/quant-ph/0511225v3
+        <br/>
+        <a href="http://arxiv.org/abs/quant-ph/0511225v3" target="_blank">
+         » http://arxiv.org/abs/quant-ph/0511225v3
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        E.H. Lieb and J. Yngvason, Phys. Today
+        <b>
+         53
+        </b>
+        , 32
+                    (2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        B. Baumgartner, Found. Phys.
+        <b>
+         44
+        </b>
+        , 1107
+                    (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        C. Jarzynski, Annu. Rev. Condens. Matter Phys.
+        <b>
+         2
+        </b>
+        , 329
+                    (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        T.B. Batalhão, A.M. Souza, L. Mazzola, R. Auccaise, R.S. Sarthour,
+                    I.S. Oliveira, J. Goold, G. De Chiara, M. Paternostro e R.M. Serra, Phys. Rev.
+                    Lett.
+        <b>
+         113
+        </b>
+        , 140601 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        D.J. Griffiths,
+        <i>
+         Mecânica Quântica
+        </i>
+        (Pearson
+                    Education, São Paulo, 2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        A.F.R. de Toledo Piza,
+        <i>
+         Mecânica Quântica
+        </i>
+        (Edusp,
+                    São Paulo, 2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        G.B. Arfken and H.J. Weber,
+        <i>
+         Mathematical Methods for
+                        Physicists
+        </i>
+        (Elsevier, California, 2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        M. Bell, K. Gottfried and M. Veltman,
+        <i>
+         John Bell on The
+                        Foundations of Quantum Mechanics
+        </i>
+        (World Scientific, Singapura,
+                    2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        A. Peres,
+        <i>
+         Quantum Theory: Concepts and Methods
+        </i>
+        (Kluwer Academic Publishers, Nova York, 2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        M.N. Magalhães e A.C.P. de Lima,
+        <i>
+         Noções de Probabilidade e
+                        Estatística
+        </i>
+        (Edusp, São Paulo, 1999).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        M.H. DeGroot,
+        <i>
+         Probability and Statistics
+        </i>
+        (Addison-Wesley, Massachusetts, 1975).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [23]
+       </sup>
+       <div>
+        C.E. Shannon, Bell Syst. Tech. J.
+        <b>
+         27
+        </b>
+        , 379
+                    (1948).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [24]
+       </sup>
+       <div>
+        T.M. Cover and J.A. Thomas,
+        <i>
+         Elements of Information
+                        Theory
+        </i>
+        (John Wiley &amp; Sons, Nova Jersey,
+                    2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [25]
+       </sup>
+       <div>
+        J. von Neumann,
+        <i>
+         Mathematical Foundations of Quantum
+                        Mechanics
+        </i>
+        (Princeton University Press, Princeton,
+                    1955).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [26]
+       </sup>
+       <div>
+        M.A. Nielsen and I.L. Chuang,
+        <i>
+         Quantum Computation and
+                        Quantum Information
+        </i>
+        (Cambridge University Press, Cambridge,
+                    2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [27]
+       </sup>
+       <div>
+        M.M. Wilde,
+        <i>
+         Quantum Information Theory
+        </i>
+        (Cambridge
+                    University Press, Cambridge, 2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [28]
+       </sup>
+       <div>
+        B. Schumacher, Phys. Rev. A
+        <b>
+         51
+        </b>
+        , 2738
+                    (1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [29]
+       </sup>
+       <div>
+        M.A. Nielsen,
+        <i>
+         An Introduction of Majorization and its
+                        Applications to Quantum Mechanics
+        </i>
+        Disponível em http://michaelnielsen.org/blog/talks/2002/maj/book.ps
+        <br/>
+        <a href="http://michaelnielsen.org/blog/talks/2002/maj/book.ps" target="_blank">
+         » http://michaelnielsen.org/blog/talks/2002/maj/book.ps
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [30]
+       </sup>
+       <div>
+        M.B. Plenio and V. Vitelli, Cont. Phys.
+        <b>
+         42
+        </b>
+        , 25
+                    (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [31]
+       </sup>
+       <div>
+        J.J. Sakurai e J. Napolitano,
+        <i>
+         Mecânica Quântica
+                        Moderna
+        </i>
+        (Bookman, Porto Alegre, 2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [32]
+       </sup>
+       <div>
+        E.A. Carlen and E. Lieb, Lett. Math. Phys.
+        <b>
+         101
+        </b>
+        , 1
+                    (2012).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Figures">
+    <h1 class="articleSectionTitle">
+     Figures
+    </h1>
+    <div class="row fig" id="f01">
+     <a name="f01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Se não conhecemos com certeza qual é o estado de um membro de um ensemble
+                        de partículas, mas sabemos que a chance do seu estado ser
+                                |
+      <i>
+       ψ
+       <sub>
+        j
+       </sub>
+      </i>
+      〉 é
+      <i>
+       p
+       <sub>
+        j
+       </sub>
+      </i>
+      ,
+                        podemos usar o operador densidade,
+      <i>
+       ρ̂
+      </i>
+      , para calcular a
+                        probabilidade de obter o valor
+      <i>
+       o
+       <sub>
+        i
+       </sub>
+      </i>
+      em medidas de
+                        um observável
+      <i>
+       Ô
+      </i>
+      desse sistema.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f02">
+     <a name="f02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf02" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Espaço de estados: Estados puros (vetores de estado) estão na borda de
+                        uma hiperesfera com raio igual a um. Por sua vez, os operadores densidade
+                        (que são misturas estatísticas de vetores de estado) estão no interior dessa
+                        hiperesfera (
+      <i>
+       ρ̂
+      </i>
+      =
+      <i>
+       p
+      </i>
+      <sub>
+       1
+      </sub>
+      |
+      <i>
+       ψ
+      </i>
+      <sub>
+       1
+      </sub>
+      〉〈
+      <i>
+       ψ
+      </i>
+      <sub>
+       1
+      </sub>
+      | +
+      <i>
+       p
+      </i>
+      <sub>
+       2
+      </sub>
+      〉 〈
+      <i>
+       ψ
+      </i>
+      <sub>
+       2
+      </sub>
+      | e
+      <i>
+       ρ̂
+      </i>
+      <sub>
+       2
+      </sub>
+      =
+      <i>
+       ρ̂
+      </i>
+      <sub>
+       1
+      </sub>
+      +
+      <i>
+       p
+      </i>
+      <sub>
+       3
+      </sub>
+      |
+      <i>
+       ψ
+      </i>
+      <sub>
+       3
+      </sub>
+      〉〈
+      <i>
+       ψ
+      </i>
+      <sub>
+       3
+      </sub>
+      |).
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f03">
+     <a name="f03">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf03" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Entropia de von Neumann,
+      <i>
+       S
+      </i>
+      , e pontuação máxima
+                        normalizada,
+      <i>
+       P
+      </i>
+      ≡
+      <i>
+       N
+       <sub>
+        p
+       </sub>
+       /N
+      </i>
+      , para os
+                        ensembles
+      <i>
+       ρ̂
+      </i>
+      <sub>
+       1
+      </sub>
+      ,
+      <i>
+       ρ̂
+      </i>
+      <sub>
+       2
+      </sub>
+      e
+      <i>
+       ρ̂
+      </i>
+      <sub>
+       3
+      </sub>
+      como função da probabilidade de
+                        preparação
+      <i>
+       p
+      </i>
+      <sub>
+       1
+      </sub>
+      = 1 −
+      <i>
+       p
+      </i>
+      <sub>
+       2
+      </sub>
+      .
+      <br/>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        30 Mar 2015
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Jan-Mar 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        12 Out 2014
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        19 Dez 2014
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/3.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 3.0 " src="https://licensebuttons.net/l/by-nc/3.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/3.0/" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a
+                        licença Creative Commons Attribution Non-Commercial, que permite uso,
+                        distribuição e reprodução em qualquer meio, sem restrições desde que sem
+                        fins comerciais e que o trabalho original seja corretamente
+                        citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

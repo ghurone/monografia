@@ -1,0 +1,3399 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0043" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0043
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0043">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Fotografando com uma câmera de pixel único
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Photographing by a single-pixel camera
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Thonimar V. Alencar
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:thonimar@ufop.edu.br">
+      thonimar@ufop.edu.br
+     </a>
+    </div>
+    Universidade Federal de Ouro Preto, Instituto de Ciências Exatas e Biológicas, Departamento de Física, Ouro Preto, MG, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-8983-8413">
+     http://orcid.org/0000-0001-8983-8413
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Edson J. Carvalho
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Ouro Preto, Instituto de Ciências Exatas e Biológicas, Departamento de Física, Ouro Preto, MG, Brasil.
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Como alternativa às técnicas fotográficas que utilizam sensores com milhões de pixels, é possível usar uma câmera com apenas um pixel para registrar imagens. Para isso, é necessário iluminar a cena com um feixe luminoso espacialmente modulado e medir a intensidade da luz espalhada com um sensor de pixel único. Este artigo apresenta como uma imagem digital é produzida usando um sistema de baixo custo para montar uma câmera de pixel único. A técnica consiste em se obter uma imagem no domínio de Fourier e convertê-la no domínio espacial usando um algoritmo de transformada rápida de Fourier. O experimento proposto pode ser conduzido por estudantes de graduação em disciplinas de física experimental avançada. Os resultados mostram que o reconhecimento da cena ocorre a partir de 20% do número total de medidas, demonstrando seu potencial em aplicações para sistemas de imageamento com compressão de dados.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Câmera de pixel único; fotografia fantasma; transformada de Fourier bidimensional; imageamento
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     As an option to photographic techniques that use sensors with millions of pixels, it is possible to use a camera with only one pixel to record images. For this, it is necessary to illuminate a scene using spatially modulated light and measure the intensity of the scattering with a single-pixel sensor. This article presents how a digital image is generated using a low-cost system to assemble a single-pixel camera. The technique consists of obtaining an image in the Fourier domain to convert it into the spatial domain using a fast Fourier transform algorithm. The proposed experiment can be conducted by undergraduates in advanced experimental physics courses. The results show that scene recognition starts at 20% of the total number of measurements, demonstrating its potential applications for compressed sensing imaging systems.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Single-pixel camera; ghost imaging; two-dimensional Fourier transform; imaging
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Na atualidade, há uma infinidade de dispositivos e tecnologias baseadas em aplicações da óptica. Apenas para citar alguns exemplos, destacam-se LASERs, transmissores e receptores de sistemas de comunicação, telas de LED e fototerapias. Estas aplicações impactam profundamente a humanidade, sustentando a Óptica como um dos ramos mais promissores da Física. Contudo, apesar desta notória relevância da Óptica no desenvolvimento científico e tecnológico, é cada vez mais escassa a presença de disciplinas que abordam este tema nos cursos de Bacharelado em Física no Brasil. Uma rápida avaliação documental dos cursos de graduação nos permite exemplificar esta afirmação. Enquanto na matriz curricular de alguns cursos não figura disciplinas específicas sobre óptica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1. Matriz curricular Física Bacharelado UNICAMP, disponível em: https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2020/curriculoPleno/cp4.html, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2020/curriculoPleno/cp4.html" target="_blank">
+        https://www.dac.unicamp.br/sistemas/cata...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. Matriz curricular UNESP-RC, disponível em: https://igce.rc.unesp.br/Home/Instituicao/DiretoriaTecnicaAcademica/graduacao/p212-17-estrutura-fisica-curriculo-2015.pdf, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="https://igce.rc.unesp.br/Home/Instituicao/DiretoriaTecnicaAcademica/graduacao/p212-17-estrutura-fisica-curriculo-2015.pdf" target="_blank">
+        https://igce.rc.unesp.br/Home/Instituica...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. Matriz curricular Física UFOP Bacharelado, disponível em: https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=FSB, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=FSB" target="_blank">
+        https://zeppelin10.ufop.br/SistemaAcadem...
+       </a>
+      </span>
+     </span>
+     ], em outras, a disciplina é ofertada como optativa [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. Matriz curricular Física UFV Bacharelado, disponível em: http://www.fisica.ufv.br/wp-content/uploads/2019/06/MatrizCurricularBacharelado.pdf, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="http://www.fisica.ufv.br/wp-content/uploads/2019/06/MatrizCurricularBacharelado.pdf" target="_blank">
+        http://www.fisica.ufv.br/wp-content/uplo...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. Matriz curricular Física UFMG Bacharelado, disponível em: https://www.fisica.ufmg.br/graduacao/wp-content/uploads/sites/3/2019/05/BacD2019.pdf, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="https://www.fisica.ufmg.br/graduacao/wp-content/uploads/sites/3/2019/05/BacD2019.pdf" target="_blank">
+        https://www.fisica.ufmg.br/graduacao/wp-...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. Matriz curricular Física USP-SP Bacharelado, disponível em: https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=43&amp;codcur=43021&amp;codhab=101&amp;tipo=N, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=43&amp;codcur=43021&amp;codhab=101&amp;tipo=N" target="_blank">
+        https://uspdigital.usp.br/jupiterweb/lis...
+       </a>
+      </span>
+     </span>
+     ]. Exceção se encontra no curso de Bacharelado em Física ofertado pela USP-São Carlos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. Matriz curricular Física USP-São Carlos, disponível em: http://www2.ifsc.usp.br/graduacao/wp-content/uploads/2020/05/Grade-Curricular-76014.pdf, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="http://www2.ifsc.usp.br/graduacao/wp-content/uploads/2020/05/Grade-Curricular-76014.pdf" target="_blank">
+        http://www2.ifsc.usp.br/graduacao/wp-con...
+       </a>
+      </span>
+     </span>
+     ], a qual oferece uma habilitação em óptica e fotônica baseada em uma matriz curricular repleta de disciplinas específicas sobre o tema.
+    </p>
+    <p>
+     A parte desta exceção, de maneira geral, os conteúdos de óptica são tratados dentro de disciplinas do ciclo básico, tanto em aspectos teóricos quanto experimentais. Os livros adotados nestas disciplinas abordam tópicos como: luz e ondas eletromagnéticas, óptica geométrica, instrumentos ópticos, interferência e difração [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. D. Halliday, R. Resnick e J. Walker, Fundamentals of physics (John Wiley &amp; Sons, Hoboken, 2013).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. P.A. Tipler e G. Mosca, Física para cientistas e engenheiros: eletricidade e magnetismo, óptica. (Grupo Gen-LTC, São Paulo, 2000), v. 2.
+       </span>
+      </span>
+     </span>
+     ]. Contudo, quando se compara estas bibliografias com livros textos adotados em disciplinas específicas de Óptica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. E. Hecht, Optics, 5e (Pearson Education India, Chennai, 2002).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11. G.R. Fowles, Introduction to modern optics (Courier Corporation, Chelmsford, 1989).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12. M. Born e E. Wolf, Principles of optics: electromagnetic theory of propagation, interference and diffraction of light (Elsevier, Amsterdã, 2013).
+       </span>
+      </span>
+     </span>
+     ], fica evidente a ausência de conteúdos relevantes. Em geral, temas como propagação da luz, polarização, interferência e difração são tratados de forma mais aprofundada enquanto temas como formulação matricial para óptica geométrica, coerência, técnicas de espectroscopia e óptica de Fourier são temas exclusivamente presentes em livros textos utilizados em disciplinas específicas de Óptica. É diante desse contexto que apresentamos uma proposta didática e acessível de um experimento que explora mais uma tecnologia emergente da Óptica: uma câmera de pixel único. Nossa expectativa é que essa proposta possa ser usada em atividades de laboratório de óptica de maneira alternativa ou complementar às atividades usuais, se tornando um ponto de partida para abordar outros importantes temas da Óptica.
+    </p>
+    <p>
+     Na técnica convencional de produção de imagens, uma fotografia é gerada detectando a luz oriunda de uma região de interesse, uma cena. Para isso, é comumente utilizado algum modelo de detector espacialmente resolvido como um
+     <i>
+      dispositivo de acoplamento de carga
+     </i>
+     ou CCD (acrônimo para
+     <i>
+      charge-coupled device
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13. S.M. Rezende, Materiais e dispositivos eletrônicos (Editora Livraria da Física, São Paulo, 2004).
+       </span>
+      </span>
+     </span>
+     ]). De maneira simplificada, um detector CCD nada mais é do que um arranjo de pequenos sensores de luz espacialmente distribuídos, os pixels. Uma câmera fotográfica digital (ou mesmo a câmera de um celular) tipicamente possui um sensor CCD com milhões de pixels. A resolução máxima de uma imagem obtida com este tipo de sensor, diretamente associada com o nível de detalhes da imagem, é determinada por seu número de pixels. De maneira alternativa, o registro da imagem pode ser obtido iluminando a cena com luz espacialmente modulada e detectando a luz espalhada com um dispositivo de pixel único, um fotodiodo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        14. Z. Zhang, X. MA e J. Zhong, Nat. Commun. 6, 6225 (2015).
+       </span>
+      </span>
+     </span>
+     ] ou uma fotorresistência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        15. R.A. Aguilar, N. Hermosa e M.N. Soriano, Am. J. Phys. 87, 976 (2019).
+       </span>
+      </span>
+     </span>
+     ], por exemplo. Recentemente têm-se demonstrado que aplicações com dispositivos de pixel único são capazes de superar diversas limitações das câmeras pixeladas convencionais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16. M.P. Edgar, G.M. Gibson e M.J. Padgett, Nat. Photon. 13, 13 (2019).
+       </span>
+      </span>
+     </span>
+     ]. Uma câmera de pixel único, por assim dizer, pode ser usada para produzir imagens multi-espectrais, imagens por difração de raios-X ou mesmo imagens tridimensionais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        17. L. Bian, J. Suo, G. Situ, Z. Li, J. Fan, F. Chen e Q. Dai, Sci. Rep. 6, 24752 (2016).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        18. J. Greenberg, K. Krishnamurthy e D. Brady, Opt. Lett. OSA 39, 111 (2014).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19. Z. Zhang e J. Zhong, Opt. Lett. OSA 41, 2497 (2016).
+       </span>
+      </span>
+     </span>
+     ]. A câmera de pixel único também surge como uma alternativa competitiva e de baixo custo para situações em que sensores pixelados se tornam excessivamente caros e experimentalmente inviáveis [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16. M.P. Edgar, G.M. Gibson e M.J. Padgett, Nat. Photon. 13, 13 (2019).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Neste artigo apresentamos como uma câmera de pixel único pode ser implementada sem utilizar equipamentos dispendiosos de um laboratório de pesquisa. Além de auxiliar entusiastas no entendimento do princípio de funcionamento desta promitente tecnologia, o experimento também pode ser considerado como uma proposta de prática de laboratório avançado em disciplinas oferecidas em cursos de graduação em Física. Da execução do experimento à análise de dados, é criada a oportunidade de se adquirir e consolidar competências nas áreas de instrumentação, eletrônica básica, programação e, é claro, óptica. Em particular, o desenvolvimento desta proposta propicia uma excelente ocasião para se introduzir a transformada de Fourier de uma função bidimensional [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        20. M.J.A. Bolzan, Rev. Bras. Ens. Fis. 28, 563 (2006).
+       </span>
+      </span>
+     </span>
+     ], essencial na óptica de Fourier, e técnicas de processamento de imagens digitais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21. M.S. Rzeszotarski, F.L. Royer e G.C. Gilmore, Behav. Res. Meth. Instru. 15, 308 (1983).
+       </span>
+      </span>
+     </span>
+     ], usualmente exploradas por microscopistas e astrônomos.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Descrição Teórica
+    </h1>
+    <h2>
+     2.1. Representação de uma imagem digital
+    </h2>
+    <p>
+     Uma imagem digital é uma representação de uma imagem formada a partir da informação sobre a distribuição espacial de intensidade luminosa [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        22. C. Solomon e T. Breckon, Fundamentals of Digital Image Processing: A practical approach with examples in Matlab (John Wiley &amp; Sons, Hoboken, 2011).
+       </span>
+      </span>
+     </span>
+     ]. Toda imagem digital é composta por
+     <i>
+      elementos da imagem
+     </i>
+     , chamados de
+     <i>
+      pixels
+     </i>
+     , que indicam a intensidade da luz nas posições que formam a imagem. Assim, cada pixel corresponde a uma pequena região finita da imagem, tipicamente discretizada na forma de um arranjo retangular ordenado. A resolução de uma imagem é então determinada pela quantidade de linhas e colunas que compõem o arranjo. Então, usamos uma função bidimensional, tal como
+     <i>
+      f
+     </i>
+     =
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     ), para representar uma imagem matematicamente, descrevendo o valor da intensidade luminosa
+     <i>
+      f
+     </i>
+     em cada posição (
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     ) do pixel. Os possíveis valores de
+     <i>
+      f
+     </i>
+     são determinados pelo número de
+     <i>
+      bits
+     </i>
+     (
+     <i>
+      n
+     </i>
+     ) usado para armazenar digitalmente a informação sobre a intensidade luminosa. Dessa forma o inteiro positivo
+     <i>
+      n
+     </i>
+     determina o número de
+     <i>
+      bits por pixel
+     </i>
+     ou a
+     <i>
+      profundidade de cor
+     </i>
+     da imagem. Portanto,
+     <i>
+      f
+     </i>
+     é um número inteiro no intervalo entre 0 e 2
+     <sup>
+      <i>
+       n
+      </i>
+     </sup>
+     −1, de acordo com o sistema digital binário. Para uma imagem com profundidade de cor de 8 bits, por exemplo, cada pixel é especificado por um dos 256 possíveis valores de
+     <i>
+      f
+     </i>
+     . Em seguida podemos estabelecer uma escala de intensidade para
+     <i>
+      f
+     </i>
+     associando os valores extremos, neste caso 0 e 255, para as posições com menor e maior intensidade luminosa, respectivamente.
+    </p>
+    <p>
+     Outro aspecto fundamental é que uma função bidimensional
+     <i>
+      f
+     </i>
+     pode ser usada para forma uma imagem definindo um mapa de cores, em que uma
+     <i>
+      tonalidade
+     </i>
+     é atribuída a cada valor de
+     <i>
+      f
+     </i>
+     . O mapa de cor mais comum é o de
+     <i>
+      escala de cinza
+     </i>
+     , com tonalidades da cor cinza variando da cor preta à branca. Esta escala simula a percepção visual na qual regiões com menor (maior) intensidade luminosa são mais escuras (claras). De fato, o olho humano possui milhões de células fotorreceptoras sensíveis a intensidade luminosa [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        23. O. Helene, A.F. Helene, Revista Brasileira de Ensino de Física 33, 3312 (2011).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     simboliza esta representação numérica na composição de uma imagem digital. Com 13×16 pixels e mapa de tonalidade em escala de cinza, identificamos o personagem Mario como apresentado no jogo eletrônico Super Mario Bros de 1985 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24. Super Mario Bros, disponível em: https://mario.nintendo.com/history/, acessado em 07/12/2020.
+       </span>
+       <br/>
+       <a href="https://mario.nintendo.com/history/" target="_blank">
+        https://mario.nintendo.com/history/...
+       </a>
+      </span>
+     </span>
+     ]. A profundidade de cor é de 8 bits e o valor de
+     <i>
+      f
+     </i>
+     é destacado em cada posição. A distribuição de
+     <i>
+      f
+     </i>
+     , dessa maneira, ocorre no
+     <i>
+      domínio espacial
+     </i>
+     , estabelecendo a intensidade em cada posição no espaço.
+    </p>
+    <div class="row fig" id="S2_F1">
+     <a name="S2_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8ps64MSzsCqdPQR5SC6qHsv/bf95482247bd5fc3c51908ce9f726d13f3127521.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Representação de uma imagem de 13×16 pixels com profundidade de cor de 8 bits. O valor do pixel em cada posição (
+      <i>
+       x
+      </i>
+      ,
+      <i>
+       y
+      </i>
+      ) é um número inteiro entre 0, para regiões de menor intensidade (totalmente preta) e 255, para regiões de maior intensidade (totalmente branca).
+      <br/>
+     </div>
+    </div>
+    <p>
+     A seguir apresentamos como esta representação pode ser usada para transformar imagens digitais a um outro domínio. Para não fugir do escopo do artigo não será discutido como estender esta representação para a composição de imagens digitais coloridas.
+    </p>
+    <h2>
+     2.2. Transformada de Fourier bidimensional
+    </h2>
+    <p>
+     A transformada de Fourier nada mais é do que um tipo particular de transformação matemática. Ela possibilita, entre outras coisas, produzir e processar imagens a partir de representações em diferentes domínios.
+    </p>
+    <p>
+     Considere uma imagem arbitrária de
+     <i>
+      M
+     </i>
+     ×
+     <i>
+      N
+     </i>
+     pixels representada por uma função bidimensional
+     <i>
+      f
+     </i>
+     . A Transformada Discreta de Fourier (TDF) de
+     <i>
+      f
+     </i>
+     é definida por
+    </p>
+    <div class="row formula" id="eS2_E1">
+     <a name="S2_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math alttext="F(u,v)=\frac{1}{\sqrt{MN}}\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}f(x,y)e^{-i2\pi\left% (\frac{ux}{M}+\frac{vy}{N}\right)}," display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            F
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             u
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             v
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <msqrt>
+             <mrow>
+              <mi>
+               M
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               N
+              </mi>
+             </mrow>
+            </msqrt>
+           </mfrac>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <munderover>
+             <mo largeop="true" movablelimits="false" symmetric="true">
+              ∑
+             </mo>
+             <mrow>
+              <mi>
+               x
+              </mi>
+              <mo>
+               =
+              </mo>
+              <mn>
+               0
+              </mn>
+             </mrow>
+             <mrow>
+              <mi>
+               M
+              </mi>
+              <mo>
+               -
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </munderover>
+            <mrow>
+             <munderover>
+              <mo largeop="true" movablelimits="false" symmetric="true">
+               ∑
+              </mo>
+              <mrow>
+               <mi>
+                y
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0
+               </mn>
+              </mrow>
+              <mrow>
+               <mi>
+                N
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </munderover>
+             <mrow>
+              <mi>
+               f
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                x
+               </mi>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                y
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               ⁢
+              </mo>
+              <msup>
+               <mi>
+                e
+               </mi>
+               <mrow>
+                <mo>
+                 -
+                </mo>
+                <mrow>
+                 <mi>
+                  i
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mn>
+                  2
+                 </mn>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  π
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mrow>
+                   <mfrac>
+                    <mrow>
+                     <mi>
+                      u
+                     </mi>
+                     <mo>
+                      ⁢
+                     </mo>
+                     <mi>
+                      x
+                     </mi>
+                    </mrow>
+                    <mi>
+                     M
+                    </mi>
+                   </mfrac>
+                   <mo>
+                    +
+                   </mo>
+                   <mfrac>
+                    <mrow>
+                     <mi>
+                      v
+                     </mi>
+                     <mo>
+                      ⁢
+                     </mo>
+                     <mi>
+                      y
+                     </mi>
+                    </mrow>
+                    <mi>
+                     N
+                    </mi>
+                   </mfrac>
+                  </mrow>
+                  <mo>
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+               </mrow>
+              </msup>
+             </mrow>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo a operação inversa, a Transformada Discreta Inversa de Fourier (TDIF), dada por
+    </p>
+    <div class="row formula" id="eS2_E2">
+     <a name="S2_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math alttext="f(x,y)=\frac{1}{\sqrt{MN}}\sum_{u=0}^{M-1}\sum_{v=0}^{N-1}F(u,v)e^{i2\pi\left(% \frac{ux}{M}+\frac{vy}{N}\right)}." display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            f
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             x
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             y
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <msqrt>
+             <mrow>
+              <mi>
+               M
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               N
+              </mi>
+             </mrow>
+            </msqrt>
+           </mfrac>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <munderover>
+             <mo largeop="true" movablelimits="false" symmetric="true">
+              ∑
+             </mo>
+             <mrow>
+              <mi>
+               u
+              </mi>
+              <mo>
+               =
+              </mo>
+              <mn>
+               0
+              </mn>
+             </mrow>
+             <mrow>
+              <mi>
+               M
+              </mi>
+              <mo>
+               -
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </munderover>
+            <mrow>
+             <munderover>
+              <mo largeop="true" movablelimits="false" symmetric="true">
+               ∑
+              </mo>
+              <mrow>
+               <mi>
+                v
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0
+               </mn>
+              </mrow>
+              <mrow>
+               <mi>
+                N
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </munderover>
+             <mrow>
+              <mi>
+               F
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                u
+               </mi>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                v
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               ⁢
+              </mo>
+              <msup>
+               <mi>
+                e
+               </mi>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mn>
+                 2
+                </mn>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 π
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo>
+                  (
+                 </mo>
+                 <mrow>
+                  <mfrac>
+                   <mrow>
+                    <mi>
+                     u
+                    </mi>
+                    <mo>
+                     ⁢
+                    </mo>
+                    <mi>
+                     x
+                    </mi>
+                   </mrow>
+                   <mi>
+                    M
+                   </mi>
+                  </mfrac>
+                  <mo>
+                   +
+                  </mo>
+                  <mfrac>
+                   <mrow>
+                    <mi>
+                     v
+                    </mi>
+                    <mo>
+                     ⁢
+                    </mo>
+                    <mi>
+                     y
+                    </mi>
+                   </mrow>
+                   <mi>
+                    N
+                   </mi>
+                  </mfrac>
+                 </mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+              </msup>
+             </mrow>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A função complexa
+     <i>
+      F
+     </i>
+     é uma representação de
+     <i>
+      f
+     </i>
+     no
+     <i>
+      domínio de Fourier
+     </i>
+     (ou
+     <i>
+      domínio da frequência
+     </i>
+     ). Com o auxílio da fórmula de Euler,
+     <i>
+      e
+     </i>
+     <sup>
+      <i>
+       iθ
+      </i>
+     </sup>
+     =
+     <i>
+      cos
+     </i>
+     ⁡(
+     <i>
+      θ
+     </i>
+     ) +
+     <i>
+      i
+     </i>
+     sen(
+     <i>
+      θ
+     </i>
+     ), fica claro que a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ) é uma combinação de funções harmônicas com diferentes coeficientes
+     <i>
+      F
+     </i>
+     para cada par de frequências (
+     <i>
+      u
+     </i>
+     ,
+     <i>
+      v
+     </i>
+     ). Como ilustrado graficamente na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     , a combinação de funções harmônicas pode ser usada para compor uma função arbitrária no domínio espacial, uma interpretação direta da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="S2_F2">
+     <a name="S2_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8ps64MSzsCqdPQR5SC6qHsv/2affaddd05d1d1b963b8cf8e507822e967b95936.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Representação da imagem no domínio espacial como uma composição de funções harmônicas. Cada senoide de frequências (
+      <i>
+       u
+      </i>
+      <sub>
+       <i>
+        i
+       </i>
+      </sub>
+      ,
+      <i>
+       v
+      </i>
+      <sub>
+       <i>
+        i
+       </i>
+      </sub>
+      ), ponderada pelo respectivo coeficiente
+      <i>
+       F
+      </i>
+      (
+      <i>
+       u
+      </i>
+      <sub>
+       <i>
+        i
+       </i>
+      </sub>
+      ,
+      <i>
+       v
+      </i>
+      <sub>
+       <i>
+        i
+       </i>
+      </sub>
+      ) contribui para a formação da imagem
+      <i>
+       f
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Por se tratar de uma função complexa, a contribuição de
+     <i>
+      F
+     </i>
+     em cada termo na soma é melhor percebida ao se definir a
+     <i>
+      densidade espectral
+     </i>
+     , calculada pelo módulo de
+     <i>
+      F
+     </i>
+     . Regiões onde a densidade espectral é mais intensa (com maior módulo) mostram uma maior contribuição de harmônicos com determinadas frequências. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     mostra a representação de uma imagem no domínio espacial e sua respectiva densidade espectral obtida por TDF.
+    </p>
+    <div class="row fig" id="S2_F3">
+     <a name="S2_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8ps64MSzsCqdPQR5SC6qHsv/1d4f363ebee409e8dff722b4dc8ca277a7b4b6b7.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Exemplo de uma imagem no domínio espacial com
+      <i>
+       M
+      </i>
+      ×
+      <i>
+       N
+      </i>
+      pixels e sua respectiva densidade espectral.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para posterior processamento da imagem, como uma aplicação de filtro passa banda, por exemplo, é comum reescalar a densidade espectral mudando a origem das frequências para o centro da imagem transformada. Assim, cada representação espectral exibe a componente de frequência zero posicionada no centro, as frequências positivas localizadas no primeiro quadrante e as frequências negativas localizadas no terceiro quadrante. É importante ressaltar que a permuta entre quadrantes não altera a operação de transformação da imagem para o domínio espacial [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        22. C. Solomon e T. Breckon, Fundamentals of Digital Image Processing: A practical approach with examples in Matlab (John Wiley &amp; Sons, Hoboken, 2011).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Uma vez que a imagem no domínio espacial é uma função real, a parte real de
+     <i>
+      F
+     </i>
+     é simétrica e sua parte imaginária é anti-simétrica. Dessa forma a densidade espectral de uma imagem transformada apresenta simetrias em relação à origem (veja a Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     ). Esta condição é verificada pelas seguintes igualdades:
+    </p>
+    <div class="row formula" id="eS2_E3">
+     <a name="S2_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math alttext="|F(u,v)|=|F(-u,-v)|" display="block">
+        <mrow>
+         <mrow>
+          <mo stretchy="false">
+           |
+          </mo>
+          <mrow>
+           <mi>
+            F
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             u
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             v
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo stretchy="false">
+           |
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           |
+          </mo>
+          <mrow>
+           <mi>
+            F
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mi>
+              u
+             </mi>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mi>
+              v
+             </mi>
+            </mrow>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo stretchy="false">
+           |
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eS2_E4">
+     <a name="S2_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math alttext="|F(-u,v)|=|F(u,-v)|." display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mo stretchy="false">
+            |
+           </mo>
+           <mrow>
+            <mi>
+             F
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mi>
+               u
+              </mi>
+             </mrow>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              v
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mo stretchy="false">
+            |
+           </mo>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            |
+           </mo>
+           <mrow>
+            <mi>
+             F
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              u
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mi>
+               v
+              </mi>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mo stretchy="false">
+            |
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Podemos então explorar estas redundâncias no momento de obter os coeficientes: apenas os coeficientes associados com as frequências do primeiro e segundo quadrantes são usadas para gerar todo o espectro de Fourier.
+    </p>
+    <p>
+     Existem várias maneiras de implementar computacionalmente as transformações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ). Um dos algoritmos mais conhecido é a Transformada Rápida de Fourier (
+     <i>
+      Fast Fourier Transform – FFT
+     </i>
+     ), sendo relativamente eficiente e de fácil implementação [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        22. C. Solomon e T. Breckon, Fundamentals of Digital Image Processing: A practical approach with examples in Matlab (John Wiley &amp; Sons, Hoboken, 2011).
+       </span>
+      </span>
+     </span>
+     ]. O código usado nas transformações das imagens é apresentado no Material suplementar.
+    </p>
+    <h2>
+     2.3. Captura das imagens
+    </h2>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     mostra o diagrama esquemático da montagem experimental. A luz oriunda de um projetor é controlada por um computador que gera um padrão espacialmente modulado,
+     <i>
+      P
+     </i>
+     <sub>
+      <i>
+       m
+      </i>
+     </sub>
+     . Após ser espalhada pelo objeto, a luz detectada por um fotodetector produz um sinal proporcional à área iluminada, expresso como
+    </p>
+    <div class="row fig" id="S2_F4">
+     <a name="S2_F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8ps64MSzsCqdPQR5SC6qHsv/0ab902aa264260e9e911e2037291769e10ad6a69.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Diagrama esquemático do experimento: um projetor (a) é usado para iluminar um objeto (b) e a luz espalhada é detectada com um único fotodiodo (c). Após uma sequência de medidas, estando o objeto iluminado pelos padrões de funções harmônicas (d), a imagem digital é obtida computacionalmente. Um conversor analógico-digital e uma plataforma Arduino compõem o sistema de aquisição de dados (DAQ) usado para registrar os valores medidos no computador de controle (e).
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eS2_E5">
+     <a name="S2_E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math alttext="S_{m}(u,v)=S_{0}+\eta\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}P_{m}(x,y,u,v)R(x,y)," display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <msub>
+            <mi>
+             S
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             u
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             v
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msub>
+            <mi>
+             S
+            </mi>
+            <mn>
+             0
+            </mn>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mi>
+             η
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <munderover>
+              <mo largeop="true" movablelimits="false" symmetric="true">
+               ∑
+              </mo>
+              <mrow>
+               <mi>
+                x
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0
+               </mn>
+              </mrow>
+              <mrow>
+               <mi>
+                M
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </munderover>
+             <mrow>
+              <munderover>
+               <mo largeop="true" movablelimits="false" symmetric="true">
+                ∑
+               </mo>
+               <mrow>
+                <mi>
+                 y
+                </mi>
+                <mo>
+                 =
+                </mo>
+                <mn>
+                 0
+                </mn>
+               </mrow>
+               <mrow>
+                <mi>
+                 N
+                </mi>
+                <mo>
+                 -
+                </mo>
+                <mn>
+                 1
+                </mn>
+               </mrow>
+              </munderover>
+              <mrow>
+               <msub>
+                <mi>
+                 P
+                </mi>
+                <mi>
+                 m
+                </mi>
+               </msub>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 x
+                </mi>
+                <mo>
+                 ,
+                </mo>
+                <mi>
+                 y
+                </mi>
+                <mo>
+                 ,
+                </mo>
+                <mi>
+                 u
+                </mi>
+                <mo>
+                 ,
+                </mo>
+                <mi>
+                 v
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                R
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 x
+                </mi>
+                <mo>
+                 ,
+                </mo>
+                <mi>
+                 y
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mrow>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo
+     <i>
+      R
+     </i>
+     a distribuição da reflectividade superficial da cena iluminada. A dupla soma na equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ) destaca a contribuição de toda a área iluminada, virtualmente dividida em
+     <i>
+      M
+     </i>
+     ×
+     <i>
+      N
+     </i>
+     partes finitas em cada posição (
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     ). A constante
+     <i>
+      S
+     </i>
+     <sub>
+      0
+     </sub>
+     representa o sinal devido à luz ambiente de intensidade constante e η é um parâmetro de proporcionalidade dependente das características do detector. Ficará claro que os valores reais de η e
+     <i>
+      S
+     </i>
+     <sub>
+      0
+     </sub>
+     são irrelevantes no processo de produção da imagem.
+    </p>
+    <p>
+     A obtenção da imagem por transformada de Fourier é possível para um padrão de iluminação harmônico, tal como
+    </p>
+    <div class="row formula" id="eS2_E6">
+     <a name="S2_E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math alttext="P_{m}(x,y,u,v)=a+b\cos\left[2\pi\left(\frac{ux}{M}+\frac{vy}{N}\right)+\phi_{m% }\right]\!," display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <msub>
+            <mi>
+             P
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             x
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             y
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             u
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             v
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            a
+           </mi>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mi>
+             b
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mi>
+              cos
+             </mi>
+             <mo>
+              ⁡
+             </mo>
+             <mrow>
+              <mo>
+               [
+              </mo>
+              <mrow>
+               <mrow>
+                <mn>
+                 2
+                </mn>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 π
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo>
+                  (
+                 </mo>
+                 <mrow>
+                  <mfrac>
+                   <mrow>
+                    <mi>
+                     u
+                    </mi>
+                    <mo>
+                     ⁢
+                    </mo>
+                    <mi>
+                     x
+                    </mi>
+                   </mrow>
+                   <mi>
+                    M
+                   </mi>
+                  </mfrac>
+                  <mo>
+                   +
+                  </mo>
+                  <mfrac>
+                   <mrow>
+                    <mi>
+                     v
+                    </mi>
+                    <mo>
+                     ⁢
+                    </mo>
+                    <mi>
+                     y
+                    </mi>
+                   </mrow>
+                   <mi>
+                    N
+                   </mi>
+                  </mfrac>
+                 </mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <mo>
+                +
+               </mo>
+               <msub>
+                <mi>
+                 ϕ
+                </mi>
+                <mi>
+                 m
+                </mi>
+               </msub>
+              </mrow>
+              <mo rspace="0.8pt">
+               ]
+              </mo>
+             </mrow>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     sendo
+     <i>
+      a
+     </i>
+     a intensidade média de iluminação e
+     <i>
+      b
+     </i>
+     o contraste. As variáveis
+     <i>
+      u
+     </i>
+     e
+     <i>
+      v
+     </i>
+     definem a frequência espacial do padrão de iluminação e assumem valores inteiros nos intervalos [0,
+     <i>
+      M
+     </i>
+     −1] e [0,
+     <i>
+      N
+     </i>
+     −1], respectivamente. Cada padrão de iluminação deve ser considerado como uma função harmônica bidimensional usada na composição da imagem no domínio espacial, como ilustrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     .
+    </p>
+    <p>
+     Com a sequência de quatro detecções de mesma frequência mas com diferentes fases, a saber
+     <i>
+      ϕ
+     </i>
+     <sub>
+      1
+     </sub>
+     = 0,
+     <i>
+      ϕ
+     </i>
+     <sub>
+      2
+     </sub>
+     =
+     <i>
+      π
+     </i>
+     /2,
+     <i>
+      ϕ
+     </i>
+     <sub>
+      3
+     </sub>
+     =
+     <i>
+      π
+     </i>
+     e
+     <i>
+      ϕ
+     </i>
+     <sub>
+      4
+     </sub>
+     = 3
+     <i>
+      π
+     </i>
+     /2, define-se o sinal diferencial como
+    </p>
+    <div class="row formula" id="eS2_E7">
+     <a name="S2_E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math alttext="D(u,v)=S_{1}(u,v)-S_{3}(u,v)+i[S_{2}(u,v)-S_{4}(u,v)]" display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           D
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            u
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            v
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mrow>
+            <msub>
+             <mi>
+              S
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              u
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              v
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <msub>
+             <mi>
+              S
+             </mi>
+             <mn>
+              3
+             </mn>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              u
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              v
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mrow>
+             <mrow>
+              <msub>
+               <mi>
+                S
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                u
+               </mi>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                v
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+             </mrow>
+             <mo>
+              -
+             </mo>
+             <mrow>
+              <msub>
+               <mi>
+                S
+               </mi>
+               <mn>
+                4
+               </mn>
+              </msub>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                u
+               </mi>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                v
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e, consequentemente, das equações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ) obtém-se
+    </p>
+    <div class="row formula" id="eS2_E8">
+     <a name="S2_E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math alttext="D(u,v)=2\eta b\sum_{x=0}^{M-1}\sum_{y=0}^{N-1}R(x,y)e^{-i2\pi\left(\frac{ux}{M% }+\frac{vy}{N}\right)}." display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            D
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             u
+            </mi>
+            <mo>
+             ,
+            </mo>
+            <mi>
+             v
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            η
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            b
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <munderover>
+             <mo largeop="true" movablelimits="false" symmetric="true">
+              ∑
+             </mo>
+             <mrow>
+              <mi>
+               x
+              </mi>
+              <mo>
+               =
+              </mo>
+              <mn>
+               0
+              </mn>
+             </mrow>
+             <mrow>
+              <mi>
+               M
+              </mi>
+              <mo>
+               -
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </munderover>
+            <mrow>
+             <munderover>
+              <mo largeop="true" movablelimits="false" symmetric="true">
+               ∑
+              </mo>
+              <mrow>
+               <mi>
+                y
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                0
+               </mn>
+              </mrow>
+              <mrow>
+               <mi>
+                N
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </munderover>
+             <mrow>
+              <mi>
+               R
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                x
+               </mi>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                y
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mo>
+               ⁢
+              </mo>
+              <msup>
+               <mi>
+                e
+               </mi>
+               <mrow>
+                <mo>
+                 -
+                </mo>
+                <mrow>
+                 <mi>
+                  i
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mn>
+                  2
+                 </mn>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  π
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mrow>
+                   <mfrac>
+                    <mrow>
+                     <mi>
+                      u
+                     </mi>
+                     <mo>
+                      ⁢
+                     </mo>
+                     <mi>
+                      x
+                     </mi>
+                    </mrow>
+                    <mi>
+                     M
+                    </mi>
+                   </mfrac>
+                   <mo>
+                    +
+                   </mo>
+                   <mfrac>
+                    <mrow>
+                     <mi>
+                      v
+                     </mi>
+                     <mo>
+                      ⁢
+                     </mo>
+                     <mi>
+                      y
+                     </mi>
+                    </mrow>
+                    <mi>
+                     N
+                    </mi>
+                   </mfrac>
+                  </mrow>
+                  <mo>
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+               </mrow>
+              </msup>
+             </mrow>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) mostra que a reflectividade
+     <i>
+      R
+     </i>
+     e o sinal diferencial
+     <i>
+      D
+     </i>
+     estão relacionados pelas transformações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ). Ou seja, é possível obter
+     <i>
+      R
+     </i>
+     desde que
+     <i>
+      D
+     </i>
+     seja conhecido e vice-versa. Então, com uma sequência de quatro medidas, a componente espectral
+     <i>
+      D
+     </i>
+     (
+     <i>
+      u
+     </i>
+     ,
+     <i>
+      v
+     </i>
+     ) da imagem alvo é obtida. Fica claro que após iluminar a cena com todo o espectro de frequências espaciais, a imagem no domínio espacial (∝
+     <i>
+      R
+     </i>
+     ) é reconstituída aplicando a TDIF. Note que o fator de proporcionalidade é suprimido normalizando os valores de
+     <i>
+      R
+     </i>
+     no intervalo estabelecido pela profundidade de cor.
+    </p>
+    <p>
+     Como a imagem final é uma função real, as equações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      3
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ) são usadas para eliminar as redundâncias nas medidas. Apenas as frequências dos quadrantes 1 e 2 são usadas para gerar o padrão, estabelecendo um total de 2
+     <i>
+      MN
+     </i>
+     medidas para reconstituir uma imagem de
+     <i>
+      M
+     </i>
+     ×
+     <i>
+      N
+     </i>
+     pixels da cena iluminada. Após a aquisição dos dados, a imagem digital da cena é obtida computacionalmente usando um código no qual esteja implementado o algoritmo de FFT. Neste trabalho foram usadas as funções do pacote de processamento de imagens disponível em
+     <i>
+      GNU Octave
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25. J.W. Eaton, GNU Octave version 5.2.0 manual: a high-level interactive language for numerical computations, 2020.
+       </span>
+      </span>
+     </span>
+     ]. Versões simplificados dos códigos para a geração do padrão, aquisição de dados e produção da imagem são apresentadas nos Quadros 1 e 2 do Apêndice (veja o Material suplementar).
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Aparato Experimental
+    </h1>
+    <p>
+     Para realizar o experimento utilizamos como fotodetector um fotodiodo monolítico de silício com amplificador de transimpedância embarcado, um OPT101 (
+     <i>
+      Texas Instruments
+     </i>
+     ) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        26. T. Instruments, Opt101 monolithic photodiode and single-supply transimpedance amplifier, 2015.
+       </span>
+      </span>
+     </span>
+     ]. Com área ativa de 5,24 mm
+     <sup>
+      2
+     </sup>
+     , este modelo se destaca por possuir sensibilidade em ampla faixa espectral (de 300 nm a 1100 nm), responder linearmente a intensidade da luz incidente e possuir baixa corrente de escuro. Em torno do comprimento de onda de máxima sensibilidade, ∼850 nm, o sinal de saída é de 0, 6 V/μW, com realimentação interna de 1 MΩ. Por fim, o tempo de acomodação do sinal, com tolerância de 0,01%, é de 160
+     <i>
+      μ
+     </i>
+     s [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        26. T. Instruments, Opt101 monolithic photodiode and single-supply transimpedance amplifier, 2015.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Após a conversão do sinal analógico, o registro dos dados foi efetuado por um computador conectado via porta USB a uma plataforma Arduino (modelo Nano) com microcontrolador ATmega328 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        27. M. Margolis, B. Jepson e N.R. Weldin, Arduino cookbook: recipes to begin, expand, and enhance your projects (O’Reilly Media, Sebastopol, 2020).
+       </span>
+      </span>
+     </span>
+     ]. O sinal do fotodiodo foi convertido utilizando um conversor analógico-digital de 16 bits, um ADS1115 (
+     <i>
+      Adafruit
+     </i>
+     ) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        28. T. Instruments, ADS111x Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs with Internal Reference, Oscillator, and Programmable Comparator, 2016.
+       </span>
+      </span>
+     </span>
+     ]. Além da maior resolução em comparação com o conversor interno do Arduino, o ADS1115 possui um Amplificador de Ganho Programável (AGP) integrado, o qual permite um ganho de até 16 vezes no sinal de entrada. Tanto o ADS1115 quanto o OPT101 foram energizadas diretamente através da placa Arduino com d.d.p. de 5 V. Por fim, a comunicação entre o ADS1115 e o Arduino foi realizada pela interface
+     <i>
+      I
+     </i>
+     2
+     <i>
+      C
+     </i>
+     (
+     <i>
+      Inter-Integrated Circuit
+     </i>
+     ) a uma taxa de 860 amostras/s. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     mostra o esquema do circuito usado para detecção do sinal e registro dos dados. Considerando este esquema, o código em C++ para a plataforma Arduino é apresentado no Quadro 3. É importante destacar que os componentes eletrônicos para a aquisição dos dados podem ser comprados em lojas virtuais de eletrônicos a um custo total bastante acessível ( &lt;
+     <i>
+      R
+     </i>
+     $⁡100).
+    </p>
+    <div class="row fig" id="S2_F5">
+     <a name="S2_F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8ps64MSzsCqdPQR5SC6qHsv/8bc36b9a6f18b85c5a84233db693581a404eaafd.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Esquema do circuito composto pela plataforma Arduino e o conversor analógico-digital ADS1115 usados no registro do sinal gerado pelo fotodiodo OPT101.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para mostrar o funcionamento da técnica usamos como objeto alvo um boneco em PVC do personagem Mario, como ilustrado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     . A área iluminada foi de 6×6 cm
+     <sup>
+      2
+     </sup>
+     e o tempo de um ciclo de cada medida foi de 0,3 s. Assim, para uma imagem de 64×64 pixels, foram necessários 41 min para se obter todos os coeficientes de Fourier. Este longo tempo de aquisição de dados é consequência da limitação da taxa de atualização vertical do projetor. Nós utilizamos um projetor ordinário da Epson modelo PowerLite S8+ com resolução de 800×600 pixels (SVGA) e saída de luz branca com fluxo luminoso de 2.500 lúmens. A taxa de atualização máxima do projetor (85 Hz) foi usada em sintonia com a placa de vídeo do computador de controle. A limitação devido à taxa de atualização pode ser superada usando, por exemplo, um
+     <i>
+      dispositivo de microespelhos digital
+     </i>
+     (
+     <i>
+      DMD- Digital Micromirror Device
+     </i>
+     ) em que a taxa de modulação pode exceder 20 kHz [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16. M.P. Edgar, G.M. Gibson e M.J. Padgett, Nat. Photon. 13, 13 (2019).
+       </span>
+      </span>
+     </span>
+     ]. Outro equipamento comumente utilizado nessa técnica é o
+     <i>
+      modulador espacial de luz
+     </i>
+     (
+     <i>
+      SLM – Spatial Light Modulator
+     </i>
+     ), com taxas de atualização da ordem de poucos kHz. Devido principalmente ao alto custo, estes equipamentos não são usualmente encontrados em laboratórios didáticos, embora propostas alternativas de baixo custo já tenham surgido [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        29. A.M. Tai, Appl. Opt. OSA, 25, 1380 (1986).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        30. D. Huang, H. Timmers, A. Roberts, N. Shivaram e A.S. Sandhua, Am. J. Phys. 80, 211 (2012).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        31. D. Sych e M. Aksenov, AIP Conf. Proc. 1936, 020016 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Discussão e Resultados
+    </h1>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     mostra o resultado do espectro de Fourier coletado e a respectiva imagem no domínio espacial, com resolução de 64×64 pixels. A densidade espectral é apresentada em mapa de cinza e em escala logarítmica, dada por
+     <i>
+      log
+     </i>
+     ⁡(1 + |
+     <i>
+      D
+     </i>
+     |), a qual permite destacar pequenas variações em amplitude. A qualidade da respectiva imagem no domínio espacial depende fortemente no número de coeficientes de Fourier coletados. Para 20% do número total de medidas, o reconhecido da cena já é possível, imagem a esquerda. Isso se deve porque as componentes de baixa frequência do espectro de Fourier determinam as variações suaves na escala de cinza da imagem no domínio espacial, enquanto as variações abruptas, como bordas e fronteiras, são determinadas pelas componentes de alta frequência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21. M.S. Rzeszotarski, F.L. Royer e G.C. Gilmore, Behav. Res. Meth. Instru. 15, 308 (1983).
+       </span>
+      </span>
+     </span>
+     ]. Como as informações mais essenciais para a constituição da imagem são obtidas antes de finalizar o número total de medidas, a técnica facilmente permite a implementação de algorítimos de compressão de dados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       32
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        32. F. Soldevila, E. Salvador-Balaguer, P. Clemente, E. Tajahuerce e J. Lancis, Sci. Rep. 5, 14300 (2015).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="S3_F6">
+     <a name="S3_F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8ps64MSzsCqdPQR5SC6qHsv/06839bd5d8f373b562815e31574be6a3abbf7d6d.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Densidades espectrais e as respectivas imagens no domínio espacial obtidas por TDIF. Na parte superior, a densidade espectral para 20% e 100% do número total de medidas. Na parte inferior, as respectivas imagens reais com resolução de 64×64 pixels (barra de escala: 1 cm).
+      <br/>
+     </div>
+    </div>
+    <p>
+     É importante salientar que neste experimento as principais fontes de ruídos são: (a) as oscilações térmicas da fonte de luz do projetor; (b) as variações de intensidade da luz ambiente; e (c) o falseamento de frequências (
+     <i>
+      aliasing
+     </i>
+     ). O efeito sobre a imagem devido a cada uma dessas fontes de ruído deve ser verificado e removido com aplicação de filtros na densidade espectral [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        14. Z. Zhang, X. MA e J. Zhong, Nat. Commun. 6, 6225 (2015).
+       </span>
+      </span>
+     </span>
+     ]. Em nossos resultados observamos o efeito do falseamento de frequência que introduz uma indistinção no sinal detectado para padrões com alta frequência [como destacado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     para a frequência (
+     <i>
+      u
+     </i>
+     <sub>
+      4
+     </sub>
+     ,
+     <i>
+      v
+     </i>
+     <sub>
+      4
+     </sub>
+     )]. É por este motivo que a imagem final não apresenta bordas bem definidas, um problema inerente à resolução do sistema de iluminação. Todas estas fontes ruídos podem ser evitadas com equipamentos mais apropriados, aumentando o custo do experimento em contrapartida. Ainda que as limitações do projetor pareçam ruins, a análise de resultados de tal experimento possibilita a introdução de técnicas de processamento de imagens digitais, como por exemplo, a aplicação de filtros no domínio de Fourier. Nas imagens apresentadas na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     , nenhum pós-processamento foi aplicado a fim de destacar as características da imagem em nossos resultados.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Considerações Finais
+    </h1>
+    <p>
+     A técnica de captura de imagens por uma câmera de pixel único foi implementada usando um projetor como fonte de luz e um fotodiodo para medir a intensidade luminosa. Como computadores e projetores são equipamentos usualmente disponíveis como recursos de apoio didático e o sistema de aquisição do experimento possui baixo custo, a técnica pode ser incorporada em práticas de laboratório com baixo dispêndio. O sistema proposto possui 16 bits de profundidade de cor, consequência do conversor analógico-digital utilizado. Esta característica permite maior suavidade e continuidade nas tonalidades da escala de cinza das imagens em comparação a outros sistemas de baixo custo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        15. R.A. Aguilar, N. Hermosa e M.N. Soriano, Am. J. Phys. 87, 976 (2019).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A técnica apresentada possui enorme potencial para substituir as técnicas de imageamento convencionais: (1) uma câmera de pixel único pode ser mais conveniente do que câmeras pixeladas na produção de imagens em determinadas bandas espectrais; (2) sua implementação dispensa elementos ópticos como filtros e lentes; (3) o sensor não precisa estar direcionado à cena de interesse. Outro fator relevante é a supressão de qualquer sinal indevido oriundo da iluminação ambiente que tenha intensidade constante. Em consequência, o ruído gerado por fontes externas é reduzido: decorrência direta da definição do sinal diferencial atualizado por quatro diferentes fases. Convém salientar que com apenas três fases ainda é possível reconstituir uma imagem no domínio espacial, embora a relação sinal-ruído seja prejudicada [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       33
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        33. Z. Zhang, X. Wang, G. Zheng e J. Zhong, Sci. Rep. 7, 12029 (2017).
+       </span>
+      </span>
+     </span>
+     ]. For fim, como a técnica explora o processamento computacional dos dados por FFT, a constituição da imagem é implementada de forma rápida e iterativa, podendo ainda ser incrementada com algoritmos de compressão de dados. Pelo exposto, acreditamos que a proposta de experimento possa ser inserida em disciplinas de laboratório avançado para os cursos de graduação em Física, tanto pelos temas abordados quanto pelas futuras aplicações da técnica.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem à UFOP pelo apoio financeiro (processo nº: 23109.004080/2019-88) e ao(à) revisor(a) pelas importantes sugestões.
+    </p>
+   </div>
+   <div class="articleSection">
+    <p>
+     <a href="https://minio.scielo.br/documentstore/1806-9126/8ps64MSzsCqdPQR5SC6qHsv/2854504f7623d1da3aef9eeb15df7934156ab4c7.pdf" target="_blank">
+      Apêndice
+     </a>
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     REFERÊNCIAS
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1.
+       </sup>
+       <div>
+        <i>
+         Matriz curricular Física Bacharelado UNICAMP
+        </i>
+        , disponível em: https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2020/curriculoPleno/cp4.html, acessado em 07/12/2020.
+        <br/>
+        <a href="https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2020/curriculoPleno/cp4.html" target="_blank">
+         » https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2020/curriculoPleno/cp4.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2.
+       </sup>
+       <div>
+        <i>
+         Matriz curricular UNESP-RC
+        </i>
+        , disponível em: https://igce.rc.unesp.br/Home/Instituicao/DiretoriaTecnicaAcademica/graduacao/p212-17-estrutura-fisica-curriculo-2015.pdf, acessado em 07/12/2020.
+        <br/>
+        <a href="https://igce.rc.unesp.br/Home/Instituicao/DiretoriaTecnicaAcademica/graduacao/p212-17-estrutura-fisica-curriculo-2015.pdf" target="_blank">
+         » https://igce.rc.unesp.br/Home/Instituicao/DiretoriaTecnicaAcademica/graduacao/p212-17-estrutura-fisica-curriculo-2015.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3.
+       </sup>
+       <div>
+        <i>
+         Matriz curricular Física UFOP Bacharelado
+        </i>
+        , disponível em: https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=FSB, acessado em 07/12/2020.
+        <br/>
+        <a href="https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=FSB" target="_blank">
+         » https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=FSB
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4.
+       </sup>
+       <div>
+        <i>
+         Matriz curricular Física UFV Bacharelado
+        </i>
+        , disponível em: http://www.fisica.ufv.br/wp-content/uploads/2019/06/MatrizCurricularBacharelado.pdf, acessado em 07/12/2020.
+        <br/>
+        <a href="http://www.fisica.ufv.br/wp-content/uploads/2019/06/MatrizCurricularBacharelado.pdf" target="_blank">
+         » http://www.fisica.ufv.br/wp-content/uploads/2019/06/MatrizCurricularBacharelado.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5.
+       </sup>
+       <div>
+        <i>
+         Matriz curricular Física UFMG Bacharelado
+        </i>
+        , disponível em: https://www.fisica.ufmg.br/graduacao/wp-content/uploads/sites/3/2019/05/BacD2019.pdf, acessado em 07/12/2020.
+        <br/>
+        <a href="https://www.fisica.ufmg.br/graduacao/wp-content/uploads/sites/3/2019/05/BacD2019.pdf" target="_blank">
+         » https://www.fisica.ufmg.br/graduacao/wp-content/uploads/sites/3/2019/05/BacD2019.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        6.
+       </sup>
+       <div>
+        <i>
+         Matriz curricular Física USP-SP Bacharelado
+        </i>
+        , disponível em: https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=43&amp;codcur=43021&amp;codhab=101&amp;tipo=N, acessado em 07/12/2020.
+        <br/>
+        <a href="https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=43&amp;codcur=43021&amp;codhab=101&amp;tipo=N" target="_blank">
+         » https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=43&amp;codcur=43021&amp;codhab=101&amp;tipo=N
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        7.
+       </sup>
+       <div>
+        <i>
+         Matriz curricular Física USP-São Carlos
+        </i>
+        , disponível em: http://www2.ifsc.usp.br/graduacao/wp-content/uploads/2020/05/Grade-Curricular-76014.pdf, acessado em 07/12/2020.
+        <br/>
+        <a href="http://www2.ifsc.usp.br/graduacao/wp-content/uploads/2020/05/Grade-Curricular-76014.pdf" target="_blank">
+         » http://www2.ifsc.usp.br/graduacao/wp-content/uploads/2020/05/Grade-Curricular-76014.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        8.
+       </sup>
+       <div>
+        D. Halliday, R. Resnick e J. Walker,
+        <i>
+         Fundamentals of physics
+        </i>
+        (John Wiley &amp; Sons, Hoboken, 2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        9.
+       </sup>
+       <div>
+        P.A. Tipler e G. Mosca,
+        <i>
+         Física para cientistas e engenheiros: eletricidade e magnetismo, óptica
+        </i>
+        (Grupo Gen-LTC, São Paulo, 2000), v. 2.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        10.
+       </sup>
+       <div>
+        E. Hecht,
+        <i>
+         Optics, 5e
+        </i>
+        (Pearson Education India, Chennai, 2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        11.
+       </sup>
+       <div>
+        G.R. Fowles,
+        <i>
+         Introduction to modern optics
+        </i>
+        (Courier Corporation, Chelmsford, 1989).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        12.
+       </sup>
+       <div>
+        M. Born e E. Wolf,
+        <i>
+         Principles of optics: electromagnetic theory of propagation, interference and diffraction of light
+        </i>
+        (Elsevier, Amsterdã, 2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        13.
+       </sup>
+       <div>
+        S.M. Rezende,
+        <i>
+         Materiais e dispositivos eletrônicos
+        </i>
+        (Editora Livraria da Física, São Paulo, 2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        14.
+       </sup>
+       <div>
+        Z. Zhang, X. MA e J. Zhong, Nat. Commun. 6, 6225 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        15.
+       </sup>
+       <div>
+        R.A. Aguilar, N. Hermosa e M.N. Soriano, Am. J. Phys. 87, 976 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        16.
+       </sup>
+       <div>
+        M.P. Edgar, G.M. Gibson e M.J. Padgett, Nat. Photon. 13, 13 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        17.
+       </sup>
+       <div>
+        L. Bian, J. Suo, G. Situ, Z. Li, J. Fan, F. Chen e Q. Dai, Sci. Rep. 6, 24752 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        18.
+       </sup>
+       <div>
+        J. Greenberg, K. Krishnamurthy e D. Brady, Opt. Lett. OSA 39, 111 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        19.
+       </sup>
+       <div>
+        Z. Zhang e J. Zhong, Opt. Lett. OSA 41, 2497 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        20.
+       </sup>
+       <div>
+        M.J.A. Bolzan, Rev. Bras. Ens. Fis. 28, 563 (2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        21.
+       </sup>
+       <div>
+        M.S. Rzeszotarski, F.L. Royer e G.C. Gilmore, Behav. Res. Meth. Instru. 15, 308 (1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        22.
+       </sup>
+       <div>
+        C. Solomon e T. Breckon,
+        <i>
+         Fundamentals of Digital Image Processing: A practical approach with examples in Matlab
+        </i>
+        (John Wiley &amp; Sons, Hoboken, 2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        23.
+       </sup>
+       <div>
+        O. Helene, A.F. Helene, Revista Brasileira de Ensino de Física 33, 3312 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        24.
+       </sup>
+       <div>
+        Super Mario Bros, disponível em: https://mario.nintendo.com/history/, acessado em 07/12/2020.
+        <br/>
+        <a href="https://mario.nintendo.com/history/" target="_blank">
+         » https://mario.nintendo.com/history/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        25.
+       </sup>
+       <div>
+        J.W. Eaton,
+        <i>
+         GNU Octave version 5.2.0 manual: a high-level interactive language for numerical computations
+        </i>
+        , 2020.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        26.
+       </sup>
+       <div>
+        T. Instruments,
+        <i>
+         Opt101 monolithic photodiode and single-supply transimpedance amplifier
+        </i>
+        , 2015.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        27.
+       </sup>
+       <div>
+        M. Margolis, B. Jepson e N.R. Weldin,
+        <i>
+         Arduino cookbook: recipes to begin, expand, and enhance your projects
+        </i>
+        (O’Reilly Media, Sebastopol, 2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        28.
+       </sup>
+       <div>
+        T. Instruments,
+        <i>
+         ADS111x Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs with Internal Reference, Oscillator, and Programmable Comparator
+        </i>
+        , 2016.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        29.
+       </sup>
+       <div>
+        A.M. Tai, Appl. Opt. OSA, 25, 1380 (1986).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        30.
+       </sup>
+       <div>
+        D. Huang, H. Timmers, A. Roberts, N. Shivaram e A.S. Sandhua, Am. J. Phys. 80, 211 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        31.
+       </sup>
+       <div>
+        D. Sych e M. Aksenov, AIP Conf. Proc. 1936, 020016 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        32.
+       </sup>
+       <div>
+        F. Soldevila, E. Salvador-Balaguer, P. Clemente, E. Tajahuerce e J. Lancis, Sci. Rep. 5, 14300 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        33.
+       </sup>
+       <div>
+        Z. Zhang, X. Wang, G. Zheng e J. Zhong, Sci. Rep. 7, 12029 (2017).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        29 Mar 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        28 Jan 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        26 Fev 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

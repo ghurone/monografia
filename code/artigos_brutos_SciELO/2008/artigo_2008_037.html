@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 30 
+                (3)
+   <span class="_separator">
+    •
+   </span>
+   Set 2008
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Um método numérico para a solução de problemas em física quântica de poucos corpos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  A numerical method to solve quantum few-body problems in physics
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     M.T. Yamashita
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Itapeva,  
+          ,  São Paulo,  
+        ,  Universidade Estadual Paulista,  Campus Experimental de Itapeva ,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste artigo é apresentado um método numérico que pode ser utilizado por alunos de graduação para a solução de problemas em física quântica de poucos corpos. O método é aplicado a dois problemas de dois corpos geralmente vistos pelos estudantes: o átomo de hidrogênio e o dêuteron. O método porém, pode ser estendido para três ou mais partículas.
+    </p>
+    <p>
+     problemas de poucos-corpos; método variacional
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this paper it is presented a numerical method that can be used by undergraduate students to solve quantum few-body problems in physics. The method is applied to a couple of two-body problems that are usually seen by students: the hydrogen atom and the deuteron. However, the method can be extended to three or more particles.
+    </p>
+    <p>
+     few-body problems; variational method
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      ARTIGOS GERAIS
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Um método numérico para a solução de problemas em física quântica de poucos corpos
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      A numerical method to solve quantum few-body problems in physics
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     M.T. Yamashita
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: 
+        yamashita@itapeva.unesp.br.
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+    </p>
+    <p>
+     Campus Experimental de Itapeva, Universidade Estadual Paulista "Júlio de Mesquita Filho", Itapeva, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste artigo é apresentado um método numérico que pode ser utilizado por alunos de graduação para a solução de problemas em física quântica de poucos corpos. O método é aplicado a dois problemas de dois corpos geralmente vistos pelos estudantes: o átomo de hidrogênio e o dêuteron. O método porém, pode ser estendido para três ou mais partículas.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     problemas de poucos-corpos, método variacional.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     In this paper it is presented a numerical method that can be used by undergraduate students to solve quantum few-body problems in physics. The method is applied to a couple of two-body problems that are usually seen by students: the hydrogen atom and the deuteron. However, the method can be extended to three or more particles.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     few-body problems, variational method.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O estudo do riquíssimo campo denominado "física de poucos corpos" pode ser encontrado em diversos contextos da física: sistemas subnucleares (quarks), sistemas nucleares (núcleos exóticos), estudo de moléculas, e mais recentemente o estudo dos átomos no interior de armadilhas atômicas. Todavia, é difícil precisar exatamente a quantidade a que se refere a palavra "poucos". Esta pode ser definida levando-se em conta as limitações atuais (tanto computacionais como também em relação às técnicas para a resolução dos problemas), desta forma podemos considerar como "poucos corpos" os sistemas constituídos por até 5 partículas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Obviamente a complexidade para a resolução dos problemas aumenta com o número de partículas: podemos ir de um problema completamente solúvel analiticamente, como é o caso de alguns problemas envolvendo dois corpos, até problemas complicadíssimos envolvendo três ou mais corpos. Nestes sistemas é imprescindível a utilização de métodos numéricos para resolvê-los.
+    </p>
+    <p>
+    </p>
+    <p>
+     Existem inúmeras técnicas numéricas que podem ser utilizadas. A utilização delas varia conforme a conveniência para o problema que se está tentando resolver: cálculo do estado fundamental ou excitado, espaço dos momentos ou configurações, etc.
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho apresentamos uma técnica numérica bastante poderosa que pode ser utilizada para resolver alguns problemas de poucos corpos no espaço das configurações. Ela funciona razoavelmente bem tanto para os estados fundamentais como excitados. Uma descrição mais detalhada deste método (e não tão acessível a alunos de graduação) pode ser encontrada na Ref. [1]. Este trabalho está organizado da seguinte maneira: na seção 2 fazemos uma descrição do método, nas seções 3 e 4 mostramos a aplicação do método para o átomo de hidrogênio e o dêuteron. Finalmente, na seção 5 apresentamos as conclusõões.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Método numérico
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Considere a equação de Schroedinger
+     <i>
+      H
+     </i>
+     Ψ =
+     <i>
+      E
+     </i>
+     Ψ. A utilização de um método numérico é geralmente necessária quando não sabemos como diagonalizar o hamiltoniano
+     <i>
+      H
+     </i>
+     exatamente. O método descrito a seguir utiliza uma expansão da função de onda Ψ para resolver a equação de Schroedinger
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm01">
+     <a name="frm01">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/3c334ee4a44eae97db8084d9f3e0c794868b1aca.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Podemos demonstrar que a energia
+     <i>
+      E
+     </i>
+     é dada por (a demonstração pode ser encontrada em livros de mecânica quântica. Ver, por exemplo, Ref. [2, p. 1148] ou Ref. [3, p. 203])
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm02">
+     <a name="frm02">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/de3ec02e3bc2aa4fe70d20a83cf50a12687d8f98.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm03">
+     <a name="frm03">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/01aacbb7e8d213c638e52702a88448f6266a6630.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     De acordo com a Eq. (2) temos agora um problema de autovalor e autovetor do tipo
+     <i>
+      hc = Ebc
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm04">
+     <a name="frm04">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/481fb61a346c6dde0a82d1a665256e8e67366315.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A solução do problema pode ficar mais ou menos complicada de acordo com a base ø escolhida, pois teremos que calcular os elementos de matriz dados pela Eq. (3). Desta forma, a utilização de uma base do tipo gaussiana é conveniente, pois os elementos de matriz podem ser calculados analiticamente. Assim, considerando um problema em 3 dimensões que dependa somente de uma componente radial, podemos utilizar uma função do seguinte tipo
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm05">
+     <a name="frm05">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/83cec446f06c7ab3a5ceb6355dca12be1c92fda5.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde os parâmetros
+     <i>
+      a
+      <sub>
+       i
+      </sub>
+     </i>
+     podem ser calculados utilizando-se uma progressão geométrica
+     <i>
+      a
+      <sub>
+       i
+      </sub>
+     </i>
+     =
+     <i>
+      a
+     </i>
+     <sub>
+      0
+     </sub>
+     <i>
+      p
+      <sup>
+       i
+      </sup>
+     </i>
+     <sup>
+      -1
+     </sup>
+     . O parâmetro
+     <i>
+      a
+     </i>
+     <sub>
+      0
+     </sub>
+     e a razão da progressão
+     <i>
+      p
+     </i>
+     devem ser escolhidos de acordo com o problema a ser resolvido, pois ambos estão diretamente relacionados com o tamanho do sistema, ou em outras palavras, com a extensão da função de onda.
+    </p>
+    <p>
+    </p>
+    <p>
+     Os resultados abaixo para as integrais gaussianas podem ser úteis para o cálculo dos elementos de matriz
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm06">
+     <a name="frm06">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/88a1393da8afe5da0e1869beb41b603882f8b490.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Utilizando as Eqs. (6) e (7) acima os elementos de matriz dados pela Eq. (3) podem ser facilmente calculados
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm08">
+     <a name="frm08">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/94240718dc5d1043c8c2d419ccf0279782ef7959.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. O átomo de hidrogênio
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O átomo de hidrogênio é formado por um próton e um elétron interagindo pelo potencial coulombiano dado por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm11">
+     <a name="frm11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/1719160361c1d70ce1fb4fb090f9ceeccce44ee1.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      q
+     </i>
+     é a carga elementar igual a 1,6×10
+     <sup>
+      -19
+     </sup>
+     C e
+     <i>
+      e
+     </i>
+     <sup>
+      2
+     </sup>
+     =
+     <i>
+      q
+     </i>
+     <sup>
+      2
+     </sup>
+     /4πε
+     <sub>
+      0
+     </sub>
+     . Aqui
+     <i>
+      r
+     </i>
+     representa a separação entre o próton e o elétron.
+    </p>
+    <p>
+    </p>
+    <p>
+     Utilizando as Eqs. (6) a (10), temos que os elementos de matriz para o átomo de hidrogênio são dados por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm12">
+     <a name="frm12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/c409267f38d053d8934f8511e089257fd11e87f7.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      µ
+     </i>
+     é a massa reduzida do sistema. Devido à diferen ca entre as massas do próton (
+     <i>
+      m
+      <sub>
+       p
+      </sub>
+     </i>
+     ) e do elétron (
+     <i>
+      m
+      <sub>
+       e
+      </sub>
+     </i>
+     ) temos que
+     <i>
+      µ
+     </i>
+     ≈
+     <i>
+      m
+      <sub>
+       e
+      </sub>
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Aqui é interessante discutirmos um pouco sobre o aparecimento da massa reduzida. Geralmente, quando consideramos os problemas de poucos corpos estamos interessados somente no movimento relativo entre as partículas, ou seja, não levamos em conta o movimento do centro-de-massa. Suponha duas partículas sujeitas a um potencial
+     <i>
+      v
+     </i>
+     . Assim, o hamiltoniano para esse sistema pode ser escrito como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm14">
+     <a name="frm14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/f4d12b9184dc96e3e6a0f47fc1ba0598f6867a34.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      k
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      k
+     </i>
+     <sub>
+      2
+     </sub>
+     são os momentos das partículas 1 e 2 de massas
+     <i>
+      m
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      m
+     </i>
+     <sub>
+      2
+     </sub>
+     . Introduzindo o momento relativo
+     <b>
+      p
+     </b>
+     e o momento do centro-de-massa
+     <b>
+      k
+     </b>
+     dados por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm15">
+     <a name="frm15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/12bfdc7ab4fbe38a690c81b991742851291e0858.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     na Eq. (14), conseguimos separar o movimento referente ao centro-de-massa
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm17">
+     <a name="frm17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/a61704b8de3a8596e8bfcfe606b845cc17ccdf01.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      µ
+     </i>
+     =
+     <i>
+      m
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      m
+     </i>
+     <sub>
+      2
+     </sub>
+     /(
+     <i>
+      m
+     </i>
+     <sub>
+      1
+     </sub>
+     +
+     <i>
+      m
+     </i>
+     <sub>
+      2
+     </sub>
+     ) é a massa reduzida do sistema. Para o átomo de hidrogênio temos
+     <i>
+      m
+     </i>
+     <sub>
+      1
+     </sub>
+     ≡
+     <i>
+      m
+      <sub>
+       p
+      </sub>
+     </i>
+     e
+     <i>
+      m
+     </i>
+     <sub>
+      2
+     </sub>
+     ≡
+     <i>
+      m
+      <sub>
+       e
+      </sub>
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     As energias para o átomo de hidrogênio calculadas analiticamente são dadas por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm18">
+     <a name="frm18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/71fc26f30ffb81709842c6feaa36f05969a7e7a2.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A constante
+     <i>
+      R = m
+      <sub>
+       e
+      </sub>
+      e
+     </i>
+     <sup>
+      4
+     </sup>
+     /(2
+     <i>
+      ħ
+     </i>
+     <sup>
+      2
+     </sup>
+     ) = 13,6 eV é chamada de constante de Rydberg [3]. Z é o número de prótons que para o átomo de hidrogênio é igual a 1.
+    </p>
+    <p>
+    </p>
+    <p>
+     A resolução do problema de autovalores e autovetores pode ser resolvido utilizando-se qualquer sub-rotina de diagonalização de matrizes. A
+     <a class="open-asset-modal" data-target="#ModalTabletab01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     compara os valores das energias obtidos pela Eq. (18) e pelo método numérico. Os parâmetros utilizados para o método numérico foram
+     <i>
+      a
+     </i>
+     <sub>
+      0
+     </sub>
+     = 9 e
+     <i>
+      p
+     </i>
+     = 0,25, a escolha desses parâmetros, assim como o tamanho da base escolhida, está relacionada diretamente com a extensão da função de onda do sistema, conforme podemos observar na Eq. (5). Todavia, a escolha destes parâmetros pode ser otimizada (para se conseguir um resultado igual ou melhor com uma base menor) utilizando-se, por exemplo, um método variacional [1] (os valores 9 e 0,25 foram escolhidos arbitrariamente somente para ilustrar o método).
+    </p>
+    <div class="row table" id="tab01">
+     <a name="tab01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTabletab01" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Dêuteron
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O dêuteron consiste em um sistema de dois corpos formado por um nêutron e um próton. Em física nuclear os núcleos costumam ter isótopos. Isótopos são núcleos formados pelo mesmo número de prótons, mas que possuem um número diferente de nêutrons. O dêuteron é um isótopo do núcleo de hidrogênio, o qual é constituído por apenas 1 próton. Além do dêuteron, o núcleo de hidrogênio também possui outro isótopo chamado de trítio que é constituído por 1 próton e 2 nêutrons. Todos esses isótopos podem ser núcleos do átomo de hidrogênio eletricamente neutro.
+    </p>
+    <p>
+    </p>
+    <p>
+     No caso do dêuteron o hamiltoniano é dado por
+     <i>
+      H
+     </i>
+     =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/edf1c065a08af31638f501d75c9f1920aef15793.gif" style="max-width:100%"/>
+     +
+     <i>
+      V
+     </i>
+     (
+     <i>
+      r
+     </i>
+     ), onde
+     <i>
+      µ
+     </i>
+     é agora a massa reduzida do próton e nêutron. Para
+     <i>
+      V
+     </i>
+     (
+     <i>
+      r
+     </i>
+     ) adotaremos o seguinte potencial
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm19">
+     <a name="frm19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/c134819b3c885d88d371c3c7933a3bbbd6439de2.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      V
+     </i>
+     <sub>
+      1
+     </sub>
+     = 200 MeV,
+     <i>
+      ρ
+     </i>
+     <sub>
+      1
+     </sub>
+     = 1.487 fm
+     <sup>
+      -2
+     </sup>
+     ,
+     <i>
+      V
+     </i>
+     <sub>
+      2
+     </sub>
+     = -178 MeV,
+     <i>
+      ρ
+     </i>
+     <sub>
+      2
+     </sub>
+     = 0.639 fm
+     <sup>
+      -2
+     </sup>
+     . Aqui
+     <i>
+      r
+     </i>
+     representa a separação entre o próton e o nêutron.
+    </p>
+    <p>
+    </p>
+    <p>
+     Geralmente em livros-texto de física nuclear [4] o potencial utilizado para se calcular a energia de ligação do dêuteron é um poço quadrado. Isso nos permite simplificar bastante o problema e extrair também várias conclusões qualitativas do problema. Na
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     o poço quadrado está representado pela linha traço-ponto (a profundidade do poço e a largura são, respectivamente, 35 MeV e 2,1 fm).
+    </p>
+    <div class="row fig" id="fig01">
+     <a name="fig01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Todavia, qualquer potencial pode ser sempre melhorado no sentido de reproduzir os dados provenientes de experimentos (podemos, por exemplo, introduzir termos no potencial que dependam de spin, ou uma parte tensorial). Experimentos de espalhamento núcleon-núcleon mostram uma mudança no sinal do deslocamento de fase para onda-s de positivo para negativo em energias da ordem de 300 MeV. Isso sugere que o potencial nuclear deve ser repulsivo a curtas distâncias e atrativo para distâncias maiores, o potencial dado pela Eq. (19) satisfaz essas exigências, sendo portanto, um pouco melhor que o poço quadrado. A forma do potencial (19) é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     com linha tracejada.
+    </p>
+    <p>
+    </p>
+    <p>
+     A linha pontilhada na
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     mostra a energia de ligação do dêuteron (-2,20 MeV). Podemos ver que ela encontra-se bem próxima do zero. Isso mostra como a física nuclear pode ser tratada como um problema de baixas energias. Podemos ir mais longe ainda e dizer que toda a vida no nosso planeta se deve em parte a essa pequena energia de ligação, pois a formação do deutério a partir do hidrogênio é uma das etapas para a produção de energia pelo Sol [4].
+    </p>
+    <p>
+    </p>
+    <p>
+     O elemento de matriz do potencial é dado agora por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm20">
+     <a name="frm20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/Xhz9LVZTMLWfC3ySsPtKzJt/0735df2b45dd560afcb32dcfbfce288d09e2c31a.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A energia obtida através do programa é -2,18 MeV para uma base de tamanho 6. Aqui vale um comentário a respeito da diferença de tamanho entre as bases utilizadas para o átomo de hidrogênio e o dêuteron. Embora ambos os potenciais dados pelas Eqs. (11) e (19) se anulem para
+     <i>
+      r
+     </i>
+     → ∞, o potencial coulombiano não é um potencial de curto alcance (podemos chamar de curto alcance um potencial que satisfaz a condição lim
+     <sub>
+      <i>
+       r
+      </i>
+      → ∞
+     </sub>
+     <i>
+      rV
+     </i>
+     (
+     <i>
+      r
+     </i>
+     ) = 0 - veja Ref. [3, p. 251]). Desta forma, o potencial coulombiano se estende a distâncias muito maiores que o potencial do dêuteron, isso faz com que tenhamos que utilizar uma base muito maior para descrever o átomo de hidrogênio.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      5. Conclusão
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Através dos exemplos utilizados pudemos ver que o método é relativamente simples de ser utilizado e bastante eficiente. Obviamente, a complexidade do problema aumenta bastante quando consideramos mais partículas ou ondas superiores, ou ainda potenciais mais complicados (com termos dependentes de spin, por exemplo). Dependendo da sub-rotina de diagonalização que se utiliza, este método também já fornece as funções de onda do sistema das quais podemos extrair outros observáveis importantes como, por exemplo, o raio quadrático médio dos sistemas, isto porém, está além do objetivo deste trabalho que é apenas a apresentação do método.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      6. Agradecimentos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Gostaria de agradecer à FAPESP e ao CNPq pelo apoio financeiro recebido. Gostaria de agradecer ao Prof. Suzuki, da Universidade de Niigata, e seus estudantes pela ajuda na extensão deste método para três e mais partículas. O compuscrito foi baseado nas notas de aula (em japonês) do Prof. Suzuki.
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 20/2/2008; Aceito em 16/5/2008; Publicado em 8/10/2008
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] Yasuyuki Suzuki and Kálman Varga,
+        <i>
+         Stochastic Variational Approach to Quantum-Mechanical Few-Body Problems
+        </i>
+        (Springer, Berlin, 1998).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] Claude Cohen-Tannoudji, Bernard Diu and Franck    Lalöe,
+        <i>
+         Quantum Mechanics
+        </i>
+        (John Wiley &amp; Sons, Nova York, 1977),    v. 2.
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] A.F.R. de Toledo Piza,
+        <i>
+         Mecânica    Quântica
+        </i>
+        (EDUSP, São Paulo, 2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] Kenneth S. Krane,
+        <i>
+         Introductory Nuclear    Physics
+        </i>
+        (John Wiley &amp; Sons, Nova York, 1988).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <li>
+    <span class="xref big">
+     1
+    </span>
+    <div>
+     E-mail:
+    </div>
+    <div>
+     <a href="mailto:yamashita@itapeva.unesp.br">
+      yamashita@itapeva.unesp.br
+     </a>
+     .
+    </div>
+   </li>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        21 Out 2008
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Set 2008
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        16 Maio 2008
+       </li>
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        20 Fev 2008
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

@@ -1,0 +1,8199 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 40 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   2018
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2017-0174" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2017-0174
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0174">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Mecânica celeste e a teoria dos sistemas dinâmicos: uma revisão do problema circular restrito de três corpos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Celestial mechanics and the theory of dynamic systems: a revision of the circular-restricted-three-body problem
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Flavio Avila Correia Martins
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:flavio.martins@outlook.com">
+      flavio.martins@outlook.com
+     </a>
+     .
+    </div>
+    Universidade Federal do ABC, Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas, Santo André, SP, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Marcelo Zanotello
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do ABC, Centro de Ciências Naturais e Humanas, Santo André, SP, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste trabalho abordamos uma aproximação para o problema de três corpos que interagem mutuamente por atração gravitacional, denominada problema circular restrito de três corpos (PCR3C). Tal aproximação é revisada a partir do formalismo e de conceitos da teoria dos sistemas dinâmicos, enfocando fenômenos de ressonância, representações em espaços de fase, mapas de Poincaré e o Teorema KAM. Discutimos aspectos matemáticos de estabilidade do problema, seus pontos de equilíbrio – pontos Lagrangeanos – e como a condição de integrabilidade se aplica. Resultados de simulações computacionais que desenvolvemos são analisados e algumas aplicações são apresentadas, por exemplo, no que se refere à presença de regiões de comportamento caótico na seção de Poincaré, correlacionadas diretamente a vacâncias em cinturões de asteroides e nos anéis dos planetas gasosos do nosso sistema solar, bem como a possíveis transferências orbitais com menor custo energético.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     problema de três corpos; teoria de sistemas dinâmicos; simulações; estabilidade
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this work we present the approximation of the circular restricted three-body problem that interact by gravitation force, the so-called circular restricted three-body problem (CR3BP). Such model is reviewed starting from the formalism and concepts from the theory of dynamic systems, focusing on resonance phenomena, state-space representation, Poincare's maps and the KAM theorem. We have discussed mathematic stability aspects of the problem, its equilibria points – Lagrangean points – and how the integrability condition is applied to do so. Results from computational simulations are analyzed and some are presented, e.g., simulations that explore regions of chaotic behavior on the Poincare's section, directly correlated to the vacancies on asteroids belts and planet's rings from our solar system, as some possible orbit maneuvers that expends less energy.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     three-body problem; dynamic systems theory; simulations; stability
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Conforme Monteiro (2011) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] L.H.A. Monteiro, Sistemas Dinâmicos (Livraria da Física, São Paulo, 2011), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ], podemos considerar que a origem da denominada teoria dos sistemas dinâmicos coincide com a da mecânica clássica. O desenvolvimento da mecânica clássica, em especial na resolução de problemas envolvendo mecânica celeste, contribuiu fundamentalmente para a construção de conceitos e do formalismo constitutivo da teoria dos sistemas dinâmicos, que encontra aplicações atuais em diversas áreas do conhecimento. Inequivocamente, um marco na consolidação da mecânica clássica como um dos pilares da ciência moderna, foi a solução de Newton para o problema de Kepler referente às órbitas planetárias.
+    </p>
+    <p>
+     Em sua obra Princípios Matemáticos de Filosofia Natural, publicada pela primeira vez em 1687, Newton mostrou que um corpo esférico homogêneo, sujeito à ação de uma força atrativa central inversamente proporcional ao quadrado da distância entre ele e um corpo fixo, pode descrever uma trajetória elíptica como a identificada por Kepler no estudo da órbita de Marte. De fato, dependendo do valor da energia do sistema formado pelos dois corpos, a trajetória resultante da atração gravitacional mútua pode ser uma das seções cônicas: circunferência, elipse, parábola ou um dos ramos de uma hipérbole. Nesse cálculo, supõe-se que o corpo central está fixo por possuir massa consideravelmente maior do que o corpo que se move em relação a ele, de modo que quaisquer variações na energia potencial gravitacional do sistema manifestam-se exclusivamente sob a forma de energia cinética do corpo de menor massa [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] K.R. Symon, Mecânica (Campus, Rio de Janeiro, 1982).
+       </span>
+      </span>
+     </span>
+     ]. Tal construção teórica explicou diversos aspectos da dinâmica dos movimentos de planetas e satélites observados em nosso sistema solar.
+    </p>
+    <p>
+     Quando se relaxa a restrição de que um dos corpos envolvidos esteja fixo, não mais considerando a massa de um deles muito maior que a massa do outro, formula-se o chamado problema de dois corpos. Nesta situação, os dois corpos, interagindo gravitacionalmente entre si, estariam em movimento em relação a um referencial inercial. O problema de dois corpos possui solução analítica exata, sendo resolvido mediante uma transformação de coordenadas que faz uso das coordenadas do centro de massa do sistema de dois corpos e da distância relativa entre ambos. Isto significa que as equações diferenciais resultantes da aplicação das leis de Newton ao sistema de dois corpos podem ser resolvidas analiticamente, a fim de obter as posições dos corpos em função do tempo e, assim, determinar a dinâmica de seus movimentos. Nesse contexto, o sistema de dois corpos é classificado como integrável.
+    </p>
+    <p>
+     Avançando rumo à abordagens de maior complexidade, o problema seguinte a ser resolvido seria o de três corpos. Tal problema consiste em solucionar as equações que descrevem o movimento de três corpos assimiláveis a massas puntiformes ou esferas homogêneas, em um espaço tridimensional, considerando que estejam sujeitos apenas à atração gravitacional mútua. Porém, a despeito das muitas tentativas historicamente registradas, este se revelou insolúvel, no sentido de que não se consegue encontrar exata e analiticamente as equações diferenciais que governam seu movimento por meio de uma adequada transformação de coordenadas. Ou seja, não se obtêm expressões analíticas exatas que descrevam a trajetória de cada um dos três corpos gravitacionalmente interagentes e o sistema é classificado como não integrável. Diante desta dificuldade, foram propostas aproximações para simplificar o problema de três corpos e o tornar tratável de algum modo.
+    </p>
+    <p>
+     Uma aproximação consiste em assumir que a massa
+     <math display="inline" id="m1">
+      <mi>
+       m
+      </mi>
+     </math>
+     de um corpo é muito menor que as massas
+     <math display="inline" id="m2">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m3">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     dos outros dois; isto é:
+     <math display="inline" id="m4">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ~
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ≫
+      </mo>
+      <mi>
+       m
+      </mi>
+     </math>
+     , de forma que os efeitos gravitacionais de
+     <math display="inline" id="m5">
+      <mi>
+       m
+      </mi>
+     </math>
+     sobre
+     <math display="inline" id="m6">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m7">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     possam ser desprezados. Assim, o movimento dos dois corpos com maiores massas não são influenciados significativamente pelo terceiro, mas certamente o movimento de
+     <math display="inline" id="m8">
+      <mi>
+       m
+      </mi>
+     </math>
+     é influenciado pelos outros. Como exemplos de sistemas em que esta aproximação é razoável, podemos citar os sistemas Sol-Terra-Lua, onde a proporção das massas envolvidas é
+     <math display="inline" id="m9">
+      <mn>
+       3
+      </mn>
+      <mo>
+       .
+      </mo>
+      <mn>
+       1
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </msup>
+      <mo>
+       :
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mo>
+       :
+      </mo>
+      <mn>
+       1
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         -
+        </mo>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     , e Terra-Lua-satélite artificial, com
+     <math display="inline" id="m10">
+      <mn>
+       1
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+      <mo>
+       :
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mo>
+       :
+      </mo>
+      <mn>
+       1
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         -
+        </mo>
+        <mn>
+         19
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] L.H.A. Monteiro, Sistemas Dinâmicos (Livraria da Física, São Paulo, 2011), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ]. Nesta abordagem, o problema original é dividido em dois mais simples. Inicialmente, determinam-se os movimentos de
+     <math display="inline" id="m11">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m12">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     analiticamente, como no problema de dois corpos, o que permite encontrar um campo gravitacional resultante devido à esses dois corpos em cada ponto do espaço. Em seguida, calcula-se o movimento de
+     <math display="inline" id="m13">
+      <mi>
+       m
+      </mi>
+     </math>
+     sujeito à esse campo gravitacional resultante. Uma nova simplificação pode ser feita impondo que o movimento de
+     <math display="inline" id="m14">
+      <mi>
+       m
+      </mi>
+     </math>
+     seja restrito ao plano das trajetórias de
+     <math display="inline" id="m15">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m16">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     como consequência da conservação de seu momento angular.
+    </p>
+    <p>
+     Em 1772, Lagrange analisou o problema de três corpos com base nessa aproximação, tratando o caso em que
+     <math display="inline" id="m17">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     é maior que
+     <math display="inline" id="m18">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e que ambos descrevem órbitas circulares em torno do centro de massa do sistema. Ele verificou a ocorrência de duas posições de equilíbrio estável na órbita de
+     <math display="inline" id="m19">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . Relembrando o fato de que, de uma forma grosseira, um ponto de equilíbrio é dito estável quando, a partir de uma pertubação infinitesimal, o corpo tende à retornar ao estado de equilíbrio; é instável quando, na mesma situação, ele diverge do equilíbrio; e, no terceiro caso, um ponto de equilíbrio é dito neutro quando a pertubação infinitesimal o leva à um novo estado. Comumente, esta visão está associada ao exemplo do equilíbrio de uma esfera com energia mecânica dada pela combinação de energia potencial gravitacional e cinética. O ponto de equilíbrio estável seria obtido quando o corpo estivesse na parte central de uma calota esférica - com a sua concavidade voltada pra cima -, o equilíbrio instável, quando estivesse sobre o centro da calota esférica, mas esta estivesse com a concavidade voltada para baixo e, finalmente, o caso de equilíbrio neutro, quando a esfera estivesse sobre uma superfície plana.
+    </p>
+    <p>
+     Lagrange aplicou seu modelo supondo que
+     <math display="inline" id="m20">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     representa o Sol e
+     <math display="inline" id="m21">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , a Terra, com
+     <math display="inline" id="m22">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ≫
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . Os dois pontos de equilíbrio estável encontrados se situam sobre a órbita terrestre, na intersecção com as retas que formam ângulos de
+     <math display="inline" id="m23">
+      <mo>
+       +
+      </mo>
+      <mn>
+       6
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     e
+     <math display="inline" id="m24">
+      <mo>
+       -
+      </mo>
+      <mn>
+       6
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     em relação à reta que passa pelos centros de massa da Terra e do Sol. Nestes pontos,
+     <math display="inline" id="m25">
+      <mi>
+       m
+      </mi>
+     </math>
+     gira em volta de
+     <math display="inline" id="m26">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     mantendo um ângulo fixo em relação à
+     <math display="inline" id="m27">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , ou seja,
+     <math display="inline" id="m28">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     ,
+     <math display="inline" id="m29">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m30">
+      <mi>
+       m
+      </mi>
+     </math>
+     formam, em qualquer instante, um triângulo equilátero que gira com um vértice fixo em
+     <math display="inline" id="m31">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . Além destes, Lagrange ainda encontrou outras três soluções de equilíbrio para o problema sobre a reta que atravessa os centros de massa de
+     <math display="inline" id="m32">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m33">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . Todo modo, estas três soluções de equilíbrio descrevem pontos de instabilidade no movimento.
+    </p>
+    <p>
+     No final do século XIX, diante da dificuldade em se encontrar soluções analíticas exatas para equações diferenciais como as decorrentes do problema de três corpos, Poincaré desenvolveu métodos que permitiam analisar qualitativamente o comportamento funcional da dinâmica do problema sem o conhecer explicitamente. Ele concluiu que as soluções em série normalmente empregues em problemas de mecânica celeste divergem, tornando-os não integráveis. Nas expansões em série, procuram-se por soluções que sejam formadas por uma soma infinita de termos, com cada termo sendo solução de uma versão simplificada da equação original. Conforme se adicionam mais termos à série, a aproximação à solução melhora e, se as correções à esta tendem à zero, a soma será finita e a mesma converge para a real. Neste método, típico das abordagens perturbativas, a expansão em série é feita em função de um parâmetro que deve ser pequeno. A ocorrência do caos no sistema está relacionada à questão da convergência destas séries [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M.A.M. Aguiar, Tópicos de Mecânica CLássica (Livraria da Física, Campinas, 2010), v. 1.
+       </span>
+      </span>
+     </span>
+     ]. Quando divergem, o sistema exibe comportamento caótico, caracterizado por movimentos aperiódicos, irregulares, limitados e sensíveis às condições iniciais.
+    </p>
+    <p>
+     Utilizando técnicas geométricas e topológicas, o trabalho de Poincaré tornou possível estudar determinadas propriedades de soluções desconhecidas, estabelecendo as bases para a construção da atual teoria de sistemas dinâmicos. Lyapunov, em 1892, definiu critérios de estabilidade para a solução de uma equação diferencial. Grosso modo, pode-se dizer que uma solução
+     <math display="inline" id="m34">
+      <mi>
+       x
+      </mi>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     é estável se outras soluções possíveis, cujos valores no instante
+     <math display="inline" id="m35">
+      <msub>
+       <mrow>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     estão próximos de
+     <math display="inline" id="m36">
+      <mi>
+       x
+      </mi>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>
+           t
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     , permanecem próximas de
+     <math display="inline" id="m37">
+      <mi>
+       x
+      </mi>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     com o decorrer do tempo. Por volta da metade do século XX, Kolmogorov, Arnold e Moser demonstraram que, a partir de certas condições iniciais, as séries de fato divergem, mas para outros conjuntos de condições inicias, elas convergem. Tal resultado, conhecido por teorema KAM, estabelece que, para um sistema de três ou mais corpos, o movimento pode ser regular ou caótico, em determinadas condições.
+    </p>
+    <p>
+     Neste trabalho, revisitamos o problema de três corpos em sua versão simplificada, conhecida por problema circular restrito de três corpos, à luz da atual teoria de sistemas dinâmicos, com o objetivo de fornecer ao leitor uma breve revisão de seus conceitos e formalismo básico, apresentando também os resultados de estudos numéricos que realizamos na busca por soluções das equações obtidas na formulação do problema.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. O problema circular restrito de três corpos (PCR3C)
+    </h1>
+    <p>
+     As hipóteses básicas do PCR3C são as seguintes: a massa do terceiro e menor corpo, cuja trajetória se deseja determinar, é desprezível; não existem outras fontes de perturbação externas e o primeiro corpo é tomado como referencial global do sistema. Valendo-se da conservação de momento angular, as órbitas são coplanares, sendo que a do segundo corpo em torno do primeiro (o mais massivo) é assumida como circular [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M.A.M. Aguiar, Tópicos de Mecânica CLássica (Livraria da Física, Campinas, 2010), v. 1.
+       </span>
+      </span>
+     </span>
+     ]. Desse modo, o sistema de equações diferenciais resultante da aplicação das leis de Newton é:
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m38">
+        <mrow>
+         <mo>
+          {
+         </mo>
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mover accent="true">
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mo>
+                 ¨
+                </mo>
+               </mover>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <mo>
+                -
+               </mo>
+               <mi>
+                G
+               </mi>
+               <msub>
+                <mrow>
+                 <mi>
+                  m
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                -
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  12
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mover accent="true">
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mo>
+                 ¨
+                </mo>
+               </mover>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <mo>
+                -
+               </mo>
+               <mi>
+                G
+               </mi>
+               <msub>
+                <mrow>
+                 <mi>
+                  m
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                -
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  21
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mover accent="true">
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mo>
+                 ¨
+                </mo>
+               </mover>
+              </mrow>
+              <mrow>
+               <mn>
+                3
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <mo>
+                -
+               </mo>
+               <mi>
+                G
+               </mi>
+               <msub>
+                <mrow>
+                 <mi>
+                  m
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                -
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  31
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mo>
+              -
+             </mo>
+             <mfrac>
+              <mrow>
+               <mi>
+                G
+               </mi>
+               <msub>
+                <mrow>
+                 <mi>
+                  m
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                (
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                -
+               </mo>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  31
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mspace width="1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              c
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Nas
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (1)
+     </a>
+     , os sub-índices denotam a sequência decrescente em massa de corpos do problema, sendo o primeiro o mais massivo, enquanto que
+     <math display="inline" id="m39">
+      <mi>
+       G
+      </mi>
+     </math>
+     corresponde à constante universal gravitacional. Efetua-se, agora, a seguinte mudança de variáveis [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] G. de Felipe, Transferências Orbitais Envolvendo òrbitas do Tipo Halo. Tese de Mestrado, INPE, 2004.
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m40">
+        <mrow>
+         <mo>
+          {
+         </mo>
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="left">
+             <mi>
+              M
+             </mi>
+             <mo>
+              =
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                m
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                m
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mi>
+              L
+             </mi>
+             <mo>
+              = |
+             </mo>
+             <msub>
+              <mrow>
+               <mi mathvariant="bold">
+                r
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                12
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              | = |
+             </mo>
+             <msub>
+              <mrow>
+               <mi mathvariant="bold">
+                r
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                21
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              |
+             </mo>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mi>
+              n
+             </mi>
+             <mo>
+              ≡
+             </mo>
+             <mstyle>
+              <mtext>
+               freq. angular de
+              </mtext>
+             </mstyle>
+             <mspace width="0.1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              X
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              Y
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              c
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mo>
+              Ω =
+             </mo>
+             <mfrac>
+              <mrow>
+               <msup>
+                <mrow>
+                 <mi>
+                  n
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msup>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </mfrac>
+             <mo>
+              (
+             </mo>
+             <mi>
+              X
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mi>
+              Y
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mo>
+              +
+             </mo>
+             <mi>
+              G
+             </mi>
+             <mfenced close=")" open="(" separators="">
+              <mrow>
+               <mfrac>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mi>
+                    m
+                   </mi>
+                  </mrow>
+                  <mrow>
+                   <mn>
+                    1
+                   </mn>
+                  </mrow>
+                 </msub>
+                </mrow>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mi mathvariant="bold">
+                    r
+                   </mi>
+                  </mrow>
+                  <mrow>
+                   <mn>
+                    31
+                   </mn>
+                  </mrow>
+                 </msub>
+                </mrow>
+               </mfrac>
+               <mo>
+                +
+               </mo>
+               <mfrac>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mi>
+                    m
+                   </mi>
+                  </mrow>
+                  <mrow>
+                   <mn>
+                    2
+                   </mn>
+                  </mrow>
+                 </msub>
+                </mrow>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mi mathvariant="bold">
+                    r
+                   </mi>
+                  </mrow>
+                  <mrow>
+                   <mn>
+                    32
+                   </mn>
+                  </mrow>
+                 </msub>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </mfenced>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              d
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Com as novas variáveis descritas em (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ),
+     <math display="inline" id="m41">
+      <mo>
+       (
+      </mo>
+      <mi>
+       X
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       Y
+      </mi>
+      <mo>
+       )
+      </mo>
+     </math>
+     denotam as coordenadas globais do sistema, vide a
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , enquanto que
+     <math display="inline" id="m42">
+      <mi>
+       n
+      </mi>
+     </math>
+     define a frequência angular de
+     <math display="inline" id="m43">
+      <mi>
+       X
+      </mi>
+      <mi>
+       Y
+      </mi>
+     </math>
+     com relação a
+     <math display="inline" id="m44">
+      <mi>
+       x
+      </mi>
+      <mi>
+       y
+      </mi>
+     </math>
+     , fixo. Ambos centrados no corpo mais massivo. Além da mudança de variáveis definida em (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ), novas são propostas e passam a reger o sistema:
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m45">
+        <mfenced close="" open="{" separators="">
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="left">
+             <mi>
+              x
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <mi>
+                X
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                L
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              ;
+             </mo>
+             <mspace width="2.77695pt">
+             </mspace>
+             <mi>
+              y
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <mi>
+                Y
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                L
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              ;
+             </mo>
+             <mspace width="2.77695pt">
+             </mspace>
+             <mi>
+              t
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mi>
+              n
+             </mi>
+             <msup>
+              <mrow>
+               <mi>
+                t
+               </mi>
+              </mrow>
+              <mrow>
+               <mo>
+                ′
+               </mo>
+              </mrow>
+             </msup>
+             <mspace width="1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mo>
+              (
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mo>
+              (
+             </mo>
+             <mi>
+              c
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mi mathvariant="bold">
+                r
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  31
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+              <mrow>
+               <mi>
+                L
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              ;
+             </mo>
+             <mspace width="2.77695pt">
+             </mspace>
+             <msub>
+              <mrow>
+               <mi mathvariant="bold">
+                r
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi mathvariant="bold">
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  23
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+              <mrow>
+               <mi>
+                L
+               </mi>
+              </mrow>
+             </mfrac>
+             <mspace width="1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              d
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mo>
+              (
+             </mo>
+             <mi>
+              e
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mi>
+                μ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  m
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+              <mrow>
+               <mi>
+                M
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              ;
+             </mo>
+             <mspace width="2.77695pt">
+             </mspace>
+             <msub>
+              <mrow>
+               <mi>
+                μ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  m
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+              <mrow>
+               <mi>
+                M
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              ;
+             </mo>
+             <mspace width="2.77695pt">
+             </mspace>
+             <msub>
+              <mrow>
+               <mo>
+                Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <mi>
+                a
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mfrac>
+              <mrow>
+               <mo>
+                Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <msup>
+                <mrow>
+                 <mi>
+                  L
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msup>
+               <msup>
+                <mrow>
+                 <mi>
+                  n
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+               </msup>
+              </mrow>
+             </mfrac>
+             <mspace width="1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              f
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mo>
+              (
+             </mo>
+             <mi>
+              g
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mo>
+              (
+             </mo>
+             <mi>
+              h
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Nestas novas coordenadas, a constante gravitacional
+     <math display="inline" id="m46">
+      <mi>
+       G
+      </mi>
+     </math>
+     não mais aparece explicitamente. Substituindo as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (3d)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (3e)
+     </a>
+     em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (1c)
+     </a>
+     e empregando as demais condições descritas de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (3a)
+     </a>
+     à
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (3c)
+     </a>
+     , é possível se obter o seguinte conjunto de equações para a energia potencial rotacional:
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m47">
+        <mfenced close="" open="{" separators="">
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="left">
+             <mfrac>
+              <mrow>
+               <mo>
+                ∂Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <mo>
+                ∂
+               </mo>
+               <mi>
+                x
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              ≡
+             </mo>
+             <msub>
+              <mrow>
+               <mo>
+                Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <mi>
+                x
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mover accent="true">
+              <mi>
+               x
+              </mi>
+              <mo>
+               ¨
+              </mo>
+             </mover>
+             <mspace width="0.2em">
+             </mspace>
+             <mo>
+              −
+             </mo>
+             <mspace width="0.2em">
+             </mspace>
+             <mn>
+              2
+             </mn>
+             <mover accent="true">
+              <mi>
+               y
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+           </mtr>
+           <mspace width="1em">
+           </mspace>
+           <mtr>
+            <mtd columnalign="left">
+            </mtd>
+           </mtr>
+           <mspace width="1em">
+           </mspace>
+           <mtr>
+            <mtd columnalign="left">
+             <mfrac>
+              <mrow>
+               <mo>
+                ∂Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <mo>
+                ∂
+               </mo>
+               <mi>
+                y
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              ≡
+             </mo>
+             <msub>
+              <mrow>
+               <mo>
+                Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <mi>
+                y
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mover accent="true">
+              <mi>
+               y
+              </mi>
+              <mo>
+               ¨
+              </mo>
+             </mover>
+             <mo>
+              +
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mover accent="true">
+              <mi>
+               x
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mi>
+              )
+             </mi>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Notando que
+     <math display="inline" id="m48">
+      <mi>
+       M
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     ,
+     <math display="inline" id="m49">
+      <mi>
+       n
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     e
+     <math display="inline" id="m50">
+      <mi>
+       T
+      </mi>
+      <mo>
+       = 2π
+      </mo>
+     </math>
+     . Tomando as variáveis explicitadas pela
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , no sistema sideral, define-se a seguinte quantidade [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] http://farside.ph.utexas.edu/teaching/336k/Newtonhtml/node121.html, acesso em 03/05/2017.
+       </span>
+       <br/>
+       <a href="http://farside.ph.utexas.edu/teaching/336k/Newtonhtml/node121.html" target="_blank">
+        http://farside.ph.utexas.edu/teaching/33...
+       </a>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      (a) Representação das variáveis originais do PCR3C. (b) Representação do sistema sideral.
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m51">
+        <msub>
+         <mrow>
+          <mi>
+           C
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         s
+        </mi>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               μ
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               r
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+          <mo>
+           +
+          </mo>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               μ
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               r
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </mfenced>
+        <mo>
+         +
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mi>
+         n
+        </mi>
+        <mo>
+         (
+        </mo>
+        <mi>
+         ξ
+        </mi>
+        <mrow>
+         <mover accent="true">
+          <mi>
+           η
+          </mi>
+          <mo>
+           ˙
+          </mo>
+         </mover>
+        </mrow>
+        <mo>
+         −
+        </mo>
+        <mi>
+         η
+        </mi>
+        <mover accent="true">
+         <mrow>
+          <mi>
+           ξ
+          </mi>
+         </mrow>
+         <mo>
+          ⋅
+         </mo>
+        </mover>
+        <mo>
+         ) - (
+        </mo>
+        <msup>
+         <mrow>
+          <mover accent="true">
+           <mrow>
+            <mi>
+             ξ
+            </mi>
+           </mrow>
+           <mo>
+            ⋅
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <msup>
+         <mrow>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             η
+            </mi>
+            <mo>
+             ˙
+            </mo>
+           </mover>
+          </mrow>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <msup>
+         <mrow>
+          <mover accent="true">
+           <mrow>
+            <mi>
+             ζ
+            </mi>
+           </mrow>
+           <mo>
+            ⋅
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         )
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde
+     <math display="inline" id="m52">
+      <mover accent="true">
+       <mi>
+        η
+       </mi>
+       <mo>
+        ˙
+       </mo>
+      </mover>
+     </math>
+     e
+     <math display="inline" id="m53">
+      <mi>
+       ξ
+      </mi>
+     </math>
+     denotam novas coordenadas generalizadas, de forma que o vetor que posiciona o terceiro corpo com relação ao novo referencial é dado por
+     <math display="inline" id="m54">
+      <mo mathvariant="bold">
+       r
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mo>
+       (
+      </mo>
+      <mi>
+       ξ
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       η
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       ζ
+      </mi>
+      <mo>
+       )
+      </mo>
+     </math>
+     - sendo
+     <math display="inline" id="m55">
+      <mi>
+       ζ
+      </mi>
+     </math>
+     nulo no caso coplanar - no que se chama por sistema sideral, vide a
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     . A relação em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (6)
+     </a>
+     pode ser demonstrada de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (5)
+     </a>
+     , usando
+     <math display="inline" id="m56">
+      <mo>
+       Ω
+      </mo>
+     </math>
+     em coordenadas cartesianas:
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m57">
+        <mo>
+         Ω(
+        </mo>
+        <mi>
+         x
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         y
+        </mi>
+        <mo>
+         ) =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msup>
+           <mrow>
+            <mi>
+             n
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msup>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </mfrac>
+        <mo>
+         (
+        </mo>
+        <msup>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <msup>
+         <mrow>
+          <mi>
+           y
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         ) +
+        </mo>
+        <mfrac>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           −
+          </mo>
+          <mi>
+           μ
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             r
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+        </mfrac>
+        <mo>
+         +
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             r
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     De modo que
+     <math display="inline" id="m58">
+      <msub>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         J
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     será dado por:
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m59">
+        <mn>
+         2
+        </mn>
+        <mtext>
+         Ω
+        </mtext>
+        <mo>
+         −
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           C
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msup>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            x
+           </mi>
+           <mo>
+            ˙
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+        <mo>
+         +
+        </mo>
+        <msup>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ˙
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A Integral de Jacobi,
+     <math display="inline" id="m60">
+      <msub>
+       <mrow>
+        <mi>
+         C
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         J
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , na expressão
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (5)
+     </a>
+     é derivada diretamente da mudança de variáveis do sistema expresso em coordenadas cartesianas, por
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (1)
+     </a>
+     , para aquelas no sistema sideral, de modo que ainda se preserva a relação de ser a energia total por unidade de massa de um sistema rotacional a menos de duas vezes a energia potencial, em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (6)
+     </a>
+     , com as componentes cinética, centrífuga e gravitacional incluídas, vide
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (5)
+     </a>
+     .
+    </p>
+    <p>
+     Finalmente, considerando a massa reduzida
+     <math display="inline" id="m61">
+      <mi>
+       μ
+      </mi>
+     </math>
+     , em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (6)
+     </a>
+     , é possível mostrar que o centro de giro
+     <math display="inline" id="m62">
+      <mi>
+       X
+      </mi>
+      <mi>
+       Y
+      </mi>
+     </math>
+     serve como baricentro das duas primeiras massas, de tal modo que a primeira estará distante
+     <math display="inline" id="m63">
+      <mi>
+       μ
+      </mi>
+     </math>
+     de
+     <math display="inline" id="m64">
+      <mo>
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       y
+      </mi>
+      <mo>
+       ) = (0,0)
+      </mo>
+     </math>
+     , e a segunda,
+     <math display="inline" id="m65">
+      <mo>
+       (
+      </mo>
+      <mn>
+       1
+      </mn>
+      <mo>
+       −
+      </mo>
+      <mi>
+       μ
+      </mi>
+      <mo>
+       )
+      </mo>
+     </math>
+     . Uma vez que
+     <math display="inline" id="m66">
+      <mo>
+       Ω
+      </mo>
+     </math>
+     é a energia potencial do sistema [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] M.C. Gutzwiller, Chaos in Classical and Quantum Mechanics (Springer, New York, 1990).
+       </span>
+      </span>
+     </span>
+     ], é possível verificar a relação
+     <a class="open-asset-modal" data-target="#ModalSchemeeq7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (7)
+     </a>
+     a partir das
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (4)
+     </a>
+     à
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (6)
+     </a>
+     .
+    </p>
+    <h2>
+     2.1. Pontos Lagrangeanos no PCR3C
+    </h2>
+    <p>
+     Considerando que a energia potencial do sistema é a própria função
+     <math display="inline" id="m67">
+      <mo>
+       Ω
+      </mo>
+     </math>
+     , os pontos de equilíbrio de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4a)
+     </a>
+     podem ser calculados ao se fazer
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4b)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4c)
+     </a>
+     iguais a zero, como [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] J. Worthington, A Study of the Planar Circular Restricted Three Body Problem and Vanishing Twist. Tese de Doutorado, University of Sydney, 2012.
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m68">
+        <mfenced close="" open="{" separators="">
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mo>
+                Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <mi>
+                x
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mi>
+              x
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mo>
+              (
+             </mo>
+             <mn>
+              1
+             </mn>
+             <mo>
+              −
+             </mo>
+             <mi>
+              μ
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mfrac>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                x
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mi>
+                μ
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mo>
+              -
+             </mo>
+             <mi>
+              μ
+             </mi>
+             <mfrac>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mi>
+                x
+               </mi>
+               <mo>
+                −
+               </mo>
+               <mn>
+                1
+               </mn>
+               <mo>
+                +
+               </mo>
+               <mi>
+                μ
+               </mi>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mo>
+              = 0
+             </mo>
+             <mspace width="1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mo>
+                Ω
+               </mo>
+              </mrow>
+              <mrow>
+               <mi>
+                y
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mi>
+              y
+             </mi>
+             <mo>
+              -
+             </mo>
+             <mfrac>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mn>
+                1
+               </mn>
+               <mo>
+                −
+               </mo>
+               <mi>
+                μ
+               </mi>
+               <mo>
+                )
+               </mo>
+               <mi>
+                y
+               </mi>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mo>
+              −
+             </mo>
+             <mi>
+              μ
+             </mi>
+             <mfrac>
+              <mrow>
+               <mi>
+                y
+               </mi>
+              </mrow>
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mn>
+                  3
+                 </mn>
+                </mrow>
+               </msubsup>
+              </mrow>
+             </mfrac>
+             <mo>
+              = 0
+             </mo>
+             <mspace width="1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A solução não trivial de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (8b)
+     </a>
+     é dada por:
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m69">
+        <mfrac>
+         <mrow>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+         <mrow>
+          <msubsup>
+           <mrow>
+            <mi>
+             r
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+           <mrow>
+            <mn>
+             3
+            </mn>
+           </mrow>
+          </msubsup>
+         </mrow>
+        </mfrac>
+        <mo>
+         -
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           +
+          </mo>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+         <mrow>
+          <msubsup>
+           <mrow>
+            <mi>
+             r
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mrow>
+            <mn>
+             3
+            </mn>
+           </mrow>
+          </msubsup>
+         </mrow>
+        </mfrac>
+        <mo>
+         = 1
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A solução geral
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (9)
+     </a>
+     fornece a disposição de dois pontos de equilíbrio estável para o sistema, conhecidos por
+     <math display="inline" id="m70">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m71">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , pontos Lagrangeanos. Outras três soluções podem ser obtidas de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (8a)
+     </a>
+     , expressas na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     . Desa forma, tomam-se os cinco pontos de equilíbrio para a energia potencial do sistema.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Representação dos cinco pontos Lagrangeanos do PCR3C. A figura foi gerada a partir da sobreposição das curvas de energia potencial e centrífuga simuladas para um binário
+      <math display="inline" id="m72">
+       <msub>
+        <mrow>
+         <mi>
+          M
+         </mi>
+        </mrow>
+        <mrow>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msub>
+       <mo>
+        = 1000
+       </mo>
+       <msub>
+        <mrow>
+         <mi>
+          M
+         </mi>
+        </mrow>
+        <mrow>
+         <mn>
+          2
+         </mn>
+        </mrow>
+       </msub>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.2. Energia, Regiões e Hill e Mapa de Poincaré
+    </h2>
+    <p>
+     O estudo das curvas de energia potencial efetiva permite determinar as regiões do espaço de fase - e, inclusive, geométricas - onde um corpo pode ou não ser encontrado. Tomando como exemplo um sistema com duas coordenadas generalizadas e dois momentos generalizados associados à estas: ao se fixar um desses dois pares, e.g.,
+     <math display="inline" id="m73">
+      <mo>
+       (
+      </mo>
+      <msubsup>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         *
+        </mo>
+       </mrow>
+      </msubsup>
+      <mo>
+       ,
+      </mo>
+      <msubsup>
+       <mrow>
+        <mi>
+         q
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         *
+        </mo>
+       </mrow>
+      </msubsup>
+      <mo>
+       )
+      </mo>
+     </math>
+     , e dar uma determinada condição inicial para as outras duas variáveis de estado, digamos,
+     <math display="inline" id="m74">
+      <mo>
+       (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         q
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     , a partir da qual se evoluirá no tempo, a dinâmica do sistema pode ser registrada em um mapeamento bidimensional sobre um plano descrito pelas duas primeiras variáveis de estado. O problema de avaliar um sistema 4-dimensional, com suas infinitas possibilidades de mapeamento, se limita àquele de visualizar o encontro, i.e., o cruzamento, das variáveis livres com o plano descrito pelas variáveis fixas. Os pontos nos quais ocorre tal cruzamento denotam aquilo que se chama por mapeamento
+     <math display="inline" id="m75">
+      <mi>
+       P
+      </mi>
+     </math>
+     das Seções de Poincaré.
+    </p>
+    <p>
+     Uma forma prática de encarar tal metodologia consiste em imaginar que para se avaliar a topologia de um corpo pode ser suficiente enxergar apenas a sua projeção no plano: toma-se uma representação bidimensional capaz de resguardar algumas características importantes do sistema real - difícil de analisar diretamente. Visualmente, o processo pode ser interpretado, também, como o de secionar um corpo sólido: se o espaço de estados de um sistema descrevesse uma região tridimensional, o processo seria o equivalente a realizar um corte na seção transversal desse corpo e registrar todos os pontos que fizeram intersecção com a superfície obtida.
+    </p>
+    <p>
+     Todavia, se existem tais regiões, o mapeamento
+     <math display="inline" id="m76">
+      <mi>
+       P
+      </mi>
+     </math>
+     do espaço de fases também deverá ser limitado. Dentro do espaço de fase 4-dimensional do problema restrito de três corpos existe uma superfície tridimensional na qual
+     <math display="inline" id="m77">
+      <mi>
+       P
+      </mi>
+     </math>
+     pode ocorrer. Dada a energia total e o fato de que, em sistemas conservativos, esta é igual à Hamiltoniana [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] M.C. Gutzwiller, Chaos in Classical and Quantum Mechanics (Springer, New York, 1990).
+       </span>
+      </span>
+     </span>
+     ], essa superfície pode ser definida de duas formas:
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m78">
+        <mtable>
+         <mtr>
+          <mtd columnalign="left">
+           <mi>
+            M
+           </mi>
+           <mo>
+            (
+           </mo>
+           <mi>
+            E
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            μ
+           </mi>
+           <mo>
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mo>
+            {
+           </mo>
+           <mo>
+            (
+           </mo>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            y
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              x
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              y
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            )|
+           </mo>
+           <mi>
+            H
+           </mi>
+           <mo>
+            (
+           </mo>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            y
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              x
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            ,
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              y
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            ) =
+           </mo>
+           <mi>
+            E
+           </mi>
+           <mo>
+            }
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="left">
+           <mi>
+            M
+           </mi>
+           <mo>
+            (
+           </mo>
+           <mi>
+            E
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            μ
+           </mi>
+           <mo>
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mo>
+            {
+           </mo>
+           <mo>
+            (
+           </mo>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            y
+           </mi>
+           <mo>
+            )
+           </mo>
+           <mo>
+            |
+           </mo>
+           <mtext>
+            Ω
+           </mtext>
+           <mo>
+            (
+           </mo>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            y
+           </mi>
+           <mo>
+            )
+           </mo>
+           <mo>
+            ≤
+           </mo>
+           <mi>
+            E
+           </mi>
+           <mo>
+            }
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Fisicamente,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     nos diz que as regiões nas quais o mapeamento pode ocorrer são limitadas pela condição de energia potencial menor ou igual a energia total do sistema. Isso é fácil de inferir, em vista de que a energia cinética será sempre não negativa. Assim, não existe outra possibilidade que se não a de ter valores de energia potencial menores (ou iguais) a energia total. Como exemplo de uma região na qual se pode mapear o espaço de fase do sistema, tomam-se as coordenadas dos pontos Lagrangeanos
+     <math display="inline" id="m79">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     ou
+     <math display="inline" id="m80">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , cuja energia potencial é solução de equilíbrio e pode ser feita tal que
+     <math display="inline" id="m81">
+      <mo>
+       Ω =
+      </mo>
+      <mi>
+       E
+      </mi>
+     </math>
+     , resultando em:
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m82">
+        <mo>
+         Ω
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mi>
+         E
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo>
+         −
+        </mo>
+        <mn>
+         1,5
+        </mn>
+        <mo>
+         +
+        </mo>
+        <mi>
+         μ
+        </mi>
+        <mo>
+         (
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         −
+        </mo>
+        <mi>
+         μ
+        </mi>
+        <mo>
+         )
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Desse modo, a expressão
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (11)
+     </a>
+     é útil para descrever o contorno exigido por
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     , denominado por Região de Hill. Tomando a energia total do sistema como o somatório de componentes de atração gravitacional e força centrífuga do movimento rotacional para o ternário, o que se obtêm são cortes secionais da região exibida na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     , cujos pontos críticos são os pontos Lagrangeanos. Neste caso, imagine um sistema cuja energia total
+     <math display="inline" id="m83">
+      <mi>
+       E
+      </mi>
+     </math>
+     é um valor elevado. O conjunto descrito por
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (11)
+     </a>
+     será menos restritivo, permitindo ao terceiro corpo assumir um maior número de estados, podendo ocupar mais regiões do espaço com uma maior gama de momentos lineares associados.
+    </p>
+    <p>
+     Como exemplos de regiões permitidas, tomam-se cinco medidas de energia total
+     <math display="inline" id="m84">
+      <mi>
+       E
+      </mi>
+     </math>
+     para o sistema, conforme a
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , onde se representam as regiões permitidas pela coloração branca, as proibidas, por cinza, os centros de massa, por pontos pretos e os pontos de equlíbrio, pontos cinza-escuro. Fica evidente que para valores mais elevados de energia mecânica, caso da figura superior esquerda, o movimento é praticamente irrestrito, enquanto que para valores menores, como é o caso da figura inferior esquerda, ficará retido à uma órbita em torno de
+     <math display="inline" id="m85">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     ou
+     <math display="inline" id="m86">
+      <msub>
+       <mrow>
+        <mi>
+         M
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Regiões proibidas (em cinza) e regiões de Hill (permitidas, em branco) para a vista no plano da órbita, para cinco medidas de energia total
+      <math display="inline" id="m87">
+       <mi>
+        E
+       </mi>
+      </math>
+      . Os pontos pretos representam os centros de massa e os cinza-escuro, os pontos Lagrangeanos. A energia descresce da esquerda para a direita, na linha superior, e da direita para a esquerda, na linha inferior. Sendo o valor máximo adotado para a figura superior esquerda e o mínimo, na figura inferior esquerda.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Outro resultado interessante dessa análise consiste em enxergar que para um corpo sujeito à dissipação da sua energia total, o que é o caso real, as regiões permitidas perdem área e levam o sistema à órbitas fechadas em torno dos dois corpos mais massivos. Quão menor a medida desta energia, menor o semi-eixo maior da elipse descrita, fazendo com que as órbitas fechadas geradas decaiam, o que é outra forma de interpretar o problema de perda de altitude de órbitas de satélites, por exemplo.
+    </p>
+    <p>
+     De fato, infinitas superfícies permitidas podem ser eleitas, sendo a metodologia de solução a descrita nestes últimos parágrafos. Segundo Worthington (2012) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] J. Worthington, A Study of the Planar Circular Restricted Three Body Problem and Vanishing Twist. Tese de Doutorado, University of Sydney, 2012.
+       </span>
+      </span>
+     </span>
+     ], existe outra superfície de interesse, mapeada da seguinte maneira:
+     <math display="inline" id="m88">
+      <mi>
+       y
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msup>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         x
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mi>
+         μ
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mrow>
+        <mo>
+         1∕3
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     e
+     <math display="inline" id="m89">
+      <mo>
+       0.5
+      </mo>
+      <msup>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           x
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         -
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           y
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mrow>
+        <mo>
+         1∕3
+        </mo>
+       </mrow>
+      </msup>
+      <mo>
+       ≥
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     . Nesta condição, obtém-se uma linha que passa pelo ponto
+     <math display="inline" id="m90">
+      <mo>
+       (
+      </mo>
+      <mo>
+       −
+      </mo>
+      <mi>
+       μ
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mn>
+       0
+      </mn>
+      <mo>
+       )
+      </mo>
+     </math>
+     , centro de massa do primeiro corpo, e
+     <math display="inline" id="m91">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , o que será empregue posteriormente.
+    </p>
+    <p>
+     A representação por seções de Poincaré nos permite observar a tendência à estabilidade ou instabilidade de um sistema, conforme será discutido. Não obstante, até mesmo sistemas com três graus de liberdades que sejam reduzidos à análise de uma seção de Poincaré serão estáveis caso o mapeamento desses o seja [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] S. Muckerjee, S.K. Palit, S. Kumar and D. K. Bhattacharya, arxiv.org/abs/1409.6738v1 (2014).
+       </span>
+      </span>
+     </span>
+     ]; e serão instáveis caso contrário, i.e., a tendência à estabilidade ou ao caos do sistema descrito no PCR3C podem ser garantidas apenas pela análise da seção de Poincaré.
+    </p>
+    <h2>
+     2.3. Teorema KAM e sistemas quase-integráveis
+    </h2>
+    <p>
+     Feitas as considerações anteriores, introduz-se o Toerema KAM e a mudança de variáveis para as do tipo Ângulo-Ação. Antecipa-se que a grande vantagem de tal procedimento está relacionada ao fato de que, nestas novas variáveis, é possível se representar a dinâmica do sistema a partir e um mapeamento em forma de toro. Estes toros, caso perturbados, terão sua topologia e mapeamento concomitantemente distorcidos, dando lugar ao que se chama de Superfície KAM. A distorção, ou completa destruição, desses toros e superfícies KAM, i.e., do mapeamento do espaço de fase do sistema, está diretamente associada ao fenômeno do caos (estabilidade e instabilidade) e ressonância, justificando a aplicação do método.
+    </p>
+    <p>
+     Seja um sistema descrito pelas variáveis ângulo e ação, conforme a expressão
+     <a class="open-asset-modal" data-target="#ModalSchemeeq12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (12)
+     </a>
+     , onde à Hamiltoniana do sistema não perturbado,
+     <math display="inline" id="m92">
+      <msub>
+       <mrow>
+        <mi>
+         H
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , é adicionada uma Hamiltoniana perturbada,
+     <math display="inline" id="m93">
+      <msub>
+       <mrow>
+        <mi>
+         H
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , multiplicada por uma constante
+     <math display="inline" id="m94">
+      <mo>
+       ϵ
+      </mo>
+     </math>
+     que a pondera:
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m95">
+        <mi>
+         K
+        </mi>
+        <mo>
+         (
+        </mo>
+        <mi>
+         I
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         (
+        </mo>
+        <mi>
+         I
+        </mi>
+        <mo>
+         )
+        </mo>
+        <mo>
+         +
+        </mo>
+        <mi>
+         ϵ
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           H
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         (
+        </mo>
+        <mi>
+         I
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         )
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     As variáveis ângulo e ação permitem à dinâmica do sistema perfazer toros no espaço de fase, de tal modo que a variável ação
+     <math display="inline" id="m96">
+      <mi>
+       I
+      </mi>
+     </math>
+     é calculada por
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (13a)
+     </a>
+     e a variável ângulo,
+     <math display="inline" id="m97">
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     , evolui segundo
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (13b)
+     </a>
+     , onde
+     <math display="inline" id="m98">
+      <mi>
+       ω
+      </mi>
+     </math>
+     é a frequência natural do sistema.
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m99">
+        <msub>
+         <mrow>
+          <mi>
+           I
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           ϕ
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         ∮
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         .
+        </mo>
+        <mi>
+         d
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <mspace width="2.77695pt">
+        </mspace>
+        <mo>
+         (
+        </mo>
+        <mi>
+         a
+        </mi>
+        <mo>
+         )
+        </mo>
+        <mspace width="1em">
+        </mspace>
+        <mi>
+         e
+        </mi>
+        <mspace width="1em">
+        </mspace>
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         (
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo>
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mi>
+         ω
+        </mi>
+        <mo>
+         (
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           I
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         )
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           θ
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           0
+          </mn>
+         </mrow>
+        </msub>
+        <mspace width="2.77695pt">
+        </mspace>
+        <mo>
+         (
+        </mo>
+        <mi>
+         b
+        </mi>
+        <mo>
+         )
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (13a)
+     </a>
+     ,
+     <math display="inline" id="m100">
+      <mi>
+       q
+      </mi>
+     </math>
+     são as coordenadas generalizadas e
+     <math display="inline" id="m101">
+      <mi>
+       p
+      </mi>
+     </math>
+     , os momentos associados à estas coordenadas generalizadas. A representação a partir destas variáveis só é possível caso o sistema seja integrável [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M.A.M. Aguiar, Tópicos de Mecânica CLássica (Livraria da Física, Campinas, 2010), v. 1.
+       </span>
+      </span>
+     </span>
+     ], mas é particularmente vantajosa por nos permitir empregar a representação em toros, definida da seguinte forma: o primeiro conjunto
+     <math display="inline" id="m102">
+      <mo>
+       (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     , tem
+     <math display="inline" id="m103">
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     como o raio de uma circunferência cujos pontos no espaço de fase rotacionam segundo
+     <math display="inline" id="m104">
+      <msub>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . A seção definida por esta circunferência, por sua vez, gira com um raio
+     <math display="inline" id="m105">
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e ângulo
+     <math display="inline" id="m106">
+      <msub>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , associados à transformada
+     <math display="inline" id="m107">
+      <mo>
+       (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         q
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ) → (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] K.R. Meyer, G.R. Glen and D. Offin, Introduction to Hamiltonian Dynamical Systems and the N-Body Problem (Springer, Cincinati, 2009).
+       </span>
+      </span>
+     </span>
+     ]. O resultado desta operação descreve um toro no espaço de fase, conforme representado na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , nos quais os estados de um sistema não perturbado serão marcados.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Toros racionais e irracionais, associados à um sistema não perturbado. Figuras retiradas e adaptadas de [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        10
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [10] H. Pollnow, Descrição Clássica para a Interação de dois Átomos de Rydberg. Tese de Mestrado, Universidade Federal do Paraná, 2011.
+        </span>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     Notavelmente, isso significa que sistemas não perturbados terão o mapeamento em espaço de estados com a topologia de um toro - da definição de seção de Poincaré, como circunferências perpendiculares a um plano
+     <math display="inline" id="m108">
+      <mo>
+       (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     constante -. Assim, a parte integrável da Hamiltoniana
+     <math display="inline" id="m109">
+      <mi>
+       K
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m110">
+      <msub>
+       <mrow>
+        <mi>
+         H
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , do PCR3C poderia ser analisada em sua estabilidade a partir de apenas uma dessas coordenadas, transformadas em variáveis ângulo-ação, e este resultado deveria nos retornar um mapeamento
+     <math display="inline" id="m111">
+      <mi>
+       P
+      </mi>
+      <mo>
+       ∈ (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     na seção de Poincaré. Todo modo, a existência de um termo perturbativo coloca em discussão a existência desse toro, dado que o sistema não mais é integrável e a transformação para variáveis ângulo e ação não ocorreria. Neste caso, o sistema poderia ser estável ou não, dado que a teoria para sistemas Hamiltonianos integráveis não mais se aplicaria. Nesta situação, recorre-se ao teorema KAM para encontrar uma resposta para a dinâmica de um sistema perturbado.
+    </p>
+    <p>
+     Retomando a definição dos toros no espaço de fase, tome uma situação na qual o mapeamento do sistema associado a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (13)
+     </a>
+     ocorre segundo:
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m112">
+        <mfenced close="" open="{" separators="">
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+               <mo>
+                +1)
+               </mo>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                j
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <mi>
+              ϵ
+             </mi>
+             <mi>
+              f
+             </mi>
+             <mo>
+              (
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                ϕ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              ,
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              )
+             </mo>
+             <mspace width="2em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <mspace width="1em">
+             </mspace>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="left">
+             <msub>
+              <mrow>
+               <mi>
+                ϕ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+               <mo>
+                +1
+               </mo>
+              </mrow>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                ϕ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <mi>
+              α
+             </mi>
+             <mo>
+              (
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              )
+             </mo>
+             <mo>
+              +
+             </mo>
+             <mi>
+              ϵ
+             </mi>
+             <mi>
+              g
+             </mi>
+             <mo>
+              (
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                ϕ
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              ,
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mi>
+                j
+               </mi>
+              </mrow>
+             </msub>
+             <mo>
+              )
+             </mo>
+             <mspace width="1em">
+             </mspace>
+             <mo>
+              (
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (14)
+     </a>
+     fica evidente que se
+     <math display="inline" id="m113">
+      <mi>
+       ϵ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , o sistema permanecerá sempre em um estado de movimento para
+     <math display="inline" id="m114">
+      <mi>
+       α
+      </mi>
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ∕
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     ou
+     <math display="inline" id="m115">
+      <mi>
+       α
+      </mi>
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       a
+      </mi>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       b
+      </mi>
+      <mo>
+       ≠
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     , sendo que no segundo caso ele será mapeado na seção de Poincaré rotacionando à um raio
+     <math display="inline" id="m116">
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     constante, mas evoluindo por um ângulo
+     <math display="inline" id="m117">
+      <msub>
+       <mrow>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       2
+      </mn>
+      <mi>
+       π
+      </mi>
+      <mo>
+       (
+      </mo>
+      <mi>
+       a
+      </mi>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       b
+      </mi>
+      <mo>
+       )
+      </mo>
+     </math>
+     à frente do ponto anterior, descrevendo, assim, uma circunferência que volta a se fechar após
+     <math display="inline" id="m118">
+      <mi>
+       b
+      </mi>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       a
+      </mi>
+     </math>
+     rotações. Nesse ponto, o Teorema KAM contribui por garantir que estes mesmos efeitos podem acontecer, sim, para a Hamiltoniana perturbada
+     <math display="inline" id="m119">
+      <mi>
+       K
+      </mi>
+     </math>
+     desde que se garantam duas condições:
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m120">
+        <mtable>
+         <mtr>
+          <mtd columnalign="left">
+           <mi>
+            i
+           </mi>
+           <mo>
+            .
+           </mo>
+           <mspace width="2em">
+           </mspace>
+           <mi>
+            ϵ
+           </mi>
+           <mo>
+            ≪
+           </mo>
+           <mfrac>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                H
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                0
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              |
+             </mo>
+            </mrow>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                H
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              |
+             </mo>
+            </mrow>
+           </mfrac>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="left">
+           <mi>
+            i
+           </mi>
+           <mi>
+            i
+           </mi>
+           <mo>
+            .
+           </mo>
+           <mspace width="2em">
+           </mspace>
+           <mi>
+            r
+           </mi>
+           <msub>
+            <mrow>
+             <mi>
+              ω
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            -
+           </mo>
+           <mi>
+            s
+           </mi>
+           <msub>
+            <mrow>
+             <mi>
+              ω
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            ≠0
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em suma, o teorema KAM garante que a transformação para variáveis ângulo e ação ocorrerá para sistemas perturbados desde que, de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (15)
+     </a>
+     , o termo perturbativo seja suficientemente menor que o não perturbado, e de que – o resultado mais valioso – não se possa encontrar
+     <math display="inline" id="m121">
+      <mi>
+       r
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       s
+      </mi>
+      <mo>
+       ∈ ℤ
+      </mo>
+     </math>
+     , de tal forma que a razão entre as frequências angulares associadas à primeira e segunda coordenadas generalizadas seja racional. O teorema é também capaz de definir um limite para a irracionalidade do sistema que ainda permite garantir a existência da transformada para variáveis ângulo e ação, dada por:
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m122">
+        <mfenced close="|" open="|" separators="">
+         <mrow>
+          <mi>
+           r
+          </mi>
+          <mo>
+           -
+          </mo>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               s
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               j
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               r
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               j
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </mfenced>
+        <mo>
+         &gt;
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mo>
+         (ϵ)
+        </mo>
+        <msup>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             r
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             j
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mrow>
+          <mo>
+           −5∕2
+          </mo>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Tenha a razão entre a primeira e a segunda frequências angulares dadas por um valor
+     <math display="inline" id="m123">
+      <mi>
+       r
+      </mi>
+     </math>
+     qualquer. Neste caso, para
+     <math display="inline" id="m124">
+      <msub>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m125">
+      <msub>
+       <mrow>
+        <mi>
+         r
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     números inteiros,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     nos diz que a representação por um toro ainda será válida desde que a razão
+     <math display="inline" id="m126">
+      <mi>
+       r
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ∕
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     entre frequências naturais seja suficientemente irracional, i.e., mal aproximada por um número racional, e que esta irracionalidade é dimensionada por uma função
+     <math display="inline" id="m127">
+      <mi>
+       c
+      </mi>
+      <mo>
+       (
+      </mo>
+      <mi>
+       ϵ
+      </mi>
+      <mo>
+       )
+      </mo>
+     </math>
+     que depende da razão entre energias (Hamiltonianas) perturbada e não perturbada. Caso a relação seja obedecida, garante-se a existência de toros distorcidos, as superfícies KAM.
+    </p>
+    <p>
+     Retornando à discussão de racionalidade, toros não perturbados podem ser racionais ou irracionais, conforme as taxas às quais os pontos no diagrama de fase são mapeados. Assim, tenha
+     <math display="inline" id="m128">
+      <mi>
+       α
+      </mi>
+      <mo>
+       ≡
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       ∕
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       r
+      </mi>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       s
+      </mi>
+      <mspace width="2.77695pt">
+      </mspace>
+      <mo>
+       |
+      </mo>
+      <mspace width="2.77695pt">
+      </mspace>
+      <mi>
+       r
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       s
+      </mi>
+      <mo>
+       ∈ ℤ
+      </mo>
+     </math>
+     . Ao aplicar uma matriz de rotação a um vetor
+     <math display="inline" id="m129">
+      <msup>
+       <mrow>
+        <mo>
+         [
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+       <mrow>
+        <mi>
+         T
+        </mi>
+       </mrow>
+      </msup>
+     </math>
+     , não é difícil notar que o sistema irá à um estado
+     <math display="inline" id="m130">
+      <msup>
+       <mrow>
+        <mo>
+         [
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           q
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mo>
+           +
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+       <mrow>
+        <mi>
+         T
+        </mi>
+       </mrow>
+      </msup>
+     </math>
+     dado por:
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m131">
+        <mfenced close="}" open="{" separators="">
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="center">
+             <msub>
+              <mrow>
+               <mi>
+                q
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="center">
+             <msub>
+              <mrow>
+               <mi>
+                p
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mfenced>
+        <mo>
+         =
+        </mo>
+        <mfenced close="]" open="[" separators="">
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="center">
+             <mi>
+              c
+             </mi>
+             <mi>
+              o
+             </mi>
+             <mi>
+              s
+             </mi>
+             <mo>
+              (
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <mi>
+              α
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+            <mtd columnalign="center">
+             <mi>
+              s
+             </mi>
+             <mi>
+              e
+             </mi>
+             <mi>
+              n
+             </mi>
+             <mo>
+              (
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <mi>
+              α
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="center">
+             <mo>
+              −
+             </mo>
+             <mi>
+              c
+             </mi>
+             <mi>
+              o
+             </mi>
+             <mi>
+              s
+             </mi>
+             <mo>
+              (
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <mi>
+              α
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+            <mtd columnalign="center">
+             <mi>
+              c
+             </mi>
+             <mi>
+              o
+             </mi>
+             <mi>
+              s
+             </mi>
+             <mo>
+              (
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              π
+             </mi>
+             <mi>
+              α
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mfenced>
+        <mfenced close="}" open="{" separators="">
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd columnalign="center">
+             <msub>
+              <mrow>
+               <mi>
+                q
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                i
+               </mi>
+              </mrow>
+             </msub>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="center">
+             <msub>
+              <mrow>
+               <mi>
+                p
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                i
+               </mi>
+              </mrow>
+             </msub>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Toros racionais serão aqueles nos quais a evolução ocorre segundo
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (17)
+     </a>
+     . Tenha, agora, o caso no qual
+     <math display="inline" id="m132">
+      <mi>
+       α
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       α
+      </mi>
+      <mo>
+       (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     , de tal forma que o mapeamento
+     <math display="inline" id="m133">
+      <mi>
+       P
+      </mi>
+     </math>
+     na seção de Poincaré passa a ser dado por
+     <math display="inline" id="m134">
+      <mi>
+       P
+      </mi>
+      <mo>
+       (
+      </mo>
+      <mi>
+       s
+      </mi>
+      <mi>
+       α
+      </mi>
+      <mo>
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     . Definindo o mapa de torção por
+     <math display="inline" id="m135">
+      <msub>
+       <mrow>
+        <mi>
+         T
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       (
+      </mo>
+      <mi>
+       α
+      </mi>
+      <mo>
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mi>
+       P
+      </mi>
+      <mo>
+       (
+      </mo>
+      <mi>
+       s
+      </mi>
+      <mi>
+       α
+      </mi>
+      <mo>
+       )
+      </mo>
+     </math>
+     , um resultado muito importante para entender a dinâmica dos toros e das superfícies KAM se encontra: retomando
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (14a)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (14b)
+     </a>
+     , para o caso no qual
+     <math display="inline" id="m136">
+      <mi>
+       ϵ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , então, para uma determinada razão de frequências angulares, define-se
+     <math display="inline" id="m137">
+      <msup>
+       <mrow>
+        <mi>
+         α
+        </mi>
+       </mrow>
+       <mrow>
+        <mo>
+         *
+        </mo>
+       </mrow>
+      </msup>
+      <mo>
+       =
+      </mo>
+      <mi>
+       α
+      </mi>
+      <mo>
+       (
+      </mo>
+      <msup>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mo>
+         *
+        </mo>
+       </mrow>
+      </msup>
+      <mo>
+       ) = 1
+      </mo>
+     </math>
+     . Esta condição descreve um toro irrotacional, i.e., seus estados são remarcados com as mesmas coordenadas, não importando a iteração presente do sistema.
+    </p>
+    <p>
+     Imagine que um valor novo de
+     <math display="inline" id="m138">
+      <mi>
+       I
+      </mi>
+     </math>
+     seja tomado como
+     <math display="inline" id="m139">
+      <mi>
+       I
+      </mi>
+      <mo>
+       &gt;
+      </mo>
+      <msup>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mo>
+         *
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     . Em tais circunstâncias, de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (14a)
+     </a>
+     , a nova seção de Poincaré passará a ser demarcada por uma circunferência de raio maior. Todo modo, os pontos que estão à distâncias maiores que a definida pelo toro irrotacional têm a progressiva tendencia à girarem no sentido anti-horário, e o caso contrário para aqueles à distâncias menores. Assim, evidencia-se o movimento de torção de uma superfície excêntrica. Em perfis circulares - movimento não perturbado - todos os seus pontos rotacionariam à uma taxa única, não apresentando o efeito, mas caso uma mesma topologia abranja diferentes valores de
+     <math display="inline" id="m140">
+      <mi>
+       I
+      </mi>
+     </math>
+     , seus pontos tenderão à rotacionar em sentidos e taxas diferentes conforme esta cruzar a faixa de
+     <math display="inline" id="m141">
+      <msup>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mo>
+         *
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     .
+    </p>
+    <p>
+     Tomando a situação na qual se traça o mapa de torção de toros deformados, conforme a
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5(b)
+     </a>
+     . Partindo da curva original,
+     <math display="inline" id="m142">
+      <msub>
+       <mrow>
+        <mi>
+         R
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , sua evolução no tempo resulta na nova seção transversal,
+     <math display="inline" id="m143">
+      <mi>
+       T
+      </mi>
+      <mo>
+       (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         R
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     , conforme representado. Os pontos interiores ao toro não rotacional (associado a
+     <math display="inline" id="m144">
+      <msup>
+       <mrow>
+        <mi>
+         I
+        </mi>
+       </mrow>
+       <mrow>
+        <mo>
+         *
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     ) girarão no sentido horário, enquanto os exteriores, no sentido anti-horário. Todo modo, não é difícil de notar que a dimensão das superfícies são proporcionais à energia do sistema (basta retomar à equação de transformação para as variáveis ângulo-ação), o que indica que, independente de como se distorça a superfície, ela deverá preservar a sua área inicial. Portanto, existirá a composição de dois tipos de movimento: o giro dos pontos ao serem remapeados e a concomitante distorção das seções pela preservação da energia mecânica. Assim, em superfícies com maiores distorções, mais complexas e desregulares serão as remarcações dos estados, até o ponto no qual a pertubação supera a tendência à regularidade da dinâmica e seu movimento dê lugar ao comportamento errático, i.e., caótico, com a destruição da superfície KAM associada.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      (a) Mapeamento para seção de Poincaré de toros não perturbados. (b) Mapeamento para toros perturbados. (c) Formação de toros secundários.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Todo modo, ainda existirão pontos no mapa de torção que permanecerão irrotacionais, nomeados por
+     <math display="inline" id="m145">
+      <mi>
+       A
+      </mi>
+      <mn>
+       1
+      </mn>
+     </math>
+     ,
+     <math display="inline" id="m146">
+      <mi>
+       A
+      </mi>
+      <mn>
+       2
+      </mn>
+     </math>
+     ,
+     <math display="inline" id="m147">
+      <mi>
+       B
+      </mi>
+      <mn>
+       1
+      </mn>
+     </math>
+     e
+     <math display="inline" id="m148">
+      <mi>
+       B
+      </mi>
+      <mn>
+       2
+      </mn>
+     </math>
+     , na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5(c)
+     </a>
+     . Neste caso, existirão
+     <math display="inline" id="m149">
+      <mn>
+       2
+      </mn>
+      <mi>
+       s
+      </mi>
+     </math>
+     pontos não rotacionais, sendo s definido como em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     . Isto significa que, para um mapeamento ocorrendo à uma taxa
+     <math display="inline" id="m150">
+      <mi>
+       s
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m151">
+      <mn>
+       2
+      </mn>
+      <mi>
+       s
+      </mi>
+     </math>
+     pontos serão remarcados em seu próprio lugar. A implicação direta disso é que não apenas se destroem as superfícies KAM que cruzam toros racionais (toros que são irrotacionais a cada
+     <math display="inline" id="m152">
+      <mi>
+       s
+      </mi>
+     </math>
+     evoluções), mas que a dinâmica desta destruição cria um número par de pontos nos quais a dinâmica dá lugar à novos tipos de movimento periódicos. Fica evidente que quão mais longe as superfícies KAM estiverem dessas regiões de existência de toros racionais, menor será o efeito sobre seus pontos ao sofrerem evolução. Esta é outra forma de enxergar a estabilidade e instabilidade dinâmica de sistemas: toros ressonantes (ou racionais) torcem as curvas de evolução dos pontos no espaço de estado, fazendo com que, quão mais perto as superfícies KAM estiverem deles, maior o efeito e, consequentemente, a tendência à destruição completa do perfil, levando ao caos. Além disso, nota-se que se não houvesse a perturbação, não existiria a deformação na superfície e, consequentemente, não haveria o cruzamento. Assim, sistemas não perturbados não apresentariam o efeito.
+    </p>
+    <p>
+     Devido à simetria do problema, os pontos B na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5(c)
+     </a>
+     servirão de centro de rotação para o mapeamento de pontos vizinhos, isto é, darão origem à novos toros. Isso quer dizer que a destruição de uma superfície próxima da região de um toro racional de frequência
+     <math display="inline" id="m153">
+      <mi>
+       s
+      </mi>
+     </math>
+     , gerará
+     <math display="inline" id="m154">
+      <mi>
+       s
+      </mi>
+     </math>
+     toros secundários. Esses pontos são chamados de estáveis, enquanto a variedade
+     <math display="inline" id="m155">
+      <mi>
+       A
+      </mi>
+     </math>
+     , na mesma figura, são instáveis - mas não necessariamente o movimento será instável ao redor destes. Para entender a dinâmica em torno da variedade
+     <math display="inline" id="m156">
+      <mi>
+       A
+      </mi>
+     </math>
+     , toma-se a
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5(c)
+     </a>
+     , onde se expôs
+     <math display="inline" id="m157">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m158">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         u
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , curvas invariantes no espaço. Essas têm as seguintes definições: a variedade
+     <math display="inline" id="m159">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é considerada estável, ou seja, é um conjunto de órbitas que, para um comportamento assintótico (mapa de torção iterado infinitas vezes), voltam ao ponto inicial. Já
+     <math display="inline" id="m160">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         u
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a variedade instável, que constitui um conjunto invariante de pontos do espaço de fase cujas curvas propagadas para trás no tempo fazem com que o mapa de torção retorne ao ponto inicial. Em outras palavras,
+     <math display="inline" id="m161">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é um conjunto de pontos que, para
+     <math display="inline" id="m162">
+      <mi>
+       n
+      </mi>
+      <mo>
+       →∞
+      </mo>
+     </math>
+     , têm um mapa de torção que faz com que o ponto volte a ser igual ao inicial, e
+     <math display="inline" id="m163">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         u
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , para
+     <math display="inline" id="m164">
+      <mi>
+       n
+      </mi>
+      <mo>
+       →
+      </mo>
+      <mtext>
+       −
+      </mtext>
+      <mo>
+       ∞
+      </mo>
+     </math>
+     . Na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5(c)
+     </a>
+     ,
+     <math display="inline" id="m165">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         u
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     são curvas que “saem” do ponto, e
+     <math display="inline" id="m166">
+      <msub>
+       <mrow>
+        <mi>
+         W
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , que “entram”.
+    </p>
+    <p>
+     A conclusão disso é que a destruição de superfícies KAM em torno de toros racionais, de frequência de mapeamento
+     <math display="inline" id="m167">
+      <mi>
+       s
+      </mi>
+     </math>
+     , dará origem à
+     <math display="inline" id="m168">
+      <mn>
+       2
+      </mn>
+      <mi>
+       s
+      </mi>
+     </math>
+     pontos irrotacionais, dos quais metade iniciam toros secundários e a outra metade pode apresentar movimento caótico ou servir de um novo centro para a dinâmica do sistema, dependendo de como a evolução deste ocorre com relação a eles.
+    </p>
+    <p>
+     O fenômeno descrito anteriormente é conhecido como ressonância, caracterizando-se por perturbar mais intensamente, ou até destruir, a dinâmica de sistemas em torno dos intervalos de frequência no qual a dinâmica do sistema é perturbada por uma força cuja frequência é racional para com a frequência natural do sistema. Para analisar o efeito, uma vantajosa construção é feita para a dinâmica do PCR3C próximo de
+     <math display="inline" id="m169">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , cuja energia é calculada pela expressão
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (11)
+     </a>
+     . Para esta energia total, em especial, é possível se prever para quais valores de massa reduzida
+     <math display="inline" id="m170">
+      <mi>
+       μ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         μ
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         s
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     uma ressonância aparecerá associada à frequência
+     <math display="inline" id="m171">
+      <mi>
+       s
+      </mi>
+     </math>
+     , dada em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     . A expressão que permite prever o valor de
+     <math display="inline" id="m172">
+      <mi>
+       μ
+      </mi>
+     </math>
+     associado à uma ressonância do tipo
+     <math display="inline" id="m173">
+      <mn>
+       1
+      </mn>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       s
+      </mi>
+     </math>
+     é [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] K.R. Meyer, G.R. Glen and D. Offin, Introduction to Hamiltonian Dynamical Systems and the N-Body Problem (Springer, Cincinati, 2009).
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block" id="m174">
+        <msub>
+         <mrow>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           s
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mn>
+           2
+          </mn>
+         </mrow>
+        </mfrac>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           -
+          </mo>
+          <msqrt>
+           <mrow>
+            <mfrac>
+             <mrow>
+              <mn>
+               16
+              </mn>
+              <msup>
+               <mrow>
+                <mi>
+                 s
+                </mi>
+               </mrow>
+               <mrow>
+                <mn>
+                 2
+                </mn>
+               </mrow>
+              </msup>
+             </mrow>
+             <mrow>
+              <mn>
+               27
+              </mn>
+              <msup>
+               <mrow>
+                <mo>
+                 (
+                </mo>
+                <msup>
+                 <mrow>
+                  <mi>
+                   s
+                  </mi>
+                 </mrow>
+                 <mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </mrow>
+                </msup>
+                <mo>
+                 + 1)
+                </mo>
+               </mrow>
+               <mrow>
+                <mn>
+                 2
+                </mn>
+               </mrow>
+              </msup>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </msqrt>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Alguns exemplos de
+     <math display="inline" id="m175">
+      <mi>
+       μ
+      </mi>
+     </math>
+     e as suas respectivas razões de ressonância estão representados na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     .
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Valores de
+      <math display="inline" id="m176">
+       <mi>
+        μ
+       </mi>
+      </math>
+      correspondentes a uma ressonância do tipo
+      <math display="inline" id="m177">
+       <mo>
+        1∕
+       </mo>
+       <mi>
+        s
+       </mi>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Simulações
+    </h1>
+    <p>
+     A fim de verificar resultados discutidos neste trabalho, realizaram-se algumas simulações numéricas de forma a ilustrar o fenômeno de ressonância, destruição de toros e o surgimento do caos no PCR3C. Para tal, empregou-se uma versão modificada do algoritmo desenvolvido por Worthington (2012) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] J. Worthington, A Study of the Planar Circular Restricted Three Body Problem and Vanishing Twist. Tese de Doutorado, University of Sydney, 2012.
+       </span>
+      </span>
+     </span>
+     ] para simulação da órbita do terceiro corpo a partir da vista paralela ao plano
+     <math display="inline" id="m180">
+      <mi>
+       X
+      </mi>
+      <mi>
+       Y
+      </mi>
+     </math>
+     e o concomitante mapeamento da seção de Poincaré. O algoritmo empregue, escrito em
+     <math display="inline" id="m181">
+      <mi>
+       C
+      </mi>
+      <mo>
+       + +
+      </mo>
+     </math>
+     , utiliza o método de Runge-Kutta de quarta ordem para realizar integração numérica. A seção de Poincaré é mapeada segundo o método desenvolvido por Henon [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] H.A. Oliveira, Revista Brasileira de Ensino de Física 36, 4, 4313 (2014).
+       </span>
+      </span>
+     </span>
+     ]. Além disso, a saída dos dados e entradas para realizar as simulações foram feitas com OpenGL. As seções de Poincaré de todas as simulações feitas neste trabalho são de
+     <math display="inline" id="m182">
+      <mo>
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     para
+     <math display="inline" id="m183">
+      <mi>
+       y
+      </mi>
+      <mo>
+       = 0
+      </mo>
+     </math>
+     e
+     <math display="inline" id="m184">
+      <msub>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         y
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       &gt; 0
+      </mo>
+     </math>
+     .
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     se dispõe o espaço de fase de um sistema com energia total igual a
+     <math display="inline" id="m185">
+      <mi>
+       E
+      </mi>
+      <mo>
+       = −0,17
+      </mo>
+     </math>
+     . O que se nota da análise direta das representações no plano
+     <math display="inline" id="m186">
+      <mi>
+       X
+      </mi>
+      <mi>
+       Y
+      </mi>
+     </math>
+     das órbitas, das
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6(A)
+     </a>
+     à
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6(E)
+     </a>
+     , corresponde exatamente ao que prevê a teoria: superfícies KAM concêntricas existem à direita do mapa. Ao passo que elas se afastam daquilo que seria uma órbita perfeitamente circular, vão se tornando mais deformadas, até que, se encontrarem com uma região de existência de um toro ressonante, destroem-se e dão origem à toros secundários. Esses toros estão associados à
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6(D)
+     </a>
+     , na qual se nota que a órbita passa a assumir três conformações diferentes. A
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6(B)
+     </a>
+     , associada aos toros secundários seguintes, possui visivelmente cinco conformações, e assim por diante.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      (a) Seção de Poincaré
+      <math display="inline" id="m187">
+       <mo>
+        (
+       </mo>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <msub>
+        <mrow>
+         <mi>
+          p
+         </mi>
+        </mrow>
+        <mrow>
+         <mi>
+          x
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </math>
+      para um sistema com
+      <math display="inline" id="m188">
+       <mi>
+        E
+       </mi>
+       <mo>
+        = −0, 17
+       </mo>
+      </math>
+      . Vistas no plano XY: (A) órbitas referentes aos toros secundários em A na seção de Poincaré em (a); (B) órbitas referentes aos toros secundários B; (C) órbitas referentes aos toros secundários em C e (D), órbitas referentes aos toros secundários D.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O movimento para além dos limites de irracionalidade das superfícies KAM primárias é registrado pelo permeio de superfícies KAM secundárias e movimento caótico. Assim, na nuvem de pontos ao redor das conformações de órbitas fechadas, existe o movimento completamente errático. Nota-se, inclusive, que nenhuma condição inicial foi capaz de realizar o mapeamento para as pontas extremas do diagrama de fase do sistema.
+    </p>
+    <p>
+     Retomando a expressão
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (11)
+     </a>
+     , que define a energia de uma órbita em torno do ponto Lagrangeano
+     <math display="inline" id="m189">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , registram-se diversos mapeamentos no espaço de fase como função de
+     <math display="inline" id="m190">
+      <mi>
+       μ
+      </mi>
+     </math>
+     , na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     . Alguns desses pontos foram escolhidos de forma conveniente, a partir da expressão
+     <a class="open-asset-modal" data-target="#ModalSchemeeq18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (18)
+     </a>
+     e dos dados disponíveis na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , de modo a evidenciar a correlação entre racionalidade, ressonância e a tendência das variáveis de estado.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Resultados para a seção de Poincaré
+      <math display="inline" id="m191">
+       <mo>
+        (
+       </mo>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <msub>
+        <mrow>
+         <mi>
+          p
+         </mi>
+        </mrow>
+        <mrow>
+         <mi>
+          x
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </math>
+      entorno do ponto
+      <math display="inline" id="m192">
+       <msub>
+        <mrow>
+         <mi>
+          L
+         </mi>
+        </mrow>
+        <mrow>
+         <mn>
+          4
+         </mn>
+        </mrow>
+       </msub>
+      </math>
+      para diversos valores de
+      <math display="inline" id="m193">
+       <mi>
+        μ
+       </mi>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para o situação na qual se fasta da condição
+     <math display="inline" id="m194">
+      <mi>
+       r
+      </mi>
+      <mo>
+       ∕s = 1∕7
+      </mo>
+     </math>
+     , desaparecem os toros secundários, e isso se verifica em
+     <math display="inline" id="m195">
+      <mi>
+       μ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0,0025
+      </mn>
+     </math>
+     , na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     . Já para
+     <math display="inline" id="m196">
+      <mi>
+       r
+      </mi>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       s
+      </mi>
+      <mo>
+       = 1∕5
+      </mo>
+     </math>
+     , com
+     <math display="inline" id="m197">
+      <mi>
+       μ
+      </mi>
+     </math>
+     dado pela
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , nota-se a formação de cinco ilhas muito pequenas compondo aquilo que seriam os pontos irrotacionais estáveis, da dinâmica do toro primário destruído, mencionado anteriormente. Contudo, o caso mais interessante é aquele para a ressonância
+     <math display="inline" id="m198">
+      <mi>
+       r
+      </mi>
+      <mo>
+       ∕
+      </mo>
+      <mi>
+       s
+      </mi>
+      <mo>
+       = 3∕10
+      </mo>
+     </math>
+     . Neste se nota a formação de cinco ilhas adjacentes, conforme previa a teoria. Estas ilhas, os toros secundários, são associadas à formação de pontos fixos na evolução de toros - deformados - ressonantes. Além disso, conforme o Teorema KAM, existe certo volume de toros irracionais próximos aos racionais que ainda preservam a topologia fechada.
+    </p>
+    <p>
+     Existem diversos exemplos reais famosos de como o fenômeno de ressonância e o surgimento de caos agem na dinâmica de sistemas gravitacionais. Em Saturno uma ressonância
+     <math display="inline" id="m199">
+      <mo>
+       2 : 1
+      </mo>
+     </math>
+     com sua lua Mimas produz uma vacância conhecida por Cassimi Division entre os anéis A e B do planeta. Há também as lacunas de Kirkwood, no cinturão de asteroides de Kuiper, nas quais a densidade de corpos cai para valores próximos de zero em determinados pontos, associados às ressonâncias
+     <math display="inline" id="m200">
+      <mo>
+       3 : 1
+      </mo>
+     </math>
+     ,
+     <math display="inline" id="m201">
+      <mo>
+       5 : 2
+      </mo>
+     </math>
+     ,
+     <math display="inline" id="m202">
+      <mo>
+       7 : 3
+      </mo>
+     </math>
+     e
+     <math display="inline" id="m203">
+      <mo>
+       2 : 1
+      </mo>
+     </math>
+     de Saturno com os asteroides, em relação à órbita em torno do Sol. De fato, o movimento nestas regiões é extremamente sensível às condições iniciais, não permitindo a permanência de um corpo que tivesse sua trajetória ali traçada [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] C.D. Murray, Solar System Dynamics (Cambridge University Press, Cambridge, 1999), 1st. ed.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Outras questões interessantes à análise de órbitas podem ser evidenciadas. Assim como estudado por Koon (2001) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] W.S. Koon, M. W. Lo, J. E. Marsden e S. D. Ross, Dynamical Systems, the Three-Body Problem and Space Mission Design (Marsden Books, Pasadena, 2011).
+       </span>
+      </span>
+     </span>
+     ], DeSalvo (2006) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] http://ccar.colorado.edu/geryon/papers/Conference/AAS09398.pdf, acesso em 05/04/2017.
+       </span>
+       <br/>
+       <a href="http://ccar.colorado.edu/geryon/papers/Conference/AAS09398.pdf" target="_blank">
+        http://ccar.colorado.edu/geryon/papers/C...
+       </a>
+      </span>
+     </span>
+     ] e Lo (2001) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] M. Lo, S. Ross, in: AIAA Space Conference, Albuberque, 2001, https://arc.aiaa.org/doi/10.2514/6.2001-4768.
+       </span>
+       <br/>
+       <a href="https://arc.aiaa.org/doi/10.2514/6.2001-4768" target="_blank">
+        https://arc.aiaa.org/doi/10.2514/6.2001-...
+       </a>
+      </span>
+     </span>
+     ], os pontos Lagrangeanos constituem um segmento de pesquisa interessante à transferência orbital, já que podem ser empregues em manobras visando a economia de combustível, como é a análise de otimização de consumo feita por Moore 2009 [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] A. Moore, Two Approaches Utilizing Invariant Manifolds to Design Trajectories for DMOC Optimization, 2009, disponível em http://www.cds.caltech.edu/~marsden/wiki/uploads/projects/geomech/CDS205_Project_Moore.pdf.
+       </span>
+       <br/>
+       <a href="http://www.cds.caltech.edu/~marsden/wiki/uploads/projects/geomech/CDS205_Project_Moore.pdf" target="_blank">
+        http://www.cds.caltech.edu/~marsden/wiki...
+       </a>
+      </span>
+     </span>
+     ]. Apesar de já serem adotados para uma quantidade razoável de aplicações, o estudo e análise de missões tendo os pontos Lagrangeanos como artifícios de economia de propelente é uma área atual e muito ativa da mecânica orbital.
+    </p>
+    <p>
+     Dado que a quantidade de propelente que um veículo gasta é proporcional à mudança de velocidade que ele realiza durante a manobra – o impulso – pesquisadores tentam buscar órbitas que reduzam os módulos da diferença de velocidade, de modo a otimizar missões astronáuticas. Como elucida Koon (2001) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] W.S. Koon, M. W. Lo, J. E. Marsden e S. D. Ross, Dynamical Systems, the Three-Body Problem and Space Mission Design (Marsden Books, Pasadena, 2011).
+       </span>
+      </span>
+     </span>
+     ], os pontos são, de fato, peças fundamentais no avanço deste ramo.
+    </p>
+    <p>
+     No caso do sistema Terra-Lua-Satélite, imagine que se deseja enviar o último à uma órbita em torno de
+     <math display="inline" id="m204">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     para que, posteriormente, este seja reenviado à um novo destino. Neste exemplo, propondo uma energia total
+     <math display="inline" id="m205">
+      <mi>
+       E
+      </mi>
+      <mo>
+       = −1,6071
+      </mo>
+     </math>
+     para a órbita, almeja-se encontrar condições iniciais que o coloquem, a partir de uma órbita terrestre, em condições de ser capturado por
+     <math display="inline" id="m206">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . Três tentativas foram exemplificadas nas
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 8(a)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8(b)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8(c)
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Vistas do plano da órbita para três tentativas de enviar um satélite de uma órbita terrestre para uma em torno do ponto
+      <math display="inline" id="m207">
+       <msub>
+        <mrow>
+         <mi>
+          L
+         </mi>
+        </mrow>
+        <mrow>
+         <mn>
+          4
+         </mn>
+        </mrow>
+       </msub>
+      </math>
+      ; três diferentes valores de
+      <math display="inline" id="m208">
+       <mo>
+        (
+       </mo>
+       <msub>
+        <mrow>
+         <mi>
+          x
+         </mi>
+        </mrow>
+        <mrow>
+         <mi>
+          i
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        ,
+       </mo>
+       <msub>
+        <mrow>
+         <mi>
+          p
+         </mi>
+        </mrow>
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo>
+          ,
+         </mo>
+         <mi>
+          i
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </math>
+      <br/>
+     </div>
+    </div>
+    <p>
+     A proposta, neste exemplo, foi escolher um nível de energia que limitasse a órbita do terceiro corpo ao interior da estrutura “em ferradura”, denotada pela região proibida entre
+     <math display="inline" id="m209">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     ,
+     <math display="inline" id="m210">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         3
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math display="inline" id="m211">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . Com o auxílio desta, permite-se ao mesmo escapar próximo ao segundo primário, como feito nas três situações, nas
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 8(b)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8(c)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8(d)
+     </a>
+     . Contudo, as duas primeiras tentativas ocorreram de modo a mostrar que o corpo apresenta elevada proeminência de abandonar a região entre os primários, casos desinteressantes à proposta. O que se fez na terceira condição
+     <math display="inline" id="m212">
+      <mo>
+       (
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         x
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     , foi escolher parâmetros que o fizessem ir à
+     <math display="inline" id="m213">
+      <msub>
+       <mrow>
+        <mi>
+         m
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     com tendência a o contornar. Assim, abre-se a possibilidade de empregar uma mudança de órbita com um
+     <math display="inline" id="m214">
+      <mtext>
+       Δ
+      </mtext>
+      <mi>
+       v
+      </mi>
+     </math>
+     menor na região de inversão contorno do
+     <math display="inline" id="m215">
+      <msub>
+       <mrow>
+        <mi>
+         L
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , fazendo com que o corpo passasse a orbitar
+     <math display="inline" id="m216">
+      <msub>
+       <mrow>
+        <mi>
+         m
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     . A manobra original consiste em realizar uma transferência orbital do tipo hiperbólica-elíptica e, por mais que se empregassem modelos otimizados, como o de Hohmann, não há questionamento de que a situação na qual o contorno é realizado naturalmente será sempre vantajosa. Note que resultados muito díspares são obtidos mesmo em simulações com condições iniciais próximas. Outros aspectos deste problema são estudados por Moore (2009) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] A. Moore, Two Approaches Utilizing Invariant Manifolds to Design Trajectories for DMOC Optimization, 2009, disponível em http://www.cds.caltech.edu/~marsden/wiki/uploads/projects/geomech/CDS205_Project_Moore.pdf.
+       </span>
+       <br/>
+       <a href="http://www.cds.caltech.edu/~marsden/wiki/uploads/projects/geomech/CDS205_Project_Moore.pdf" target="_blank">
+        http://www.cds.caltech.edu/~marsden/wiki...
+       </a>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Esta proposta de análise, usada como ilustração, serve para demonstrar o problema de transferência de órbitas sobre condições mais próximas das reais e, ao mesmo tempo, evidenciar como os pontos Lagrangeanos e a questão do movimento errático, entre os demais, podem ser empregues em situações reais. Cabe notar que a aplicação do PCR3C tem aplicações semelhantes para problemas de interação atômica, conforme abordado por Pollnow (2011) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] H. Pollnow, Descrição Clássica para a Interação de dois Átomos de Rydberg. Tese de Mestrado, Universidade Federal do Paraná, 2011.
+       </span>
+      </span>
+     </span>
+     ], corroborando a já evidenciada importância do modelo.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Considerações finais
+    </h1>
+    <p>
+     Neste trabalho se destacou o problema da ressonância no PCR3C e como a dinâmica se dá, no que se refere às condições de equilíbrio e transição para o caos. A perturbação gerada pela existência do terceiro corpo, ainda que não necessariamente destrua os toros no espaço de fase, os deforma, gerando superfícies KAM. O modo como estas evoluem, segundo seu mapa de torção, determina se a dinâmica abandonará sua conformação fechada, sendo destruída ou originando toros secundários permeados por regiões de dinâmica caótica.
+    </p>
+    <p>
+     O número de superfícies KAM secundárias oriundas da destruição de uma primária, igual a
+     <math display="inline" id="m217">
+      <mi>
+       s
+      </mi>
+     </math>
+     para um toro ressoante
+     <math display="inline" id="m218">
+      <mo>
+       1 :
+      </mo>
+      <mi>
+       s
+      </mi>
+     </math>
+     , foi evidenciado nas simulações numéricas, corroborando a noção de que o efeito da racionalidade entre de frequência natural do sistema e a da força perturbativa gera em sistemas dinâmicos a tendência ao caos e que, quanto mais irracional um sistema for – mais especificamente, neste trabalho, o PCR3C – menor a sua tendência a ser destruído, também comprovado nas simulações numéricas e levando à máxima: sistemas mais irracionais serão destruídos por último [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] S.D. Prado and M.A.M. de Aguiar, Annals of Phycics 231, 290 (1994).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Esperamos ter contribuído para uma revisão acerca do problema de três corpos, em particular da aproximação PCR3C, que além de sua importância histórica para o desenvolvimento da teoria de sistemas dinâmicos, continua sendo aplicado em estudos atuais sobre a mecânica celeste.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        L.H.A. Monteiro,
+        <i>
+         Sistemas Dinâmicos
+        </i>
+        (Livraria da Física, São Paulo, 2011), 3ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        K.R. Symon,
+        <i>
+         Mecânica
+        </i>
+        (Campus, Rio de Janeiro, 1982).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        M.A.M. Aguiar,
+        <i>
+         Tópicos de Mecânica CLássica
+        </i>
+        (Livraria da Física, Campinas, 2010), v. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        G. de Felipe,
+        <i>
+         Transferências Orbitais Envolvendo òrbitas do Tipo Halo
+        </i>
+        Tese de Mestrado, INPE, 2004.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        http://farside.ph.utexas.edu/teaching/336k/Newtonhtml/node121.html, acesso em 03/05/2017.
+        <br/>
+        <a href="http://farside.ph.utexas.edu/teaching/336k/Newtonhtml/node121.html" target="_blank">
+         » http://farside.ph.utexas.edu/teaching/336k/Newtonhtml/node121.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        M.C. Gutzwiller,
+        <i>
+         Chaos in Classical and Quantum Mechanics
+        </i>
+        (Springer, New York, 1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        J. Worthington,
+        <i>
+         A Study of the Planar Circular Restricted Three Body Problem and Vanishing Twist
+        </i>
+        Tese de Doutorado, University of Sydney, 2012.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        S. Muckerjee, S.K. Palit, S. Kumar and D. K. Bhattacharya, arxiv.org/abs/1409.6738v1 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        K.R. Meyer, G.R. Glen and D. Offin,
+        <i>
+         Introduction to Hamiltonian Dynamical Systems and the N-Body Problem
+        </i>
+        (Springer, Cincinati, 2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        H. Pollnow,
+        <i>
+         Descrição Clássica para a Interação de dois Átomos de Rydberg
+        </i>
+        Tese de Mestrado, Universidade Federal do Paraná, 2011.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        H.A. Oliveira, Revista Brasileira de Ensino de Física
+        <b>
+         36
+        </b>
+        , 4, 4313 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        C.D. Murray,
+        <i>
+         Solar System Dynamics
+        </i>
+        (Cambridge University Press, Cambridge, 1999), 1st. ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        W.S. Koon, M. W. Lo, J. E. Marsden e S. D. Ross,
+        <i>
+         Dynamical Systems, the Three-Body Problem and Space Mission Design
+        </i>
+        (Marsden Books, Pasadena, 2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        http://ccar.colorado.edu/geryon/papers/Conference/AAS09398.pdf, acesso em 05/04/2017.
+        <br/>
+        <a href="http://ccar.colorado.edu/geryon/papers/Conference/AAS09398.pdf" target="_blank">
+         » http://ccar.colorado.edu/geryon/papers/Conference/AAS09398.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        M. Lo, S. Ross, in:
+        <i>
+         AIAA Space Conference
+        </i>
+        , Albuberque, 2001, https://arc.aiaa.org/doi/10.2514/6.2001-4768
+        <br/>
+        <a href="https://arc.aiaa.org/doi/10.2514/6.2001-4768" target="_blank">
+         » https://arc.aiaa.org/doi/10.2514/6.2001-4768
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        A. Moore,
+        <i>
+         Two Approaches Utilizing Invariant Manifolds to Design Trajectories for DMOC Optimization
+        </i>
+        , 2009, disponível em http://www.cds.caltech.edu/~marsden/wiki/uploads/projects/geomech/CDS205_Project_Moore.pdf
+        <br/>
+        <a href="http://www.cds.caltech.edu/~marsden/wiki/uploads/projects/geomech/CDS205_Project_Moore.pdf" target="_blank">
+         » http://www.cds.caltech.edu/~marsden/wiki/uploads/projects/geomech/CDS205_Project_Moore.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        S.D. Prado and M.A.M. de Aguiar, Annals of Phycics
+        <b>
+         231
+        </b>
+        , 290 (1994).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        27 Maio 2017
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        25 Ago 2017
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        02 Out 2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

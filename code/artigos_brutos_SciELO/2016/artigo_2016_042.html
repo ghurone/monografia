@@ -1,0 +1,3603 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (3)
+   <span class="_separator">
+    •
+   </span>
+   Set 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2016-0042" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2016-0042
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0042">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Simulador de Oscilações Mecânicas
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Simulating Mechanical Oscillations
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Adilson Costa da Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:adilsoncostasilva@gmail.com">
+      adilsoncostasilva@gmail.com
+     </a>
+     .
+    </div>
+    Programa de Engenharia Nuclear, Universidade Federal do Rio de Janeiro, Rio de Janeiro, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     José Abdalla Helayël Neto
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Centro Brasileiro de Pesquisas Físicas, Urca, Rio de Janeiro, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Recentemente desenvolvemos um software com o objetivo de proporcionar uma visão do fenômeno físico, sem a necessidade de conhecer a equação que descreve o movimento. Desta forma, este simulador visa ilustrar o comportamento das variáveis de interesse, tais como, posição, velocidade, aceleração e energia evoluindo no tempo. Neste artigo, apresentamos soluções analíticas para cada caso de interesse, bem como, soluções numéricas usando o método de diferenças finitas. Um oscilador harmônico representa um sistema em movimento a ser repetido ao longo do tempo, isto é, move-se de uma posição inicial até outra posição, em torno de uma posição de equilíbrio. Desta forma, apresentaremos uma visão geral do problema a ser resolvido e os casos mais simples serão obtidos por simplificações deste problema. Como um dos objetivos deste artigo é incentivar os leitores a utilizarem métodos numéricos de soluções aplicados à física, logo, abordamos de forma bastante simples a solução numérica do oscilador mecânico. Avaliamos também o comportamento da energia e verificamos sob quais condições ela é conservada. Para validar o método numérico implementado neste artigo, comparamos os resultados obtidos pela solução numérica com os resultados obtidos pela solução analítica usada neste artigo.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Oscilador harmônico mecânico; energia mecânica; forças externas; método de diferenças finitas e forças dissipativas
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     We have recently developed a software to simulate a given physical phenomenon, without the need of knowing its corresponding equation of motion. This procedure is actually intended to illustrate the behavior of dynamical variables of interest, such as position, velocity, acceleration and energy. In our work, we present analytical solutions for each case under consideration; numerical solutions carried out by means of the finite difference method are presented as well. The harmonic oscillator is a moving periodical system, with a well-defined equilibrium position. We shall here present an overview of the general problem to be solved and a number of special cases shall be worked out in details. As one of the purposes of this article is to encourage readers to use numerical approaches to inspect physical problems, we shall discuss in a simple and direct way the numerical solutions of a mechanical oscillator. We also contemplate the behavior of the energy function and point out under which particular situations it is conserved. To validate the numerical method implemented in our paper, we compare the analytical solutions we derive with the results obtained by numerical computations.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     mechanical harmonic oscillator; mechanical energy; external forces; finite difference method and dissipative forces
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Um dos principais objetivos da física é buscar modelos que visam descrever diferentes tipos de fenômenos físicos, bem como, experimentos em laboratórios. Com isso, muitos pesquisadores buscam soluções analíticas para descrever esses fenômenos. No entanto, há problemas em aberto que não possuem soluções analíticas. Para contornar isso, muitos pesquisadores desenvolveram algoritmos que buscam resultados numéricos para modelar diferentes tipos de problemas, das mais diferentes áreas do conhecimento. Daí surgem diferentes tipos de métodos numéricos, da qual destacaremos o
+     <i>
+      método de diferenças finitas
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] A.C.M. Alvim, Métodos Numéricos em Engenharia Nuclear (Editora Certa, 2007), 1ª ed.
+       </span>
+      </span>
+     </span>
+     ]. Este método consiste em aproximar a derivada de uma função a partir de dois pontos consecutivos. Logo, quanto menor for o espaçamento entre esses pontos, mais preciso este método se torna, fazendo a solução numérica convergir para a solução analítica. No entanto, isso exige grande esforço computacional. Para ilustrar, considere um intervalo de tempo de Δ
+     <i>
+      t
+     </i>
+     = 10
+     <sup>
+      -3
+     </sup>
+     <i>
+      s
+     </i>
+     . Para determinar a posição de uma partícula no instante de tempo
+     <i>
+      t
+     </i>
+     = 1
+     <i>
+      s
+     </i>
+     , precisaríamos realizar mil cálculos usando este método. Porém, usando uma solução analítica realizaríamos apenas um único cálculo para determinar a posição dessa partícula neste mesmo instante de tempo.
+    </p>
+    <p>
+     O objetivo principal desse artigo é proporcionar aos leitores uma visão do problema físico além de permitir a implementação de métodos numéricos aplicados à física de forma bastante simples. Neste simulador buscamos ilustrar o comportamento das variáveis de interesse, tais como: posição, velocidade, aceleração, energia cinética, energia potencial e energia mecânica ao longo do tempo.
+    </p>
+    <p>
+     Apresentaremos uma visão geral do problema a ser resolvido e as abordagens mais simples serão obtidas por simplificações deste problema. Sendo assim, utilizaremos uma equação que descreva um
+     <i>
+      oscilador harmônico amortecido sob a ação de uma força externa
+     </i>
+     . Uma simplificação deste problema, consiste em assumir que não há forças externas atuando no sistema, logo, recaímos num sistema conhecido como
+     <i>
+      oscilador harmônico amortecido
+     </i>
+     , que pode ser classificado em:
+     <i>
+      superamortecido
+     </i>
+     ,
+     <i>
+      criticamente amortecido
+     </i>
+     e
+     <i>
+      subamortecido
+     </i>
+     sob certas condições. Uma outra simplificação é assumirmos que não há forças dissipativas atuando no sistema, o que resulta em um
+     <i>
+      oscilador harmônico simples
+     </i>
+     , onde a energia do sistema é conservada.
+    </p>
+    <p>
+     Apesar do estudo de oscilações harmônicas serem para fins de resolução de sistemas de física-matemática, suas aplicações se estender a várias áreas do conhecimento, tais como, movimentos que apresentam uma certa periodicidade ao longo do tempo, bem como, o estudo de fenômenos de ressonância em oscilações de pontes, materiais, circuitos elétricos entre outros.
+    </p>
+    <div>
+     Considere um bloco preso a uma mola que seja capaz de executar um movimento harmônico acoplado a uma haste em um meio viscoso, conforme ilustra a
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     . Este sistema, por sua vez, está sob a ação de uma força externa que pode variar em função do tempo. Sendo assim, para determinar os parâmetros que descrevem este movimento, podemos fazer uso da
+     <i>
+      2
+      <sup>
+       a
+      </sup>
+      lei de Newton
+     </i>
+     , tal que,
+     <div class="row formula" id="ee1">
+      <a name="e1">
+      </a>
+      <div class="col-md-12">
+       <div class="formula-container">
+        <span class="label">
+         (1)
+        </span>
+        <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/742fe276ed3ce1e75a1c7f295647097cbb6981f9.jpg" style="max-width:100%"/>
+       </div>
+      </div>
+     </div>
+     onde
+     <b>
+      F
+     </b>
+     representa todas as forças que atuam sobre o sistema e a é aceleração adquirida pelo bloco devido a ação dessas forças. Para simplificar, não usaremos a notação vetorial para força, aceleração, velocidade e posição, uma vez que, o movimento ocorrerá ao longo de uma única direção. Devido o sistema ser constituído por vários tipos de forças, iremos descrever brevemente cada uma delas. Logo, temos:
+     <ol type="1">
+      <li>
+       <p>
+        <i>
+         Força elástica
+        </i>
+        [
+        <i>
+         F
+         <sub>
+          el
+         </sub>
+        </i>
+        (
+        <i>
+         t
+        </i>
+        ) = –
+        <i>
+         kx
+        </i>
+        (
+        <i>
+         t
+        </i>
+        )]: É um tipo de força que surge quando uma mola desloca-se da posição de equilíbrio, onde k é a constante elástica da mola.
+       </p>
+      </li>
+      <li>
+       <p>
+        <i>
+         Força de resistência
+        </i>
+        [
+        <i>
+         F
+         <sub>
+          re
+         </sub>
+        </i>
+        (
+        <i>
+         t
+        </i>
+        ) = –
+        <i>
+         bυ
+        </i>
+        (
+        <i>
+         t
+        </i>
+        )]: É um tipo de força que surge devido a resistência imposta pelo fluido ao movimento do bloco preso a haste, que por sua vez, amortece o sistema e converte a energia perdida pelo amortecimento em calor, onde b é a constante de amortecimento.
+       </p>
+      </li>
+      <li>
+       <p>
+        <i>
+         Força externa
+        </i>
+        [
+        <i>
+         F
+        </i>
+        (
+        <i>
+         t
+        </i>
+        )]: É um tipo de força que atua externo ao sistema, com o objetivo de mudar as características do mesmo. Desta forma, esse tipo de força pode apresentar comportamentos distintos, ou seja, podem atuar de forma constante sobre o sistema ou simplesmente variar ao longo do tempo.
+       </p>
+      </li>
+     </ol>
+    </div>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Oscilador harmônico amortecido forçado.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com isso, usando a
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (1)
+     </a>
+     , podemos obter uma equação que descreve o comportamento desse bloco ao longo do tempo, tal que,
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/6ccd6752b6ef57b1440d1986a20bcdf266d96703.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Usando a notação de derivadas, onde a velocidade
+     <i>
+      υ
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      a
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/83a945b07606d4813b669ea6fcda33d99edca09d.jpg" style="max-width:100%"/>
+     , temos,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/6ec15c00753d924bc1a1f58dd77efbbb8cec6121.jpg" style="max-width:100%"/>
+     e a aceleração seja dada por,
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/f46bee73f2f7601d21a77dbe3968cc3c81d53f05.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (3)
+     </a>
+     representa a formulação mais completa para descrever esse tipo de sistema. Para simplificar a abordagem que será feita, dividiremos este sistema em dois casos, segundo as técnicas utilizadas para resolução de equações diferenciais, qual seja
+    </p>
+    <ol type="i">
+     <li>
+      <p>
+       <i>
+        Oscilador harmônico amortecido
+       </i>
+       : Neste caso, a força externa que atua sobre o sistema é nula. Com isso, temos uma equação homogênea dada por,
+      </p>
+      <div class="row formula" id="ee58">
+       <a name="e58">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/fdcce40a45431c58c13faf06106e957e2f889f44.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+     </li>
+     <li>
+      <p>
+       <i>
+        Oscilador harmônico amortecido forçado
+       </i>
+       : Neste caso, há uma força externa atuando no sistema cuja equação é dada por,
+      </p>
+      <div class="row formula" id="ee59">
+       <a name="e59">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/eced5faddfefd56e111ebf0676251e712ecdb55b.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+     </li>
+    </ol>
+    <p>
+     A solução geral será dada pela combinação da solução homogênea
+     <i>
+      x
+      <sub>
+       h
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) mais a particular
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ), tal que
+    </p>
+    <div class="row formula" id="ee60">
+     <a name="e60">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/c74cbea158ab567725667f9c8034c28ecde1dd3b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     2. Oscilador harmônico amortecido
+    </h1>
+    <p>
+     Apresentaremos a solução para o caso do oscilador harmônico amortecido. Neste caso, não há forças externas atuando sobre o sistema. Com isso, a equação é expressa da seguinte forma,
+    </p>
+    <div class="row formula" id="ee4">
+     <a name="e4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/66196147ac671bef49aeaed2c95e54de6f5788de.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A técnica a ser utilizada para resolver essa equação diferencial, consiste em buscar uma função cuja as derivadas sejam expressas pela própria função, salvo de uma constante. Com isso, podemos descartar funções cujas derivadas alterem a forma ou o grau da função, tais como, funções polinomiais, logarítmica entre outras. No entanto, há funções que satisfazem esse tipo de condição, tais como, funções trigonométricas e exponenciais entre outras. Neste caso, usaremos funções exponenciais, dada por
+    </p>
+    <div class="row formula" id="ee5">
+     <a name="e5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/cfbdbdbd74c2a94972354d3ccb763dd6bcb30a58.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     A
+    </i>
+    é o coeficiente da solução que é obtido em função da condição inicial do sistema,
+    <i>
+     i
+    </i>
+    a notação complexa associada a
+    <i>
+     Equação de Euler
+    </i>
+    <span class="ref footnote">
+     <sup class="xref">
+      1
+     </sup>
+     <span class="refCtt closed">
+      <span class="refCttPadding">
+       <strong class="fn-title">
+        1
+       </strong>
+       Onde eiθ = cos θ + i sin θ, onde i2 = −1.
+      </span>
+     </span>
+    </span>
+    ,
+    <i>
+     w
+    </i>
+    é o argumento da função exponencial e
+    <i>
+     t
+    </i>
+    é o instante de tempo. Substituindo esta equação na
+    <a class="open-asset-modal" data-target="#ModalSchemee4" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (4)
+    </a>
+    , vem
+    <div class="row formula" id="ee61">
+     <a name="e61">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/c80cf6d6e5acea4c3b61fafa4087be9f71950828.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    como
+    <i>
+     x
+     <sub>
+      h
+     </sub>
+    </i>
+    (
+    <i>
+     t
+    </i>
+    ) é a solução do sistema, logo, não pode ser nula, pois recairíamos na solução trivial. Desta forma, o termo em parênteses tem que ser nulo, ou seja,
+    <div class="row formula" id="ee6">
+     <a name="e6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/9c609709eea7aab87b8b16c5bcdac69e554a14ab.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    logo, temos uma equação do 2° grau para
+    <i>
+     w
+    </i>
+    , cuja solução é dada por
+    <div class="row formula" id="ee7">
+     <a name="e7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/797829ba0fcf75ed1c553250d639399b5663dd52.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalSchemee7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (7)
+     </a>
+     , podemos simplificar o termo dentro da raiz, de tal forma que, ao extrair a constante
+     <i>
+      b
+     </i>
+     , devido ao sinal menos, ela vem na forma de notação complexa, ou seja,
+    </p>
+    <div class="row formula" id="ee8">
+     <a name="e8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/3ea6dc3d96a53ed5e9453e26acbafb1a51cc69b5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    logo, temos dois valores de
+    <i>
+     w
+    </i>
+    distintos. Substituindo esse resultado na
+    <a class="open-asset-modal" data-target="#ModalSchemee5" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (5)
+    </a>
+    , vem
+    <div class="row formula" id="ee9">
+     <a name="e9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/e97b19e459a765a9434091c1104bffb709e49ca3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Note que a notação complexa desaparece pelo fato de
+     <i>
+      i
+     </i>
+     <sup>
+      2
+     </sup>
+     = −1. A
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     possui dois coeficientes a serem determinados, logo, precisa de duas condições a serem impostas ao problema. Como o sistema evolui no tempo, podemos utilizar
+     <i>
+      condições iniciais
+     </i>
+     , tal que
+    </p>
+    <div class="row formula" id="ee10">
+     <a name="e10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/57c43f817dad43674bcf0c982b8227a36f1afc30.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Agora faremos uma abordagem para verificar sob quais condições a solução dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     se comporta em função dos parâmetros do problema, ou seja, em função de
+     <i>
+      b
+     </i>
+     ,
+     <i>
+      m
+     </i>
+     e
+     <i>
+      k
+     </i>
+     .
+    </p>
+    <h2>
+     2.1. Oscilador harmônico superamortecido
+    </h2>
+    <p>
+     Para este caso, como
+     <i>
+      b
+     </i>
+     <sup>
+      2
+     </sup>
+     &gt; 4
+     <i>
+      mk
+     </i>
+     , logo, a expressão dentro da raiz da
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     é positiva. Desta forma, a solução não muda, o que implica que
+    </p>
+    <div class="row formula" id="ee11">
+     <a name="e11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/81b074c41ccfde152ad66cf2e276e5d360a6fe72.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os coeficientes
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     , podem ser determinados impondo as condições iniciais, dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     . Para simplificar a notação, definiremos
+    </p>
+    <div class="row formula" id="ee62">
+     <a name="e62">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/1f202dca256fc364ce069efd40d272d0b862d72d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, a
+    <a class="open-asset-modal" data-target="#ModalSchemee11" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (11)
+    </a>
+    fica
+    <div class="row formula" id="ee12">
+     <a name="e12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/b84d72cc48b3a27e209586f89927679037432006.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A velocidade e aceleração do bloco poderão ser obtidas a partir da derivada da
+     <a class="open-asset-modal" data-target="#ModalSchemee12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (12)
+     </a>
+     .
+    </p>
+    <h2>
+     2.2. Oscilador harmônico criticamente amortecido
+    </h2>
+    <p>
+     Para este caso, como
+     <i>
+      b
+     </i>
+     <sup>
+      2
+     </sup>
+     = 4
+     <i>
+      mk
+     </i>
+     , logo, temos duas raízes reais e iguais. Neste caso, a
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     torna-se,
+    </p>
+    <div class="row formula" id="ee63">
+     <a name="e63">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/3f401b3c64c5b1192ab33269bfe59931ac241507.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Sabemos que há diferentes funções que podem ser soluções de uma equação diferencial. Desta forma, uma combinação linear dessas funções também será solução. Devido a equação do oscilador harmônico amortecido ser expresso por uma derivada de segunda ordem, logo, possui duas condições iniciais, conforme mostra a
+     <a class="open-asset-modal" data-target="#ModalSchemee10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     . Se olharmos a equação acima, verificaremos que ela só satisfaz uma dessas condições. Então, podemos buscar uma nova função que também seja solução da
+     <a class="open-asset-modal" data-target="#ModalSchemee4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (4)
+     </a>
+     , ou seja,
+    </p>
+    <div class="row formula" id="ee64">
+     <a name="e64">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/7632ec97757b8cc37ce195a1153aee7b3cca4313.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde uma combinação linear dessas soluções também será solução,
+    <div class="row formula" id="ee13">
+     <a name="e13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/6087981071ad3fb81d20f59578b9407b048d895d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Semelhante ao que foi feito anteriormente, os coeficientes
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     podem ser determinados impondo as condições iniciais, dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     . Para simplificar a notação, definiremos o parâmetro que indica a frequência de amortecimento do movimento da seguinte forma,
+    </p>
+    <div class="row formula" id="ee65">
+     <a name="e65">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/2fd1ba3e03f51cb441ee89aa00c8a2f1d83c2a3a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, a
+    <a class="open-asset-modal" data-target="#ModalSchemee13" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (13)
+    </a>
+    fica
+    <div class="row formula" id="ee14">
+     <a name="e14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/96158015874989f6ca6aed7bd7090f7ac3b9856e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <h2>
+     2.3. Oscilador harmônico subamortecido
+    </h2>
+    <p>
+     Neste caso, como
+     <i>
+      b
+     </i>
+     <sup>
+      2
+     </sup>
+     &lt; 4mk torna-se necessário fazer algumas manipulações algébricas devido o termo da raiz da
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     assumir valores negativos. Para contorna este problema, podemos fazer uso da notação complexa
+     <i>
+      i
+     </i>
+     . Para simplificar a notação, usaremos a definição da frequência de amortecimento γ e definiremos a frequência angular
+     <i>
+      w
+     </i>
+     <sub>
+      o
+     </sub>
+     <sup>
+      2
+     </sup>
+     ≡
+     <i>
+      k∕m
+     </i>
+     , da qual resulta
+    </p>
+    <div class="row formula" id="ee66">
+     <a name="e66">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/ea09380818ff7aebe61427703890c9ed0e7f1b6d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo este resultado na
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     e fazendo algumas simplificações usando a
+     <i>
+      equação de Euler
+     </i>
+     , temos
+    </p>
+    <div class="row formula" id="ee15">
+     <a name="e15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/58c08eccd44b0b9f4e3e43301648c7c9bfa34c6f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os coeficientes
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     , podem ser determinados impondo as condições iniciais no problema. Para simplificar a notação, definiremos
+    </p>
+    <div class="row formula" id="ee67">
+     <a name="e67">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/1e24e996f3f9ec988bee01918f371f5d66d1ac0f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, a
+    <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (15)
+    </a>
+    fica
+    <div class="row formula" id="ee16">
+     <a name="e16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/35b2f43fcae7a2d7cc5f02125d670fd32b6dfb67.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Conforme mencionado anteriormente, a velocidade e aceleração serão obtidas a partir da derivada da
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (16)
+     </a>
+     .
+    </p>
+    <h2>
+     2.4. Oscilador Harmônico Simples
+    </h2>
+    <p>
+     Neste caso, não há amortecimento e a energia do sistema é conservada. Como essa condição é uma simplificação do caso com amortecimento, então, podemos obter os resultados a partir dos casos citados anteriormente. Primeiramente, avaliaremos como a
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     se comporta para este caso. É fácil verificar que teremos divisão por zero no termo dentro da raiz, pois, neste caso
+     <i>
+      b
+     </i>
+     = 0. Logo, esta equação, na forma como está escrita não permite obter uma expressão simplificada para o nosso caso.
+    </p>
+    <p>
+     Para o caso
+     <i>
+      superamortecido
+     </i>
+     , dado pela
+     <a class="open-asset-modal" data-target="#ModalSchemee11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (11)
+     </a>
+     , podemos notar que não há nenhuma diferença em relação a
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     . Logo, devemos descartar esta condição também. Para o caso
+     <i>
+      criticamente amortecido
+     </i>
+     , a solução dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (13)
+     </a>
+     representa uma simplificação para resolução de equações diferenciais com raízes iguais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] K.D. Machado, Equações Diferenciais Aplicadas - Volume 1 (Editora Toda Palavra, 2012), 1ª ed.
+       </span>
+      </span>
+     </span>
+     ], que não é o nosso caso. Para o caso
+     <i>
+      subamortecido
+     </i>
+     , a única consideração feita na
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     é que o termo dentro da raiz é negativo. A solução para este caso é dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (15)
+     </a>
+     . Para este caso, onde não há amortecimento, temos que γ = 0. Desta forma, a
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (15)
+     </a>
+     fica,
+    </p>
+    <div class="row formula" id="ee17">
+     <a name="e17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/1bd37fd196105aae6fac61f73da379c80844029d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Podemos verificar se a energia do sistema é conservada. Para isso, precisamos calcular a taxa de variação da
+     <i>
+      energia mecânica
+     </i>
+     E(t) no tempo. Usando a definição de
+     <i>
+      energia cinética
+     </i>
+     E
+     <sub>
+      c
+     </sub>
+     (t) e
+     <i>
+      energia potencial E
+      <sub>
+       p
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ), vem
+    </p>
+    <div class="row formula" id="ee18">
+     <a name="e18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/b681a665faa47434f00f3df787d7374f2136cca8.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee19">
+     <a name="e19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/d67bfb5c95a4a54a9389d62259cc83a6ed521814.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee20">
+     <a name="e20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/d334b8899c56bf90747396f760220af6c2dbc767.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Derivando a energia total do sistema em relação ao tempo, temos
+    </p>
+    <div class="row formula" id="ee21">
+     <a name="e21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/6123421240586ed9c2f54326978eaa8a81696343.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    usando a
+    <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (2)
+    </a>
+    , sem o termo de força externa, vem
+    <div class="row formula" id="ee68">
+     <a name="e68">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/5f69a33aa1e3c3bcf02797fa257f43194ff6c541.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    integrando esta equação, temos que
+    <div class="row formula" id="ee22">
+     <a name="e22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/211f571dbd5d5e93b98606827c2710250132653f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde a integral quadrática da velocidade, representa a taxa de dissipação da energia em função da velocidade do bloco no tempo. Devido o termo quadrático da velocidade, a integral será sempre positiva, independente do valor da velocidade. Desta forma, a
+    <i>
+     energia mecânica
+    </i>
+    E(t) sempre irá decrescer ao longo do tempo. Como assumimos que não há amortecimento, ou seja, b = 0. Logo, a energia em qualquer instante de tempo será igual a energia inicial do sistema, tal que,
+    <i>
+     E
+    </i>
+    (
+    <i>
+     t
+    </i>
+    ) =
+    <i>
+     E
+    </i>
+    <sub>
+     o
+    </sub>
+    .
+    <h1 class="articleSectionTitle">
+     3. Oscilador harmônico amortecido forçado
+    </h1>
+    <p>
+     Conforme foi mencionado anteriormente, este é o caso mais geral para oscilações mecânicas, pois leva em conta a ação de forças dissipativas, bem como, forças externas atuando no sistema, que é representado pela
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (3)
+     </a>
+     . Devido as soluções para o caso homogêneo terem sido obtidas previamente, focaremos nossa atenção na obtenção da solução particular, cuja solução geral é dada pela combinação das duas soluções.
+    </p>
+    <p>
+     Definiremos a força externa F(t) de modo a contemplar os seguintes casos:
+    </p>
+    <div class="row formula" id="ee69">
+     <a name="e69">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/cbbbd0468e97705c2c03ae1f2ded3750efad84ca.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Assim, podemos assumir que a solução para o caso particular seja
+    </p>
+    <div class="row formula" id="ee23">
+     <a name="e23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/843c1830ac89314a736a8c8ac419201e518d618b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde temos,
+    <div class="row formula" id="ee70">
+     <a name="e70">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/3c00b4a6acfef842968e6367af92c012ecf5a144.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    e
+    <div class="row formula" id="ee71">
+     <a name="e71">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/2c0edc8bf44432f18bcb7c88f03cdd5c7cd9aea4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo a solução para o caso particular e suas derivadas na
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (3)
+     </a>
+     , resulta
+    </p>
+    <div class="row formula" id="ee72">
+     <a name="e72">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/7e07d862b6b9d22a1610d514b605850eb1e89855.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Usando as definições de
+     <i>
+      w
+      <sub>
+       o
+      </sub>
+     </i>
+     <sup>
+      2
+     </sup>
+     e γ e comparando os termos para cos w′t e sin w′t, respectivamente, vem
+    </p>
+    <div class="row formula" id="ee24">
+     <a name="e24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/3a7bdbfae1c0a989c8ae2d2dfdf73541d7d31707.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    e
+    <div class="row formula" id="ee25">
+     <a name="e25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (25)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/f5d0387891a3ad9a68c3a94999970c0fcbe82375.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Resolvendo esse sistema, temos
+    </p>
+    <div class="row formula" id="ee26">
+     <a name="e26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (26)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/5a00361ddbd0f16f6163aa26bdfb4beda11c9733.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    e
+    <div class="row formula" id="ee27">
+     <a name="e27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (27)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/936518f205afb69c2f020f5f3846121104cf5420.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, temos os coeficientes da solução particular, dada pela
+    <a class="open-asset-modal" data-target="#ModalSchemee23" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (23)
+    </a>
+    . Agora, podemos combinar a solução da equação homogênea com a solução da equação particular e obter assim a solução geral do oscilador mecânico.
+    <h2>
+     3.1. Oscilador harmônico superamortecido forçado
+    </h2>
+    <p>
+     Para este caso, temos que
+     <i>
+      b
+     </i>
+     <sup>
+      2
+     </sup>
+     &gt; 4
+     <i>
+      mk
+     </i>
+     e
+     <i>
+      F
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) ≠ 0. Combinando a solução da homogênea mais a particular, temos
+    </p>
+    <div class="row formula" id="ee28">
+     <a name="e28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (28)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/12587f6acdb80953c1aa8dafd80a6261fbcdc14b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os coeficientes
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     serão obtidos impondo as condições iniciais do problema, dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     . Note que estamos mantendo a mesma notação feita anteriormente e os coeficientes
+    </p>
+    <div class="row formula" id="ee73">
+     <a name="e73">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/8371bbec30ff5070074e13553169a2a72356b43f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/102284597077d322087e1e02a5d74fb887edf5eb.jpg" style="max-width:100%"/>
+    e
+    <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/d0fae4d647f01f4af53e3552ea7288f97053b0a8.jpg" style="max-width:100%"/>
+    já foram obtidos na solução do caso particular. Impondo as condições iniciais, temos
+    <p>
+     Resolvendo este sistema e substituindo na equação acima, temos
+    </p>
+    <div class="row formula" id="ee29">
+     <a name="e29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (29)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/a6e024a0d56d7b8251297f07b6e890f278cf78c1.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde esta equação descreve o deslocamento do bloco em função da força de resistência do fluido e da força externa em função do tempo. Analogamente, podemos obter a velocidade
+    <i>
+     v(t)
+    </i>
+    , derivando a
+    <a class="open-asset-modal" data-target="#ModalSchemee29" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (29)
+    </a>
+    , da qual resulta,
+    <div class="row formula" id="ee30">
+     <a name="e30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (30)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/5521aad47007d6078c5203a9af36c57b0621b19a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, temos uma expressa para a velocidade do bloco no sistema. Desta forma, a aceleração pela qual esse sistema está sujeito é dado por,
+    <div class="row formula" id="ee31">
+     <a name="e31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (31)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/b396b733be09dd99cf9828020d1a231f0c24ac4f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     As energias do sistema, tal como, a
+     <i>
+      energia potencial
+     </i>
+     E
+     <sub>
+      p
+     </sub>
+     (t) e
+     <i>
+      cinética
+     </i>
+     E
+     <sub>
+      c
+     </sub>
+     (t) podem ser obtidas em função das
+     <a class="open-asset-modal" data-target="#ModalSchemee29" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (29)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee30" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (30)
+     </a>
+     , respectivamente. Combinando ambas, temos a energia total do sistema. O sistema retornaria para o estado de equilíbrio sem oscilar caso não houvesse forças externas atuando no sistema. Logo, a ação dessa força irá mudar o movimento do bloco.
+    </p>
+    <h2>
+     3.2. Oscilador harmônico criticamente amortecido forçado
+    </h2>
+    <p>
+     Neste caso, temos que
+     <i>
+      b
+     </i>
+     <sup>
+      2
+     </sup>
+     = 4
+     <i>
+      mk
+     </i>
+     e
+     <i>
+      F(t)
+     </i>
+     ≠ 0. A solução geral para este caso é
+    </p>
+    <div class="row formula" id="ee32">
+     <a name="e32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (32)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/74cf42b8f4a00c83fba004f497fe3245a0bdf437.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Impondo as condições iniciais, temos
+    </p>
+    <div class="row formula" id="ee74">
+     <a name="e74">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/62ef0abc053b7651033aa8989689148959e908fa.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Resolvendo este sistema e substituindo na
+     <a class="open-asset-modal" data-target="#ModalSchemee32" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (32)
+     </a>
+     , temos
+    </p>
+    <div class="row formula" id="ee33">
+     <a name="e33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (33)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/ce36f5860a61905c889ca0735c5b46ddcd31f11a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A velocidade
+     <i>
+      v(t)
+     </i>
+     do bloco é dada por,
+    </p>
+    <div class="row formula" id="ee34">
+     <a name="e34">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (34)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/fd43e93b71b38a18f6feb67b571f88cbc017a0b3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, temos uma expressa para a velocidade do bloco em função do tempo. Derivando a
+    <a class="open-asset-modal" data-target="#ModalSchemee34" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (34)
+    </a>
+    , temos que a aceleração é dada por,
+    <div class="row formula" id="ee35">
+     <a name="e35">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (35)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/c983bcfcce8d22f864fc1b99ee1945ca41eb947e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Vale ressaltar que apesar de simplificarmos o sistema pelo fato de
+     <i>
+      b
+     </i>
+     <sup>
+      2
+     </sup>
+     = 4
+     <i>
+      mk
+     </i>
+     , isso não que dizer que o sistema não esteja sujeito a ação de forças dissipativas, pelo contrário, esta condição faz com que o sistema retorne mais rapidamente a condição de equilíbrio estável. É possível observar esse tipo de sistema em portas de escritórios de empresas que utilizam sistema de fechamento automático.
+    </p>
+    <h2>
+     3.3. Oscilador harmônico subamortecido forçado
+    </h2>
+    <p>
+     A solução geral para
+     <i>
+      b
+     </i>
+     <sup>
+      2
+     </sup>
+     &lt; 4
+     <i>
+      mk
+     </i>
+     e
+     <i>
+      F
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )≠0 é dada pela soma da solução homogênea e particular, qual seja,
+    </p>
+    <div class="row formula" id="ee36">
+     <a name="e36">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (36)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/2c56d46890a4b9e2c999c20bd081eb18f0cba5d0.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde as notações e definições são as mesmas feitas anteriormente. Sendo assim, impondo as condições iniciais, temos
+    <div class="row formula" id="ee75">
+     <a name="e75">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/7f14bddbe5a056608271fd22af8fb1a0d766ffe2.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Resolvendo este sistema, e substituindo na equação acima, temos
+    </p>
+    <div class="row formula" id="ee37">
+     <a name="e37">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (37)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/4a91416d564a72cea4dd3f8da93e78c1ae84f1ab.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde esta equação descreve o deslocamento do bloco que será amortecido de forma mais lenta. Dependendo da intensidade da força externa, este sistema pode ter amortecimento desprezado devido a ação dessa força. A velocidade
+    <i>
+     v(t)
+    </i>
+    pode ser obtida derivando a
+    <a class="open-asset-modal" data-target="#ModalSchemee37" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (37)
+    </a>
+    , ou seja,
+    <div class="row formula" id="ee38">
+     <a name="e38">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (38)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/708f509fc058f13a7e186c9f9d61d7cd7294c42e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, é possível expressar a velocidade do bloco em função do tempo. Sendo assim, a aceleração
+    <i>
+     a(t)
+    </i>
+    é dada por,
+    <div class="row formula" id="ee39">
+     <a name="e39">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (39)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/166e36e60d099b2c32761333475f5547ba0764f3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Apesar do sistema ser fracamente amortecido, ele oscilará com frequência menor que o caso sem amortecimento
+     <i>
+      w
+     </i>
+     &lt;
+     <i>
+      w
+     </i>
+     <sub>
+      o
+     </sub>
+     e sua amplitude decresce exponencialmente no tempo, devido a frequência de amortecimento γ. O movimento desse bloco será influenciada pela ação da força externa atuando no sistema.
+    </p>
+    <h2>
+     3.4. Oscilador Harmônico Simples Forçado
+    </h2>
+    <p>
+     Neste caso, temos que
+     <i>
+      b
+     </i>
+     = 0 e
+     <i>
+      F
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) ≠ 0. Espera-se que por não haver forças de amortecimento, a energia do sistema se conserve. A posição do bloco é dada pela combinação da solução homogênea e particular, qual seja,
+    </p>
+    <div class="row formula" id="ee40">
+     <a name="e40">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (40)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/2207f2210bc098da3ee23e90f3c6a58ce790c4f4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os coeficientes
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     , podem ser determinados impondo as condições iniciais no problema, tal que
+    </p>
+    <div class="row formula" id="ee76">
+     <a name="e76">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/200870f2d246edc2c2151341e7cc47b9812be2a9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Resolvendo e substituindo na equação acima, temos
+    </p>
+    <div class="row formula" id="ee41">
+     <a name="e41">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (41)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/064aaf4815140932cbd9566ef42133ccc1b14839.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde esta equação descreve o deslocamento do bloco para o caso sem amortecimento. Devido a ação da força externa, a amplitude do sistema pode ser alterada em função da intensidade dessa força. Como feito anteriormente, a velocidade
+    <i>
+     v(t)
+    </i>
+    pode ser obtida derivando a equação acima, da qual resulta,
+    <div class="row formula" id="ee42">
+     <a name="e42">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (42)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/f36b4c995e2471590901e25179a480aa954e5ff4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, é possível expressar a velocidade do bloco em função do tempo. Logo, a aceleração
+    <i>
+     a(t)
+    </i>
+    é dada por,
+    <div class="row formula" id="ee43">
+     <a name="e43">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (43)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/2c75d01d55f59a893ab200f29829b86f4f2953e7.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os estudos sobre oscilações forçadas ganharam grande interesse devido aos fenômenos de ressonância, dos quais as amplitudes assumem valores significativos resultando na destruição de prédios e pontes após entrarem em ressonância devido a ação de forças externas, tais como, ventos ou terremotos. Esses fenômenos são provenientes dos denominadores das
+     <a class="open-asset-modal" data-target="#ModalSchemee26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (26)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (27)
+     </a>
+     quando a frequência imposta pela força externa se aproxima consideravelmente da frequência natural
+     <i>
+      w
+     </i>
+     ′ ≃
+     <i>
+      w
+     </i>
+     <sub>
+      o
+     </sub>
+     . Se analisarmos essas equações, podemos notar que devido aos termos quadráticos do denominador, mesmo para valores de
+     <i>
+      w
+     </i>
+     ′ &gt;
+     <i>
+      w
+     </i>
+     <sub>
+      o
+     </sub>
+     e γ
+     <sup>
+      2
+     </sup>
+     &gt; 0, não teremos divisão por zero. No entanto, é possível encontrar valores de
+     <i>
+      w
+     </i>
+     ′ =
+     <i>
+      w
+     </i>
+     <sub>
+      o
+     </sub>
+     ±
+     <i>
+      f
+     </i>
+     (γ,w
+     <sub>
+      o
+     </sub>
+     ), que façam com que esses denominadores assumam valores próximos de zero. Para isso, temos que
+    </p>
+    <div class="row formula" id="ee77">
+     <a name="e77">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/7ea5db15c67b52edc8a66fa860b1ceed424c44e0.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    com isso, encontramos os valores de w′ para os quais, as amplitudes do sistema sejam máximas resultando em fenômenos de ressonância.
+    <p>
+     Agora, verificaremos se a energia é conservada para o caso de forças externas atuando no sistema. Combinando as
+     <a class="open-asset-modal" data-target="#ModalSchemee21" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (21)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (2)
+     </a>
+     , temos que a taxa de variação da energia total do sistema é,
+    </p>
+    <div class="row formula" id="ee44">
+     <a name="e44">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (44)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/698003b44408326932b2a7f6638d7e39bd1a2383.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    integrando esta equação, vem
+    <div class="row formula" id="ee45">
+     <a name="e45">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (45)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/2900d56767207d9d65f8268a862f3511faad78dd.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde temos o termo que representa a taxa de dissipação da energia em função da velocidade quadrática do bloco e o termo de fonte externa que contribui para o aumento da energia no sistema. Se assumirmos que não há forças dissipativas no sistema, podemos observar que a energia não é conservada devido a força externa. Com isso,
+    <i>
+     energia mecânica
+    </i>
+    <i>
+     E(t)
+    </i>
+    mudará ao longo do tempo. Logo, mesmo que não haja nenhuma força dissipativa atuando no sistema, isso não quer dizer que a energia do sistema se conserve. No entanto, pela
+    <a class="open-asset-modal" data-target="#ModalSchemee44" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (44)
+    </a>
+    podemos obter uma relação que permita que a energia se conserve mesmo sob a ação de forças externas e dissipativas, tal que,
+    <div class="row formula" id="ee46">
+     <a name="e46">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (46)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/5d8c153ef53cf99de30c602248d07b3c824c3739.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Solução numérica do oscilador harmônico amortecido forçado
+    </h1>
+    <p>
+     O método proposto para discretizar essa equação é conhecido como
+     <i>
+      método de diferenças finitas
+     </i>
+     , no qual o intervalo de tempo proposto para a solução numérica implica em um
+     <i>
+      Δt
+     </i>
+     na ordem (10
+     <sup>
+      -4
+     </sup>
+     à 10
+     <sup>
+      -1
+     </sup>
+     s). A precisão do método está diretamente relacionado com o intervalo de tempo.
+    </p>
+    <p>
+     Para isso, usaremos o operador de diferenças avançadas de primeira ordem, que visa aproximar a derivada da velocidade em função do tempo, a partir de dois pontos consecutivos. Sendo assim, podemos reduzir a ordem da derivada da
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (3)
+     </a>
+     , de 2
+     <sup>
+      a
+     </sup>
+     ordem da posição no tempo, para uma equação de 1
+     <sup>
+      a
+     </sup>
+     ordem para velocidade. Usando a definição dos parâmetros
+     <i>
+      w
+     </i>
+     <sub>
+      o
+     </sub>
+     e
+     <i>
+      γ
+     </i>
+     , temos
+    </p>
+    <div class="row formula" id="ee47">
+     <a name="e47">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (47)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/189f63e6fdeb28b5f2a4e44575ef295670a6b57a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como podemos notar, a derivada da velocidade pode ser representado por uma função que depende da posição, velocidade, força e do tempo, isto é,
+    </p>
+    <div class="row formula" id="ee48">
+     <a name="e48">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (48)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/4f9cb9219108e0a533af55f3590937968a90e530.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Através do
+     <i>
+      método de diferenças finitas
+     </i>
+     , podemos calcular aproximadamente a derivada da velocidade
+     <i>
+      v(t)
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] C. Scherer, Métodos Computacionais da Física (Editora Livraria da Física, 2010), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ] no intervalo [
+     <i>
+      t, t + Δt
+     </i>
+     ] da seguinte maneira,
+    </p>
+    <div class="row formula" id="ee49">
+     <a name="e49">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (49)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/1ebf86cbe319c29cc69cfaaa8ffc186694591909.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde aproxima a função
+    <i>
+     v(t)
+    </i>
+    que passa pelos instantes
+    <i>
+     t
+    </i>
+    e
+    <i>
+     t
+    </i>
+    + Δ
+    <i>
+     t
+    </i>
+    , com um erro de truncamento na ordem do intervalo de tempo, isto é,
+    <i>
+     O(Δt)
+    </i>
+    . Por isso, quando menor for o intervalo de tempo, consequentemente, o erro será menor possível, fazendo com que a solução numérica tenda a se aproximar consideravelmente da solução analítica. Porém, isso requer um esforço computacional bastante significativo, dependendo da precisão desejada.
+    <p>
+     Simplificando a notação, podemos definir
+     <i>
+      v
+      <sub>
+       t
+      </sub>
+     </i>
+     ≡
+     <i>
+      v
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <i>
+      v
+     </i>
+     <sub>
+      <i>
+       t
+      </i>
+      +1
+     </sub>
+     ≡
+     <i>
+      v
+     </i>
+     (
+     <i>
+      t
+     </i>
+     + Δ
+     <i>
+      t
+     </i>
+     ). Semelhantemente, temos
+     <i>
+      x
+      <sub>
+       t
+      </sub>
+     </i>
+     ≡
+     <i>
+      x
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <i>
+      F
+      <sub>
+       t
+      </sub>
+     </i>
+     ≡
+     <i>
+      F
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ). Usando essas definições e substituindo na
+     <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (47)
+     </a>
+     , temos
+    </p>
+    <div class="row formula" id="ee78">
+     <a name="e78">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/31c0d7ec43ef5ad2a2f4ca958a3f35482017fe40.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    resultando em
+    <div class="row formula" id="ee50">
+     <a name="e50">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (50)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/f8a5826acba3c40dbcee7eb33b75613a59bbf101.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde esta equação permite calcular a velocidade a cada intervalo de tempo em função dos parâmetros do problema no instante anterior. Analogamente, podemos determinar a posição do bloco em função da velocidade, tal que,
+    <div class="row formula" id="ee79">
+     <a name="e79">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/daa600bab6b2bcac8e4274daf538028a1ef6986c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    logo, fazendo uso das notações definidas anteriormente, vem
+    <div class="row formula" id="ee51">
+     <a name="e51">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (51)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/06f546a6c6f55f9d1a1dc0d8948d3912e6683fcb.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde a posição do bloco será calculada em função de sua velocidade, dada pela
+    <a class="open-asset-modal" data-target="#ModalSchemee50" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (50)
+    </a>
+    . Da mesma forma, temos que a aceleração é dada por
+    <div class="row formula" id="ee80">
+     <a name="e80">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/73701315e18c9f8f70956209695c32caa85f0e76.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    resultando em,
+    <div class="row formula" id="ee52">
+     <a name="e52">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (52)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/971c28355658376c6d633f800c36ee442921f0b0.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     É fácil notar que a
+     <a class="open-asset-modal" data-target="#ModalSchemee50" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (50)
+     </a>
+     representa a solução do oscilador harmônico amortecido forçado para a velocidade do bloco em função do tempo. Através da velocidade, podemos determinar a posição usando a
+     <a class="open-asset-modal" data-target="#ModalSchemee51" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (51)
+     </a>
+     e determinar a aceleração em função da derivada da velocidade usando apenas a aproximação por diferenças. Com isso, podemos determinar a posição, velocidade, aceleração e energia usando o método numérico de diferenças finitas. Conforme definido anteriormente, as energias do sistema serão obtidas pelas
+     <a class="open-asset-modal" data-target="#ModalSchemee18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (18)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemee19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (19)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee20" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (20)
+     </a>
+     . As simplificações na solução numérica serão expressas em função dos dados do problema. Para ilustrar, para o caso em que não há forças dissipativas atuando no sistema, temos que
+     <i>
+      γ = 0
+     </i>
+     na
+     <a class="open-asset-modal" data-target="#ModalSchemee50" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (50)
+     </a>
+     . Semelhantemente, para o caso de não haver forças externas atuando no sistema, implica que
+     <i>
+      F
+      <sub>
+       t
+      </sub>
+     </i>
+     = 0. Como a posição e aceleração são obtidas a partir da
+     <a class="open-asset-modal" data-target="#ModalSchemee50" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (50)
+     </a>
+     , logo, serão influenciados por essas simplificações.
+    </p>
+    <p>
+     Para ilustrar, no instante
+     <i>
+      t
+      <sub>
+       o
+      </sub>
+     </i>
+     , o bloco não se deslocou e está localizada na posição inicial
+     <i>
+      x
+      <sub>
+       o
+      </sub>
+     </i>
+     . Como o intervalo de tempo é nulo, logo, a velocidade tem que ser a velocidade inicial
+     <i>
+      v
+      <sub>
+       o
+      </sub>
+     </i>
+     do sistema. Visto isso, cabe a pergunta: Qual é a aceleração do sistema? Segundo as soluções analíticas para os diferentes casos, assumindo que
+     <i>
+      t
+      <sub>
+       o
+      </sub>
+     </i>
+     = 0, a aceleração não é nula. Isso pode ser observado pelas
+     <a class="open-asset-modal" data-target="#ModalSchemee31" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (31)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemee35" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (35)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemee39" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (39)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee43" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (43)
+     </a>
+     . Este é o ponto em que a interpretação da solução analítica difere da solução numérica. Pela
+     <a class="open-asset-modal" data-target="#ModalSchemee52" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (52)
+     </a>
+     , a aceleração é obtida pela taxa de variação da velocidade no tempo. Em
+     <i>
+      t
+      <sub>
+       o
+      </sub>
+     </i>
+     essa variação é nula, logo, resultando numa aceleração nula. Com isso, podemos observar que a condição inicial para aceleração do caso analítico difere do caso numérico. No entanto, as energias do sistema por não dependerem da aceleração permanecem iguais. Para
+     <i>
+      t
+     </i>
+     <sub>
+      1
+     </sub>
+     , a partícula evoluiu no tempo em um intervalo Δt, tal que,
+     <i>
+      t
+     </i>
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      t
+      <sub>
+       o
+      </sub>
+     </i>
+     + Δ
+     <i>
+      t
+     </i>
+     . Desta forma, sua velocidade v
+     <sub>
+      1
+     </sub>
+     é obtido pela
+     <a class="open-asset-modal" data-target="#ModalSchemee50" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (50)
+     </a>
+     , a posição
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     é calculada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee51" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (51)
+     </a>
+     e a aceleração
+     <i>
+      a
+     </i>
+     <sub>
+      0
+     </sub>
+     pela diferença da velocidade, dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee52" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (52)
+     </a>
+     . As energias do sistema serão calculadas em função da posição e velocidade do bloco. O intervalo de tempo pode ser computado como
+     <i>
+      t
+      <sub>
+       i
+      </sub>
+     </i>
+     =
+     <i>
+      t
+      <sub>
+       o
+      </sub>
+     </i>
+     +
+     <i>
+      i
+     </i>
+     Δ
+     <i>
+      t
+     </i>
+     , com
+     <i>
+      i=0,…, n
+     </i>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Resultados
+    </h1>
+    <p>
+     Apresentaremos os resultados obtidos pela solução analítica e compararemos com os resultados obtidos pelo método numérico para validar a metodologia implementada neste artigo.
+    </p>
+    <p>
+     O
+     <i>
+      simulador de oscilações mecânicas
+     </i>
+     foi desenvolvido usando a plataforma
+     <i>
+      microsoft visual studio ultimate 2012
+     </i>
+     através da linguagem de programação
+     <i>
+      visual basic.net
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] M. Halvorson, Microsoft Visual Basic 2013 - Passo a Passo (Editora Bookman, 2015), 1ª ed.
+       </span>
+      </span>
+     </span>
+     ]. O grande diferencial deste simulador é que ele permite acompanhar as mudanças nas variáveis de interesse ao longo do tempo através da exibição de dados na tela, bem como, através da visualização gráfica. A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     mostra a tela do simulador.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Simulador de oscilações mecânicas.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como podemos observar, há duas opções de cálculo usando soluções analíticas e numéricas e os dados do problema são tais que,
+     <i>
+      m
+     </i>
+     (kg) é a massa do bloco,
+     <i>
+      k
+     </i>
+     (N/m) é a constante elástica da mola,
+     <i>
+      b
+     </i>
+     (kg/s) é a constante de amortecimento devido a força de resistência do fluido,
+     <i>
+      t
+     </i>
+     (s) é o tempo de simulação, Δt (s) o intervalo de tempo aplicado à solução numérica
+     <sup>
+      2
+     </sup>
+     ,
+     <i>
+      x
+      <sub>
+       0
+      </sub>
+     </i>
+     (m) é a posição inicial do bloco,
+     <i>
+      v
+      <sub>
+       0
+      </sub>
+     </i>
+     (m/s) é a velocidade inicial do bloco,
+     <i>
+      F
+      <sub>
+       0
+      </sub>
+     </i>
+     (N) é a força externa inicial que atua no sistema,
+     <i>
+      w
+      <sup>
+       ′
+      </sup>
+     </i>
+     (rad/s) é a frequência angular e
+     <i>
+      ϕ
+     </i>
+     (rad/s) é o ângulo de fase inicial que é expresso por um ângulo múltiplo de π.
+    </p>
+    <p>
+     Dependendo das variáveis do problema, ou seja, m, k, b e F
+     <sub>
+      o
+     </sub>
+     , o
+     <i>
+      tipo de sistema analisado
+     </i>
+     será exibido no canto esquerdo inferior da tela do simulador. O simulador permite escolher as variáveis de interesse a ser exibida graficamente, bem como, a opção de interromper e pausar a simulação. Dúvidas e sugestões podem ser encaminhadas para o email de contato que é exibido no canto direito inferior do simulador, passando o mouse sobre
+     <i>
+      projeto física para todos
+     </i>
+     .
+    </p>
+    <p>
+     As equações obtidas neste artigo estão presentes em várias literaturas que abordam oscilações mecânicas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] H.M. Nussenzveig, Física Básica - Volume 2 (Editora Edgard Blucher, 1996), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] S.T. Thornton and J.B. Marion, Classical Dynamics of Particles and Systems (Academic Press, New York, 2004), 5th ed.
+       </span>
+      </span>
+     </span>
+     ]. Para ilustrar, considere um
+     <i>
+      oscilador harmônico simple forçado
+     </i>
+     e que o ângulo de fase
+     <i>
+      ϕ
+     </i>
+     = 0. Isto implica que, pela
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (27)
+     </a>
+     , temos que
+     <a class="open-asset-modal" data-target="#ModalSchemee41" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (41)
+     </a>
+     fica,
+    </p>
+    <div class="row formula" id="ee53">
+     <a name="e53">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (53)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/3bdc6bcbb0d30decce04583e85907e33d626d2bd.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde está equação está de acordo com a literatura [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      5
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [5] H.M. Nussenzveig, Física Básica - Volume 2 (Editora Edgard Blucher, 1996), 3ª ed.
+      </span>
+     </span>
+    </span>
+    ]. Podemos observar que para
+    <i>
+     w′≃ w
+     <sub>
+      o
+     </sub>
+    </i>
+    , teremos uma indeterminação na
+    <a class="open-asset-modal" data-target="#ModalSchemee53" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (53)
+    </a>
+    . Para contornar isso, podemos usar a
+    <i>
+     regra de l'Hôpital
+    </i>
+    [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      7
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [7] L. Leithold, O Cálculo com Geometria Analítica (Editora Harbra, 1994), 3ª ed.
+      </span>
+     </span>
+    </span>
+    ], isto é, derivando o numerador e denominador em relação
+    <i>
+     w′
+    </i>
+    . Aplicando o limite quando
+    <i>
+     w′→ w
+     <sub>
+      o
+     </sub>
+    </i>
+    , temos,
+    <div class="row formula" id="ee54">
+     <a name="e54">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (54)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/56e562e21aed4f686147869587e74d635576149e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/b94547c611228c8e01c783f32adfa76f3a864b32.jpg" style="max-width:100%"/>
+    = 0. Impondo as condições iniciais, tais que, o bloco esteja na origem e em repouso em t = 0, a
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     mostra os resultados obtidos pela
+     <a class="open-asset-modal" data-target="#ModalSchemee53" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (53)
+     </a>
+     para
+     <i>
+      w
+     </i>
+     ′ ≃
+     <i>
+      w
+     </i>
+     <sub>
+      o
+     </sub>
+     . Como podemos observar, o deslocamento do bloco cresce em função do tempo contribuindo para o aumento da energia total do sistema. Graficamente é fácil verificar quando um sistema evolui para um fenômeno de ressonância, basta apenas monitorar sua amplitude de oscilação. Se essa amplitude cresce em função do tempo, esse sistema entrará em colapso.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Ressonância para oscilações simples e forçada.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os fenômenos de ressonância estão diretamente relacionados a ação da força externa, ou seja, relacionados a solução particular do oscilador harmônico. Na literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] S.T. Thornton and J.B. Marion, Classical Dynamics of Particles and Systems (Academic Press, New York, 2004), 5th ed.
+       </span>
+      </span>
+     </span>
+     ], encontramos apenas uma frequência de ressonância, dada por
+     <i>
+      w
+      <sub>
+       r
+      </sub>
+     </i>
+     =
+    </p>
+    <div class="row formula" id="ee55">
+     <a name="e55">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (55)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/8f7eefdf05e329a5e773fde15c21785febbc1c99.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde o ângulo de fase δ =
+    <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/9987e068a5859f063c92001b8f03dc528fc026ac.jpg" style="max-width:100%"/>
+    que permite o coeficiente da solução particular assumir valores máximos. Neste caso, a solução é dada por,
+    <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/1d748ec981be39b2c64ec53f123d60d14fb31a09.jpg" style="max-width:100%"/>
+    .
+    <p>
+     A solução particular apresentada neste artigo, dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee23" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (23)
+     </a>
+     , pode ser escrita na mesma forma da
+     <a class="open-asset-modal" data-target="#ModalSchemee55" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (55)
+     </a>
+     . Para isso, basta assumir que ϕ = 0 e definir as relações trigonométricas,
+    </p>
+    <div class="row formula" id="ee81">
+     <a name="e81">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/81e6c9cf103ebe6c72c91f0592450f64ee5b16a7.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A razão de não usarmos essas definições [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] H.M. Nussenzveig, Física Básica - Volume 2 (Editora Edgard Blucher, 1996), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] S.T. Thornton and J.B. Marion, Classical Dynamics of Particles and Systems (Academic Press, New York, 2004), 5th ed.
+       </span>
+      </span>
+     </span>
+     ] é que ela nos limita a encontra apenas uma condição para frequência de ressonância
+     <i>
+      w
+      <sub>
+       r
+      </sub>
+     </i>
+     . Agora, usando a solução particular dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee23" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (23)
+     </a>
+     , cujos coeficientes são dados pelas
+     <a class="open-asset-modal" data-target="#ModalSchemee26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (26)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (27)
+     </a>
+     , os pontos de máximos, por exemplo para
+     <i>
+      Ā
+     </i>
+     , resulta num polinômio de grau 5, dado por,
+    </p>
+    <div class="row formula" id="ee56">
+     <a name="e56">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (56)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/437bc63d2f4dd46f0e9a964a8825220d1d1a298c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     A
+    </i>
+    = cosϕ,
+    <i>
+     B
+    </i>
+    = 3γ sinϕ, C = −2w
+    <sub>
+     o
+    </sub>
+    <sup>
+     2
+    </sup>
+    cosϕ,
+    <i>
+     D
+    </i>
+    = 2γ sinϕ(2γ
+    <sup>
+     2
+    </sup>
+    -
+    <i>
+     w
+     <sub>
+      o
+     </sub>
+    </i>
+    <sup>
+     2
+    </sup>
+    ),
+    <i>
+     E
+    </i>
+    =
+    <i>
+     w
+     <sub>
+      o
+     </sub>
+    </i>
+    <sup>
+     2
+    </sup>
+    cosϕ(
+    <i>
+     w
+     <sub>
+      o
+     </sub>
+    </i>
+    <sup>
+     2
+    </sup>
+    - 4γ
+    <sup>
+     2
+    </sup>
+    ) e
+    <i>
+     F
+    </i>
+    = -γ
+    <i>
+     w
+     <sub>
+      o
+     </sub>
+    </i>
+    <sup>
+     4
+    </sup>
+    sinϕ. As raízes desse polinômio resultaram em cinco condições das quais o coeficiente
+    <span class="ref footnote">
+     <sup class="xref">
+      3
+     </sup>
+     <span class="refCtt closed">
+      <span class="refCttPadding">
+       <strong class="fn-title">
+        3
+       </strong>
+       Vale ressaltar que a condição para obtenção de pontos de máximos é a mesma para pontos de mínimos, isto é, que sua derivada seja nula.
+      </span>
+     </span>
+    </span>
+    . Analogamente, podemos proceder da mesma forma para
+    <a class="open-asset-modal" data-target="#ModalSchemee56" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (56)
+    </a>
+    estão diretamente relacionados com o ângulo de fase ϕ da força externa. Para ilustrar consideremos os seguintes casos:
+    <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/e4b9d1affd12c539c58e6caf4e2451fd9d2a7611.jpg" style="max-width:100%"/>
+    assume valores máximos
+    <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/67e8b33c5de7e21a580250e55e020ed33d35351f.jpg" style="max-width:100%"/>
+    . Os valores máximos desses coeficientes podem resultar em fenômenos de ressonância desde que ultrapassem os limites estabelecidos pelo sistema analisado. Outro ponto importante a destacar é que as raízes da
+    <ol type="1">
+     <li>
+      <p>
+       <i>
+        F
+       </i>
+       (
+       <i>
+        t
+       </i>
+       ) =
+       <i>
+        F
+        <sub>
+         o
+        </sub>
+       </i>
+       cos(
+       <i>
+        w
+       </i>
+       ′
+       <i>
+        t
+       </i>
+       ): Neste caso, temos que ϕ = 0. Logo, a
+       <a class="open-asset-modal" data-target="#ModalSchemee56" data-toggle="modal" href="">
+        <span class="sci-ico-fileFormula">
+        </span>
+        Eq. (56)
+       </a>
+       fica,
+      </p>
+      <div class="row formula" id="ee82">
+       <a name="e82">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/356b5fc450c0d792afcf8ece8357fb5b1a38cb89.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+      cujas raízes são:
+      <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/b207d95baa092c75b47b636308296ed8ec5ad3cb.jpg" style="max-width:100%"/>
+      ,
+      <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/7ba59d95eee55296379ec5eab5856b42f8cf9925.jpg" style="max-width:100%"/>
+      .
+     </li>
+     <li>
+      <p>
+       <i>
+        F
+       </i>
+       (
+       <i>
+        t
+       </i>
+       ) =
+       <i>
+        F
+        <sub>
+         o
+        </sub>
+       </i>
+       sin(
+       <i>
+        w
+       </i>
+       ′
+       <i>
+        t
+       </i>
+       ): Neste caso, temos que ϕ =
+       <a class="open-asset-modal" data-target="#ModalSchemee56" data-toggle="modal" href="">
+        <span class="sci-ico-fileFormula">
+        </span>
+        Eq. (56)
+       </a>
+       fica,
+      </p>
+      <div class="row formula" id="ee83">
+       <a name="e83">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/521cae28509103878880eccfbb109491ce491229.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+      cujas raízes são:
+      <div class="row formula" id="ee84">
+       <a name="e84">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/d7e8ed4367494718a7c1994b08eb350deccdea6c.jpg" style="max-width:100%"/>
+        </div>
+       </div>
+      </div>
+      <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/7007d64c77c0894673a47d3064eac959ac16c037.jpg" style="max-width:100%"/>
+      . Com isso, a
+     </li>
+    </ol>
+    <p>
+     É fácil verificar que as raízes de w′ que permitem o coeficiente
+     <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/890cc1ebebf6f1aed3dc6cb4c12018b24b9e5c87.jpg" style="max-width:100%"/>
+     assumir valores máximos para ϕ =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/51b08029471d3982e9bb1e76d0e7a8dcfe4a3cfe.jpg" style="max-width:100%"/>
+     assumir valores máximos para ϕ = 0, correspondem as mesmas raízes que permitem o coeficiente
+     <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/cc74b738030fc07db31b52c257dd596e97dff4cb.jpg" style="max-width:100%"/>
+     e vice-versa.
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     mostra os resultados para o
+     <i>
+      oscilador harmônico subamortecido forçado
+     </i>
+     para diferentes frequências de ressonância obtidas acima em função do ângulo de fase ϕ. Os dados usados nesse teste foram:
+     <i>
+      m = 2kg, k = 10N∕m, b = 1.5kg∕s, F
+      <sub>
+       o
+      </sub>
+      = 10N
+     </i>
+     e
+     <i>
+      x
+      <sub>
+       o
+      </sub>
+      = v
+      <sub>
+       o
+      </sub>
+      = 0
+     </i>
+     . Como podemos observar, as amplitudes de oscilações são diferentes para cada frequência de ressonância associada as raízes da
+     <a class="open-asset-modal" data-target="#ModalSchemee56" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (56)
+     </a>
+     . Note que não há a possibilidade de generalizar esses resultados, uma vez que, o grau do polinômio da
+     <a class="open-asset-modal" data-target="#ModalSchemee56" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (56)
+     </a>
+     muda em função do ângulo de fase ϕ associado a força externa. As raízes w
+     <sub>
+      r
+     </sub>
+     obtidas pela
+     <a class="open-asset-modal" data-target="#ModalSchemee56" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (56)
+     </a>
+     , mesmo para
+     <i>
+      ϕ
+     </i>
+     = 0, diferem da frequência de ressonância
+     <i>
+      w
+      <sub>
+       r
+      </sub>
+     </i>
+     da literatura. Isso ocorre porque parte do coeficiente da
+     <a class="open-asset-modal" data-target="#ModalSchemee55" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (55)
+     </a>
+     está oculto no ângulo de fase δ da solução particular.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Posição do bloco para diferentes frequências de ressonância.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Outro ponto importante a destacar é que esse sistema oscilaria com amplitude decrescente no tempo até atingir o repouso devido as forças dissipativas. A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     mostra que a amplitude de oscilação crescer até atingir seu valor máximo. Isso ocorre porque a força externa supera a força dissipativa e o sistema passa a oscilar com amplitude máxima para
+     <i>
+      t ≥ 10s
+     </i>
+     . Retomemos a nossa atenção na validação do método numérico implementado neste artigo. Para isso, apresentaremos os resultados obtidos pela solução analítica e compararemos com os resultados obtidos numericamente para diferentes intervalos de tempo, visando mostrar sob quais condições o método de diferenças finitas deve ser aplicado. As
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabelas 1
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     mostram as comparações dos resultados obtidos pela solução analítica e numérica para dois casos distintos e diferentes intervalos de tempo, bem como, o erro relativo percentual que é dado por,
+    </p>
+    <div class="row formula" id="ee57">
+     <a name="e57">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (57)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/hc3TNyY7J9ZjpnBcqV9rznv/4a5bfaa40d04791aea18fb8087040ec200910e17.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     R
+     <sub>
+      a
+     </sub>
+    </i>
+    e
+    <i>
+     R
+     <sub>
+      n
+     </sub>
+    </i>
+    representam, respectivamente, os resultados analíticos e numéricos.
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Resultados para oscilador harmônico subamortecido - Δt = 10
+      <sup>
+       -3
+      </sup>
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Resultados para oscilador harmônico simples forçado - Δt = 10
+      <sup>
+       -4
+      </sup>
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como podemos observar nos resultados mostrados nas
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabelas 1
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      2
+     </a>
+     , o método de diferenças finitas se torna preciso quanto menor for o intervalo de tempo
+     <i>
+      Δt
+     </i>
+     . Isso pode ser verificado, a partir dos erros relativos percentuais apresentados nessas tabelas.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Conclusões
+    </h1>
+    <p>
+     Usando o
+     <i>
+      método de diferenças finitas
+     </i>
+     obtivemos três equações que contemplam todos os casos citados anteriormente, tais como:
+     <i>
+      oscilador harmônico simples forçado
+     </i>
+     ,
+     <i>
+      oscilador harmônico amortecido (subamortecido, criticamente amortecido e superamortecido) forçado
+     </i>
+     , dos quais, geraram várias equações para cada caso resolvido analiticamente. Um outro ponto a destacar em relação ao
+     <i>
+      método de diferenças finitas
+     </i>
+     é que nem sempre é possível obter soluções analíticas e quando isso é possível, geralmente é feito algumas aproximações para simplificar o problema em questão. Logo, devemos destacar que o mesmo não ocorre para soluções numéricas. Neste artigo, buscamos mostrar uma implementação bastante simples de um método numérico visando resolver problemas aplicados à física. Usando o
+     <i>
+      método de diferenças finitas
+     </i>
+     podemos obter resultados mais precisos usando intervalo de tempo menores, tal como,
+     <i>
+      Δt ≤ 10
+      <sup>
+       -5
+      </sup>
+      s
+     </i>
+     , ou podemos usar outros métodos de solução, tal como, Crank-Nicholson, Runge-Kutta [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] S. Nakamura, Computational Method in Engineering and Science (John Wiley and Sons, 1977), 1st ed.
+       </span>
+      </span>
+     </span>
+     ] entre outros.
+    </p>
+    <p>
+     O objetivo desse artigo foi mostrar uma física bastante simples e as possíveis abordagens ao resolver esse tipo de problema. O simulador de oscilações mecânicas visa mostrar o comportamento das variáveis de interesse sem a necessidade de resolver nenhuma equação. Pela análise de dados gerados na tela do simulador, bem como, pela visualização gráfica é possível verificar, por exemplo, sob quais condições a energia do sistema é conservada. Um mito, leva muitos leitores a acharem que a energia do sistema só é conservada quando não há forças dissipativas atuando sobre ele. Pela simulação para o caso de forças dissipativas nulas e forças externas diferente de zero, é possível observar que a energia do sistema não é conservada. Isso despertará o interesse em descobrir o porquê que isso acontece. Sendo assim, o interesse em buscar uma formulação que justifique tal fato, despertará seu interesse em física. Esse é um dos objetivos desse artigo.
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Onde e
+        <sup>
+         iθ
+        </sup>
+        = cos θ + i sin θ, onde i
+        <sup>
+         2
+        </sup>
+        = −1.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Apesar da solução analítica não depender desta variável, recomenda-se que utilize um passo Δt = 10
+        <sup>
+         -1
+        </sup>
+        para visualização gráfica do oscilador. O intervalo de tempo para solução numérica é da ordem de Δt = 10
+        <sup>
+         -4
+        </sup>
+        à 10
+        <sup>
+         -1
+        </sup>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        Vale ressaltar que a condição para obtenção de pontos de máximos é a mesma para pontos de mínimos, isto é, que sua derivada seja nula.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        A.C.M. Alvim,
+        <i>
+         Métodos Numéricos em Engenharia Nuclear
+        </i>
+        (Editora Certa, 2007), 1ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        K.D. Machado,
+        <i>
+         Equações Diferenciais Aplicadas - Volume 1
+        </i>
+        (Editora Toda Palavra, 2012), 1ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        C. Scherer,
+        <i>
+         Métodos Computacionais da Física
+        </i>
+        (Editora Livraria da Física, 2010), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        M. Halvorson,
+        <i>
+         Microsoft Visual Basic 2013 - Passo a Passo
+        </i>
+        (Editora Bookman, 2015), 1ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        H.M. Nussenzveig,
+        <i>
+         Física Básica - Volume 2
+        </i>
+        (Editora Edgard Blucher, 1996), 3ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        S.T. Thornton and J.B. Marion,
+        <i>
+         Classical Dynamics of Particles and Systems
+        </i>
+        (Academic Press, New York, 2004), 5th ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        L. Leithold,
+        <i>
+         O Cálculo com Geometria Analítica
+        </i>
+        (Editora Harbra, 1994), 3ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        S. Nakamura,
+        <i>
+         Computational Method in Engineering and Science
+        </i>
+        (John Wiley and Sons, 1977), 1st ed.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Set 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        17 Fev 2016
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        28 Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

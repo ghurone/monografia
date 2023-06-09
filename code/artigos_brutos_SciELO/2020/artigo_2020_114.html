@@ -1,0 +1,6377 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Produtos e Materiais Didáticos
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2020-0247" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2020-0247
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0247">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Construção de uma maquete experimental automatizada para o estudo da polarização da luz e comprovação experimental da Lei de Malus com o auxílio da plataforma Arduíno
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Construction of an automated experimental model for the study of light polarization and experimental proof of Malus' Law with the aid of the Arduino platform
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Ivanor Nunes de Oliveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Wilton Lacerda Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal de Educação, Ciência e Tecnologia da Bahia, Salvador, BA, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Jorge Anderson Paiva Ramos
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:jorge.anderson.ramos@gmail.com">
+      jorge.anderson.ramos@gmail.com
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-9868-1235">
+     http://orcid.org/0000-0001-9868-1235
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Clênia Andrade Oliveira de Melo
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor5">
+    <span>
+     Carlos Takiya
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor5" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual do Sudoeste da Bahia, Ciências Exatas e Tecnológicas, Vitória da Conquista, BA, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor6">
+    <span>
+     Valteni Douglas Chaves
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor6" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal Baiano, Salvador, BA, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     No presente artigo, apresentamos os procedimentos necessários para a construção de uma maquete experimental automatizada para a comprovação da lei de Malus com o auxílio da plataforma Arduino, em consonância com o plano de automatização das práticas laboratoriais dos Laboratórios de Física Geral da Universidade Estadual do Sudoeste da Bahia, UESB. A escolha da plataforma Arduino está relacionada, em primeiro lugar, com o seu baixo custo, a facilidade de programação e a sua capacidade de estudar processos físicos em tempo real na prática educacional, o que tem permitido modernizar os laboratórios, que são automatizados, manipulados remotamente. A utilização de modernos recursos de software e hardware, unidos por uma plataforma de software universal, permite criar ferramentas virtuais e reais multifuncionais com interface cômoda para estudantes e pesquisadores. Os resultados experimentais obtidos foram usados para demonstrar a lei de Malus por dois métodos. De fato, considerando-se os mais recentes progressos da tecnologia dos computadores, tem-se oportunidades reais para introduzir os mais avançados e eficientes recursos de software e hardware, altamente interativos sem o uso de equipamentos caros.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Ensino de Física; Laboratório Remoto; Plataforma Arduino
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     In this article, we present the necessary procedures for the construction of an automated experimental model to prove the Malus law with the aid of the Arduino platform, in line with the automation plan for laboratory practices at the General Physics Laboratories of the State University of Southwest from Bahia, UESB. The choice of the Arduino platform is primarily related to its low cost, ease of programming and its ability to study physical processes in real time in educational practice, which has allowed the modernization of laboratories, which are automated, manipulated remotely. The use of modern software and hardware resources, united by a universal software platform, allows the creation of virtual and real multifunctional tools with a comfortable interface for students and researchers. The experimental results obtained were used to demonstrate Malus' law by two methods. In fact, considering the latest advances in computer technology, there are real opportunities to introduce the most advanced and efficient software and hardware resources, highly interactive without the use of expensive equipment.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Teaching Physics; Remote Lab; Arduino Platform
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Neste artigo, nosso objetivo principal consiste no estudo do fenômeno da polarização das ondas eletromagnéticas e da comprovação experimental da lei de Malus para ondas eletromagnéticas polarizadas no plano. A luz natural, em geral, não é polarizada, mas pode ser polarizada sob determinadas condições. As ondas eletromagnéticas são ondas transversais e a luz visível, como parte do espectro das ondas eletromagnéticas, pode ser polarizada. A polarização da luz encontra diversas aplicações, por exemplo, na indústria de plástico, no cinema 3-D e é também importante para a microscopia biológica. O modelo de polarização da luz oferece um apoio substancial para a teoria ondulatória da luz. Nenhuma teoria corpuscular é, satisfatoriamente, compatível com o fenômeno da polarização da luz. Não é sem razão que Isaac Newton, em sua teoria corpuscular da luz, fez a conjectura de que os “corpúsculos de luz teriam lados”, para dar conta do fenômeno de polarização da luz, fenômeno que já era conhecido, na propagação da luz através de um cristal, conhecido como espato da Islândia. A polarização da luz refletida de um espelho parece ter sido pela primeira vez observada em 1808, pelo engenheiro e físico francês, Étienne – Louis Malus. O estudo da polarização da luz faz parte dos programas dos cursos das áreas técnico-científicas do ensino superior das universidades onde são recomendados manuais de física geral de diversos autores, onde esta temática está contida em óptica física, por exemplo,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LCT, Rio de Janeiro, 2016), v. 4, 10ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] P. Tipler e G. Mosca, Física para Cientistas e Engenheiros (LCT, Rio de Janeiro, 2009), v. 2, 6ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] H.M. Nussenzveig, Curso de Física Básica (São Paulo: Ed. Edgard Blücher Ltda, 1998), v. 4, 1ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] F.W. Sears, M.W. Zemansky, H.D. Young e R. Freedman, A. Ótica e Física Moderna (Pearson e Adisson Wesley, São Paulo, 2004), v. 4, 10ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] I.V. Saveleev, Curso de Física Geral (Editora Ciência, Literatura de Física, Moscou, 1998), v. 4.
+       </span>
+      </span>
+     </span>
+     O estudo aprofundado do tema pode ser encontrado, por exemplo, em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] M. Born e E. Wolf, Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light (Cambridge University Press, Reino Unido, 1999), 7ª ed.
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Como a física é uma ciência experimental, os desafios das novas tecnologias e suas aplicações nas áreas técnico-científicas têm se refletido, diretamente, na concepção das práticas laboratoriais das instituições de ensino superior (IES)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] V.V. Andreev, V.I. Korolkov e D.V. Chuprov, em Conferência Científica e Prática Internacional “Educação, Aplicações científicas e de engenharia em Labview e National Instruments Technologies (Moscou, 2005).
+       </span>
+      </span>
+     </span>
+     . apontam que os recursos financeiros limitados das IES “dificultam a modernização e reequipamento da instrumentação técnico - científica moderna de ensino dos laboratórios didáticos e dos laboratórios de pesquisa científica”.
+    </p>
+    <p>
+     Para contornar tais dificuldades, os autores apontam que:
+    </p>
+    <div>
+     <div>
+      <blockquote>
+       <p>
+        “Uma possível solução para este problema é o uso de medição, monitoramento e controle dos processos tecnológicos com base em computadores e controladores programáveis. A utilização de modernos recursos de software e hardware, unidos por uma plataforma de software universal, permite criar ferramentas virtuais e reais multifuncionais com interface cômoda para estudantes e pesquisadores. Em conexão com os mais recentes progressos na tecnologia dos computadores tem-se oportunidades reais para introduzir os mais avançados eficientes recursos de software e hardware, altamente interativos sem o uso de equipamentos caros”
+        <span class="ref">
+         <strong class="xref xrefblue">
+          [7]
+         </strong>
+         <span class="refCtt closed">
+          <span>
+           [7] V.V. Andreev, V.I. Korolkov e D.V. Chuprov, em Conferência Científica e Prática Internacional “Educação, Aplicações científicas e de engenharia em Labview e National Instruments Technologies (Moscou, 2005).
+          </span>
+         </span>
+        </span>
+       </p>
+      </blockquote>
+     </div>
+    </div>
+    <p>
+     Durante o desenvolvimento do presente artigo, apresentamos os procedimentos necessários para a construção de uma maquete experimental automatizada para a comprovação da lei de Malus com o auxílio da plataforma Arduino, em consonância com o plano de automatização das práticas laboratoriais dos Laboratórios de Física Geral da Universidade Estadual da Bahia, UESB. A escolha da plataforma Arduino está relacionada, em primeiro lugar, com o seu baixo custo, a facilidade de programação e a sua capacidade de estudar processos físicos em tempo real no processo educacional
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] https://www.youtube.com/watchv=nJaQxY6yl9Y, acessado em 2/03/2020.
+       </span>
+       <br/>
+       <a href="https://www.youtube.com/watchv=nJaQxY6yl9Y" target="_blank">
+        https://www.youtube.com/watchv=nJaQxY6yl...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] A.A. Radionov, Equipamentos Elétricos e Eletroautomáticos (Editora da Universidade Técnica Estatal G. I. Nossov, Magnitogorsk, 2011).
+       </span>
+      </span>
+     </span>
+     , o que tem permitido modernizar laboratórios, que são automatizados, manipulados remotamente
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] I.N. Oliveira, K.P. Moreira, W.L. Silva, V.D. Chaves, M.G. Prado e M.S.S. Lopes, Experiências em Ensino de Ciências 13, 131 (2018).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <h2>
+     1.1. Estudo do fenômeno de polarização das ondas eletromagnéticas
+    </h2>
+    <p>
+     Uma onda eletromagnética pode ser definida como um conjunto de perturbações dos campos elétrico
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mover accent="true">
+        <mi>
+         E
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     e magnético
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mover accent="true">
+        <mi>
+         B
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     , que se propagam no espaço:
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mtable>
+         <mtr>
+          <mtd>
+           <mrow>
+            <mover accent="true">
+             <mi>
+              E
+             </mi>
+             <mo>
+              →
+             </mo>
+            </mover>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mover accent="true">
+              <mi>
+               r
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             =
+            </mo>
+            <msub>
+             <mover accent="true">
+              <mi>
+               E
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mn>
+              0
+             </mn>
+            </msub>
+            <mi>
+             c
+            </mi>
+            <mi>
+             o
+            </mi>
+            <mi>
+             s
+            </mi>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <mi>
+               k
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mover accent="true">
+              <mi>
+               r
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mrow>
+            <mover accent="true">
+             <mi>
+              B
+             </mi>
+             <mo>
+              →
+             </mo>
+            </mover>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mover accent="true">
+              <mi>
+               r
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             =
+            </mo>
+            <msub>
+             <mover accent="true">
+              <mi>
+               B
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mn>
+              0
+             </mn>
+            </msub>
+            <mi>
+             c
+            </mi>
+            <mi>
+             o
+            </mi>
+            <mi>
+             s
+            </mi>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <mi>
+               k
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mover accent="true">
+              <mi>
+               r
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde,
+     <math>
+      <msub>
+       <mover accent="true">
+        <mi>
+         E
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mn>
+        0
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mover accent="true">
+        <mi>
+         B
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mn>
+        0
+       </mn>
+      </msub>
+     </math>
+     são as amplitudes dos campos elétrico e magnético, respectivamente,
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mi>
+        ω
+       </mi>
+       <mi>
+        t
+       </mi>
+       <mo>
+        −
+       </mo>
+       <mover accent="true">
+        <mi>
+         k
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mover accent="true">
+        <mi>
+         r
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     é a fase da onda,
+     <math>
+      <mrow>
+       <mover accent="true">
+        <mi>
+         k
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mo>
+        =
+       </mo>
+       <mfrac>
+        <mrow>
+         <mn>
+          2
+         </mn>
+         <mi>
+          π
+         </mi>
+        </mrow>
+        <mi>
+         λ
+        </mi>
+       </mfrac>
+       <mover accent="true">
+        <mi>
+         e
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     é o número de onda,
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     é o comprimento de onda,
+     <math>
+      <mover accent="true">
+       <mi>
+        r
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     é o vetor de posição,
+     <math>
+      <mover accent="true">
+       <mi>
+        e
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     é o vetor unitário na direção de propagação da onda,
+     <math>
+      <mi>
+       ω
+      </mi>
+     </math>
+     é a frequência cíclica e
+     <math>
+      <mi>
+       t
+      </mi>
+     </math>
+     é o tempo.
+    </p>
+    <p>
+     Uma onda eletromagnética é uma onda transversal onde os vetores
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     ,
+     <math>
+      <mover accent="true">
+       <mi>
+        B
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     e
+     <math>
+      <mover accent="true">
+       <mi>
+        k
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     são mutuamente perpendiculares e formam um terno direito (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ). Para a descrição da forma de uma onda eletromagnética no espaço, utiliza-se o conceito de frente de onda: uma superfície até a qual chegou a perturbação do campo eletromagnético em dado momento de tempo. A superfície de onda é uma superfície na qual as oscilações do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     ocorrem na mesma fase. Esta superfície, correspondentemente, também é uma superfície de onda para o vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        B
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/175faadd2c02ad1c2a589f76529a539ca7b779a2.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Onda eletromagnética plana, que se propaga ao longo do eixo Ox
+      <br/>
+     </div>
+    </div>
+    <p>
+     O campo elétrico e o campo magnético estão mutuamente relacionados e oscilam de forma sincronizada. Se as superfícies das ondas são planas, elas são denominadas ondas planas. Por exemplo, a equação de uma onda eletromagnética plana, que se propaga ao longo do eixo
+     <math>
+      <mrow>
+       <mi>
+        O
+       </mi>
+       <mi>
+        x
+       </mi>
+      </mrow>
+     </math>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ), pode ser escrita da seguinte forma:
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mtable>
+         <mtr>
+          <mtd>
+           <mrow>
+            <mover accent="true">
+             <mi>
+              E
+             </mi>
+             <mo>
+              →
+             </mo>
+            </mover>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              x
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             =
+            </mo>
+            <msub>
+             <mover accent="true">
+              <mi>
+               E
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mn>
+              0
+             </mn>
+            </msub>
+            <mi>
+             c
+            </mi>
+            <mi>
+             o
+            </mi>
+            <mi>
+             s
+            </mi>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mi>
+              k
+             </mi>
+             <mi>
+              x
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mrow>
+            <mover accent="true">
+             <mi>
+              B
+             </mi>
+             <mo>
+              →
+             </mo>
+            </mover>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              x
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             =
+            </mo>
+            <msub>
+             <mover accent="true">
+              <mi>
+               B
+              </mi>
+              <mo>
+               →
+              </mo>
+             </mover>
+             <mn>
+              0
+             </mn>
+            </msub>
+            <mi>
+             c
+            </mi>
+            <mi>
+             o
+            </mi>
+            <mi>
+             s
+            </mi>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mi>
+              ω
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mi>
+              k
+             </mi>
+             <mi>
+              x
+             </mi>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             .
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Neste caso, em cada momento fixo de tempo
+     <math>
+      <mi>
+       t
+      </mi>
+     </math>
+     , a fase do campo eletromagnético será constante com
+     <math>
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <mi>
+        n
+       </mi>
+       <mi>
+        s
+       </mi>
+       <mi>
+        t
+       </mi>
+       <mo>
+        .
+       </mo>
+      </mrow>
+     </math>
+     , ou seja, as superfícies de fase são planos perpendiculares ao eixo
+     <math>
+      <mrow>
+       <mi>
+        O
+       </mi>
+       <mi>
+        x
+       </mi>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     Chama-se onda eletromagnética polarizada, àquela em que a direção das oscilações do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     (ou do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        B
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     ) varia em cada ponto do espaço de forma ordenada.
+    </p>
+    <p>
+     Existem três tipos principais de polarização das ondas eletromagnéticas: Polarização linear - O vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     oscila no espaço ao longo de uma direção definida; Polarização circular - A extremidade do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     em rotação descreve um círculo no espaço mantendo o seu módulo constante; Polarização elíptica - A extremidade do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     , em rotação no espaço, descreve uma elipse.
+    </p>
+    <p>
+     Para dar continuidade a atual proposta de comprovação da lei de Malus, vamos, inicialmente, conceituar onda eletromagnética com polarização linear ou plana.
+    </p>
+    <h2>
+     1.2. Polarização plana
+    </h2>
+    <p>
+     As equações de Maxwell permitem, particularmente, tal solução onde somente uma projeção do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     é diferente de zero, por exemplo,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mi>
+         x
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         z
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     Como consequência da propriedade de ortogonalidade citada acima, a projeção do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        B
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     somente é diferente de zero no eixo
+     <math>
+      <mi>
+       Y
+      </mi>
+     </math>
+     , ou seja,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         B
+        </mi>
+        <mi>
+         y
+        </mi>
+       </msub>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         z
+        </mi>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Uma “imagem” de tal onda mostrando os vetores
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     e
+     <math>
+      <mover accent="true">
+       <mi>
+        B
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     em diferentes pontos do eixo
+     <math>
+      <mi>
+       Z
+      </mi>
+     </math>
+     num dado momento de tempo é dada na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     . Neste caso, diz-se que a onda tem polarização linear ou plana. No plano perpendicular à direção de propagação, as ondas dos vetores
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     e
+     <math>
+      <mover accent="true">
+       <mi>
+        B
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     descrevem, em um período, duas linhas mutuamente perpendiculares, cujos comprimentos são determinados pelo dobro da amplitude das componentes elétrica e magnética do campo.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/68eec9daa1f5ed21bac3ff26a958ce12bcdbc92b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Propagação de uma onda eletromagnética plana na direção do eixo Z
+      <br/>
+     </div>
+    </div>
+    <p>
+     O plano que contém o vetor intensidade de campo elétrico da onda e o vetor de onda
+     <math>
+      <mover accent="true">
+       <mi>
+        k
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     é denominado plano de polarização ou plano das oscilações. Para visualizar no tempo as variações do campo eletromagnético, pode-se considerar que todo o sistema de vetores na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     se move como um todo ao longo do eixo
+     <math>
+      <mi>
+       Z
+      </mi>
+     </math>
+     com velocidade
+     <math>
+      <mi>
+       c
+      </mi>
+     </math>
+     .
+    </p>
+    <p>
+     Para descrever uma onda eletromagnética polarizada linearmente, introduz-se um vetor unitário paralelo ao vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     . Por exemplo, para uma onda eletromagnética plana, que se propaga ao longo do eixo
+     <math>
+      <mrow>
+       <mi>
+        O
+       </mi>
+       <mi>
+        x
+       </mi>
+      </mrow>
+     </math>
+     , polarizada ao longo do eixo
+     <math>
+      <mrow>
+       <mi>
+        O
+       </mi>
+       <mi>
+        y
+       </mi>
+      </mrow>
+     </math>
+     , temos:
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mover accent="true">
+          <mi>
+           E
+          </mi>
+          <mo>
+           →
+          </mo>
+         </mover>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           x
+          </mi>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <msub>
+           <mover accent="true">
+            <mi>
+             E
+            </mi>
+            <mo>
+             →
+            </mo>
+           </mover>
+           <mn>
+            0
+           </mn>
+          </msub>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <msub>
+          <mover accent="true">
+           <mi>
+            e
+           </mi>
+           <mo>
+            →
+           </mo>
+          </mover>
+          <mi>
+           y
+          </mi>
+         </msub>
+         <mi>
+          c
+         </mi>
+         <mi>
+          o
+         </mi>
+         <mi>
+          s
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           ω
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mo>
+           −
+          </mo>
+          <mi>
+           k
+          </mi>
+          <mi>
+           x
+          </mi>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Uma onda eletromagnética não polarizada caracteriza-se pelo fato de que o vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     , durante a propagação da onda no espaço, realiza oscilações desordenadas. Entretanto, a propriedade de ortogonalidade das ondas eletromagnéticas e as direções mutuamente perpendiculares dos vetores
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     ,
+     <math>
+      <mover accent="true">
+       <mi>
+        B
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     ,
+     <math>
+      <mover accent="true">
+       <mi>
+        k
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     são conservadas.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Descrição de experimentos com radiações de ondas eletromagnéticas polarizadas no plano
+    </h1>
+    <h2>
+     2.1. Esquema de uma maquete experimental sem o analisador
+    </h2>
+    <p>
+     O esquema de uma maquete experimental constituída por um apontador laser de semicondutor, um polarizador e um detector de intensidade de luz é dado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     . O feixe de luz emitido pelo laser passa pelo polarizador e atinge o detector de intensidade da luz incidente ligado a um circuito elétrico, que contém um multímetro e uma fonte de corrente contínua regulável (não mostrados na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     ). Desta maneira, o feixe de luz polarizada incidente no detector gera uma tensão no divisor de tensão do circuito, correspondente à intensidade luminosa do laser I, que é medida com o auxílio de um multímetro.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/4cd08f29bf1c29152948d49ac3768dda2387d9f5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Esquema de uma maquete experimental sem o analisador.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.2. Estudo das propriedades de um polarizador
+    </h2>
+    <p>
+     Vamos estudar as propriedades de um polarizador. O polarizador é um dispositivo que transmite radiação, na qual o vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     oscila, paralelamente, a um plano, chamado plano do polarizador, e que retém, completamente, a radiação cuja direção das oscilações do vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     são perpendiculares a esse plano. Vejamos, por exemplo, os seguintes casos:
+    </p>
+    <p>
+     (a)No polarizador incide luz linearmente polarizada com o vetor
+     <math>
+      <mover accent="true">
+       <mi>
+        E
+       </mi>
+       <mo>
+        →
+       </mo>
+      </mover>
+     </math>
+     dirigido sob um ângulo
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     com o plano do polarizador (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     ), então o polarizador transmite somente a componente
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          E
+         </mi>
+         <mo>
+          →
+         </mo>
+        </mover>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mo>
+          |
+         </mo>
+        </mrow>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <mover accent="true">
+        <mi>
+         E
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <mi>
+         s
+        </mi>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     , paralela a este plano, e retém, completamente, a componente perpendicular
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          E
+         </mi>
+         <mo>
+          →
+         </mo>
+        </mover>
+        <mo>
+         ⊥
+        </mo>
+       </msub>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mo>
+         |
+        </mo>
+       </mrow>
+       <mover accent="true">
+        <mi>
+         E
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mi>
+         s
+        </mi>
+        <mi>
+         e
+        </mi>
+        <mi>
+         n
+        </mi>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/1959e8fe759b9b8009a70eba340ada3090f097ab.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Vetor
+      <math>
+       <mover accent="true">
+        <mi>
+         E
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+      </math>
+      dirigido sob um ângulo
+      <math>
+       <mi>
+        φ
+       </mi>
+      </math>
+      com o plano do polarizador.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como a intensidade da luz
+     <math>
+      <mi>
+       I
+      </mi>
+     </math>
+     é proporcional ao quadrado do módulo da intensidade do campo elétrico
+     <math>
+      <msup>
+       <mi>
+        E
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+     </math>
+     , então, medindo-se a intensidade da luz polarizada linearmente, que passa através de um polarizador, pode-se comprovar a lei de Malus:
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          I
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mi>
+          c
+         </mi>
+         <mi>
+          o
+         </mi>
+         <msup>
+          <mi>
+           s
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mi>
+          ϕ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mi>
+         o
+        </mi>
+       </msub>
+       <mo>
+        ≈
+       </mo>
+       <msup>
+        <mi>
+         E
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+      </mrow>
+     </math>
+     é a intensidade da luz polarizada na entrada do polarizador e
+     <math>
+      <mrow>
+       <mi>
+        I
+       </mi>
+       <mo>
+        ≈
+       </mo>
+       <msubsup>
+        <mi>
+         E
+        </mi>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mo>
+          |
+         </mo>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msubsup>
+      </mrow>
+     </math>
+     é a sua intensidade na saída do polarizador;
+    </p>
+    <p>
+     (b) No polarizador incide luz natural, não polarizada. Como o valor médio
+     <math>
+      <mrow>
+       <mover>
+        <mrow>
+         <mi>
+          c
+         </mi>
+         <mi>
+          o
+         </mi>
+         <msup>
+          <mi>
+           s
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+        </mrow>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        /
+       </mo>
+       <mn>
+        2
+       </mn>
+      </mrow>
+     </math>
+     , a lei de Malus, nesse caso, é expressa da seguinte forma:
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          I
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true" scriptlevel="0">
+          <mfrac>
+           <mn>
+            1
+           </mn>
+           <mn>
+            2
+           </mn>
+          </mfrac>
+         </mstyle>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde,
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mi>
+        o
+       </mi>
+      </msub>
+     </math>
+     é a intensidade da luz natural;
+    </p>
+    <p>
+     (c) No polarizador incide a radiação do laser (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     ), parcialmente polarizada. Esta radiação pode ser considerada como a soma de duas ondas polarizadas no plano, com planos de oscilações mutuamente perpendiculares. Então, a intensidade de radiação que passa pelo polarizador é igual a
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          I
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mi>
+            r
+           </mi>
+           <mi>
+            i
+           </mi>
+           <mi>
+            n
+           </mi>
+           <mi>
+            c
+           </mi>
+           <mi>
+            i
+           </mi>
+           <mo>
+            .
+           </mo>
+          </mrow>
+         </msub>
+         <mi>
+          c
+         </mi>
+         <mi>
+          o
+         </mi>
+         <msup>
+          <mi>
+           s
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mi>
+          φ
+         </mi>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            c
+           </mi>
+           <mi>
+            o
+           </mi>
+           <mi>
+            m
+           </mi>
+           <mi>
+            p
+           </mi>
+          </mrow>
+         </msub>
+         <mi>
+          s
+         </mi>
+         <mi>
+          e
+         </mi>
+         <msup>
+          <mi>
+           n
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mi>
+          φ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         p
+        </mi>
+        <mi>
+         r
+        </mi>
+        <mi>
+         i
+        </mi>
+        <mi>
+         n
+        </mi>
+        <mi>
+         c
+        </mi>
+        <mo>
+         .
+        </mo>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <mi>
+         m
+        </mi>
+        <mi>
+         p
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     são, correspondentemente, as intensidades da componente principal da radiação do laser e da componente complementar não coerente na entrada do polarizador,
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     é o ângulo entre o plano do polarizador e o plano das oscilações da componente principal da radiação do laser. Com
+     <math>
+      <mrow>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , a intensidade da luz na saída do polarizador é máxima:
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mi>
+            a
+           </mi>
+           <mi>
+            x
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mi>
+            r
+           </mi>
+           <mi>
+            i
+           </mi>
+           <mi>
+            n
+           </mi>
+           <mi>
+            c
+           </mi>
+           <mo>
+            .
+           </mo>
+          </mrow>
+         </msub>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e, com
+     <math>
+      <mrow>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msup>
+        <mn>
+         90
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+      </mrow>
+     </math>
+     , a intensidade é mínima:
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mi>
+            i
+           </mi>
+           <mi>
+            n
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mi>
+            r
+           </mi>
+           <mi>
+            i
+           </mi>
+           <mi>
+            n
+           </mi>
+           <mi>
+            c
+           </mi>
+           <mo>
+            .
+           </mo>
+          </mrow>
+         </msub>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Desta maneira, girando-se o polarizador em torno do seu eixo (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     ) e medido-se os valores de
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+        <mi>
+         a
+        </mi>
+        <mi>
+         x
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+        <mi>
+         i
+        </mi>
+        <mi>
+         n
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , pode-se encontrar o grau de polarização da radiação do laser:
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          p
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true" scriptlevel="0">
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              I
+             </mi>
+             <mrow>
+              <mi>
+               m
+              </mi>
+              <mi>
+               a
+              </mi>
+              <mi>
+               x
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             −
+            </mo>
+            <msub>
+             <mi>
+              I
+             </mi>
+             <mrow>
+              <mi>
+               m
+              </mi>
+              <mi>
+               i
+              </mi>
+              <mi>
+               n
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>
+              I
+             </mi>
+             <mrow>
+              <mi>
+               m
+              </mi>
+              <mi>
+               a
+              </mi>
+              <mi>
+               x
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             +
+            </mo>
+            <msub>
+             <mi>
+              I
+             </mi>
+             <mrow>
+              <mi>
+               m
+              </mi>
+              <mi>
+               i
+              </mi>
+              <mi>
+               n
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mstyle>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Procedimento experimental para a verificação do cumprimento da lei de Malus
+    </h1>
+    <p>
+     Para a comprovação experimental da lei de Malus
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4)
+     </a>
+     , o analisador é inserido na maquete experimental, como mostra o esquema dado na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     . O analisador, pelas suas propriedades, é análogo ao polarizador e serve para a análise da luz polarizada. Inicialmente, gira-se o polarizador de tal forma que a intensidade da radiação que passa por ele seja máxima. Desta maneira, o sistema laser + polarizador transforma-se em uma fonte de radiação linearmente polarizada ideal com intensidade
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+        <mi>
+         a
+        </mi>
+        <mi>
+         x
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     (veja a fórmula
+     <a class="open-asset-modal" data-target="#ModalSchemeeq7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (7)
+     </a>
+     ) e com grau de polarização
+     <math>
+      <mrow>
+       <mi>
+        p
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/7d6c7384e64a440de66f22f0ccf1b7e5a9e9916b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Esquema de uma maquete experimental com um polarizador, um analisador e um fotodetector.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Girando-se o analisador de um determinado ângulo
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     , varia-se a correspondente intensidade da luz que passa através dele e incide no fotodetector, cujo módulo contém o sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     , que possui os circuitos necessários para a medição da iluminância da luz laser incidente nele, tornando-se possível a verificação do cumprimento da lei de Malus
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4)
+     </a>
+     , com o auxílio de uma maquete completamente automatizada, por dois métodos: (a) através do gráfico da dependência
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mrow>
+         <mi>
+          r
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mi>
+          l
+         </mi>
+        </mrow>
+       </msub>
+       <mi>
+        χ
+       </mi>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     , onde
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         r
+        </mi>
+        <mi>
+         e
+        </mi>
+        <mi>
+         l
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a intensidade luminosa relativa da fonte de luz incidente no fotodetector e
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     é o ângulo formado pelos planos de polarização do polarizador e do analisador; (b) através do gráfico da dependência
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mrow>
+         <mi>
+          r
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mi>
+          l
+         </mi>
+        </mrow>
+       </msub>
+       <mi>
+        χ
+       </mi>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        .
+       </mo>
+      </mrow>
+     </math>
+     O gráfico desta dependência deve ser uma linha reta com coeficiente de inclinação igual à unidade, de acordo com a expressão analítica da lei de Malus
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4)
+     </a>
+     . A medição da iluminância da luz é realizada com o auxílio de um circuito eletrônico ligado a uma placa Arduino uno conectada a um microcomputador.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Determinação do coeficiente de polarização da radiação de um laser
+    </h1>
+    <p>
+     Com o giro do analisador, ocorre a modulação do fluxo da radiação laser incidente no fotodetector
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     instalado no circuito eletrônico de uma maquete experimental automatizada. Como foi dito acima, na parte 3.1, o módulo que contém o sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     possui os circuitos necessários para o seu funcionamento, incluindo um regulador de tensão e componentes passivos necessários e é classificado como um sensor de luz ambiente com saída de dados digital. Internamente, o referido sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+       <mi>
+        F
+       </mi>
+       <mi>
+        V
+       </mi>
+       <mi>
+        I
+       </mi>
+      </mrow>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] Digital 16bit Serial Output Type Ambient Light Sensor IC BH1750FVI, disponível em: https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf, acessado em 10/04/2020.
+       </span>
+       <br/>
+       <a href="https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf" target="_blank">
+        https://www.mouser.com/ds/2/348/bh1750fv...
+       </a>
+      </span>
+     </span>
+     inclui um fotodiodo de silício com resposta espectral na região do visível que se aproxima da resposta espectral do olho humano, um amplificador de sinais que converte a corrente elétrica gerada no fotodiodo em um sinal analógico de tensão, um conversor analógico-digital de 16 bits de resolução para digitalização da tensão gerada pelo amplificador, e um circuito digital lógico que calcula a iluminância medida em unidades de lux e efetua a comunicação de dados através do protocolo I2C
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+       <mi>
+        F
+       </mi>
+       <mi>
+        V
+       </mi>
+       <mi>
+        I
+       </mi>
+      </mrow>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] Digital 16bit Serial Output Type Ambient Light Sensor IC BH1750FVI, disponível em: https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf, acessado em 10/04/2020.
+       </span>
+       <br/>
+       <a href="https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf" target="_blank">
+        https://www.mouser.com/ds/2/348/bh1750fv...
+       </a>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Quando os planos de polarização da luz no polarizador e no analisador coincidem
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     a intensidade luminosa incidente no fotodetector é máxima
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+        <mi>
+         a
+        </mi>
+        <mi>
+         x
+        </mi>
+        <mo>
+         .
+        </mo>
+       </mrow>
+      </msub>
+     </math>
+     , correspondentemente, a intensidade de iluminação medida em lux, calculada pelo circuito digital analógico do sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     também é máxima. Com o giro do analisador, pode-se estabelecer o ângulo entre os planos de polarização do polarizador e do analisador pelo qual a intensidade luminosa incidente no fotodetector é mínima
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         m
+        </mi>
+        <mi>
+         i
+        </mi>
+        <mi>
+         n
+        </mi>
+        <mo>
+         .
+        </mo>
+       </mrow>
+      </msub>
+     </math>
+     , correspondentemente, a intensidade de iluminação medida em lux, calculada pelo circuito digital analógico do sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     também é mínima. A partir destas medidas, pode-se determinar a grau de polarização da fonte laser
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (9)
+     </a>
+     .
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     , apresentamos, o desenho expandido da maquete experimental automatizada para a comprovação da lei de Malus e suas partes. Destaca-se a imagem do tubo com um polarizador em cada extremidade. O primeiro polarizador
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (2)
+     </a>
+     é fixo, o segundo polarizador (analisador 3), pode girar com o auxílio de um sistema que contém um motor de passo
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (5)
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/33eb05b651b28f92b90318c82b41dc5881940c1f.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Elementos utilizados na composição da maquete experimental
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os Elementos básicos da maquete são: 1–Laser vermelho; 2-Polarizador; 3-Analisador; 4–Fotodetetor; 5–Motor de passo; 6–Engrenagens; 7–Arduino Uno; 8–Driver do Motor. Todo este conjunto é comandado por programa de computador, executado em um PC, com funções de: ligar/desligar o laser, manipular o motor de passo que gira o mecanismo com o analisador, receber o sinal da intensidade da radiação capturado pelo fotodetetor. Assim, a maquete experimental é totalmente automatizada.
+    </p>
+    <p>
+     Para alimentação do motor de passo foi utilizado o driver composto pelo circuito integrado
+     <math>
+      <mrow>
+       <mi>
+        U
+       </mi>
+       <mi>
+        N
+       </mi>
+       <mi>
+        L
+       </mi>
+       <mn>
+        2003
+       </mn>
+      </mrow>
+     </math>
+     . A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     apresenta a placa de circuito impresso que condiciona o
+     <math>
+      <mrow>
+       <mi>
+        C
+       </mi>
+       <mi>
+        I
+       </mi>
+       <mo>
+        −
+       </mo>
+       <mi>
+        U
+       </mi>
+       <mi>
+        N
+       </mi>
+       <mi>
+        L
+       </mi>
+       <mn>
+        2003
+       </mn>
+      </mrow>
+     </math>
+     , bem como os conectores que servem para interligar o motor de passo ao microcontrolador. Este circuito integrado pode fornecer uma corrente nominal de
+     <math>
+      <mrow>
+       <mn>
+        500
+       </mn>
+       <mspace width="4pt">
+       </mspace>
+       <mi>
+        m
+       </mi>
+       <mi>
+        A
+       </mi>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mn>
+        600
+       </mn>
+       <mspace width="4pt">
+       </mspace>
+       <mi>
+        m
+       </mi>
+       <mi>
+        A
+       </mi>
+      </mrow>
+     </math>
+     de pico. Contendo diodos de supressão, oferece proteção quando opera com cargas indutivas.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/f1a2d73fbcfef754fcd774f8d34dcfc391c11bd7.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Driver para acionamento do motor de passo unipolar. Movimentação do analisador.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para movimentação do analisador (polarizador móvel) na maquete foi projetado um conjunto de engrenagens ligado ao motor de passo com transmissão (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/6b4abf0e049ed02c8387ecf6dc305601231cb9ca.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Conjunto de transmissão com motor de passo, modelo 28BYJ-48.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A engrenagem que está diretamente acoplada ao analisador possui 54 dentes e é conectada ao eixo de transmissão do motor de passo por uma engrenagem que possui 16 dentes. A relação de transmissão entre as engrenagens é 54/16.
+    </p>
+    <h2>
+     4. Motor de Passo
+    </h2>
+    <p>
+     O conjunto de transmissão impulsionado pelo motor de passo, utilizado para o acionamento do maquete experimental é o modelo
+     <math>
+      <mrow>
+       <mn>
+        28
+       </mn>
+       <mi>
+        B
+       </mi>
+       <mi>
+        Y
+       </mi>
+       <mi>
+        J
+       </mi>
+       <mo>
+        −
+       </mo>
+       <mn>
+        48
+       </mn>
+      </mrow>
+     </math>
+     . O motor de passo é um motor unipolar, com quatro fases, que pode ser operado, tanto a passo-completo (full-step), como a meio-passo (half-step). Tendo em conta as característica técnicas fornecidas pelo fabricante, é possível calcular o número de passos necessários para um giro completo no eixo de saída do conjunto de transmissão e finalmente, calcular o número de passos necessários para um giro completo do analisador (polarizador móvel) na maquete experimental nos seguintes casos:
+    </p>
+    <ol type="1">
+     <li>
+      (a)
+      <p>
+       Número de passos por giro no analisador (meio-passo) =
+       <math>
+        <mrow>
+         <msup>
+          <mn>
+           360
+          </mn>
+          <mi>
+           o
+          </mi>
+         </msup>
+         <mo>
+          /
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <msup>
+          <mn>
+           02617
+          </mn>
+          <mi>
+           o
+          </mi>
+         </msup>
+        </mrow>
+       </math>
+       /passo = 13756 passos;
+      </p>
+     </li>
+     <li>
+      (b)
+      <p>
+       Número de passos por giro no analisador (passo-completo) =
+       <math>
+        <mrow>
+         <msup>
+          <mn>
+           360
+          </mn>
+          <mi>
+           o
+          </mi>
+         </msup>
+         <mo>
+          /
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <msup>
+          <mn>
+           05234
+          </mn>
+          <mi>
+           o
+          </mi>
+         </msup>
+        </mrow>
+       </math>
+       /passo = 6878 passos.
+      </p>
+     </li>
+    </ol>
+    <h1 class="articleSectionTitle">
+     5. Componentes eletrônicos
+    </h1>
+    <p>
+     Para a construção desta maquete experimental foi utilizada a placa de desenvolvimento Arduino UNO. Ela atende todos os quesitos necessários do projeto, ou seja, número de portas suficientes para conexão do driver do motor, laser e fotodetector. Na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     são apresentadas todas as ligações necessárias para o funcionamento da maquete experimental.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/117e762dca8f45f60c8ba32a6ac812974622b129.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Circuito eletrônico da maquete experimental.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A placa Arduino uno possui também tecnologia embarcada para comunicação com o protocolo
+     <math>
+      <mrow>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+       <mi>
+        C
+       </mi>
+      </mrow>
+     </math>
+     utilizado pelo módulo do sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     . Finalmente, deve-se salientar que a memória de programa (Flash), a memória de variáveis (RAM), bem como a velocidade necessária para comunicação com o computador pessoal, também atendem todos os requisitos deste projeto. Na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     são apresentadas todas as ligações necessárias para o funcionamento da maquete experimental.
+    </p>
+    <p>
+     Para a programação foi utilizado o ambiente integrado de desenvolvimento IDE da plataforma ARDUINO. O motor de passo é configurado para operar em passo-completo. No final da sua execução, o eixo do motor movimenta-se em quatro passos, o que corresponde a uma rotação de
+     <math>
+      <mrow>
+       <mn>
+        4
+       </mn>
+       <mo>
+        ×
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mn>
+         17665
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mn>
+         7066
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+      </mrow>
+     </math>
+     . Já o analisador (polarizador móvel) rotaciona de
+     <math>
+      <mrow>
+       <mn>
+        4
+       </mn>
+       <mo>
+        ×
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mn>
+         02617
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mn>
+         10468
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+      </mrow>
+     </math>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Metodologia utilizada para a captura do sinal luminoso
+    </h1>
+    <p>
+     O módulo com o sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     é alimentado com
+     <math>
+      <mrow>
+       <mo>
+        +
+       </mo>
+       <mn>
+        5
+       </mn>
+       <mi>
+        V
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mo>
+        .
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mi>
+        V
+       </mi>
+      </mrow>
+     </math>
+     disponível na placa Arduino utilizando os pinos
+     <math>
+      <mrow>
+       <mi>
+        V
+       </mi>
+       <mi>
+        C
+       </mi>
+       <mi>
+        C
+       </mi>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        G
+       </mi>
+       <mi>
+        N
+       </mi>
+       <mi>
+        D
+       </mi>
+      </mrow>
+     </math>
+     . Para a comunicação digital através do protocolo
+     <math>
+      <mrow>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+       <mi>
+        C
+       </mi>
+      </mrow>
+     </math>
+     são utilizados os pinos
+     <math>
+      <mrow>
+       <mi>
+        A
+       </mi>
+       <mn>
+        4
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        A
+       </mi>
+       <mn>
+        5
+       </mn>
+      </mrow>
+     </math>
+     da placa Arduino, que estão conectados nos pinos
+     <math>
+      <mrow>
+       <mi>
+        S
+       </mi>
+       <mi>
+        L
+       </mi>
+       <mi>
+        A
+       </mi>
+      </mrow>
+     </math>
+     (dados) e
+     <math>
+      <mrow>
+       <mi>
+        S
+       </mi>
+       <mi>
+        L
+       </mi>
+       <mi>
+        C
+       </mi>
+      </mrow>
+     </math>
+     (clock) do módulo com o sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     O código computacional desenvolvido para a plataforma Arduino, e os detalhes para uso do sistema para aquisição de dados em tempo real no software Excel, podem ser vistos de forma mais detalhada em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [12]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [12] I.N. Oliveira, J.A.P. Ramos, W.L. Silva, V.D. Chaves e C.A.O. de Melo, Revista Brasileira de Ensino de Física 42, e20190105 (2020).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     O software embarcado na placa Arduino, apresentado na parte 6.1, configura o sensor
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     no modo de alta resolução“(lightMeter.begin(BH1750):: CONTINUOUS_HIGH_RES_MODE)” com leitura contínua de dados, permitindo resolução de
+     <math>
+      <mrow>
+       <mn>
+        1
+       </mn>
+       <mspace width="4pt">
+       </mspace>
+       <mi>
+        l
+       </mi>
+       <mi>
+        x
+       </mi>
+      </mrow>
+     </math>
+     e tempo de resposta total de
+     <math>
+      <mrow>
+       <mn>
+        120
+       </mn>
+       <mspace width="4pt">
+       </mspace>
+       <mi>
+        m
+       </mi>
+       <mi>
+        s
+       </mi>
+      </mrow>
+     </math>
+     .
+    </p>
+    <h2>
+     6.1. Desenvolvimento de software embarcado
+    </h2>
+    <p>
+     O software necessário para operação do microcontrolador da placa Arduino, de uma forma mais abrangente, deve comandar o acionamento do laser, realizar a leitura do sinal luminoso laser que atravessa os polarizadores, controlar o motor de passo, e finalmente, enviar os valores desta medição para um micro computador. Esta operação é, simplificadamente, apresentada no fluxograma da
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/93da4b95b008dae41ecb8008799c42fba419a878.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Fluxograma simplificado para leitura da Intensidade de luz em função do ângulo de giro
+      <math>
+       <mi>
+        φ
+       </mi>
+      </math>
+      formado pelo analisador e polarizador.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     6.2 Desenvolvimento de software para microcomputador
+    </h2>
+    <p>
+     Os dados produzidos pelo microcontrolador devem ser recebidos, armazenados e processados por um microcomputador. Para tanto foi utilizada a ferramenta Parallax Data Acquisition tool (PLX-DAQ), que serve de interface para a comunicação serial da plataforma Arduino com o software Microsoft Excel®.
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/94f5fc830dd658877282f4482a7437e284f622f4.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Customização do
+      <math>
+       <mrow>
+        <mi>
+         P
+        </mi>
+        <mi>
+         L
+        </mi>
+        <mi>
+         X
+        </mi>
+        <mo>
+         −
+        </mo>
+        <mi>
+         D
+        </mi>
+        <mi>
+         A
+        </mi>
+        <mi>
+         Q
+        </mi>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 11
+     </a>
+     é apresentada a customização efetuada e utilizada neste trabalho. Uma explicação mais detalhada da utilização do
+     <math>
+      <mrow>
+       <mi>
+        P
+       </mi>
+       <mi>
+        L
+       </mi>
+       <mi>
+        X
+       </mi>
+       <mo>
+        −
+       </mo>
+       <mi>
+        D
+       </mi>
+       <mi>
+        A
+       </mi>
+       <mi>
+        Q
+       </mi>
+      </mrow>
+     </math>
+     é descrita em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [12]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [12] I.N. Oliveira, J.A.P. Ramos, W.L. Silva, V.D. Chaves e C.A.O. de Melo, Revista Brasileira de Ensino de Física 42, e20190105 (2020).
+       </span>
+      </span>
+     </span>
+     . Os botões indicados têm as seguintes funções: Coletar Curva – realiza a coleta dos N dados captados pelo fotodetector ligado ao Arduino e os armazena numa coluna da planilha Excel; Zerar Planilha – faz a limpeza de todos os dados anteriormente armazenados na planilha; Procura Pol. 90graus – solicita ao controlador que desloque a analisador para uma posição relativa de 90º em relação ao polarizador (bloqueia a passagem da luz laser); Luz de Fundo – gira o analisador de 180º em ralação ao polarizador, captura e armazena N dados do sensor numa coluna da planilha Excel.
+    </p>
+    <h1 class="articleSectionTitle">
+     7. Partes constituintes da maquete automatizada para a comprovação da lei de Malus
+    </h1>
+    <p>
+     A maquete experimental utilizada para a comprovação da lei de Malus é constituída pelas seguintes partes: (1) Conjunto laser; (2) Polarizador; (3) Analisador; (4) Fotodetector; (5) Motor de passo; (6) Engrenagens; (7) Arduino; (8) Driver do motor de passo; (9) Computador; (10) Base da maquete com os respectivos suportes.
+    </p>
+    <h2>
+     7.1. Expressão analítica da lei de Malus
+    </h2>
+    <p>
+     A expressão analítica da lei de Malus é dada pela forma
+     <math>
+      <mrow>
+       <mi>
+        I
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     , onde
+     <math>
+      <mi>
+       I
+      </mi>
+     </math>
+     é a intensidade da luz que passa através de um polarizador e de um analisador,
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        0
+       </mn>
+      </msub>
+     </math>
+     é a intensidade da luz que passa através de um polarizador e de um analisador quando a direção das oscilações que deixam passar são colineares,
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     é o ângulo entre as direções que o polarizador e analisador deixam passar a luz.
+    </p>
+    <h1 class="articleSectionTitle">
+     8. Comprovação experimental da lei de Malus
+    </h1>
+    <p>
+     Abaixo, são apresentados dois métodos de comprovação da lei de Malus.
+    </p>
+    <h2>
+     8.1. Primeiro método de comprovação da lei de Malus
+    </h2>
+    <p>
+     No presente artigo, apresenta-se a metodologia desenvolvida para a comprovação da lei de Malus realizada com o auxílio da maquete experimental automatizada (
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     ), tendo-se em conta a seguinte proposição
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [13]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [13] Trofimov V.A. e Y.V. Rublev, Soviet Physics Uspekhi 11, 276 (1968).
+       </span>
+      </span>
+     </span>
+     . Se a lei de Malus for escrita na forma:
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/16d06fa77e0344a746381b5e68bd8bbaa5ef9221.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Foto da maquete experimental utilizada para a demonstração da lei de Malus.
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          I
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true" scriptlevel="0">
+          <mfrac>
+           <msub>
+            <mi>
+             I
+            </mi>
+            <mn>
+             0
+            </mn>
+           </msub>
+           <mn>
+            2
+           </mn>
+          </mfrac>
+         </mstyle>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           +
+          </mo>
+          <mi>
+           c
+          </mi>
+          <mi>
+           o
+          </mi>
+          <mi>
+           s
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mn>
+            2
+           </mn>
+           <mi>
+            φ
+           </mi>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     então fazendo-se girar o analisador com frequência
+     <math>
+      <mi>
+       ω
+      </mi>
+     </math>
+     , a intensidade da luz
+     <math>
+      <mi>
+       I
+      </mi>
+     </math>
+     varia pela lei do cosseno com frequência
+     <math>
+      <mrow>
+       <mn>
+        2
+       </mn>
+       <mi>
+        ω
+       </mi>
+      </mrow>
+     </math>
+     . Sobre a forma de variação da intensidade da luz
+     <math>
+      <mi>
+       I
+      </mi>
+     </math>
+     , pode-se concluir pelo gráfico da dependência da intensidade luminosa do ângulo
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     obtido experimentalmente (
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/23ab4dcbedafe4693b6bb73ee0b61ec062f0b805.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Gráfico da intensidade de luz em função do ângulo entre os planos de polarização durante o giro de 360° do analisador.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A construção da maquete experimental automatizada (
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     ) foi realizada em conformidade com os procedimentos experimentais descritos acima nas partes 3-6, o que permite a comprovação da lei de Malus com o auxílio de uma placa Arduino ligada a um computador através de uma conexão USB, com a utilização do
+     <math>
+      <mrow>
+       <mi>
+        P
+       </mi>
+       <mi>
+        L
+       </mi>
+       <mi>
+        X
+       </mi>
+       <mo>
+        −
+       </mo>
+       <mi>
+        D
+       </mi>
+       <mi>
+        A
+       </mi>
+       <mi>
+        Q
+       </mi>
+      </mrow>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [12]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [12] I.N. Oliveira, J.A.P. Ramos, W.L. Silva, V.D. Chaves e C.A.O. de Melo, Revista Brasileira de Ensino de Física 42, e20190105 (2020).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Na maquete automatizada, raios paralelos de luz de um laser de semicondutor, depois de passarem pelo polarizador e pelo analisador, que gira com frequência
+     <math>
+      <mi>
+       ω
+      </mi>
+     </math>
+     incidem no fotodetector
+     <math>
+      <mrow>
+       <mi>
+        B
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     do circuito eletrônico (
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     ). A variação da tensão modulada com frequência
+     <math>
+      <mrow>
+       <mn>
+        2
+       </mn>
+       <mi>
+        ω
+       </mi>
+      </mrow>
+     </math>
+     é proporcional à intensidade do fluxo luminoso incidente no fotodetector e medida com o auxílio da plataforma Arduino ligada ao microcomputador por um cabo USB.
+    </p>
+    <p>
+     Neste experimento, o motor de passo foi configurado para operar em modo de meio-passo. O número de passos imposto foi de (13756 + 800 =14556 passos), o que corresponde a um pouco mais de giro completo do analisador em relação ao polarizador. Para cada passo girado pelo motor, uma amostra da intensidade luminosa da luz laser incidente no fotodetector foi coletada. Foram coletadas 1731 amostras. Para a normalização do sinal, todos os valores obtidos foram divididos pelo valor máximo capturado
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mrow>
+         <mi>
+          m
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          x
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        84
+       </mn>
+       <mspace width="4pt">
+       </mspace>
+       <mi>
+        l
+       </mi>
+       <mi>
+        x
+       </mi>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     . Na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     , é apresentado o sinal da intensidade luminosa laser incidente no fotodetector
+     <math>
+      <mrow>
+       <mi>
+        F
+       </mi>
+       <mi>
+        H
+       </mi>
+       <mn>
+        1750
+       </mn>
+      </mrow>
+     </math>
+     (após passar pelo polarizador e analisador), versus o ângulo de giro formado pelo analisador (polarizador móvel) em relação ao polarizador fixo.
+    </p>
+    <p>
+     Como mostra o gráfico da dependência
+     <math>
+      <mrow>
+       <mi>
+        I
+       </mi>
+       <mo>
+        ×
+       </mo>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     , obtida experimentalmente (
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     ), onde
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     é o ângulo entre o polarizador e o analisador, a lei de Malus encontra-se demonstrada conforme a equação
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     , uma vez que, numa volta completa do analisador com frequência
+     <math>
+      <mi>
+       ω
+      </mi>
+     </math>
+     , a intensidade da luz varia com frequência
+     <math>
+      <mrow>
+       <mn>
+        2
+       </mn>
+       <mi>
+        ω
+       </mi>
+      </mrow>
+     </math>
+     e possui dois máximos; quando os planos de polarização do polarizador e do analisador são paralelos (
+     <math>
+      <mrow>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msup>
+        <mn>
+         0
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mn>
+         360
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+      </mrow>
+     </math>
+     ou
+     <math>
+      <mrow>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msup>
+        <mn>
+         180
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+      </mrow>
+     </math>
+     ), e dois mínimos; quando eles estão cruzados (
+     <math>
+      <mrow>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msup>
+        <mn>
+         90
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+      </mrow>
+     </math>
+     ou
+     <math>
+      <mrow>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msup>
+        <mn>
+         270
+        </mn>
+        <mi>
+         o
+        </mi>
+       </msup>
+      </mrow>
+     </math>
+     ).
+    </p>
+    <p>
+     A seguir a
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     mostra o gráfico da dependência
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mrow>
+         <mi>
+          r
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mi>
+          l
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        .
+       </mo>
+       <mo>
+        ×
+       </mo>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     , no qual os valores da intensidade relativa (
+     <math>
+      <mrow>
+       <mi>
+        I
+       </mi>
+       <mo>
+        /
+       </mo>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mrow>
+         <mi>
+          m
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          x
+         </mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     ) correspondem aos valores experimentais utilizados na construção do gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     , onde
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mrow>
+         <mi>
+          m
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          x
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        84
+       </mn>
+       <mspace width="4pt">
+       </mspace>
+       <mi>
+        l
+       </mi>
+       <mi>
+        x
+       </mi>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     . A curva tracejada (em vermelho) representa um ajuste cossenoidal quadrático que simula a lei de Malus para os parâmetros do experimento. O desvio padrão relativo a cada medida é tão insignificante que não pode ser notado no gráfico.
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/94fa7bdc9e0072270ebe4b9f1d82c418f76103db.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 14
+      </strong>
+      <br/>
+      Gráfico da dependência
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mrow>
+          <mi>
+           r
+          </mi>
+          <mi>
+           e
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ×
+        </mo>
+        <mi>
+         φ
+        </mi>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     9. Segundo método de comprovação da lei de Malus
+    </h1>
+    <p>
+     Este método de comprovação da lei de Malus é realizado através da construção do gráfico da dependência
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mrow>
+         <mi>
+          r
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mi>
+          l
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        ×
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     como mostra a
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     , que corresponde à linearização do gráfico obtido pelo primeiro método de comprovação (
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/efde1cdbbf9ccb8b9000c8056d9e25ccce9768f5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 15
+      </strong>
+      <br/>
+      Gráfico da dependência
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mrow>
+          <mi>
+           r
+          </mi>
+          <mi>
+           e
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ×
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <msup>
+         <mi>
+          s
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mi>
+         φ
+        </mi>
+        <mo>
+         .
+        </mo>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com esta linearização do gráfico fica demonstrada a lei de Malus pelo segundo método, que consiste do seguinte. Utilizando o método dos mínimos quadrados
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] S.L. Moura, F.I Silva, F.C.M. Silva e J A.V. Santos, Química Nova na Escola 33, 4 (2011).
+       </span>
+      </span>
+     </span>
+     para fazer a regressão linear nos dados usados na construção do gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     , foi obtida uma reta do tipo
+     <math>
+      <mrow>
+       <mi>
+        y
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        a
+       </mi>
+       <mi>
+        x
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        b
+       </mi>
+      </mrow>
+     </math>
+     com coeficiente angular
+     <math>
+      <mrow>
+       <mi>
+        a
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        0063
+       </mn>
+      </mrow>
+     </math>
+     , constante linear
+     <math>
+      <mrow>
+       <mi>
+        b
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        0016
+       </mn>
+      </mrow>
+     </math>
+     , mostrando valores compatíveis com os previstos pela lei de Malus, que são
+     <math>
+      <mrow>
+       <mi>
+        b
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     (sem intensidade luminosa residual),
+     <math>
+      <mrow>
+       <mi>
+        a
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mi>
+        x
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mfrac>
+         <mi>
+          I
+         </mi>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <msup>
+         <mi>
+          s
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mi>
+         φ
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . O coeficiente de correlação calculado indica que 99,86% dos valores obtidos na medição correspondem diretamente à metodologia adotada para verificação da lei de Malus, ou seja
+     <math>
+      <mrow>
+       <mfrac>
+        <mi>
+         I
+        </mi>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+       </mfrac>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     . A reta da equação encontrada é apresentada no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     10. Conjunto de simulações para o estudo dos efeitos da variação da amplitude, variação temporal e variação de fase
+    </h1>
+    <p>
+     No presente artigo, foram apresentados dois métodos de comprovação da lei de Malus. Entretanto, os gráficos das duas formas analíticas correspondentes à lei de Malus contêm uma estrutura não estatística, que é mais notável na distribuição dos pontos relativos ao ajuste da curva. Uma pequena estrutura “senoidal” de modulação dos dados é vista na
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     . A priori, pode-se afirmar que esta modulação é originária de algum efeito sistemático nos dados. Tendo em conta as suas características, pode-se afirmar que o aparato construído, mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     , é bastante sensível para evidenciar pequenos desvios de calibração, que devem ser levados em consideração para uma análise apropriada dos dados. Nesse sentido, propusemos realizar um conjunto de simulações para estudar os efeitos da variação de amplitude, variação temporal e variação de fase. Neste estudo, será considerado uma função cossenoidal quadrática teórica
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        ϕ
+       </mi>
+      </mrow>
+     </math>
+     (a mesma utilizada nas
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 14
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      15
+     </a>
+     ), e uma outra função
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        A
+       </mi>
+       <mo>
+        *
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         B
+        </mi>
+        <mo>
+         *
+        </mo>
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mi>
+         C
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     que será responsável por simular determinados fenômenos que poderão interferir para que não se obtenha um resultado linear esperado na lei de Malus (
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     ) . Os coeficientes (
+     <i>
+      A,B
+     </i>
+     e
+     <i>
+      C
+     </i>
+     ) são assim caracterizados:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      •
+      <p>
+       <i>
+        <b>
+         A
+        </b>
+       </i>
+       relaciona-se com as possíveis variações em amplitude em que o sinal é capturado pela maquete experimental;
+      </p>
+     </li>
+     <li>
+      •
+      <p>
+       <i>
+        <b>
+         B
+        </b>
+       </i>
+       relaciona-se com prováveis variações temporais que podem ocorrer no circuito digitalizador do Arduino;
+      </p>
+     </li>
+     <li>
+      •
+      <p>
+       <i>
+        <b>
+         C
+        </b>
+       </i>
+       relaciona-se com desvios de calibração em relação ao zero de ângulos do sinal da maquete experimental e o sinal produzido computacionalmente.
+      </p>
+     </li>
+    </ul>
+    <h2>
+     10.1. Simulação da variação de amplitude
+    </h2>
+    <p>
+     Nesta simulação serão considerados fatores como: ruídos e não linearidades do conversor analógico/digital; ruídos correlacionados com o circuito eletrônico utilizado na confecção da maquete, ruídos produzidos pelo laser e sensor etc. Aqui, o coeficiente
+     <i>
+      A
+     </i>
+     é submetido a uma variação aleatória, e os efeitos das variações dos coeficientes
+     <i>
+      B
+     </i>
+     e
+     <i>
+      C
+     </i>
+     são ignorados,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         [
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          A
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          r
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          n
+         </mi>
+         <mi>
+          d
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         *
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <msup>
+         <mi>
+          s
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Para tanto, foi gerado um número aleatório, aqui representado por rand(), com peso de 0,01, 0,02 e 0,05 em relação à amplitude máxima (unitária). Os gráficos temporais das simulações de
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        ϕ
+       </mi>
+      </mrow>
+     </math>
+     (representado pela linha vermelha tracejada) e o
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        ϕ
+       </mi>
+       <mi>
+        E
+       </mi>
+       <mi>
+        s
+       </mi>
+       <mi>
+        t
+       </mi>
+       <mi>
+        u
+       </mi>
+       <mi>
+        d
+       </mi>
+       <mi>
+        a
+       </mi>
+       <mi>
+        d
+       </mi>
+       <mi>
+        o
+       </mi>
+      </mrow>
+     </math>
+     (representado pelos círculos verdes), bem como a projeção
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     <math>
+      <mo>
+       ×
+      </mo>
+     </math>
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     são apresentados nos gráficos da
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 16
+     </a>
+     , para diferentes variações da amplitude.
+    </p>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/e9f4ef925271f287ee1377c4e52fcb44b8cbe8bf.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 16
+      </strong>
+      <br/>
+      Gráficos do estudo das variações de amplitude.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     10.2. Simulação da variação temporal de captura
+    </h2>
+    <p>
+     Como a plataforma Arduino não tem as características apropriadas para ser utilizada como um equipamento DAQ-DSP (Data Aquisition-Digital Signal Processing), variações temporais provavelmente ocorrerão. Assim, neste estudo o coeficiente
+     <i>
+      B
+     </i>
+     é submetido a uma variação aleatória, e os efeitos das variações dos coeficientes
+     <i>
+      A
+     </i>
+     e
+     <i>
+      C
+     </i>
+     são ignorados,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         [
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <msup>
+         <mi>
+          s
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          B
+         </mi>
+         <mo>
+          *
+         </mo>
+         <mi>
+          r
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          n
+         </mi>
+         <mi>
+          d
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Para tanto, foi gerado um número aleatório, aqui representado por rand(), com peso de 0,01, 0,02 e 0,05 em relação ao período de captura do sinal apresentado nas
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     e 15. Os gráficos temporais das simulações de
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        ϕ
+       </mi>
+      </mrow>
+     </math>
+     (representado pela linha vermelha tracejada) e o
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        ϕ
+       </mi>
+       <mi>
+        E
+       </mi>
+       <mi>
+        s
+       </mi>
+       <mi>
+        t
+       </mi>
+       <mi>
+        u
+       </mi>
+       <mi>
+        d
+       </mi>
+       <mi>
+        a
+       </mi>
+       <mi>
+        d
+       </mi>
+       <mi>
+        o
+       </mi>
+      </mrow>
+     </math>
+     (representado pelos círculos verdes), bem como a projeção
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     <math>
+      <mo>
+       ×
+      </mo>
+     </math>
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     são apresentados nos gráficos da
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 17
+     </a>
+     para diferentes períodos de captura .
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/4ccc06a40ba7dc346abac693bf0e5ce723e57fda.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 17
+      </strong>
+      <br/>
+      Gráficos do estudo das variações de período de captura.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     10.3. Simulação da variação do ângulo inicial.
+    </h2>
+    <p>
+     Para comprovação da Lei de Malus pelo segundo método proposto, o sinal digital obtido na maquete experimental deve ser relacionado com o sinal teórico produzido por software computacional. Considerando que a maquete não dispõe se sensores de posição relativa, foram utilizados os valores de sinal máximo e mínimo, como metodologia para se obter os ângulos de 0º e 90º. Entretanto, é de se esperar que variações na amplitude do sinal implicarão na variação destes ângulos. Assim, para verificação do comportamento da mudança do zero de ângulo, neste estudo o coeficiente
+     <i>
+      C
+     </i>
+     é submetido a uma variação aleatória, e os efeitos das variações dos coeficientes
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     são ignorados,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         [
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <msup>
+         <mi>
+          s
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          ϕ
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          C
+         </mi>
+         <mo>
+          *
+         </mo>
+         <mi>
+          r
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          n
+         </mi>
+         <mi>
+          d
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Para tanto, foi gerado um número aleatório, aqui representado por rand(), com peso de 0,01, 0,02 e 0,05 em relação ao ângulo base utilizado no sinal apresentado nas
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 14
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      15
+     </a>
+     . Os gráficos temporais das simulações de
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        ϕ
+       </mi>
+      </mrow>
+     </math>
+     (representado pela linha vermelha tracejada) e o
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        ϕ
+       </mi>
+       <mi>
+        E
+       </mi>
+       <mi>
+        s
+       </mi>
+       <mi>
+        t
+       </mi>
+       <mi>
+        u
+       </mi>
+       <mi>
+        d
+       </mi>
+       <mi>
+        a
+       </mi>
+       <mi>
+        d
+       </mi>
+       <mi>
+        o
+       </mi>
+      </mrow>
+     </math>
+     (representado pelos círculos verdes), bem como a projeção
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     <math>
+      <mo>
+       ×
+      </mo>
+     </math>
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     são apresentados nos gráficos da
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 18
+     </a>
+     para diferentes ângulos de defasagem.
+    </p>
+    <div class="row fig" id="f18">
+     <a name="f18">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf18" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/mrHkmcLtz9zHQ3MyDPd6Bhq/0fee65787f179e894e145549702d8b4898afa198.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 18
+      </strong>
+      <br/>
+      Gráficos do estudo das variações do ângulo de defasagem.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os dois métodos de demonstração da lei de Malus expostos graficamente, nas
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 14
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      15
+     </a>
+     do presente artigo, assim como as interferências e ruídos considerados anteriormente, certamente presentes nos valores dos sinais capturados, durante a análise dos resultados do conjunto de simulações apresentadas nas
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 16
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      17
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      18
+     </a>
+     , mostram, visivelmente, que justamente o efeito de variação da fase (
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 18
+     </a>
+     ) é o mais perceptível no gráfico para evidenciar pequenos desvios de calibração em relação ao zero de ângulo, que conduzem a um efeito sistemático nos dados, ou seja, o surgimento de uma pequena estrutura “senoidal” de modulação dos dados, observada na
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     do presente artigo.
+    </p>
+    <h1 class="articleSectionTitle">
+     11. Conclusão
+    </h1>
+    <p>
+     No artigo, apresentamos os procedimentos necessários para a construção de uma maquete experimental automatizada para a comprovação da lei de Malus com o auxílio da plataforma Arduino, em consonância com o plano de automatização das práticas laboratoriais dos Laboratórios de Física Geral da Universidade Estadual do Sudoeste da Bahia, Uesb. A escolha da plataforma Arduino está relacionada, em primeiro lugar, com o seu baixo custo, a facilidade de programação e a sua capacidade de estudar processos físicos em tempo real no processo educacional, o que tem permitido modernizar laboratórios, que são automatizados, manipulados remotamente. A utilização de modernos recursos de software e hardware, unidos por uma plataforma de software universal, permite criar ferramentas virtuais e reais multifuncionais com interface cômoda para estudantes e pesquisadores. Mostra-se que, em conexão com os mais recentes progressos na tecnologia dos computadores, tem-se oportunidades reais para introduzir os mais avançados e eficientes recursos de software e hardware, altamente interativos sem o uso de equipamentos caros.
+    </p>
+    <p>
+     Foi realizado o estudo do fenômeno de polarização das ondas eletromagnéticas e a comprovação experimental da lei de Malus por dois métodos, utilizando-se uma onda eletromagnética polarizada no plano emitida por uma fonte de luz coerente, um apontador laser de semicondutor.
+    </p>
+    <p>
+     O primeiro método de comprovação da lei de Malus utilizou a metodologia desenvolvida para a sua comprovação realizada com o auxílio da maquete experimental automatizada (
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     ), tendo-se em conta a escrita da lei de Malus na forma
+     <math>
+      <mrow>
+       <mi>
+        I
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mfrac>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mn>
+         2
+        </mn>
+       </mfrac>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         +
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <mi>
+         s
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          φ
+         </mi>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [13]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [13] Trofimov V.A. e Y.V. Rublev, Soviet Physics Uspekhi 11, 276 (1968).
+       </span>
+      </span>
+     </span>
+     . Fazendo-se girar o analisador
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (2)
+     </a>
+     da maquete com frequência circular
+     <math>
+      <mi>
+       ω
+      </mi>
+     </math>
+     , a intensidade da luz
+     <math>
+      <mi>
+       I
+      </mi>
+     </math>
+     varia pela lei do cosseno com frequência
+     <math>
+      <mrow>
+       <mn>
+        2
+       </mn>
+       <mi>
+        ω
+       </mi>
+      </mrow>
+     </math>
+     , como mostra a
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     , que corresponde à normalização do gráfico obtido pelo primeiro método de comprovação (
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     ).A curva tracejada (em vermelho) representa um ajuste cossenoidal quadrático que simula a lei de Malus para os parâmetros do experimento (
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     ). O desvio padrão relativo a cada medida é tão pequeno que não pode ser notado no gráfico. O segundo método consiste de um ajuste dos valores medidos da intensidade relativa
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mi>
+         r
+        </mi>
+        <mi>
+         e
+        </mi>
+        <mi>
+         l
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     em função do
+     <math>
+      <mrow>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     , realizado pelo método dos mínimos quadrados
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] S.L. Moura, F.I Silva, F.C.M. Silva e J A.V. Santos, Química Nova na Escola 33, 4 (2011).
+       </span>
+      </span>
+     </span>
+     , que corresponde a uma reta do tipo
+     <math>
+      <mrow>
+       <mi>
+        y
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        a
+       </mi>
+       <mi>
+        x
+       </mi>
+       <mo>
+        +
+       </mo>
+       <mi>
+        b
+       </mi>
+      </mrow>
+     </math>
+     . Linha traçada em preto no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     . Foram obtidos os seguintes valores: coeficiente angular
+     <math>
+      <mrow>
+       <mi>
+        a
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        006
+       </mn>
+      </mrow>
+     </math>
+     , constante linear
+     <math>
+      <mrow>
+       <mi>
+        b
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        0016
+       </mn>
+      </mrow>
+     </math>
+     . Eles são altamente compatíveis com os previstos pela expressão analítica da lei de Malus, na qual
+     <math>
+      <mrow>
+       <mi>
+        b
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     (sem intensidade luminosa residual),
+     <math>
+      <mrow>
+       <mi>
+        a
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mfrac>
+         <mi>
+          I
+         </mi>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mi>
+            a
+           </mi>
+           <mi>
+            x
+           </mi>
+          </mrow>
+         </msub>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mi>
+         c
+        </mi>
+        <mi>
+         o
+        </mi>
+        <msup>
+         <mi>
+          s
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <mi>
+         φ
+        </mi>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . O coeficiente de correlação calculado indica que 99,86% dos valores obtidos na medição correspondem, diretamente, à metodologia adotada para verificação da referida lei, ou seja
+     <math>
+      <mrow>
+       <mfrac>
+        <mi>
+         I
+        </mi>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+       </mfrac>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mi>
+        o
+       </mi>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mi>
+        φ
+       </mi>
+      </mrow>
+     </math>
+     . A reta da equação encontrada é apresentada no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     . Os dois métodos de demonstração da lei de Malus expostos, graficamente no presente artigo, através das
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 14
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      15
+     </a>
+     , assim como as interferências e ruídos considerados anteriormente, certamente presentes nos valores dos sinais capturados, durante a análise dos resultados do conjunto de simulações apresentado na secção 10 do texto, mostram, visivelmente, que justamente o efeito de variação da fase (
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 18
+     </a>
+     ) é o mais perceptível para evidenciar pequenos desvios de calibração em relação ao zero de ângulo, que conduzem a um efeito sistemático nos dados, ou seja, o surgimento de uma pequena estrutura “senoidal” notável de modulação dos dados, observada na
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     do presente artigo.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] D. Halliday, R. Resnick e J. Walker,
+        <i>
+         Fundamentos de Física
+        </i>
+        (LCT, Rio de Janeiro, 2016), v. 4, 10ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] P. Tipler e G. Mosca,
+        <i>
+         Física para Cientistas e Engenheiros
+        </i>
+        (LCT, Rio de Janeiro, 2009), v. 2, 6ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] H.M. Nussenzveig,
+        <i>
+         Curso de Física Básica
+        </i>
+        (São Paulo: Ed. Edgard Blücher Ltda, 1998), v. 4, 1ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] F.W. Sears, M.W. Zemansky, H.D. Young e R. Freedman,
+        <i>
+         A. Ótica e Física Moderna
+        </i>
+        (Pearson e Adisson Wesley, São Paulo, 2004), v. 4, 10ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] I.V. Saveleev,
+        <i>
+         Curso de Física Geral
+        </i>
+        (Editora Ciência, Literatura de Física, Moscou, 1998), v. 4.
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] M. Born e E. Wolf,
+        <i>
+         Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light
+        </i>
+        (Cambridge University Press, Reino Unido, 1999), 7ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] V.V. Andreev, V.I. Korolkov e D.V. Chuprov, em
+        <i>
+         Conferência Científica e Prática Internacional “Educação, Aplicações científicas e de engenharia em Labview e National Instruments Technologies
+        </i>
+        (Moscou, 2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] https://www.youtube.com/watchv=nJaQxY6yl9Y, acessado em 2/03/2020.
+        <br/>
+        <a href="https://www.youtube.com/watchv=nJaQxY6yl9Y" target="_blank">
+         » https://www.youtube.com/watchv=nJaQxY6yl9Y
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] A.A. Radionov,
+        <i>
+         Equipamentos Elétricos e Eletroautomáticos
+        </i>
+        (Editora da Universidade Técnica Estatal G. I. Nossov, Magnitogorsk, 2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] I.N. Oliveira, K.P. Moreira, W.L. Silva, V.D. Chaves, M.G. Prado e M.S.S. Lopes, Experiências em Ensino de Ciências
+        <b>
+         13
+        </b>
+        , 131 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] Digital 16bit Serial Output Type Ambient Light Sensor IC BH1750FVI, disponível em: https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf, acessado em 10/04/2020.
+        <br/>
+        <a href="https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf" target="_blank">
+         » https://www.mouser.com/ds/2/348/bh1750fvi-e-186247.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] I.N. Oliveira, J.A.P. Ramos, W.L. Silva, V.D. Chaves e C.A.O. de Melo, Revista Brasileira de Ensino de Física
+        <b>
+         42
+        </b>
+        , e20190105 (2020).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] Trofimov V.A. e Y.V. Rublev, Soviet Physics Uspekhi
+        <b>
+         11
+        </b>
+        , 276 (1968).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] S.L. Moura, F.I Silva, F.C.M. Silva e J A.V. Santos, Química Nova na Escola
+        <b>
+         33
+        </b>
+        , 4 (2011).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        21 Out 2020
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        16 Jun 2020
+       </li>
+       <li>
+        <strong>
+         rev-received
+        </strong>
+        <br/>
+        06 Ago 2020
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        08 Set 2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

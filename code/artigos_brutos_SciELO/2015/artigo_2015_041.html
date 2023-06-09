@@ -1,0 +1,6862 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ens. Fis. 37 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2015
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173721728" target="_blank">
+    https://doi.org/10.1590/S1806-11173721728
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173721728">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Estudo das oscilações amortecidas de um pêndulo físico com o auxílio do “Tracker”
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  (Study of damped oscillations of a physical pendulum with aid of “Tracker”)
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Waldemar Bonventi Jr.
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     1E-mail:
+     <a href="mailto:waldemar.bonventi@prof.uniso.br">
+      waldemar.bonventi@prof.uniso.br
+     </a>
+     .
+    </div>
+    Programa de Pós-Graduação em Processos Tecnológicos e Ambientais, Universidade de Sorocaba, Sorocaba, SP, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Norberto Aranha
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Programa de Pós-Graduação em Processos Tecnológicos e Ambientais, Universidade de Sorocaba, Sorocaba, SP, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     A tecnologia tem permitido a obtenção de dados experimentais de forma mais rápida e fácil através da utilização de dispositivos eletrônicos que fazem parte do nosso dia a dia, tornando os experimentos físicos mais dinâmicos e até mais precisos se comparados com métodos tradicionais de medidas. Neste trabalho são apresentados os resultados e análise das medidas do momento de inércia de uma ripa. O experimento foi filmado com um
+     <i>
+      smartphone
+     </i>
+     e os dados analisados pelo
+     <i>
+      software
+     </i>
+     livre “Tracker”. A função que descreve a oscilação amortecida teve seus parâmetros ajustados pelo próprio “Tracker” e pelo
+     <i>
+      software Qtiplot
+     </i>
+     . Comparando-se os cálculos realizados a partir dos parâmetros medidos com os resultados obtidos dos programas, conclui-se que o “Tracker” é uma plataforma de estudo de movimentos com muitos recursos que permite um ajuste de funções mais preciso na análise dos dados.
+    </p>
+    <p>
+     oscilações amortecidas; “Tracker”; análise de erros; momento de inércia
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     Technology has allowed obtaining experimental data faster and easier through the use of electronic devices that are part of our everyday life, which makes physical experiments more dynamical and even more accurate as compared to traditional measurement methods. This paper presents the results and the analysis of measurements of the moment of inertia of clapboard. The experiment was filmed with a smartphone and the data was analyzed by the free software Tracker. The function that describes the damped oscillation had its own parameters set by the Tracker and the Qtiplot softwares, in order to compare both of them. Comparing the calculations based on the measured parameters with the results from the programs, it is concluded that the Tracker is a platform of study with many features which allows more precise adjustment functions for the data analysis.
+    </p>
+    <p>
+     damped oscillations; Tracker; error analysis; moment of inertia
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Alguns métodos para a determinação do momento de inércia de um corpo, que expressa o grau de dificuldade para alterar o movimento do corpo em rotação, têm sido discutidos na literatura. Alguns autores têm apresentado montagens experimentais distintas para medir o momento de inércia de diferentes corpos rígidos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       [1]
+       <span>
+        C.A.F. Pintão, M.P. Souza Filho e W.F. Usida, Revista Brasileira de Ensino de Física 27, 237 (2005).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       [3]
+       <span>
+        T. Eadkhong, R. Rajsadorn, P. Jannual and S. Danworaphong, European Journal of Physics 33, 615 (2012).
+       </span>
+      </span>
+     </span>
+     ]. Essas montagens envolvem basicamente a obtenção dos parâmetros experimentais através de dispositivos eletrônicos, utilizando sensores mecânicos ou ópticos. O avanço da tecnologia tem permitido, no entanto, a obtenção de dados experimentais de forma mais rápida e fácil, utilizando os mais diversos dispositivos eletrônicos disponíveis atualmente no mercado, tais como
+     <i>
+      smartphones
+     </i>
+     e
+     <i>
+      tablets
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       [4]
+       <span>
+        A. Kazachkov, A.S. Castellanos and V. Kostyukov, Lat. Am. J. Phys. Educ. 6, Suppl. I, 168 (2012).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       [5]
+       <span>
+        L.P. Vieira e V.O.M. Lara, Revista Brasileira de Ensino de Física   35, 3503 (2013).
+       </span>
+      </span>
+     </span>
+     ]. Agregado a este fato, temos também hoje disponíveis na internet vários programas de captura de imagens e tratamento de dados como, por exemplo, o “Tracker” [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       [6]
+       <span>
+        A.G. Bezerra Jr., L.P. de Oliveira, J.A. Lenz e N. Saavedra, Cad. Bras. Ens. Fís. 29, 469 (2012).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       [8]
+       <span>
+        D. Brown, Tracker: Video Analysis and Modeling Tool. Disponível em https://www.cabrillo.edu/dbrown/tracker, acesso em 20/10/2014.
+       </span>
+       <br/>
+       <a href="https://www.cabrillo.edu/dbrown/tracker" target="_blank">
+        https://www.cabrillo.edu/dbrown/tracker...
+       </a>
+      </span>
+     </span>
+     ], e o
+     <i>
+      Qtiplot
+     </i>
+     usado na análise de dados experimentais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       [9]
+       <span>
+        42 of the Best Free Linux Scientific Software. Linuxlinks, The Linux Portal. 2009. Disponível em http:www.linuxlinks.com/article/20080803104017665/Scientific.html, acesso em 20/10/2014.
+       </span>
+       <br/>
+       <a href="http:www.linuxlinks.com/article/20080803104017665/Scientific.html" target="_blank">
+        http:www.linuxlinks.com/article/20080803...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       [10]
+       <span>
+        K. Müller and A. Seubert, Isotopes in Environmental and Health Studies 50, 88 (2014).
+       </span>
+      </span>
+     </span>
+     ]. O “Tracker” permite o ajuste de várias funções aos dados experimentais podendo também, caso seja necessário, ser construído o próprio modelo matemático. O programa
+     <i>
+      QtiPlot
+     </i>
+     é outra solução multiplataforma para visualização e análise de dados experimentais. Este programa oferece uma solução alternativa a softwares proprietários extremamente caros. Apresenta várias opções de ajustes de curvas a dados experimentais, incluindo dados espectrais multipicos e FFT. O ajuste é minimizado pelo algoritmo de Levenberg-Marquadt a partir de uma dada tolerância.
+    </p>
+    <p>
+     Essas facilidades em obter os dados experimentais e tratá-los matematicamente viabilizam a discussão de conceitos físicos através da realização de experimentos junto aos alunos, principalmente nas escolas públicas carentes de laboratórios de física.
+    </p>
+    <p>
+     A utilização de dispositivos eletrônicos que fazem parte do dia a dia do aluno torna os experimentos de física mais dinâmicos em comparação com as técnicas tradicionais utilizadas no laboratório como, por exemplo, a tomada de dados utilizando o cronômetro e a régua.
+    </p>
+    <p>
+     Neste trabalho foi realizada a filmagem do movimento oscilatório de uma ripa com o auxílio de um s
+     <i>
+      martphone
+     </i>
+     e os dados tratados com o auxílio dos programas “Tracker” e
+     <i>
+      Qtiplot
+     </i>
+     . O momento de inércia da ripa obtido estaticamente (a partir das medidas de suas dimensões geométricas) foi comparado com seu valor obtido de forma dinâmica, através da medida da frequência de oscilação fornecida pelo “Tracker”.
+    </p>
+    <h2>
+     1.1. Oscilação do pêndulo físico (método dinâmico)
+    </h2>
+    <p>
+     Corpos rígidos suspensos de modo a oscilar livremente em um plano vertical, em torno de um eixo passando pelo corpo, são denominados
+     <i>
+      pêndulos físicos
+     </i>
+     . Esta configuração representa os pêndulos reais, que apresentam sua massa distribuída por várias distâncias relativamente ao eixo de suspensão, generalizando o conceito de
+     <i>
+      pêndulo simples.
+     </i>
+     Neste, considera-se toda a sua massa concentrada em um único ponto, a uma distância constante do ponto de suspensão.
+    </p>
+    <div>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     ilustra um pêndulo físico genérico, onde o eixo de suspensão passa pelo ponto
+     <i>
+      p
+     </i>
+     . A oscilação resultante decorre da contribuição da força peso de cada elemento de massa do corpo, ou seja, cada pedaço do corpo com sua respectiva quantidade de massa estará sujeito à força gravitacional. No caso de corpos extensos com massa total
+     <i>
+      m
+     </i>
+     , os efeitos de rotação e translação são devido à força peso
+     <i>
+      m
+     </i>
+     <b>
+      g
+     </b>
+     aplicada ao centro de massa deste [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       [11]
+       <span>
+        D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2012), v. 1, 9a ed.
+       </span>
+      </span>
+     </span>
+     ]. Este conceito vem das ideias de Arquimedes [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       [12]
+       <span>
+        A.K.T. Assis, Arquimedes, o Centro de Gravidade e a Lei da Alavanca (C. Roy Keys Inc., Montreal, 2008).
+       </span>
+      </span>
+     </span>
+     ]:
+     <div>
+      <blockquote>
+       <p>
+        ...Chamamos de centro de gravidade de um corpo ao ponto de aplicação da força gravitacional. Ou seja, é o ponto neste corpo onde atua toda a gravidade, o ponto onde se localiza o peso do corpo. Ele também pode ser chamado de centro do peso deste corpo...
+       </p>
+      </blockquote>
+     </div>
+    </div>
+    <div class="row fig" id="f01">
+     <a name="f01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Representação do pêndulo físico. Extraído da Ref. [
+      <span class="ref">
+       <sup class="xref xrefblue">
+        14
+       </sup>
+       <span class="refCtt closed">
+        [14]
+        <span>
+         G.L. Baker and J.A. Blackburn, The Pendulum: A Case Study in Physics (Oxford University Press, Oxford, 2005).
+        </span>
+       </span>
+      </span>
+      ].
+      <br/>
+     </div>
+    </div>
+    <p>
+     Durante a oscilação, o corpo gira em torno do ponto
+     <i>
+      p
+     </i>
+     (denominado pivô) com uma inércia rotacional
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     . Na
+     <a class="open-asset-modal" data-target="#ModalFigf01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     são representados o ponto
+     <i>
+      p
+     </i>
+     (pivô), a distância
+     <i>
+      ℓ
+     </i>
+     do pivô ao centro de massa (
+     <i>
+      CM
+     </i>
+     ) do corpo, a amplitude
+     <i>
+      A
+     </i>
+     do movimento oscilatório na direção
+     <i>
+      x
+     </i>
+     e o ângulo
+     <i>
+      θ
+     </i>
+     entre o vetor força peso (
+     <i>
+      m
+     </i>
+     <b>
+      g
+     </b>
+     ) e a direção ao longo da distância
+     <i>
+      ℓ
+     </i>
+     . Quando esta direção não estiver alinhada com a vertical, aparecerá um
+     <i>
+      torque restaurador τ
+     </i>
+     , proporcional ao deslocamento angular
+     <i>
+      θ
+     </i>
+     dado por [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       [13]
+       <span>
+        D.H. Young e R.A. Freedman, Física I (Pearson Education do Brasil, São Paulo, 2008), 12a. ed.
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <div class="row formula" id="ee01">
+     <a name="e01">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <mi>
+          τ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mi>
+          ℓ
+         </mi>
+         <mtext>
+          sen
+         </mtext>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde o sinal negativo exprime esta característica de restauração - torque oposto ao deslocamento angular - levando o corpo a uma condição de equilíbrio estável.
+    <p>
+     Por outro lado, a dinâmica dos corpos rígidos relaciona este torque (ou
+     <i>
+      momento da força
+     </i>
+     ) à aceleração angular
+     <i>
+      α
+     </i>
+     do corpo durante sua rotação, de forma análoga à segunda lei de Newton
+    </p>
+    <div class="row formula" id="ee02">
+     <a name="e02">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <mi>
+          τ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mi>
+          α
+         </mi>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     I
+     <sub>
+      p
+     </sub>
+    </i>
+    representa o momento de inércia do corpo em relação ao ponto
+    <i>
+     p
+    </i>
+    (
+    <a class="open-asset-modal" data-target="#ModalFigf01" data-toggle="modal" href="">
+     <span class="sci-ico-fileFigure">
+     </span>
+     Fig. 1
+    </a>
+    ) e
+    <i>
+     α
+    </i>
+    sua aceleração angular.
+    <p>
+     Da cinemática rotacional tem-se que a aceleração angular
+     <i>
+      α
+     </i>
+     é dada pela segunda derivada temporal do deslocamento angular
+     <i>
+      θ
+     </i>
+     , ou seja
+    </p>
+    <div class="row formula" id="ee03">
+     <a name="e03">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mrow>
+         <mi>
+          α
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mrow>
+             <mi>
+              d
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mrow>
+             <mi>
+              t
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    de modo que o movimento oscilatório deste sistema é descrito pela seguinte equação dinâmica
+    <div class="row formula" id="ee04">
+     <a name="e04">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mi>
+          α
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mi>
+          ℓ
+         </mi>
+         <mtext>
+          sen
+         </mtext>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    que, explicitando em termos de
+    <i>
+     θ
+    </i>
+    , produz juntamente com a
+    <a class="open-asset-modal" data-target="#ModalSchemee03" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (3)
+    </a>
+    a equação diferencial de segunda ordem
+    <div class="row formula" id="ee05">
+     <a name="e05">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mrow>
+             <mi>
+              d
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mrow>
+             <mi>
+              t
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mi>
+          ℓ
+         </mi>
+         <mo>
+          .
+         </mo>
+         <mi mathvariant="italic">
+          sen
+         </mi>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Para oscilações de pequena amplitude, a aproximação sen
+     <i>
+      θ
+     </i>
+     ∼
+     <i>
+      θ
+     </i>
+     (para
+     <i>
+      θ
+     </i>
+     em radianos) simplifica a
+     <a class="open-asset-modal" data-target="#ModalSchemee05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     para a forma
+    </p>
+    <div class="row formula" id="ee06">
+     <a name="e06">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mrow>
+             <mi>
+              d
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mrow>
+             <mi>
+              t
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mi>
+          ℓ
+         </mi>
+         <mo>
+          .
+         </mo>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    permitindo uma solução mais simples na seguinte forma
+    <div class="row formula" id="ee07">
+     <a name="e07">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m7">
+        <mrow>
+         <mi>
+          θ
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mtext>
+          cos
+         </mtext>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          ω
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          φ
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     θ
+    </i>
+    <sub>
+     0
+    </sub>
+    é o ângulo a partir da vertical onde se iniciam as oscilações e
+    <i>
+     ϕ
+    </i>
+    é uma constante de fase que é nula se o movimento teve seu início cronometrado (
+    <i>
+     t
+    </i>
+    = 0) na posição angular máxima
+    <i>
+     θ
+    </i>
+    <sub>
+     0
+    </sub>
+    ou, se a cronometragem iniciou em outro valor
+    <i>
+     θ
+    </i>
+    ,
+    <i>
+     ϕ
+    </i>
+    é calculada em
+    <i>
+     t
+    </i>
+    = 0 como
+    <i>
+     θ
+    </i>
+    =
+    <i>
+     θ
+    </i>
+    <sub>
+     0
+    </sub>
+    cos
+    <i>
+     ϕ
+    </i>
+    ⇒
+    <i>
+     ϕ
+    </i>
+    = arccos
+    <i>
+     θ
+    </i>
+    /
+    <i>
+     θ
+    </i>
+    <sub>
+     0
+    </sub>
+    .
+    <p>
+     A condição de igualdade da
+     <a class="open-asset-modal" data-target="#ModalSchemee06" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (6)
+     </a>
+     para qualquer instante
+     <i>
+      t
+     </i>
+     exige que
+    </p>
+    <div class="row formula" id="ee08">
+     <a name="e08">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m8">
+        <mrow>
+         <mi>
+          ω
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              m
+             </mi>
+             <mi>
+              g
+             </mi>
+             <mi>
+              ℓ
+             </mi>
+            </mrow>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <mo>
+            ,
+           </mo>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     ω
+    </i>
+    = 2
+    <i>
+     πf
+    </i>
+    é a frequência angular do sistema oscilatório, sendo
+    <i>
+     f
+    </i>
+    a frequência de oscilação em Hz.
+    <p>
+     A amplitude
+     <i>
+      A
+     </i>
+     do sistema é dada pelo deslocamento horizontal (eixo
+     <i>
+      x
+     </i>
+     ), usando o centro de massa como referência. Uma inspeção geométrica da
+     <a class="open-asset-modal" data-target="#ModalFigf01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     fornece
+    </p>
+    <div class="row formula" id="ee09">
+     <a name="e09">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m9">
+        <mrow>
+         <mi>
+          A
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mi>
+          ℓ
+         </mi>
+         <mtext>
+          sen
+         </mtext>
+         <msub>
+          <mrow>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Utilizando-se a aproximação para pequenas oscilações (sen
+     <i>
+      θ
+     </i>
+     ∼
+     <i>
+      θ
+     </i>
+     ), a relação
+     <a class="open-asset-modal" data-target="#ModalSchemee09" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (9)
+     </a>
+     torna-se
+     <i>
+      A
+     </i>
+     =
+     <i>
+      ℓθ
+     </i>
+     <sub>
+      0
+     </sub>
+     e, para qualquer posição arbitrária na direção horizontal,
+     <i>
+      x
+     </i>
+     =
+     <i>
+      ℓθ
+     </i>
+     . Sendo assim, pode-se multiplicar a
+     <a class="open-asset-modal" data-target="#ModalSchemee07" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (7)
+     </a>
+     por
+     <i>
+      ℓ
+     </i>
+     resultando em
+    </p>
+    <div class="row formula" id="ee10">
+     <a name="e10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m10">
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          =
+         </mo>
+         <mi>
+          A
+         </mi>
+         <mtext>
+          cos
+         </mtext>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          ω
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          ϕ
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h3>
+     1.1.1. Solução exata da
+     <a class="open-asset-modal" data-target="#ModalSchemee05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+    </h3>
+    <p>
+     Para o caso de ângulos maiores, onde não é aplicável a aproximação sen
+     <i>
+      θ
+     </i>
+     ∼
+     <i>
+      θ
+     </i>
+     , Beer e cols. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       [15]
+       <span>
+        F.P. Beer, E.R. Johnston e P.J. Cornwell Mecânica Vetorial Para Engenheiros: Dinâmica (AMGH, Porto Alegre, 2012), v. 2.
+       </span>
+      </span>
+     </span>
+     ] mostram como obter a solução exata da
+     <a class="open-asset-modal" data-target="#ModalSchemee05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     para um pêndulo simples, na forma de uma
+     <i>
+      integral elíptica K
+     </i>
+     , definida de
+     <i>
+      θ
+     </i>
+     = 0 a
+     <i>
+      θ
+     </i>
+     =
+     <i>
+      θ
+      <sub>
+       MAX
+      </sub>
+     </i>
+     (
+     <i>
+      θ
+      <sub>
+       MAX
+      </sub>
+     </i>
+     =
+     <i>
+      θ
+     </i>
+     <sub>
+      0
+     </sub>
+     neste artigo). Esta solução leva a um período de oscilação dado por
+     <math display="inline" id="m11">
+      <mrow>
+       <mi>
+        T
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mn>
+          2
+         </mn>
+         <mi>
+          K
+         </mi>
+         <mo>
+          /
+         </mo>
+         <mi>
+          π
+         </mi>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        .
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mi>
+        π
+       </mi>
+       <msqrt>
+        <mrow>
+         <mi>
+          ℓ
+         </mi>
+         <mo>
+          /
+         </mo>
+         <mi>
+          g
+         </mi>
+        </mrow>
+       </msqrt>
+      </mrow>
+     </math>
+     , onde o termo entre parênteses fornece a correção necessária para qualquer valor do ângulo inicial
+     <i>
+      θ
+     </i>
+     <sub>
+      0
+     </sub>
+     . (A dedução desta
+     <i>
+      integral elíptica K
+     </i>
+     é um tanto longa, então optamos por não apresentá-la aqui.) A fim de estimar esta correção, a
+     <a class="open-asset-modal" data-target="#ModalTablet01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     extraída de Beer e cols. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       [15]
+       <span>
+        F.P. Beer, E.R. Johnston e P.J. Cornwell Mecânica Vetorial Para Engenheiros: Dinâmica (AMGH, Porto Alegre, 2012), v. 2.
+       </span>
+      </span>
+     </span>
+     ] mostra o fator 2
+     <i>
+      K
+     </i>
+     /
+     <i>
+      π
+     </i>
+     para alguns valores de
+     <i>
+      θ
+     </i>
+     <sub>
+      0
+     </sub>
+     .
+    </p>
+    <div class="row table" id="t01">
+     <a name="t01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet01" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Fator de correção do período do pêndulo em função da amplitude angular
+      <i>
+       θ
+      </i>
+      <sub>
+       0
+      </sub>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para o caso de pêndulo físico a quantidade
+     <math display="inline" id="m12">
+      <mrow>
+       <msqrt>
+        <mrow>
+         <mi>
+          ℓ
+         </mi>
+         <mo>
+          /
+         </mo>
+         <mi>
+          g
+         </mi>
+        </mrow>
+       </msqrt>
+      </mrow>
+     </math>
+     deve ser substituída por
+     <math display="inline" id="m13">
+      <mrow>
+       <msqrt>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          /
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mi>
+          ℓ
+         </mi>
+        </mrow>
+       </msqrt>
+      </mrow>
+     </math>
+     , deste modo o período fica
+    </p>
+    <div class="row formula" id="ee11">
+     <a name="e11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m14">
+        <mrow>
+         <mi>
+          T
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              K
+             </mi>
+            </mrow>
+            <mi>
+             π
+            </mi>
+           </mfrac>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          π
+         </mi>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              m
+             </mi>
+             <mi>
+              g
+             </mi>
+             <mi>
+              ℓ
+             </mi>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Consequentemente, a frequência angular (
+     <i>
+      ω
+     </i>
+     = 2
+     <i>
+      π
+     </i>
+     /
+     <i>
+      T
+     </i>
+     ) para o caso anarmônico não amortecido é dada por
+    </p>
+    <div class="row formula" id="ee12">
+     <a name="e12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m15">
+        <mrow>
+         <mi>
+          ω
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mi>
+           π
+          </mi>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            K
+           </mi>
+          </mrow>
+         </mfrac>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              m
+             </mi>
+             <mi>
+              g
+             </mi>
+             <mi>
+              ℓ
+             </mi>
+            </mrow>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h3>
+     1.1.2. Oscilações amortecidas
+    </h3>
+    <p>
+     Tais sistemas, mesmo com oscilações de pequena amplitude, estão sujeitos ao atrito de rotação do pivô e à resistência do ar. Isto inclui um torque
+     <i>
+      τ
+      <sub>
+       R
+      </sub>
+     </i>
+     contrário ao movimento que, em primeira aproximação, é diretamente proporcional à velocidade de rotação
+     <i>
+      dθ
+     </i>
+     /
+     <i>
+      dt
+     </i>
+     em torno do pivô
+    </p>
+    <div class="row formula" id="ee13">
+     <a name="e13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m16">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            τ
+           </mi>
+          </mrow>
+          <mi>
+           R
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mi>
+          b
+         </mi>
+         <mo>
+         </mo>
+         <mi>
+          d
+         </mi>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          /
+         </mo>
+         <mi>
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Desta forma, a oscilação é denominada
+     <i>
+      amortecida
+     </i>
+     , sendo
+     <i>
+      b
+     </i>
+     a constante de amortecimento, em que a amplitude de oscilação diminui com o tempo. Introduzindo este termo adicional na
+     <a class="open-asset-modal" data-target="#ModalSchemee06" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (6)
+     </a>
+     , obtém-se
+    </p>
+    <div class="row formula" id="ee14">
+     <a name="e14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m17">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mrow>
+             <mi>
+              d
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mrow>
+             <mi>
+              t
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mi>
+          b
+         </mi>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mi>
+          ℓ
+         </mi>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Dividindo a
+     <a class="open-asset-modal" data-target="#ModalSchemee14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (14)
+     </a>
+     por
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     tem-se
+    </p>
+    <div class="row formula" id="ee15">
+     <a name="e15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m18">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <msup>
+            <mrow>
+             <mi>
+              d
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <msup>
+            <mrow>
+             <mi>
+              t
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mfrac>
+          <mi>
+           b
+          </mi>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              I
+             </mi>
+            </mrow>
+            <mi>
+             p
+            </mi>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          +
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mi>
+            g
+           </mi>
+           <mi>
+            ℓ
+           </mi>
+          </mrow>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              I
+             </mi>
+            </mrow>
+            <mi>
+             p
+            </mi>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mo>
+          .
+         </mo>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A solução da
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (15)
+     </a>
+     é análoga ao caso massa-mola amortecido [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       [16]
+       <span>
+        D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2012), v. 2, 9a ed.
+       </span>
+      </span>
+     </span>
+     ]. Considerando a amplitude
+     <i>
+      A
+     </i>
+     do movimento como sendo
+     <i>
+      ℓθ
+     </i>
+     <sub>
+      0
+     </sub>
+     e a posição na direção
+     <i>
+      x
+     </i>
+     como
+     <i>
+      ℓθ
+     </i>
+     , a solução da
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (15)
+     </a>
+     para pequenas oscilações resulta em
+    </p>
+    <div class="row formula" id="ee16">
+     <a name="e16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m19">
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          =
+         </mo>
+         <mi>
+          A
+         </mi>
+         <msup>
+          <mrow>
+           <mi>
+            e
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mi>
+            b
+           </mi>
+           <mi>
+            t
+           </mi>
+           <mo>
+            /
+           </mo>
+           <mn>
+            2
+           </mn>
+           <msub>
+            <mrow>
+             <mi>
+              I
+             </mi>
+            </mrow>
+            <mi>
+             p
+            </mi>
+           </msub>
+          </mrow>
+         </msup>
+         <mtext>
+          cos
+         </mtext>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          ω
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          ϕ
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     x
+    </i>
+    representa a amplitude horizontal de algum ponto do corpo;
+    <i>
+     A
+    </i>
+    a amplitude inicial para
+    <i>
+     x
+    </i>
+    em
+    <i>
+     t
+    </i>
+    = 0;
+    <i>
+     b
+    </i>
+    a constante de amortecimento;
+    <i>
+     I
+     <sub>
+      p
+     </sub>
+    </i>
+    o momento de inércia do corpo;
+    <i>
+     ω
+    </i>
+    a frequência angular de oscilação e
+    <i>
+     t
+    </i>
+    o instante de observação da posição do corpo na direção
+    <i>
+     x
+    </i>
+    .
+    <p>
+     É importante notar que a constante
+     <i>
+      b
+     </i>
+     refere-se a um
+     <i>
+      amortecimento rotacional
+     </i>
+     , de dimensões [M][L]
+     <sup>
+      2
+     </sup>
+     /[T](kg.m
+     <sup>
+      2
+     </sup>
+     /s no Sistema Internacional de Unidades).
+    </p>
+    <p>
+     A manutenção da função cosseno na solução da
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (16)
+     </a>
+     facilita a interpretação física, pois o movimento se inicia com amplitude máxima, assim, tem-se a fase
+     <i>
+      ϕ
+     </i>
+     = 0.
+    </p>
+    <p>
+     Como o objetivo deste experimento é comparar valores do momento de inércia
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     de acordo com os modelos estático (usando a geometria da ripa) e dinâmico (analisando sua oscilação), deve-se considerar o deslocamento da frequência natural (
+     <i>
+      ω
+     </i>
+     ) devido ao amortecimento. Assim, iremos diferenciar a frequência de oscilação
+     <i>
+      não amortecida ω
+     </i>
+     <sub>
+      0
+     </sub>
+     = 2
+     <i>
+      πf
+     </i>
+     <sub>
+      0
+     </sub>
+     da frequência
+     <i>
+      ω
+     </i>
+     = 2
+     <i>
+      πf
+     </i>
+     devido ao amortecimento, conforme a
+     <a class="open-asset-modal" data-target="#ModalSchemee17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (17)
+     </a>
+    </p>
+    <div class="row formula" id="ee17">
+     <a name="e17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m20">
+        <mrow>
+         <mi>
+          ω
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <msubsup>
+            <mrow>
+             <mi>
+              ω
+             </mi>
+            </mrow>
+            <mn>
+             0
+            </mn>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo>
+            −
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mi>
+                  b
+                 </mi>
+                 <mrow>
+                  <mn>
+                   2
+                  </mn>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    sendo
+    <i>
+     ω
+    </i>
+    <sub>
+     0
+    </sub>
+    equivalente ao obtido na
+    <a class="open-asset-modal" data-target="#ModalSchemee08" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (8)
+    </a>
+    . Assim, o cálculo da frequência angular para o pêndulo físico torna-se
+    <div class="row formula" id="ee18">
+     <a name="e18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block" id="m21">
+        <mrow>
+         <mi>
+          ω
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              m
+             </mi>
+             <mi>
+              g
+             </mi>
+             <mi>
+              ℓ
+             </mi>
+            </mrow>
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mi>
+               P
+              </mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <mo>
+            −
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mi>
+                  b
+                 </mi>
+                 <mrow>
+                  <mn>
+                   2
+                  </mn>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                </mfrac>
+                <mo>
+                 .
+                </mo>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h2>
+     1.2. Cálculo do momento de inércia (método estático)
+    </h2>
+    <p>
+     O momento de inércia de uma placa retangular relativo a um eixo perpendicular ao plano da mesma, que passa pelo seu centro de massa [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       [11]
+       <span>
+        D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2012), v. 1, 9a ed.
+       </span>
+      </span>
+     </span>
+     ] é dado por
+    </p>
+    <div class="row formula" id="ee19">
+     <a name="e19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block" id="m22">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="italic">
+            CM
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mfrac>
+          <mrow>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msup>
+              <mrow>
+               <mi>
+                h
+               </mi>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mi>
+                w
+               </mi>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mrow>
+           <mn>
+            12
+           </mn>
+          </mrow>
+         </mfrac>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    sendo
+    <i>
+     m
+    </i>
+    a massa da placa,
+    <i>
+     h
+    </i>
+    o seu comprimento e
+    <i>
+     w
+    </i>
+    a sua largura.
+    <p>
+     A placa utilizada no experimento é uma ripa de geometria semelhante a um paralelepípedo. Nesta categoria, a espessura (dimensão ao longo do eixo pivô) não contribui para o valor do momento de inércia
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     .
+    </p>
+    <p>
+     No caso em que o corpo oscila em relação a um eixo que passa por uma de suas extremidades, aplica-se o teorema dos eixos paralelos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       [11]
+       <span>
+        D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2012), v. 1, 9a ed.
+       </span>
+      </span>
+     </span>
+     ] para reavaliar o momento de inércia
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     relativo ao novo eixo de oscilação
+    </p>
+    <div class="row formula" id="ee20">
+     <a name="e20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <math display="block" id="m23">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="italic">
+            CM
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <mi>
+          m
+         </mi>
+         <msup>
+          <mrow>
+           <mi>
+            ℓ
+           </mi>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     ℓ
+    </i>
+    é a distância entre o eixo que passa pelo centro de massa (
+    <i>
+     CM
+    </i>
+    ) e o novo eixo paralelo a este, posicionado na extremidade da placa. Assim, o momento de inércia recalculado para este novo eixo torna-se
+    <div class="row formula" id="ee21">
+     <a name="e21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <math display="block" id="m24">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mrow>
+               <msup>
+                <mrow>
+                 <mi>
+                  h
+                 </mi>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                +
+               </mo>
+               <msup>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+              <mo>
+               )
+              </mo>
+             </mrow>
+            </mrow>
+            <mrow>
+             <mn>
+              12
+             </mn>
+            </mrow>
+           </mfrac>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mi>
+              ℓ
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo a
+     <a class="open-asset-modal" data-target="#ModalSchemee21" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (21)
+     </a>
+     na
+     <a class="open-asset-modal" data-target="#ModalSchemee08" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (8)
+     </a>
+     resulta na seguinte expressão para a frequência natural de oscilação sem amortecimento
+    </p>
+    <div class="row formula" id="ee22">
+     <a name="e22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <math display="block" id="m25">
+        <mrow>
+         <msubsup>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            g
+           </mi>
+           <mi>
+            ℓ
+           </mi>
+          </mrow>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <msup>
+              <mrow>
+               <mi>
+                h
+               </mi>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mi>
+                w
+               </mi>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mrow>
+             <mn>
+              12
+             </mn>
+            </mrow>
+           </mfrac>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mi>
+              ℓ
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalSchemee22" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (22)
+     </a>
+     mostra claramente que a frequência natural de oscilação harmônica do pêndulo físico independe da sua massa.
+    </p>
+    <p>
+     Para o caso amortecido, a frequência apresentada na
+     <a class="open-asset-modal" data-target="#ModalSchemee17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (17)
+     </a>
+     é reescrita como
+    </p>
+    <div class="row formula" id="ee23">
+     <a name="e23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <math display="block" id="m26">
+        <mrow>
+         <mi>
+          ω
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              g
+             </mi>
+             <mi>
+              ℓ
+             </mi>
+            </mrow>
+            <mrow>
+             <mfrac>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <msup>
+                <mrow>
+                 <mi>
+                  h
+                 </mi>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                +
+               </mo>
+               <msup>
+                <mrow>
+                 <mi>
+                  w
+                 </mi>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mrow>
+               <mn>
+                12
+               </mn>
+              </mrow>
+             </mfrac>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mi>
+                ℓ
+               </mi>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </mfrac>
+           <mo>
+            −
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mi>
+                  b
+                 </mi>
+                 <mrow>
+                  <mn>
+                   2
+                  </mn>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                </mfrac>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     2. Materiais e métodos
+    </h1>
+    <p>
+     Neste estudo foi utilizada como placa uma ripa de eucalipto de massa
+     <i>
+      m
+     </i>
+     = (68,14 ± 0,01) g, comprimento
+     <i>
+      h
+     </i>
+     = (473,0 ± 0,5) mm, largura
+     <i>
+      w
+     </i>
+     = (41,0 ± 0,5) mm e espessura
+     <i>
+      a
+     </i>
+     = (10,0 ± 0,5)mm. A massa da ripa foi aferida com balança semianalítica e suas dimensões medidas com uma régua.
+    </p>
+    <p>
+     Para a determinação da posição do centro de massa (
+     <i>
+      CM
+     </i>
+     ) da ripa, foram efetuados três furos com 2 mm de diâmetro ao longo da sua extremidade. Os dois furos externos foram utilizados para a determinação do
+     <i>
+      CM
+     </i>
+     pelo método do prumo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       [12]
+       <span>
+        A.K.T. Assis, Arquimedes, o Centro de Gravidade e a Lei da Alavanca (C. Roy Keys Inc., Montreal, 2008).
+       </span>
+      </span>
+     </span>
+     ], conforme ilustra a
+     <a class="open-asset-modal" data-target="#ModalFigf02" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     . Neste método dependura-se a ripa por um dos furos externos, soltando-a do repouso. Depois que a ripa oscilou e atingiu o repouso, dependura-se no mesmo alfinete o fio de prumo junto a ripa e, novamente, coloca-se o conjunto para oscilar. Depois que o sistema “ripa + fio de prumo” atinge o equilíbrio, traça-se uma reta vertical que coincide com a direção indicada pelo fio de prumo. Faz-se o mesmo procedimento pendurando-se o sistema no furo da outra extremidade da ripa. O cruzamento das duas retas indica a posição do
+     <i>
+      CM
+     </i>
+     da ripa. A distância entre o furo central (eixo de oscilação) e o
+     <i>
+      CM
+     </i>
+     da ripa foi medida com uma régua, cujo valor foi de
+     <i>
+      ℓ
+     </i>
+     = (234,0 ± 0,5) mm.
+    </p>
+    <div class="row fig" id="f02">
+     <a name="f02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf02" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Ripa com o fio de prumo utilizado para a determinação do
+      <i>
+       CM
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <div>
+     Outro valor necessário para determinar o momento de inércia é o da aceleração gravitacional que, nos cálculos do dia-a-dia geralmente utiliza-se
+     <i>
+      g
+     </i>
+     = 9,8 m/s
+     <sup>
+      2
+     </sup>
+     . Segundo Lopes [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       [17]
+       <span>
+        W. Lopes, Cad. Bras. Ens. Fís. 25, 561 (2008).
+       </span>
+      </span>
+     </span>
+     ],
+     <div>
+      <blockquote>
+       <p>
+        ...É notória a dificuldade de alguns alunos, que ingressam no curso superior, em admitir que a aceleração da gravidade não seja uma grandeza física constante. Afinal, é natural que, após um longo período de tempo (pelo menos três anos) usando 9,8 m/s
+        <sup>
+         2
+        </sup>
+        (ou seu valor aproximado para 10 m/s
+        <sup>
+         2
+        </sup>
+        ) ficasse consolidado, na mente do aluno, essa grandeza física como sendo constante....
+       </p>
+      </blockquote>
+     </div>
+    </div>
+    <div>
+     Este valor de 9,8 m/s
+     <sup>
+      2
+     </sup>
+     para
+     <i>
+      g
+     </i>
+     é uma aproximação, uma vez que supõe a Terra como sendo uma esfera perfeita e com densidade homogênea. Na realidade, para determinar o valor de
+     <i>
+      g
+     </i>
+     tem-se que levar em consideração a velocidade angular do planeta e o fato do mesmo ser um referencial não inercial. Segundo Maroja e cols. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       [18]
+       <span>
+        A.M. Maroja, M.F.C. Viturino e J. de Sousa Pereira, Proc. XVI Simpósio Nacional de Ensino de Física. Disponível em http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf. Acesso em 12/01/2015.
+       </span>
+       <br/>
+       <a href="http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf" target="_blank">
+        http://www.sbf1.sbfisica.org.br/eventos/...
+       </a>
+      </span>
+     </span>
+     ]:
+     <div>
+      <blockquote>
+       <p>
+        ...A fim de estimar o valor de g com maior precisão devemos nos reportar a mecânica clássica e levar em consideração que a Terra é um referencial não inercial (acelerado) devido ao movimento de rotação. Também temos de levar em conta fatores estáticos, sua forma geométrica de geoide (achatamento nos polos) bem como a altitude do local...
+       </p>
+      </blockquote>
+     </div>
+    </div>
+    <p>
+     Devido à velocidade angular e ao achatamento do planeta, a aceleração da gravidade, a partir do nível do mar, aumenta seu valor ao percorrer-se um meridiano no sentido dos polos. Vários autores têm proposto diferentes expressões matemáticas para determinar o valor da aceleração da gravidade levando-se em conta a latitude e/ou a altitude local [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       [18]
+       <span>
+        A.M. Maroja, M.F.C. Viturino e J. de Sousa Pereira, Proc. XVI Simpósio Nacional de Ensino de Física. Disponível em http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf. Acesso em 12/01/2015.
+       </span>
+       <br/>
+       <a href="http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf" target="_blank">
+        http://www.sbf1.sbfisica.org.br/eventos/...
+       </a>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       [21]
+       <span>
+        Disponível em http://www.sismetra.cta.br/Apresentacao_VI_Semetra/Os_Efeitos_da_Gravidade_na_Calibracao_de_Balancas.pdf, acesso em 12/01/2015.
+       </span>
+       <br/>
+       <a href="http://www.sismetra.cta.br/Apresentacao_VI_Semetra/Os_Efeitos_da_Gravidade_na_Calibracao_de_Balancas.pdf" target="_blank">
+        http://www.sismetra.cta.br/Apresentacao_...
+       </a>
+      </span>
+     </span>
+     ]. Neste trabalho usaremos a seguinte expressão, que considera tanto a latitude quanto a altitude, para determinar o valor de
+     <i>
+      g
+     </i>
+     na cidade de Sorocaba - SP [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       [19]
+       <span>
+        L.G. Mezzalira, G. Moscati e J.M. Saffar. In: ENQUALAB-2006 - Congresso e Feira da Qualidade em Metrologia (REMESP, São Paulo, 2006), p. 1.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row formula" id="ee24">
+     <a name="e24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <math display="block" id="m27">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <mi>
+            g
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            9
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            7803184
+           </mn>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mn>
+              1
+             </mn>
+             <mo>
+              +
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              0053024
+             </mn>
+             <msup>
+              <mrow>
+               <mrow>
+                <mtext>
+                 sen
+                </mtext>
+               </mrow>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mi>
+              L
+             </mi>
+             <mo>
+              −
+             </mo>
+            </mrow>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mrow>
+            <mrow>
+             <mn>
+              0
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              0000059
+             </mn>
+             <msup>
+              <mrow>
+               <mrow>
+                <mtext>
+                 sen
+                </mtext>
+               </mrow>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              L
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              −
+             </mo>
+             <mn>
+              3
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              086
+             </mn>
+             <mo>
+              .
+             </mo>
+             <msup>
+              <mrow>
+               <mrow>
+                <mn>
+                 10
+                </mn>
+               </mrow>
+              </mrow>
+              <mrow>
+               <mo>
+                −
+               </mo>
+               <mn>
+                6
+               </mn>
+              </mrow>
+             </msup>
+             <mi>
+              H
+             </mi>
+             <mo>
+              ,
+             </mo>
+            </mrow>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    onde
+    <i>
+     L
+    </i>
+    é a latitude e
+    <i>
+     H
+    </i>
+    a altitude locais.
+    <div>
+     Maroja e cols. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       [18]
+       <span>
+        A.M. Maroja, M.F.C. Viturino e J. de Sousa Pereira, Proc. XVI Simpósio Nacional de Ensino de Física. Disponível em http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf. Acesso em 12/01/2015.
+       </span>
+       <br/>
+       <a href="http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf" target="_blank">
+        http://www.sbf1.sbfisica.org.br/eventos/...
+       </a>
+      </span>
+     </span>
+     ] comentam ainda que:
+     <div>
+      <blockquote>
+       <p>
+        ...A variação do g sobre a superfície da terra é aproximadamente 0,5%, devido à latitude, aproximadamente 0,003% a cada 100 m de altitude. A topografia local e as marés podem causar pequenos efeitos. A incerteza no valor de g obtido é geralmente menor que ± 5 partes em 10
+        <sup>
+         5
+        </sup>
+        ....
+       </p>
+      </blockquote>
+     </div>
+    </div>
+    <p>
+     A cidade de Sorocaba está situada a uma altitude de 601 m acima do nível do mar, numa latitude de 23°30′06″ [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       [22]
+       <span>
+        Disponível em http://www.geografos.com.br/cidades-so-paulo/Sorocaba.php, acesso em 20/10/2014.
+       </span>
+       <br/>
+       <a href="http://www.geografos.com.br/cidades-so-paulo/Sorocaba.php" target="_blank">
+        http://www.geografos.com.br/cidades-so-p...
+       </a>
+      </span>
+     </span>
+     ]. Substituindo esses valores na relação
+     <a class="open-asset-modal" data-target="#ModalSchemee24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (24)
+     </a>
+     , obtém-se a aceleração da gravidade na cidade de Sorocaba como sendo de 9,786679602 m/s
+     <sup>
+      2
+     </sup>
+     . Para efeito de cálculo neste trabalho arredondaremos o valor de
+     <i>
+      g
+     </i>
+     para 9,79 m/s
+     <sup>
+      2
+     </sup>
+     .
+    </p>
+    <p>
+     Para as medidas do momento de inércia colocou-se a ripa suspensa pelo furo central feito na sua extremidade (
+     <a class="open-asset-modal" data-target="#ModalFigf02" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     ), fixada a um eixo metálico girando com atrito bem pequeno de forma a garantir um regime de oscilação subamortecido, em que ocorrem vários ciclos para melhorar a precisão do ajuste dos parâmetros da função
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     , iniciando pela frequência.
+    </p>
+    <p>
+     O conjunto, apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , teve suspensa por trás uma folha em branco que sustentava uma régua na sua extremidade inferior, para fins de calibração de escala.
+    </p>
+    <div class="row fig" id="f03">
+     <a name="f03">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf03" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Visualização da tela do “Tracker”.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O sistema foi posto a oscilar a partir de um ângulo de 4,8°, valor admissível para a aproximação sen
+     <i>
+      θ
+     </i>
+     ∼
+     <i>
+      θ
+     </i>
+     realizada neste trabalho e que é discutido mais detalhadamente na seção 3.4. Para medir o ângulo inicial de inclinação
+     <i>
+      θ
+     </i>
+     <sub>
+      0
+     </sub>
+     da ripa em relação à vertical foi utilizado o próprio transferidor do “Tracker”, indicado na
+     <a class="open-asset-modal" data-target="#ModalFigf03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     .
+    </p>
+    <p>
+     Como um dos objetivos do experimento é utilizar configurações e equipamentos acessíveis, utilizou-se para a filmagem do movimento um
+     <i>
+      smartphone
+     </i>
+     , com câmera de resolução 5 MP, tomada a uma distância aproximada de 20 cm do conjunto. A duração da filmagem foi de aproximadamente 45 s, gerando 520 quadros com dados de tempo e posições nas direções
+     <i>
+      x
+     </i>
+     e
+     <i>
+      y
+     </i>
+     . A oscilação inicia no quadro n° 32 (
+     <i>
+      t
+     </i>
+     = 2,56s), quando a ripa foi liberada, e termina no quadro 552 (
+     <i>
+      t
+     </i>
+     = 44,07s).
+    </p>
+    <h2>
+     2.1. Medidas com o “Tracker”
+    </h2>
+    <p>
+     O “Tracker” é um software livre que trabalha com a linguagem Java para análise e modelagem de movimentos gravados em vídeo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       [6]
+       <span>
+        A.G. Bezerra Jr., L.P. de Oliveira, J.A. Lenz e N. Saavedra, Cad. Bras. Ens. Fís. 29, 469 (2012).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       [7]
+       <span>
+        J.S. Figueira, Revista Brasileira de Ensino de Física,   33, 4403 (2011).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       [8]
+       <span>
+        D. Brown, Tracker: Video Analysis and Modeling Tool. Disponível em https://www.cabrillo.edu/dbrown/tracker, acesso em 20/10/2014.
+       </span>
+       <br/>
+       <a href="https://www.cabrillo.edu/dbrown/tracker" target="_blank">
+        https://www.cabrillo.edu/dbrown/tracker...
+       </a>
+      </span>
+     </span>
+     ]. Ele tem sido proposto como alternativa para a coleta e análise de dados experimentais.
+    </p>
+    <p>
+     A tomada das posições do pêndulo durante sua oscilação foi realizada inicialmente através do posicionamento do eixo de referência e da escala (em lilás e azul, respectivamente na
+     <a class="open-asset-modal" data-target="#ModalFigf03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ), calibrados com auxílio da imagem da régua. Em seguida, foram marcadas as posições de um ponto da ripa em cada
+     <i>
+      frame
+     </i>
+     do vídeo. Estas marcações consistem em “clicks” na imagem sobre o ponto escolhido que percorre sua trajetória durante a oscilação. Foram tomadas as posições na direção horizontal (
+     <i>
+      x
+     </i>
+     ), usando como origem das coordenadas aquelas definidas pelos eixos de cor lilás da
+     <a class="open-asset-modal" data-target="#ModalFigf03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     .
+    </p>
+    <p>
+     No caso da ripa, este ponto rastreado não precisa necessariamente estar em sua extremidade, pois todos os pontos da mesma seguirão trajetórias conforme a função
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Resultados e discussão
+    </h1>
+    <p>
+     De posse dos dados experimentais efetuou-se a análise dos resultados fornecidos pelo “Tracker” e pelo programa
+     <i>
+      Qtiplot
+     </i>
+     .
+    </p>
+    <h2>
+     3.1. Ajuste dos parâmetros
+    </h2>
+    <p>
+     Para o ajuste da função
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     foi utilizado o próprio “Tracker” e feita uma busca de programas livres que também ajustassem esse tipo de função. Para esse processo utiliza-se a janela “Data Tool” do “Tracker”. Com a opção “autofit” habilitada, informa-se a margem de erro admissível para cada parâmetro (10, 1 ou 0,1%) para a otimização automática dos mesmos. Frequentemente é necessário informar os valores dos parâmetros iniciais para que o programa inicie o processo de ajuste de modo a possibilitar sua convergência. Entre os programas testados, o único que possibilitou um ajuste similar ao do “Tracker” foi o programa
+     <i>
+      Qtiplot
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       [9]
+       <span>
+        42 of the Best Free Linux Scientific Software. Linuxlinks, The Linux Portal. 2009. Disponível em http:www.linuxlinks.com/article/20080803104017665/Scientific.html, acesso em 20/10/2014.
+       </span>
+       <br/>
+       <a href="http:www.linuxlinks.com/article/20080803104017665/Scientific.html" target="_blank">
+        http:www.linuxlinks.com/article/20080803...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       [10]
+       <span>
+        K. Müller and A. Seubert, Isotopes in Environmental and Health Studies 50, 88 (2014).
+       </span>
+      </span>
+     </span>
+     ]. No caso do ajuste utilizando o “Tracker”, basta “clicar” diretamente no gráfico com o botão direito do mouse e, no menu flutuante, selecionar a opção “Analisar”. A função ajustada segue o modelo de oscilação harmônica amortecida mostrada na
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (16)
+     </a>
+     , porém, a constante de fase
+     <i>
+      ϕ
+     </i>
+     foi transformada em um deslocamento no tempo (
+     <i>
+      ϕ
+     </i>
+     = −
+     <i>
+      ωt
+     </i>
+     <sub>
+      0
+     </sub>
+     ) e
+     <i>
+      ω
+     </i>
+     = 2
+     <i>
+      πf
+     </i>
+     escrito explicitamente para fins de ajuste experimental, segundo a função
+     <a class="open-asset-modal" data-target="#ModalSchemee25" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (25)
+     </a>
+    </p>
+    <div class="row formula" id="ee25">
+     <a name="e25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (25)
+       </span>
+       <math display="block" id="m28">
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          =
+         </mo>
+         <mi>
+          A
+         </mi>
+         <msup>
+          <mrow>
+           <mi>
+            e
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mi>
+            B
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                t
+               </mi>
+              </mrow>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </msup>
+         <mtext>
+          cos
+         </mtext>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            π
+           </mi>
+           <mo>
+            .
+           </mo>
+           <mi>
+            f
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mrow>
+               <mi>
+                t
+               </mi>
+              </mrow>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          +
+         </mo>
+         <mi>
+          C
+         </mi>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     t
+    </i>
+    <sub>
+     0
+    </sub>
+    assinala o início do movimento em relação a filmagem, o parâmetro
+    <i>
+     C
+    </i>
+    é a posição da linha de base dos pontos e
+    <i>
+     B
+    </i>
+    =
+    <i>
+     b
+    </i>
+    /2
+    <i>
+     I
+     <sub>
+      p
+     </sub>
+    </i>
+    o parâmetro de amortecimento baseado na
+    <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+     <span class="sci-ico-fileFormula">
+     </span>
+     Eq. (16)
+    </a>
+    .
+    <p>
+     Inserindo a função de ajuste e valores iniciais para os parâmetros, a expressão fornecida pelo “Tracker” após a convergência dos valores foi
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m29">
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          =
+         </mo>
+         <mn>
+          44
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          0
+         </mn>
+         <msup>
+          <mrow>
+           <mi>
+            e
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            049
+           </mn>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msup>
+         <mtext>
+          cos
+         </mtext>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            π
+           </mi>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            89
+           </mn>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              58
+             </mn>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          49
+         </mn>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    com desvio médio quadrático de 3,05 (
+    <a class="open-asset-modal" data-target="#ModalTablet02" data-toggle="modal" href="">
+     <span class="sci-ico-fileTable">
+     </span>
+     Tabela 2
+    </a>
+    ).
+    <div class="row table" id="t02">
+     <a name="t02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet02" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Valores dos parâmetros ajustados pelo “Tracker”.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O gráfico apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     mostra os pontos experimentais e o ajuste da função
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     , ambos obtidos pelo “Tracker”.
+    </p>
+    <div class="row fig" id="f04">
+     <a name="f04">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf04" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Pontos experimentais (em azul) e curva da função
+      <i>
+       x
+      </i>
+      (
+      <i>
+       t
+      </i>
+      ) ajustada pelo “Tracker” (linha contínua em vermelho).
+      <br/>
+     </div>
+    </div>
+    <p>
+     O mesmo ajuste realizado com o programa
+     <i>
+      Qtiplot
+     </i>
+     , resultou na seguinte expressão
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m30">
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+          =
+         </mo>
+         <mn>
+          42
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          44
+         </mn>
+         <msup>
+          <mrow>
+           <mi>
+            e
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            −
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            045
+           </mn>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </msup>
+         <mtext>
+          cos
+         </mtext>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            π
+           </mi>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            89
+           </mn>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mi>
+              t
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              56
+             </mn>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    com desvio médio quadrático de 4,78.
+    <p>
+     Devido ao menor desvio médio quadrático, adotou-se o ajuste realizado pelo “Tracker”. Os valores desses parâmetros estão sumarizados na
+     <a class="open-asset-modal" data-target="#ModalTablet02" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     .
+    </p>
+    <h2>
+     3.2. Momentos de inércia
+    </h2>
+    <p>
+     O momento de inércia calculado para o modelo estático a partir da relação
+     <a class="open-asset-modal" data-target="#ModalSchemee21" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (21)
+     </a>
+     fornece o seguinte valor
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m31">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          005011026
+         </mn>
+         <mo>
+         </mo>
+         <mtext>
+          kg
+         </mtext>
+         <mo>
+          .
+         </mo>
+         <msup>
+          <mrow>
+           <mtext>
+            m
+           </mtext>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A incerteza no valor do momento de inércia
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     , obtido a partir da
+     <a class="open-asset-modal" data-target="#ModalSchemee21" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (21)
+     </a>
+     , é calculada pela expressão de propagação de erro dada pela relação
+     <a class="open-asset-modal" data-target="#ModalSchemee26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (26)
+     </a>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       [23]
+       <span>
+        J.R. Taylor, Introdução à Análise de Erros, (Bookman, Porto Alegre, 2012).
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <div class="row formula" id="ee26">
+     <a name="e26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (26)
+       </span>
+       <math display="block" id="m32">
+        <mrow>
+         <mi>
+          δ
+         </mi>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   h
+                  </mi>
+                 </mrow>
+                </mfrac>
+                <mi>
+                 δ
+                </mi>
+                <mi>
+                 h
+                </mi>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   w
+                  </mi>
+                 </mrow>
+                </mfrac>
+                <mi>
+                 δ
+                </mi>
+                <mi>
+                 w
+                </mi>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   m
+                  </mi>
+                 </mrow>
+                </mfrac>
+                <mi>
+                 δ
+                </mi>
+                <mi>
+                 m
+                </mi>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   ℓ
+                  </mi>
+                 </mrow>
+                </mfrac>
+                <mi>
+                 δ
+                </mi>
+                <mi>
+                 ℓ
+                </mi>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Derivando a expressão
+     <a class="open-asset-modal" data-target="#ModalSchemee21" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (21)
+     </a>
+     e substituindo na
+     <a class="open-asset-modal" data-target="#ModalSchemee26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (26)
+     </a>
+     , obtemos um valor para a incerteza no cálculo do momento de inércia de 0,000016187 kg.m
+     <sup>
+      2
+     </sup>
+     . Portanto, considerando as regras de arredondamento e de algarismos significativos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       [23]
+       <span>
+        J.R. Taylor, Introdução à Análise de Erros, (Bookman, Porto Alegre, 2012).
+       </span>
+      </span>
+     </span>
+     ] o valor calculado para
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     , a partir dos parâmetros medidos inicialmente (
+     <i>
+      h
+     </i>
+     ,
+     <i>
+      w
+     </i>
+     e
+     <i>
+      m
+     </i>
+     ), é expresso na seguinte forma
+    </p>
+    <div class="row formula" id="ee27">
+     <a name="e27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (27)
+       </span>
+       <math display="block" id="m33">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          00501
+         </mn>
+         <mo>
+          ±
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          00002
+         </mn>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+         </mo>
+         <mtext>
+          kg
+         </mtext>
+         <mo>
+          .
+         </mo>
+         <msup>
+          <mrow>
+           <mtext>
+            m
+           </mtext>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Para obter o
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     dinâmico utilizam-se os valores dos parâmetros fornecidos pelo “Tracker” (apresentados na
+     <a class="open-asset-modal" data-target="#ModalTablet02" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     ) e a relação
+     <a class="open-asset-modal" data-target="#ModalSchemee17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (17)
+     </a>
+     , reescrita abaixo substituindo (
+     <i>
+      b
+     </i>
+     /2
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     )
+     <sup>
+      2
+     </sup>
+     por
+     <i>
+      B
+     </i>
+     <sup>
+      2
+     </sup>
+    </p>
+    <div class="row formula" id="ee28">
+     <a name="e28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (28)
+       </span>
+       <math display="block" id="m34">
+        <mrow>
+         <msup>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <msubsup>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+         <mo>
+          −
+         </mo>
+         <msup>
+          <mrow>
+           <mi>
+            B
+           </mi>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O ajuste realizado pelo “Tracker” fornece um valor para
+     <i>
+      B
+     </i>
+     = 0,049 s
+     <sup>
+      −1
+     </sup>
+     , o que resulta em
+     <i>
+      B
+     </i>
+     <sup>
+      2
+     </sup>
+     = 0,0024 s
+     <sup>
+      −2
+     </sup>
+     ,
+     <i>
+      f
+     </i>
+     = 0,89 Hz e
+     <i>
+      ω
+     </i>
+     <sup>
+      2
+     </sup>
+     = (2
+     <i>
+      πf
+     </i>
+     )
+     <sup>
+      2
+     </sup>
+     = 31,2391 (rd/s)
+     <sup>
+      2
+     </sup>
+     . Substituindo esses valores na
+     <a class="open-asset-modal" data-target="#ModalSchemee28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (28)
+     </a>
+     tem-se
+     <math display="inline" id="m35">
+      <mrow>
+       <msubsup>
+        <mrow>
+         <mi>
+          ω
+         </mi>
+        </mrow>
+        <mn>
+         0
+        </mn>
+        <mn>
+         2
+        </mn>
+       </msubsup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        31
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        2415
+       </mn>
+       <msup>
+        <mrow>
+         <mrow>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <mtext>
+             rd
+            </mtext>
+            <mo>
+             /
+            </mo>
+            <mtext>
+             s
+            </mtext>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+      </mrow>
+     </math>
+     . O erro relativo entre os valores de
+     <i>
+      ω
+     </i>
+     <sup>
+      2
+     </sup>
+     e
+     <math display="inline" id="m36">
+      <mrow>
+       <msubsup>
+        <mrow>
+         <mi>
+          ω
+         </mi>
+        </mrow>
+        <mn>
+         0
+        </mn>
+        <mn>
+         2
+        </mn>
+       </msubsup>
+      </mrow>
+     </math>
+     é 0,008%. Observando a relação
+     <a class="open-asset-modal" data-target="#ModalSchemee28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (28)
+     </a>
+     , tem-se que o fato de
+     <i>
+      B
+     </i>
+     ser pequeno (
+     <i>
+      B
+     </i>
+     &lt;&lt;
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     ) implica em
+     <i>
+      ω
+     </i>
+     ≈
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     . Este resultado é consistente com o decaimento visualizado na
+     <a class="open-asset-modal" data-target="#ModalFigf04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , visto que a amplitude do movimento oscilatório dada pelo termo
+     <i>
+      Ae
+     </i>
+     <sup>
+      −
+      <i>
+       Bt
+      </i>
+     </sup>
+     da relação
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     deve diminuir gradualmente com o tempo.
+    </p>
+    <p>
+     O valor de
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     dinâmico é então calculado pela seguinte relação
+    </p>
+    <div class="row formula" id="ee29">
+     <a name="e29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (29)
+       </span>
+       <math display="block" id="m37">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mi>
+            g
+           </mi>
+           <mi>
+            ℓ
+           </mi>
+          </mrow>
+          <mrow>
+           <msubsup>
+            <mrow>
+             <mi>
+              ω
+             </mi>
+            </mrow>
+            <mn>
+             0
+            </mn>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            06814
+           </mn>
+           <mo>
+            ×
+           </mo>
+           <mn>
+            9
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            79
+           </mn>
+           <mo>
+            ×
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            234
+           </mn>
+          </mrow>
+          <mrow>
+           <mn>
+            31
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            2415
+           </mn>
+          </mrow>
+         </mfrac>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m38">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          0049965
+         </mn>
+         <mtext>
+          kg
+         </mtext>
+         <mo>
+          .
+         </mo>
+         <msup>
+          <mrow>
+           <mtext>
+            m
+           </mtext>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A incerteza do momento de inércia obtido da
+     <a class="open-asset-modal" data-target="#ModalSchemee29" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (29)
+     </a>
+     é calculada utilizando propagação de erro [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       [23]
+       <span>
+        J.R. Taylor, Introdução à Análise de Erros, (Bookman, Porto Alegre, 2012).
+       </span>
+      </span>
+     </span>
+     ] a partir das relações a seguir
+    </p>
+    <div class="row formula" id="ee30">
+     <a name="e30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (30)
+       </span>
+       <math display="block" id="m39">
+        <mrow>
+         <mi>
+          δ
+         </mi>
+         <msubsup>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+          <mn>
+           2
+          </mn>
+         </msubsup>
+         <mo>
+          =
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mo>
+          .
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          .
+         </mo>
+         <mi>
+          δ
+         </mi>
+         <msub>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee31">
+     <a name="e31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (31)
+       </span>
+       <math display="block" id="m40">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            δ
+           </mi>
+          </mrow>
+          <msup>
+           <mi>
+            I
+           </mi>
+           <mo>
+            ′
+           </mo>
+          </msup>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msup>
+                   <mi>
+                    I
+                   </mi>
+                   <mo>
+                    ′
+                   </mo>
+                  </msup>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   m
+                  </mi>
+                 </mrow>
+                </mfrac>
+                <mi>
+                 δ
+                </mi>
+                <mi>
+                 m
+                </mi>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msup>
+                   <mi>
+                    I
+                   </mi>
+                   <mo>
+                    ′
+                   </mo>
+                  </msup>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   ℓ
+                  </mi>
+                 </mrow>
+                </mfrac>
+                <mi>
+                 δ
+                </mi>
+                <mi>
+                 ℓ
+                </mi>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msup>
+                   <mi>
+                    I
+                   </mi>
+                   <mo>
+                    ′
+                   </mo>
+                  </msup>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msubsup>
+                   <mrow>
+                    <mi>
+                     ω
+                    </mi>
+                   </mrow>
+                   <mn>
+                    0
+                   </mn>
+                   <mn>
+                    2
+                   </mn>
+                  </msubsup>
+                 </mrow>
+                </mfrac>
+                <mi>
+                 δ
+                </mi>
+                <msubsup>
+                 <mrow>
+                  <mi>
+                   ω
+                  </mi>
+                 </mrow>
+                 <mn>
+                  0
+                 </mn>
+                 <mn>
+                  2
+                 </mn>
+                </msubsup>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo os valores obtidos nas duas relações acima, resulta num erro total para o momento de inércia
+     <i>
+      I
+      <sub>
+       p
+      </sub>
+     </i>
+     de
+     <i>
+      δI
+      <sub>
+       p
+      </sub>
+     </i>
+     = 0,0001375 kg.m
+     <sup>
+      2
+     </sup>
+     . Portanto, o resultado final para o momento de inércia dinâmico levando-se em conta os ajustes realizados pelo “Tracker” fica na seguinte forma
+    </p>
+    <div class="row formula" id="ee32">
+     <a name="e32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (32)
+       </span>
+       <math display="block" id="m41">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            I
+           </mi>
+          </mrow>
+          <mi>
+           p
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          00499
+         </mn>
+         <mo>
+          ±
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          00013
+         </mn>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+         </mo>
+         <mtext>
+          kg
+         </mtext>
+         <mo>
+          .
+         </mo>
+         <msup>
+          <mrow>
+           <mtext>
+            m
+           </mtext>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Comparando os resultados da
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (27)
+     </a>
+     e da
+     <a class="open-asset-modal" data-target="#ModalSchemee32" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (32)
+     </a>
+     observa-se um erro relativo de 0,4%. Este erro é menor se comparado com os resultados da literatura. Pintão e cols. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       [2]
+       <span>
+        C.A.F. Pintão, M.P. Souza Filho, C.R. Grandini and R. Hessel, European Journal of Physics 25, 409 (2004).
+       </span>
+      </span>
+     </span>
+     ] utilizaram uma montagem com sensor óptico para o estudo do movimento de um disco rígido. Neste trabalho o momento de inércia foi obtido indiretamente através da corrente elétrica do sistema de detecção eletrônico, resultando num erro menor que 5% entre o momento de inércia teórico e o experimental. No trabalho de Bonagamba e cols. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       [24]
+       <span>
+        T.J. Bonagamba, E. Santoni, P.R.O. Lasso, C.B. Bretas, A. Gentil, Revista Brasileira de Ensino de Física 17, 133 (1995).
+       </span>
+      </span>
+     </span>
+     ], que também utilizou um sistema de detecção óptico com sensor e receptor infravermelhos, no estudo de oscilação de corpos rígidos, obteve erros relativos que variaram de 1,4% a 3,4%. Eadkhong e cols. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       [3]
+       <span>
+        T. Eadkhong, R. Rajsadorn, P. Jannual and S. Danworaphong, European Journal of Physics 33, 615 (2012).
+       </span>
+      </span>
+     </span>
+     ] utilizou o “Tracker” no estudo do momento de inércia de um cilindro, obtendo erros na faixa de 0,4% a 3,3%.
+    </p>
+    <h2>
+     3.3. Constante de amortecimento
+    </h2>
+    <p>
+     Obtido o valor do momento de inércia dinâmico, torna-se possível calcular a constante de amortecimento rotacional deste movimento como
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m42">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              b
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mi>
+              B
+             </mi>
+             <mn>
+              2
+             </mn>
+             <msub>
+              <mrow>
+               <mi>
+                I
+               </mi>
+              </mrow>
+              <mi>
+               p
+              </mi>
+             </msub>
+             <mo>
+              =
+             </mo>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              049
+             </mn>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              ×
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mo>
+              ×
+             </mo>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              00499
+             </mn>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              ,
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              b
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              000489
+             </mn>
+             <mo>
+             </mo>
+             <mtext>
+              kg
+             </mtext>
+             <mo>
+              .
+             </mo>
+             <msup>
+              <mrow>
+               <mtext>
+                m
+               </mtext>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              /
+             </mo>
+             <mtext>
+              s
+             </mtext>
+             <mo>
+              .
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A incerteza desta constante é dada por
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m43">
+        <mrow>
+         <mi>
+          δ
+         </mi>
+         <mi>
+          b
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   b
+                  </mi>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </mfrac>
+                <mo>
+                 .
+                </mo>
+                <mi>
+                 δ
+                </mi>
+                <mi>
+                 B
+                </mi>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <msup>
+            <mrow>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mfrac>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <mi>
+                   b
+                  </mi>
+                 </mrow>
+                 <mrow>
+                  <mo>
+                   ∂
+                  </mo>
+                  <msub>
+                   <mrow>
+                    <mi>
+                     I
+                    </mi>
+                   </mrow>
+                   <mi>
+                    p
+                   </mi>
+                  </msub>
+                 </mrow>
+                </mfrac>
+                <mo>
+                 .
+                </mo>
+                <mi>
+                 δ
+                </mi>
+                <msub>
+                 <mrow>
+                  <mi>
+                   I
+                  </mi>
+                 </mrow>
+                 <mi>
+                  p
+                 </mi>
+                </msub>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    resultando em
+    <i>
+     δb
+    </i>
+    = 0,0000137kg.m
+    <sup>
+     2
+    </sup>
+    /s, de modo que
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m44">
+        <mrow>
+         <mi>
+          b
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          00049
+         </mn>
+         <mo>
+          ±
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          00001
+         </mn>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mo>
+         </mo>
+         <mtext>
+          kg
+         </mtext>
+         <mo>
+          .
+         </mo>
+         <msup>
+          <mrow>
+           <mtext>
+            m
+           </mtext>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          /
+         </mo>
+         <mtext>
+          s
+         </mtext>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A constante de amortecimento é muito pequena, mas diferente de zero, o que faz com que as frequências angulares harmônica não amortecida (
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     = 5,5819 rd/s,
+     <a class="open-asset-modal" data-target="#ModalSchemee32" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (32)
+     </a>
+     ) e anarmônica amortecida (
+     <i>
+      ω
+     </i>
+     = 5,5817 rd/s,
+     <a class="open-asset-modal" data-target="#ModalSchemee28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (28)
+     </a>
+     ) sejam praticamente iguais. A amplitude da
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (16)
+     </a>
+     , que é o termo
+     <i>
+      Ae
+     </i>
+     <sup>
+      −
+      <i>
+       bt
+      </i>
+      /2
+      <i>
+       Ip
+      </i>
+     </sup>
+     , diminui gradualmente com o tempo e corresponde a envoltória da curva da
+     <a class="open-asset-modal" data-target="#ModalFigf04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     como discutido no item 3.2.
+    </p>
+    <h2>
+     3.4. Desvio do regime harmônico
+    </h2>
+    <p>
+     O ângulo inicial de 4,8° para este experimento é aproximadamente igual a 0,08 radianos. Segundo a literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       [16]
+       <span>
+        D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2012), v. 2, 9a ed.
+       </span>
+      </span>
+     </span>
+     ] o ângulo
+     <i>
+      θ
+     </i>
+     mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     pode ser considerado pequeno quando sen
+     <i>
+      θ
+     </i>
+     ∼
+     <i>
+      θ
+     </i>
+     (com
+     <i>
+      θ
+     </i>
+     em radianos), o que permitiu simplificar a
+     <a class="open-asset-modal" data-target="#ModalSchemee05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     e utilizar as relações
+     <a class="open-asset-modal" data-target="#ModalSchemee06" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (6)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee07" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (7)
+     </a>
+     . No caso de
+     <i>
+      θ
+     </i>
+     = 0,08 rd, tem-se sen
+     <i>
+      θ
+     </i>
+     = 0,0799, o que resulta num erro menor que 0,1%. Este argumento permitiu considerar este ângulo de 4,8° como sendo bem pequeno de modo a empregar a função
+     <a class="open-asset-modal" data-target="#ModalSchemee16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     na condição de oscilação harmônica amortecida. Esta é a justificativa que geralmente se encontra nos livros texto.
+    </p>
+    <p>
+     Uma argumentação mais completa para esse tipo de aproximação é a apresentada na seção 1.1 (Solução exata da
+     <a class="open-asset-modal" data-target="#ModalSchemee05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     ). De acordo com a
+     <a class="open-asset-modal" data-target="#ModalTablet01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , o termo de correção 2
+     <i>
+      K
+     </i>
+     /
+     <i>
+      π
+     </i>
+     pode ser estimado em 1,001 por uma interpolação linear no intervalo de 0° a 10° (
+     <a class="open-asset-modal" data-target="#ModalFigf05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f05">
+     <a name="f05">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf05" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Gráfico obtido com os dados da
+      <a class="open-asset-modal" data-target="#ModalTablet01" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 1
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Utilizando os valores dos parâmetros estáticos tem-se o valor para a frequência angular harmônica não amortecida
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     - lembrando que
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     é equivalente ao obtido na
+     <a class="open-asset-modal" data-target="#ModalSchemee08" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (8)
+     </a>
+     - dada por
+    </p>
+    <div class="row formula" id="ee33">
+     <a name="e33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (33)
+       </span>
+       <math display="block" id="m45">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <msub>
+            <mrow>
+             <mi>
+              ω
+             </mi>
+            </mrow>
+            <mn>
+             0
+            </mn>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <msqrt>
+            <mrow>
+             <mfrac>
+              <mrow>
+               <mi>
+                m
+               </mi>
+               <mi>
+                g
+               </mi>
+               <mi>
+                ℓ
+               </mi>
+              </mrow>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  I
+                 </mi>
+                </mrow>
+                <mi>
+                 p
+                </mi>
+               </msub>
+              </mrow>
+             </mfrac>
+            </mrow>
+           </msqrt>
+           <mo>
+            =
+           </mo>
+           <msqrt>
+            <mrow>
+             <mfrac>
+              <mrow>
+               <mn>
+                0
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mn>
+                06814
+               </mn>
+               <mo>
+                ×
+               </mo>
+               <mn>
+                9
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mn>
+                790
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mn>
+                234
+               </mn>
+              </mrow>
+              <mrow>
+               <mn>
+                0
+               </mn>
+               <mo>
+                ,
+               </mo>
+               <mn>
+                00501
+               </mn>
+              </mrow>
+             </mfrac>
+            </mrow>
+           </msqrt>
+           <mo>
+            =
+           </mo>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mn>
+            5
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            5819
+           </mn>
+           <mo>
+           </mo>
+           <mtext>
+            rd
+           </mtext>
+           <mo>
+            /
+           </mo>
+           <mtext>
+            s
+           </mtext>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Aplicando-se a correção para o caso anarmônico, discutido na seção 1.1 (solução exata da
+     <a class="open-asset-modal" data-target="#ModalSchemee05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     ), e a interpolação linear já discutida acima, tem-se a frequência angular anarmônica não amortecida dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemee12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (12)
+     </a>
+    </p>
+    <div class="row formula" id="ee34">
+     <a name="e34">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (34)
+       </span>
+       <math display="block" id="m46">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+          </mrow>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mn>
+           1
+          </mn>
+          <mrow>
+           <mn>
+            1
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            001
+           </mn>
+          </mrow>
+         </mfrac>
+         <mo>
+          ×
+         </mo>
+         <mn>
+          5
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          5819
+         </mn>
+         <mo>
+          =
+         </mo>
+         <mn>
+          5
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          5763
+         </mn>
+         <mo>
+         </mo>
+         <mtext>
+          rd
+         </mtext>
+         <mo>
+          /
+         </mo>
+         <mtext>
+          s
+         </mtext>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A diferença percentual entre os valores de
+     <i>
+      ω
+     </i>
+     <sub>
+      0
+     </sub>
+     obtidos nas Eqs.
+     <a class="open-asset-modal" data-target="#ModalSchemee32" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (32)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee33" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (33)
+     </a>
+     é de 0,1%, que é uma ordem de grandeza inferior ao desvio experimental de 1% na frequência angular. Portanto, considera-se que o sistema pode ser aproximado ao regime de oscilação harmônica amortecida.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Conclusões
+    </h1>
+    <p>
+     O uso do programa “Tracker” facilitou a tomada e a análise dos dados experimentais, e seus resultados apresentaram grande concordância com os cálculos do momento de inércia obtido a partir das dimensões da ripa.
+    </p>
+    <p>
+     A disseminação de aparelhos portáteis tais como
+     <i>
+      tablets
+     </i>
+     e
+     <i>
+      smartphones
+     </i>
+     , com capacidade de filmagem, bem como a disponibilidade de computadores atualmente nas escolas e a gratuidade deste programa, permitem uma maior facilidade no aprendizado dos alunos no estudo de fenômenos físicos.
+    </p>
+    <p>
+     Os resultados mostraram que o ajuste realizado com o programa “Tracker” é mais preciso do que o obtido através do programa
+     <i>
+      Qtiplot
+     </i>
+     , para obtenção dos parâmetros do movimento oscilatório. Além disso, o “Tracker” é um ambiente em que integra o vídeo, a coleta de dados e os cálculos necessários para o problema em estudo, facilitando as análises dos parâmetros experimentais de movimentos.
+    </p>
+    <p>
+     Esta forma de análise experimental também permitiu a comparação com os modelos teóricos harmônico e anarmônico, além de estimar o fator de amortecimento com precisão de 1%, o que, didaticamente, permite a comparação de um sistema real diante de um modelo de movimento e a estimativa dos desvios ocorridos.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem à FAPESP (processo n° 2014/21122-00) pelo apoio financeiro.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        C.A.F. Pintão, M.P. Souza Filho e W.F. Usida, Revista Brasileira de Ensino de Física
+        <b>
+         27
+        </b>
+        , 237 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        C.A.F. Pintão, M.P. Souza Filho, C.R. Grandini and R. Hessel, European Journal of Physics
+        <b>
+         25
+        </b>
+        , 409 (2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        T. Eadkhong, R. Rajsadorn, P. Jannual and S. Danworaphong, European Journal of Physics
+        <b>
+         33
+        </b>
+        , 615 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        A. Kazachkov, A.S. Castellanos and V. Kostyukov, Lat. Am. J. Phys. Educ.
+        <b>
+         6
+        </b>
+        , Suppl. I, 168 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        L.P. Vieira e V.O.M. Lara, Revista Brasileira de Ensino de Física
+        <b>
+         35
+        </b>
+        , 3503 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        A.G. Bezerra Jr., L.P. de Oliveira, J.A. Lenz e N. Saavedra, Cad. Bras. Ens. Fís.
+        <b>
+         29
+        </b>
+        , 469 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        J.S. Figueira, Revista Brasileira de Ensino de Física,
+        <b>
+         33
+        </b>
+        , 4403 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        D. Brown,
+        <i>
+         Tracker: Video Analysis and Modeling Tool
+        </i>
+        Disponível em https://www.cabrillo.edu/dbrown/tracker, acesso em 20/10/2014.
+        <br/>
+        <a href="https://www.cabrillo.edu/dbrown/tracker" target="_blank">
+         » https://www.cabrillo.edu/dbrown/tracker
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        42 of the Best Free Linux Scientific Software. Linuxlinks, The Linux Portal. 2009. Disponível em http:www.linuxlinks.com/article/20080803104017665/Scientific.html, acesso em 20/10/2014.
+        <br/>
+        <a href="http://www.linuxlinks.com/article/20080803104017665/Scientific.html" target="_blank">
+         » http:www.linuxlinks.com/article/20080803104017665/Scientific.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        K. Müller and A. Seubert, Isotopes in Environmental and Health Studies
+        <b>
+         50
+        </b>
+        , 88 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        D. Halliday, R. Resnick e J. Walker,
+        <i>
+         Fundamentos de Física
+        </i>
+        (LTC, Rio de Janeiro, 2012), v. 1, 9
+        <sup>
+         <i>
+          a
+         </i>
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        A.K.T. Assis,
+        <i>
+         Arquimedes, o Centro de Gravidade e a Lei da Alavanca
+        </i>
+        (C. Roy Keys Inc., Montreal, 2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        D.H. Young e R.A. Freedman,
+        <i>
+         Física I
+        </i>
+        (Pearson Education do Brasil, São Paulo, 2008), 12
+        <sup>
+         <i>
+          a
+         </i>
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        G.L. Baker and J.A. Blackburn,
+        <i>
+         The Pendulum: A Case Study in Physics
+        </i>
+        (Oxford University Press, Oxford, 2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        F.P. Beer, E.R. Johnston e P.J. Cornwell
+        <i>
+         Mecânica Vetorial Para Engenheiros: Dinâmica
+        </i>
+        (AMGH, Porto Alegre, 2012), v. 2.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        D. Halliday, R. Resnick e J. Walker,
+        <i>
+         Fundamentos de Física
+        </i>
+        (LTC, Rio de Janeiro, 2012), v. 2, 9
+        <sup>
+         <i>
+          a
+         </i>
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        W. Lopes, Cad. Bras. Ens. Fís.
+        <b>
+         25
+        </b>
+        , 561 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        A.M. Maroja, M.F.C. Viturino e J. de Sousa Pereira,
+        <i>
+         Proc. XVI Simpósio Nacional de Ensino de Física
+        </i>
+        Disponível em http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf Acesso em 12/01/2015.
+        <br/>
+        <a href="http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf" target="_blank">
+         » http://www.sbf1.sbfisica.org.br/eventos/snef/xvi/cd/resumos/T0297-1.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        L.G. Mezzalira, G. Moscati e J.M. Saffar. In:
+        <i>
+         ENQUALAB-2006 - Congresso e Feira da Qualidade em Metrologia
+        </i>
+        (REMESP, São Paulo, 2006), p. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        <i>
+         Levantamentos Gravimétricos
+        </i>
+        , Disponível em   http://w3.ualg.pt/jluis/files/folhas_cap1.pdf, acesso em 12/01/2015.
+        <br/>
+        <a href="http://w3.ualg.pt/jluis/files/folhas_cap1.pdf" target="_blank">
+         » http://w3.ualg.pt/jluis/files/folhas_cap1.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        Disponível em http://www.sismetra.cta.br/Apresentacao_VI_Semetra/Os_Efeitos_da_Gravidade_na_Calibracao_de_Balancas.pdf, acesso em 12/01/2015.
+        <br/>
+        <a href="http://www.sismetra.cta.br/Apresentacao_VI_Semetra/Os_Efeitos_da_Gravidade_na_Calibracao_de_Balancas.pdf" target="_blank">
+         » http://www.sismetra.cta.br/Apresentacao_VI_Semetra/Os_Efeitos_da_Gravidade_na_Calibracao_de_Balancas.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        Disponível em http://www.geografos.com.br/cidades-so-paulo/Sorocaba.php, acesso em 20/10/2014.
+        <br/>
+        <a href="http://www.geografos.com.br/cidades-so-paulo/Sorocaba.php" target="_blank">
+         » http://www.geografos.com.br/cidades-so-paulo/Sorocaba.php
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [23]
+       </sup>
+       <div>
+        J.R. Taylor,
+        <i>
+         Introdução à Análise de Erros
+        </i>
+        , (Bookman, Porto Alegre, 2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [24]
+       </sup>
+       <div>
+        T.J. Bonagamba, E. Santoni, P.R.O. Lasso, C.B. Bretas, A. Gentil, Revista Brasileira de Ensino de Física
+        <b>
+         17
+        </b>
+        , 133 (1995).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Jun 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        03 Nov 2014
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        04 Fev 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        Todo o conteúdo deste periódico, exceto onde está identificado, está licenciado sob uma Licença Creative Commons.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

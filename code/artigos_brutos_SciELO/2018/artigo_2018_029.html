@@ -1,0 +1,4969 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 40 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   2018
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2017-0221" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2017-0221
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0221">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Estudo e aplicação de simulação computacional em problemas simples de mecânica dos fluidos e transferência de calor - Parte II: Problemas clássicos de transmissão de calor
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Study and application of computational simulation in simple problems of fluid mechanics and heat transfer - Part II: Heat transfer classic problems
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Claus Franz Wehmann
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:Claus.wehmann@ufc.br">
+      Claus.wehmann@ufc.br
+     </a>
+     .
+    </div>
+    Departamento de Engenharia Mecânica, Universidade Federal do Ceará, Fortaleza, CE, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Paulo Alexandre Costa Rocha
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Departamento de Engenharia Mecânica, Universidade Federal do Ceará, Fortaleza, CE, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Maria Eugênia Vieira da Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Departamento de Engenharia Mecânica, Universidade Federal do Ceará, Fortaleza, CE, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Felipe Alves Albuquerque Araújo
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Departamento de Engenharia Mecânica, Universidade Federal do Ceará, Fortaleza, CE, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor5">
+    <span>
+     Daniel Leite Correia
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor5" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Departamento de Engenharia Mecânica, Universidade Federal do Ceará, Fortaleza, CE, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Dando continuidade ao estudo referente à utilização de Dinâmica dos Fluidos Computacional (DFC) no ensino de física e engenharia, o presente trabalho visa analisar e comparar, com fins didáticos, soluções obtidas numericamente com soluções analíticas e empíricas, comumente apresentadas em sala de aula e de interesse de laboratórios de graduação, de problemas clássicos envolvendo dinâmica dos fluidos e transferência de calor. Neste estudo o foco maior foi dado a problemas de transferência de calor. Para o cálculo das soluções numéricas foi utilizado um dos softwares representantes do estado da arte de DFC, o ANSYS CFX 12.1. Os problemas escolhidos foram: convecção em placa plana em regime laminar, escoamento laminar em torno de um cilindro aquecido, escoamento interno turbulento em dutos circulares aquecidos e trocador de calor de tubos concêntricos. Estes problemas, aqui apresentados, foram escolhidos e resolvidos por alunos de graduação, avalizando a utilidade da DFC como ferramenta de aprendizado de fenômenos físicos.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     mecânica dos fluidos; transmissão de calor; dinâmica dos fluidos computacional; método dos volumes finitos; Ansys-CFX 12.1; ferramenta didática
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     Continuing the study on the use of Computational Fluid Dynamics (CFD) in physics and engineering teaching, the present work aims to analyze and compare, for didactic purposes, solutions numerically obtained against known analytical and empirical solutions, commonly presented in the classroom and in undergraduate labs, of classical problems involving fluid dynamics and heat transfer. In this study the main focus was pointed to heat transfer problems. For the numerical solutions computation, one of the Computational Fluid Dynamics (CFD) softwares that represent its state-of-the-art, ANSYS CFX 12.1 was employed. The chosen problems were: laminar heated plate convection, laminar flow around a heated cylinder, turbulent internal flow in heated circular ducts and concentric tubes heat exchanger. These problems were chosen and solved by undergraduate students, demonstrating the usefulness of CFD as a tool for learning physical phenomena.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     fluid mechanics; heat exchange; computational fluid dynamics; finite volume method; Ansys-CFX 12.1; didactic tool
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Procurando reduzir custos e tempo para o desenvolvimento de novos produtos, o uso da simulação numérica em projetos ou para análise de problemas físicos tem aumentado cada vez mais. O uso da simulação numérica está mais acessível devido principalmente a alguns fatores: redução nos custos dos equipamentos de
+     <i>
+      hardware
+     </i>
+     computacional, aumento na performance dos processadores e avanços dos
+     <i>
+      softwares
+     </i>
+     de simulação numérica. Com ampla utilização em uma variedade de campos, incluindo aeroespacial, automotivo, geração de energia, etc; seu uso tem levado a reduções nos custos dos produtos e nos processos de desenvolvimento.
+    </p>
+    <p>
+     Perante esta realidade, o aluno de graduação em ciências da natureza ou engenharia comumente carece de oportunidades de perceber detalhadamente fenômenos estudados em sala ou em laboratório. Neste contexto, o uso de modelagem dos problemas estudados pode ajudar a aproximar este aluno à realidade, de uma forma comumente mais acessível e segura, como já indicado por Rocha e Silveira [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] P.A.C. Rocha, e J.V.P. Silveira, Revista Brasileira de Ensino de Física 34, 4306 (2012).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Assim, sendo, o propósito deste trabalho é analisar e comparar resultados obtidos numericamente com resultados conhecidos analiticamente e/ou empiricamente para problemas clássicos que envolvem transferência de calor. Para as soluções numéricas foi utilizado o ANSYS CFX 12.1, um pacote de DFC que encontra-se no estado da arte, largamente utilizado e que conta inclusive com uma versão educacional.
+    </p>
+    <p>
+     Os problemas estudados, apesar de aparentemente simples e cuja a solução analítica (ou baseada em correlações empíricas) pode ser encontrada na literatura clássica, têm sido objetos de estudos além da validação dos códigos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R. Khatri, P. Agrawal, M. Gupta and J. Verma, International Journal of Advances in Engineering and Technology 3, 756 (2012).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M. Hashiguci and K. Huwahara, in: RIMS Annual Conference Proceedings, Denver, Colorado, 1996.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] M. Sato and T. Kobayashi, in: SIMULIA community Conference, Providence RI, EUA, 2012
+       </span>
+      </span>
+     </span>
+     ], por exemplo em pesquisa sobre materiais da parede de trocadores de calor [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] G.S.L. Swathi and V. Subrahmanyam, Journal of Engineering Research and Technology 3, 215 (2014).
+       </span>
+      </span>
+     </span>
+     ] ou adição de nano partículas ao fluido [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] P. Kumar and R. Ganesom, International Journal of Mathematical, Computational, Physical, Eletrical and Computer Engineering 6, 909 (2012).
+       </span>
+      </span>
+     </span>
+     ] com o objetivo de melhorar suas características de troca de calor. Mesmo a determinação de coeficientes de troca de calor, normalmente feito de forma empírica, pode ser realizada com reduzidos custos e com precisão pela utilização de análises computacionais [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] A. Neale, D. Derome, B. Blocken and J. Carmeliet, in: 11th Canadian Conference on bilding Service and Technology, Banff, Alberta, March 2007.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Sob a temática do presente trabalho, com a finalidade de tornar o estudo o mais abrangente possível, um grupo de problemas foram estudados, a saber: convecção térmica em placa plana em regime laminar, escoamento laminar em torno de um cilindro aquecido, escoamento interno turbulento em tubos circulares aquecidos e trocador de calor de tubos concêntricos.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Metodologia
+    </h1>
+    <p>
+     Para realizar as simulações foi utilizado o pacote de Dinâmica dos Fluidos Computacional (DFC) Ansys-CFX 12.1, que hoje representa o estado da arte na aplicação do método dos volumes finitos a problemas de dinâmica dos fluidos e transmissão de calor.
+    </p>
+    <p>
+     O método dos volumes finitos (MVF) consiste essencialmente na discretização das equações de conservação (massa, momento linear, energia, turbulência) juntamente com equações de estado para se chegar a um sistema de equações lineares que descreva o escoamento e a transferência de calor de um problema determinado. O MVF é baseado na integração das propriedades e dos seus fluxos em um volume de controle pequeno o suficiente para garantir a uniformidade volumétrica e a interpolação de valores das propriedades entre as faces. Sua formulação já atingiu estágios sofisticados o suficiente para serem abordados em livros especializados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] H.K. Versteeg and W. Malalasekera, An Introduction to Computational Fluid Dynamics - The Finite Volume Method (Editora Pearson, London, 2007), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] S.V. Patankar, Numerical Heat Transfer and Fluid Flow(Taylor &amp; Francis, Boca Raton, 1980), 1ª ed.
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <p>
+     Partindo da resolução analítica e/ou empírica de cada caso, os resultados das simulações foram comparados buscando as configurações (refinamento da malha, condições de contorno, etc) que minimizassem o erro numérico, ou seja, que representassem bem a realidade física imposta em cada caso e garantissem a coerência com o melhor resultado que o modelo pode fornecer, intrinsecamente ao mesmo.
+    </p>
+    <p>
+     No presente trabalho, a resolução de cada problema segue um roteiro similar, que inclusive permitiu a comparação por parte dos estudantes das peculiaridades de cada fenômeno sob estudo, a saber: apresentação de todos os problemas e dos dados necessários à resolução dos mesmos (ainda nesta seção de Metodologia), resolução de cada problema, utilizando métodos analíticos e/ou empíricos e apresentação dos resultados da simulação, mostrando a convergência da malha utilizada (na seção de Resultados.
+    </p>
+    <p>
+     Eis então a apresentação dos problemas.
+    </p>
+    <h2>
+     2.1. Placa Plana Aquecida Com Escoamento Paralelo
+    </h2>
+    <p>
+     O escoamento paralelo sobre uma placa plana aquecida é ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 01
+     </a>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] F.P. Incropera and D.P. DeWitt, Fundamentos de Transferência de Calor e de Massa (LTC Editora, Rio de Janeiro, 2003), 5ªed, p. 270.
+       </span>
+      </span>
+     </span>
+     ]. O desenvolvimento da camada limite laminar começa no bordo de ataque (
+     <math display="inline" id="m1">
+      <mi>
+       x
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+      <mo>
+       )
+      </mo>
+     </math>
+     e a transição para regime turbulento pode ocorrer em uma posição a jusante (
+     <math display="inline" id="m2">
+      <msub>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         c
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       )
+      </mo>
+     </math>
+     para a qual o número crítico de Reynolds é alcançado.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Placa plana com escoamento paralelo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Foi considerado regime estacionário e desprezados os efeitos de radiação. O ar escoa com uma velocidade de 10 m/s, temperatura de 437K e pressão de 1 atm. Com boa aproximação, propriedades como
+     <i>
+      k, Pr e μ
+     </i>
+     , podem ser considerados independentes da pressão.
+    </p>
+    <div class="row table" id="t10">
+     <a name="t10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet10" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      LISTA DE SÍMBOLOS
+              
+            
+            
+              
+                
+                  
+                    
+                      q
+                    
+                  
+                
+                Taxa de transferência de calor, W
+                
+                  
+                    
+                      v
+                    
+                  
+                
+                Viscosidade cinemática, m2/s
+              
+              
+                q′
+                Taxa de transferência de calor por unidade de comprimento, W/m
+                
+                  
+                    
+                      V
+                    
+                  
+                
+                Velocidade do fluido, m/s
+              
+              
+                q″
+                Fluxo de Calor, W/m2
+                
+                  
+                    
+                      D
+                    
+                  
+                
+                Diâmetro, m
+              
+              
+                
+                  
+                    
+                      h
+                    
+                  
+                
+                Coeficiente de transferência de calor por convecção, W/m2.K
+                
+                  
+                    
+                      
+                        m
+                        ˙
+                      
+                    
+                  
+                
+                Vazão em massa, kg/s
+              
+              
+                
+                  
+                    
+                      T
+                    
+                  
+                
+                Temperatura, K
+                
+                  
+                    
+                      L
+                    
+                  
+                
+                Comprimento característico, m
+              
+              
+                
+                  
+                    
+                      N
+                      u
+                    
+                  
+                
+                Número de Nusselt
+                
+                  
+                    
+                      f
+                    
+                  
+                
+                Fator de atrito
+              
+              
+                
+                  
+                    
+                      k
+                    
+                  
+                
+                Condutividade térmica, W/m.K
+                
+                  
+                    
+                      U
+                    
+                  
+                
+                Coeficiente global de transferência de calor
+              
+              
+                
+                  
+                    
+                      R
+                      e
+                    
+                  
+                
+                Número de Reynolds
+                
+                  
+                    
+                      A
+                    
+                  
+                
+                Área, m2
+              
+              
+                
+                  
+                    
+                      P
+                      r
+                    
+                  
+                
+                Número de Prandtl
+                
+                  
+                    
+                      i
+                    
+                  
+                
+                Entalpia por unidade de massa, J/kg
+              
+              
+                
+                  
+                    
+                      ρ
+                    
+                  
+                
+                Massa específica, kg/m3
+                
+                  
+                    
+                      
+                        
+                          c
+                        
+                        
+                          p
+                        
+                      
+                    
+                  
+                
+                Calor específico a pressão constante, J/kg.K
+              
+              
+                
+                  
+                    
+                      μ
+                    
+                  
+                
+                Viscosidade, kg/s.m
+      <br/>
+     </div>
+    </div>
+    <p>
+     O escoamento apresenta um número de Reynolds de
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m24">
+        <msub>
+         <mrow>
+          <mi>
+           R
+          </mi>
+         </mrow>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             e
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             L
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             u
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             ∞
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           L
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           v
+          </mi>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m25">
+        <mrow>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mn>
+            10
+           </mn>
+           <mi>
+            m
+           </mi>
+           <mfenced close="" open="/" separators="">
+            <mrow>
+            </mrow>
+           </mfenced>
+           <mi>
+            s
+           </mi>
+           <mo>
+            ×
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            5
+           </mn>
+           <mi>
+            m
+           </mi>
+          </mrow>
+          <mrow>
+           <mn>
+            5
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            21
+           </mn>
+           <mo>
+            ×
+           </mo>
+           <msup>
+            <mrow>
+             <mn>
+              10
+             </mn>
+            </mrow>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mn>
+              4
+             </mn>
+            </mrow>
+           </msup>
+           <msup>
+            <mrow>
+             <mi>
+              m
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msup>
+           <mfenced close="" open="/" separators="">
+            <mrow>
+            </mrow>
+           </mfenced>
+           <mi>
+            s
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mn>
+          9597
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Caracterizando um escoamento laminar, cujo valor crítico tipicamente encontrado na literatura e 5.10
+     <math display="inline" id="m26">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         5
+        </mi>
+       </mrow>
+      </msup>
+     </math>
+     . O número de Nusselt é de aproximadamente 57,4, permitindo determinar o coeficiente de convecção,
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m27">
+        <msub>
+         <mrow>
+          <mover accent="true">
+           <mrow>
+            <mi>
+             h
+            </mi>
+           </mrow>
+           <mo>
+            ̄
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+         </mrow>
+        </msub>
+        <mi mathvariant="normal">
+         =
+        </mi>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mrow>
+            <mover accent="true">
+             <mrow>
+              <mi>
+               N
+              </mi>
+              <mi>
+               u
+              </mi>
+             </mrow>
+             <mo>
+              ̄
+             </mo>
+            </mover>
+           </mrow>
+           <mrow>
+            <mi>
+             L
+            </mi>
+           </mrow>
+          </msub>
+          <mi>
+           k
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           L
+          </mi>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Desta forma, o fluxo de calor é dado por
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m28">
+        <msup>
+         <mrow>
+          <mi>
+           q
+          </mi>
+         </mrow>
+         <mrow>
+          <msup>
+           <mrow>
+           </mrow>
+           <mrow>
+            <mi>
+             ′
+            </mi>
+           </mrow>
+          </msup>
+         </mrow>
+        </msup>
+        <mo>
+         =
+        </mo>
+        <mover accent="false">
+         <mrow>
+          <mi>
+           h
+          </mi>
+         </mrow>
+         <mo accent="true">
+          _
+         </mo>
+        </mover>
+        <mi>
+         L
+        </mi>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             ∞
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           -
+          </mo>
+          <msub>
+           <mrow>
+            <mi>
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             s
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+        </mfenced>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Foi gerada uma geometria no próprio ANSYS CFX referente ao domínio fluido, que é um retângulo de 0,5m de comprimento, 5m de altura e 5m de largura. A altura e a largura estão superdimensionadas para que o tamanho não interfira nos resultados (hipótese do “infinito”).
+    </p>
+    <p>
+     Para que os resultados pudessem convergir de forma mais rápida com uma malha computacionalmente mais leve, criou-se um refinamento maior a partir da face inferior do domínio (ar) com o uso do comando “Inflation”, incorrendo em uma zona mais refinada onde os gradientes de velocidade e temperatura são conhecidamente maiores (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Malha com melhor refinamento dentre as testadas.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.2. Escoamento Externo Em Torno De Um Cilindro Aquecido
+    </h2>
+    <p>
+     O escoamento externo laminar em torno de um cilindro envolve o movimento de um fluido em uma direção perpendicular ao eixo do cilindro, como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 03
+     </a>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] F.P. Incropera and D.P. DeWitt, Fundamentos de Transferência de Calor e de Massa (LTC Editora, Rio de Janeiro, 2003), 5ªed, p. 283.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Escoamento transversal sobre um cilindro infinito.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O problema consiste em um escoamento laminar externo transversal à superfície de um cilindro. O cilindro possui 12,7 mm de diâmetro e 94 mm de comprimento.
+    </p>
+    <p>
+     O número de Reynolds influencia diretamente a posição do ponto de separação da camada limite e consequentemente todo processo de troca de calor.
+    </p>
+    <p>
+     Para
+     <math display="inline" id="m29">
+      <msub>
+       <mrow>
+        <mi>
+         R
+        </mi>
+        <mi>
+         e
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+      </msub>
+      <mi mathvariant="normal">
+       ≤ 2x
+      </mi>
+      <msup>
+       <mrow>
+        <mn>
+         10
+        </mn>
+       </mrow>
+       <mrow>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     a camada limite permanece laminar e a separação ocorre em
+     <math display="inline" id="m30">
+      <mi>
+       θ
+      </mi>
+      <mo>
+       ≈
+      </mo>
+      <mn>
+       8
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+    </p>
+    <p>
+     Para
+     <math display="inline" id="m31">
+      <msub>
+       <mrow>
+        <mi>
+         R
+        </mi>
+        <mi>
+         e
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+      </msub>
+      <mi mathvariant="normal">
+       ≥ 2x
+      </mi>
+      <msup>
+       <mrow>
+        <mn>
+         10
+        </mn>
+       </mrow>
+       <mrow>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     ocorre transição na camada limite e a separação é retardada até
+     <math display="inline" id="m32">
+      <mi>
+       θ
+      </mi>
+      <mo>
+       ≈
+      </mo>
+      <mn>
+       14
+      </mn>
+      <msup>
+       <mrow>
+        <mn>
+         0
+        </mn>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+    </p>
+    <p>
+     O coeficiente de transferência de calor pode ser obtido usando correlações desenvolvidas a partir de resultados experimentais do número de Nusselt local
+     <i>
+      versus
+     </i>
+     <math display="inline" id="m33">
+      <mi>
+       θ
+      </mi>
+     </math>
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m34">
+        <msub>
+         <mrow>
+          <mover accent="true">
+           <mrow>
+            <mi>
+             N
+            </mi>
+            <mi>
+             u
+            </mi>
+           </mrow>
+           <mo>
+            ̄
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mi>
+           D
+          </mi>
+         </mrow>
+        </msub>
+        <mi mathvariant="normal">
+         ≡
+        </mi>
+        <mfrac>
+         <mrow>
+          <mover accent="true">
+           <mrow>
+            <mi>
+             h
+            </mi>
+           </mrow>
+           <mo>
+            ̄
+           </mo>
+          </mover>
+          <mi>
+           D
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           k
+          </mi>
+         </mrow>
+        </mfrac>
+        <mo>
+         =
+        </mo>
+        <mi>
+         C
+        </mi>
+        <msubsup>
+         <mrow>
+          <mi>
+           R
+          </mi>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           D
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           m
+          </mi>
+         </mrow>
+        </msubsup>
+        <msup>
+         <mrow>
+          <mi>
+           P
+          </mi>
+          <mi>
+           r
+          </mi>
+         </mrow>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mrow>
+            <mn>
+             3
+            </mn>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m35">
+        <mrow>
+         <mi>
+          p
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          r
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mspace width="1em">
+         </mspace>
+         <mi>
+          P
+         </mi>
+         <mi>
+          r
+         </mi>
+         <mo>
+          ≥
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          7
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde Re
+     <math display="inline" id="m36">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         D
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , C e m são dados pela
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 1
+     </a>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] F.P. Incropera and D.P. DeWitt, Fundamentos de Transferência de Calor e de Massa (LTC Editora, Rio de Janeiro, 2003), 5ªed, p. 281.
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Constantes da correlação de Hilpert para o cilindro circular em corrente cruzada.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Foi desenhado um sólido, para definir o domínio de escoamento, com as seguintes dimensões: 500 mm de comprimento, 94 mm de largura e 500 mm de altura. Em seguida, foi retirado material da parte central do sólido para corresponder ao cilindro do problema. Esta é uma abordagem típica de DFC para escoamentos externos, que nem sempre é bem compreendida pelos alunos, que muitas vezes tendem a gerar a malha no cilindro. Essa noção de domínio da solução é sempre trabalhada em sala de aula e o presente caso ilustra bem essa situação
+    </p>
+    <p>
+     O fluido é ar a 298K em escoamento laminar em torno do cilindro. Sobre cilindro não há deslizamento na parede (no slip wall) e há um fluxo de calor igual a 10425,60 W/m
+     <sup>
+      2
+     </sup>
+     . Na região lateral ao domínio foi considerado livre escoamento (free slip wall), para aproximar as condições de simulação ao “infinito”. Antes do cilindro (entrada), o ar está a uma velocidade de 10m/s e a 25°C. A malha final está representada na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Malha com refinamento na região em torno ao cilindro aquecido.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.3. Escoamento Interno Em Tubos Circulares
+    </h2>
+    <p>
+     Um fluido escoa internamente em um tubo circular aquecido em regime permanente (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 05
+     </a>
+     ). Nosso fluido é o ar ideal. Devido à pouca diferença de temperatura entre a saída e entrada, as propriedades do ar foram medidas a 297K. Pede-se que seja determinado o coeficiente de convecção interno.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Desenho esquemático do problema de escoamento turbulento em tubos aquecidos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O número de Reynolds para escoamento em um tubo circular é definido como
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m38">
+        <msub>
+         <mrow>
+          <mi>
+           R
+          </mi>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           D
+          </mi>
+         </mrow>
+        </msub>
+        <mi mathvariant="normal">
+         =
+        </mi>
+        <mfrac>
+         <mrow>
+          <mn>
+           4
+          </mn>
+          <mover accent="true">
+           <mi>
+            m
+           </mi>
+           <mo>
+            ˙
+           </mo>
+          </mover>
+         </mrow>
+         <mrow>
+          <mi>
+           π
+          </mi>
+          <mi>
+           D
+          </mi>
+          <mi>
+           μ
+          </mi>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde
+     <math display="inline" id="m39">
+      <mover accent="true">
+       <mi>
+        m
+       </mi>
+       <mo>
+        ˙
+       </mo>
+      </mover>
+     </math>
+     é a taxa de fluxo de massa através do tubo e D é o diâmetro do tubo.
+    </p>
+    <p>
+     O número crítico de Reynolds que corresponde ao surgimento de turbulência é
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m40">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>
+            R
+           </mi>
+           <mi>
+            e
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            D
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            c
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          ≈
+         </mo>
+         <mn>
+          2300
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Uma expressão clássica para calcular o número de Nusselt local em escoamentos turbulentos plenamente desenvolvidos através de tubos lisos é dada pela equação de Dittus-Boelter.
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m41">
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">
+           Nu
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           D
+          </mi>
+         </mrow>
+        </msub>
+        <mi mathvariant="normal">
+         = 0,023
+        </mi>
+        <msubsup>
+         <mrow>
+          <mi mathvariant="normal">
+           Re
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           D
+          </mi>
+         </mrow>
+         <mrow>
+          <mn>
+           4
+          </mn>
+          <mfenced close="" open="/" separators="">
+           <mrow>
+           </mrow>
+          </mfenced>
+          <mn>
+           5
+          </mn>
+         </mrow>
+        </msubsup>
+        <msup>
+         <mrow>
+          <mi mathvariant="normal">
+           Pr
+          </mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           n
+          </mi>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde n
+     <math display="inline" id="m42">
+      <mo>
+       =
+      </mo>
+     </math>
+     0,4 para o aquecimento e n
+     <math display="inline" id="m43">
+      <mo>
+       =
+      </mo>
+     </math>
+     0,3 para o resfriamento. Essa equação foi confirmada experimentalmente dentro da seguinte faixa de condições
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m44">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <mi mathvariant="normal">
+             0,7 ≤ Pr ≤ 160
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <msub>
+             <mrow>
+              <mi mathvariant="normal">
+               Re
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               D
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             &gt;
+            </mo>
+            <mi mathvariant="normal">
+             10.000
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi mathvariant="normal">
+             L∕D &gt; 10
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Para escoamentos com grandes variações de propriedades, é recomendada [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] S.V. Patankar, Numerical Heat Transfer and Fluid Flow(Taylor &amp; Francis, Boca Raton, 1980), 1ª ed.
+       </span>
+      </span>
+     </span>
+     ] a seguinte equação.
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m45">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi mathvariant="normal">
+            Nu
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            D
+           </mi>
+          </mrow>
+         </msub>
+         <mi mathvariant="normal">
+          = 0,027
+         </mi>
+         <msubsup>
+          <mrow>
+           <mi mathvariant="normal">
+            Re
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            D
+           </mi>
+          </mrow>
+          <mrow>
+           <mn>
+            4
+           </mn>
+           <mfenced close="" open="/" separators="">
+            <mrow>
+            </mrow>
+           </mfenced>
+           <mn>
+            5
+           </mn>
+          </mrow>
+         </msubsup>
+         <msup>
+          <mrow>
+           <mi mathvariant="normal">
+            Pr
+           </mi>
+          </mrow>
+          <mrow>
+           <mn>
+            1
+           </mn>
+           <mfenced close="" open="/" separators="">
+            <mrow>
+            </mrow>
+           </mfenced>
+           <mn>
+            3
+           </mn>
+          </mrow>
+         </msup>
+         <msup>
+          <mrow>
+           <mfenced close=")" open="(" separators="">
+            <mrow>
+             <mfrac>
+              <mrow>
+               <mi>
+                μ
+               </mi>
+              </mrow>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>
+                  μ
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mi mathvariant="normal">
+                  s
+                 </mi>
+                </mrow>
+               </msub>
+              </mrow>
+             </mfrac>
+            </mrow>
+           </mfenced>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            0,14
+           </mi>
+          </mrow>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m46">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="center">
+            <mi mathvariant="normal">
+             0,7 ≤ Pr ≤ 16.700
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="center">
+            <msub>
+             <mrow>
+              <mi mathvariant="normal">
+               Re
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               D
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+            </mo>
+            <mi mathvariant="normal">
+             10.000
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="center">
+            <mi mathvariant="normal">
+             L∕D &gt; 10
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="center">
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Aproximadamente, essas correlações podem ser utilizadas em condições na superfície de temperatura e de fluxo térmico uniformes.
+    </p>
+    <p>
+     Propriedades do ar à pressão de 1atm e temperatura de 292K foram utilizadas:
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m47">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <msub>
+             <mrow>
+              <mi>
+               c
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               p
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mn>
+             1007
+            </mn>
+            <mi>
+             J
+            </mi>
+            <mfenced close="" open="/" separators="">
+             <mrow>
+             </mrow>
+            </mfenced>
+            <mi>
+             k
+            </mi>
+            <mi>
+             g
+            </mi>
+            <mo>
+             .
+            </mo>
+            <mi>
+             K
+            </mi>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             μ
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             180
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             6
+            </mn>
+            <mo>
+             ×
+            </mo>
+            <msup>
+             <mrow>
+              <mn>
+               10
+              </mn>
+             </mrow>
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mn>
+               7
+              </mn>
+             </mrow>
+            </msup>
+            <mi>
+             N
+            </mi>
+            <mi>
+             s
+            </mi>
+            <mfenced close="" open="/" separators="">
+             <mrow>
+             </mrow>
+            </mfenced>
+            <msup>
+             <mrow>
+              <mi>
+               m
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msup>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             k
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             25
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             7
+            </mn>
+            <mi>
+             x
+            </mi>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               10
+              </mi>
+             </mrow>
+             <mrow>
+              <mi mathvariant="normal">
+               -3
+              </mi>
+             </mrow>
+            </msup>
+            <mi>
+             W
+            </mi>
+            <mo>
+             ∕
+            </mo>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <mi>
+               m
+              </mi>
+              <mo>
+               .
+              </mo>
+              <mi>
+               K
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mo>
+             Pr
+            </mo>
+            <mo>
+             =
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             709
+            </mn>
+            <mo>
+             .
+            </mo>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Uma geometria foi gerada no ANSYS CFX. O sólido resultante foi um cilindro com as dimensões de 50 mm de diâmetro e 1560 mm de comprimento.
+    </p>
+    <p>
+     Cinco malhas foram geradas, a primeira com 15200 nós e 12935 elementos, a segunda com 25985 nós e 62359 elementos, a terceira com 26308 nós e 62573 elementos, a quarta com 97080 nós e 203873 elementos e a final com 395 nós e 970 elementos (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 6a e b
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      a - Primeira malha gerada b - Segunda malha gerada.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.4. Trocador De Calor De Tubos Concêntricos
+    </h2>
+    <p>
+     Um trocador de calor de tubos concêntricos consiste na montagem de dois tubos concêntricos onde o de menor diâmetro é montado internamente ao de maior diâmetro que por sua vez é revestido externamente por algum isolante térmico para que o fluxo de calor seja trocado somente entre os dois fluidos. Os fluidos quente e frio podem se movem no mesmo sentido, arranjo chamado paralelo, ou em sentidos opostos, arranjo nomeado contracorrente, mostrados na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 07
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Desenho esquemático do problema.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O coeficiente global de transferência de calor é uma parte essencial para qualquer análise de trocadores de calor.
+    </p>
+    <p>
+     Desprezando a espessura do tubo e quaisquer deposições de material isolante o coeficiente se reduz a:
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m48">
+        <mi mathvariant="normal">
+         U =
+        </mi>
+        <mfrac>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               h
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               i
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+          <mo>
+           +
+          </mo>
+          <mfrac>
+           <mrow>
+            <mn>
+             1
+            </mn>
+           </mrow>
+           <mrow>
+            <msub>
+             <mrow>
+              <mi>
+               h
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               e
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde os índices
+     <math display="inline" id="m49">
+      <mi>
+       i
+      </mi>
+     </math>
+     e
+     <math display="inline" id="m50">
+      <mi>
+       e
+      </mi>
+     </math>
+     referem-se às superfícies interna e externa do tubo (
+     <math display="inline" id="m51">
+      <msub>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       π
+      </mi>
+      <msub>
+       <mrow>
+        <mi>
+         D
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       L
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m52">
+      <mi mathvariant="normal">
+      </mi>
+      <msub>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       π
+      </mi>
+      <msub>
+       <mrow>
+        <mi>
+         D
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         e
+        </mi>
+       </mrow>
+      </msub>
+      <mi>
+       L
+      </mi>
+      <mo>
+       )
+      </mo>
+     </math>
+     , que podem ser expostas ou ao fluido quente ou ao frio.
+    </p>
+    <p>
+     Uma forma da lei de resfriamento de Newton pode ser aplicada em trocadores de calor utilizando o valor da média logarítmica da diferença de temperatura entre dois fluidos:
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m53">
+        <mi mathvariant="normal">
+         q = UAΔ
+        </mi>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           lm
+          </mi>
+         </mrow>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Onde:
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m54">
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           lm
+          </mi>
+         </mrow>
+        </msub>
+        <mi mathvariant="normal">
+         =
+        </mi>
+        <mfrac>
+         <mrow>
+          <mi mathvariant="normal">
+           Δ
+          </mi>
+          <msub>
+           <mrow>
+            <mi mathvariant="normal">
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mi mathvariant="normal">
+             1
+            </mi>
+           </mrow>
+          </msub>
+          <mi mathvariant="normal">
+           -Δ
+          </mi>
+          <msub>
+           <mrow>
+            <mi mathvariant="normal">
+             T
+            </mi>
+           </mrow>
+           <mrow>
+            <mi mathvariant="normal">
+             2
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           ln
+          </mi>
+          <mfenced close=")" open="(" separators="">
+           <mrow>
+            <mi mathvariant="normal">
+             Δ
+            </mi>
+            <msub>
+             <mrow>
+              <mi mathvariant="normal">
+               T
+              </mi>
+             </mrow>
+             <mrow>
+              <mi mathvariant="normal">
+               1
+              </mi>
+             </mrow>
+            </msub>
+            <mfenced close="" open="/" separators="">
+             <mrow>
+             </mrow>
+            </mfenced>
+            <mi mathvariant="normal">
+             Δ
+            </mi>
+            <msub>
+             <mrow>
+              <mi mathvariant="normal">
+               T
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfenced>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Lembrando que para trocadores de corrente paralela,
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m55">
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">
+           1
+          </mi>
+         </mrow>
+        </msub>
+        <mi mathvariant="normal">
+         ≡
+        </mi>
+        <msub>
+         <mrow>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           h
+          </mi>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         -
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           c
+          </mi>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           h
+          </mi>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           e
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         -
+        </mo>
+        <msub>
+         <mrow>
+          <mi>
+           T
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           c
+          </mi>
+          <mo>
+           ,
+          </mo>
+          <mi>
+           e
+          </mi>
+         </mrow>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq19">
+     <a name="eq19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m56">
+        <mrow>
+         <mi mathvariant="normal">
+          Δ
+         </mi>
+         <msub>
+          <mrow>
+           <mi mathvariant="normal">
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            2
+           </mi>
+          </mrow>
+         </msub>
+         <mi mathvariant="normal">
+          ≡
+         </mi>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            h
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </msub>
+         <mo>
+          -
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            h
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            s
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          -
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            s
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     E para trocadores de correntes contrárias
+    </p>
+    <div class="row formula" id="eeq20">
+     <a name="eq20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m57">
+        <mrow>
+         <mi mathvariant="normal">
+          Δ
+         </mi>
+         <msub>
+          <mrow>
+           <mi mathvariant="normal">
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            1
+           </mi>
+          </mrow>
+         </msub>
+         <mi mathvariant="normal">
+          ≡
+         </mi>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            h
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </msub>
+         <mo>
+          -
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            h
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            e
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          -
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            s
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq21">
+     <a name="eq21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m58">
+        <mrow>
+         <mi mathvariant="normal">
+          Δ
+         </mi>
+         <msub>
+          <mrow>
+           <mi mathvariant="normal">
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            2
+           </mi>
+          </mrow>
+         </msub>
+         <mi mathvariant="normal">
+          ≡
+         </mi>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            h
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </msub>
+         <mo>
+          -
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            h
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            s
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          -
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            c
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            e
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Dos balanços globais de energia, as taxas totais de transferência de calor entre os fluidos quente e frio assumindo que os fluidos não estão mudando de fase e que possuem calores específicos constantes, essas expressões se reduzem a
+    </p>
+    <div class="row formula" id="eeq22">
+     <a name="eq22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m59">
+        <mrow>
+         <mi mathvariant="normal">
+          q =
+         </mi>
+         <msub>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             m
+            </mi>
+            <mo>
+             ˙
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            h
+           </mi>
+          </mrow>
+         </msub>
+         <msub>
+          <mrow>
+           <mi>
+            c
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            h
+           </mi>
+          </mrow>
+         </msub>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              T
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              h
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              e
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            -
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              T
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              h
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              s
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq23">
+     <a name="eq23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m60">
+        <mrow>
+         <mi mathvariant="normal">
+          q =
+         </mi>
+         <msub>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             m
+            </mi>
+            <mo>
+             ˙
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            c
+           </mi>
+          </mrow>
+         </msub>
+         <msub>
+          <mrow>
+           <mi>
+            c
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mo>
+            ,
+           </mo>
+           <mi>
+            c
+           </mi>
+          </mrow>
+         </msub>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              T
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              c
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              s
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            -
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              T
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              c
+             </mi>
+             <mo>
+              ,
+             </mo>
+             <mi>
+              e
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A vazão mássica do escoamento de água fria através do tubo interno é 0,02 kg/s, enquanto que a vazão mássica do escoamento da água quente através do anel externo é 0,005 kg/s. Água quente entra a temperatura de 100
+     <math display="inline" id="m61">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     C e sai a 60
+     <math display="inline" id="m62">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     C, enquanto a água fria entra a 25
+     <math display="inline" id="m63">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     C. O comprimento do trocador é de 1,4m. Foram também considerados:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Perda de calor para a vizinhança desprezível,
+      </p>
+     </li>
+     <li>
+      <p>
+       variações de energias potencial e cinética desprezíveis,
+      </p>
+     </li>
+     <li>
+      <p>
+       propriedades constantes,
+      </p>
+     </li>
+     <li>
+      <p>
+       resistência térmica da parede do tubo e fator de incrustação desprezíveis,
+      </p>
+     </li>
+     <li>
+      <p>
+       condições de escoamento plenamente desenvolvido.
+      </p>
+     </li>
+    </ul>
+    <p>
+     Propriedades da água quente foram analisadas a uma temperatura média de 80
+     <math display="inline" id="m64">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     C.
+    </p>
+    <div class="row formula" id="eeq24">
+     <a name="eq24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m65">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <mstyle>
+             <mtext>
+              Água
+             </mtext>
+            </mstyle>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <msub>
+               <mrow>
+                <mover accent="true">
+                 <mrow>
+                  <mi>
+                   T
+                  </mi>
+                 </mrow>
+                 <mo>
+                  ̄
+                 </mo>
+                </mover>
+               </mrow>
+               <mrow>
+                <mi>
+                 h
+                </mi>
+               </mrow>
+              </msub>
+              <mo>
+               =
+              </mo>
+              <mn>
+               353
+              </mn>
+              <mi>
+               K
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             :
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <msub>
+             <mrow>
+              <mi>
+               c
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               p
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mn>
+             4197
+            </mn>
+            <mi>
+             J
+            </mi>
+            <mfenced close="" open="/" separators="">
+             <mrow>
+             </mrow>
+            </mfenced>
+            <mi>
+             k
+            </mi>
+            <mi>
+             g
+            </mi>
+            <mo>
+             .
+            </mo>
+            <mi>
+             K
+            </mi>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             μ
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             351
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             8
+            </mn>
+            <mo>
+             ×
+            </mo>
+            <msup>
+             <mrow>
+              <mn>
+               10
+              </mn>
+             </mrow>
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mn>
+               6
+              </mn>
+             </mrow>
+            </msup>
+            <mi>
+             N
+            </mi>
+            <mi>
+             s
+            </mi>
+            <mfenced close="" open="/" separators="">
+             <mrow>
+             </mrow>
+            </mfenced>
+            <msup>
+             <mrow>
+              <mi>
+               m
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msup>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             k
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             669
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             8
+            </mn>
+            <mi>
+             x
+            </mi>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               10
+              </mi>
+             </mrow>
+             <mrow>
+              <mi mathvariant="normal">
+               -3
+              </mi>
+             </mrow>
+            </msup>
+            <mi>
+             W
+            </mi>
+            <mo>
+             ∕
+            </mo>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <mi>
+               m
+              </mi>
+              <mo>
+               .
+              </mo>
+              <mi>
+               K
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mo>
+             Pr
+            </mo>
+            <mo>
+             =
+            </mo>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             2
+            </mn>
+            <mo>
+             .
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Propriedades da água fria foram analisadas a uma temperatura média de 30
+     <math display="inline" id="m66">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mo>
+         ∘
+        </mo>
+       </mrow>
+      </msup>
+     </math>
+     C.
+    </p>
+    <div class="row formula" id="eeq25">
+     <a name="eq25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m67">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <mstyle>
+             <mtext>
+              Água
+             </mtext>
+            </mstyle>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <msub>
+               <mrow>
+                <mover accent="true">
+                 <mrow>
+                  <mi>
+                   T
+                  </mi>
+                 </mrow>
+                 <mo>
+                  ̄
+                 </mo>
+                </mover>
+               </mrow>
+               <mrow>
+                <mi>
+                 c
+                </mi>
+               </mrow>
+              </msub>
+              <mo>
+               =
+              </mo>
+              <mn>
+               303
+              </mn>
+              <mi>
+               K
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             :
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <msub>
+             <mrow>
+              <mi>
+               c
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               p
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mn>
+             4179
+            </mn>
+            <mi>
+             J
+            </mi>
+            <mfenced close="" open="/" separators="">
+             <mrow>
+             </mrow>
+            </mfenced>
+            <mi>
+             k
+            </mi>
+            <mi>
+             g
+            </mi>
+            <mo>
+             .
+            </mo>
+            <mi>
+             K
+            </mi>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             μ
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             803
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             4
+            </mn>
+            <mo>
+             ×
+            </mo>
+            <msup>
+             <mrow>
+              <mn>
+               10
+              </mn>
+             </mrow>
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mn>
+               6
+              </mn>
+             </mrow>
+            </msup>
+            <mi>
+             N
+            </mi>
+            <mi>
+             s
+            </mi>
+            <mfenced close="" open="/" separators="">
+             <mrow>
+             </mrow>
+            </mfenced>
+            <msup>
+             <mrow>
+              <mi>
+               m
+              </mi>
+             </mrow>
+             <mrow>
+              <mn>
+               2
+              </mn>
+             </mrow>
+            </msup>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             k
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             617
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             2
+            </mn>
+            <mi>
+             x
+            </mi>
+            <msup>
+             <mrow>
+              <mi mathvariant="normal">
+               10
+              </mi>
+             </mrow>
+             <mrow>
+              <mi mathvariant="normal">
+               -3
+              </mi>
+             </mrow>
+            </msup>
+            <mi>
+             W
+            </mi>
+            <mo>
+             ∕
+            </mo>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <mi>
+               m
+              </mi>
+              <mo>
+               .
+              </mo>
+              <mi>
+               K
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mo>
+             Pr
+            </mo>
+            <mo>
+             =
+            </mo>
+            <mn>
+             5
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             45
+            </mn>
+            <mo>
+             .
+            </mo>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     De onde
+    </p>
+    <div class="row formula" id="eeq26">
+     <a name="eq26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m68">
+        <mrow>
+         <mi mathvariant="normal">
+          q =
+         </mi>
+         <msub>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             m
+            </mi>
+            <mo>
+             ˙
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            h
+           </mi>
+          </mrow>
+         </msub>
+         <msub>
+          <mrow>
+           <mi mathvariant="normal">
+            c
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            p,h
+           </mi>
+          </mrow>
+         </msub>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <msub>
+            <mrow>
+             <mi mathvariant="normal">
+              T
+             </mi>
+            </mrow>
+            <mrow>
+             <mi mathvariant="normal">
+              h,e
+             </mi>
+            </mrow>
+           </msub>
+           <mi mathvariant="normal">
+            -
+           </mi>
+           <msub>
+            <mrow>
+             <mi mathvariant="normal">
+              T
+             </mi>
+            </mrow>
+            <mrow>
+             <mi mathvariant="normal">
+              h,s
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq27">
+     <a name="eq27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m69">
+        <mrow>
+         <mi mathvariant="normal">
+          q = 0,005
+         </mi>
+         <mi mathvariant="normal">
+          kg
+         </mi>
+         <mfenced close="" open="/" separators="">
+          <mrow>
+          </mrow>
+         </mfenced>
+         <mi mathvariant="normal">
+          s
+         </mi>
+         <mi mathvariant="normal">
+          ×4197
+         </mi>
+         <mi mathvariant="normal">
+          J
+         </mi>
+         <mfenced close="" open="/" separators="">
+          <mrow>
+          </mrow>
+         </mfenced>
+         <mi mathvariant="normal">
+          kg.K
+         </mi>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <mi mathvariant="normal">
+            100 - 60
+           </mi>
+          </mrow>
+         </mfenced>
+         <msup>
+          <mrow>
+           <mi mathvariant="normal">
+           </mi>
+          </mrow>
+          <mrow>
+           <mo>
+            ∘
+           </mo>
+          </mrow>
+         </msup>
+         <mi>
+          C
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          839,4W
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <div class="row formula" id="eeq28">
+     <a name="eq28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m70">
+        <mrow>
+         <msub>
+          <mrow>
+           <mi mathvariant="normal">
+            T
+           </mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            c,s
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          35
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          0
+         </mn>
+         <msup>
+          <mrow>
+           <mn>
+            4
+           </mn>
+          </mrow>
+          <mrow>
+           <mo>
+            ∘
+           </mo>
+          </mrow>
+         </msup>
+         <mi>
+          C
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Foram geradas três geometrias, um cilindro de 48,25mm de diâmetro, representando o diâmetro interno do tubo, uma geometria anelar de 2,54mm de espessura, representando a espessura do tubo interno e outra geometria anelar de 152,41mm de espessura, representando a área onde o fluido quente escoa no tubo externo. Nesse ponto é bom ressaltar como, seguindo uma abordagem relativamente simples, o software de DFC consegue aproximar condições mais realistas, uma vez que para a solução analítica foi necessário desprezar a presença do tubo. O paradigma adotado, chamado de “transferência de calor conjugada” permite usar diversas malhas que interagem (trocam calor) através de suas superfícies, representando diferentes meios, sólidos (condução) ou líquidos (convecção).
+    </p>
+    <p>
+     Em seguida as malhas foram geradas e inseridas as condições de contorno. Visando obter um melhor resultado foram feitos refinamentos nas mesmas (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Detalhes do refinamento das malhas.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Resultados
+    </h1>
+    <h2>
+     3.1. Convecção em Placa Plana Aquecida em Regime Laminar
+    </h2>
+    <p>
+     A análise empírica fornece o coeficiente médio de convecção:
+    </p>
+    <div class="row formula" id="eeq29">
+     <a name="eq29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m71">
+        <mrow>
+         <msub>
+          <mrow>
+           <mover accent="true">
+            <mrow>
+             <mi>
+              h
+             </mi>
+            </mrow>
+            <mo>
+             ̄
+            </mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <mi>
+            L
+           </mi>
+          </mrow>
+         </msub>
+         <mi mathvariant="normal">
+          =
+         </mi>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mrow>
+             <mover accent="true">
+              <mrow>
+               <mi>
+                N
+               </mi>
+               <mi>
+                u
+               </mi>
+              </mrow>
+              <mo>
+               ̄
+              </mo>
+             </mover>
+            </mrow>
+            <mrow>
+             <mi>
+              L
+             </mi>
+            </mrow>
+           </msub>
+           <mi>
+            k
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            L
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mn>
+            57
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            4
+           </mn>
+           <mo>
+            ×
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            0364
+           </mn>
+           <mi>
+            W
+           </mi>
+           <mfenced close="" open="/" separators="">
+            <mrow>
+            </mrow>
+           </mfenced>
+           <mi>
+            m
+           </mi>
+           <mo>
+            .
+           </mo>
+           <mi>
+            K
+           </mi>
+          </mrow>
+          <mrow>
+           <mn>
+            0
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            5
+           </mn>
+           <mi>
+            m
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mn>
+          4
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          18
+         </mn>
+         <mi>
+          W
+         </mi>
+         <mfenced close="" open="/" separators="">
+          <mrow>
+          </mrow>
+         </mfenced>
+         <msup>
+          <mrow>
+           <mi>
+            m
+           </mi>
+          </mrow>
+          <mrow>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </msup>
+         <mi>
+          K
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Tendo como consequência, para as condições impostas, o fluxo de calor dado por
+    </p>
+    <div class="row formula" id="eeq30">
+     <a name="eq30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m72">
+        <mrow>
+         <msup>
+          <mrow>
+           <mi>
+            q
+           </mi>
+          </mrow>
+          <mrow>
+           <msup>
+            <mrow>
+            </mrow>
+            <mrow>
+             <mo>
+              ″
+             </mo>
+            </mrow>
+           </msup>
+          </mrow>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mn>
+          4
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          18
+         </mn>
+         <mi>
+          W
+         </mi>
+         <mfenced close="" open="/" separators="">
+          <mrow>
+          </mrow>
+         </mfenced>
+         <msup>
+          <mrow>
+           <mi>
+            m
+           </mi>
+          </mrow>
+          <mrow>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </msup>
+         <mi>
+          K
+         </mi>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <mn>
+            300
+           </mn>
+           <mo>
+            -
+           </mo>
+           <mn>
+            27
+           </mn>
+          </mrow>
+         </mfenced>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1141
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          14
+         </mn>
+         <mi>
+          W
+         </mi>
+         <mfenced close="" open="/" separators="">
+          <mrow>
+          </mrow>
+         </mfenced>
+         <msup>
+          <mrow>
+           <mi>
+            m
+           </mi>
+          </mrow>
+          <mrow>
+           <mn>
+            2
+           </mn>
+          </mrow>
+         </msup>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os primeiros valores fornecidos pelo CFX não foram muito satisfatórios, o que é comum, com erros de mais de duas vezes o valor calculado na solução analítica como pode ser visto na
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 2
+     </a>
+     .
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Resultados do fluxo de calor obtidos em relação ao refinamento da malha (transition rate, 0,77; Growth rate, 1,2).
+      <br/>
+     </div>
+    </div>
+    <p>
+     A última malha, com um refinamento já considerável, forneceu um valor bem próximo ao esperado. Isto acontece porque é junto a paredes que os maiores gradientes (de calor e tensão de cisalhamento) acontecem. Desta forma o uso de malha não refinada nestas áreas tende a subestimar esses gradientes, reduzindo a avaliação de transferência de calor. O mesmo não acontece no interior do domínio, necessitando consequentemente de menor refinamento.
+    </p>
+    <p>
+     Calculando-se o erro relativo para os resultados de cada malha percebe-se que com o refinamento da malha junto à placa, melhora-se sensivelmente a precisão do resultado, chegando a valores próximos do previsto analiticamente. Porém ao chegar a um número de 45 camadas de refinamento de malha os valores se estabilizam, chegando-se ao que se chama de independência da malha [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] H.K. Versteeg and W. Malalasekera, An Introduction to Computational Fluid Dynamics - The Finite Volume Method (Editora Pearson, London, 2007), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ], permanecendo com um erro relativo de aproximadamente 10,8% (
+     <a class="open-asset-modal" data-target="#ModalTablet3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 3
+     </a>
+     )
+    </p>
+    <div class="row table" id="t3">
+     <a name="t3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3
+      </strong>
+      <br/>
+      Erro relativo do problema de convecção em placa plana.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Khatri at al. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R. Khatri, P. Agrawal, M. Gupta and J. Verma, International Journal of Advances in Engineering and Technology 3, 756 (2012).
+       </span>
+      </span>
+     </span>
+     ] realizaram estudo semelhante utilizando o mesmo software, porém com 10000&lt;Re&lt;50000. Seus resultados chegaram a apresentar uma diferença de apenas 5% com o resultado semi-empírico. Ressalte-se que esse erro é referencial, não indicando que os autores obtiveram melhor resultado, pois a própria avaliação da correlação proposta embute erro experimental e de aproximação da equação.
+    </p>
+    <p>
+     Os autores também examinaram a influência de Re, Nu e Pr para a transferência de calor. Com relação à malha eles consideraram o efeito do refinamento em diferentes direções, mas com resultados semelhantes aos alcançados aqui onde, com o refinamento próximo a placa, o erro com relação à determinação do fluxo de calor diminui de forma relevante para a precisão do problema.
+    </p>
+    <h2>
+     3.2. Cilindro Aquecido
+    </h2>
+    <p>
+     Foram realizados testes para seis malhas diferentes até ser obtido um valor convergente da temperatura do cilindro. Na região próxima ao cilindro a malha foi refinada. Os valores convergiram rapidamente com o refinamento da malha na parede, como mostrado na
+     <a class="open-asset-modal" data-target="#ModalTablet4" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 4
+     </a>
+    </p>
+    <div class="row table" id="t4">
+     <a name="t4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet4" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 4
+      </strong>
+      <br/>
+      Resultados da temperatura do cilindro.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na abordagem de refinamento da malha interna ao domínio, após a convergência dos valores com o refinamento da malha utilizando o modo ”sizing coarse”, foi feita a verificação da convergência para os modos “sizing medium” e “fine”. Apesar destas mudanças, o valor da temperatura do cilindro não sofreu uma variação significativa em relação ao modo “sizing coarse”, que foi então utilizado por motivos de redução de carga computacional.
+    </p>
+    <p>
+     Para o modo de refinamento interno de domínio “medium” com o número de camadas adjacentes à parede (“inflation”) de 55 a temperatura encontrada foi de 385,372 K e para o modo “fine”, de 385,43 K, enquanto para o modo “coarse”, de 384,77 K. O erro relativo foi calculado e verificou-se que a partir de 45 camadas os resultados deixam de mudar de forma relevante independentemente do refinamento interno do domínio, mantendo um erro de aproximadamente 4,15% (
+     <a class="open-asset-modal" data-target="#ModalTablet5" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 5
+     </a>
+     ). Levando em consideração que as correlações usadas podem apresentar erros de até 20%, os resultados se mostram dentro do esperado.
+    </p>
+    <div class="row table" id="t5">
+     <a name="t5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet5" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 5
+      </strong>
+      <br/>
+      Erro relativo do problema de escoamento externo em torno de um cilindro aquecido.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Outros autores estudaram o comportamento do escoamento sobre um cilindro [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M. Hashiguci and K. Huwahara, in: RIMS Annual Conference Proceedings, Denver, Colorado, 1996.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] M. Sato and T. Kobayashi, in: SIMULIA community Conference, Providence RI, EUA, 2012
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] W.A. Khan, J.R. Culham and M.M. Yovanovich, Journal of Heat Transfer 127, 785 (2005).
+       </span>
+      </span>
+     </span>
+     ]. Hashiguci
+     <i>
+      et al
+     </i>
+     . [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] M. Hashiguci and K. Huwahara, in: RIMS Annual Conference Proceedings, Denver, Colorado, 1996.
+       </span>
+      </span>
+     </span>
+     ] estudaram o escoamento bidimensional usando código próprio predizendo o coeficiente de arrasto do cilindro para vários números de Reynolds, não fazendo investigações sobre transferência de calor. Sato
+     <i>
+      et al
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] M. Sato and T. Kobayashi, in: SIMULIA community Conference, Providence RI, EUA, 2012
+       </span>
+      </span>
+     </span>
+     ] fizeram estudo semelhante, porém utilizando um software comercial (Abacus/CFD).
+    </p>
+    <p>
+     Khan
+     <i>
+      et al
+     </i>
+     . [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] W.A. Khan, J.R. Culham and M.M. Yovanovich, Journal of Heat Transfer 127, 785 (2005).
+       </span>
+      </span>
+     </span>
+     ] estudaram o escoamento e a transferência de calor (utilizando o número de Nusselt) a partir de uma aproximação integral da camada limite, este procedimento apresentou um desvio máximo dos dados experimentais de 8% com relação à transferência de calor, valor bastante superior aos obtidos no presente trabalho (4,15% em média, após convergência).
+    </p>
+    <h2>
+     3.3. Escoamento Turbulento Em Tubos Circulares
+    </h2>
+    <p>
+     Neste problema, o diâmetro do tubo é de 0,05m e o comprimento é de 1,56m. O ar entra a 297K em um tubo mantido a 273K e sai a 287K. O tubo possui rugosidade absoluta de 0,15 mm.
+    </p>
+    <p>
+     Apesar do baixo erro desde os primeiros refinamentos testados, as malhas 1, 2 e 3 foram as mais satisfatórias, já que o valor máximo de temperatura que melhor caracteriza a seção se encontra bem perto de 287K. Além disso, ressalte-se o fato de que
+     <math display="inline" id="m73">
+      <mi>
+       h
+      </mi>
+     </math>
+     tem valores muito próximos, caracterizando bem a seção, além de ter o valor próximo ao menor
+     <math display="inline" id="m74">
+      <mi>
+       h
+      </mi>
+     </math>
+     calculado analiticamente (
+     <a class="open-asset-modal" data-target="#ModalTablet6" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 6
+     </a>
+     ). A malha 5 foi testada para fins de comparação, uma vez que a mesma foi gerada propositadamente grosseira.
+    </p>
+    <div class="row table" id="t6">
+     <a name="t6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet6" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 6
+      </strong>
+      <br/>
+      Resultados das temperaturas e coeficientes de convecção.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A temperatura média e o coeficiente de convecção calculados analiticamente são respectivamente de Tm
+     <math display="inline" id="m76">
+      <mo>
+       =
+      </mo>
+     </math>
+     287 K e
+     <math display="inline" id="m77">
+      <mi>
+       h
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi mathvariant="normal">
+       20,25
+      </mi>
+      <mi>
+       W
+      </mi>
+      <mfenced close="" open="/" separators="">
+       <mrow>
+       </mrow>
+      </mfenced>
+      <msup>
+       <mrow>
+        <mi>
+         m
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+      <mo>
+       .
+      </mo>
+      <mi>
+       K
+      </mi>
+     </math>
+     . O refinamento da malha apresentou resultados distintos para a temperatura e o coeficiente de convecção. Com o refinamento da malha a temperatura média convergiu para valores próximos do esperado, enquanto o coeficiente de convecção apresentou leve oscilação, dentro do erro esperado para um modelo DFC.
+    </p>
+    <p>
+     O melhor resultado para temperatura média e coeficiente de convecção foi Tm
+     <math display="inline" id="m78">
+      <mo>
+       =
+      </mo>
+     </math>
+     285,7 K e
+     <math display="inline" id="m79">
+      <mi>
+       h
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi mathvariant="normal">
+       19,7
+      </mi>
+      <mi>
+       W
+      </mi>
+      <mfenced close="" open="/" separators="">
+       <mrow>
+       </mrow>
+      </mfenced>
+      <msup>
+       <mrow>
+        <mi>
+         m
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msup>
+      <mo>
+       .
+      </mo>
+      <mi>
+       K
+      </mi>
+     </math>
+     , apresentando um erro relativo de 0,45% para temperatura e 2,72% para o coeficiente de convecção (
+     <a class="open-asset-modal" data-target="#ModalTablet7" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 7
+     </a>
+     ). Levando em consideração que a correlação usada pode apresentar erros de até 10%, os resultados foram bastante satisfatórios.
+    </p>
+    <div class="row table" id="t7">
+     <a name="t7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet7" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 7
+      </strong>
+      <br/>
+      Erro relativo do problema de escoamento interno em um tubo.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.4. Trocador De Calor De Tubos Concêntricos
+    </h2>
+    <p>
+     Neste problema, apesar das malhas 3 e 4 terem um melhor refinamento, a malha 2 apresentou um resultado bem próximo ao esperado, o que pode ser explicado por alguma aleatoriedade da própria solução numérica (
+     <a class="open-asset-modal" data-target="#ModalTablet8" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 8
+     </a>
+     ), indicando que a partir de então a solução já era independente da malha.
+    </p>
+    <div class="row table" id="t8">
+     <a name="t8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet8" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 8
+      </strong>
+      <br/>
+      Resultados da temperatura de saída do fluido frio.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A temperatura de saída do fluido frio calculada analiticamente foi Tc,s
+     <math display="inline" id="m82">
+      <mo>
+       =
+      </mo>
+     </math>
+     308,2 K. A primeira malha gerada apresentou um resultado próximo do esperado, com a temperatura de saída de Tc,s
+     <math display="inline" id="m83">
+      <mo>
+       =
+      </mo>
+     </math>
+     298,6 K e um erro relativo de 3,11%. Com o refinamento da malha os resultados foram crescendo para valores acima do esperado. A partir de 40 camadas os valores não alteravam mais, mantendo a temperatura média em Tc,s
+     <math display="inline" id="m84">
+      <mo>
+       =
+      </mo>
+     </math>
+     328,6 K e o erro relativo de −6,62%. A segunda malha gerada foi a que obteve o menor erro relativo de −1,04% (
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 9
+     </a>
+     ). Levando em consideração que as correlações usadas podem apresentar erros de até 10%, os resultados encontram-se dentro da faixa esperada.
+    </p>
+    <div class="row table" id="t9">
+     <a name="t9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet9" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 9
+      </strong>
+      <br/>
+      Erro relativo do problema de trocador de calor de tubos concêntricos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Bhanuchandrarao
+     <i>
+      et al
+     </i>
+     . [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] D. Bhanuchandrarao, M. Ashok Chakravarthy, Y. Krishna, V.V.S. Rao and T.H. Krishna, International Journal of Engineering Research &amp; Technology (IJERT) 2, 2782 (2013).
+       </span>
+      </span>
+     </span>
+     ] realizaram um estudo com diversos fluidos em trocadores tubulares concêntricos, comparando o coeficiente de calor e temperatura dos fluidos. Utilizando o software Fluent 12.1, conseguiram resultados com uma aproximação de 5% com relação aos obtidos de forma analítica. O resultado aqui apresentado está de acordo os erros reportados neste trabalho.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Conclusão
+    </h1>
+    <p>
+     Neste trabalho foram analisados quatro problemas clássicos, através de três etapas definidas: análise dos problemas, solução analítica, solução numérica e comparação dos resultados. Todos os problemas abordados envolviam escoamento de fluidos e transferência de calor. A definição clara das etapas ajudou os alunos a uniformizar a apresentação dos resultados, assim como facilitar a comparação entre estes.
+    </p>
+    <p>
+     Compararam-se resultados calculados analiticamente com resultados obtidos numericamente. Para as soluções numéricas, de uma forma geral, foi aplicado o refinamento da malha de duas formas distintas e complementares. A primeira refere-se ao refinamento interno do domínio, que mostrou-se menos relevante para os problemas, não necessitando de tanto avanço para que os resultados se estabilizassem. Já a segunda, que foca no refinamento sobre superfícies através da adição de camadas adjacentes às mesmas, impacta de forma relevante os resultados, praticamente garantindo sua convergência para as soluções analítico-empíricas. Isso acontece porque os fenômenos estudados são majoritariamente regidos por efeitos de condução e convecção. Estes fenômenos comumente apresentam seus maiores gradientes em interfaces, o que exige da solução computacional um maior refinamento nestas zonas, para representação adequada dos perfis de temperatura e velocidade. O número de camadas foi então testado até que os resultados apresentassem convergência, sempre conduzindo a uma menor discrepância com relação aos resultados analítico-empíricos. Os problemas apresentados, bem como os resultados alcançados encorajam a adoção dessas ferramentas para fins didáticos, desde que tomados os devidos cuidados, principalmente com o refinamento das malhas utilizadas.
+    </p>
+    <p>
+     Permitiu-se também observar claramente a capacidade da aplicação dos métodos computacionais para a resolução de problemas de Mecânica dos Fluidos e Transmissão de Calor, na formação dos alunos das ciências exatas e engenharias, uma vez que para as situações de malhas adequadamente refinadas o erro obtido não foi maior do que 11%.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        P.A.C. Rocha, e J.V.P. Silveira, Revista Brasileira de Ensino de Física
+        <b>
+         34
+        </b>
+        , 4306 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        R. Khatri, P. Agrawal, M. Gupta and J. Verma, International Journal of Advances in Engineering and Technology
+        <b>
+         3
+        </b>
+        , 756 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        M. Hashiguci and K. Huwahara, in:
+        <i>
+         RIMS Annual Conference Proceedings
+        </i>
+        , Denver, Colorado, 1996.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        M. Sato and T. Kobayashi, in:
+        <i>
+         SIMULIA community Conference
+        </i>
+        , Providence RI, EUA, 2012
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        G.S.L. Swathi and V. Subrahmanyam, Journal of Engineering Research and Technology
+        <b>
+         3
+        </b>
+        , 215 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        P. Kumar and R. Ganesom, International Journal of Mathematical, Computational, Physical, Eletrical and Computer Engineering
+        <b>
+         6
+        </b>
+        , 909 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        A. Neale, D. Derome, B. Blocken and J. Carmeliet, in:
+        <i>
+         11th Canadian Conference on bilding Service and Technology, Banff
+        </i>
+        , Alberta, March 2007.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        H.K. Versteeg and W. Malalasekera,
+        <i>
+         An Introduction to Computational Fluid Dynamics - The Finite Volume Method
+        </i>
+        (Editora Pearson, London, 2007), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        S.V. Patankar,
+        <i>
+         Numerical Heat Transfer and Fluid Flow
+        </i>
+        (Taylor &amp; Francis, Boca Raton, 1980), 1ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        F.P. Incropera and D.P. DeWitt,
+        <i>
+         Fundamentos de Transferência de Calor e de Massa
+        </i>
+        (LTC Editora, Rio de Janeiro, 2003), 5ªed, p. 270.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        F.P. Incropera and D.P. DeWitt,
+        <i>
+         Fundamentos de Transferência de Calor e de Massa
+        </i>
+        (LTC Editora, Rio de Janeiro, 2003), 5ªed, p. 283.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        F.P. Incropera and D.P. DeWitt,
+        <i>
+         Fundamentos de Transferência de Calor e de Massa
+        </i>
+        (LTC Editora, Rio de Janeiro, 2003), 5ªed, p. 281.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        W.A. Khan, J.R. Culham and M.M. Yovanovich, Journal of Heat Transfer
+        <b>
+         127
+        </b>
+        , 785 (2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        D. Bhanuchandrarao, M. Ashok Chakravarthy, Y. Krishna, V.V.S. Rao and T.H. Krishna, International Journal of Engineering Research &amp; Technology (IJERT)
+        <b>
+         2
+        </b>
+        , 2782 (2013).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        12 Jul 2017
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        06 Set 2017
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        06 Out 2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

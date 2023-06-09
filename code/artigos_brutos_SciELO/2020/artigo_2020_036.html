@@ -1,0 +1,4869 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2019-0244" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2019-0244
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0244">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Análise do movimento de uma partícula em um loop circular vertical usando noções de limite
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Particle motion analysis in a vertical circular loop using limit concepts
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Igor Antonio Cancela Melnik
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Pampa, Caçapava do Sul, RS, Brasil.
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:igorcancela@gmail.com">
+      igorcancela@gmail.com
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-9107-2573">
+     http://orcid.org/0000-0002-9107-2573
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Vinicius de Abreu Oliveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Pampa, Caçapava do Sul, RS, Brasil.
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Nesse artigo serão analisadas as condições para que ocorra a perda de contato entre uma partícula e a superfície em um loop circular vertical. Esse problema é tradicionalmente exposto em livros de física básica, e aqui apresentaremos três abordagens distintas para sua solução. Para tal serão utilizados apenas conceitos matemáticos fundamentais, sem utilizar resultados do calculo diferencial. Mostraremos que embora essa análise seja fundamentada em noções intuitivas, ela é equivalente a que é tradicionalmente exposta em livros texto, quando estas são analisada em um nível matemático mais elementar. Discutiremos um caso onde uma abordagem semelhante a apresentada aqui conduz a uma falsa conclusão.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     cinemática; movimento circular
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     In this work, we will analyze the condition to a particle leave the contact with a vertical circular loop. This is a typical problem shows in textbooks of Physics, here we will present three different forms to solve it. For that, we will use only fundamental math concepts, it means without use differential calculus. We will show you that, although this analysis is been constructed in intuitive principles, it is equivalent to what is traditional show in textbooks. Overall we will discuss a special case, where a similar deduction of ours leave a false conclusion.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     kinematics; circular motion
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Uma partícula realizar uma volta completa na parte interna de um percurso em forma de loop pode parecer algo contra-intuitivo, tanto que durante anos este procedimento foi utilizado como atração circense. No topo da trajetória, por exemplo, o objeto está, momentaneamente, preso à superfície em uma posição invertida (de cabeça para baixo) e ainda assim sem cair. Uma situação que não ocorreria no caso estático. Dessa forma esse exemplo é interessante para expor os alunos às ideias que fundamentam a mecânica newtoniana.
+    </p>
+    <p>
+     Veículos tentando completar um percurso em uma pista desse formato forneceram uma curiosa fonte de entretenimento para seres humanos ao longo do tempo. Varias tentativas de realizar esse feito foram postas em prática, tanto usando motos, carros ou seres humanos. É uma evidência empírica que se a velocidade do veículo for grande o suficiente ao longo da trajetória ele conseguirá completar a volta, caso contrário ele perderá contato com a superfície.
+    </p>
+    <p>
+     Movimento de pessoas sobre toboáguas ou de veículos sobre pistas com declives acentuados são exemplos de situações onde, pelo menos localmente, podemos assumir que o movimento ocorre na parte exterior de um loop. A análise desse movimento é análoga a da situação descrita anteriormente. No entanto nesse caso a velocidade do objeto em movimento deverá ser baixa o suficiente para que ele não perca contato com a superfície.
+    </p>
+    <p>
+     Analisar a dinâmica em cada um desses casos é um problema de fácil tratamento matemático se assumirmos que o movimento ocorre ao longo de um loop circular vertical. Para isso basta analisar o sistema sobre a ótica da mecânica newtoniana, através dos conceitos de força normal e de aceleração centrípeta (
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2006), v. 1, p. 138.
+       </span>
+      </span>
+     </span>
+     ), ou do formalismo Lagrangiano aplicado a um sistema sujeito a forças de vínculo (
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] T. Marion. Classical Dynamics (Brooks/Cole Publishing Company, Pacific Grove, 2004), v. 1, p. 252.
+       </span>
+      </span>
+     </span>
+     ).
+    </p>
+    <p>
+     Uma interessante abordagem a esse problema foi apresentada em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] F. Simoni, Revista Brasileira de Ensino de Física
+					40, 330 (2018).
+       </span>
+      </span>
+     </span>
+     . A velocidade crítica na qual a partícula está na iminência de perder o contato com o loop foi obtida a partir de considerações geométricas, utilizando os conceitos de série de Taylor e raio de curvatura. Em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] P.R. Bhattacharjee, Revista Brasileira de Ensino de Física
+					41, 130 (2019).
+       </span>
+      </span>
+     </span>
+     foi apresentada uma abordagem semelhante. A expressão para a força centrípeta foi construída usando a noção intuitiva de limite, e a partir dela é trivial determinar a velocidade crítica em questão.
+    </p>
+    <p>
+     No presente artigo essa velocidade crítica,
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     , será determinada partindo da hipótese de que as trajetórias circular e parabólica são
+     <i>
+      localmente
+     </i>
+     semelhantes em torno do ponto onde ocorre a perda de contato com o loop. Para dar um significado mais preciso para a noção de
+     <i>
+      semelhança local
+     </i>
+     entre as trajetórias serão usados apenas conceitos matemáticos fundamentais, como o da noção de limite de uma função contínua e de funções trigonométricas, além de elementos da geometria euclidiana, como o da congruência de ângulos em triângulos isósceles.
+    </p>
+    <p>
+     Uma abordagem desse tipo é relevante do ponto de vista didático, pois é baseada na noções de limite, conceito que fundamenta as ideias do cálculo diferencial e {às} quais os alunos de semestres inciais estão sendo apresentados.
+    </p>
+    <p>
+     A velocidade crítica para que ocorra a perda de contato será determinada de três maneiras distintas na seção 2 e na seção 3 serão apresentadas algumas conclusões.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Velocidade crítica para existência de contato
+    </h1>
+    <p>
+     Nessa sessão iremos determinar a velocidade crítica,
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     , na qual uma partícula que move-se ao longo de um loop circular vertical está na iminência de perder contato com a superfície. Os argumentos usados nas três abordagens apresentadas a seguir baseiam-se em ideias intuitivas, envolvendo noções geométricas e de cinemática.
+    </p>
+    <h2>
+     2.1 Abordagem Trigonométrica
+    </h2>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     representa uma partícula em movimento em um loop circular vertical, em trajetória circular e parabólica, traços negro e vermelho, respectivamente.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Partícula na iminência de perder contato com um loop vertical quando está no topo da trajetória. A curva em vermelho representa uma trajetória parabólica.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na figura o ponto
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     representa o topo da trajetória, onde a partícula possui uma velocidade
+     <math>
+      <mrow>
+       <mover>
+        <mi>
+         v
+        </mi>
+        <mo>
+         →
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     que, por hipótese, é tangencial {à} trajetória parabólica naquele ponto. Assuma agora que a partícula não está em contato com o loop e que sua velocidade é tal que ela passa pelo ponto
+     <math>
+      <mi>
+       B
+      </mi>
+     </math>
+     , pertencente também {à} circunferência em questão. Assim, se o tempo que ela demora para ir de
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     até
+     <math>
+      <mi>
+       B
+      </mi>
+     </math>
+     é
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     , separando os movimentos em eixos e aplicando as equações horárias, tem-se que
+     <math>
+      <mover>
+       <mrow>
+        <mi>
+         C
+        </mi>
+        <mi>
+         B
+        </mi>
+       </mrow>
+       <mo accent="false">
+        ¯
+       </mo>
+      </mover>
+      <mo>
+       =
+      </mo>
+      <mi>
+       v
+      </mi>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math>
+      <mover>
+       <mrow>
+        <mi>
+         A
+        </mi>
+        <mi>
+         C
+        </mi>
+       </mrow>
+       <mo accent="false">
+        ¯
+       </mo>
+      </mover>
+      <mo>
+       =
+      </mo>
+      <mfrac>
+       <mn>
+        1
+       </mn>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+      <mi>
+       g
+      </mi>
+      <msubsup>
+       <mi>
+        t
+       </mi>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msubsup>
+     </math>
+     .
+    </p>
+    <p>
+     Já para o triângulo
+     <math>
+      <mi>
+       A
+      </mi>
+      <mi>
+       B
+      </mi>
+      <mi>
+       C
+      </mi>
+     </math>
+     conclui-se que
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-1">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mrow>
+            <mi mathvariant="normal">
+             t
+            </mi>
+            <mi mathvariant="normal">
+             g
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             β
+            </mi>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mover>
+             <mrow>
+              <mi>
+               A
+              </mi>
+              <mi>
+               C
+              </mi>
+             </mrow>
+             <mo accent="false">
+              ¯
+             </mo>
+            </mover>
+            <mover>
+             <mrow>
+              <mi>
+               C
+              </mi>
+              <mi>
+               B
+              </mi>
+             </mrow>
+             <mo accent="false">
+              ¯
+             </mo>
+            </mover>
+           </mfrac>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mi>
+             g
+            </mi>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              v
+             </mi>
+            </mrow>
+           </mfrac>
+           <msub>
+            <mi>
+             t
+            </mi>
+            <mrow>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Suponha agora, que a partícula move-se entre os pontos
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       B
+      </mi>
+     </math>
+     em trajetória circular e com velocidade constante
+     <math>
+      <mi>
+       v
+      </mi>
+     </math>
+     . Sendo assim, esse percurso ocorre em um tempo
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     dado por
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-2">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msub>
+            <mi>
+             t
+            </mi>
+            <mrow>
+             <mn>
+              2
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              R
+             </mi>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mi>
+              θ
+             </mi>
+            </mrow>
+            <mi>
+             v
+            </mi>
+           </mfrac>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     conluímos que quando
+     <math>
+      <mi mathvariant="normal">
+       Δ
+      </mi>
+      <mi>
+       θ
+      </mi>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , a hipótese de que
+     <math>
+      <mi>
+       B
+      </mi>
+     </math>
+     pertença a ambas trajetórias implica em uma igualdade entre as curvas em torno de
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     }. Fisicamente falando, {nessa situação}, a trajetória não é mais influenciada pelo loop e assim a partícula está na iminência de perder contato com o mesmo. {Iremos a seguir obter
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     como a consequência da}
+     <i>
+      semelhança local
+     </i>
+     entre as trajetórias circular e parabólica em torno do ponto
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     .
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Nesse momento cabe ressaltar a {análise} envolvendo a expansão em serie de Taylor apresentada em [3].
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     Como estamos supondo que a velocidade é a mesma para ambas trajetórias, temos que
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , e assim a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (1)
+     </a>
+     pode ser escrita como
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-3">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mrow>
+            <mi mathvariant="normal">
+             t
+            </mi>
+            <mi mathvariant="normal">
+             g
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             β
+            </mi>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              g
+             </mi>
+             <mi>
+              R
+             </mi>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mi>
+              θ
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <msubsup>
+              <mi>
+               v
+              </mi>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+              </mrow>
+             </msubsup>
+            </mrow>
+           </mfrac>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     igualdade que é válida quando
+     <math>
+      <mi mathvariant="normal">
+       Δ
+      </mi>
+      <mi>
+       θ
+      </mi>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , situação em que
+     <math>
+      <mi>
+       v
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     O triângulo
+     <math>
+      <mi>
+       O
+      </mi>
+      <mi>
+       A
+      </mi>
+      <mi>
+       B
+      </mi>
+     </math>
+     é isósceles, logo os ângulos
+     <math>
+      <mi>
+       C
+      </mi>
+      <mrow>
+       <mover>
+        <mi>
+         A
+        </mi>
+        <mo stretchy="false">
+         ^
+        </mo>
+       </mover>
+      </mrow>
+      <mi>
+       B
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       A
+      </mi>
+      <mrow>
+       <mover>
+        <mi>
+         B
+        </mi>
+        <mo stretchy="false">
+         ^
+        </mo>
+       </mover>
+      </mrow>
+      <mi>
+       O
+      </mi>
+     </math>
+     são congruentes. Considerando ainda o teorema da soma dos ângulos internos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] A. Caminha, Geometria - coleção PROFMAT (Sociedade Brasileira de Matmática, Rio de Janeiro, 2013), v. 1, p. 40.
+       </span>
+      </span>
+     </span>
+     para os triângulos
+     <math>
+      <mi>
+       A
+      </mi>
+      <mi>
+       B
+      </mi>
+      <mi>
+       C
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       O
+      </mi>
+      <mi>
+       B
+      </mi>
+      <mi>
+       C
+      </mi>
+     </math>
+     , é trivial mostrar que
+     <math>
+      <mi>
+       β
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mfrac>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mi>
+         θ
+        </mi>
+       </mrow>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+     </math>
+     . E assim
+     <math>
+      <mi>
+       β
+      </mi>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     quando
+     <math>
+      <mi mathvariant="normal">
+       Δ
+      </mi>
+      <mi>
+       θ
+      </mi>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , de forma que
+     <math>
+      <mrow>
+       <mi mathvariant="normal">
+        t
+       </mi>
+       <mi mathvariant="normal">
+        g
+       </mi>
+      </mrow>
+      <mrow>
+       <mi>
+        β
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mfrac>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mi>
+         θ
+        </mi>
+       </mrow>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+     </math>
+     , ou seja, foi utilizado aqui a propriedade da função tangente para ângulos muito pequenos, e nessas circunstâncias decorre da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (3)
+     </a>
+     que
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-4">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mi>
+            v
+           </mi>
+           <mo>
+            =
+           </mo>
+           <msqrt>
+            <mi>
+             R
+            </mi>
+            <mi>
+             g
+            </mi>
+           </msqrt>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Quando o movimento ocorre na parte interna do loop,
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     passa a ser a velocidade mínima que a partícula deve apesentar para permanecer em contato com o topo do loop. Já se o movimento ocorre na parte externa,
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     é a velocidade máxima que a partícula pode possuir sem que ela perca o contato com a superfície naquele ponto.
+    </p>
+    <p>
+     Pode-se determinar
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     para outras posições ao longo do loop procedendo de forma análoga. Essa situação está representada na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 2
+     </a>
+     , onde a posição na qual ocorre a perda de contato com o loop está representada pelo ponto
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     . Definindo que a trajetória entre
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       B
+      </mi>
+     </math>
+     ocorre durante um intervalo de tempo
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     e que é parabólica, é possível escrever
+     <math>
+      <mover>
+       <mrow>
+        <mi>
+         A
+        </mi>
+        <mi>
+         C
+        </mi>
+       </mrow>
+       <mo accent="false">
+        ¯
+       </mo>
+      </mover>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       [
+      </mo>
+      <mi>
+       v
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       θ
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mtext>
+      </mtext>
+      <mrow>
+       <mi mathvariant="normal">
+        s
+       </mi>
+       <mi mathvariant="normal">
+        e
+       </mi>
+       <mi mathvariant="normal">
+        n
+       </mi>
+      </mrow>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       ]
+      </mo>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <mover>
+       <mrow>
+        <mi>
+         C
+        </mi>
+        <mi>
+         B
+        </mi>
+       </mrow>
+       <mo accent="false">
+        ¯
+       </mo>
+      </mover>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       [
+      </mo>
+      <mi>
+       v
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       θ
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mi>
+       cos
+      </mi>
+      <mo>
+       ⁡
+      </mo>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       ]
+      </mo>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+      <mo>
+       −
+      </mo>
+      <mfrac>
+       <mn>
+        1
+       </mn>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+      <mi>
+       g
+      </mi>
+      <msubsup>
+       <mi>
+        t
+       </mi>
+       <mn>
+        3
+       </mn>
+       <mn>
+        2
+       </mn>
+      </msubsup>
+     </math>
+     , onde foi assumido que o vetor velocidade é tangente a trajetória circular em
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     . Novamente foi utilizado as equações horárias e separando o movimento em componentes. Assim,
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Partícula na iminência de perder contato com um loop vertical quando está em um ponto arbitrário da trajetória.
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-5">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mrow>
+            <mi mathvariant="normal">
+             t
+            </mi>
+            <mi mathvariant="normal">
+             g
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             β
+            </mi>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mover>
+             <mrow>
+              <mi>
+               A
+              </mi>
+              <mi>
+               C
+              </mi>
+             </mrow>
+             <mo accent="false">
+              ¯
+             </mo>
+            </mover>
+            <mover>
+             <mrow>
+              <mi>
+               C
+              </mi>
+              <mi>
+               B
+              </mi>
+             </mrow>
+             <mo accent="false">
+              ¯
+             </mo>
+            </mover>
+           </mfrac>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mi>
+              v
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mrow>
+              <mi mathvariant="normal">
+               s
+              </mi>
+              <mi mathvariant="normal">
+               e
+              </mi>
+              <mi mathvariant="normal">
+               n
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               θ
+              </mi>
+              <mo stretchy="false">
+               ]
+              </mo>
+              <msub>
+               <mi>
+                t
+               </mi>
+               <mn>
+                3
+               </mn>
+              </msub>
+             </mrow>
+            </mrow>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mi>
+              v
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <mo>
+              ⁡
+             </mo>
+             <mrow>
+              <mi>
+               θ
+              </mi>
+             </mrow>
+             <mo stretchy="false">
+              ]
+             </mo>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mn>
+               3
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mfrac>
+              <mn>
+               1
+              </mn>
+              <mn>
+               2
+              </mn>
+             </mfrac>
+             <mi>
+              g
+             </mi>
+             <msubsup>
+              <mi>
+               t
+              </mi>
+              <mn>
+               3
+              </mn>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+            </mrow>
+           </mfrac>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Se a trajetória entre esses pontos for circular, e ocorrer em um tempo
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     dado por
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-6">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msub>
+            <mi>
+             t
+            </mi>
+            <mrow>
+             <mn>
+              4
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              R
+             </mi>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mi>
+              θ
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              v
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mfrac>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Aqui também o triângulo
+     <math>
+      <mi>
+       O
+      </mi>
+      <mi>
+       A
+      </mi>
+      <mi>
+       B
+      </mi>
+     </math>
+     é isósceles de base
+     <math>
+      <mi>
+       A
+      </mi>
+      <mi>
+       B
+      </mi>
+     </math>
+     , de forma que
+     <math>
+      <mi>
+       ϕ
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mi>
+       β
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mfrac>
+       <mi>
+        π
+       </mi>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+      <mo>
+       −
+      </mo>
+      <mi>
+       ϕ
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mi>
+       θ
+      </mi>
+     </math>
+     , onde
+     <math>
+      <mi>
+       ϕ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mfrac>
+       <mi>
+        π
+       </mi>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+      <mo>
+       −
+      </mo>
+      <mi>
+       θ
+      </mi>
+      <mo>
+       −
+      </mo>
+      <mi mathvariant="normal">
+       Δ
+      </mi>
+      <mi>
+       θ
+      </mi>
+     </math>
+     . Dessa igualdade conclui-se que
+     <math>
+      <mi>
+       β
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       θ
+      </mi>
+      <mo>
+       +
+      </mo>
+      <mfrac>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mi>
+         θ
+        </mi>
+       </mrow>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+     </math>
+     e fazendo
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mn>
+        4
+       </mn>
+      </msub>
+     </math>
+     , condição para pequenos ângulos, conclui-se que
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m7">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-7_2">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msub>
+            <mi>
+             v
+            </mi>
+            <mrow>
+             <mi>
+              c
+             </mi>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            θ
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <msqrt>
+            <mi>
+             R
+            </mi>
+            <mi>
+             g
+            </mi>
+            <mtext>
+            </mtext>
+            <mrow>
+             <mi mathvariant="normal">
+              s
+             </mi>
+             <mi mathvariant="normal">
+              e
+             </mi>
+             <mi mathvariant="normal">
+              n
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              θ
+             </mi>
+            </mrow>
+           </msqrt>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que é válida para
+     <math>
+      <mn>
+       0
+      </mn>
+      <mo>
+       &lt;
+      </mo>
+      <mi>
+       θ
+      </mi>
+      <mo>
+       &lt;
+      </mo>
+      <mi>
+       π
+      </mi>
+     </math>
+     . Já quando
+     <math>
+      <mi>
+       π
+      </mi>
+      <mo>
+       &lt;
+      </mo>
+      <mi>
+       θ
+      </mi>
+      <mo>
+       &lt;
+      </mo>
+      <mn>
+       2
+      </mn>
+      <mi>
+       π
+      </mi>
+     </math>
+     temos situações que são bastante diretas, isto é, caso o movimento ocorra na parte interna do loop, a partícula não perde contato com a superfície independente de sua velocidade. Por outro lado, caso o movimento ocorra na parte externa do loop, ela não está em contato com a superfície independente de sua velocidade. Assim em ambas situações não existe
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mrow>
+        <mi>
+         c
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       θ
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     .
+    </p>
+    <h2>
+     2.2 Abordagem Geométrica
+    </h2>
+    <p>
+     Quando a partícula perde contato com o loop seu movimento deixa de ser descrito por uma trajetória circular, representada pela função
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mrow>
+        <mi>
+         c
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     , e passa a ser descrito por uma trajetória parabólica, representada pela função
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     . Desta forma é possível determinar
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     analisando a diferença vertical entre essas duas curvas na região próxima de onde ocorre a transição. Para tanto, parte-se das duas hipóteses abaixo:
+    </p>
+    <ol type="1">
+     <li>
+      I
+      <p>
+       As trajetórias se intersectam no ponto
+       <math>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          y
+         </mi>
+         <mrow>
+          <mi>
+           c
+          </mi>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         x
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         ∩
+        </mo>
+        <msub>
+         <mi>
+          y
+         </mi>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         x
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mi>
+         R
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+       </math>
+      </p>
+     </li>
+     <li>
+      II
+      <p>
+       Em
+       <math>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mrow>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msub>
+       </math>
+       a partícula cuja trajetória é parabólica possui velocidade tangente à circunferência.
+      </p>
+     </li>
+    </ol>
+    <p>
+     Nessas condições, e seguindo o sistema de referência estabelecido na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     , é possível escrever
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m8">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-8_1">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mtable columnalign="right left" columnspacing="0em" displaystyle="true" rowspacing="3pt">
+            <mtr>
+             <mtd>
+              <msub>
+               <mi>
+                y
+               </mi>
+               <mrow>
+                <mi>
+                 c
+                </mi>
+               </mrow>
+              </msub>
+              <mo>
+               =
+              </mo>
+              <msqrt>
+               <msup>
+                <mi>
+                 R
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                −
+               </mo>
+               <msup>
+                <mi>
+                 x
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </msqrt>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <msub>
+               <mi>
+                y
+               </mi>
+               <mrow>
+                <mi>
+                 p
+                </mi>
+               </mrow>
+              </msub>
+              <mo>
+               =
+              </mo>
+              <mi>
+               R
+              </mi>
+              <mo>
+               −
+              </mo>
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mfrac>
+                <mi>
+                 g
+                </mi>
+                <msup>
+                 <mi>
+                  v
+                 </mi>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+               </mfrac>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <msup>
+               <mi>
+                x
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mo>
+               ,
+              </mo>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essas trajetórias são mostradas na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     , onde as linhas tracejadas em vermelho representam possíveis trajetórias parabólicas, já a linha contínua em negro representa a trajetória circular.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Trajetória circular sobreposta a segmentos de trajetórias parabólicas. Os pontos
+      <math>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+      </math>
+      e
+      <math>
+       <msub>
+        <mi>
+         I
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+      </math>
+      representam a intersecção das curvas. As parábolas foram geradas assumindo
+      <math>
+       <mi>
+        v
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0.45
+       </mn>
+       <msub>
+        <mi>
+         v
+        </mi>
+        <mi>
+         c
+        </mi>
+       </msub>
+      </math>
+      e
+      <math>
+       <mi>
+        v
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1.35
+       </mn>
+       <msub>
+        <mi>
+         v
+        </mi>
+        <mi>
+         c
+        </mi>
+       </msub>
+      </math>
+      em ambos casos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Afim de analisar a diferença vertical entre entre essas trajetórias em torno de
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     define-se a função:
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m9">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-9">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msup>
+            <mi>
+             S
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            x
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <msubsup>
+            <mi>
+             y
+            </mi>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo>
+            −
+           </mo>
+           <msubsup>
+            <mi>
+             y
+            </mi>
+            <mrow>
+             <mi>
+              c
+             </mi>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msubsup>
+           <mo>
+            =
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <msup>
+              <mi>
+               g
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mrow>
+              <mn>
+               4
+              </mn>
+              <msup>
+               <mi>
+                v
+               </mi>
+               <mn>
+                4
+               </mn>
+              </msup>
+             </mrow>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <msup>
+            <mi>
+             x
+            </mi>
+            <mn>
+             4
+            </mn>
+           </msup>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             −
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               R
+              </mi>
+              <mi>
+               g
+              </mi>
+             </mrow>
+             <msup>
+              <mi>
+               v
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <msup>
+            <mi>
+             x
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que é um indicativo da distância vertical entre as curvas. Embora as mesmas conclusões poderiam ser obtidas caso fosse definido simplesmente a diferença entre as curvas,
+     <math>
+      <mi>
+       S
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       −
+      </mo>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mrow>
+        <mi>
+         c
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     , a análise que se segue se torna mais simples, do ponto de vista algébrico, se considerarmos a função
+     <math>
+      <msup>
+       <mi>
+        S
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     .
+    </p>
+    <p>
+     Para tanto tem-se que analisar o comportamento da função
+     <math>
+      <msup>
+       <mi>
+        S
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     quando
+     <math>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     . Fazendo
+     <math>
+      <mi>
+       x
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+      <mo>
+       ≠
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     e desprezando o termo de ordem mais elevada do que quadrática em
+     <math>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (9)
+     </a>
+     obtém-se:
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m10">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-10">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msup>
+            <mi>
+             S
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            δ
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             −
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               R
+              </mi>
+              <mi>
+               g
+              </mi>
+             </mrow>
+             <msup>
+              <mi>
+               v
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            δ
+           </mi>
+           <mi>
+            x
+           </mi>
+           <msup>
+            <mo stretchy="false">
+             )
+            </mo>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que se anula quando
+     <math>
+      <mi>
+       v
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mrow>
+        <mi>
+         c
+        </mi>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <msqrt>
+       <mi>
+        R
+       </mi>
+       <mi>
+        g
+       </mi>
+      </msqrt>
+     </math>
+     . Ou seja, se
+     <math>
+      <mi>
+       v
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mrow>
+        <mi>
+         c
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     temos
+     <math>
+      <msup>
+       <mi>
+        S
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       ≈
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     e portanto
+     <math>
+      <msubsup>
+       <mi>
+        y
+       </mi>
+       <mrow>
+        <mi>
+         p
+        </mi>
+       </mrow>
+       <mn>
+        2
+       </mn>
+      </msubsup>
+      <mo>
+       ≈
+      </mo>
+      <msubsup>
+       <mi>
+        y
+       </mi>
+       <mrow>
+        <mi>
+         c
+        </mi>
+       </mrow>
+       <mn>
+        2
+       </mn>
+      </msubsup>
+     </math>
+     até que termos de ordem cúbica em
+     <math>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+     </math>
+     se tornem relevantes.
+    </p>
+    <p>
+     Para determinar
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     em um ponto arbitrário do loop vamos supor que as hipóteses I e II são válidas no ponto
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mi>
+       cos
+      </mi>
+      <mo>
+       ⁡
+      </mo>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mtext>
+      </mtext>
+      <mrow>
+       <mi mathvariant="normal">
+        s
+       </mi>
+       <mi mathvariant="normal">
+        e
+       </mi>
+       <mi mathvariant="normal">
+        n
+       </mi>
+      </mrow>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     . Isto é, que a partícula está inicialmente em
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     , em movimento parabólico, e com velocidade tangencial a circunferência
+     <math>
+      <mrow>
+       <mover>
+        <mi>
+         v
+        </mi>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+      </mrow>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       v
+      </mi>
+      <mtext>
+      </mtext>
+      <mrow>
+       <mi mathvariant="normal">
+        s
+       </mi>
+       <mi mathvariant="normal">
+        e
+       </mi>
+       <mi mathvariant="normal">
+        n
+       </mi>
+      </mrow>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo>
+       ,
+      </mo>
+      <mo>
+       −
+      </mo>
+      <mi>
+       v
+      </mi>
+      <mi>
+       cos
+      </mi>
+      <mo>
+       ⁡
+      </mo>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     . Nesta circunstância o vetor posição da partícula é
+     <math>
+      <mrow>
+       <mover>
+        <mi>
+         r
+        </mi>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+      </mrow>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       y
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mi>
+       cos
+      </mi>
+      <mo>
+       ⁡
+      </mo>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo>
+       +
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       v
+      </mi>
+      <mtext>
+      </mtext>
+      <mrow>
+       <mi mathvariant="normal">
+        s
+       </mi>
+       <mi mathvariant="normal">
+        e
+       </mi>
+       <mi mathvariant="normal">
+        n
+       </mi>
+      </mrow>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo>
+       ,
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mtext>
+      </mtext>
+      <mrow>
+       <mi mathvariant="normal">
+        s
+       </mi>
+       <mi mathvariant="normal">
+        e
+       </mi>
+       <mi mathvariant="normal">
+        n
+       </mi>
+      </mrow>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo>
+       −
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       v
+      </mi>
+      <mi>
+       cos
+      </mi>
+      <mo>
+       ⁡
+      </mo>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo>
+       −
+      </mo>
+      <mfrac>
+       <mn>
+        1
+       </mn>
+       <mn>
+        2
+       </mn>
+      </mfrac>
+      <mi>
+       g
+      </mi>
+      <msup>
+       <mi>
+        t
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     , e definindo
+     <math>
+      <mi>
+       x
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mi>
+       cos
+      </mi>
+      <mo>
+       ⁡
+      </mo>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo>
+       +
+      </mo>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+     </math>
+     , a equação da trajetória é dada por:
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m11">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-11">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msub>
+            <mi>
+             y
+            </mi>
+            <mrow>
+             <mi>
+              p
+             </mi>
+            </mrow>
+           </msub>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            δ
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mi>
+            R
+           </mi>
+           <mtext>
+           </mtext>
+           <mrow>
+            <mi mathvariant="normal">
+             s
+            </mi>
+            <mi mathvariant="normal">
+             e
+            </mi>
+            <mi mathvariant="normal">
+             n
+            </mi>
+           </mrow>
+           <mrow>
+            <mi>
+             θ
+            </mi>
+           </mrow>
+           <mo>
+            −
+           </mo>
+           <mi>
+            cot
+           </mi>
+           <mo>
+            ⁡
+           </mo>
+           <mrow>
+            <mi>
+             θ
+            </mi>
+           </mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            δ
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            −
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mi>
+              g
+             </mi>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <msup>
+               <mi>
+                v
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mtext>
+              </mtext>
+              <msup>
+               <mrow>
+                <mi mathvariant="normal">
+                 s
+                </mi>
+                <mi mathvariant="normal">
+                 e
+                </mi>
+                <mi mathvariant="normal">
+                 n
+                </mi>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mrow>
+               <mi>
+                θ
+               </mi>
+              </mrow>
+             </mrow>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            δ
+           </mi>
+           <mi>
+            x
+           </mi>
+           <msup>
+            <mo stretchy="false">
+             )
+            </mo>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Definindo a função
+     <math>
+      <msup>
+       <mi>
+        S
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     de forma análoga a anterior, conclui-se que:
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m12">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-12">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msup>
+            <mi>
+             S
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            δ
+           </mi>
+           <mi>
+            x
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+           <mo>
+            =
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <mn>
+              1
+             </mn>
+             <mrow>
+              <msup>
+               <mrow>
+                <mi mathvariant="normal">
+                 s
+                </mi>
+                <mi mathvariant="normal">
+                 e
+                </mi>
+                <mi mathvariant="normal">
+                 n
+                </mi>
+               </mrow>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mrow>
+               <mi>
+                θ
+               </mi>
+              </mrow>
+             </mrow>
+            </mfrac>
+            <mo>
+             −
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               R
+              </mi>
+              <mi>
+               g
+              </mi>
+             </mrow>
+             <mrow>
+              <msup>
+               <mi>
+                v
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mtext>
+              </mtext>
+              <mrow>
+               <mi mathvariant="normal">
+                s
+               </mi>
+               <mi mathvariant="normal">
+                e
+               </mi>
+               <mi mathvariant="normal">
+                n
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                θ
+               </mi>
+              </mrow>
+             </mrow>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            δ
+           </mi>
+           <mi>
+            x
+           </mi>
+           <msup>
+            <mo stretchy="false">
+             )
+            </mo>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde novamente os termos de ordem mais alta do que quadráticos em
+     <math>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+     </math>
+     foram desprezados. Logo se
+     <math>
+      <mi>
+       v
+      </mi>
+      <mo>
+       =
+      </mo>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <msqrt>
+       <mi>
+        R
+       </mi>
+       <mi>
+        g
+       </mi>
+       <mtext>
+       </mtext>
+       <mrow>
+        <mi mathvariant="normal">
+         s
+        </mi>
+        <mi mathvariant="normal">
+         e
+        </mi>
+        <mi mathvariant="normal">
+         n
+        </mi>
+       </mrow>
+       <mrow>
+        <mi>
+         θ
+        </mi>
+       </mrow>
+      </msqrt>
+     </math>
+     ,
+     <math>
+      <msup>
+       <mi>
+        S
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       δ
+      </mi>
+      <mi>
+       x
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       ≈
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     até que esses termos se tornem relevantes.
+    </p>
+    <h2>
+     2.3 Abordagem Algébrica
+    </h2>
+    <p>
+     A velocidade crítica para o topo do loop pode ser determinada facilmente a partir da equação da parábola definida pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (8)
+     </a>
+     . A velocidade
+     <math>
+      <mi>
+       v
+      </mi>
+     </math>
+     é determinada da condição de que
+     <math>
+      <mi>
+       B
+      </mi>
+     </math>
+     , conforme notação mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     , pertença a circunferência. A condição
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mi>
+        p
+       </mi>
+      </msub>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       x
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mtext>
+      </mtext>
+      <mrow>
+       <mi mathvariant="normal">
+        s
+       </mi>
+       <mi mathvariant="normal">
+        e
+       </mi>
+       <mi mathvariant="normal">
+        n
+       </mi>
+      </mrow>
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+      <mo>
+       =
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mi>
+       cos
+      </mi>
+      <mo>
+       ⁡
+      </mo>
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mi>
+        θ
+       </mi>
+      </mrow>
+     </math>
+     fornece:
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m13">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-13">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mi>
+            v
+           </mi>
+           <mo>
+            =
+           </mo>
+           <msqrt>
+            <mi>
+             g
+            </mi>
+            <mi>
+             R
+            </mi>
+           </msqrt>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mfrac>
+             <mrow>
+              <mrow>
+               <mi mathvariant="normal">
+                s
+               </mi>
+               <mi mathvariant="normal">
+                e
+               </mi>
+               <mi mathvariant="normal">
+                n
+               </mi>
+              </mrow>
+              <mrow>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mi>
+                θ
+               </mi>
+              </mrow>
+             </mrow>
+             <msqrt>
+              <mn>
+               2
+              </mn>
+              <mo stretchy="false">
+               (
+              </mo>
+              <mn>
+               1
+              </mn>
+              <mo>
+               −
+              </mo>
+              <mi>
+               cos
+              </mi>
+              <mo>
+               ⁡
+              </mo>
+              <mrow>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mi>
+                θ
+               </mi>
+              </mrow>
+              <mo stretchy="false">
+               )
+              </mo>
+             </msqrt>
+            </mfrac>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A velocidade crítica
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     é tal que, localmente, as trajetórias são iguais. Para que isso ocorra basta que
+     <math>
+      <mi mathvariant="normal">
+       Δ
+      </mi>
+      <mi>
+       θ
+      </mi>
+      <mo stretchy="false">
+       →
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     , e assim:
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m14">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-14">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <msub>
+            <mi>
+             v
+            </mi>
+            <mi>
+             c
+            </mi>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <munder>
+            <mo form="prefix">
+             lim
+            </mo>
+            <mrow>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              →
+             </mo>
+             <mn>
+              0
+             </mn>
+            </mrow>
+           </munder>
+           <mrow>
+            <mrow>
+             <mo>
+              {
+             </mo>
+             <msqrt>
+              <mi>
+               g
+              </mi>
+              <mi>
+               R
+              </mi>
+             </msqrt>
+             <mrow>
+              <mo>
+               [
+              </mo>
+              <mfrac>
+               <mrow>
+                <mrow>
+                 <mi mathvariant="normal">
+                  s
+                 </mi>
+                 <mi mathvariant="normal">
+                  e
+                 </mi>
+                 <mi mathvariant="normal">
+                  n
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mi mathvariant="normal">
+                  Δ
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                </mrow>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <mo>
+                 ⁡
+                </mo>
+                <mrow>
+                 <mi mathvariant="normal">
+                  Δ
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                </mrow>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </msqrt>
+              </mfrac>
+              <mo>
+               ]
+              </mo>
+             </mrow>
+             <mo>
+              }
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            =
+           </mo>
+           <msqrt>
+            <mi>
+             g
+            </mi>
+            <mi>
+             R
+            </mi>
+           </msqrt>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Conclusão
+    </h1>
+    <p>
+     Nesse artigo demonstramos que a condição para que uma partícula perca contato com um loop circular vertical pode ser obtida a partir de argumentos de matemática básica. As três análises apresentadas buscaram estabelecer uma
+     <i>
+      semelhança local
+     </i>
+     entre as duas trajetória consideradas. Como esse objetivo elaboramos construções que, embora tenham tornado a definição de
+     <i>
+      semelhança local
+     </i>
+     intuitiva, a manteve imprecisa do ponto de vista matemático.
+    </p>
+    <p>
+     Quando escrevemos a equação da trajetória na forma da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação 11
+     </a>
+     estamos
+     <i>
+      assumindo
+     </i>
+     que o vetor velocidade associado a trajetória parabólica é tangencial a circunferência no ponto
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     . Essa mesma hipótese foi assumida nas outras duas abordagens apresentadas aqui.
+    </p>
+    <p>
+     De fato, sejam
+     <math>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          v
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+      </mrow>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          x
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+        <mo>
+         ˙
+        </mo>
+       </mover>
+      </mrow>
+      <mo>
+       ,
+      </mo>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          y
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+        <mo>
+         ˙
+        </mo>
+       </mover>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          v
+         </mi>
+         <mi>
+          c
+         </mi>
+        </msub>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+      </mrow>
+      <mo>
+       =
+      </mo>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          x
+         </mi>
+         <mi>
+          c
+         </mi>
+        </msub>
+        <mo>
+         ˙
+        </mo>
+       </mover>
+      </mrow>
+      <mo>
+       ,
+      </mo>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          y
+         </mi>
+         <mi>
+          c
+         </mi>
+        </msub>
+        <mo>
+         ˙
+        </mo>
+       </mover>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     os vetores velocidade associados, respectivamente, a trajetória parabólica e circular. Temos, por hipótese que
+     <math>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          v
+         </mi>
+         <mrow>
+          <mi>
+           p
+          </mi>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+      </mrow>
+      <mo>
+       ∥
+      </mo>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          v
+         </mi>
+         <mrow>
+          <mi>
+           c
+          </mi>
+         </mrow>
+        </msub>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+      </mrow>
+     </math>
+     , sendo trivial mostrar que
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m15">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-15">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mfrac>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               c
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               c
+              </mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <mo stretchy="false">
+            ⇔
+           </mo>
+           <mfrac>
+            <mrow>
+             <mover>
+              <msub>
+               <mi>
+                y
+               </mi>
+               <mi>
+                p
+               </mi>
+              </msub>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+            </mrow>
+            <mrow>
+             <mover>
+              <msub>
+               <mi>
+                x
+               </mi>
+               <mi>
+                p
+               </mi>
+              </msub>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+            </mrow>
+           </mfrac>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <mover>
+              <msub>
+               <mi>
+                y
+               </mi>
+               <mi>
+                c
+               </mi>
+              </msub>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+            </mrow>
+            <mrow>
+             <mover>
+              <msub>
+               <mi>
+                x
+               </mi>
+               <mi>
+                c
+               </mi>
+              </msub>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+            </mrow>
+           </mfrac>
+           <mo stretchy="false">
+            ⇔
+           </mo>
+           <mrow>
+            <mover>
+             <msub>
+              <mi>
+               v
+              </mi>
+              <mrow>
+               <mi>
+                p
+               </mi>
+              </mrow>
+             </msub>
+             <mo stretchy="false">
+              →
+             </mo>
+            </mover>
+           </mrow>
+           <mo>
+            ∥
+           </mo>
+           <mrow>
+            <mover>
+             <msub>
+              <mi>
+               v
+              </mi>
+              <mrow>
+               <mi>
+                c
+               </mi>
+              </mrow>
+             </msub>
+             <mo stretchy="false">
+              →
+             </mo>
+            </mover>
+           </mrow>
+           <mo>
+            .
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     E dessa forma, a hipótese II é equivalente a assumir que em
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m16">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-16">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mfrac>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               c
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               c
+              </mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <mo>
+            ,
+           </mo>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     assim as hipóteses I e II são as mesmas necessárias para construirmos os dois primeiros termos da
+     <i>
+      Série de Taylor
+     </i>
+     (
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] H. Anton, Cálculo (Bookman, Porto Alegre , 2007), v. 2, p. 675.
+       </span>
+      </span>
+     </span>
+     ) de
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     em torno de
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     . A velocidade
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     pode ser obtida assumindo que em
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     devemos também ter
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m17">
+        <mtable displaystyle="true">
+         <mlabeledtr>
+          <mtd id="mjx-eqn-17">
+           <mo>
+           </mo>
+          </mtd>
+          <mtd>
+           <mfrac>
+            <mrow>
+             <msup>
+              <mi>
+               d
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               p
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msup>
+              <mrow>
+               <msub>
+                <mi>
+                 x
+                </mi>
+                <mi>
+                 p
+                </mi>
+               </msub>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </mfrac>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <msup>
+              <mi>
+               d
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               c
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msup>
+              <mrow>
+               <msub>
+                <mi>
+                 x
+                </mi>
+                <mi>
+                 c
+                </mi>
+               </msub>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </mfrac>
+          </mtd>
+         </mlabeledtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que do ponto de vista geométrico, corresponde a uma igualdade entre as curvaturas das funções
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mi>
+        p
+       </mi>
+      </msub>
+     </math>
+     em
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     . Do ponto de vista cinemático, esta condição é equivalente a uma igualdade entre as acelerações associadas as trajetórias em questão no ponto
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     . Do ponto de vista da dinâmica essa condição equivale a uma igualdade entre as Forças Centrípeta e Gravitacional. É possível mostrar que as três análises apresentadas aqui convergem para a condição estabelecida pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (17)
+     </a>
+     . Nesse contexto uma definição precisa de
+     <i>
+      semelhança local
+     </i>
+     entre as trajetórias é a da igualdade entre os 3 primeiros termos da série de Taylor das funções
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mi>
+        p
+       </mi>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     em torno de
+     <math>
+      <msub>
+       <mi>
+        I
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Embora não tenhamos apresentados nenhum argumentos nesse sentido durante as soluções apresentadas na seção 2, é sempre importante buscar um significado físico que justifique alguma condição construída a partir da ideia de
+     <i>
+      semelhança local
+     </i>
+     entre trajetórias. Dessa forma não corremos o risco de obter conclusões corretas a partir de argumentos espúrios. Na análise conduzida em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] F. Simoni, Revista Brasileira de Ensino de Física
+					40, 330 (2018).
+       </span>
+      </span>
+     </span>
+     por exemplo,
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     foi determinada a partir da condição estabelecida pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (16)
+     </a>
+     , que é justamente uma das
+     <i>
+      hipóteses
+     </i>
+     adotas para escrever as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (11)
+     </a>
+     , análogas a apresentadas pelo autor. Embora a conclusão obtida tenha sido correta ela não é consequência dos argumentos apresentados em sua análise, visto que, implicitamente, fica subentendido uma divisão por zero.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] D. Halliday, R. Resnick e J. Walker,
+        <i>
+         Fundamentos de Física
+        </i>
+        (LTC, Rio de Janeiro, 2006), v. 1, p. 138.
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] T. Marion.
+        <i>
+         Classical Dynamics
+        </i>
+        (Brooks/Cole Publishing Company, Pacific Grove, 2004), v. 1, p. 252.
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] F. Simoni,
+        <i>
+         Revista Brasileira de Ensino de Física
+        </i>
+        <b>
+         40
+        </b>
+        , 330 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] P.R. Bhattacharjee,
+        <i>
+         Revista Brasileira de Ensino de Física
+        </i>
+        <b>
+         41
+        </b>
+        , 130 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] A. Caminha,
+        <i>
+         Geometria - coleção PROFMAT
+        </i>
+        (Sociedade Brasileira de Matmática, Rio de Janeiro, 2013), v. 1, p. 40.
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] H. Anton,
+        <i>
+         Cálculo
+        </i>
+        (Bookman, Porto Alegre , 2007), v. 2, p. 675.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Nesse momento cabe ressaltar a {análise} envolvendo a expansão em serie de Taylor apresentada em
+        <span class="ref">
+         <strong class="xref xrefblue">
+          [3]
+         </strong>
+         <span class="refCtt closed">
+          <span>
+           [3] F. Simoni, Revista Brasileira de Ensino de Física
+					40, 330 (2018).
+          </span>
+         </span>
+        </span>
+        .
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        15 Jun 2020
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        08 Set 2019
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        11 Nov 2019
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        20 Mar 2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

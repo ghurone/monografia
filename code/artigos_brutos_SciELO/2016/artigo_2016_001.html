@@ -1,0 +1,7521 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173812065" target="_blank">
+    https://doi.org/10.1590/S1806-11173812065
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812065">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0" data-toggle="tooltip">
+  </span>
+  Desenvolvimento de um aplicativo android para a análise do circuito de Chua-Matsumoto
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Development of an android application for the analysis of the Chua-Matsumoto circuit
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Tiago Carvalho Martins
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Faculdade de Física, Instituto de Ciências Exatas, Universidade Federal do Sul e Sudeste do Pará, Marabá, PA, Brasil
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:tiagocm@unifesspa.edu.br">
+      tiagocm@unifesspa.edu.br
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div>
+    <p>
+     Um aplicativo Android para a análise do circuito de Chua-Matsumoto foi desenvolvido. Este aplicativo fornece a trajetória de solução para o sistema dinâmico do circuito com condição inicial (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      z
+     </i>
+     <sub>
+      0
+     </sub>
+     ). O sistema de equações diferenciais não-lineares é resolvido pelo método de Runge-Kutta-Fehlberg. O aplicativo possui três telas de entrada de dados: uma para as condições iniciais (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      z
+     </i>
+     <sub>
+      0
+     </sub>
+     ), uma para os parâmetros do sistema (
+     <i>
+      α
+     </i>
+     ,
+     <i>
+      β
+     </i>
+     ,
+     <i>
+      a
+     </i>
+     ,
+     <i>
+      b
+     </i>
+     ), e uma para os parâmetros do método (
+     <i>
+      t
+      <sub>
+       max
+      </sub>
+     </i>
+     ,
+     <i>
+      h
+      <sub>
+       max
+      </sub>
+     </i>
+     ,
+     <i>
+      h
+      <sub>
+       min
+      </sub>
+     </i>
+     ,
+     <i>
+      tol
+     </i>
+     ). Há uma tela utilizada para traçar as curvas das coordenadas
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     como funções do tempo. Também, há uma tela utilizada para traçar as projeções da trajetória nos planos
+     <i>
+      xy
+     </i>
+     ,
+     <i>
+      xz
+     </i>
+     e
+     <i>
+      yz
+     </i>
+     e para exportar todos os dados para um arquivo txt. Além disso, há uma tela utilizada para exibir os expoentes de Lyapunov calculados pelo aplicativo.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     circuito de Chua-Matsumoto; sistemas dinâmicos; atratores caóticos; aplicativos Android
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     An Android application for the analysis of the circuit of Chua-Matsumoto was developed. This application provides the solution trajectory to the dynamical system of the circuit with the initial condition (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      z
+     </i>
+     <sub>
+      0
+     </sub>
+     ). The system of nonlinear diﬀerential equations is solved by Runge-Kutta-Fehlberg method. The application has three data entry screens: one for the initial conditions (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      z
+     </i>
+     <sub>
+      0
+     </sub>
+     ), one for the parameters of the system (
+     <i>
+      α
+     </i>
+     ,
+     <i>
+      β
+     </i>
+     ,
+     <i>
+      a
+     </i>
+     ,
+     <i>
+      b
+     </i>
+     ), and one for the parameters of the method (
+     <i>
+      t
+      <sub>
+       max
+      </sub>
+     </i>
+     ,
+     <i>
+      h
+      <sub>
+       max
+      </sub>
+     </i>
+     ,
+     <i>
+      h
+      <sub>
+       min
+      </sub>
+     </i>
+     ,
+     <i>
+      tol
+     </i>
+     ). There is a screen used to plot the curves of the coordinates
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     and
+     <i>
+      z
+     </i>
+     as functions of the time. Also, there is a screen used to plot the projections of the trajectory into the
+     <i>
+      xy
+     </i>
+     ,
+     <i>
+      xz
+     </i>
+     and
+     <i>
+      yz
+     </i>
+     planes and to export all data to a txt file. Furthermore, there is a screen used to display the Lyapunov exponents calculated by the application.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     circuit of Chua-Matsumoto; dynamical systems; chaotic attractors; Android applications
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A ideia de caos relaciona-se à existência de respostas imprevisíveis para um sistema determinístico. Todavia, não existe uma definição única para o caos. Pode-se afirmar que um sistema que apresenta o mesmo comportamento dinâmico complexo do mapa de ferradura de Smale (apresentar uma infinidade contável de órbitas periódicas de período arbitrariamente grande, uma infinidade incontável de órbitas não-periódicas, órbita densa, e sensibilidade às condições iniciais) é caótico.
+    </p>
+    <p>
+     Durante muitos anos não se soube se o caos representava apenas um conceito matemático, materializado na forma de erros de aproximação nos cálculos numéricos das equações que descrevem sistemas físicos. Na década de 1980, o circuito de Chua-Matsumoto possibilitou a visualização de um atrator caótico na tela do osciloscópio, corroborando experimentalmente que o caos representa o comportamento dinâmico de sistemas físicos reais
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] Luiz Henrique Alves Monteiro, Sistemas Dinâmicos(Ed. Livraria da Física, São Paulo, 2011), 3a ed.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A importância de estudar o circuito de Chua-Matsumoto está relacionada à maior variedade de fenômenos que ele apresenta, os quais têm sido verificados experimentalmente em laboratório, em comparação com outros sistemas comumente estudados, como Rössler ou Lorenz
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] Stephen Lynch, Dynamical Systems with Applications using MATLAB(r) (Birkhäuser, Basileia, 2014).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A criptografia baseada em caos é uma possível aplicação prática do circuito de Chua-Matsumoto
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] Ahmed G. Radwan and Mohammed E. Fouda , On the Mathematical Modeling of Memristor, Memcapacitor, and Meminductor(Springer International Publishing, Suiça 2015).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     O uso de dispositivos que utilizam a plataforma
+     <i>
+      Android
+     </i>
+     encontra-se disseminado entre os estudantes de todos os níveis, trazendo ao professor o desafio de incorporar tais dispositivos ao ensino, em vez de simplesmente condená-los. O presente trabalho foi desenvolvido nesse sentido. Nele apresenta-se o desenvolvimento de um aplicativo em plataforma
+     <i>
+      Android
+     </i>
+     (executável em um
+     <i>
+      Smartphone
+     </i>
+     ) para simulações computacionais do circuito de Chua-Matsumoto. O aplicativo é gratuito e está disponível no endereço eletrônico
+     <a href="http://www.amazon.com.au/Circuit-of%20-Chua-Matsumoto-and-Chaos" target="_blank">
+      http://www.amazon.com.au/Circuit-of -Chua-Matsumoto-and-Chaos
+     </a>
+     .
+    </p>
+    <p>
+     O aplicativo soluciona o circuito de Chua-Matsumoto, para uma dada condição inicial (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      z
+     </i>
+     <sub>
+      0
+     </sub>
+     ), através do método Runge-Kutta-Fehlberg. É possível escolher os valores das condições iniciais (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      z
+     </i>
+     <sub>
+      0
+     </sub>
+     ), dos parâmetros do circuito (
+     <i>
+      α
+     </i>
+     ,
+     <i>
+      β
+     </i>
+     ,
+     <i>
+      a
+     </i>
+     e
+     <i>
+      b
+     </i>
+     ), assim como, os parâmetros do método (
+     <i>
+      t
+      <sub>
+       max
+      </sub>
+      , h
+      <sub>
+       max
+      </sub>
+      , h
+      <sub>
+       min
+      </sub>
+      , tol
+     </i>
+     ). É possível plotar os gráficos das coordenadas
+     <i>
+      x, y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     em função do tempo. Também há a possibilidade de visualização das projeções da trajetória nos planos
+     <i>
+      xy, xz
+     </i>
+     e
+     <i>
+      yz
+     </i>
+     . É possível realizar o cálculo dos expoentes de Lyapunov. Além disso, pode-se exportar os dados para arquivos no formato
+     <i>
+      txt
+     </i>
+     , os quais são armazenados na pasta
+     <i>
+      Documents
+     </i>
+     .
+    </p>
+    <p>
+     Na seção 2, o objeto de estudo do aplicativo, o circuito de Chua-Matsumoto, é descrito. A seção 3 contém alguns conceitos da teoria de sistemas dinâmicos, os quais são necessários para que o usuário seja capaz de entender os resultados gerados pelo aplicativo. A seção 4 descreve o aplicativo e apresenta resultados obtidos com o aplicativo em um
+     <i>
+      Smartphone
+     </i>
+     , os quais são comparados com simulações computacionais executadas em um computador de mesa (
+     <i>
+      desktop
+     </i>
+     ) rodando o
+     <i>
+      software
+     </i>
+     MATLAB. A seção 5 é a conclusão do trabalho.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Modelo do circuito de Chua-Matsumoto
+    </h1>
+    <p>
+     O circuito mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     é conhecido na literatura como
+     <i>
+      circuito de Chua-Matsumoto
+     </i>
+     , o qual é constituído de um indutor de indutância
+     <i>
+      L
+     </i>
+     , um resistor de condutância
+     <i>
+      G
+     </i>
+     , dois capacitores de capacitâncias
+     <i>
+      C
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      C
+     </i>
+     <sub>
+      2
+     </sub>
+     , e um resistor não-linear,
+     <i>
+      N
+     </i>
+     <sub>
+      R
+     </sub>
+     , conhecido como
+     <i>
+      diodo de Chua
+     </i>
+     . Os parâmetros dos componentes de circuito,
+     <i>
+      C
+     </i>
+     <sub>
+      1
+     </sub>
+     ,
+     <i>
+      C
+     </i>
+     <sub>
+      2
+     </sub>
+     ,
+     <i>
+      G
+     </i>
+     ,
+     <i>
+      L
+     </i>
+     , são números reais positivos.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Circuito de Chua-Matsumoto.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O
+     <i>
+      diodo de Chua
+     </i>
+     é um dispositivo não-linear, formado por três regiões lineares (
+     <i>
+      vN
+     </i>
+     <sub>
+      R
+     </sub>
+     &lt; −B
+     <sub>
+      p
+     </sub>
+     , − B
+     <sub>
+      p
+     </sub>
+     ≤ vN
+     <sub>
+      R
+     </sub>
+     ≤ B
+     <sub>
+      P
+     </sub>
+     e vN
+     <sub>
+      R
+     </sub>
+     &gt; BP) de resistências negativas, cuja curva característica corrente-voltagem é dada por
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/4bd274a15946c7bcab6638abc4e6c8dbef7ef609.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      B
+      <sub>
+       P
+      </sub>
+     </i>
+     é a tensão de limiar. Se o valor absoluto da tensão nos terminais de
+     <i>
+      N
+      <sub>
+       R
+      </sub>
+     </i>
+     ,
+     <i>
+      vN
+      <sub>
+       R
+      </sub>
+     </i>
+     , excede a tensão de limiar, a inclinação da curva característica é
+     <i>
+      G
+      <sub>
+       b
+      </sub>
+     </i>
+     ; caso contrário, a inclinação da curva característica é
+     <i>
+      G
+      <sub>
+       a
+      </sub>
+     </i>
+     (ver
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     ).
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Curva característica corrente-voltagem do diodo de Chua.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.1. Modelo em coordenadas adimensionais
+    </h2>
+    <p>
+     O circuito de Chua-Matsumoto é modelado matematicamente, em coordenadas adimensionais, através do sistema de equações diferenciais ordinárias tridimensional
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/4237fa34144a76ae50c6db96f9672186dc363721.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em que a função
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ) é dada por
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/7756fe67d7fb9fc6c3a146c8be1564fcf15468a1.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     As correntes
+     <i>
+      iC
+      <sub>
+       1
+      </sub>
+     </i>
+     e
+     <i>
+      iC
+      <sub>
+       2
+      </sub>
+     </i>
+     fluem, respectivamente, através dos capacitores
+     <i>
+      C
+      <sub>
+       1
+      </sub>
+     </i>
+     e
+     <i>
+      C
+      <sub>
+       2
+      </sub>
+     </i>
+     . As tensões nos terminais desses capacitores são
+     <i>
+      vC
+      <sub>
+       1
+      </sub>
+     </i>
+     e
+     <i>
+      vC
+      <sub>
+       2
+      </sub>
+     </i>
+     , como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     . Além disso,
+     <i>
+      v
+      <sup>
+       C1
+      </sup>
+     </i>
+     é igual a
+     <i>
+      v
+      <sup>
+       NR
+      </sup>
+     </i>
+     , pois
+     <i>
+      C
+      <sub>
+       1
+      </sub>
+     </i>
+     e
+     <i>
+      N
+      <sub>
+       R
+      </sub>
+     </i>
+     possuem os mesmos terminais. A capacitância mede a capacidade de armazenamento de energia elétrica, assim como, a oposição à variação de tensão (inércia de tensão) nos terminais de um capacitor, quando atravessado por uma corrente elétrica; o que é expresso matematicamente como
+    </p>
+    <div class="row formula" id="ee4">
+     <a name="e4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/6979fe3e9afd8996a5792780e8a8a2476937113d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A corrente
+     <i>
+      i
+      <sub>
+       G
+      </sub>
+     </i>
+     flui através do resistor de condutância
+     <i>
+      G.
+     </i>
+     Pela primeira Lei de Ohm, tem-se
+    </p>
+    <div class="row formula" id="ee5">
+     <a name="e5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/2b26e4f888d4a9e6c472f349dbd2940f132a451c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Aplicando a lei de Kirchhoﬀ das correntes (conservação de carga) respectivamente aos nós
+     <i>
+      l
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      l
+     </i>
+     <sub>
+      2
+     </sub>
+     , obtém-se
+    </p>
+    <div class="row formula" id="ee6">
+     <a name="e6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/77d4718101c87b8a808e76c87af8da9a5ce3e39c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee7">
+     <a name="e7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/cf5f3c289f78bdf5210769af6457b6ab60d05cf5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Aplicando a Lei de Kirchhoﬀ das tensões (conservação de energia) à malha constituída pelo indutor
+     <i>
+      L
+     </i>
+     e pelo capacitor
+     <i>
+      C
+     </i>
+     <sub>
+      2
+     </sub>
+     , obtém-se a equação
+    </p>
+    <div class="row formula" id="ee8">
+     <a name="e8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/12e6cd684c489d8b571a63118d8d2fce70ac2416.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     As variáveis
+     <i>
+      vN
+      <sub>
+       R
+      </sub>
+     </i>
+     ,
+     <i>
+      iN
+      <sub>
+       R
+      </sub>
+     </i>
+     ,
+     <i>
+      vC
+      <sub>
+       2
+      </sub>
+     </i>
+     ,
+     <i>
+      i
+      <sub>
+       L
+      </sub>
+     </i>
+     ,
+     <i>
+      t
+     </i>
+     , presentes nas
+     <a class="open-asset-modal" data-target="#ModalSchemee6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (6)
+     </a>
+     , (
+     <a class="open-asset-modal" data-target="#ModalSchemee7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemee8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) podem ser trocadas por variáveis adimensionais
+     <i>
+      x, y, z, τ
+     </i>
+     , utilizando as fórmulas
+    </p>
+    <div class="row formula" id="ee9">
+     <a name="e9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/79505c1744ee4d7a771de73f268f38d6d3b78a68.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee10">
+     <a name="e10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/52a8e7298177c37c3060fb94e563747c794839db.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Realizando essas mudanças de coordenadas, obtém-se o sistema tridimensional mostrado na
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     , onde
+     <i>
+      α
+     </i>
+     e
+     <i>
+      β
+     </i>
+     são dados por
+    </p>
+    <div class="row formula" id="ee11">
+     <a name="e11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/84fc06e543ad640ee1c8510598dac46319ad05f9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A seu turno, a
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (3)
+     </a>
+     pode ser obtida substituindo a
+     <a class="open-asset-modal" data-target="#ModalSchemee9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     na
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (1)
+     </a>
+     , onde
+    </p>
+    <div class="row formula" id="ee12">
+     <a name="e12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/7deade5ce4b1e40b7daceb4adafe514d4a1e4d95.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <h2>
+     2.2. Implementação do diodo de Chua
+    </h2>
+    <p>
+     O
+     <i>
+      diodo de Chua
+     </i>
+     não é vendido comercialmente, mas pode ser emulado com componentes convencionais
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] T. Matsumoto, IEEE Trans. on Circ. &amp; Syst. 31,1055 (1984).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [5] T. Matsumoto, L.O. Chua and M. Komuro, IEEE Trans. on Circ. &amp; Syst. 32, 797 (1985).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [6] T. Matsumoto, L.O. Chua and M. Komuro, Journal Circuit Theory and Appl. 14, 117 (1986).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [7] M.P. Kennedy, Frequenz 46, 66 (1992).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] J.M. Cruz and L.O. Chua, IEEE Trans. on Circ. &amp; Syst.46, 985 (1992).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Na Ref.
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] T. Matsumoto, L.O. Chua and M. Komuro, IEEE Trans. on Circ. &amp; Syst. 32, 797 (1985).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , Matsumoto implementou um
+     <i>
+      diodo de Chua
+     </i>
+     com um amplificador operacional (UA741), um par de diodos, sete resistores e uma fonte de alimentação DC de ±9 V, de acordo com o esquema de circuito mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , resultando em um componente
+     <i>
+      N
+      <sub>
+       R
+      </sub>
+     </i>
+     com a curva característica da
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (1)
+     </a>
+     , com os seguintes valores:
+     <i>
+      Ga ≈
+     </i>
+     −0, 8 mA/V,
+     <i>
+      Gb
+     </i>
+     ≈ −0, 5 mA/V e ±
+     <i>
+      Bp
+     </i>
+     = ±1 V.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Esquema do circuito do diodo de Chua implementado por Matsumoto
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        5
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [5] T. Matsumoto, L.O. Chua and M. Komuro, IEEE Trans. on Circ. &amp; Syst. 32, 797 (1985).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     O
+     <i>
+      diodo de Chua
+     </i>
+     também pode ser obtido através de componentes nanoeletrônicos denominados de memoristores
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] M. Itoh and L.O. Chua, Int. J. Bif. and Chaos 18,3183 (2008).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [10] B. Muthuswamy, Int. J. Bif. and Chaos 453, 1335 (2010).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] B. Muthuswamy and L.O. Chua, Int. J. Bif. and Chaos20,1567 (2009).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Embora o conceito de memoristor tenha sido desenvolvido por Leon Chua no início da década de 1970, o primeiro memoristor foi construido por pesquisadores da HP Labs apenas em 2008, e ficou conhecido como memoristor da HP
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] D.B. Strukov, G.S. Snider, D.R. Stewart and S.R. Williams, Nature453, 80 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Em 2012, um circuito caótico baseado em memoristores HP foi publicado
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] A. Buscarino, L. Fortuna, M. Frasca and L.V. Gambuzza, Chaos: Interdiscip. J. Nonlinear Sci. 22, 023136 (2012).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Sistemas dinâmicos
+    </h1>
+    <p>
+     As variáveis
+     <i>
+      x
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      y
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <i>
+      z
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ), cujas derivadas temporais aparecem no lado esquerdo das equações diferenciais na
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     , são as
+     <i>
+      variáveis de estado
+     </i>
+     do sistema. Como as variáveis de estado variam com o tempo, o sistema é designado como
+     <i>
+      sistema dinâmico
+     </i>
+     . As variáveis de estado formam o
+     <i>
+      vetor de estado
+     </i>
+     dado por
+    </p>
+    <div class="row formula" id="ee13">
+     <a name="e13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/49e3b5561882900e34fd2b67e41375b66f35634d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     As variáveis de um sistema dinâmico que não representam variáveis de estado; como
+     <i>
+      α, β, a
+     </i>
+     e
+     <i>
+      b
+     </i>
+     ; recebem a denominação de
+     <i>
+      parâmetros do sistema
+     </i>
+     . Se esses parâmetros não variam com o tempo
+     <i>
+      t
+     </i>
+     , o sistema é dito
+     <i>
+      a parâmetros fixos
+     </i>
+     .
+    </p>
+    <p>
+     Pode-se pensar no vetor de estado
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) como o
+     <i>
+      vetor posição de uma partícula
+     </i>
+     , em que as variáveis
+     <i>
+      x, y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     representam as coordenadas da posição. Uma trajetória é descrita pela partícula com o passar do tempo
+     <i>
+      t
+     </i>
+     .
+    </p>
+    <p>
+     O
+     <i>
+      espaço de fases
+     </i>
+     (ou espaço de estados) é o conjunto de todas as posições
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) com
+     <i>
+      t ∈ ℝ
+     </i>
+     . Para a
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     , o espaço de fases é o ℝ
+     <sup>
+      3
+     </sup>
+     . A fim de solucionar o sistema, deve-se fornecer, em um certo instante de tempo t
+     <sub>
+      0
+     </sub>
+     , o vetor de estado
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     =
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     ). Uma solução é uma trajetória no espaço de fases, iniciada em
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     . Esse problema é conhecido como problema de valor inicial com condição inicial
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     . Para garantir a existência e unicidade da solução de um problema de valor inicial, as funções
+     <i>
+      h
+      <sub>
+       i
+      </sub>
+     </i>
+     e ∂
+     <i>
+      h
+      <sub>
+       i
+      </sub>
+     </i>
+     / ∂
+     <i>
+      x
+      <sub>
+       i
+      </sub>
+     </i>
+     (
+     <i>
+      i
+     </i>
+     = 1, 2, 3) devem ser contínuas.
+    </p>
+    <p>
+     Um sistema de equações diferenciais é dito
+     <i>
+      autônomo
+     </i>
+     , se a variável independente
+     <i>
+      t
+     </i>
+     não aparece explicitamente nas equações. Portanto, o sistema (2) é autônomo. Um sistema não-autônomo de ordem
+     <i>
+      n
+     </i>
+     , ṙ (
+     <i>
+      t
+     </i>
+     ) =
+     <b>
+      h
+     </b>
+     (
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      t
+     </i>
+     ), pode ser transformado em um sistema autônomo de ordem
+     <i>
+      n
+     </i>
+     + 1, ṙ' (
+     <i>
+      t
+     </i>
+     ) =
+     <b>
+      h
+     </b>
+     (
+     <b>
+      r'
+     </b>
+     (
+     <i>
+      t
+     </i>
+     )), substituindo o vetor de estado
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) pelo vetor de estado
+     <b>
+      r'
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) = (
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      t
+     </i>
+     ).
+    </p>
+    <p>
+     Para
+     <i>
+      x
+     </i>
+     ≥ 1, |
+     <i>
+      x
+     </i>
+     −1| =
+     <i>
+      x
+     </i>
+     −1 e |
+     <i>
+      x
+     </i>
+     +1| =
+     <i>
+      x
+     </i>
+     +1; para
+     <i>
+      x
+     </i>
+     ≤ −1, |
+     <i>
+      x
+     </i>
+     − 1| = −
+     <i>
+      x
+     </i>
+     + 1 e |
+     <i>
+      x
+     </i>
+     + 1| = −
+     <i>
+      x
+     </i>
+     − 1; para |
+     <i>
+      x
+     </i>
+     | ≤ 1, |
+     <i>
+      x
+     </i>
+     −1| = −
+     <i>
+      x
+     </i>
+     +1 e |
+     <i>
+      x
+     </i>
+     +1| =
+     <i>
+      x
+     </i>
+     +1; portanto, a
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (3)
+     </a>
+     pode ser reescrita como
+    </p>
+    <div class="row formula" id="ee14">
+     <a name="e14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/59d1f1bea798ee7e36929ade63915f70b421a732.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     evidenciando a existência de três diferentes domínios para as soluções da Eq. (2), a saber,
+     <i>
+      D
+     </i>
+     <sub>
+      −1
+     </sub>
+     = {(
+     <i>
+      x, y, z
+     </i>
+     ) ∈ ℝ
+     <sup>
+      3
+     </sup>
+     |
+     <i>
+      x
+     </i>
+     ≤ −1},
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     = {(
+     <i>
+      x, y, z
+     </i>
+     ) ∈ ℝ
+     <sup>
+      3
+     </sup>
+     |
+     <i>
+      x
+     </i>
+     ≥ 1} e
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     = {(
+     <i>
+      x, y, z
+     </i>
+     ) ∈ ℝ
+     <sup>
+      3
+     </sup>
+     | − 1 ≥
+     <i>
+      x
+     </i>
+     ≤ 1}. O plano
+     <i>
+      U
+     </i>
+     <sub>
+      −1
+     </sub>
+     = {(
+     <i>
+      x, y, z
+     </i>
+     ) ∈ ℝ
+     <sup>
+      3
+     </sup>
+     |
+     <i>
+      x
+     </i>
+     = −1} é a fronteira entre
+     <i>
+      D
+     </i>
+     <sub>
+      -1
+     </sub>
+     e
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     , e o plano
+     <i>
+      U
+     </i>
+     <sub>
+      1
+     </sub>
+     = {(
+     <i>
+      x, y, z
+     </i>
+     ) ∈ ℝ
+     <sup>
+      3
+     </sup>
+     |
+     <i>
+      x
+     </i>
+     = 1} é a fronteira entre
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     .
+    </p>
+    <p>
+     No domínio
+     <i>
+      D
+     </i>
+     <sub>
+      -1
+     </sub>
+     ,
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      bx
+     </i>
+     -
+     <i>
+      a
+     </i>
+     +
+     <i>
+      b
+     </i>
+     , então
+     <i>
+      ẋ
+     </i>
+     =
+     <i>
+      α
+     </i>
+     (
+     <i>
+      y
+     </i>
+     −
+     <i>
+      x
+     </i>
+     −
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     )) = (
+     <i>
+      αb
+     </i>
+     −
+     <i>
+      α
+     </i>
+     )x+
+     <i>
+      αy
+     </i>
+     +
+     <i>
+      α
+     </i>
+     (
+     <i>
+      a
+     </i>
+     -
+     <i>
+      b
+     </i>
+     ), portanto, o sistema de equações pode ser escrito na forma matricial como
+    </p>
+    <div class="row formula" id="ee15">
+     <a name="e15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/e98d6a3c880ae0a5e828c7393cf15fec96153b0a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      p
+     </i>
+     =
+     <i>
+      α
+     </i>
+     (
+     <i>
+      a
+     </i>
+     −
+     <i>
+      b
+     </i>
+     ) e
+     <i>
+      v
+     </i>
+     =
+     <i>
+      b
+     </i>
+     . Definindo a matriz
+     <b>
+      B
+     </b>
+     dados por
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/de0ddcae4df6a0cc31f56cb40cc8dbcdec406cad.jpg" style="max-width:100%"/>
+     e o vetor coluna
+    </p>
+    <div class="row formula" id="ee16">
+     <a name="e16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/e0d084373e6699106328e4089012f4084bb89bc4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     é possível escrever a equação matricial (
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      15
+     </a>
+     ) como
+    </p>
+    <div class="row formula" id="ee17">
+     <a name="e17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/71f0d5b6bb220ac07add65854224966e69fbda99.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que o vetor
+     <b>
+      B
+     </b>
+     é chamado de entrada do sistema, o vetor
+     <b>
+      r
+     </b>
+     é chamado de saída do sistema e a matriz
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/de0ddcae4df6a0cc31f56cb40cc8dbcdec406cad.jpg" style="max-width:100%"/>
+     é chamada de matriz do sistema.
+    </p>
+    <p>
+     No domínio
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     ,
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      bx
+     </i>
+     +
+     <i>
+      a
+     </i>
+     -
+     <i>
+      b
+     </i>
+     , então
+     <i>
+      ẋ
+     </i>
+     =
+     <i>
+      α
+     </i>
+     (
+     <i>
+      y
+     </i>
+     −
+     <i>
+      x
+     </i>
+     −
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     )) = (-
+     <i>
+      αb
+     </i>
+     −
+     <i>
+      α
+     </i>
+     )x+
+     <i>
+      αy
+     </i>
+     +
+     <i>
+      α
+     </i>
+     (-
+     <i>
+      a
+     </i>
+     +
+     <i>
+      b
+     </i>
+     ), portanto, o sistema de equações pode ser escrito na forma matricial através da
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (15)
+     </a>
+     com
+     <i>
+      p
+     </i>
+     = −
+     <i>
+      a
+     </i>
+     +
+     <i>
+      b
+     </i>
+     e
+     <i>
+      ν
+     </i>
+     =
+     <i>
+      b
+     </i>
+     .
+    </p>
+    <p>
+     No domínio
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     ) =
+     <i>
+      ax
+     </i>
+     , então
+     <i>
+      ẋ
+     </i>
+     =
+     <i>
+      α
+     </i>
+     (
+     <i>
+      y
+     </i>
+     −
+     <i>
+      x
+     </i>
+     −
+     <i>
+      f
+     </i>
+     (
+     <i>
+      x
+     </i>
+     )) = (−
+     <i>
+      αa
+     </i>
+     −
+     <i>
+      α
+     </i>
+     )
+     <i>
+      x
+     </i>
+     +
+     <i>
+      αy
+     </i>
+     , portanto, o sistema de equações pode ser escrito na forma matricial através da
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (15)
+     </a>
+     com
+     <i>
+      p
+     </i>
+     =0 e
+     <i>
+      ν
+     </i>
+     =
+     <i>
+      a
+     </i>
+     .
+    </p>
+    <p>
+     O sistema dinâmico (
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ) é contínuo, haja vista o vetor de estado
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) variar continuamente com o tempo
+     <i>
+      t
+     </i>
+     . Um sistema é discreto quando há um conjunto de instantes de tempo {
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      t
+     </i>
+     <sub>
+      1
+     </sub>
+     ,
+     <i>
+      t
+     </i>
+     <sub>
+      2
+     </sub>
+     , ...,
+     <i>
+      t
+     </i>
+     <sub>
+      j
+     </sub>
+     , ...}, com
+     <i>
+      j ∈
+     </i>
+     ℕ, fora dos quais nunca ocorrem variações no vetor de estado.
+    </p>
+    <p>
+     O princípio da superposição estabelece que, se
+     <b>
+      r
+      <sub>
+       1
+      </sub>
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) é a saída produzida pela entrada
+     <b>
+      B
+      <sub>
+       1
+      </sub>
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <b>
+      r
+      <sub>
+       2
+      </sub>
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) é a saída produzida pela entrada
+     <b>
+      B
+      <sub>
+       2
+      </sub>
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ), então
+    </p>
+    <div class="row formula" id="ee18">
+     <a name="e18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/3de7e545537d2310125400975922da67f15552d9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      k
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      k
+     </i>
+     <sub>
+      2
+     </sub>
+     são constantes. Um sistema é dito linear quando obedece ao princípio da superposição, caso contrário, é dito não-linear. Malgrado o sistema (
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ) para o domínio ℝ
+     <sup>
+      3
+     </sup>
+     seja não-linear, ele assume a forma linear (
+     <a class="open-asset-modal" data-target="#ModalSchemee17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      17
+     </a>
+     ) para os domínios
+     <i>
+      D
+     </i>
+     <sub>
+      -1
+     </sub>
+     ,
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     e
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     , o que pode ser demonstrado utilizando a expressão (
+     <a class="open-asset-modal" data-target="#ModalSchemee18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      18
+     </a>
+     ).
+    </p>
+    <p>
+     Diz-se que um sistema é dissipativo, quando o volume que ele ocupa no espaço de fase contrai-se com o passar do tempo, o que pode ser expresso através da equação
+    </p>
+    <div class="row formula" id="ee19">
+     <a name="e19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/6aed808a754099ecfbda8d645d9e30acfad9b40d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Portanto, −
+     <i>
+      α
+     </i>
+     (
+     <i>
+      b
+     </i>
+     +1)− 1 &lt; 0 e −
+     <i>
+      α
+     </i>
+     (
+     <i>
+      a
+     </i>
+     +1)− 1 &lt; 0 são as condições para que o circuito de Chua-Matsumoto seja dissipativo em
+     <i>
+      D
+     </i>
+     <sub>
+      −1
+     </sub>
+     ∪
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     , respectivamente.
+    </p>
+    <h2>
+     3.1 Pontos de equilíbrio e estabilidade no sentido de Lyapunov
+    </h2>
+    <p>
+     A análise do sistema nos seus
+     <i>
+      pontos de equilíbrio
+     </i>
+     (ou
+     <i>
+      pontos fixos
+     </i>
+     ) é importante para estudar a estabilidade do sistema. Os pontos de equilíbrio são aqueles em que a partícula está parada, ou seja, se a partícula encontra-se no ponto de equilíbrio
+     <b>
+      r
+     </b>
+     * em um certo instante de tempo
+     <i>
+      t
+     </i>
+     <sup>
+      *
+     </sup>
+     , então a partícula encontrar-se-á no mesmo ponto
+     <b>
+      r
+     </b>
+     <sup>
+      *
+     </sup>
+     para qualquer
+     <i>
+      t
+     </i>
+     &gt;
+     <i>
+      t
+     </i>
+     <sup>
+      *
+     </sup>
+     . Matematicamente, pode-se dizer que pontos de equilíbrio
+     <b>
+      r
+     </b>
+     * são aqueles para os quais
+    </p>
+    <div class="row formula" id="ee20">
+     <a name="e20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/203774d8417ad7626e1c2815449a0e6a963d350a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Para sistemas de equações diferenciais que descrevem um circuito elétrico, um ponto de equilíbrio corresponde a uma
+     <i>
+      solução DC (direct current)
+     </i>
+     do circuito.
+    </p>
+    <p>
+     Um ponto regular ou ordinário é todo ponto do espaço de fases que não é ponto de equilíbrio.
+    </p>
+    <p>
+     Um ponto de equilíbrio
+     <b>
+      r
+     </b>
+     * é assintoticamente estável se todas as trajetórias com condições iniciais contidas numa esfera de raio
+     <i>
+      δ
+     </i>
+     centrada em
+     <b>
+      r
+     </b>
+     * tendem a
+     <b>
+      r
+     </b>
+     * com o passar do tempo. Quando δ é finito o ponto de equilbrio é localmente assintoticamente estável. Quando δ é infinito o ponto de equilíbrio é globalmente assintoticamente estável. Ambos os pontos são atratores. O conjunto das condições iniciais que tendem a um mesmo atrator formam a
+     <i>
+      bacia de atração do atrator
+     </i>
+     .
+    </p>
+    <p>
+     Um ponto de equilíbrio
+     <b>
+      r
+     </b>
+     * é marginalmente estável se todas as trajetórias com condições iniciais contidas numa esfera de raio
+     <i>
+      δ
+     </i>
+     centrada em
+     <b>
+      r
+     </b>
+     * não tendem a
+     <b>
+      r
+     </b>
+     * com o passar do tempo, mas continuam dentro de uma esfera de raio ∈ centrada em
+     <b>
+      r
+     </b>
+     *.
+    </p>
+    <p>
+     Um ponto de equilíbrio
+     <b>
+      r
+     </b>
+     * é instável se pelo menos uma trajetória com condição inicial contida numa esfera de raio
+     <i>
+      δ
+     </i>
+     centrada em
+     <b>
+      r
+     </b>
+     * escapa de uma esfera de raio ∈ centrada em
+     <b>
+      r
+     </b>
+     * em um tempo finito.
+    </p>
+    <p>
+     Os pontos de equilíbrio do sistema da Eq. (2), obtidos quando
+     <i>
+      ẋ
+     </i>
+     =
+     <i>
+      ẏ
+     </i>
+     =
+     <i>
+      ż
+     </i>
+     = 0, são:
+     <i>
+      P
+     </i>
+     <sub>
+      −
+     </sub>
+     = (−
+     <i>
+      θ
+     </i>
+     , 0,
+     <i>
+      θ
+     </i>
+     ), em
+     <i>
+      x
+     </i>
+     &lt; −1;
+     <i>
+      P
+     </i>
+     <sub>
+      0
+     </sub>
+     =
+     <i>
+      O
+     </i>
+     = (0, 0, 0), em −1 &lt;
+     <i>
+      x
+     </i>
+     &lt; 1; e
+     <i>
+      P
+     </i>
+     <sub>
+      +
+     </sub>
+     = (
+     <i>
+      θ
+     </i>
+     , 0,−
+     <i>
+      θ
+     </i>
+     ) em
+     <i>
+      x
+     </i>
+     &gt; 1; em que
+     <i>
+      θ
+     </i>
+     = (
+     <i>
+      b
+     </i>
+     −
+     <i>
+      a
+     </i>
+     )/(
+     <i>
+      b
+     </i>
+     + 1) &gt; 1 e, portanto, a sentença [(
+     <i>
+      a
+     </i>
+     &lt; −1)∧(
+     <i>
+      b
+     </i>
+     &gt; −1)]∨[(
+     <i>
+      a
+     </i>
+     &lt; −1)∨(
+     <i>
+      b
+     </i>
+     &gt; −1)] deve ser verdadeira, para que existam os pontos de equilíbrio
+     <i>
+      P
+     </i>
+     <sub>
+      -
+     </sub>
+     e
+     <i>
+      P
+     </i>
+     <sub>
+      +
+     </sub>
+     .
+    </p>
+    <h2>
+     3.2. Linearização
+    </h2>
+    <p>
+     Dado um ponto de equilíbrio
+     <i>
+      P
+     </i>
+     cuja posição é
+     <b>
+      r
+     </b>
+     <sub>
+      P
+     </sub>
+     , as expansões em séries de Taylor das componentes do vetor
+     <b>
+      h
+     </b>
+     = (
+     <i>
+      ẋ
+     </i>
+     ,
+     <i>
+      ẏ
+     </i>
+     ,
+     <i>
+      ż
+     </i>
+     ) da
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     são
+    </p>
+    <div class="row formula" id="ee21">
+     <a name="e21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/5c74a8d6dff04ca112e94d85f26fd6b53c47493e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      i
+     </i>
+     =1, 2, 3. Como
+     <i>
+      h
+     </i>
+     <sub>
+      1
+     </sub>
+     (
+     <b>
+      r
+     </b>
+     ) =
+     <i>
+      ẋ
+     </i>
+     ,
+     <i>
+      h
+     </i>
+     <sub>
+      1
+     </sub>
+     (
+     <b>
+      r
+     </b>
+     <sub>
+      <i>
+       P
+      </i>
+     </sub>
+     ) =
+     <i>
+      ẋ
+     </i>
+     <sub>
+      <i>
+       P
+      </i>
+     </sub>
+     ,
+     <i>
+      h
+     </i>
+     <sub>
+      2
+     </sub>
+     (
+     <b>
+      r
+     </b>
+     ) =
+     <i>
+      ẏ
+     </i>
+     ,
+     <i>
+      h
+     </i>
+     <sub>
+      2
+     </sub>
+     (
+     <b>
+      r
+     </b>
+     <sub>
+      <i>
+       P
+      </i>
+     </sub>
+     ) =
+     <i>
+      ż
+     </i>
+     <sub>
+      P
+     </sub>
+     ,
+     <i>
+      h
+     </i>
+     <sub>
+      3
+     </sub>
+     (
+     <b>
+      r
+     </b>
+     ) =
+     <i>
+      ż
+     </i>
+     e
+     <i>
+      h
+     </i>
+     <sub>
+      3
+     </sub>
+     (
+     <b>
+      r
+     </b>
+     <sub>
+      P
+     </sub>
+     ) =
+     <i>
+      ż
+     </i>
+     <sub>
+      P
+     </sub>
+     , as três equações obtidas podem ser expressas na forma matricial como
+    </p>
+    <div class="row formula" id="ee22">
+     <a name="e22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/f965801d525f6c6d14f92ff4ca91957b6215ef5b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalSchemee22" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (22)
+     </a>
+     é uma versão linearizada do sistema (
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ), válida para pontos infinitesimalmente próximos do ponto
+     <i>
+      P.
+     </i>
+     A matriz do sistema linearizado é denominada de matriz jacobiana do sistema, a qual para o circuito de Chua-Matsumoto pode ser obtida a partir da
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     , sendo expressa como
+    </p>
+    <div class="row formula" id="ee23">
+     <a name="e23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/61156dec3056a334be8bcc4b047d9ea1e36e1c63.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      ν
+     </i>
+     = b para |
+     <i>
+      x
+     </i>
+     |≥ 1, e
+     <i>
+      ν
+     </i>
+     =
+     <i>
+      a
+     </i>
+     para |
+     <i>
+      x
+     </i>
+     |≤ 1. A
+     <a class="open-asset-modal" data-target="#ModalSchemee23" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (23)
+     </a>
+     coincide com a
+     <a class="open-asset-modal" data-target="#ModalSchemee15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (15)
+     </a>
+     , pois o circuito de ChuaMatsumoto é um sistema não-linear constituído por três regiões lineares. A
+     <a class="open-asset-modal" data-target="#ModalSchemee22" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (22)
+     </a>
+     pode ser reescrita como
+    </p>
+    <div class="row formula" id="ee24">
+     <a name="e24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/f014311ed40f0872a4ad5f0da8e80c13396187ea.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <b>
+      r'
+     </b>
+     =
+     <b>
+      r
+     </b>
+     −
+     <b>
+      r
+     </b>
+     <sub>
+      P
+     </sub>
+     .
+    </p>
+    <p>
+     Sabe-se que
+     <i>
+      r
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )=
+     <i>
+      ke
+     </i>
+     <sup>
+      λt
+     </sup>
+     é solução da equação diferencial de primeira ordem
+     <i>
+      ṙ
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      λr
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ). Por analogia, pode-se pensar em uma solução
+     <b>
+      r'
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <b>
+      v
+     </b>
+     e
+     <sup>
+      λt
+     </sup>
+     para a
+     <a class="open-asset-modal" data-target="#ModalSchemee24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (24)
+     </a>
+     , resultando em λ
+     <b>
+      v
+     </b>
+     e
+     <sup>
+      λt
+     </sup>
+     =
+     <b>
+      v
+     </b>
+     e
+     <sup>
+      λt
+     </sup>
+     , logo
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8fb6fb27634bd483edeab04ec548620f73a2265b.jpg" style="max-width:100%"/>
+    </p>
+    <div class="row formula" id="ee25">
+     <a name="e25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/e175a754004b282a3722072adec1832c9c1aefe3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <b>
+      v
+     </b>
+     é o autovetor associado a λ. Como o circuito de Chua-Matsumoto é tridimensional,
+     <sub>
+      1
+     </sub>
+     , λ
+     <sub>
+      2
+     </sub>
+     e λ
+     <sub>
+      3
+     </sub>
+     , e três autovetores
+     <b>
+      v
+     </b>
+     <sub>
+      1
+     </sub>
+     ,
+     <b>
+      v
+     </b>
+     <sub>
+      2
+     </sub>
+     e
+     <b>
+      v
+     </b>
+     <sub>
+      3
+     </sub>
+     , respectivamente associados. Esses autovalores são obtidos como soluções da equação secular
+     <i>
+      det
+     </i>
+     (λ
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/6e6e480f57f340a2bc101b5ab728567775baf976.jpg" style="max-width:100%"/>
+     é a matriz identidade de ordem 3. Nessa equação, λ é um autovalor de
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/6e6e480f57f340a2bc101b5ab728567775baf976.jpg" style="max-width:100%"/>
+     −
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8fb6fb27634bd483edeab04ec548620f73a2265b.jpg" style="max-width:100%"/>
+     ,e
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8fb6fb27634bd483edeab04ec548620f73a2265b.jpg" style="max-width:100%"/>
+     possui três autovalores λ
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8fb6fb27634bd483edeab04ec548620f73a2265b.jpg" style="max-width:100%"/>
+     ) = 0, a qual resulta em
+    </p>
+    <div class="row formula" id="ee26">
+     <a name="e26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/45e526899617f9ca389b205e3462599565bae692.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      ν
+     </i>
+     =
+     <i>
+      b
+     </i>
+     para a região
+     <i>
+      D
+     </i>
+     <sub>
+      −1
+     </sub>
+     ∪
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     , que contém os pontos de equilíbrio
+     <i>
+      P
+     </i>
+     <sub>
+      -
+     </sub>
+     e
+     <i>
+      P
+     </i>
+     <sub>
+      +
+     </sub>
+     ;e
+     <i>
+      ν
+     </i>
+     =
+     <i>
+      a
+     </i>
+     para a região
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     , que contém o ponto de equilíbrio
+     <i>
+      P
+     </i>
+     <sub>
+      0
+     </sub>
+     =
+     <i>
+      O
+     </i>
+     .
+    </p>
+    <p>
+     Se o conjunto solução da
+     <a class="open-asset-modal" data-target="#ModalSchemee26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (26)
+     </a>
+     não é formado por três autovalores reais, então esse conjunto possui um autovalor real λ
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      γ
+     </i>
+     e dois autovalores complexos conjugados λ
+     <sub>
+      2
+     </sub>
+     =
+     <i>
+      σ
+     </i>
+     +
+     <i>
+      iω
+     </i>
+     e λ
+     <sub>
+      3
+     </sub>
+     =
+     <i>
+      σ
+     </i>
+     −
+     <i>
+      iω
+     </i>
+     . Nesse caso, se as soluções da
+     <a class="open-asset-modal" data-target="#ModalSchemee24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (24)
+     </a>
+     são linearmente independentes, a solução geral é a combinação linear delas, resultando na expressão
+    </p>
+    <div class="row formula" id="ee27">
+     <a name="e27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/3e5894e1616e20bb4cac56ca3f7eef3af45cd412.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que os autovetores
+     <b>
+      v
+      <sub>
+       2
+      </sub>
+     </b>
+     <i>
+      η
+     </i>
+     <sub>
+      R
+     </sub>
+     +
+     <i>
+      i
+     </i>
+     <b>
+      η
+      <sub>
+       I
+      </sub>
+     </b>
+     e
+     <b>
+      v
+      <sub>
+       3
+      </sub>
+     </b>
+     <b>
+      η
+     </b>
+     <sub>
+      R
+     </sub>
+     −
+     <i>
+      i
+     </i>
+     <b>
+      η
+     </b>
+     <sub>
+      I
+     </sub>
+     constituem um par complexo conjugado, com parte real
+     <b>
+      η
+     </b>
+     <sub>
+      R
+     </sub>
+     e parte imaginária
+     <b>
+      η
+     </b>
+     <sub>
+      I
+     </sub>
+     . A matriz cujas colunas são os autovetores
+     <b>
+      v
+     </b>
+     <sub>
+      1
+     </sub>
+     <b>
+      v
+     </b>
+     <sub>
+      2
+     </sub>
+     <b>
+      v
+     </b>
+     <sub>
+      3
+     </sub>
+     ) é denominada de
+     <i>
+      matriz modal
+     </i>
+     .
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/fdada15a13547e042439829d62d503d86067d587.jpg" style="max-width:100%"/>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/fdada15a13547e042439829d62d503d86067d587.jpg" style="max-width:100%"/>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/332166c5ac50c2c8a8d6d4067b4548378fea31e7.jpg" style="max-width:100%"/>
+     = (
+    </p>
+    <p>
+     Definindo o vetor
+     <b>
+      w
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ), dado por
+    </p>
+    <div class="row formula" id="ee28">
+     <a name="e28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8887239e6c55f6f994d9be95b60093a4e451a11d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     é possível reescrever a
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (27)
+     </a>
+     como
+    </p>
+    <div class="row formula" id="ee29">
+     <a name="e29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/c370e804d6b6f56be972295eb2cd716d9ea4d835.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Derivando a
+     <a class="open-asset-modal" data-target="#ModalSchemee28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (28)
+     </a>
+     , tem-se
+    </p>
+    <div class="row formula" id="ee30">
+     <a name="e30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/dcb7e63baddf0d97acacf4786dac2a0c5ab17af6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como
+     <b>
+      w
+     </b>
+     (0) = [
+     <i>
+      C
+     </i>
+     1
+     <i>
+      C
+     </i>
+     2
+     <i>
+      C
+     </i>
+     3]
+     <i>
+      <sup>
+       T
+      </sup>
+     </i>
+     , fazendo
+     <i>
+      t
+     </i>
+     = 0 na
+     <a class="open-asset-modal" data-target="#ModalSchemee29" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (29)
+     </a>
+     , obtém-se a expressão
+    </p>
+    <div class="row formula" id="ee31">
+     <a name="e31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/0257b9b58f9f12d60e2673c38aa7d4aad609334b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A partir da
+     <a class="open-asset-modal" data-target="#ModalSchemee31" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (31)
+     </a>
+     , são obtidos o coeficiente real
+     <i>
+      C
+     </i>
+     <sub>
+      1
+     </sub>
+     e o par complexo conjugado
+     <i>
+      C
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      cCe
+     </i>
+     <sup>
+      ΦC
+     </sup>
+     e
+     <i>
+      C
+     </i>
+     <sub>
+      3
+     </sub>
+     <i>
+      cCe
+     </i>
+     <sup>
+      −ΦC
+     </sup>
+     . Reescrevendo a
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (27)
+     </a>
+     em termos de
+     <i>
+      cC
+     </i>
+     , -
+     <i>
+      Φ
+     </i>
+     <sub>
+      C
+     </sub>
+     ,
+     <b>
+      η
+     </b>
+     <sub>
+      R
+     </sub>
+     e
+     <b>
+      η
+     </b>
+     <sub>
+      I
+     </sub>
+     , resulta em
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/fdada15a13547e042439829d62d503d86067d587.jpg" style="max-width:100%"/>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/fdada15a13547e042439829d62d503d86067d587.jpg" style="max-width:100%"/>
+    </p>
+    <div class="row formula" id="ee32">
+     <a name="e32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/5dd136a990b03d5fd11f7b60ed0d3257a39cdaae.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A trajetória
+     <b>
+      r'
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      t
+     </i>
+     ∈ ℝ, pode ser decomposta em duas componentes
+     <b>
+      r'
+     </b>
+     <i>
+      <sub>
+       R
+      </sub>
+     </i>
+     e
+     <b>
+      r'
+     </b>
+     <sub>
+      <i>
+       C
+      </i>
+     </sub>
+     , dadas por
+    </p>
+    <div class="row formula" id="ee33">
+     <a name="e33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/30b38e55f10798fda2eb66c5de1d0c5bc319ab8f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="ee34">
+     <a name="e34">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/ce55602178f7c2fb6fbdc34034021770c8511f7f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A trajetória descrita por
+     <b>
+      r'
+     </b>
+     <i>
+      <sub>
+       R
+      </sub>
+     </i>
+     é uma linha reta (pois o versor de
+     <b>
+      r'
+     </b>
+     <i>
+      <sub>
+       R
+      </sub>
+     </i>
+     não varia com o tempo). O conjunto dos pontos dessa trajetória forma o
+     <i>
+      autoespaço correspondente ao autovalor real γ no ponto fixo
+     </i>
+     P, representado por
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      P
+     </i>
+     ). Por outro lado,
+     <b>
+      r'
+     </b>
+     <sub>
+      <i>
+       C
+      </i>
+     </sub>
+     é um vetor tangente ao plano gerado pelos vetores de base
+     <i>
+      <b>
+       η
+      </b>
+      <sub>
+       R
+      </sub>
+     </i>
+     e
+     <i>
+      <b>
+       η
+      </b>
+      <sub>
+       R
+      </sub>
+     </i>
+     . O conjunto dos pontos desse plano forma o
+     <i>
+      autoespaço correspondente aos autovalores complexos σ ± iω no ponto fixo
+     </i>
+     P, representado por
+     <i>
+      E
+      <sub>
+       C
+      </sub>
+     </i>
+     (
+     <i>
+      P
+     </i>
+     ). Nota-se que os vetores de base são mantidos quando realizadas as derivações da
+     <a class="open-asset-modal" data-target="#ModalSchemee33" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (33)
+     </a>
+     ou da
+     <a class="open-asset-modal" data-target="#ModalSchemee34" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (34)
+     </a>
+     com relação ao tempo
+     <i>
+      t
+     </i>
+     . Como consequência disso, se
+     <b>
+      r'
+     </b>
+     ∈
+     <i>
+      E
+     </i>
+     <sup>
+      C
+     </sup>
+     (
+     <i>
+      P
+     </i>
+     ) (ou
+     <b>
+      r'
+     </b>
+     ∈
+     <i>
+      E
+     </i>
+     <sup>
+      R
+     </sup>
+     (
+     <i>
+      P
+     </i>
+     )) em um instante
+     <i>
+      t
+     </i>
+     = 0, então
+     <b>
+      r'
+     </b>
+     ∈
+     <i>
+      E
+     </i>
+     <sup>
+      C
+     </sup>
+     (
+     <i>
+      P
+     </i>
+     ) (ou
+     <b>
+      r'
+     </b>
+     ∈
+     <i>
+      E
+     </i>
+     <sup>
+      R
+     </sup>
+     (
+     <i>
+      P
+     </i>
+     )) para qualquer
+     <i>
+      t
+     </i>
+     &gt; 0; isto é, uma trajetória iniciada em um autoespaço, evolui nele.
+    </p>
+    <p>
+     A partir da
+     <a class="open-asset-modal" data-target="#ModalSchemee33" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (33)
+     </a>
+     conclui-se que, se
+     <i>
+      γ
+     </i>
+     &lt; 0, então
+     <b>
+      r'
+     </b>
+     <i>
+      <sub>
+       R
+      </sub>
+     </i>
+     → 0 quando
+     <i>
+      t
+     </i>
+     → ∞, ou seja, as trajetórias convergem assintoticamente para o ponto fixo
+     <i>
+      P
+     </i>
+     em
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      P
+     </i>
+     ). Todavia, se
+     <i>
+      γ
+     </i>
+     &gt; 0, as trajetórias afastam-se de
+     <i>
+      P
+     </i>
+     .
+    </p>
+    <p>
+     Da
+     <a class="open-asset-modal" data-target="#ModalSchemee34" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (34)
+     </a>
+     , vê-se que, quando
+     <i>
+      σ
+     </i>
+     &lt; 0 e
+     <i>
+      ω
+     </i>
+     ≠ 0, as trajetórias em
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (
+     <i>
+      P
+     </i>
+     ) descrevem uma espiral que converge assintoticamente para o ponto fixo
+     <i>
+      P
+     </i>
+     (a
+     <a class="open-asset-modal" data-target="#ModalSchemee34" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (34)
+     </a>
+     é uma elipse multiplicada por uma exponencial que decresce com o tempo), que nesse caso é um
+     <i>
+      foco espiral atrativo
+     </i>
+     (estável). Se
+     <i>
+      σ
+     </i>
+     &gt; 0 e
+     <i>
+      ω
+     </i>
+     ≠ 0, a trajeté uma espiral que se afasta do ponto fixo
+     <i>
+      P
+     </i>
+     , o qual representa um
+     <i>
+      foco espiral repulsivo
+     </i>
+     (instável).
+    </p>
+    <p>
+     Os autovetores
+     <b>
+      v
+     </b>
+     <sub>
+      1
+     </sub>
+     que geram
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      P
+     </i>
+     ) são obtidos a partir da equação (
+     <i>
+      γ
+     </i>
+     <b>
+      v
+     </b>
+     <sub>
+      1
+     </sub>
+     = 0. Fazendo
+     <b>
+      v
+     </b>
+     <sub>
+      1
+     </sub>
+     = (1,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/26bf0ff082949fdd7b0b1f363955fd4045f6e359.jpg" style="max-width:100%"/>
+     ,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/6e6e480f57f340a2bc101b5ab728567775baf976.jpg" style="max-width:100%"/>
+     −
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/f37d21a9110050f753cd16e3becefb3a71d2c14e.jpg" style="max-width:100%"/>
+     ) chega-se ao autovetor expresso como
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8fb6fb27634bd483edeab04ec548620f73a2265b.jpg" style="max-width:100%"/>
+     )
+    </p>
+    <div class="row formula" id="ee35">
+     <a name="e35">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/eb9d81551eb288f70e4e065f152e26510d753910.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Portanto, a equação da reta
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (P) é dada por
+    </p>
+    <div class="row formula" id="ee36">
+     <a name="e36">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/4766607fe492c7d67059b551b65f1a5ddaa7d006.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Utilizando [(
+     <i>
+      σ
+     </i>
+     ±
+     <i>
+      iω
+     </i>
+     )
+     <b>
+      v
+     </b>
+     <sub>
+      2,3
+     </sub>
+     = 0 com
+     <b>
+      v
+     </b>
+     <sub>
+      2,3
+     </sub>
+     = (1
+     <b>
+      η
+     </b>
+     <sub>
+      R
+     </sub>
+     = (
+     <b>
+      v
+     </b>
+     <sub>
+      2
+     </sub>
+     +
+     <b>
+      v
+     </b>
+     <sub>
+      3
+     </sub>
+     )/2e
+     <b>
+      η
+     </b>
+     <sub>
+      I
+     </sub>
+     = (
+     <b>
+      v
+     </b>
+     <sub>
+      2
+     </sub>
+     −
+     <b>
+      v
+     </b>
+     <sub>
+      3
+     </sub>
+     )/(2
+     <i>
+      i
+     </i>
+     ), encontra-se
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/9e00a81bd7535b551f8bb1cff0506d21a5a26e25.jpg" style="max-width:100%"/>
+     ,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/6e6e480f57f340a2bc101b5ab728567775baf976.jpg" style="max-width:100%"/>
+     −
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/6e6e480f57f340a2bc101b5ab728567775baf976.jpg" style="max-width:100%"/>
+     ]
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/d27163b390418bab62f5e1bace9bb57e66d1da02.jpg" style="max-width:100%"/>
+     ), e calculando os autovetores
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/bdcebe512b54f4c7e0d2f1eabc69be7f377688a5.jpg" style="max-width:100%"/>
+     ,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/7af07aef082065227f091816879efa470ace7f16.jpg" style="max-width:100%"/>
+     ,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/114d1f05ff3c539b4d3e0e5f34636ef798e77ef3.jpg" style="max-width:100%"/>
+     )=(
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/e55d1471ba6d90b39a628775677dee89337e1898.jpg" style="max-width:100%"/>
+     ) = (
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/1e7a4e7895b63f70c5fc11c4cde4f67fac4b81a7.jpg" style="max-width:100%"/>
+     ,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/cbf06818d139909d8b55ca22d503f90e0e429475.jpg" style="max-width:100%"/>
+     ,
+    </p>
+    <div class="row formula" id="ee37">
+     <a name="e37">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/df4a39b36bc0f1aa4eb456b649cf033ba88ea5af.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Da
+     <a class="open-asset-modal" data-target="#ModalSchemee26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (26)
+     </a>
+     conclui-se que
+    </p>
+    <div class="row formula" id="ee38">
+     <a name="e38">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8af53f9cbdfbe104fbfca2b66315286407e0db2a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo a
+     <a class="open-asset-modal" data-target="#ModalSchemee38" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (38)
+     </a>
+     na
+     <a class="open-asset-modal" data-target="#ModalSchemee37" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (37)
+     </a>
+     , pode-se obter, a partir do produto vetorial
+     <b>
+      η
+     </b>
+     <sub>
+      R
+     </sub>
+     ×
+     <b>
+      η
+     </b>
+     <sub>
+      I
+     </sub>
+     , um vetor normal ao plano
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (
+     <i>
+      P
+     </i>
+     ). Após algumas manipulações algébricas, com a utilização de
+     <a class="open-asset-modal" data-target="#ModalSchemee26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (26)
+     </a>
+     com λ =
+     <i>
+      γ
+     </i>
+     , chega-se à equação de
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (
+     <i>
+      P
+     </i>
+     dada por
+    </p>
+    <div class="row formula" id="ee39">
+     <a name="e39">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/a079b02141be1d97150d29f837e6a41c3a409a6f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <h2>
+     3.3. Forma de Jordan real
+    </h2>
+    <p>
+     Da
+     <a class="open-asset-modal" data-target="#ModalSchemee29" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (29)
+     </a>
+     , tem-se
+    </p>
+    <div class="row formula" id="ee40">
+     <a name="e40">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/e63fd22ecba8e5233b667b4e18c3f904d149c10a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     resultando na variável real
+     <i>
+      w
+     </i>
+     <sub>
+      1
+     </sub>
+     e no par complexo conjugado
+     <i>
+      w
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      w
+     </i>
+     <sub>
+      R
+     </sub>
+     +
+     <i>
+      iw
+     </i>
+     <sub>
+      I
+     </sub>
+     e
+     <i>
+      w
+     </i>
+     <sub>
+      3
+     </sub>
+     <i>
+      w
+     </i>
+     <sub>
+      R
+     </sub>
+     −
+     <i>
+      iw
+     </i>
+     <sub>
+      I
+     </sub>
+     . A matriz
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/fdada15a13547e042439829d62d503d86067d587.jpg" style="max-width:100%"/>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/fdada15a13547e042439829d62d503d86067d587.jpg" style="max-width:100%"/>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/332166c5ac50c2c8a8d6d4067b4548378fea31e7.jpg" style="max-width:100%"/>
+     é dada por
+    </p>
+    <div class="row formula" id="ee41">
+     <a name="e41">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/963bb242a93141d41ebdda927b27307f653bf054.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Da
+     <a class="open-asset-modal" data-target="#ModalSchemee30" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (30)
+     </a>
+     , tem-se que
+    </p>
+    <div class="row formula" id="ee42">
+     <a name="e42">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/56e2f69518fa59ae43e328b29d076cccbaad579b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A matriz do sistema (
+     <a class="open-asset-modal" data-target="#ModalSchemee42" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      42
+     </a>
+     ) é a
+     <i>
+      forma de Jordan real
+     </i>
+     do circuito de Chua-Matsumoto da
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     , cuja validade restringe-se a um dos domínios lineares (as variáveis
+     <i>
+      w
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      w
+     </i>
+     <sub>
+      I
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      w
+     </i>
+     <sub>
+      1
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) obtidas em
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     não são as mesmas obtidas em
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     ).
+    </p>
+    <p>
+     Utilizando a
+     <a class="open-asset-modal" data-target="#ModalSchemee40" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (40)
+     </a>
+     , o vetor de base
+     <b>
+      v
+     </b>
+     <sub>
+      1
+     </sub>
+     do subespaço
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      O
+     </i>
+     ) transforma-se em
+     <b>
+      v
+     </b>
+     <sub>
+      ∼1
+     </sub>
+     = (
+     <i>
+      w
+     </i>
+     <sub>
+      R
+     </sub>
+     ,w
+     <sub>
+      I
+     </sub>
+     ,w
+     <sub>
+      1
+     </sub>
+     ) = (0, 0, 1), e os vetores de base
+     <b>
+      η
+     </b>
+     <sub>
+      R
+     </sub>
+     e
+     <b>
+      η
+     </b>
+     <sub>
+      I
+     </sub>
+     do subespaço
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (
+     <i>
+      O
+     </i>
+     ) transformam-se em
+     <b>
+      η
+     </b>
+     <sub>
+      ∼R
+     </sub>
+     = (
+     <i>
+      w
+     </i>
+     <sub>
+      R
+     </sub>
+     ,w
+     <sub>
+      I
+     </sub>
+     , w
+     <sub>
+      1
+     </sub>
+     ) = (1/2, 0, 0) e
+     <b>
+      η
+     </b>
+     <sub>
+      ∼I
+     </sub>
+     = (
+     <i>
+      w
+     </i>
+     <sub>
+      R
+     </sub>
+     , w
+     <sub>
+      I
+     </sub>
+     , w
+     <sub>
+      1
+     </sub>
+     ) = (0, −1/2, 0). Portanto, o sistema (
+     <a class="open-asset-modal" data-target="#ModalSchemee42" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      42
+     </a>
+     ) é obtido a partir de (
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ), através de uma transformação de coordenadas que coloca
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      O
+     </i>
+     ) sobre um dos eixos, no caso w
+     <sub>
+      1
+     </sub>
+     ,e
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (
+     <i>
+      O
+     </i>
+     ) sobre o plano perpendicular a esse eixo, no caso
+     <i>
+      w
+     </i>
+     <sub>
+      1
+     </sub>
+     = 0.
+    </p>
+    <h2>
+     3.4. Ponto fixo do tipo sela-foco e órbita homoclínica
+    </h2>
+    <p>
+     A trajetória que passa por um ponto de equilíbrio
+     <i>
+      P
+     </i>
+     é referida como
+     <i>
+      órbita homoclínica
+     </i>
+     se tende a
+     <i>
+      P
+     </i>
+     quando
+     <i>
+      t
+     </i>
+     → ∞ e
+     <i>
+      t
+     </i>
+     → − ∞. O ponto
+     <i>
+      P
+     </i>
+     é denominado de
+     <i>
+      ponto homoclínico
+     </i>
+     . Para facilitar a compreensão, utilizar-se-á o exemplo ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Órbita homoclínica no ponto fixo O = (0,0,0), para os parâmetros
+      <i>
+       α
+      </i>
+      = 11.0917459,
+      <i>
+       β
+      </i>
+      = 14.2857143, a = -1.1428571 e b = -0.7142857. A trajetória foi obtida através da
+      <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (27)
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Se
+     <i>
+      σ γ
+     </i>
+     &lt; 0 para um ponto de equilíbrio
+     <i>
+      O
+     </i>
+     com autovalores λ
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      γ, λ
+     </i>
+     <sub>
+      2
+     </sub>
+     =
+     <i>
+      σ
+     </i>
+     +
+     <i>
+      i
+     </i>
+     ω, λ
+     <sub>
+      3
+     </sub>
+     =
+     <i>
+      σ
+     </i>
+     −
+     <i>
+      i
+     </i>
+     ω; então esse ponto é do tipo sela, pois dados os subespaços
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      O
+     </i>
+     ) e
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (
+     <i>
+      O
+     </i>
+     ), se
+     <i>
+      O
+     </i>
+     é assintoticamente estável em um deles, será instável no outro. Além disso, se
+     <i>
+      ω
+     </i>
+     ≠ 0, então as trajetórias em
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (
+     <i>
+      O
+     </i>
+     ) são focos espirais. Um ponto fixo do tipo sela-foco é um ponto fixo do tipo sela com
+     <i>
+      ω
+     </i>
+     ≠ 0.
+    </p>
+    <p>
+     Para o ponto fixo
+     <i>
+      O
+     </i>
+     , a posição dos pontos da trajetória é
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <b>
+      r'
+     </b>
+     (
+     <i>
+      t
+     </i>
+     )+
+     <i>
+      O
+     </i>
+     =
+     <b>
+      r'
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ). Caso o ponto fixo fosse
+     <i>
+      P
+     </i>
+     <sub>
+      +/-
+     </sub>
+     , a posição dos pontos da trajetória seria
+     <b>
+      r
+     </b>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <b>
+      r'
+     </b>
+     (
+     <i>
+      t
+     </i>
+     )+
+     <i>
+      P
+     </i>
+     <sub>
+      +/−
+     </sub>
+     .
+    </p>
+    <p>
+     Uma órbita homoclínica é obtida no ponto fixo O = (0,0,0), para os parâmetros
+     <i>
+      α
+     </i>
+     = 11.0917459,
+     <i>
+      β
+     </i>
+     = 14.2857143,
+     <i>
+      a
+     </i>
+     = -1.1428571 e
+     <i>
+      b
+     </i>
+     = -0.7142857. Os autovalores de
+     <i>
+      O
+     </i>
+     são λ
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      γ, λ
+     </i>
+     <sub>
+      2
+     </sub>
+     =
+     <i>
+      σ
+     </i>
+     +
+     <i>
+      i
+     </i>
+     ω, λ
+     <sub>
+      3
+     </sub>
+     =
+     <i>
+      σ
+     </i>
+     −
+     <i>
+      i
+     </i>
+     ω com
+     <i>
+      γ
+     </i>
+     = 2.835,
+     <i>
+      σ
+     </i>
+     = −1.125 e
+     <i>
+      ω
+     </i>
+     =2.593. Como
+     <i>
+      σ γ
+     </i>
+     &lt; 0 e
+     <i>
+      ω
+     </i>
+     = 0,
+     <i>
+      O
+     </i>
+     é um ponto fixo do tipo sela-foco. A trajetória mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     foi obtida atrav´ es da
+     <a class="open-asset-modal" data-target="#ModalSchemee27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (27)
+     </a>
+     .
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , a trajetória no subespaço instável
+     <i>
+      E
+     </i>
+     <sub>
+      R
+     </sub>
+     (
+     <i>
+      OM
+     </i>
+     ) parte de
+     <i>
+      O
+     </i>
+     para
+     <i>
+      M
+     </i>
+     <sub>
+      1
+     </sub>
+     . O ponto
+     <i>
+      M
+     </i>
+     <sub>
+      1
+     </sub>
+     é a intersecção E
+     <sup>
+      R
+     </sup>
+     (O) ∩ U1 (obtido fazendo
+     <i>
+      x
+     </i>
+     = 1 na Eq. (36)). Na região
+     <i>
+      D
+     </i>
+     <sub>
+      1
+     </sub>
+     a trajetória é uma curva que parte de
+     <i>
+      M
+     </i>
+     <sub>
+      1
+     </sub>
+     para
+     <i>
+      M2
+     </i>
+     . O ponto
+     <i>
+      M2
+     </i>
+     pertence à reta formada pela intersecção dos planos
+     <i>
+      E
+     </i>
+     <sup>
+      C
+     </sup>
+     (
+     <i>
+      O
+     </i>
+     )∩
+     <i>
+      U
+     </i>
+     <sub>
+      1
+     </sub>
+     . Finalmente, partindo de
+     <i>
+      M
+     </i>
+     <sub>
+      2
+     </sub>
+     , a trajetória descreve uma espiral que converge assintoticamente para
+     <i>
+      O
+     </i>
+     . Em síntese, a trajetória tende ao ponto fixo
+     <i>
+      O
+     </i>
+     quando
+     <i>
+      t
+     </i>
+     → ∞ e
+     <i>
+      t
+     </i>
+     → − ∞, ou seja, a trajetória é uma órbita homoclínica.
+    </p>
+    <p>
+     Em 1986, Chua, Komuro e Matsumoto apresentaram uma prova rigorosa de que é possível encontrar órbitas homoclínicas para o circuito de Chua-Matsumoto através da escolha adequada dos parâmetros
+     <i>
+      α, β
+     </i>
+     ,
+     <i>
+      a
+     </i>
+     e
+     <i>
+      b
+     </i>
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] L.O. Chua, M. Komuro and T. Matsumoto, IEEE Trans. on Circ. and Systems 33, 1072 (1986).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h2>
+     3.5. Seção de Poincaré e mapa de primeiro retorno
+    </h2>
+    <p>
+     Dado um sistema tridimensional, pode-se analisar os pontos de intersecção entre as trajetórias e uma seção transversal às mesmas (denominada de
+     <i>
+      seção de Poincaré
+     </i>
+     ), em vez das próprias trajetórias. Vários pontos de interseção entre uma trajetória e a seção de Poincaré são obtidos ao longo do tempo, dando origem a uma versão bidimensional discreta do sistema contínuo tridimensional. Um
+     <i>
+      mapa de primeiro retorno
+     </i>
+     (ou
+     <i>
+      mapa de Poincaré
+     </i>
+     ) transforma os pontos de uma seção de Poincaré nos pontos obtidos quando a trajetória atravessa novamente a seção no mesmo sentido. Uma análise bastante completa do circuito de Chua-Matsumoto utilizando mapas de primeiro retorno é apresentada na Ref.
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] L.O. Chua, M. Komuro and T. Matsumoto, IEEE Trans. on Circ. and Systems 33, 1072 (1986).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Em
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     , é mostrada uma seção de Poincaré, em
+     <i>
+      x
+     </i>
+     = 1, para
+     <i>
+      α
+     </i>
+     = 11.0917459,
+     <i>
+      β
+     </i>
+     = 14.2857143,
+     <i>
+      a
+     </i>
+     = - 1.1428571 e
+     <i>
+      b
+     </i>
+     = -0.7142857. No tempo
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     , há 400 pontos distanciados de 0.0001, em torno do ponto
+     <i>
+      M
+     </i>
+     <sub>
+      1
+     </sub>
+     . Em um tempo
+     <i>
+      t
+      <sub>
+       1
+      </sub>
+     </i>
+     , posterior, os pontos evoluem para pontos próximos a
+     <i>
+      M
+      <sub>
+       2
+      </sub>
+     </i>
+     . Nota-se que nesse caso, em que as trajetórias não passam pelo ponto homoclínico, a trajetória não apresenta sensibilidade às condições iniciais.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      seção de Poincaré, em x = 1, para
+      <i>
+       α
+      </i>
+      = 11.0917459,
+      <i>
+       β
+      </i>
+      = 14.2857143, a = -1.1428571 e b = -0.7142857. No tempo t
+      <sub>
+       0
+      </sub>
+      , há 400 pontos distanciados de 0.0001, em torno do ponto M
+      <sub>
+       1
+      </sub>
+      . Em um tempo t
+      <sub>
+       1
+      </sub>
+      , posterior, os pontos evoluem para pontos pr´oximos a M
+      <sub>
+       2
+      </sub>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     , é mostrada uma seção de Poincaré, em
+     <i>
+      x
+     </i>
+     = 1, para
+     <i>
+      α
+     </i>
+     = 11.0917459,
+     <i>
+      β
+     </i>
+     = 14.2857143,
+     <i>
+      a
+     </i>
+     = -1.1428571 e
+     <i>
+      b
+     </i>
+     = -0.7142857. A seção mostra dois instantes consecutivos de um mapa de primeiro retorno. Em
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     , há 400 pontos (20×20) distanciados entre si de 0.0001, em torno do ponto
+     <i>
+      M
+     </i>
+     <sub>
+      1
+     </sub>
+     . Em
+     <i>
+      t
+     </i>
+     <sub>
+      1
+     </sub>
+     , posterior, o sistema evoluiu para pontos distantes entre si. Nesse caso, em que a trajetória passa nas proximidades do ponto homoclínico
+     <i>
+      O
+     </i>
+     , a trajetória apresenta sensibilidade às condições iniciais.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Seção de Poincaré, em x = 1, para
+      <i>
+       α
+      </i>
+      = 11.0917459,
+      <i>
+       β
+      </i>
+      = 14.2857143, a = -1.1428571 e b = -0.7142857. A seção mostra dois instantes consecutivos de um mapa de primeiro retorno. Em t
+      <sub>
+       0
+      </sub>
+      , há 400 pontos (20 × 20) distanciados entre si de 0.0001, em torno do ponto M
+      <sub>
+       1
+      </sub>
+      . Em t
+      <sub>
+       1
+      </sub>
+      , posterior, o sistema evoluiu para pontos distantes entre si.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.6. Ferradura de Smale
+    </h2>
+    <p>
+     O quadrado unitário
+     <i>
+      D
+     </i>
+     na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     é transformado por
+     <i>
+      f
+     </i>
+     em um objeto em forma de ferradura (
+     <i>
+      ferradura de Smale
+     </i>
+     ). A transformação
+     <i>
+      f
+     </i>
+     realiza a expansão, contração e dobra em três direções distintas, produzidas pela equação de evolução temporal dada por
+    </p>
+    <div class="row formula" id="ee43">
+     <a name="e43">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/904f0cffb542d79b1e4d735cb1dd381a23086dbf.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Expansão, contração e dobra do quadrado unitário realizadas pela transformação
+      <i>
+       f
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A transformação inversa
+     <i>
+      f
+     </i>
+     <sub>
+      -1
+     </sub>
+     é mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Expansão, contração e dobra do quadrado unitário realizadas pela transformação inversa
+      <i>
+       f
+      </i>
+      <sup>
+       -1
+      </sup>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A medida que ocorrem sucessivas iterações, a área de intersecção da ferradura com
+     <i>
+      D
+     </i>
+     reduz-se e divide-se em um maior número de regiões desconexas, como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     . Dá-se o mesmo quando sucessivas iterações são retrocedidas no tempo, como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Aplicação de
+      <i>
+       f
+      </i>
+      sobre
+      <i>
+       f
+      </i>
+      (
+      <i>
+       D
+      </i>
+      ), ou seja,
+      <i>
+       f
+      </i>
+      <sup>
+       2
+      </sup>
+      (
+      <i>
+       D
+      </i>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Aplicação de
+      <i>
+       f
+      </i>
+      <sup>
+       -1
+      </sup>
+      sobre
+      <i>
+       f
+      </i>
+      <sup>
+       -1
+      </sup>
+      (
+      <i>
+       D
+      </i>
+      ), ou seja,
+      <i>
+       f
+      </i>
+      <sup>
+       -2
+      </sup>
+      (
+      <i>
+       D
+      </i>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Se todas as transformações
+     <i>
+      f
+     </i>
+     forem realizadas sobre
+     <i>
+      D
+     </i>
+     , obter-se-á infinitos segmentos de reta unitários verticais. Para transformações inversas
+     <i>
+      f
+     </i>
+     -1, obter-se-á infinitos segmentos de reta unitários horizontais. O
+     <i>
+      conjunto das órbitas que permanecem em
+     </i>
+     D após todas as transformações é obtido pelos pontos de intersecção entre os segmentos unitários horizontais e verticais, e é dado por
+    </p>
+    <div class="row formula" id="ee44">
+     <a name="e44">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/8c88e1486ffbcc1730511ba7d34ed26c66addda5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em vez de analisar a evolução das órbitas, é possível analisar a evolução dos itinerários que informam em qual região de
+     <i>
+      D
+     </i>
+     (
+     <i>
+      H
+     </i>
+     <sub>
+      0
+     </sub>
+     ou
+     <i>
+      H
+     </i>
+     <sub>
+      1
+     </sub>
+     ) a órbita encontra-se a cada iteração. Esses itinerários podem ser representados por sequências bi-infinitas s = {...s
+     <sub>
+      −2
+     </sub>
+     s
+     <sub>
+      −1
+     </sub>
+     .s
+     <sub>
+      0
+     </sub>
+     s
+     <sub>
+      1
+     </sub>
+     s
+     <sub>
+      2
+     </sub>
+     ...}, com
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     = 0, se a órbita passa por
+     <i>
+      H
+     </i>
+     <sub>
+      0
+     </sub>
+     ,e
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     = 1, se órbita passa por
+     <i>
+      H
+     </i>
+     <sub>
+      1
+     </sub>
+     .
+    </p>
+    <p>
+     Pode-se definir a transformação de desvio
+     <i>
+      σ
+     </i>
+     (s)= {...s
+     <sub>
+      0
+     </sub>
+     .s
+     <sub>
+      1
+     </sub>
+     s
+     <sub>
+      2
+     </sub>
+     s
+     <sub>
+      3
+     </sub>
+     ...} em Σ (conjunto de todas as sequências bi-infinitas). A transformação
+     <i>
+      σ
+     </i>
+     faz cada termo
+     <i>
+      s
+     </i>
+     <sub>
+      n
+     </sub>
+     da sequência avançar para
+     <i>
+      s
+     </i>
+     <sub>
+      n+1
+     </sub>
+     , representando a lei de evolução temporal em Σ, que corresponde a
+     <i>
+      f
+     </i>
+     em Λ. É possível provar que as conclusões obtidas para a dinâmica de
+     <i>
+      σ
+     </i>
+     em Σ também são válidas para
+     <i>
+      f
+     </i>
+     em Λ.
+    </p>
+    <p>
+     Uma sequência bi-infinita
+     <i>
+      s
+     </i>
+     = {...
+     <i>
+      s
+     </i>
+     <sub>
+      −1
+     </sub>
+     .
+     <i>
+      s
+     </i>
+     <sub>
+      0
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      2
+     </sub>
+     ...} possui uma
+     <i>
+      órbita periódica
+     </i>
+     , se existe
+     <i>
+      T
+     </i>
+     ∈ ℕ tal que
+     <i>
+      σ
+     </i>
+     <sup>
+      T
+     </sup>
+     (
+     <i>
+      s
+     </i>
+     )=
+     <i>
+      s
+     </i>
+     , onde
+     <i>
+      T
+     </i>
+     é o período. Por exemplo,
+     <i>
+      s
+     </i>
+     = {...101101.101101...} = {101.101} é uma órbita periódica de período 3. Para qualquer número natural escrito na forma binária χ, é possível obter uma órbita periódica
+     <i>
+      s
+     </i>
+     = {χ∙χ}. Portanto, há uma infinidade contável de órbitas periódicas de período arbitrariamente grande.
+    </p>
+    <p>
+     A cada sequência bi-infinita
+     <i>
+      s
+     </i>
+     = {...
+     <i>
+      s
+     </i>
+     <sub>
+      −1
+     </sub>
+     .
+     <i>
+      s
+     </i>
+     <sub>
+      0
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      2
+     </sub>
+     ...}corresponde uma sequência infinita
+     <i>
+      s
+     </i>
+     ={0.
+     <i>
+      s
+     </i>
+     <sub>
+      0
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      −1
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      −2
+     </sub>
+     ...}. Se
+     <i>
+      s
+     </i>
+     é não-periódica, 0.
+     <i>
+      s
+     </i>
+     <sub>
+      0
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      −1
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      2
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      −2
+     </sub>
+     ... é um número irracional; portanto, há uma infinidade incontável de órbitas não-periódicas.
+    </p>
+    <p>
+     A distância entre duas sequências bi-infinitas
+     <i>
+      s
+     </i>
+     = {...
+     <i>
+      s
+     </i>
+     <sub>
+      −2
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      −1
+     </sub>
+     .
+     <i>
+      s
+     </i>
+     <sub>
+      0
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      2
+     </sub>
+     ...} e
+     <i>
+      s
+     </i>
+     ' = {...
+     <i>
+      s
+     </i>
+     '
+     <sub>
+      −2
+     </sub>
+     <i>
+      s
+     </i>
+     '
+     <sub>
+      −1
+     </sub>
+     .
+     <i>
+      s
+     </i>
+     '
+     <sub>
+      0
+     </sub>
+     <i>
+      s
+     </i>
+     <sub>
+      1
+     </sub>
+     <i>
+      s
+     </i>
+     '
+     <sub>
+      2
+     </sub>
+     ...} é dada por
+     <i>
+      d
+     </i>
+     (
+     <i>
+      s
+     </i>
+     , s') =
+     <i>
+      δ
+     </i>
+     <sub>
+      k
+     </sub>
+     /2
+     <sup>
+      |
+      <i>
+       k
+      </i>
+      |
+     </sup>
+     , onde
+     <i>
+      δ
+     </i>
+     <sub>
+      k
+     </sub>
+     = 0, se
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     =
+     <i>
+      s'
+     </i>
+     <sub>
+      k
+     </sub>
+     , ou
+     <i>
+      δ
+     </i>
+     <sub>
+      k
+     </sub>
+     = 1, se
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     ≠
+     <i>
+      s'
+     </i>
+     <sub>
+      k
+     </sub>
+     . Afirmar que
+     <i>
+      s
+     </i>
+     e
+     <i>
+      s'
+     </i>
+     estão próximos (
+     <i>
+      dado um
+     </i>
+     ε &gt; 0, d(s, s') &lt; ε), equivale a dizer:
+     <i>
+      dado um
+     </i>
+     N ∈ ℕ,
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     =
+     <i>
+      s'
+     </i>
+     <sub>
+      k
+     </sub>
+     <i>
+      para
+     </i>
+     |
+     <i>
+      k
+     </i>
+     | &lt;
+     <i>
+      N
+     </i>
+     , onde
+     <i>
+      N
+     </i>
+     =
+     <i>
+      N
+     </i>
+     (ε).
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/402f2c675cf260abd510413e6dd82045bde5e310.jpg" style="max-width:100%"/>
+    </p>
+    <p>
+     Uma sequência s possui órbita densa quando, dados
+     <i>
+      s
+     </i>
+     ' ∈ Σ e ε &gt; 0, existe um número de iterações
+     <i>
+      T
+     </i>
+     tal que
+     <i>
+      d
+     </i>
+     (
+     <i>
+      σ
+     </i>
+     <sup>
+      T
+     </sup>
+     (
+     <i>
+      s
+     </i>
+     ),
+     <i>
+      s'
+     </i>
+     ) &lt; ε. A sequência
+     <i>
+      T
+     </i>
+     de iterações, tem-se
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     =
+     <i>
+      s'
+     </i>
+     <sub>
+      k
+     </sub>
+     para |
+     <i>
+      k
+     </i>
+     | &lt;
+     <i>
+      N
+     </i>
+     , onde
+     <i>
+      s
+     </i>
+     =
+     <i>
+      σ
+     </i>
+     <sup>
+      T
+     </sup>
+     (
+     <i>
+      N
+     </i>
+     =
+     <i>
+      N
+     </i>
+     (ε) ∈ ℕ.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/bd78bfc0db0b27ac6428e74dbd88f743f3982fee.jpg" style="max-width:100%"/>
+     = {...{11}{01}{1}.{0}{00}{10}...} (formada por todas as sequências finitas com 0's e 1's) possui órbita densa, pois, após um certo número
+     <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/bd78bfc0db0b27ac6428e74dbd88f743f3982fee.jpg" style="max-width:100%"/>
+     ) e
+    </p>
+    <p>
+     A transformação
+     <i>
+      σ
+     </i>
+     em Σ possui sensibilidade às condições iniciais. Dados
+     <i>
+      s
+     </i>
+     , s ∈ Σ e ε &gt; 0, tais que
+     <i>
+      d
+     </i>
+     (
+     <i>
+      s
+     </i>
+     ,s) &lt; ε, ou seja,
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     = s
+     <sub>
+      k
+     </sub>
+     para |
+     <i>
+      k
+     </i>
+     | &lt;
+     <i>
+      N
+     </i>
+     ; após
+     <i>
+      N
+     </i>
+     iterações, não será mais possível afirmar que
+     <i>
+      d
+     </i>
+     (
+     <i>
+      σ
+     </i>
+     <sup>
+      N
+     </sup>
+     (
+     <i>
+      s
+     </i>
+     ),
+     <i>
+      σ
+     </i>
+     <sup>
+      N
+     </sup>
+     (s)) &lt; ε, pois |
+     <i>
+      k
+     </i>
+     | &gt;
+     <i>
+      N
+     </i>
+     , e não será possível garantir que
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     =
+     <i>
+      s
+     </i>
+     <sub>
+      k
+     </sub>
+     .
+    </p>
+    <p>
+     Como a dinâmica de
+     <i>
+      f
+     </i>
+     em Λ pode ser descrita em termos da dinâmica de
+     <i>
+      σ
+     </i>
+     em Σ, a transformação da ferradura de Smale possui:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Uma infinidade contável de órbitas periódicas de período arbitrariamente grande;
+      </p>
+     </li>
+     <li>
+      <p>
+       Uma infinidade incontável de órbitas não periódicas;
+      </p>
+     </li>
+     <li>
+      <p>
+       Órbita densa;
+      </p>
+     </li>
+     <li>
+      <p>
+       Sensibilidade às condições iniciais.
+      </p>
+     </li>
+    </ul>
+    <h2>
+     3.7. Teorema de Shilnikov
+    </h2>
+    <p>
+     O teorema de Shilnikov foi publicado em 1965
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] L.P. Shil'nikov, Dokl. Akad. Nauk SSSR 160, 558 (1965).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Segundo esse teorema
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] L.O. Chua, M. Komuro and T. Matsumoto, IEEE Trans. on Circ. and Systems 33, 1072 (1986).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , dado um sistema tridimensional ṙ =
+     <i>
+      h
+     </i>
+     (
+     <b>
+      r
+     </b>
+     ) contínuo e linear por partes que possui um ponto fixo do tipo sela-foco na origem com um autovalor real
+     <i>
+      γ
+     </i>
+     e um par complexo conjugado de autovalores
+     <i>
+      σ
+     </i>
+     ± i
+     <i>
+      ω
+     </i>
+     , com
+     <i>
+      σ γ
+     </i>
+     &lt; 0 e
+     <i>
+      ω
+     </i>
+     = 0; se |
+     <i>
+      σ
+     </i>
+     | &lt; |
+     <i>
+      γ
+     </i>
+     | (
+     <i>
+      condição de Shilnikov
+     </i>
+     ) e existe uma órbita homoclínica através da origem, então existe uma ferradura de Smale próxima a essa órbita homoclínica.
+    </p>
+    <p>
+     É possível encontrar um sistema de coordenadas em que uma órbita homoclínica, como aquela mos trada na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , tenha o subespa¸ co instável
+     <i>
+      ER
+     </i>
+     (0) sobre o eixo
+     <i>
+      z
+     </i>
+     e o subespaço estável
+     <i>
+      E
+     </i>
+     <sub>
+      C
+     </sub>
+     (0) sobre o plano
+     <i>
+      xy
+     </i>
+     , como ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     . Isso pode ser feito utilizando o conjunto dos autovetores como base, como em (
+     <a class="open-asset-modal" data-target="#ModalSchemee42" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      42
+     </a>
+     ).
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Ferradura de Smale próxima a uma trajetória homoclínica.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Um conjunto de pontos de uma seção de Poincaré tende a contrair-se para um único ponto, quando a seção é tomada cada vez mais próxima a um ponto fixo assintoticamente estável. Se em vez disso, o ponto fixo for instável, os pontos da seção afastarse-ão. Se o ponto fixo for homoclínico, a seção será contraída na direção do subespaço estável e será expandida na direção do subespaço instável. Além disso, se o o sistema for dissipativo, a seção terá de ser dobrada para que caiba no espaço de fases. Portanto, o retângulo (que é um conjunto de condições iniciais de várias trajetórias) na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     transforma-se com as mesmas propriedades da ferradura de Smale. Nesse caso, o circuito de Chua-Matsumoto possuirá: uma infinidade contável de órbitas periódicas de período arbitrariamente grande, uma infinidade incontável de órbitas não-periódicas, órbita densa, e sensibilidade às condições iniciais.
+    </p>
+    <h2>
+     3.8. Expoentes de Lyapunov
+    </h2>
+    <p>
+     Pode-se pensar em um cubo centrado em um ponto de uma órbita homoclínica, que seja formado por pontos que representam condições iniciais. A medida que o tempo passa, os pontos desse cubo evoluem de uma forma que, a dimensão do cubo na direção da órbita deve ser mantida constante, pois caso diminuísse, convergiria para um ponto, e caso aumentasse, os pontos afastar-se-iam uns dos outros e da órbita, com o passar do tempo.
+    </p>
+    <p>
+     Considerando que as dimensões do cubo são
+     <i>
+      d
+     </i>
+     <sub>
+      j
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     )=
+     <i>
+      d
+     </i>
+     <sub>
+      j
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     )e
+     <sup>
+      Λ
+      <i>
+       j
+      </i>
+      (
+      <i>
+       t
+      </i>
+      −t0)
+     </sup>
+     , onde
+     <i>
+      j
+     </i>
+     = 1, 2, 3 e Λ
+     <sub>
+      1
+     </sub>
+     ,Λ
+     <sub>
+      2
+     </sub>
+     eΛ
+     <sub>
+      3
+     </sub>
+     são os expoentes de Lyapunov. Por exemplo, se
+     <i>
+      d
+     </i>
+     <sub>
+      2
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) é a dimensão na direção de uma órbita homoclínica, então Λ
+     <sub>
+      2
+     </sub>
+     = 0, e
+     <i>
+      d
+     </i>
+     <sub>
+      2
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      d
+     </i>
+     <sub>
+      2
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     ) não varia com o tempo (o expoente na direção da trajetória deve ser nulo, pois as trajetórias nunca se afastam do atrator caótico, nem tendem a um ponto fixo). Se
+     <i>
+      d
+     </i>
+     <sub>
+      1
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) é a dimensão na direção do subespaço instável, então Λ
+     <sub>
+      1
+     </sub>
+     &gt; 0, e
+     <i>
+      d
+     </i>
+     <sub>
+      1
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      d
+     </i>
+     <sub>
+      1
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     )e
+     <sup>
+      Λ1(
+      <i>
+       t
+      </i>
+      −t0)
+     </sup>
+     cresce exponencialmente com o tempo. Se
+     <i>
+      d
+     </i>
+     <sub>
+      3
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) é a dimensão na direção do subespaço estável, então Λ
+     <sub>
+      3
+     </sub>
+     &lt; 0, e
+     <i>
+      d
+     </i>
+     <sub>
+      3
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      d
+     </i>
+     <sub>
+      3
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     <sub>
+      0
+     </sub>
+     )e
+     <sup>
+      Λ3(
+      <i>
+       t
+      </i>
+      −t0)
+     </sup>
+     diminui exponencialmente com o tempo. O volume do cubo é
+    </p>
+    <div class="row formula" id="ee45">
+     <a name="e45">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/4bc14cd730369fb3ea60962a8d03d25a27f2f374.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Um sistema caótico é dissipativo, pois as trajetórias não se afastam do atrator caótico, portanto,
+    </p>
+    <div class="row formula" id="ee46">
+     <a name="e46">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/19c44c8e6e7915867ceb03eed5114ca2295cde45.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Aplicativo
+     <i>
+      Circuit of Chua and Chaos
+     </i>
+    </h1>
+    <p>
+     Nessa seção serão descritos os métodos numéricos implementados no aplicativo. Além disso, serão apresentados alguns resultados obtidos através de simulações com o programa
+     <i>
+      Circuit of Chua and Chaos
+     </i>
+     , realizadas em um
+     <i>
+      Smartphone
+     </i>
+     . Esses resultados serão comparados aos obtidos com simulações utilizando o programa
+     <i>
+      MATDS
+     </i>
+     (para MATLAB),
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        ver
+        <a href="http://www.math.rsu.ru/mexmat/kvm/matds/" target="_blank">
+         http://www.math.rsu.ru/mexmat/kvm/matds/
+        </a>
+        .
+       </span>
+      </span>
+     </span>
+     realizadas em um computador de mesa. As liguagens utilizadas no desenvolvimento do aplicativo foram
+     <i>
+      XML
+     </i>
+     e
+     <i>
+      Java
+     </i>
+     . Todas as telas do aplicativo foram desenvolvidas em
+     <i>
+      XML
+     </i>
+     , e toda a lógica de programação foi implementada em
+     <i>
+      Java
+     </i>
+     inclusive os algoritmos do método Runge-Kutta-Fehlberg e da técnica empregada no cálculo dos expoentes de Lyapunov.
+    </p>
+    <p>
+     É possível fazer simulações sem realizar a entrada de dados, pois os valores
+     <i>
+      α
+     </i>
+     = 15.0,
+     <i>
+      β
+     </i>
+     ; = 25.58,
+     <i>
+      a
+     </i>
+     = -1.14,
+     <i>
+      b
+     </i>
+     = -0.71
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     =1.6,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     = 0.0,
+     <i>
+      z
+     </i>
+     <sub>
+      0
+     </sub>
+     = −1.5 e
+     <i>
+      t
+     </i>
+     <sub>
+      max
+     </sub>
+     = 45.0,
+     <i>
+      h
+     </i>
+     <sub>
+      max
+     </sub>
+     = 0.01,
+     <i>
+      h
+     </i>
+     <sub>
+      min
+     </sub>
+     = 1.0
+     <i>
+      E
+     </i>
+     − 16 e
+     <i>
+      tol
+     </i>
+     = 1.0
+     <i>
+      E
+     </i>
+     − 15 estão previamente selecionados. A escolha de outros valores podem ser realizadas nas telas de entradas de dados. Na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     é mostrada a tela de entrada de dados para os parâmetros do circuito de Chua. Há outras telas para escolher a condição inicial e os parâmetros do método RungeKutta-Fehlberg.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Tela para entrada de dados em que os parâmetros do circuito de Chua-Matsumoto (
+      <i>
+       α
+      </i>
+      ,
+      <i>
+       β
+      </i>
+      ,
+      <i>
+       a
+      </i>
+      e
+      <i>
+       b
+      </i>
+      ) podem ser escolhidos.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.1. Simulação computacional
+    </h2>
+    <p>
+     O método de Runge-Kutta-Fehlberg foi realizado a partir da generalização para o caso tridimensional de um algoritmo (para o caso unidimensional) apre sentado na Ref.
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] Richard L. Burden e J. Douglas Faires, Análise Numérica (CENGAGE Learning, São Paulo, 2008) 8a ed.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     (algoritmo 5.3 da p. 275). O cálculo dos expoentes de Lyapunov foi realizado com base no algoritmo apresentado na Ref.
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] A. Wolf, J.B. Swift, H.L. Swinney and J.A. Vastano, Physica D16, 285 (1985).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Ambos os algoritmos tiveram de ser adaptados ao caso do circuito de Chua-Matsumoto.
+    </p>
+    <p>
+     O exemplo de simulação apresentado aqui utiliza os valores previamente selecionados no aplicativo, isto é
+    </p>
+    <div class="row formula" id="ee47">
+     <a name="e47">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/4HVXVjDmrtVTHFzdXXpJZkS/2d08743f686e2fbedc700518a8bd0edf4e224f21.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Os parâmetros do método Runge-Kutta-Fehlberg
+     <i>
+      t
+     </i>
+     <sub>
+      max
+     </sub>
+     ,
+     <i>
+      h
+     </i>
+     <sub>
+      max
+     </sub>
+     ,
+     <i>
+      h
+     </i>
+     <sub>
+      min
+     </sub>
+     e
+     <i>
+      tol
+     </i>
+     representam, respectivamente, o tempo máximo de simulação, o passo temporal máximo, o passo temporal mínimo e a tolerância do método.
+    </p>
+    <p>
+     A tela utilizada para plotar os gráfico da projeção da trajetória no plano
+     <i>
+      xy
+     </i>
+     está mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     , para os parâmetros mostrados na
+     <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (47)
+     </a>
+     . Pode-se escolher também o plano
+     <i>
+      yz
+     </i>
+     ou
+     <i>
+      xz
+     </i>
+     . A tela utilizada para plotar os gráficos das curvas
+     <i>
+      x
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) está mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 14
+     </a>
+     . Pode-se plotar também
+     <i>
+      y
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <i>
+      z
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) em função do tempo.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Tela de plotagem das projeções da trajetória. Foi plotada a projeção da trajetória no plano
+      <i>
+       xy
+      </i>
+      , para os parâmetros mostrados na
+      <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (47)
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 14
+      </strong>
+      <br/>
+      Tela de plotagem das curvas em função de
+      <i>
+       t
+      </i>
+      . Foi plotado o gráfico da curva
+      <i>
+       x
+      </i>
+      (
+      <i>
+       t
+      </i>
+      ), para os parâmetros mostrados na
+      <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (47)
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 15
+     </a>
+     é mostrada a tela de cálculo dos expoentes de Lyapunov, a qual apresenta os valores Λ
+     <sub>
+      1
+     </sub>
+     = 0.36, Λ
+     <sub>
+      2
+     </sub>
+     = 0.00, e Λ
+     <sub>
+      3
+     </sub>
+     = −4.15, para os parâmetros mostrados na Eq. (47). A soma dos expoentes é negativa, indicando que o sistema é dissipativo. Como visto anteriormente, esses valores correspondem a uma solução caótica. Utilizando o aplicativo
+     <i>
+      MATDS
+     </i>
+     , foram obtidos os valores Λ
+     <sub>
+      1
+     </sub>
+     = 0.39, Λ
+     <sub>
+      2
+     </sub>
+     = 0.00, e Λ
+     <sub>
+      3
+     </sub>
+     = −4.12. Vê-se que esses resultados estão de acordo.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 15
+      </strong>
+      <br/>
+      Tela de cálculo dos expoentes de Lyapunov, para os parâmetros mostrados na
+      <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. 47
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os pontos de equilíbrio, para os parâmetros da
+     <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (47)
+     </a>
+     , são
+     <i>
+      P
+     </i>
+     <sub>
+      +
+     </sub>
+     = (1.48, 0, −1.48),
+     <i>
+      P
+     </i>
+     <sub>
+      0
+     </sub>
+     = (0, 0, 0) e
+     <i>
+      P
+     </i>
+     <sub>
+      −
+     </sub>
+     = (−1.48, 0, 1.48). Os autovalores de
+     <i>
+      P
+     </i>
+     <sub>
+      0
+     </sub>
+     são λ
+     <sub>
+      1
+     </sub>
+     = −1.1259 + 3.8418
+     <i>
+      i
+     </i>
+     , λ
+     <sub>
+      2
+     </sub>
+     = −1.1259 − 3.8418
+     <i>
+      i
+     </i>
+     e λ
+     <sub>
+      3
+     </sub>
+     =3.3517. Os autovalores de
+     <i>
+      P
+     </i>
+     <sub>
+      +
+     </sub>
+     e
+     <i>
+      P
+     </i>
+     <sub>
+      -
+     </sub>
+     são λ
+     <sub>
+      1
+     </sub>
+     =0.31038 + 4.30581
+     <i>
+      i
+     </i>
+     , λ
+     <sub>
+      2
+     </sub>
+     =0.31038 − 4.30581
+     <i>
+      i
+     </i>
+     e λ
+     <sub>
+      3
+     </sub>
+     = −5.9708. Nota-se que todos os pontos de equilíbrio são do tipo sela-foco e obedecem à
+     <i>
+      condição de Shilnikov
+     </i>
+     .
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     é mostrada a trajetória do atrator de rolo duplo (
+     <i>
+      double-scroll
+     </i>
+     ) para o circuito de Chua-Matsumoto com os parâmetros mostrados na
+     <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (47)
+     </a>
+     . Os resultados obtidos com o aplicativo
+     <i>
+      Circuit of Chua and Chaos
+     </i>
+     foram comparados aos obtidos com o programa
+     <i>
+      MATDS
+     </i>
+     . Os resultados são coincidentes.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 16
+      </strong>
+      <br/>
+      Atrator de rolo duplo (
+      <i>
+       double-scroll
+      </i>
+      ) para o circuito de Chua-Matsumoto com os parâmetros mostrados na
+      <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (47)
+      </a>
+      . Os resultados obtidos com o aplicativo Circuit of Chua and Chaos são comparados aos obtidos com o programa MATDS. Os resultados são coincidentes.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nas
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 17
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      18
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      19
+     </a>
+     são mostrados, respectivamente, os gráficos das curvas de
+     <i>
+      x
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      y
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )e
+     <i>
+      z
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) em função de
+     <i>
+      t
+     </i>
+     . Todos os resultados estão em concordância.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 17
+      </strong>
+      <br/>
+      Curvas de x em função de
+      <i>
+       t
+      </i>
+      obtidos com o aplicativo
+      <i>
+       Circuit of Chua and Chaos
+      </i>
+      (linhas) comparadas às curvas obtidas com o programa
+      <i>
+       MATDS
+      </i>
+      (pontos na forma de
+      <i>
+       x
+      </i>
+      ), os parâmetros mostrados na
+      <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (47)
+      </a>
+      . Os resultados são coincidentes.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f18">
+     <a name="f18">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf18" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 18
+      </strong>
+      <br/>
+      Curvas de y em função de
+      <i>
+       t
+      </i>
+      obtidos com o aplicativo
+      <i>
+       Circuit of Chua and Chaos
+      </i>
+      (linhas) comparadas às curvas obtidas com o programa
+      <i>
+       MATDS
+      </i>
+      (pontos na forma de
+      <i>
+       x
+      </i>
+      ), os parâmetros mostrados na
+      <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (47)
+      </a>
+      . Os resultados são coincidentes.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f19">
+     <a name="f19">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf19" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 19
+      </strong>
+      <br/>
+      Curvas de
+      <i>
+       z
+      </i>
+      em função de
+      <i>
+       t
+      </i>
+      obtidos com o aplicativo
+      <i>
+       Circuit of Chua and Chaos
+      </i>
+      (linhas) comparadas às curvas obtidas com o programa
+      <i>
+       MATDS
+      </i>
+      (pontos na forma de
+      <i>
+       x
+      </i>
+      ), os parâmetros mostrados na
+      <a class="open-asset-modal" data-target="#ModalSchemee47" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Eq. (47)
+      </a>
+      . Os resultados são coincidentes.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Conclusão
+    </h1>
+    <p>
+     Realizar simulações com o circuito de Chua-Matsumoto é uma forma eficiente de tornar mais atrativo o estudo de sistemas dinâmicos (uma disciplina que em geral é ofertada tanto para os cursos de engenharia quanto para os cursos de física e matemática), auxiliando no aprendizado de conceitos relacionados à disciplina. O uso da plataforma
+     <i>
+      Android
+     </i>
+     possui algumas vantagens em termos da realização de simulações com relação às outras tecnologias, tais como: o número de usuários ativos do
+     <i>
+      Android
+     </i>
+     ultrapassou a quantidade de um bilhão de usuários em 2014;
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        ver
+        <a href="http://www.techspot.com/news/" target="_blank">
+         http://www.techspot.com/news/
+        </a>
+       </span>
+      </span>
+     </span>
+     o custo dos dispositivos é menor; os dispositivos possuem tela sensível ao toque; os dispositivos apresentam maior comodidade de manuseio (ocupam pouco espaço, não apresentam superaquecimento, apresentam um menor consumo de energia elétrica).
+    </p>
+    <p>
+     O aplicativo
+     <i>
+      Circuit of Chua and Chaos
+     </i>
+     foi desenvolvido para o estudo de um sistema que apresenta um certo grau de complexidade, uma vez que as soluções podem ser caóticas. O aplicativo mostrouse eficiente na obtenção de expoentes de Lyapunov; projeções das trajetórias nos planos
+     <i>
+      xy
+     </i>
+     ,
+     <i>
+      xz
+     </i>
+     e
+     <i>
+      yz
+     </i>
+     ; e gráficos de
+     <i>
+      x
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ),
+     <i>
+      y
+     </i>
+     (
+     <i>
+      t
+     </i>
+     )e
+     <i>
+      z
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ). Os resultados do aplicativo foram exportados para aquivos
+     <i>
+      txt
+     </i>
+     e comparados com os resultados obtidos com o programa
+     <i>
+      MATDS
+     </i>
+     , utilizado por muitos dos pesquisadores que investigam o circuito de Chua-Matsumoto, inclusive o próprio Leon Chua, que dá nome ao circuito, como pode ser visto na Ref.
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] M. Itoh and L.O. Chua, Int. J. Bif. and Chaos 18,3183 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . A partir da compara¸ cão, verificou-se que os resultados obtidos com o aplicativo coadunam com os obtidos com o
+     <i>
+      MATDS
+     </i>
+     .
+    </p>
+    <p>
+     Pretende-se desenvolver outros programas de simulação para plataforma
+     <i>
+      Android
+     </i>
+     , de forma a cobrir o conteúdo da disciplina de sistemas dinâmicos que normalmente é ministrado em um curso regular de graduação.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        Luiz Henrique Alves Monteiro,
+        <i>
+         Sistemas Dinâmicos
+        </i>
+        (Ed. Livraria da Física, São Paulo, 2011), 3a ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        Stephen Lynch,
+        <i>
+         Dynamical Systems with Applications using MATLAB(r)
+        </i>
+        (Birkhäuser, Basileia, 2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        Ahmed G. Radwan and Mohammed E. Fouda ,
+        <i>
+         On the Mathematical Modeling of Memristor, Memcapacitor, and Meminductor
+        </i>
+        (Springer International Publishing, Suiça 2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        T. Matsumoto, IEEE Trans. on Circ. &amp; Syst.
+        <b>
+         31,
+        </b>
+        1055 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        T. Matsumoto, L.O. Chua and M. Komuro, IEEE Trans. on Circ. &amp; Syst.
+        <b>
+         32,
+        </b>
+        797 (1985).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        T. Matsumoto, L.O. Chua and M. Komuro, Journal Circuit Theory and Appl.
+        <b>
+         14,
+        </b>
+        117 (1986).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        M.P. Kennedy, Frequenz
+        <b>
+         46,
+        </b>
+        66 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        J.M. Cruz and L.O. Chua, IEEE Trans. on Circ. &amp; Syst.
+        <b>
+         46,
+        </b>
+        985 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        M. Itoh and L.O. Chua, Int. J. Bif. and Chaos
+        <b>
+         18,
+        </b>
+        3183 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        B. Muthuswamy, Int. J. Bif. and Chaos
+        <b>
+         453,
+        </b>
+        1335 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        B. Muthuswamy and L.O. Chua, Int. J. Bif. and Chaos
+        <b>
+         20,
+        </b>
+        1567 (2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        L.O. Chua, IEEE Trans. on Circ. Theory
+        <b>
+         5,
+        </b>
+        507 (1971).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        D.B. Strukov, G.S. Snider, D.R. Stewart and S.R. Williams, Nature
+        <b>
+         453,
+        </b>
+        80 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        A. Buscarino, L. Fortuna, M. Frasca and L.V. Gambuzza, Chaos: Interdiscip. J. Nonlinear Sci.
+        <b>
+         22,
+        </b>
+        023136 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        L.O. Chua, M. Komuro and T. Matsumoto, IEEE Trans. on Circ. and Systems
+        <b>
+         33,
+        </b>
+        1072 (1986).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        L.P. Shil'nikov, Dokl. Akad. Nauk SSSR
+        <b>
+         160,
+        </b>
+        558 (1965).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        Richard L. Burden e J. Douglas Faires,
+        <i>
+         Análise Numérica
+        </i>
+        (CENGAGE Learning, São Paulo, 2008) 8a ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        A. Wolf, J.B. Swift, H.L. Swinney and J.A. Vastano, Physica D
+        <b>
+         16,
+        </b>
+        285 (1985).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        ver
+        <a href="http://www.math.rsu.ru/mexmat/kvm/matds/" target="_blank">
+         http://www.math.rsu.ru/mexmat/kvm/matds/
+        </a>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        ver
+        <a href="http://www.techspot.com/news/" target="_blank">
+         http://www.techspot.com/news/
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        27 Jul 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        28 Nov 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        <img alt="Creative Common - by 4.0" src="https://licensebuttons.net/l/by/4.0/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

@@ -1,0 +1,7130 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 40 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2018
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2018-0038" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2018-0038
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2018-0038">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Uma abordagem pedagógica no ensino da computação quântica com um processador quântico de 5-qbits
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  A pedagogical proposal for teaching quantum computing using a 5-qubit processor
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Wilson R.M. Rabelo
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Pará, Instituto de Tecnologia, Belém, PA, Brasil
+    <div class="corresp">
+     Endereço de correspondência:
+     <a href="mailto:rabelo@ufpa.br">
+      rabelo@ufpa.br
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-9698-3907">
+     http://orcid.org/0000-0002-9698-3907
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Maria Lúcia M. Costa
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Pará, Faculdade de Física, Belém, PA, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Nosso trabalho consistiu em analisar um processador quântico real, chamado
+     <i>
+      IBM Q experience
+     </i>
+     (IBM-Q), como um recurso pedagógico na aplicação de conceitos da computação quântica. Este processador de 5-qbits pode ser acessado remotamente pela internet através de uma plataforma desenvolvida pela empresa de tecnologia IBM. Nos concentramos na caracterização do IBM-Q referente a vários aspectos práticos e metodológicos. Avaliamos quais seriam as principais condições para o acesso a esse processador quântico e, quanto a sua utilização, avaliamos a sua interface com respeito a simplicidade e execução. Em nossa análise, os resultados de projetos executados no IBM-Q estão de acordo com as previsões teóricas. Nossos resultados também demonstram a eficácia do IBM-Q como um recurso pedagógico, voltado para tarefas como montagem e execução de blocos simples de circuitos quânticos.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     IBM Q; Quantum Experience; Teleporte quântico; Computação quântica
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     Our study consisted in analyzing a real quantum processor, called IBM Q experience (IBM-Q), as a pedagogical resource for the application of quantum computing concepts. This 5-qubits processor can be accessed remotely by internet using a platform developed by IBM technology company. We focused on characterizing several practical and methodological aspects of the IBM-Q. We have evaluated the main conditions for accessing this quantum processor and the interface quality regarding to simplicity and execution. In our analysis, the results of the computational projects are in agreement with the theoretical predictions. The overall results have also demonstrated the IBM-Q is an effective pedagogical resource, focused on tasks such as and assembly execution of simple blocks of quantum circuits.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     IBM Q; Quantum Experience; Quantum Teleport; Quantum Computation
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Atualmente a computação quântica é tema central de pesquisa em ciência básica e tecnologia de fronteira. Nas duas últimas décadas, o interesse pela área vinha da motivação de que os algoritmos quânticos fornecem ganhos computacionais consideráveis, em relação aos análogos clássicos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] P. W. Shor, in Proceedings of 35th Annual Symposium of Foundations of Computer Science (IEEE Press, Los Alamitos, 1994).
+       </span>
+      </span>
+     </span>
+     ]. Como resultado, nos últimos anos experimentamos avanços tecnológicos que nos permitem começar a contornar alguns problemas práticos para a fabricação escalável dos computadores quânticos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] https://www.dwavesys.com/our-company/meet-d-wave, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.dwavesys.com/our-company/meet-d-wave" target="_blank">
+        https://www.dwavesys.com/our-company/mee...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+        https://www.research.ibm.com/ibm-q/...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] P. Kaye, R. Laflamme e M. Mosca, An Introduction to Quantum Computing. (Oxford University Press, New York, 2007), 1st edition, 288 p.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] J. M. Gambetta, M. J. Chow and M. Steffen, npj Quantum Information 3, 2 (2017).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Um dos primeiros resultados desse interesse pela computação quântica foi o surgimento dos simuladores quânticos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] The Quantiki, List of QC simulators, https://www.quantiki.org/wiki/list-qc-simulators, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.quantiki.org/wiki/list-qc-simulators" target="_blank">
+        https://www.quantiki.org/wiki/list-qc-si...
+       </a>
+      </span>
+     </span>
+     , ou seja, circuitos quânticos simulados em uma arquitetura clássica. A proposta central dos simuladores é proporcionar uma ferramenta de teste para circuitos e algoritmos quânticos, seja voltado para pesquisa e/ou para práticas pedagógicas. Independentemente do viés adotado para o simulador, os mesmos auxiliam a compreender conceitos e definições da computação quântica. Entre alguns exemplos podemos citar: o
+     <i>
+      LIQUi
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] The Liqui, The Quantum Architectures and Computation Group (QuArC) at Microsoft Research. https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/" target="_blank">
+        https://www.microsoft.com/en-us/research...
+       </a>
+      </span>
+     </span>
+     , voltado para pesquisa e disponibilizado pela Microsoft; o
+     <i>
+      Quantum Computing Playground
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] http://www.quantumplayground.net/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="http://www.quantumplayground.net/" target="_blank">
+        http://www.quantumplayground.net/...
+       </a>
+      </span>
+     </span>
+     , voltado para pesquisa e práticas pedagógicas, e o
+     <i>
+      Quirk
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] http://algassert.com/quirk, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="http://algassert.com/quirk" target="_blank">
+        http://algassert.com/quirk...
+       </a>
+      </span>
+     </span>
+     , um simulador com uma grande variedade de portas quânticas disponíveis e fácil implementação dos circuitos destinados a projetos de pesquisa ou pedagógicos.
+    </p>
+    <p>
+     Esse cenário começou a mudar com a chegada dos primeiros computadores quânticos: D-Wave One
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] https://www.dwavesys.com/our-company/meet-d-wave, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.dwavesys.com/our-company/meet-d-wave" target="_blank">
+        https://www.dwavesys.com/our-company/mee...
+       </a>
+      </span>
+     </span>
+     , em 2011, da empresa de tecnologia D-Wave, e do IBM-Q
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+        https://www.research.ibm.com/ibm-q/...
+       </a>
+      </span>
+     </span>
+     , em 2016, da empresa IBM. Abordando mais especificamente o computador da IBM, o IBM-Q é um processador quântico com 5 q-bits que pode ser acessado remotamente via internet. Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , temos a plataforma de acesso do IBM-Q.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Representação computacional de um circuito na computação quântica. Nessa figura também temos a plataforma de acesso do computador quântico, chamado de
+      <i>
+       IBM-Q
+      </i>
+      <span class="ref">
+       <strong class="xref xrefblue">
+        [4]
+       </strong>
+       <span class="refCtt closed">
+        <span>
+         [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+        </span>
+        <br/>
+        <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+         https://www.research.ibm.com/ibm-q/...
+        </a>
+       </span>
+      </span>
+      , e o mesmo pode ser acessado remotamente pela internet.
+      <br/>
+     </div>
+    </div>
+    <p>
+     No campo pedagógico propostas didáticas usando o IBM-Q vem sendo analisadas e discutidas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] A. C. Santos, Revista Brasileira de Ensino de Física 39, e1301 (2017).
+       </span>
+      </span>
+     </span>
+     e, dentro deste contexto, o nosso estudo consiste em investigar o IBM-Q como recurso de ensino aprendizagem de conceitos básicos da computação quântica. Este trabalho está dividido da seguinte forma: na seção 2, comentamos brevemente as portas quânticas básicas disponíveis no IBM-Q. Na seção 3, abordamos o computador IBM-Q e sua plataforma de acesso. Na seção 4, analisamos possíveis aplicações, fornecendo um conjunto de circuitos quânticos a serem implementados em sala de aula via IBM-Q e finalizamos com as conclusões na seção 5.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Suporte teórico
+    </h1>
+    <p>
+     Nesta seção, descreveremos brevemente os conceitos de bit quântico (q-bits), portas lógicas e circuitos quânticos. O leitor interessado em mais detalhes sobre cada tópico pode consultar as seguintes referências: [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] P. Kaye, R. Laflamme e M. Mosca, An Introduction to Quantum Computing. (Oxford University Press, New York, 2007), 1st edition, 288 p.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] A. Barenco, C. H. Bennett, R. Cleve, D. P. DiVincenzo, N. Margolus, P. Shor, T. Sleator e J. A. Smolin, Phys. Rev. A 52, 3457 (1995).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] G. E. M. Cabral, A. F. Lima and B. Lula Jr., Revista Brasileira de Ensino de Física 26, 109 (2004).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Um conceito importante na computação quântica é o q-bit, um bit de informação codificado nos estados quânticos de um sistema de 2-níveis que, matematicamente, é descrito por um vetor bidimensional no espaço Hilbert complexo de dimensão finita. Para um dado sistema quântico, escolhemos uma base vetorial padrão que são dois estados distinguíveis:
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , também conhecida como base padrão da computação quântica. Portanto, um q-bit pode ser escrito como uma superposição de estados da base computacional e formam uma base ortonormal nesse espaço vetorial. Matematicamente, podemos escrever:
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mi>
+        ψ
+       </mi>
+       <mo>
+        〉
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mi>
+        α
+       </mi>
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+       <mo>
+        +
+       </mo>
+       <mi>
+        β
+       </mi>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , onde
+     <math>
+      <mi>
+       α
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       β
+      </mi>
+     </math>
+     são as amplitudes de probabilidades dos respectivos estados da base, com
+     <math>
+      <mrow>
+       <msup>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mi>
+          α
+         </mi>
+         <mo>
+          |
+         </mo>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        +
+       </mo>
+       <msup>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mi>
+          β
+         </mi>
+         <mo>
+          |
+         </mo>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     . Também podemos mapear essas amplitudes de probabilidades
+     <math>
+      <mi>
+       α
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       β
+      </mi>
+     </math>
+     em função dos ângulos
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     , como:
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mi>
+         ψ
+        </mi>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo form="prefix">
+         cos
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          /
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         |
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        +
+       </mo>
+       <mo form="prefix">
+        sin
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         θ
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <msup>
+        <mi>
+         e
+        </mi>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mi>
+          φ
+         </mi>
+        </mrow>
+       </msup>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Com essa descrição do estado do q-bit podemos agora obter uma visualização de todos os estados possíveis (em função de
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       φ
+      </mi>
+     </math>
+     ) sobre a superfície de uma esfera com raio unitário. Essa descrição geométrica do q-bit é chamada de representação de esfera de Bloch, onde um ponto sobre a esfera é dado pela representação acima e, os polos são as bases computacionais,
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , veja a
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Esfera de Bloch: uma representação geométrica dos estados de 1-qbit. Os polos são os autoestados computacionais,
+      <math>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </math>
+      <span class="ref">
+       <strong class="xref xrefblue">
+        [1]
+       </strong>
+       <span class="refCtt closed">
+        <span>
+         [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+        </span>
+       </span>
+      </span>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     No modelo de circuito padrão da computação quântica um conjunto de
+     <math>
+      <mi>
+       n
+      </mi>
+     </math>
+     q-bits, com uma evolução completamente controlada, é dado por uma sequência de operadores unitários atuando em um, dois ou mais q-bits. Esses operadores unitários são chamados de portas lógicas quânticas, em analogia aos computadores digitais. Em termos de simbologia, a evolução temporal dos q-bits são representados pelas linhas horizontais da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     e os estágios desta evolução, contendo uma série de portas lógicas atuando nos q-bits. Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , temos um diagrama de modelo computacional padrão com 5-qbits, todos no estado inicial
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     e no início de cada linha horizontal. Ao lado das linhas, a direita, as portas quânticas disponíveis para elaboração do circuito. Para compor esse exemplo utilizamos as portas H, T e S (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ). A última linha horizontal da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     é reservada aos resultados das medidas realizadas sobre os q-bits.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Conjunto de portas quânticas disponíveis no IBM-Q, com simbologia, representação matricial e atuação na base computacional padrão da computação quântica.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para mais detalhes sobre a abordagem matemática na descrição das portas e circuitos quânticos, consulte as referências [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] A. Barenco, C. H. Bennett, R. Cleve, D. P. DiVincenzo, N. Margolus, P. Shor, T. Sleator e J. A. Smolin, Phys. Rev. A 52, 3457 (1995).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] G. E. M. Cabral, A. F. Lima and B. Lula Jr., Revista Brasileira de Ensino de Física 26, 109 (2004).
+       </span>
+      </span>
+     </span>
+     ]. Na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , temos a representação das principais portas quânticas da literatura e também disponíveis no IBM-Q [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+        https://www.research.ibm.com/ibm-q/...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] A. C. Santos, Revista Brasileira de Ensino de Física 39, e1301 (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] A. Barenco, C. H. Bennett, R. Cleve, D. P. DiVincenzo, N. Margolus, P. Shor, T. Sleator e J. A. Smolin, Phys. Rev. A 52, 3457 (1995).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] G. E. M. Cabral, A. F. Lima and B. Lula Jr., Revista Brasileira de Ensino de Física 26, 109 (2004).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     3. O computador IBM-Q e sua plataforma de acesso
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , temos a plataforma de acesso do IBM-Q, chamada
+     <i>
+      IBM Q Experience
+     </i>
+     . Após a montagem de um dado circuito de interesse, usando as portas quânticas disponíveis da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , a plataforma permite duas possibilidades: simular os circuitos quânticos em computadores convencionais e/ou realizar o processamento em um hardware quântico universal de 5-qbits supercondutores [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+        https://www.research.ibm.com/ibm-q/...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] J. M. Gambetta, M. J. Chow and M. Steffen, npj Quantum Information 3, 2 (2017).
+       </span>
+      </span>
+     </span>
+     ]. Portanto, um experimento no IBM-Q consiste: (a) especificar o circuito, usando a interface gráfica ou um editor de texto disponível pela plataforma; (b) executar o circuito de interesse no simulador e/ou dispositivo real; (c) Realizar as medidas sobre os q-bits.
+    </p>
+    <p>
+     Vamos analisar com mais detalhes a execução do circuito e a medição dos q-bits no processador. A execução no dispositivo real é composta por
+     <math>
+      <mi>
+       N
+      </mi>
+     </math>
+     rodadas, chamadas de
+     <i>
+      shots
+     </i>
+     . Para cada
+     <i>
+      shots
+     </i>
+     , o processador é primeiramente inicializado, e assim, instruído para executar novamente o circuito quântico. Esse processo é feito por um controlador interno, não disponível para o usuário. Também para cada
+     <i>
+      shots
+     </i>
+     temos o processo de "medição", isto é, a leitura do estado final dos q-bits do dispositivo, que fornece dois valores possíveis 0's ou 1's. Em resumo, cada
+     <i>
+      shots
+     </i>
+     fornece uma string de 5 bits que pode ser ou não diferente a cada inicialização e, após
+     <math>
+      <mi>
+       N
+      </mi>
+     </math>
+     <i>
+      shots
+     </i>
+     , o dispositivo gera a contagem do número de vezes que cada string de bits foi gerada no processo. O resultado desta contagem produz a resposta da execução do circuito quântico. A seguir, analisaremos a plataforma IBM-Q com respeito a sua instalação, utilização e suas características e análise de dados.
+    </p>
+    <ol type="a">
+     <li>
+      <p>
+       <b>
+        Quanto a instalação:
+       </b>
+       O usuário não precisa instalar nenhum software, apenas possuir um dispositivo móvel ou computador conectado a internet. Através de um cadastro simples o usuário passa a ter acesso gratuito ao sistema. Esse acesso a plataforma
+       <i>
+        IBM Q Experience
+       </i>
+       é realizado remotamente e consiste de uma interface gráfica do usuário ou GUI(
+       <i>
+        Graphical User Interface
+       </i>
+       ), veja a
+       <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 1
+       </a>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       <b>
+        Quanto a utilização e características:
+       </b>
+       A GUI do IBM-Q é intuitiva e utiliza um sistema de
+       <i>
+        "drag and drop"
+       </i>
+       para a montagem dos circuitos, ou seja, basta o usuário arrastar a porta lógica de interesse para uma das linhas horizontais para a montagem do circuito quântico e a evolução temporal do circuito é da esquerda para direita. Cada linha horizontal representa um q-bit com rótulo
+       <math>
+        <mrow>
+         <mi>
+          q
+         </mi>
+         <mo>
+          [
+         </mo>
+         <mi>
+          i
+         </mi>
+         <mo>
+          ]
+         </mo>
+        </mrow>
+       </math>
+       , com
+       <math>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mo>
+          ...
+         </mo>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          4
+         </mn>
+        </mrow>
+       </math>
+       . A última linha com rótulo
+       <math>
+        <mi>
+         c
+        </mi>
+       </math>
+       refere-se aos resultados das leituras de cada q-bit, ou seja, um registrador de bit clássico, veja as
+       <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Figs. 1
+       </a>
+       e
+       <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        4
+       </a>
+       .
+      </p>
+      <p>
+      </p>
+      <div class="row fig" id="f4">
+       <a name="f4">
+       </a>
+       <div class="col-md-4 col-sm-4">
+        <a data-target="#ModalFigf4" data-toggle="modal" href="">
+         <div class="thumbOff">
+          <div class="zoom">
+           <span class="sci-ico-zoom">
+           </span>
+          </div>
+         </div>
+        </a>
+       </div>
+       <div class="col-md-8 col-sm-8">
+        <strong>
+         Figura 4
+        </strong>
+        <br/>
+        Dispositivo fabricado pela IBM, com 5-qbits supercondutores (
+        <math>
+         <mrow>
+          <msub>
+           <mi>
+            Q
+           </mi>
+           <mn>
+            0
+           </mn>
+          </msub>
+          <mo>
+           ,
+          </mo>
+          <mo>
+           ...
+          </mo>
+          <mo>
+           ,
+          </mo>
+          <msub>
+           <mi>
+            Q
+           </mi>
+           <mn>
+            4
+           </mn>
+          </msub>
+         </mrow>
+        </math>
+        ),
+        <span class="ref">
+         <strong class="xref xrefblue">
+          [4]
+         </strong>
+         <span class="refCtt closed">
+          <span>
+           [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+          </span>
+          <br/>
+          <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+           https://www.research.ibm.com/ibm-q/...
+          </a>
+         </span>
+        </span>
+        <br/>
+       </div>
+      </div>
+      <p>
+       O processador IBM-Q pode executar as principais portas quânticas de 1-qbit e 2-qbits, isto é:
+       <math>
+        <mi>
+         X
+        </mi>
+       </math>
+       ,
+       <math>
+        <mi>
+         Y
+        </mi>
+       </math>
+       ,
+       <math>
+        <mi>
+         Z
+        </mi>
+       </math>
+       ,
+       <math>
+        <mi>
+         H
+        </mi>
+       </math>
+       ,
+       <math>
+        <mi>
+         S
+        </mi>
+       </math>
+       ,
+       <math>
+        <msup>
+         <mi>
+          S
+         </mi>
+         <mo>
+          †
+         </mo>
+        </msup>
+       </math>
+       ,
+       <math>
+        <mi>
+         T
+        </mi>
+       </math>
+       e
+       <math>
+        <msup>
+         <mi>
+          T
+         </mi>
+         <mo>
+          †
+         </mo>
+        </msup>
+       </math>
+       e
+       <math>
+        <mrow>
+         <mi>
+          C
+         </mi>
+         <mi>
+          N
+         </mi>
+         <mi>
+          O
+         </mi>
+         <mi>
+          T
+         </mi>
+        </mrow>
+       </math>
+       , veja as
+       <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Figs. 1
+       </a>
+       e
+       <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        3
+       </a>
+       . Na parte superior da
+       <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 1
+       </a>
+       , a plataforma
+       <i>
+        IBM Q Experience
+       </i>
+       ainda permite salvar projetos e seus resultados na conta criada pelo usuário. O modelo (hardware) utilizado neste artigo foi o
+       <i>
+        ibmqx4
+       </i>
+       <span class="ref">
+        <strong class="xref xrefblue">
+         [4]
+        </strong>
+        <span class="refCtt closed">
+         <span>
+          [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+         </span>
+         <br/>
+         <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+          https://www.research.ibm.com/ibm-q/...
+         </a>
+        </span>
+       </span>
+       .
+      </p>
+      <p>
+       Como pode ser visto na
+       <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 1
+       </a>
+       , na parte superior, nos ícones (
+       <i>
+        run/simulate
+       </i>
+       ), a plataforma permite duas formas de execução dos circuitos. O usuário pode simular um dado circuito quântico nos servidores da IBM e/ou usar um dispositivo real (
+       <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 5
+       </a>
+       ) para executar o seu circuito de interesse. Para o caso simulado, o limite são 20-qbits e, para o dispositivo real, existe a limitação de 5-qbits. Todas as portas quânticas da tabela da
+       <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 3
+       </a>
+       podem ser implementadas pelo IBM-Q. É conhecido na literatura que esse conjunto de portas quânticas de 1-qbit mais a porta lógica CNOT garantem uma computação quântica universal [
+       <span class="ref">
+        <sup class="xref xrefblue">
+         1
+        </sup>
+        <span class="refCtt closed">
+         <span>
+          [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+         </span>
+        </span>
+       </span>
+       ,
+       <span class="ref">
+        <sup class="xref xrefblue">
+         12
+        </sup>
+        <span class="refCtt closed">
+         <span>
+          [12] A. Barenco, C. H. Bennett, R. Cleve, D. P. DiVincenzo, N. Margolus, P. Shor, T. Sleator e J. A. Smolin, Phys. Rev. A 52, 3457 (1995).
+         </span>
+        </span>
+       </span>
+       ].
+      </p>
+      <p>
+      </p>
+      <div class="row fig" id="f5">
+       <a name="f5">
+       </a>
+       <div class="col-md-4 col-sm-4">
+        <a data-target="#ModalFigf5" data-toggle="modal" href="">
+         <div class="thumbOff">
+          <div class="zoom">
+           <span class="sci-ico-zoom">
+           </span>
+          </div>
+         </div>
+        </a>
+       </div>
+       <div class="col-md-8 col-sm-8">
+        <strong>
+         Figura 5
+        </strong>
+        <br/>
+        Resultados da plataforma
+        <i>
+         IBM Q Experience
+        </i>
+        . (a) Circuito quântico executado. (b) código em linguagem de alto nível do circuito. (c) Gráfico da frequência relativa (histograma) após as medidas sobre o q-bit
+        <math>
+         <mrow>
+          <mi>
+           q
+          </mi>
+          <mo>
+           [
+          </mo>
+          <mn>
+           1
+          </mn>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+        </math>
+        . Note que, com
+        <math>
+         <mrow>
+          <mi>
+           N
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mn>
+           1024
+          </mn>
+         </mrow>
+        </math>
+        , o conjunto de resultados de todas as medidas fornece uma frequência relativa não-nula de apenas duas strings de bits, [00000] (erro) e [00010](correto). No caso de múltiplas medidas sobre os q-bits, no eixo horizontal temos as possíveis strings de bits de saída. Por espaço, apenas algumas strings de bits são colocadas no gráfico, com um total de
+        <math>
+         <msup>
+          <mn>
+           2
+          </mn>
+          <mi>
+           n
+          </mi>
+         </msup>
+        </math>
+        strings, com n=5 q-bits.
+        <br/>
+       </div>
+      </div>
+     </li>
+     <li>
+      <p>
+       <b>
+        Quanto a análise de dados:
+       </b>
+       Sobre os resultados (
+       <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 4-(c)
+       </a>
+       ), o IBM-Q disponibiliza um gráfico de barras (histograma) que representa a frequência relativa dos resultados das medidas realizadas sobre os 5-qbits, a cada inicialização do sistema, isto é, após
+       <math>
+        <mi>
+         N
+        </mi>
+       </math>
+       <i>
+        shots
+       </i>
+       , o dispositivo gera, após as leituras dos q-bits, a contagem do número de vezes que cada string de bits clássicos foram geradas no processo (
+       <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 4-(c)
+       </a>
+       ). Matematicamente, podemos definir como
+       <math>
+        <mrow>
+         <msub>
+          <mi>
+           y
+          </mi>
+          <mi>
+           n
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mn>
+           0
+          </mn>
+          <mo>
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+       a observação (ou não) de um dado resultado em particular de uma medida sobre um q-bit, com
+       <math>
+        <mrow>
+         <mi>
+          n
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mo>
+          ,
+         </mo>
+         <mo>
+          ...
+         </mo>
+         <mo>
+          ,
+         </mo>
+         <mi>
+          N
+         </mi>
+        </mrow>
+       </math>
+       . A frequência relativa
+       <math>
+        <msub>
+         <mi>
+          f
+         </mi>
+         <mi>
+          r
+         </mi>
+        </msub>
+       </math>
+       é dada por:
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="eeq1">
+       <a name="eq1">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <span class="label">
+          (1)
+         </span>
+         <math display="block" id="m1">
+          <mrow>
+           <msub>
+            <mi>
+             f
+            </mi>
+            <mi>
+             r
+            </mi>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mn>
+             1
+            </mn>
+            <mi>
+             N
+            </mi>
+           </mfrac>
+           <munderover>
+            <mo>
+             ∑
+            </mo>
+            <mrow>
+             <mi>
+              n
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+            <mi>
+             N
+            </mi>
+           </munderover>
+           <msub>
+            <mi>
+             y
+            </mi>
+            <mi>
+             n
+            </mi>
+           </msub>
+           <mspace width="3.33333pt">
+           </mspace>
+           <mspace width="3.33333pt">
+           </mspace>
+           <mo>
+            .
+           </mo>
+          </mrow>
+         </math>
+        </div>
+       </div>
+      </div>
+     </li>
+    </ol>
+    <p>
+     Assumindo que as variáveis
+     <math>
+      <msub>
+       <mi>
+        y
+       </mi>
+       <mi>
+        n
+       </mi>
+      </msub>
+     </math>
+     são aleatórias e distribuídas uniformemente, o erro padrão
+     <math>
+      <msub>
+       <mi>
+        E
+       </mi>
+       <mrow>
+        <mi>
+         e
+        </mi>
+        <mi>
+         r
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     do valor
+     <math>
+      <msub>
+       <mi>
+        f
+       </mi>
+       <mi>
+        r
+       </mi>
+      </msub>
+     </math>
+     é dado por
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mrow>
+         <mi>
+          e
+         </mi>
+         <mi>
+          r
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        /
+       </mo>
+       <msqrt>
+        <mi>
+         N
+        </mi>
+       </msqrt>
+      </mrow>
+     </math>
+     . O IBM-Q trabalha com
+     <math>
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        4096
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mn>
+       8192
+      </mn>
+     </math>
+     <i>
+      shots
+     </i>
+     . Neste artigo, todos os circuitos quânticos rodaram com
+     <math>
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+      </mrow>
+     </math>
+     e, se uma única resposta é esperada, o resultado correto do cálculo é aquele que fornece a taxa de frequência relativa mais elevada, seja para um conjunto de estados, ou para um único estado quântico.
+    </p>
+    <p>
+     Como exemplo, na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     temos a realização de um circuito quântico simples contendo uma porta NOT (porta
+     <math>
+      <mi>
+       X
+      </mi>
+     </math>
+     ), seguida de quatro portas identidades no q-bit de rótulo
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     . O resultado da execução da porta X sobre o q-bit é a seguinte transformação:
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        00000
+       </mn>
+       <mo>
+        〉
+       </mo>
+       <mo>
+        →
+       </mo>
+       <mo>
+        |
+       </mo>
+       <mn>
+        00010
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     As quatro portas identidades são usadas neste circuito como teste, para verificar os níveis de ruído, isto é, como um dado conjunto de operações (portas lógicas) alteram os resultados. Para este exemplo, temos:
+     <math>
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+      </mrow>
+     </math>
+     , e a frequência relativa de acertos e erros são, respectivamente:
+     <math>
+      <mrow>
+       <msubsup>
+        <mi>
+         f
+        </mi>
+        <mi>
+         r
+        </mi>
+        <mrow>
+         <mi>
+          a
+         </mi>
+         <mi>
+          c
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mi>
+          r
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mi>
+          o
+         </mi>
+         <mi>
+          s
+         </mi>
+        </mrow>
+       </msubsup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        956
+       </mn>
+       <mo>
+        /
+       </mo>
+       <mn>
+        1024
+       </mn>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        934
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msubsup>
+        <mi>
+         f
+        </mi>
+        <mi>
+         r
+        </mi>
+        <mrow>
+         <mi>
+          e
+         </mi>
+         <mi>
+          r
+         </mi>
+         <mi>
+          r
+         </mi>
+         <mi>
+          o
+         </mi>
+         <mi>
+          s
+         </mi>
+        </mrow>
+       </msubsup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        68
+       </mn>
+       <mo>
+        /
+       </mo>
+       <mn>
+        1024
+       </mn>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        066
+       </mn>
+      </mrow>
+     </math>
+     . O erro padrão é dado por:
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mrow>
+         <mi>
+          e
+         </mi>
+         <mi>
+          r
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        /
+       </mo>
+       <msqrt>
+        <mn>
+         1024
+        </mn>
+       </msqrt>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        03
+       </mn>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     Uma análise complementar do IBM-Q, com respeito aos dados fornecidos pelo dispositivo, é com relação aos erros devido as operações quânticas realizadas nos q-bits. Para essa finalidade, rodamos o circuito com número de portas identidades variando no circuito (1 até 10 portas identidades, na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     apenas quatro portas aparecem no circuito) e analisamos como a frequência relativa de acertos se comporta neste cenário. Para essa questão temos a
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , com uma série de resultados referente ao número de portas Id e as frequências relativas. Como podemos observar pelo gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     , que a frequência relativa de acertos não sofre alteração significativa com o aumento das portas Id. A frequência relativa média de acertos,
+     <math>
+      <mrow>
+       <mover>
+        <msub>
+         <mi>
+          f
+         </mi>
+         <mi>
+          r
+         </mi>
+        </msub>
+        <mo>
+         ¯
+        </mo>
+       </mover>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        923
+       </mn>
+      </mrow>
+     </math>
+     e com erro padrão de
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mrow>
+         <mi>
+          e
+         </mi>
+         <mi>
+          r
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        03
+       </mn>
+      </mrow>
+     </math>
+     . Neste trabalho, assumindo que as medidas sobre os q-bits são aleatórias e identicamente distribuídas, o erro padrão
+     <math>
+      <msub>
+       <mi>
+        E
+       </mi>
+       <mrow>
+        <mi>
+         e
+        </mi>
+        <mi>
+         r
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é adotado para os demais circuitos.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Gráfico da frequência relativa de acertos com relação ao aumento do número de portas identidades (Id) no circuito quântico. A média da frequência relativa de acertos:
+      <math>
+       <mrow>
+        <mover>
+         <msub>
+          <mi>
+           f
+          </mi>
+          <mi>
+           r
+          </mi>
+         </msub>
+         <mo>
+          ¯
+         </mo>
+        </mover>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         923
+        </mn>
+       </mrow>
+      </math>
+      , com desvio padrão da série
+      <math>
+       <mrow>
+        <mi>
+         σ
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         010
+        </mn>
+       </mrow>
+      </math>
+      . As barras de erro no gráfico são:
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          E
+         </mi>
+         <mrow>
+          <mi>
+           e
+          </mi>
+          <mi>
+           r
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         03
+        </mn>
+       </mrow>
+      </math>
+      (erro padrão).
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Frequência relativa com relação ao acréscimo do número de portas identidades (portas Id) no circuito da
+      <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig. 4
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Aplicações
+    </h1>
+    <p>
+     Nos cursos introdutórios de computação quântica, das ciências básicas ou das engenharias, a prática padrão é que o conteúdo seja abordado sem qualquer vínculo com o laboratório. Desta forma, a computação quântica é lecionada basicamente através de aulas teóricas, com um eixo central na resolução de problemas. Agora, com a disponibilidade de acesso pela internet, a pequenos processadores quânticos reais, os mesmos tornam-se imprescindíveis como recurso metodológico. A seguir, demostraremos uma proposta que consiste em um conjunto de "experimentos" (circuitos-exemplos) para serem trabalhados nas aulas, com o suporte de um laboratório de informática com acesso a internet. Nas próximas seções, trabalharemos com circuitos que possuem: portas quânticas de 1-qbit, portas de 2-qbits, e finalizando com o estudo do algoritmo de teleporte de estados quânticos, utilizando os simuladores (servidores da IBM) e o processador IBM-Q.
+    </p>
+    <h2>
+     4.1. Circuito 1: Porta X
+    </h2>
+    <p>
+     Por razões históricas, a porta
+     <math>
+      <mi>
+       X
+      </mi>
+     </math>
+     ficou com a notação do NÃO quântico (atuação da porta lógica na base computacional e sua representação matricial, veja a
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ). Usando a plataforma IBM-Q, começamos com um circuito simples, uma porta X seguida de uma medida sobre o q-bit
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Circuito 1: Porta X de 1-qbit e uma medida sobre o q-bit
+      <math>
+       <mrow>
+        <mi>
+         q
+        </mi>
+        <mo>
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os resultados da simulação do circuito (caso ideal), como também os referentes a execução no processador IBM-Q, são dados na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     . Esses resultados estão de acordo com os esperados e dentro da margem de erro.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Resultados referente ao circuito 1, com
+      <math>
+       <mrow>
+        <mi>
+         N
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1024
+        </mn>
+       </mrow>
+      </math>
+      : Gráfico da relação entre a frequência relativa e as strings de bits de saída. Em (a), temos o resultado da simulação. Em (b), temos o resultado a partir do processador IBM-Q.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.2. Circuito 2: Porta H
+    </h2>
+    <p>
+     A execução da porta de Hadamard (porta H) sobre um dado q-bit, no estado
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     ou
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , produz uma superposição de estados quânticos balanceada, como podemos ver na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , com sua notação, representação matricial e atuação na base computacional. Um circuito envolvendo a porta H é representado na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     . Como queremos partir de um estado inicial
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , atuamos com uma porta X sobre o estado padrão da base. Após a porta X, atuamos com a porta de interesse, a porta H. Os resultados da simulação do circuito, como também os referentes a execução no processador IBM-Q, são dados na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     . Esses resultados estão de acordo com os esperados e dentro da margem de erro.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Circuito 2: porta X e porta H de 1-qbit e uma medida sobre o q-bit
+      <math>
+       <mrow>
+        <mi>
+         q
+        </mi>
+        <mo>
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Resultados referente ao circuito 2, com
+      <math>
+       <mrow>
+        <mi>
+         N
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1024
+        </mn>
+       </mrow>
+      </math>
+      : Gráfico da relação entre a frequência relativa e as strings de bits de saída. Em (a), temos o resultado da simulação. Em (b), o resultado a partir do processador IBM-Q.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.3. Circuito 3: Portas Z, S e T
+    </h2>
+    <p>
+     Na seção anterior usamos a porta H para criar superposições de estados da base computacional em bits quânticos. Vamos agora utilizar as seguintes portas lógicas de 1-qbit: Z, S e T. Essas portas quânticas são conhecidas na literatura por implementar fases relativas entre estados ortogonais em superposições de estados de q-bits. Ou seja, a menos de uma normalização, o estado quântico descrito pelo vetor,
+     <math>
+      <mfenced close="]" open="[" separators="">
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+       <mo>
+        +
+       </mo>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mfenced>
+     </math>
+     é fisicamente diferente do estado descrito pelo vetor
+     <math>
+      <mfenced close="]" open="[" separators="">
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        +
+       </mo>
+       <msup>
+        <mi>
+         e
+        </mi>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mi>
+          θ
+         </mi>
+        </mrow>
+       </msup>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </mfenced>
+     </math>
+     , devido justamente a fase relativa
+     <math>
+      <msup>
+       <mi>
+        e
+       </mi>
+       <mrow>
+        <mi>
+         i
+        </mi>
+        <mi>
+         θ
+        </mi>
+       </mrow>
+      </msup>
+     </math>
+     entre os estados ortogonais
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Os detalhes sobre a atuação dessas portas na base computacional, as fases relativas envolvidas em cada uma e sua representação matricial, veja a
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     . Utilizando o IBM-Q, exemplificamos a atuação das portas de fases através do circuito quântico da
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Circuito 3: À esquerda: portas H, Z, S e T que executam a mudança de fase. À direita: temos as portas H, seguidas de medidas na base computacional nos 5-qbits. Na última parte, o contorno em negrito na figura ressaltam que, portas H e medidas na base computacional padrão, são exemplos de medidas nas bases
+      <math>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mo>
+         +
+        </mo>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mo>
+         −
+        </mo>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+      </math>
+      dos q-bits (medida na base
+      <math>
+       <mi>
+        X
+       </mi>
+      </math>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Observe nesse circuito que os q-bits não interagem, pois todas as portas são de 1-qbit. O resultado teórico das medidas em cada q-bit é fornecido na tabela da
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+        https://www.research.ibm.com/ibm-q/...
+       </a>
+      </span>
+     </span>
+     . Duas características importantes do circuito acima devem ser ressaltadas. A primeira é quanto a execução da porta H, seguida de uma medida em cada um dos cinco q-bits (contorno em negrito, na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     ). Diferentemente das medidas nas bases computacionais
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+       <mo>
+        ,
+       </mo>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , esse procedimento é um exemplo de medidas nas bases
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mo>
+        +
+       </mo>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , onde
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mo>
+         ±
+        </mo>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mfrac>
+        <mn>
+         1
+        </mn>
+        <msqrt>
+         <mn>
+          2
+         </mn>
+        </msqrt>
+       </mfrac>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mo>
+         |
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         〉
+        </mo>
+       </mrow>
+       <mo>
+        ±
+       </mo>
+       <mrow>
+        <mo>
+         |
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         〉
+        </mo>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . A segunda característica é sobre a liberdade de realizar rotações arbitrárias nos q-bits com relação a um determinado eixo
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     . Como exemplo, no circuito da
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     , realizamos determinadas rotações em torno do eixo z:
+     <math>
+      <mrow>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ;
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        4
+       </mn>
+       <mo>
+        ;
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mo>
+        ;
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        4
+       </mn>
+       <mo>
+        ;
+       </mo>
+       <mi>
+        π
+       </mi>
+      </mrow>
+     </math>
+     , para cada q-bit (
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ]
+       </mo>
+       <mo>
+        ,
+       </mo>
+       <mo>
+        ...
+       </mo>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        4
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     ), utilizando uma sequência de portas quânticas apropriadas para cada rotação, veja as
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 11
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      12
+     </a>
+     . Podemos também comparar os resultados teóricos da tabela (
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     ), com os análogos obtidos a partir do processador IBM-Q.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Tabela de resultados teóricos do circuito da
+      <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig. 11
+      </a>
+      <span class="ref">
+       <strong class="xref xrefblue">
+        [4]
+       </strong>
+       <span class="refCtt closed">
+        <span>
+         [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+        </span>
+        <br/>
+        <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+         https://www.research.ibm.com/ibm-q/...
+        </a>
+       </span>
+      </span>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como primeiro exemplo, analisamos o q-bit
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     com uma rotação de
+     <math>
+      <mrow>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        4
+       </mn>
+      </mrow>
+     </math>
+     em torno do eixo z, que corresponde a sequência de portas lógicas H, T, H e medida sobre o
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     . Na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13-(a)
+     </a>
+     , temos o circuito em questão e o gráfico da frequência relativa (
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13-(b)
+     </a>
+     ) dos resultados das medidas em função das strings de bits de saída. Observe também, que por motivo de espaço no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13-(b)
+     </a>
+     , colocamos apenas algumas strings, entre as quais, as não-nulas:
+     <math>
+      <mrow>
+       <mo>
+        [
+       </mo>
+       <mn>
+        00000
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     , com frequência relativa
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         f
+        </mi>
+        <mi>
+         r
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        86
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        [
+       </mo>
+       <mn>
+        00010
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     , com
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         f
+        </mi>
+        <mi>
+         r
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        14
+       </mn>
+      </mrow>
+     </math>
+     . A concordância dos resultados, teórico e experimental, estão dentro da margem de erro com
+     <math>
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+      </mrow>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Em (a) e (c), a execução das medidas apenas nos q-bits
+      <math>
+       <mrow>
+        <mi>
+         q
+        </mi>
+        <mo>
+         [
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <mi>
+         q
+        </mi>
+        <mo>
+         [
+        </mo>
+        <mn>
+         3
+        </mn>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </math>
+      . Em (b) e (d), os gráficos das frequências relativas dos resultados dessas medidas sobre os mesmos, respectivamente, rodando no IBM-Q. Observamos também a concordância dos resultados, teórico (Tabela da
+      <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig. 12
+      </a>
+      ) e experimental, obtidos dentro da margem de erro, com
+      <math>
+       <mrow>
+        <mi>
+         N
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1024
+        </mn>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como segundo exemplo, analisamos o q-bit
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     com uma rotação de
+     <math>
+      <mrow>
+       <mn>
+        3
+       </mn>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        4
+       </mn>
+      </mrow>
+     </math>
+     em torno do eixo z, que corresponde a sequência de portas lógicas H, S, T, H e medida. Nas
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 13-(c)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      13-(d)
+     </a>
+     , temos o circuito em questão e o gráfico da frequência relativa dos resultados das medidas, sobre o
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     , em função das strings de bits de saída, com
+     <math>
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+      </mrow>
+     </math>
+     rodadas no IBM-Q. Observe também, que por motivo de espaço no gráfico, colocamos apenas algumas strings, entre as quais:
+     <math>
+      <mrow>
+       <mo>
+        [
+       </mo>
+       <mn>
+        00000
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     , com frequência relativa
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         f
+        </mi>
+        <mi>
+         r
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        19
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        [
+       </mo>
+       <mn>
+        01000
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     , com
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         f
+        </mi>
+        <mi>
+         r
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        81
+       </mn>
+      </mrow>
+     </math>
+     . A concordância dos resultados, teórico e experimental, estão dentro da margem de erro com
+     <math>
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+      </mrow>
+     </math>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     4.4. Circuito 4: Teleporte quântico
+    </h1>
+    <h2>
+     4.4.1. Fundamentos teóricos
+    </h2>
+    <p>
+     O protocolo de teleporte quântico consiste na transferência de um estado quântico desconhecido entre duas partes, utilizando emaranhamento pré-compartilhado e comunicação clássica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] P. Kaye, R. Laflamme e M. Mosca, An Introduction to Quantum Computing. (Oxford University Press, New York, 2007), 1st edition, 288 p.
+       </span>
+      </span>
+     </span>
+     ]. Essas partes estão afastadas espacialmente e são rotuladas geralmente de Alice e Bob. A proposta do protocolo é a troca de informação entre Alice e Bob da seguinte forma:
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       Alice e Bob devem compartilhar um estado quântico emaranhado de 2-qbits, conhecido na literatura como estado de Bell [
+       <span class="ref">
+        <sup class="xref xrefblue">
+         1
+        </sup>
+        <span class="refCtt closed">
+         <span>
+          [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+         </span>
+        </span>
+       </span>
+       ,
+       <span class="ref">
+        <sup class="xref xrefblue">
+         5
+        </sup>
+        <span class="refCtt closed">
+         <span>
+          [5] P. Kaye, R. Laflamme e M. Mosca, An Introduction to Quantum Computing. (Oxford University Press, New York, 2007), 1st edition, 288 p.
+         </span>
+        </span>
+       </span>
+       ], representado pelo seguinte estado quântico:
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="e">
+       <a name="">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <math display="block">
+          <mrow>
+           <msub>
+            <mrow>
+             <mo>
+              |
+             </mo>
+             <mi>
+              ψ
+             </mi>
+             <mo>
+              〉
+             </mo>
+            </mrow>
+            <mrow>
+             <mi>
+              A
+             </mi>
+             <mi>
+              B
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <msub>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <mn>
+                0
+               </mn>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+              <mi>
+               A
+              </mi>
+             </msub>
+             <mo>
+              ⊗
+             </mo>
+             <msub>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <mn>
+                0
+               </mn>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+              <mi>
+               B
+              </mi>
+             </msub>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <mn>
+                1
+               </mn>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+              <mi>
+               A
+              </mi>
+             </msub>
+             <mo>
+              ⊗
+             </mo>
+             <msub>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <mn>
+                1
+               </mn>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+              <mi>
+               B
+              </mi>
+             </msub>
+            </mrow>
+            <msqrt>
+             <mn>
+              2
+             </mn>
+            </msqrt>
+           </mfrac>
+           <mo>
+            .
+           </mo>
+          </mrow>
+         </math>
+        </div>
+       </div>
+      </div>
+      <p>
+       Os subíndices representam que cada um, Alice e Bob, possui um q-bit. Na
+       <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 14
+       </a>
+       , temos um exemplo de circuito de 2-qbits que cria esse estado de Bell, através de uma porta H, no q-bit de Alice, seguida de uma porta CNOT de 2-qbits, onde o controle é o q-bit de Alice e o alvo o q-bit de Bob, veja a tabela da
+       <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+        <span class="sci-ico-fileFigure">
+        </span>
+        Fig. 3
+       </a>
+       .
+      </p>
+      <p>
+      </p>
+      <div class="row fig" id="f14">
+       <a name="f14">
+       </a>
+       <div class="col-md-4 col-sm-4">
+        <a data-target="#ModalFigf14" data-toggle="modal" href="">
+         <div class="thumbOff">
+          <div class="zoom">
+           <span class="sci-ico-zoom">
+           </span>
+          </div>
+         </div>
+        </a>
+       </div>
+       <div class="col-md-8 col-sm-8">
+        <strong>
+         Figura 14
+        </strong>
+        <br/>
+        Circuito que gera um estado quântico emaranhado de 2-qbits para Alice e Bob.
+        <br/>
+       </div>
+      </div>
+     </li>
+     <li>
+      <p>
+       Alice possui um q-bit adicional, desconhecido,
+       <math>
+        <mrow>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mi>
+            ϕ
+           </mi>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           k
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mi>
+            α
+           </mi>
+           <mo>
+            |
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           k
+          </mi>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <mi>
+          β
+         </mi>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mn>
+            1
+           </mn>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           k
+          </mi>
+         </msub>
+        </mrow>
+       </math>
+       , onde
+       <math>
+        <mi>
+         α
+        </mi>
+       </math>
+       e
+       <math>
+        <mi>
+         β
+        </mi>
+       </math>
+       são as amplitudes de probabilidades, com
+       <math>
+        <mrow>
+         <msup>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mi>
+            α
+           </mi>
+           <mo>
+            |
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          +
+         </mo>
+         <msup>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mi>
+            β
+           </mi>
+           <mo>
+            |
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </math>
+       . A tarefa é enviar esse q-bit adicional para Bob. Portanto, Alice possui dois q-bits consigo, um com rótulo A, emaranhado com Bob, e o outro q-bit
+       <math>
+        <msub>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           ϕ
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mi>
+          k
+         </mi>
+        </msub>
+       </math>
+       , em um estado quântico arbitrário. Por simplicidade, vamos omitir o produto tensorial:
+       <math>
+        <mrow>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           A
+          </mi>
+         </msub>
+         <mo>
+          ⊗
+         </mo>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           B
+          </mi>
+         </msub>
+         <mo>
+          →
+         </mo>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mn>
+            00
+           </mn>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mrow>
+           <mi>
+            A
+           </mi>
+           <mi>
+            B
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+       . Então, os q-bits de entrada são:
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="eeq2">
+       <a name="eq2">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <span class="label">
+          (2)
+         </span>
+         <math display="block" id="m2">
+          <mtable displaystyle="true">
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+                <mi>
+                 n
+                </mi>
+               </mrow>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <msub>
+               <mrow>
+                <mo>
+                 |
+                </mo>
+                <mi>
+                 ϕ
+                </mi>
+                <mo>
+                 〉
+                </mo>
+               </mrow>
+               <mi>
+                k
+               </mi>
+              </msub>
+              <msub>
+               <mrow>
+                <mo>
+                 |
+                </mo>
+                <mi>
+                 ψ
+                </mi>
+                <mo>
+                 〉
+                </mo>
+               </mrow>
+               <mrow>
+                <mi>
+                 A
+                </mi>
+                <mi>
+                 B
+                </mi>
+               </mrow>
+              </msub>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+                <mi>
+                 n
+                </mi>
+               </mrow>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfenced close=")" open="(" separators="">
+               <msub>
+                <mrow>
+                 <mi>
+                  α
+                 </mi>
+                 <mo>
+                  |
+                 </mo>
+                 <mn>
+                  0
+                 </mn>
+                 <mo>
+                  〉
+                 </mo>
+                </mrow>
+                <mi>
+                 k
+                </mi>
+               </msub>
+               <mo>
+                +
+               </mo>
+               <mi>
+                β
+               </mi>
+               <msub>
+                <mrow>
+                 <mo>
+                  |
+                 </mo>
+                 <mn>
+                  1
+                 </mn>
+                 <mo>
+                  〉
+                 </mo>
+                </mrow>
+                <mi>
+                 k
+                </mi>
+               </msub>
+              </mfenced>
+              <mfenced close="]" open="[" separators="">
+               <mfrac>
+                <mrow>
+                 <msub>
+                  <mrow>
+                   <mo>
+                    |
+                   </mo>
+                   <mn>
+                    00
+                   </mn>
+                   <mo>
+                    〉
+                   </mo>
+                  </mrow>
+                  <mrow>
+                   <mi>
+                    A
+                   </mi>
+                   <mi>
+                    B
+                   </mi>
+                  </mrow>
+                 </msub>
+                 <mo>
+                  +
+                 </mo>
+                 <msub>
+                  <mrow>
+                   <mo>
+                    |
+                   </mo>
+                   <mn>
+                    11
+                   </mn>
+                   <mo>
+                    〉
+                   </mo>
+                  </mrow>
+                  <mrow>
+                   <mi>
+                    A
+                   </mi>
+                   <mi>
+                    B
+                   </mi>
+                  </mrow>
+                 </msub>
+                </mrow>
+                <msqrt>
+                 <mn>
+                  2
+                 </mn>
+                </msqrt>
+               </mfrac>
+              </mfenced>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mrow>
+                <mi>
+                 i
+                </mi>
+                <mi>
+                 n
+                </mi>
+               </mrow>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   00
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   11
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   β
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   00
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   β
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   11
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mo>
+               .
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </math>
+        </div>
+       </div>
+      </div>
+      <p>
+       O segundo procedimento de Alice consiste em gerar uma interação entre os seus q-bits,
+       <math>
+        <msub>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mi>
+           ϕ
+          </mi>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+         <mi>
+          k
+         </mi>
+        </msub>
+       </math>
+       e o q-bit A, através de uma
+       <math>
+        <mrow>
+         <mi>
+          C
+         </mi>
+         <mi>
+          N
+         </mi>
+         <mi>
+          O
+         </mi>
+         <mi>
+          T
+         </mi>
+        </mrow>
+       </math>
+       . Atuando a porta
+       <math>
+        <mrow>
+         <mi>
+          C
+         </mi>
+         <mi>
+          N
+         </mi>
+         <mi>
+          O
+         </mi>
+         <msub>
+          <mi>
+           T
+          </mi>
+          <mrow>
+           <mi>
+            k
+           </mi>
+           <mi>
+            A
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+       (controle no q-bit
+       <math>
+        <mi>
+         k
+        </mi>
+       </math>
+       e o alvo no q-bit
+       <math>
+        <mi>
+         A
+        </mi>
+       </math>
+       ) por parte de Alice nos seus q-bits, temos:
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="eeq3">
+       <a name="eq3">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <span class="label">
+          (3)
+         </span>
+         <math display="block" id="m3">
+          <mtable displaystyle="true">
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mi>
+               C
+              </mi>
+              <mi>
+               N
+              </mi>
+              <mi>
+               O
+              </mi>
+              <msub>
+               <mi>
+                T
+               </mi>
+               <mrow>
+                <mi>
+                 k
+                </mi>
+                <mi>
+                 A
+                </mi>
+               </mrow>
+              </msub>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <msub>
+                <mi>
+                 φ
+                </mi>
+                <mrow>
+                 <mi>
+                  i
+                 </mi>
+                 <mi>
+                  n
+                 </mi>
+                </mrow>
+               </msub>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   00
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   11
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <msub>
+                 <mrow>
+                  <mi>
+                   β
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   10
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <msub>
+                 <mrow>
+                  <mi>
+                   β
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   01
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mo>
+               .
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </math>
+        </div>
+       </div>
+      </div>
+      <p>
+       Após a
+       <math>
+        <mrow>
+         <mi>
+          C
+         </mi>
+         <mi>
+          N
+         </mi>
+         <mi>
+          O
+         </mi>
+         <msub>
+          <mi>
+           T
+          </mi>
+          <mrow>
+           <mi>
+            k
+           </mi>
+           <mi>
+            A
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+       , Alice aplica uma porta
+       <math>
+        <msub>
+         <mi>
+          H
+         </mi>
+         <mi>
+          k
+         </mi>
+        </msub>
+       </math>
+       sobre o q-bit
+       <math>
+        <mi>
+         k
+        </mi>
+       </math>
+       . Portanto, temos o seguinte estado quântico:
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="eeq4">
+       <a name="eq4">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <span class="label">
+          (4)
+         </span>
+         <math display="block" id="m4">
+          <mtable displaystyle="true">
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <msub>
+               <mi>
+                H
+               </mi>
+               <mi>
+                k
+               </mi>
+              </msub>
+              <mrow>
+               <mo>
+                |
+               </mo>
+               <msub>
+                <mi>
+                 φ
+                </mi>
+                <mn>
+                 1
+                </mn>
+               </msub>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <mi>
+                 α
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <mfrac>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   00
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <msqrt>
+                 <mn>
+                  2
+                 </mn>
+                </msqrt>
+               </mfrac>
+              </mfenced>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <mi>
+                 α
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <mfrac>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   11
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <msqrt>
+                 <mn>
+                  2
+                 </mn>
+                </msqrt>
+               </mfrac>
+              </mfenced>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <mi>
+                 β
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mo>
+                 −
+                </mo>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <mfrac>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   10
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <msqrt>
+                 <mn>
+                  2
+                 </mn>
+                </msqrt>
+               </mfrac>
+              </mfenced>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <mi>
+                 β
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mo>
+                 −
+                </mo>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  k
+                 </mi>
+                </msub>
+                <mrow>
+                 <mo>
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+               <msqrt>
+                <mn>
+                 2
+                </mn>
+               </msqrt>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <mfrac>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   01
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mrow>
+                  <mi>
+                   A
+                  </mi>
+                  <mi>
+                   B
+                  </mi>
+                 </mrow>
+                </msub>
+                <msqrt>
+                 <mn>
+                  2
+                 </mn>
+                </msqrt>
+               </mfrac>
+              </mfenced>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mo>
+               .
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </math>
+        </div>
+       </div>
+      </div>
+      <p>
+       Podemos reescrever o estado quântico
+       <math>
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <msub>
+          <mi>
+           φ
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msub>
+         <mrow>
+          <mo>
+           〉
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+       :
+      </p>
+      <p>
+      </p>
+      <div class="row formula" id="eeq5">
+       <a name="eq5">
+       </a>
+       <div class="col-md-12">
+        <div class="formula-container">
+         <span class="label">
+          (5)
+         </span>
+         <math display="block" id="m5">
+          <mtable displaystyle="true">
+           <mtr>
+            <mtd columnalign="right">
+             <mrow>
+              <mrow>
+               <mo>
+                |
+               </mo>
+              </mrow>
+              <msub>
+               <mi>
+                φ
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+              <mrow>
+               <mo>
+                〉
+               </mo>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd>
+             <mo>
+              =
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <msub>
+                <mrow>
+                 <mo>
+                  |
+                 </mo>
+                 <mn>
+                  00
+                 </mn>
+                 <mo>
+                  〉
+                 </mo>
+                </mrow>
+                <mrow>
+                 <mi>
+                  k
+                 </mi>
+                 <mi>
+                  A
+                 </mi>
+                </mrow>
+               </msub>
+               <mfenced close="]" open="[" separators="">
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 β
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+               </mfenced>
+              </mfenced>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <msub>
+                <mrow>
+                 <mo>
+                  |
+                 </mo>
+                 <mn>
+                  01
+                 </mn>
+                 <mo>
+                  〉
+                 </mo>
+                </mrow>
+                <mrow>
+                 <mi>
+                  k
+                 </mi>
+                 <mi>
+                  A
+                 </mi>
+                </mrow>
+               </msub>
+               <mfenced close="]" open="[" separators="">
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 β
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+               </mfenced>
+              </mfenced>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <msub>
+                <mrow>
+                 <mo>
+                  |
+                 </mo>
+                 <mn>
+                  10
+                 </mn>
+                 <mo>
+                  〉
+                 </mo>
+                </mrow>
+                <mrow>
+                 <mi>
+                  k
+                 </mi>
+                 <mi>
+                  A
+                 </mi>
+                </mrow>
+               </msub>
+               <mfenced close="]" open="[" separators="">
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 β
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+               </mfenced>
+              </mfenced>
+              <mo>
+               +
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+            </mtd>
+            <mtd>
+             <mo>
+              +
+             </mo>
+            </mtd>
+            <mtd columnalign="left">
+             <mrow>
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mn>
+                2
+               </mn>
+              </mfrac>
+              <mfenced close="]" open="[" separators="">
+               <msub>
+                <mrow>
+                 <mo>
+                  |
+                 </mo>
+                 <mn>
+                  11
+                 </mn>
+                 <mo>
+                  〉
+                 </mo>
+                </mrow>
+                <mrow>
+                 <mi>
+                  k
+                 </mi>
+                 <mi>
+                  A
+                 </mi>
+                </mrow>
+               </msub>
+               <mfenced close="]" open="[" separators="">
+                <msub>
+                 <mrow>
+                  <mi>
+                   α
+                  </mi>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   1
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 β
+                </mi>
+                <msub>
+                 <mrow>
+                  <mo>
+                   |
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo>
+                   〉
+                  </mo>
+                 </mrow>
+                 <mi>
+                  B
+                 </mi>
+                </msub>
+               </mfenced>
+              </mfenced>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mspace width="3.33333pt">
+              </mspace>
+              <mo>
+               .
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </math>
+        </div>
+       </div>
+      </div>
+     </li>
+     <li>
+      <p>
+       O próximo passo do protocolo são as medidas na base computacional que Alice deverá fazer sobre os seus q-bits
+       <math>
+        <mi>
+         k
+        </mi>
+       </math>
+       e
+       <math>
+        <mi>
+         A
+        </mi>
+       </math>
+       que, consequentemente, projeta o q-bit de Bob em um dos quatro estados possíveis da
+       <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+        <span class="sci-ico-fileFormula">
+        </span>
+        equação (5)
+       </a>
+       . O resultados da medida de Alice é enviado por um canal clássico e, de acordo com o resultado, Bob finaliza o protocolo aplicando em seu q-bit uma das seguintes portas quânticas:
+       <math>
+        <mi>
+         I
+        </mi>
+       </math>
+       ,
+       <math>
+        <mi>
+         X
+        </mi>
+       </math>
+       ,
+       <math>
+        <mi>
+         Z
+        </mi>
+       </math>
+       ou as portas
+       <math>
+        <mrow>
+         <mi>
+          Z
+         </mi>
+         <mi>
+          X
+         </mi>
+        </mrow>
+       </math>
+       . Veja a
+       <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+        <span class="sci-ico-fileTable">
+        </span>
+        tabela 2
+       </a>
+       .
+      </p>
+     </li>
+    </ol>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Correções para o teleporte quântico.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.4.2. Teleporte quântico no IBM-Q
+    </h2>
+    <p>
+     Vamos implementar o teleporte quântico, no processador IBM-Q de 5-qbits, através do circuito da
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     . Para realizar o protocolo escolhemos um q-bit,
+     <math>
+      <mrow>
+       <msub>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mi>
+          ϕ
+         </mi>
+         <mo>
+          〉
+         </mo>
+        </mrow>
+        <mi>
+         k
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mrow>
+         <mi>
+          α
+         </mi>
+         <mo>
+          |
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          〉
+         </mo>
+        </mrow>
+        <mi>
+         k
+        </mi>
+       </msub>
+       <mo>
+        +
+       </mo>
+       <msub>
+        <mrow>
+         <mi>
+          β
+         </mi>
+         <mo>
+          |
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo>
+          〉
+         </mo>
+        </mrow>
+        <mi>
+         k
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mrow>
+         <mo form="prefix">
+          cos
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           θ
+          </mi>
+          <mo>
+           /
+          </mo>
+          <mn>
+           2
+          </mn>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          |
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo>
+          〉
+         </mo>
+        </mrow>
+        <mi>
+         k
+        </mi>
+       </msub>
+       <mo>
+        +
+       </mo>
+       <msup>
+        <mi>
+         e
+        </mi>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mi>
+          φ
+         </mi>
+        </mrow>
+       </msup>
+       <mo form="prefix">
+        sin
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mi>
+         θ
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <msub>
+        <mrow>
+         <mo>
+          |
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo>
+          〉
+         </mo>
+        </mrow>
+        <mi>
+         k
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     , onde adotamos
+     <math>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        4
+       </mn>
+      </mrow>
+     </math>
+     . Portanto:
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mi>
+            ϕ
+           </mi>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           k
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mrow>
+           <mo form="prefix">
+            cos
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mi>
+             π
+            </mi>
+            <mo>
+             /
+            </mo>
+            <mn>
+             8
+            </mn>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            |
+           </mo>
+           <mn>
+            0
+           </mn>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           k
+          </mi>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <mo form="prefix">
+          sin
+         </mo>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mi>
+           π
+          </mi>
+          <mo>
+           /
+          </mo>
+          <mn>
+           8
+          </mn>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <msub>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mn>
+            1
+           </mn>
+           <mo>
+            〉
+           </mo>
+          </mrow>
+          <mi>
+           k
+          </mi>
+         </msub>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mspace width="3.33333pt">
+         </mspace>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <mrow>
+       <mi>
+        φ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     . Para a preparação desse estado quântico aplicamos as seguintes portas quânticas de 1-qbit: H, T e S, como podemos ver na
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 15
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 15
+      </strong>
+      <br/>
+      Portas de 1-qbit, H, T e S foram usadas para a preparação do estado quântico da
+      <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       equação (6)
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 16
+      </strong>
+      <br/>
+      Circuito que implementa o teleporte quântico no IBM-Q. Portas de 1-qbit, H, T e S para a preparação do estado quântico da
+      <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       equação (6)
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nesta mesma figura, temos a frequência relativa dos resultados das medidas na base computacional
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mo>
+        |
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mo>
+        〉
+       </mo>
+      </mrow>
+     </math>
+     , obtida através da simulação desse circuito em computadores clássicos (servidores da IBM)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+        https://www.research.ibm.com/ibm-q/...
+       </a>
+      </span>
+     </span>
+     . Observe que esse conjunto de portas lógicas resulta na preparação do estado quântico da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (6)
+     </a>
+     , a menos de uma fase global
+     <math>
+      <msup>
+       <mi>
+        e
+       </mi>
+       <mrow>
+        <mi>
+         i
+        </mi>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         8
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     , não detectável. Observe também que a distribuição de probabilidade dos resultados das medidas estão de acordo com a previsão teórica, isto é, com probabilidade:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <msup>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mi>
+            α
+           </mi>
+           <mo>
+            |
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mfenced close="|" open="|" separators="">
+           <mo form="prefix">
+            cos
+           </mo>
+           <mo>
+            (
+           </mo>
+           <mfrac>
+            <mi>
+             π
+            </mi>
+            <mn>
+             8
+            </mn>
+           </mfrac>
+           <mo>
+            )
+           </mo>
+          </mfenced>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0.85
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <msup>
+          <mrow>
+           <mo>
+            |
+           </mo>
+           <mi>
+            β
+           </mi>
+           <mo>
+            |
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <msup>
+          <mfenced close="|" open="|" separators="">
+           <mo form="prefix">
+            sin
+           </mo>
+           <mo>
+            (
+           </mo>
+           <mfrac>
+            <mi>
+             π
+            </mi>
+            <mn>
+             8
+            </mn>
+           </mfrac>
+           <mo>
+            )
+           </mo>
+          </mfenced>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0.15
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Após a especificação do estado quântico de entrada,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (6)
+     </a>
+     , realizamos o protocolo de teleporte usando o circuito da
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     . Observe que o q-bit de entrada (q
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] P. W. Shor, in Proceedings of 35th Annual Symposium of Foundations of Computer Science (IEEE Press, Los Alamitos, 1994).
+       </span>
+      </span>
+     </span>
+     ) possui o rótulo
+     <math>
+      <mi>
+       k
+      </mi>
+     </math>
+     e a sequência de portas para cria-lo é dado por:
+     <math>
+      <mrow>
+       <mi>
+        H
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        T
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        H
+       </mi>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mi>
+       S
+      </mi>
+     </math>
+     . Alice deseja transferir a informação do q-bit
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     para o q-bit do Bob (
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     ), com rótulo
+     <math>
+      <mi>
+       B
+      </mi>
+     </math>
+     . Na figura, o retângulo preto contendo uma porta H mais uma porta lógica CNOT, representa a criação do estado Bell, compartilhado por Alice e Bob. As demais portas representam as operações quânticas do protocolo de teleporte. Alice aplica sobre os seus q-bits uma porta
+     <math>
+      <mrow>
+       <mi>
+        C
+       </mi>
+       <mi>
+        N
+       </mi>
+       <mi>
+        O
+       </mi>
+       <msub>
+        <mi>
+         T
+        </mi>
+        <mrow>
+         <mi>
+          k
+         </mi>
+         <mi>
+          A
+         </mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     (controle no q-bit
+     <math>
+      <mi>
+       k
+      </mi>
+     </math>
+     e o alvo no q-bit
+     <math>
+      <mi>
+       A
+      </mi>
+     </math>
+     ) e uma porta
+     <math>
+      <msub>
+       <mi>
+        H
+       </mi>
+       <mi>
+        k
+       </mi>
+      </msub>
+     </math>
+     sobre o q-bit
+     <math>
+      <mi>
+       k
+      </mi>
+     </math>
+     .
+    </p>
+    <p>
+     O último passo do protocolo não pode ser realizado diretamente no IBM-Q, visto que, o mesmo não permite implementar operações condicionadas classicamente. Ou seja, Alice realiza as medidas sobre seus q-bits e envia para Bob por um canal clássico e, conforme os resultados das mesmas, Bob realiza a operação quântica apropriada (segundo a
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     ) para recuperar o estado quântico do q-bit
+     <math>
+      <mi>
+       k
+      </mi>
+     </math>
+     . Porém, podemos contornar essa limitação substituindo as operações controladas clássicas por operações quânticas controladas e realizando a medida ao final deste processo
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     . Portanto, os dois últimos retângulos em negrito são: porta lógica
+     <math>
+      <mrow>
+       <mi>
+        C
+       </mi>
+       <mi>
+        N
+       </mi>
+       <mi>
+        O
+       </mi>
+       <mi>
+        T
+       </mi>
+      </mrow>
+     </math>
+     e a porta
+     <math>
+      <msub>
+       <mi>
+        Z
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     (Porta Z-controlada), onde usamos a identidade de portas de 1-qbit:
+     <math>
+      <mrow>
+       <mi>
+        Z
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        H
+       </mi>
+       <mi>
+        X
+       </mi>
+       <mi>
+        H
+       </mi>
+      </mrow>
+     </math>
+     . O circuito finaliza com a medida sobre o q-bit
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     (q-bit de Bob).
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 17
+     </a>
+     , temos o gráfico da frequência relativa dos resultados das medidas na base computacional, que refere-se ao q-bit (
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     ) de Bob. Observamos também neste gráfico, a concordância dos resultados teóricos e os obtidos via processador IBM-Q, dentro da margem de erro esperada, que neste caso, é de
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mrow>
+         <mi>
+          t
+         </mi>
+         <mi>
+          o
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mi>
+          a
+         </mi>
+         <mi>
+          l
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mo>
+        *
+       </mo>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mi>
+         r
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        3
+       </mn>
+       <mo>
+        *
+       </mo>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         /
+        </mo>
+        <msqrt>
+         <mi>
+          N
+         </mi>
+        </msqrt>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , com
+     <math>
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1024
+       </mn>
+      </mrow>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 17
+      </strong>
+      <br/>
+      Frequência relativa dos resultados das medidas realizadas sobre o q-bit
+      <math>
+       <mrow>
+        <mi>
+         q
+        </mi>
+        <mo>
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ]
+        </mo>
+       </mrow>
+      </math>
+      (q-bit de Bob). Os Resultados acima foram obtidos a partir de 1024 rodadas (shots), no hardware IBM-Q, do circuito da
+      <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig. 16
+      </a>
+      , que implementa o teleporte quântico. As linhas pontilhadas representam as estimativas teóricas.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     4.4.3. Discussão
+    </h2>
+    <p>
+     Vamos agora analisar com mais atenção a implementação e resultados do protocolo de teleporte no IBM-Q. Primeiramente, no processador quântico IBM-Q não temos como implementar operações quânticas, condicionadas aos resultados das medidas (operações controladas clássicas)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] M. A. Nielsen e I. L. Chuang, Quantum Computation and Quantum Information (Cambridge University Press, Cambridge, 2000).
+       </span>
+      </span>
+     </span>
+     . Isto é, não podemos realizar o último passo do protocolo original, que seria a comunicação do resultado da medida de Alice para Bob, através de um canal clássico. Posteriormente, Bob faria a operação quântica adequada (
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     ). Isso não é um problema do processador IBM-Q, e sim uma particularidade do processo. Devemos observar que o protocolo de teleporte quântico é um protocolo de comunicação, entre duas partes, que estão distantes espacialmente entre si. Entretanto, podemos substituir as operações condicionais clássicas por operações quânticas correspondentes que, neste caso, serão uma porta
+     <math>
+      <mrow>
+       <mi>
+        C
+       </mi>
+       <mi>
+        N
+       </mi>
+       <mi>
+        O
+       </mi>
+       <mi>
+        T
+       </mi>
+      </mrow>
+     </math>
+     e uma porta Z-controlada(
+     <math>
+      <msub>
+       <mi>
+        Z
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     ) (dois últimos retângulos em negrito). O IBM-Q não implementa a porta Z-controlada, entretanto, podemos contornar esse problema usando uma identidade:
+     <math>
+      <mrow>
+       <mi>
+        H
+       </mi>
+       <mo>
+        ·
+       </mo>
+       <mi>
+        C
+       </mi>
+       <mi>
+        N
+       </mi>
+       <mi>
+        O
+       </mi>
+       <mi>
+        T
+       </mi>
+       <mo>
+        ·
+       </mo>
+       <mi>
+        H
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi>
+         Z
+        </mi>
+        <mi>
+         c
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     , ou melhor, a porta
+     <math>
+      <msub>
+       <mi>
+        Z
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     pode ser decomposta na atuação de três portas fundamentais, uma porta de Hadamard, seguida de uma NOT-controlada, e novamente outra porta de Hadamard. Na
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     , as últimas três portas quânticas representam a porta
+     <math>
+      <msub>
+       <mi>
+        Z
+       </mi>
+       <mi>
+        c
+       </mi>
+      </msub>
+     </math>
+     , onde o controle é o q-bit
+     <math>
+      <mi>
+       k
+      </mi>
+     </math>
+     e o alvo o q-bit de Bob
+     <math>
+      <mrow>
+       <mi>
+        q
+       </mi>
+       <mo>
+        [
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ]
+       </mo>
+      </mrow>
+     </math>
+     . Com essa modificação, alteramos a interpretação do circuito original como aquele que implementa o teleporte quântico, visto que, não temos mais o envio de informação através de um canal clássico de comunicação. Ainda assim, o circuito modificado da
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     possui uma ação global igual ao protocolo original de teleportação quântica.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusão
+    </h1>
+    <p>
+     Neste trabalho apresentou-se uma proposta de ensino da computação quântica, por meio da aplicação de seus conceitos em experimentações reais usando a plataforma IBM-Q Experience
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+       </span>
+       <br/>
+       <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+        https://www.research.ibm.com/ibm-q/...
+       </a>
+      </span>
+     </span>
+     . Primeiramente, caracterizou-se o processador quântico IBM-Q referente aos vários aspectos práticos e metodológicos. Posteriormente, avaliou-se quais seriam as principais necessidades para o acesso a esse processador quântico, e quanto a utilização de sua interface com respeito a simplicidade, execução e análise de dados. Por fim, apresentou-se um roteiro básico para sala de aula, com quatro projetos de circuitos quânticos para implementação no IBM-Q. Nossos resultados demonstraram que em vários aspectos o computador quântico da IBM é eficaz como recurso pedagógico, para tarefas como montagem e execução de blocos simples de circuitos quânticos, como também, para análise de algoritmos mais avançados da computação quântica. Destaca-se também a capacidade do uso deste processador quântico real na articulação de conteúdos de aprendizagem dos conceitos da computação quântica, em temas interdisciplinares relacionados a física, a matemática, a ciência da computação e as engenharias.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="6. Agradecimentos">
+    <h1 class="articleSectionTitle">
+     6. Agradecimentos
+    </h1>
+    <p>
+     Gostaríamos de agradecer a equipe da
+     <i>
+      IBM Quantum Experience
+     </i>
+     pelo acesso a plataforma IBM-Q e assim possibilitando o desenvolvimento deste trabalho, como também aos membros da comunidade IBM-Q. As discussões e opiniões colocadas neste trabalho são exclusivas dos autores e não refletem as opiniões da
+     <i>
+      International Business Machines-IBM
+     </i>
+     .
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        M. A. Nielsen e I. L. Chuang,
+        <i>
+         Quantum Computation and Quantum Information
+        </i>
+        (Cambridge University Press, Cambridge, 2000).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        P. W. Shor, in Proceedings of 35th Annual Symposium of Foundations of Computer Science (IEEE Press, Los Alamitos, 1994).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        https://www.dwavesys.com/our-company/meet-d-wave, acessado em: 07/02/2018.
+        <br/>
+        <a href="https://www.dwavesys.com/our-company/meet-d-wave" target="_blank">
+         » https://www.dwavesys.com/our-company/meet-d-wave
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        https://www.research.ibm.com/ibm-q/, acessado em: 07/02/2018.
+        <br/>
+        <a href="https://www.research.ibm.com/ibm-q/" target="_blank">
+         » https://www.research.ibm.com/ibm-q/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        P. Kaye, R. Laflamme e M. Mosca, An Introduction to Quantum Computing. (Oxford University Press, New York, 2007), 1st edition, 288 p.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        J. M. Gambetta, M. J. Chow and M. Steffen, npj Quantum Information
+        <b>
+         3
+        </b>
+        , 2 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        The Quantiki, List of QC simulators, https://www.quantiki.org/wiki/list-qc-simulators, acessado em: 07/02/2018.
+        <br/>
+        <a href="https://www.quantiki.org/wiki/list-qc-simulators" target="_blank">
+         » https://www.quantiki.org/wiki/list-qc-simulators
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        The Liqui, The Quantum Architectures and Computation Group (QuArC) at Microsoft Research. https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/, acessado em: 07/02/2018.
+        <br/>
+        <a href="https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/" target="_blank">
+         » https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        http://www.quantumplayground.net/, acessado em: 07/02/2018.
+        <br/>
+        <a href="http://www.quantumplayground.net/" target="_blank">
+         » http://www.quantumplayground.net/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        http://algassert.com/quirk, acessado em: 07/02/2018.
+        <br/>
+        <a href="http://algassert.com/quirk" target="_blank">
+         » http://algassert.com/quirk
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        A. C. Santos, Revista Brasileira de Ensino de Física
+        <b>
+         39
+        </b>
+        , e1301 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        A. Barenco, C. H. Bennett, R. Cleve, D. P. DiVincenzo, N. Margolus, P. Shor, T. Sleator e J. A. Smolin, Phys. Rev. A
+        <b>
+         52
+        </b>
+        , 3457 (1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        G. E. M. Cabral, A. F. Lima and B. Lula Jr., Revista Brasileira de Ensino de Física
+        <b>
+         26
+        </b>
+        , 109 (2004).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        28 Fev 2018
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        09 Abr 2018
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        12 Abr 2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

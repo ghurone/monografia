@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173812015" target="_blank">
+    https://doi.org/10.1590/S1806-11173812015
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812015">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0" data-toggle="tooltip">
+  </span>
+  Desenvolvimento de instrumentos virtuais para obtenção e caracterização de propriedades físicas
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Development of Virtual instruments for obtaining and characterizing physical properties
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Patrícia F.O. Rosa
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:patricia@on.br">
+      patricia@on.br
+     </a>
+     .
+    </div>
+    Laboratório de Desenvolvimento de Sensores Magnéticos, Observatório Nacional, Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Filipe S. Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Centro de Tecnologia Senai Automação e Simulação, Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Luiz Benyosef
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Laboratório de Desenvolvimento de Sensores Magnéticos, Observatório Nacional, Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Andrés R.R. Papa
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Coordenação de Geofísica, Observatório Nacional, Rio de Janeiro, RJ, BrasilInstituto de Física, Universidade do Estado do Rio de Janeiro, RJ, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Cada vez mais, o uso de computadores (especialmente utilizando programas de acesso livre) é aproveitado no ensino de ciências em geral e, em particular, de física. Por outro lado, a instrumentação científica continua sendo cara e de difícil manutenção. Finalmente, é desejável que os estudantes consigam ir além da simples reprodução de resultados conhecidos e que, com as ferramentas ao seu alcance, consigam resolver problemas novos ou desenhar equipamentos que possam representar avanços originais. Por esta razão, sistemas versáteis de simulação (a custos relativamente baixos) são muito bem recebidos pela comunidade científica e acadêmica, seja para fins puramente didáticos, seja para fins de pesquisa científica ou desenvolvimento instrumental. Seguindo estas linhas, este artigo descreve a construção de um instrumento virtual usando um sistema de aquisição de dados que integra um conhecido software e um método físico particular. O dispositivo permite plotar as curvas dos dados adquiridos e fazer diferentes análises sobre os mesmos. Mesmo tendo sido desenvolvido para uma aplicação particular (obter curvas de histerese de fitas magnéticas macias), o sistema é suficientemente flexível como para ser utilizado, após pequenas mudanças, em outras aplicações magnéticas, ou após mudanças um pouco mais trabalhosas, em instrumentos para a medição de outras grandezas físicas. O artigo, por fim, dá os passos necessários para a abordagem de outros problemas que envolvam a aquisição de dados e o processamento dos mesmos.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     instrumentação virtual; LabVIEW software/hardware; curva de histerese e caracterização magnética
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     Increasingly, the use of computers (especially using open-access programs) is tapped in science education in general and particularly in Physics. Furthermore, the scientific instrumentation remains costly and diﬃcult to maintain. Finally, it is desirable that students are able to go beyond the simple reproduction of known results, and that with the tools at their disposal, can solve new problems or designing equipment that can represent unique advances. For these reasons, versatile simulation systems (at relatively low cost), are very well received by the scientific and academic communities, either for purely educational purposes, either for scientific research or instrumental development. Following these lines, this article describes the construction of a virtual instrument using a data acquisition system, which includes a well-known software and a particular physical method. The device allows to plot the curves of acquired data and make different analyzes on them. Although it was designed for a particular application (obtaining hysteresis curves of soft magnetic tapes), the system is flexible enough to be used after minor changes in other magnetic applications, or after changes slightly more laborious, as instruments for measuring other physical quantities. The article ultimately gives the necessary steps to address other problems involving the data acquisition and processing.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     virtual instrumentation; software/hardware LabVIEW; hysteresis loop and magnetic characterization
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     O instrumento virtual desenvolvido neste trabalho consiste de uma plataforma de aquisição de dados compacta e autoexecutável. A plataforma escolhida foi a NI myDAQ, da National Instruments que foi conectada a uma unidade de teste (UT), como explicado mais adiante.
+    </p>
+    <p>
+     O NI myDAQ
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] 
+					http://www.ni.com/mydaq/what-is/pt/.
+       </span>
+       <br/>
+       <a href="http://www.ni.com/mydaq/what-is/pt/" target="_blank">
+        http://www.ni.com/mydaq/what-is/pt/...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     é um dispositivo de aquisição de dados (DAQ), portátil e compacto de baixo custo alimentado por USB. Ele permite a análise, processamento e controle de sinais em tempo real ou em simulação e inclui dois canais diferenciais de entradas analógicas, com taxa de amostragem de 200 kS/s, resolução de 16 bits e amplitude de entrada variável de até ±10 V, e provê oito linhas de entrada/saída digital, fornecendo alimentação para circuitos simples com fontes de +5, +15 e -15 V. Para as aplicações de controle, o NI myDAQ possui 8 instrumentos plug-and-play, baseados em LabVIEW
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] N. Ertugrul, in: LabVIEW for Electric Circuits, Machines, Drives, and Laboratories, edited by Bernard Goodwin and Michelle Vincenti, (Prentice Hall, New Jersey, 2002), p. 85-109.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , incluindo um multímetro digital (DMM), osciloscópio e gerador de funções. É muito útil e ilustrativo para estudantes, já que estes podem acessar todos os instrumentos de software (virtuais) para executarem projetos e experimentos com várias ferramentas de análise e geração de sinais.
+    </p>
+    <p>
+     Um amplificador de áudio foi usado entre as duas visando o casamento de impedância do circuito, além da amplificação do sinal de entrada/saída. O software utilizado foi o LabVIEW
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] N. Ertugrul, in: LabVIEW for Electric Circuits, Machines, Drives, and Laboratories, edited by Bernard Goodwin and Michelle Vincenti, (Prentice Hall, New Jersey, 2002), p. 85-109.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , versão 12.0, que é uma ferramenta de desenvolvimento relativamente simples e com considerável robustez operacional. O software utilizado permite um ambiente de fácil desenvolvimento que pode ser personalizado, de acordo com a necessidade de cada aplicação, como será ilustrado ao longo da apresentação.
+    </p>
+    <p>
+     Em trabalhos de desenvolvimento de sensores magnéticos de alta resolução é fundamental um levantamento magnético completo do material que será utilizado como núcleo do sensor e naturalmente das curvas de histerese associadas. Os equipamentos comerciais para este tipo de medição, principalmente operando na faixa de quilo-hertz, são de custo elevado. Uma alternativa para conseguir estes resultados, com medições de boa qualidade e custo bem menor, é apresentada neste trabalho, que consiste no desenvolvimento de um histeresímetro virtual usando o software LabVIEW (Laboratory Virtual Instrument Engineering Workbench) e uma plataforma de aquisição de dados integrada ao mesmo. O sistema permite obter as curvas de histerese na preparação de fitas magnéticas macias: amorfas e nanocristalinas, que serão utilizadas como núcleos de futuros sensores magnéticos (chamados, nesta aplicação,
+     <i>
+      fluxgates
+     </i>
+     ).
+    </p>
+    <p>
+     O magnetometro fluxgate é usado em medições de campos magnéticos de baixa intensidade, como o campo magnético da Terra (até a ordem de 40.000 nT). Este dispositivo permite a medição de campos geomagnéticos, ou de suas variações, com elevada precisão (ao redor de 1 nT), com pequeno consumo, baixo nível de ruído e ampla faixa dinâmica de operação
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] L.C.C. Benyosef e M.A. Novak, Revista de Física Aplicada e Instrumentação 11, 131 (1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Dessa maneira o fluxgate é rotineiramente aplicado em prospecção mineral, pesquisas espaciais e no monitoramento contínuo das variações geomagnéticas através dos observatórios magnéticos. No Brasil, este pioneirismo é do Observatório Nacional que em 1827 começou a realizar tais medições e que desde 1915 mantém operando, durante as 24 horas do dia, um dos mais antigos observatórios magnéticos da América Latina, o Observatório Magnético de Vassouras, situado na cidade de mesmo nome no estado do Rio de Janeiro.
+    </p>
+    <p>
+     Na seleção das ligas magnéticas a serem utilizadas como núcleos dos sensores fluxgate de alta resolução, no Laboratório de Desenvolvimento de Sensores Magnéticos (LDSM/ON) têm sido utilizados materiais amorfos da família CoFeBSi
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] L.C.C. Benyosef, G.C. Stael and M. Bochner, Mat. Res. [online] 11, 145 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Na preparação dos sensores em uma etapa preliminar, faz-se uma analise rigorosa das curvas de histerese das fitas antes e depois dos tratamentos térmicos aos que são submetidas visando aumentar sua sensibilidade e reduzir o nível dos ruídos dos sensores, individualmente, em um verdadeiro estado de arte.
+    </p>
+    <p>
+     O sistema descrito neste trabalho foi montado visando unicamente a obtenção das curvas de histerese das fitas magnéticas submetidas à excitação com corrente alternada e frequências da ordem de 15 kHz, que não é encontrada na literatura especializada. O restante do trabalho está organizado da seguinte maneira: na Seção 2 são apresentados os materiais e métodos utilizados (que são descritos para a aplicação particular do nosso interesse mas que podem ser facilmente traduzidos para outras grandezas físicas que se deseje medir); na Seção 3 é descrita a aplicação em LabVIEW (que é bem mais geral e, por tanto, ainda mais facilmente espelhada para outras aplicações); na Seção 4 são apresentados os resultados e feita a discussão dos mesmos e, finalmente, na Seção 5, são apresentadas as nossas conclusões tanto do ponto de vista da nossa aplicação particular, quanto da potencial extensão deste tipo de sistema para outras aplicações. Por isto, além de ser de interesse para esta aplicação particular, traça as linhas gerais para o desenvolvimento de qualquer instrumento científico que possa basear o seu funcionamento em um sistema sensor e outro de processamento.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Materiais e métodos
+    </h1>
+    <p>
+     A unidade de testes (UT) foi montada usando uma estrutura tubular, não magnética, de PVC, com dois enrolamentos, um para excitação (primário) e outro para detecção (secundário) com os seguintes valores (ver
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     ):
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Caracterização de amostras magnéticas através do osciloscópio digital Tektronix.
+      <br/>
+     </div>
+    </div>
+    <div>
+     <ul list-type="bullet">
+      <li>
+       <p>
+        comprimento: 65 mm
+       </p>
+      </li>
+      <li>
+       <p>
+        diâmetro: 8.5 mm
+       </p>
+      </li>
+      <li>
+       <p>
+        bobina primária: 250 espiras
+       </p>
+      </li>
+      <li>
+       <p>
+        bobina secundária: 250 espiras
+       </p>
+      </li>
+      <li>
+       <p>
+        diâmetro do fio: 0,18 mm (AWG33);
+       </p>
+      </li>
+      <li>
+       <p>
+        área de seção reta: 6,36 x 10
+        <sup>
+         -5
+        </sup>
+        m
+        <sup>
+         2
+        </sup>
+        ;
+       </p>
+      </li>
+      <li>
+       <p>
+        resistor shunt (
+        <i>
+         R
+        </i>
+        <sub>
+         1
+        </sub>
+        ): 10 ohms.
+       </p>
+      </li>
+     </ul>
+    </div>
+    <p>
+     Na formulação dos procedimentos para a obtenção da curva de histerese pode-se considerar que
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/ChjjtFgw4y5jVjwtVSyCxtN/a2e8a4f2edfaf083f09e49cd06860233f313d1c3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      i
+      <sub>
+       p
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) é a intensidade de corrente no primário,
+     <i>
+      N
+      <sub>
+       p
+      </sub>
+     </i>
+     o número de espiras no primário,
+     <i>
+      l
+      <sub>
+       m
+      </sub>
+     </i>
+     o comprimento e
+     <i>
+      v
+      <sub>
+       r
+      </sub>
+     </i>
+     <sub>
+      1
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) a tensão no resistor
+     <i>
+      R
+     </i>
+     <sub>
+      1
+     </sub>
+     . Pode-se notar, pela
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (1)
+     </a>
+     que os valores de
+     <i>
+      H
+     </i>
+     aumentam com o numero de espiras no primário e é reduzido com o aumento do comprimento, considerando a mesma intensidade de corrente. Portanto, a intensidade do campo gerado pelo sistema depende dos parâmetros e dimensões e da geometria da bobina
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] L.C.C. Benyosef, G.C. Stael and M. Bochner, Mat. Res. [online] 11, 145 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Considerando que a força eletromotriz induzida no secundário,
+     <i>
+      V
+      <sub>
+       sec
+      </sub>
+     </i>
+     , é igual à taxa da variação temporal do fluxo magnético sobre o enrolamento secundário, conforme a equação
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/ChjjtFgw4y5jVjwtVSyCxtN/6f4a388089e398103d4f75c8c7dc548f283f9e67.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     pode-se determinar a indução magnética
+     <i>
+      B
+     </i>
+     resultante da força eletromotriz
+     <i>
+      V
+      <sub>
+       sec
+      </sub>
+     </i>
+     a partir da integração da
+     <a class="open-asset-modal" data-target="#ModalSchemee2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     , obtendo
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/ChjjtFgw4y5jVjwtVSyCxtN/aacd5b44d3029f7fece509cf7162b273fec98ca2.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      V
+      <sub>
+       sec
+      </sub>
+     </i>
+     é a tensão induzida no secundário,
+     <i>
+      A
+     </i>
+     é a area permeada pelo fluxo é
+     <i>
+      N
+      <sub>
+       S
+      </sub>
+     </i>
+     é o número de espiras no secundário. A partir das medidas realizadas, a intensidade do campo magnético
+     <i>
+      H
+     </i>
+     e a densidade do fluxo magnético
+     <i>
+      B
+     </i>
+     são calculadas durante a fase de pós-processamento com base nas
+     <a class="open-asset-modal" data-target="#ModalSchemee1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eqs. (1)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemee3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (3)
+     </a>
+     . A determinação das propriedades magnéticas para a histerese, ou seja, a relação entre a intensidade do campo magnético
+     <i>
+      H
+     </i>
+     , e a densidade do fluxo
+     <i>
+      B
+     </i>
+     , em materiais ferromagnéticos está representada na própria curva de magnetização.
+    </p>
+    <p>
+     Inicialmente a UT foi utilizada com o método de Rowland
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] N. Schmidt and H. Guldner, Magnetics, IEEE Transactions 32, 489 (1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] E. Lüdke, Revista Brasileira de Ensino de Física 32, 1504 (2010).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     e o osciloscópio digital Tektronix TDS 2024B de quatro canais, 200 MHz, para o registro do laço de histerese, dinâmico, da amostra magnética.
+    </p>
+    <p>
+     Esse método permite resultados consistentes, mas em contrapartida requer uma longa preparação de procedimentos
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] B. Koprivica, A. Milovanoviæ and M. Djekiæ, Serbian Journal of Electrical Engineering 6, 451 (2009).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     como a calibração prévia dos equipamentos e a seleção adequada da resistência e do capacitor para montagem do elemento RC no circuito secundário. A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     mostra a montagem, que poderia ser chamada tradicional, do sistema, destacando o elemento sensor, a fita amorfa no interior das bobinas e o circuito acoplado ao osciloscópio.
+    </p>
+    <p>
+     De acordo com o sistema apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     a histerese pode ser obtida conectando a tensão V1 na entrada X e a tensão V2 na entrada Y do osciloscópio, sendo que a primeira tensão é proporcional ao campo H e a segunda à indução B.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Aplicação em Labview
+    </h1>
+    <p>
+     O instrumento virtual desenvolvido consiste de uma plataforma de aquisição de dados compacta e autoexecutável, alimentada através de um cabo USB por um computador com sistema operacional Windows XP. Esta plataforma fornece dois canais diferenciais de entradas analógicas e duas saídas analógicas com amostragem de 200 kS/s, resolução de 16-bit e amplitude de até ± 10 V que serão usados para avaliar os valores da densidade de fluxo magnético e intensidade do campo magnético na amostra.
+    </p>
+    <p>
+     Paralelamente, a plataforma de aquisição de dados é interligada à UT composta pelo sistema de bobinas antes descrito. O enrolamento primário faz a excitação da amostra usando um sinal senoidal gerado pela própria placa de aquisição com frequência variando de 1 a 15 kHz e ± 5 V de amplitude. Esta corrente é proporcional à resistência "Shunt" e determinará a intensidade do campo magnetizante
+     <i>
+      H
+     </i>
+     . A tensão induzida no enrolamento secundário é lida e utilizada para calcular o fluxo magnético através de um integrador digital
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] P. Kis and A. Iványi, Journal of Electrical Engineering 53, 10/S (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Este procedimento tem a finalidade de substituir o circuito externo RC.
+    </p>
+    <p>
+     As
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 2
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     mostram a configuração adotada no nosso trabalho, ou seja, a plataforma NI myDAQ, a UT com as bobinas, o amplificador de áudio e algumas das fitas magnéticas macias utilizadas para medir e registrar a histerese com frequência 15 kHz.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Configuração para medição e registro da histerese.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Unidade de testes (UT) e a placa de aquisição de dados. Abaixo da UT pode-se observar as fitas em estudo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     As impedâncias da placa de aquisição de dados e da bobina são consideradas utilizando um buffer com alta impedância de entrada e baixa impedância de saída e neste projeto essa dificuldade foi superada com auxílio de um amplificador de áudio entre a placa myDAQ e a UT.
+    </p>
+    <p>
+     Outro ponto importante a ser considerado, para a correta configuração do dispositivo de aquisição, é a taxa de amostragem, a qual deve ser ajustada de forma correta, pois se for baixa, os sinais não serão reproduzidos corretamente gerando o efeito Aliasing. Por outro lado, frequências de amostragem elevadas resultam em arquivos de dados demasiadamente grandes.
+    </p>
+    <p>
+     O procedimento realizado em ambiente LabVIEW pode ser dividido em três etapas: 1 - o acesso ao dispositivo DAQ
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] Z. Pólik and M. Kuczmann, Journal of Optoelectronics and Advanced Materials 10, 1861 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     para geração dos dados da excitação da amostra e aquisição dos dados de corrente e tensão; 2 - o processamento dos dados adquiridos que resultam em valores de campo magnético e fluxo magnético
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] P. Kis, M. Kuczmann, J. Füzi and A. Iványi, Physica B: Condensed Matter 343, 357 (2004).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     ; 3 -o armazenamento das grandezas geradas para analise posterior.
+    </p>
+    <p>
+     Uma das vantagens adicionais desta plataforma é de poder controlar os parâmetros além de realizar o armazenamento dos valores medidos em tempo real
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] P. Kis, M. Kuczmann, J. Füzi and A. Iványi, Physica B: Condensed Matter 343, 357 (2004).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] M. Kuczmann, Journal of Optoelectronics and Advanced Materials 10, 1828 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Para facilitar a interação com o usuário foi montado um painel frontal,
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , o qual possibilita a alteração dos parâmetros do sistema permitindo ainda a visualização dos dados adquiridos e processados. Na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     se faz notar que na nossa montagem foi suprimida, também, a necessidade de um osciloscópio.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Painel frontal – curva BH.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na primeira etapa do diagrama de blocos,
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     , foram desenvolvidas duas cadeias de código: uma para as entradas analógicas e outra para a saída analógica.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Diagrama de blocos para geração e medição do sinal analógico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A segunda etapa do diagrama de blocos,
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     , trata do processamento dos sinais adquiridos, através do filtro e da integração digital
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] Z. Pólik and M. Kuczmann, J. Optoelectronics and Advanced Materials 10, 1861 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , para o correto cálculo dos valores de campo magnético e fluxo magnético, de forma a possibilitar a criação das curvas de magnetização.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Bloco para processamento de dados.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em detalhes, a
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     mostra o diagrama em blocos do LabVIEW para obtenção dos parâmetros para aquisição do campo magnético H e do fluxo magnético B.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Aquisição de campo e fluxo magnético.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A partir da curva, o software também fornece informações sobre os valores máximos do campo e do fluxo magnético.
+    </p>
+    <p>
+     A terceira etapa do diagrama em blocos,
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     , tem a função de realizar o armazenamento dos dados das intensidades do campo magnético e do fluxo magnético.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Bloco de registro e armazenamento de dados.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Apesar deste trabalho se limitar à metodologia aplicada neste sistema para obtenção da curva de histerese, o que é realizado mediante ajustes na programação do LabVIEW, outras grandezas também poderiam ser medidas (permeabilidade magnética relativa, fluxo remanescente e o campo coercitivo, entre outras, mediante adequações neste mesmo sistema)
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] L.C.C. Benyosef e M.A. Novak, Revista de Física Aplicada e Instrumentação 11, 131 (1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados e discussão
+    </h1>
+    <p>
+     Os valores de H e B foram obtidos através do bloco (mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     ) com funções pré-definidas Ψ
+     <sub>
+      <i>
+       RMS
+      </i>
+     </sub>
+     , que calculam o valor quadrático médio ou valor eficaz que é o que realmente é detectado pelo sistema. É claro que este valor pode ser calculado para séries de valores discretos ou para valores de funções variáveis contínuas.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Bloco predefinido de valores em RMS.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     mostra duas parcelas de um mesmo ciclo de histerese obtido para uma fita amorfa CoFe-SiB antes de ser submetida a tratamentos térmicos (
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10a
+     </a>
+     ), e após o tratamento termomecânico (
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10b
+     </a>
+     ) usando uma frequência de 15 kHz.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      a) Curva de histerese para uma fita CoFeSiB sem tratamento termomecânico. b) Curva de histerese para a mesma fita CoFeSiB após ter sido submetida a tratamento termomecânico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     De acordo com a
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10b
+     </a>
+     , pode ser observado que houve uma redução no campo coercitivo, o que na pratica favorece a obtenção de sensores fluxgate com maior sensibilidade e menor nível de ruídos.
+    </p>
+    <p>
+     Não incluímos aqui os detalhes do tratamento por não serem relevantes ao objetivo do trabalho (desenvolvimento de instrumentos virtuais para medição e caraterização de propriedades físicas). Eles podem ser consultados em trabalhos anteriores
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] L.C.C. Benyosef e M.A. Novak, Revista de Física Aplicada e Instrumentação 11, 131 (1996).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] L.C.C. Benyosef, G.C. Stael and M. Bochner, Mat. Res. [online] 11, 145 (2008).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusões
+    </h1>
+    <p>
+     Fitas magnéticas macias podem ter suas propriedades magnéticas facilmente avaliadas usando a técnica proposta neste trabalho, que tem custos menores do que os obtidos em equipamentos comerciais similares. O sistema de utilização da plataforma NI myDAQ permite ainda que os dados obtidos possam ser transferidos diretamente para um computador, facilitando a análise e o armazenamento.
+    </p>
+    <p>
+     Este método permite avaliar fitas magnéticas macias com frequências de até 15 kHz.
+    </p>
+    <p>
+     Devemos chamar a atenção para o fato que o instrumento aqui apresentado poderia ser usado em laboratórios acadêmicos para experiências de magnetismo, física do estado sólido e ciência de materiais, entre outros.
+    </p>
+    <p>
+     Mediante ajustes na programação do LabVIEW e usando a mesma plataforma outras propriedades magnéticas podem ser facilmente avaliadas. Fica claro que a aplicação a outras medições ou instrumentos fica bastante facilitado seguindo passos similares aos aqui aplicados, a saber:
+    </p>
+    <div>
+     <ol type="1">
+      <li>
+       <p>
+        Identificação da grandeza física a ser medida,
+       </p>
+      </li>
+      <li>
+       <p>
+        Montagem/simulação do instrumento apropriado para essa aplicação,
+       </p>
+      </li>
+      <li>
+       <p>
+        Montagem/simulação das ferramentas de análise necessárias para ela.
+       </p>
+      </li>
+     </ol>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos ">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     A CAPES pela bolsa de estudos de P.F.O.R. e à National Instruments Inc. pelo apoio técnico. A.R.R.P. agradece ao CNPq pela Bolsa de Produtividade.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        http://www.ni.com/mydaq/what-is/pt/
+        <br/>
+        <a href="http://www.ni.com/mydaq/what-is/pt/" target="_blank">
+         » http://www.ni.com/mydaq/what-is/pt/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        N. Ertugrul, in:
+        <i>
+         LabVIEW for Electric Circuits, Machines, Drives, and Laboratories
+        </i>
+        , edited by Bernard Goodwin and Michelle Vincenti, (Prentice Hall, New Jersey, 2002), p. 85-109.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        L.C.C. Benyosef e M.A. Novak, Revista de Física Aplicada e Instrumentação
+        <b>
+         11
+        </b>
+        , 131 (1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        L.C.C. Benyosef, G.C. Stael and M. Bochner, Mat. Res. [online]
+        <b>
+         11
+        </b>
+        , 145 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        N. Schmidt and H. Guldner, Magnetics, IEEE Transactions
+        <b>
+         32
+        </b>
+        , 489 (1996).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        E. Lüdke, Revista Brasileira de Ensino de Física
+        <b>
+         32
+        </b>
+        , 1504 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        B. Koprivica, A. Milovanoviæ and M. Djekiæ, Serbian Journal of Electrical Engineering
+        <b>
+         6
+        </b>
+        , 451 (2009).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        P. Kis and A. Iványi, Journal of Electrical Engineering
+        <b>
+         53
+        </b>
+        , 10/S (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        Z. Pólik and M. Kuczmann, Journal of Optoelectronics and Advanced Materials
+        <b>
+         10
+        </b>
+        , 1861 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        P. Kis, M. Kuczmann, J. Füzi and A. Iványi, Physica B: Condensed Matter
+        <b>
+         343
+        </b>
+        , 357 (2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        A.M.A. Almeida, F.C.F. Guerra, R.C.S. Freire, e B.A. Luciano, in:
+        <i>
+         XVIII Congresso Brasileiro de Automática
+        </i>
+        , Bonito, 2010, pp. 635-639.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        M. Kuczmann, Journal of Optoelectronics and Advanced Materials
+        <b>
+         10
+        </b>
+        , 1828 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        Z. Pólik and M. Kuczmann, J. Optoelectronics and Advanced Materials
+        <b>
+         10
+        </b>
+        , 1861 (2008).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        11 Jun 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        08 Nov 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        <img alt="Creative Common - by 4.0" src="https://licensebuttons.net/l/by/4.0/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

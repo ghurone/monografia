@@ -1,0 +1,4045 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 33 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2011
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172011000100010" target="_blank">
+    https://doi.org/10.1590/S1806-11172011000100010
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172011000100010">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Física de plasma espacial utilizando simulação computacional de partículas
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Space plasma physics via computational particle simulation
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     F.J.R. Simões Jr
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Pelotas,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal de Pelotas,  Departamento de Física ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     E. Costa Jr
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  São José dos Campos,  
+          ,  São Paulo,  
+        ,  Instituto Nacional de Pesquisas Espaciais,  Laboratório Associado de Plasma ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     M.V. Alves
+    </span>
+   </a>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     F.R. Cardoso
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  São José dos Campos,  
+          ,  São Paulo,  
+        ,  Instituto Nacional de Pesquisas Espaciais,  Laboratório Associado de Plasma ,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste artigo convidamos os leitores a descobrir o mundo dos "experimentos computacionais" (ou simulações computacionais) para plasma espacial. O experimento computacional é semelhante ao experimento tradicional realizado em laboratório. Ele não é, e não será capaz de solucionar todos os problemas físicos que permanecem incompreendidos, mas fornece uma poderosa ferramenta para auxiliar os físicos (cientistas) a buscar soluções dos mesmos. Apresentamos neste trabalho algumas características das simulações computacionais e exemplos onde estas simulações podem ser aplicadas. Para uma melhor compreensão é recomendável que o leitor tenha conhecimentos básicos em física de plasmas e eletromagnetismo, uma vez que utilizamos estes conhecimentos para desenvolver este trabalho.
+    </p>
+    <p>
+     plasmas espaciais; simulação computacional; códigos PIC
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this paper we invite the readers to discover the world of "computational experiments" (or computer simulation) of space plasmas. The computational experiment is similar to those traditionally made in laboratory. It is not purpose to solve all the physical problems that remain misunderstood, but provides a powerful tool to help physicists (scientists) in the search of their solution. We present some characteristics of computer simulations and examples where these simulations can be applied. For a better understanding of this paper it is recommended that the reader have a basic knowledge in plasma physics and electromagnetism, since we use these concepts to develop this work.
+    </p>
+    <p>
+     space plasmas; Computer simulation; PIC codes
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      ARTIGOS GERAIS
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Física de plasma espacial utilizando simulação computacional de partículas
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Space plasma physics via computational particle simulation
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     F.J.R. Simões Jr.I,
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: 
+        fernando.simoes@ufpel.edu.br.
+       </span>
+      </span>
+     </span>
+     ; E. Costa Jr.
+     <sup>
+      <b>
+       II
+      </b>
+     </sup>
+     ; M.V. Alves e F.R. Cardoso
+     <sup>
+      <b>
+       II
+      </b>
+     </sup>
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      I
+     </sup>
+     Departamento de Física, Universidade Federal de Pelotas, Campus UFPel Capão do Leão, Pelotas, RS, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      II
+     </sup>
+     Laboratório Associado de Plasma, INPE, São José dos Campos, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste artigo convidamos os leitores a descobrir o mundo dos "experimentos computacionais" (ou simulações computacionais) para plasma espacial. O experimento computacional é semelhante ao experimento tradicional realizado em laboratório. Ele não é, e não será capaz de solucionar todos os problemas físicos que permanecem incompreendidos, mas fornece uma poderosa ferramenta para auxiliar os físicos (cientistas) a buscar soluções dos mesmos. Apresentamos neste trabalho algumas características das simulações computacionais e exemplos onde estas simulações podem ser aplicadas. Para uma melhor compreensão é recomendável que o leitor tenha conhecimentos básicos em física de plasmas e eletromagnetismo, uma vez que utilizamos estes conhecimentos para desenvolver este trabalho.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     plasmas espaciais, simulação computacional, códigos PIC.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     In this paper we invite the readers to discover the world of "computational experiments" (or computer simulation) of space plasmas. The computational experiment is similar to those traditionally made in laboratory. It is not purpose to solve all the physical problems that remain misunderstood, but provides a powerful tool to help physicists (scientists) in the search of their solution. We present some characteristics of computer simulations and examples where these simulations can be applied. For a better understanding of this paper it is recommended that the reader have a basic knowledge in plasma physics and electromagnetism, since we use these concepts to develop this work.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     space plasmas, Computer simulation, PIC codes.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Tradicionalmente, o método científico envolve a interpretação mútua entre os experimentos de laboratório e as teorias feitas em "papel e caneta". No laboratório, os experimentos são realizados diversas vezes de forma controlada, permitindo ao cientista observar qual o comportamento do sistema e a descrição física mais adequada para explicar o fenômeno estudado. Por vários anos as teorias foram obtidas com sucesso desta forma. Nas últimas décadas, com o avanço tecnológico, um outro tipo de experimento foi introduzido para auxiliar os cientistas a modelar a forma complexa dos fenômenos que regem as leis da natureza. Este tipo de experimento é chamado de "experimento computacional" ou "simulação computacional".
+    </p>
+    <p>
+    </p>
+    <p>
+     O experimento computacional surgiu para diminuir a lacuna existente entre teoria e experimentos de laboratório. A idéia básica de um experimento computacional é simular de forma controlada o comportamento físico de um sistema complexo resolvendo um conjunto de equações matemáticas baseado em um modelo físico-matemático fundamental e bem aceito pela comunidade científica.
+    </p>
+    <p>
+    </p>
+    <p>
+     Embora similares às técnicas tradicionais usadas em laboratório nas quais os parâmetros físicos são variados de maneira controlada, os experimentos computacionais fornecem algumas vantagens: podemos obter informações detalhadas do sistema; os diagnósticos são não invasivos, ou seja, não perturbam o sistema; os efeitos físicos podem ser considerados ou não, permitindo identificar qual é o agente causador mais significante para um determinado fenômeno observado e principalmente, os experimentos podem ser reproduzidos de forma semelhante, sem influência de agentes externos. Apresentam ainda a vantagem de permitirem a investigação de fenômenos lineares, não lineares e dependentes do tempo. Em geral, nos experimentos tradicionais a obtenção dos diagnósticos perturba o sistema estudado.
+    </p>
+    <p>
+    </p>
+    <p>
+     Quanto maior for a lacuna entre a teoria e experimento, maior será a vantagem de se usar um experimento computacional. Em plasmas espaciais os experimentos são realizados através de observações de satélites, experimentos ativos no espaço e medidas a partir da Terra, ativas e passivas. Adquirir informações através destes experimentos é bastante onerosa e demanda muito tempo. Devido à complexidade dos fenômenos que ocorrem em plasmas espaciais e a dificuldade de se obter informações
+     <i>
+      in loco
+     </i>
+     , muitas vezes apenas em uma única região do espaço, os resultados das observações podem levar a uma interpretação e compreensão errônea do fenômeno. Em alguns casos, os experimentos computacionais podem reproduzir de forma global determinados fenômenos que não poderiam ser tratados analiticamente ou experimentalmente.
+    </p>
+    <p>
+    </p>
+    <p>
+     A natureza complexa dos problemas encontrados em física de plasma espacial tem motivado o interesse e desenvolvimento de códigos para o desenvolvimento das teorias de plasmas espaciais. Em adição, simulações numéricas também ajudam no desenvolvimento de sistemas computacionais de alta performance e previsões de comportamento de novos equipamentos e experimentos de física de plasma, como reatores de fusão termo-nuclear controlada (TOKAMAK) e outros.
+    </p>
+    <p>
+    </p>
+    <p>
+     A simulação computacional de plasma compreende duas grandes áreas de atuação, uma baseada na descrição cinética e outra na descrição de fluidos,
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     . Num simulação baseada na descrição de fluidos resolve-se numericamente as equações considerando o plasma como um fluido magnetizado e que pode ou não estar eletricamente neutro. Um exemplo de aplicação da aproximação de fluido é as simulação magneto-hidrodinâmica (MHD) [1]. A simulação MHD considera o plasmas como um único fluido e é utilizada para tratar fenômenos de baixa frequência. Adotando os coeficientes apropriados, como conservação da massa, momento e energia, esta classe de simulação é usual para o estudo e entendimento da dinâmica macroscópica de um sistema.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Já as simulações cinéticas podem se constituir da resolução numérica das equações cinéticas, de Vlasov ou Fokker-Plank [1], ou da resolução numérica da equação do movimento de várias partículas carregadas, sujeitas a ação de campos eletromagnéticos, tanto os aplicados externamente quanto aos gerados pelo movimento das próprias partículas. Neste último caso, o método utilizado recebe o nome de simulação por partículas. As simulações via partículas permitem a interpretação de efeitos localizados, como efeitos não lineares por exemplo, instabilidades de ondas, difusão, aquecimento e aceleração de partículas em plasmas espaciais.
+    </p>
+    <p>
+    </p>
+    <p>
+     Os pioneiros em experimentos computacionais via partículas foram O. Buneman e J.M. Dawson que mostraram que a utilização de métodos apropriados tornam possíveis as simulações de sistemas simples, com algumas centenas de partículas, obtendo o comportamento coletivo de plasmas reais [2]. Com o surgimento de novos algoritmos e novas tecnologias na área computacional, foi possível expandir as técnicas de simulação de sistemas unidimensionais com poucas partículas para sistemas mais complexos envolvendo milhões de partículas em duas ou três dimensões.
+    </p>
+    <p>
+    </p>
+    <p>
+     Outra forma de simulação são os chamados códigos híbridos, no qual diferentes tratamentos são aplicados para diferentes componentes de um dado plasma. Estes códigos utilizam as chamadas "partículas-hidrodinâmicas", sendo as equações de fluido resolvidas por métodos de partículas [2].
+    </p>
+    <p>
+    </p>
+    <p>
+     Na realização de um experimento computacional permite-se que o sistema evolua a partir das condições iniciais de interesse. Os resultados obtidos podem ser comparados com os resultados experimentais e devem estar de acordo com a teoria, podendo ainda prever comportamentos em novos experimentos [3].
+    </p>
+    <p>
+    </p>
+    <p>
+     Dentre as técnicas de simulação computacional utilizadas para investigar plasmas, uma das mais antigas é a simulação por partículas, largamente utilizada para investigar fenômenos de plasma na magnetosfera terrestre, magnetosfera de outros planetas, vento solar e regiões de choque,
+     <i>
+      foreshocks
+     </i>
+     , de planetas e cometas [4]. Os modelos de simulação utilizando a aproximação de partículas podem ser uni, bi ou tridimensionais, dependendo do tipo de sistema estudado e dos diagnósticos necessários para a compreensão do fenômeno, podendo ser eletrostáticos, magnetostáticos e eletromagnéticos.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Importância das escalas de variação temporal e espacial na escolha dos modelos numéricos utilizados
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Estimar as escalas de tempo e espaço para estudar um determinado fenômeno e escolher um modelo numérico que melhor se encaixe nestas escalas é um dos aspectos fundamentais das simulações computacionais. Para resumir a idéia do problema das escalas de tempo e de espaço vamos considerar um exemplo utilizando a
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. (2.)
+     </a>
+     [4]. A partir desta figura podemos observar as diferentes regiões onde cada modelo numérico é mais adequado, de acordo com as características físicas do sistema.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Em sistemas onde as dimensões de espaço e tempo são da ordem de
+     <i>
+      L
+     </i>
+     &gt; 10
+     <sup>
+      4
+     </sup>
+     km e
+     <i>
+      T
+     </i>
+     &gt; 10
+     <sup>
+      2
+     </sup>
+     s a aproximação MHD é a mais apropriada, embora o regime híbrido ainda seja válido para grandes escalas, ele é mais aplicável em escalas menores do que as do regime MHD. No caso em que as escalas são compreendidas entre 10
+     <sup>
+      2
+     </sup>
+     &lt;
+     <i>
+      L
+     </i>
+     &lt; 10
+     <sup>
+      4
+     </sup>
+     <i>
+      km
+     </i>
+     e 1 &lt;
+     <i>
+      T
+     </i>
+     &lt; 10
+     <sup>
+      2
+     </sup>
+     <i>
+      s
+     </i>
+     a aproximação híbrida é mais adequada. Quando as dimensões do sistema estudado abrangem pequenos períodos de plasma e dimensões que são alguns comprimentos de Debye a aproximação por partícula é mais apropriada.
+    </p>
+    <p>
+    </p>
+    <p>
+     Caso a análise feita indique que o melhor mátodo a seguir é o de simulação por partículas, o procedimento é relativamente simples: segue-se as trajetórias das partículas no tempo e no espaço de acordo com a equação de movimento e as equações de Maxwell. Para realizar uma simulação, devemos nos lembrar que os computadores apresentam certos limites. As equações são resolvidas apenas em um número finito de pontos das região de interesse, chamados pontos de grade, que pode ser espacial ou temporal. Assim, vários métodos foram desenvolvidos para permitir a solução numérica das equações diferencias numa região bem definida, que devem ser discretizadas [5]. Em simulação via partículas, o método de
+     <i>
+      leap-frog
+     </i>
+     é utilizado para avançar a posição das partículas no tempo.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Modelo de simulação cinética
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     As simulações cinéticas têm sido aplicadas com sucesso no tratamento de problemas de física básica, nos quais, a função de distribuição das partículas desvia-se consideravelmente da distribuição Maxwelliana, quando ocorre aquecimento estocástico, aprisionamento de partículas ou ressonância onda-partícula [1].
+    </p>
+    <p>
+    </p>
+    <p>
+     As simulações MHD são, geralmente, aplicadas a problemas de grande escala, diretamente relacionados ao comportamento de dispositivos experimentais ou, por exemplo, para simular a estrutura global e dinâmica da magnetosfera em grande escala.
+    </p>
+    <p>
+    </p>
+    <p>
+     Em geral, os modelos de simulação cinética seguem o diagrama mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ., onde, primeiro determina-se o tipo de simulação e as aproximações que devem ser incluídas no modelo, o tipo de sistema estudado (eletrostático ou eletromagnético), a geometria, condições iniciais e condições de contorno. Estes três últimos são muito importantes, uma vez que, serão eles que incluirão todas as condições físicas do sistema estudado, como por exemplo, a região onde o sistema se encontra e as características desta região.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Após determinar corretamente o modelo numérico que melhor representa o sistema físico estudado, as simulações cinéticas via partículas utilizam as soluções das equações de Maxwell, baseadas em termos fontes auto-consistentes (densidade de plasma e correntes) [4], as quais são geradas a partir da posição e velocidade das partículas carregadas que representam o plasma submetido aos campos eletromagnéticos. Durante as simulações é necessário levar em conta os campos externos e os campos gerados pelo movimento das próprias partículas carregadas. Frequentemente, este processo acarreta no avanço das partículas num pequeno intervalo de tempo, ou passo temporal, Δ
+     <i>
+      t
+     </i>
+     , para coletar os termos fontes que são utilizados para calcular os campos. Uma vez obtidos os novos campos, as partículas podem ser movidas novamente de forma que se obtenha os termos fontes, atualizados, e assim o processo é repetido tantas vezes quanto necessário. Este processo é ilustrado pelo ciclo dentro do quadro da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ., que é visto em mais detalhes na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A simulação segue passo a passo, Δ
+     <i>
+      t
+     </i>
+     , usando o método numérico que garanta estabilidade e precisão numérica suficientes. O passo temporal deve ser pequeno quando comparado com o período da onda estudada, ω
+     <i>
+      <sub>
+       p
+      </sub>
+     </i>
+     Δ
+     <i>
+      t
+     </i>
+     &lt;&lt; 1, onde ω
+     <i>
+      <sub>
+       p
+      </sub>
+     </i>
+     é a frequência local do plasma. O passo temporal deve ser pequeno o suficiente para que seja possível observar as variações dos fenômenos estudados.
+    </p>
+    <p>
+    </p>
+    <p>
+     Usualmente os campos são calculados na grade espacial, a partir da carga e da densidade de corrente. A precisão requer que o espaçamento da grade, Δ
+     <i>
+      x
+     </i>
+     para uma simulação unidimensional, seja pequeno quando comparado com o menor comprimento de onda de interesse,
+     <i>
+      k
+     </i>
+     Δ
+     <i>
+      x
+     </i>
+     &lt;&lt; 1. A utilização de uma grade temporal e espacial inadequada pode introduzir um falso comportamento físico no sistema, minimizado através da escolha de parâmetros adequados para a simulação [2].
+    </p>
+    <p>
+    </p>
+    <p>
+     O ciclo se inicia em
+     <i>
+      t
+     </i>
+     = 0 com as condições iniciais apropriadas para a posição
+     <i>
+      x
+      <sub>
+       i
+      </sub>
+     </i>
+     e a velocidade
+     <i>
+      v
+      <sub>
+       i
+      </sub>
+     </i>
+     das partículas, que são representadas com o sub-índice
+     <i>
+      i
+     </i>
+     = 1,2,3,...
+     <i>
+      N
+      <sub>
+       total
+      </sub>
+     </i>
+     , onde
+     <i>
+      N
+      <sub>
+       total
+      </sub>
+     </i>
+     é o número máximo de partículas do sistema. Os campos são obtidos apenas na grade espacial, pontos discretos do espaço representados com o sub-índice
+     <i>
+      j
+     </i>
+     = 1,2,3,...
+     <i>
+      P
+      <sub>
+       total
+      </sub>
+     </i>
+     ,
+     <i>
+      <b>
+       E
+      </b>
+      <sub>
+       j
+      </sub>
+     </i>
+     ,
+     <i>
+      <b>
+       B
+      </b>
+      <sub>
+       j
+      </sub>
+     </i>
+     , onde
+     <i>
+      P
+      <sub>
+       total
+      </sub>
+     </i>
+     é o número de pontos da grade espacial. A partir da velocidade e posição das partículas calculam-se as densidades de carga e corrente na grade espacial, usando uma função de ponderação, a mesma utilizada para calcular os campos elétrico e magnético. A força, que é utilizada para mover as partículas, é obtida através de uma interpolação a partir da grade, novamente, através da função de ponderação; este ciclo segue durante toda a simulação [2,5-8].
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Discretização espaço - temporal
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Como mencionado anteriormente, vários métodos foram desenvolvidos para permitir a solução numérica de equações diferenciais que descrevem um sistema físico [5]. Um dos métodos mais utilizados para discretizar as equações diferenciais é o de diferenças finitas [5]. Uma boa aproximação para o cálculo da derivada primeira,
+     <i>
+      df/dx
+     </i>
+     , e derivada segunda,
+     <i>
+      d
+     </i>
+     <sup>
+      2
+     </sup>
+     <i>
+      f/dx
+     </i>
+     <sup>
+      2
+     </sup>
+     , de uma função
+     <i>
+      f
+     </i>
+     contínua, que varia lentamente em um intervalo Δ
+     <i>
+      x
+     </i>
+     , pode ser obtida através das Eqs. (1) e (2) utilizando o método de diferenças finitas
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="5b54413b23cde21434a318b5b2d2bb10ddbf59b0">
+     <a name="5b54413b23cde21434a318b5b2d2bb10ddbf59b0">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg5b54413b23cde21434a318b5b2d2bb10ddbf59b0" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/5b54413b23cde21434a318b5b2d2bb10ddbf59b0.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="c531250482d5b3afaf9e8283517d264859b4c49b">
+     <a name="c531250482d5b3afaf9e8283517d264859b4c49b">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgc531250482d5b3afaf9e8283517d264859b4c49b" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/c531250482d5b3afaf9e8283517d264859b4c49b.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     As
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 5
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     apresentam o esquema geométrico para a obtenção das derivadas pelo método de diferenças finitas.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Em simulação com partículas o espaço e o tempo devem ser discretizados. A discretização espacial é introduzida por duas razões. A primeira razão surge devido a forma no qual força que atua sobre as partículas é calculada [8], porque, ao invés de calcular toda a contribuição da força Coulombiana a partir de todas as partículas, a força atuando em uma super-partícula é calculada pelas quantidades dos campos definidos nos pontos da grade próximo a ela. A segunda razão surge porque a super-partícula possui tamanho finito sobre uma certa região do espaço, de forma que uma resolução espacial menor que o tamanho da super-partícula é desnecessária e sem sentido [14]. Normalmente, o espaçamento da grade espacial varia de um a três comprimentos de Debye, este valor foi obtido através de experimentos numéricos [2,9]. A estabilidade numérica está diretamente relacionada a este fator, se for escolhido um espaçamento maior que três comprimentos de Debye surgirá instabilidade numérica [8] e assim, os resultados da simulação não terão significado físico.
+    </p>
+    <p>
+    </p>
+    <p>
+     Outro fator importante é o número de partículas por ponto na grade, quanto maior o número de partícula por ponto na grade, menor serão as flutuações numéricas relacionadas ao cálculo dos campos eletromagnéticos. Um estudo mais detalhado sobre instabilidade numérica pode ser encontrado nas Refs. [15] e [16].
+    </p>
+    <p>
+    </p>
+    <p>
+     A discretização temporal é um artifício inevitável em qualquer aproximação numérica para resolver equações diferenciais parciais. Uma questão que sempre surge é: qual valor atribuir para o passo no tempo? A resposta será: sempre o menor possível. A escolha deste valor deve ser de tal forma que exista estabilidade numérica durante a simulação. Uma condição que evita a instabilidade numérica e geralmente é utilizada em simulação computacional é a condição de Courant-Fredericks-Lewy (CFL) dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="e1060aa783b79c8614aaebb36f93eef6a0e1f4cc">
+     <a name="e1060aa783b79c8614aaebb36f93eef6a0e1f4cc">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImge1060aa783b79c8614aaebb36f93eef6a0e1f4cc" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/e1060aa783b79c8614aaebb36f93eef6a0e1f4cc.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde Δ
+     <i>
+      x
+     </i>
+     é o espaçamento da grade, Δ
+     <i>
+      t
+     </i>
+     o passo temporal e
+     <i>
+      v
+      <sub>
+       max
+      </sub>
+     </i>
+     a velocidade máxima que as partículas do sistema podem adquirir. Esta condição garante que em um passo temporal a distância percorrida pelas partículas com velocidade
+     <i>
+      v
+      <sub>
+       max
+      </sub>
+     </i>
+     não será maior que Δ
+     <i>
+      x
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Por exemplo, esta condição pode ser obtida através da propagação de uma onda eletromagnética no vácuo, cuja relação de dispersão é dada por ω
+     <sup>
+      2
+     </sup>
+     =
+     <i>
+      k
+     </i>
+     <sup>
+      2
+     </sup>
+     <i>
+      c
+     </i>
+     <sup>
+      2
+     </sup>
+     , onde ω é a frequência da onda,
+     <i>
+      k
+     </i>
+     o número de onda e
+     <i>
+      c
+     </i>
+     a velocidade da luz no vácuo. Supondo que esta onda eletromagnética possa ser representada por
+     <i>
+      A
+     </i>
+     (
+     <b>
+      x
+     </b>
+     ,
+     <i>
+      t
+     </i>
+     ) =
+     <i>
+      A
+     </i>
+     <sub>
+      0
+     </sub>
+     exp[
+     <i>
+      i
+     </i>
+     (
+     <b>
+      k
+     </b>
+     ·
+     <b>
+      x
+     </b>
+     - ω
+     <i>
+      t
+     </i>
+     )] onde
+     <i>
+      A
+     </i>
+     (
+     <b>
+      x
+     </b>
+     ,
+     <i>
+      t
+     </i>
+     ) é a amplitude da onda num instante
+     <i>
+      t
+     </i>
+     e
+     <i>
+      A
+     </i>
+     <sub>
+      0
+     </sub>
+     é a amplitude no instante
+     <i>
+      t
+     </i>
+     = 0, utilizando o método de diferenças finitas, centradas no espaço e no tempo a derivada de
+     <i>
+      A
+     </i>
+     (
+     <b>
+      x
+     </b>
+     ,
+     <i>
+      t
+     </i>
+     ) em relação a
+     <i>
+      x
+     </i>
+     será dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="9d9dc9904f106b191c716210445d5d29c5b93463">
+     <a name="9d9dc9904f106b191c716210445d5d29c5b93463">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg9d9dc9904f106b191c716210445d5d29c5b93463" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/9d9dc9904f106b191c716210445d5d29c5b93463.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Comparando Δ
+     <i>
+      A
+     </i>
+     /Δ
+     <i>
+      x
+     </i>
+     com a derivada parcial espacial ∂
+     <i>
+      A
+     </i>
+     /∂
+     <i>
+      x
+     </i>
+     podemos ver que o número de onda
+     <i>
+      k
+     </i>
+     pode ser substituído por
+     <i>
+      K
+     </i>
+     representado por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="07d3fe2f51f03bf755685628f2fe34fdf3a4071f">
+     <a name="07d3fe2f51f03bf755685628f2fe34fdf3a4071f">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg07d3fe2f51f03bf755685628f2fe34fdf3a4071f" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/07d3fe2f51f03bf755685628f2fe34fdf3a4071f.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     da mesma maneira a frequência ω pode ser substituída por uma frequência Ω dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="ce4a3ecdaba11b5f864b968b8a2e3785a396df29">
+     <a name="ce4a3ecdaba11b5f864b968b8a2e3785a396df29">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgce4a3ecdaba11b5f864b968b8a2e3785a396df29" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/ce4a3ecdaba11b5f864b968b8a2e3785a396df29.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Substituindo Ω e
+     <i>
+      K
+     </i>
+     na relação de dispersão para a onda eletromagnética anterior obtemos,
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="53c5f82bae0e3b30f282cbe51f69a3584e3abeb5">
+     <a name="53c5f82bae0e3b30f282cbe51f69a3584e3abeb5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg53c5f82bae0e3b30f282cbe51f69a3584e3abeb5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/53c5f82bae0e3b30f282cbe51f69a3584e3abeb5.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     para o maior comprimento de onda
+     <i>
+      k
+      <sub>
+       max
+      </sub>
+     </i>
+     = π/Δ
+     <i>
+      x
+     </i>
+     teremos
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="74b5582abee26ef9c7e4f1bab2bbed0a18e0e528">
+     <a name="74b5582abee26ef9c7e4f1bab2bbed0a18e0e528">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg74b5582abee26ef9c7e4f1bab2bbed0a18e0e528" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/74b5582abee26ef9c7e4f1bab2bbed0a18e0e528.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Se
+     <i>
+      c
+     </i>
+     Δ
+     <i>
+      t
+     </i>
+     /Δ
+     <i>
+      x
+     </i>
+     &gt; 1, ω torna-se complexo, dando origem a instabilidade numérica, se
+     <i>
+      c
+     </i>
+     Δ
+     <i>
+      t
+     </i>
+     /Δ
+     <i>
+      x
+     </i>
+     = 1 o sistema será marginalmente estável e se
+     <i>
+      c
+     </i>
+     Δ
+     <i>
+      t
+     </i>
+     /Δ
+     <i>
+      x
+     </i>
+     &lt; 1 o sistema será estável de forma que não será introduzida instabilidade numérica, esta é a conhecida condição CFL [9].
+    </p>
+    <p>
+    </p>
+    <p>
+     Um exemplo geométrico da condição CFL pode ser visto na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     . O caso (a), a curva contínua representada por Δ
+     <i>
+      x
+     </i>
+     /Δ
+     <i>
+      t
+     </i>
+     =
+     <i>
+      v
+     </i>
+     =
+     <i>
+      c
+     </i>
+     onde
+     <i>
+      v
+     </i>
+     é a velocidade de propagação da informação no sistema, e está sobre a curva tracejada que caracteriza a velocidade
+     <i>
+      c
+     </i>
+     , mantendo o sistema marginalmente estável. Caso (b), a curva Δ
+     <i>
+      x
+     </i>
+     /Δ
+     <i>
+      t
+     </i>
+     =
+     <i>
+      v
+     </i>
+     &gt;
+     <i>
+      c
+     </i>
+     tornará o sistema numericamente instável, significando que as informações se propagarão com velocidade maior que
+     <i>
+      c
+     </i>
+     . Em (c), Δ
+     <i>
+      x
+     </i>
+     /Δ
+     <i>
+      t
+     </i>
+     =
+     <i>
+      v
+     </i>
+     &lt;
+     <i>
+      c
+     </i>
+     o sistema torna-se estável, de forma que as informações se propagam com velocidade menor que
+     <i>
+      c
+     </i>
+     , em [17] pode se obter um tratamento detalhado de soluções numéricas de equações hiperbólicas.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      5. Super-partículas
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Podemos dizer que o método de simulação por partículas consiste em acompanhar o movimento de um grande número de partículas sob a ação de forças produzidas pelo próprio movimento das partículas, como resultado da interação entre elas, e/ou campos externamente aplicados. Em geral, a região de interesse contém um número extremamente alto de partículas. Por exemplo, no meio interplanetário (região próxima ao sol), o plasma apresenta densidade de partículas típica da ordem de 10
+     <sup>
+      4
+     </sup>
+     a 10
+     <sup>
+      6
+     </sup>
+     m
+     <sup>
+      -3
+     </sup>
+     . Fazendo uma estimativa direta podemos ver que essa quantidade de partículas não é plausível na maioria dos computadores atuais pois, o número de operações aritméticas por partículas é bem elevado e assim, o tempo gasto para resolver as forças envolvidas no sistema, por passo de integração, seria muito grande, tornando as simulações impraticáveis.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para contornar este problema foi criado o conceito de super-partícula, que é um modelo matemático que representa muitas partículas de um plasma real com tamanho finito, com sua carga distribuída sobre uma região finita do espaço [9].
+    </p>
+    <p>
+    </p>
+    <p>
+     As super-partículas foram inicialmente introduzidas por dois grupos de pesquisas para suprir flutuações estatísticas e colisões de pequeno alcance causadas por uma função delta [10-13,15]. Isto é, para partículas pontuais, numericamente, o potencial tende a infinito quando o raio da partícula tende a zero. Vários métodos foram desenvolvidos para determinar as densidades de cargas e correntes das super-partículas nos pontos da grade espacial. Um dos métodos de ponderação de área desenvolvido foi o ponto da grade mais próximo,
+     <i>
+      Nearest Grid Point - (NPG)
+     </i>
+     , que pondera igualmente todas as partículas que se encontram em uma determinada distância do ponto da grade considerado [13]. Outros esquemas de ponderação das cargas para a grade são os denominados Nuvem em Célula,
+     <i>
+      Cloud In Cell (CIC)
+     </i>
+     , ou Partícula em Célula,
+     <i>
+      Particle In Cell (PIC)
+     </i>
+     , [11]. Estes dois métodos possuem uma pequena diferença: no método CIC, a posição da partícula determina o seu centro, e para o PIC a partícula é limitada pelas posições dos pontos da grade mais próximos, independente de sua posição na célula [2].
+    </p>
+    <p>
+    </p>
+    <p>
+     As super-partículas podem assumir qualquer forma, sendo que, a diferença fundamental entre elas é a maneira de acumular a carga nos pontos da grade a partir das suas posições. Entretanto, as mais utilizadas em simulação são denominadas de forma quadrada (1), forma triangular (2) e forma Gaussiana (3) [2,9,14], como apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma vez que a super-partícula é idealizada para representar muitas partículas de um plasma real, a densidade de carga, massa e energia das super-partículas devem ser as mesmas das partículas reais [9], ou seja,
+    </p>
+    <p>
+    </p>
+    <p>
+     Densidade de carga →
+     <i>
+      N
+      <sub>
+       s
+      </sub>
+      Q
+      <sub>
+       s
+      </sub>
+     </i>
+     =
+     <i>
+      N
+      <sub>
+       r
+      </sub>
+      Q
+      <sub>
+       r
+      </sub>
+     </i>
+     ;
+    </p>
+    <p>
+    </p>
+    <p>
+     Densidade de massa →
+     <i>
+      N
+      <sub>
+       sMs
+      </sub>
+     </i>
+     =
+     <i>
+      N
+      <sub>
+       rMr
+      </sub>
+     </i>
+     ;
+    </p>
+    <p>
+    </p>
+    <p>
+     Densidade de energia →
+     <i>
+      N
+      <sub>
+       s
+      </sub>
+      k
+      <sub>
+       B
+      </sub>
+      T
+      <sub>
+       s
+      </sub>
+     </i>
+     =
+     <i>
+      N
+      <sub>
+       r
+      </sub>
+      k
+      <sub>
+       B
+      </sub>
+      T
+      <sub>
+       r
+      </sub>
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Os sub-índices
+     <i>
+      s
+     </i>
+     e
+     <i>
+      r
+     </i>
+     representam a super-partícula e partícula real, respectivamente,
+     <i>
+      N
+     </i>
+     ,
+     <i>
+      Q
+     </i>
+     ,
+     <i>
+      M
+     </i>
+     ,
+     <i>
+      k
+      <sub>
+       B
+      </sub>
+     </i>
+     e
+     <i>
+      T
+     </i>
+     são, densidade numérica, carga, massa, constante de Boltzmann e temperatura, respectivamente. Estas definições garantem que todos os parâmetros físicos básicos permaneçam os mesmos para as partículas reais e para as super-partículas durante a simulação. Por exemplo, razão carga-massa, frequência de plasma, frequência ciclotrônica, velocidade térmica e comprimento de Debye,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/89073906443ed60b53134cff2a9c9ef7e62dd44a.jpg" style="max-width:100%"/>
+     , onde ω
+     <i>
+      <sub>
+       pe
+      </sub>
+     </i>
+     é a frequência eletrônica de plasma, e
+     <b>
+      v
+     </b>
+     <i>
+      <sub>
+       the
+      </sub>
+     </i>
+     é a velocidade térmica dos elétrons. As propriedades físicas do plasma devem ser reproduzidas durante a simulação.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      6. Código de simulação
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O código numérico utilizado neste trabalho é o KEMPO 1D "Kyoto university's ElectroMagnetic Particle cOde" [9,14]. Este código pode ser obtido gratuitamente no endereço eletrônico (
+     <a href="http://www.terrapub.co.jp/e-library/cspp/" target="_blank">
+      http://www.terrapub.co.jp/e-library/cspp/
+     </a>
+     ), com pequenas adaptações este código pode ser utilizado em um PC.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      6.1. Metodologia usada para resolver as equações básicas
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Como já foi dito antes, as equações básicas utilizadas são: a equação de movimento e equações de Maxwell.
+    </p>
+    <p>
+    </p>
+    <p>
+     A equação de movimento para uma partícula (identificada pelo subíndice
+     <i>
+      i
+     </i>
+     ) com carga
+     <i>
+      q
+     </i>
+     e massa
+     <i>
+      m
+     </i>
+     é dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="fe149ce2e22370188fe69fe3d81d7963ab8b38d6">
+     <a name="fe149ce2e22370188fe69fe3d81d7963ab8b38d6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgfe149ce2e22370188fe69fe3d81d7963ab8b38d6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/fe149ce2e22370188fe69fe3d81d7963ab8b38d6.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     As equações básicas acima são escritas no sistema de unidade SI. Escrevendo
+     <b>
+      F
+     </b>
+     =
+     <i>
+      q
+     </i>
+     (
+     <b>
+      E
+     </b>
+     +
+     <b>
+      v
+     </b>
+     ×
+     <b>
+      B
+     </b>
+     ) e utilizando o método de diferenças finitas as equações acima podem ser escritas na forma
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="dec7c22edfb1b69a917fb90ce2cfa0af48ce549b">
+     <a name="dec7c22edfb1b69a917fb90ce2cfa0af48ce549b">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgdec7c22edfb1b69a917fb90ce2cfa0af48ce549b" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/dec7c22edfb1b69a917fb90ce2cfa0af48ce549b.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde o índice sobrescrito representa a discretização temporal das equações.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     ilustra como a evolução temporal da posição e velocidade de cada partícula, Eqs. (11) e (12), assim como a centralização no tempo do método de
+     <i>
+      leap-frog
+     </i>
+     . O método utilizado avança
+     <b>
+      v
+     </b>
+     <i>
+      <sup>
+       t
+      </sup>
+     </i>
+     e
+     <b>
+      x
+     </b>
+     <i>
+      <sup>
+       t
+      </sup>
+     </i>
+     para
+     <b>
+      v
+     </b>
+     <sup>
+      <i>
+       t
+      </i>
+      +
+     </sup>
+     <sup>
+      Δ
+      <i>
+       t
+      </i>
+     </sup>
+     e
+     <b>
+      x
+     </b>
+     <sup>
+      <i>
+       t
+      </i>
+      +
+     </sup>
+     <sup>
+      Δ
+      <i>
+       t
+      </i>
+     </sup>
+     . Podemos notar que
+     <b>
+      v
+     </b>
+     e
+     <b>
+      x
+     </b>
+     são defasados em
+     <i>
+      t
+     </i>
+     /2.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     As partículas são avançadas da posição
+     <i>
+      x
+     </i>
+     usando a velocidade
+     <i>
+      v
+      <sub>
+       x
+      </sub>
+     </i>
+     . Em cada passo temporal Δ
+     <i>
+      t
+     </i>
+     , a posição das partículas são avançadas duas vezes, cada uma delas por um passo Δ
+     <i>
+      t
+     </i>
+     /2, conforme o modelo abaixo,
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="558e88079e5933c6d477c22e03ecada27551633a">
+     <a name="558e88079e5933c6d477c22e03ecada27551633a">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg558e88079e5933c6d477c22e03ecada27551633a" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/558e88079e5933c6d477c22e03ecada27551633a.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A velocidade das partículas é obtida integrando a equação de movimento (10) que através do método de diferenças finitas torna-se
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="10b902a841179c74349aa342b56cbd6770d5ae0b">
+     <a name="10b902a841179c74349aa342b56cbd6770d5ae0b">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg10b902a841179c74349aa342b56cbd6770d5ae0b" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/10b902a841179c74349aa342b56cbd6770d5ae0b.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Introduzindo novas variáveis
+     <b>
+      v
+      <sup>
+       -
+      </sup>
+     </b>
+     e
+     <b>
+      v
+      <sup>
+       +
+      </sup>
+     </b>
+     na forma
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="b3e0a9980f2158332f616ff01787b06c129520c8">
+     <a name="b3e0a9980f2158332f616ff01787b06c129520c8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgb3e0a9980f2158332f616ff01787b06c129520c8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/b3e0a9980f2158332f616ff01787b06c129520c8.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Substituindo as Eqs. (16) e (17) na Eq. (15) obtemos
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="4d319df58309c7c2433c4c1e1603cb000062eb29">
+     <a name="4d319df58309c7c2433c4c1e1603cb000062eb29">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg4d319df58309c7c2433c4c1e1603cb000062eb29" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/4d319df58309c7c2433c4c1e1603cb000062eb29.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Aplicando o produto escalar na Eq. (18) com (
+     <b>
+      v
+      <sup>
+       +
+      </sup>
+     </b>
+     +
+     <b>
+      v
+      <sup>
+       -
+      </sup>
+     </b>
+     ), vamos obter
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="1a7c5282a6b988e16e9c8fa82df83745680b0bea">
+     <a name="1a7c5282a6b988e16e9c8fa82df83745680b0bea">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg1a7c5282a6b988e16e9c8fa82df83745680b0bea" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/1a7c5282a6b988e16e9c8fa82df83745680b0bea.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O termo do lado direito da Eq. (18) torna-se nulo na Eq. (19). Isso ocorre porque o vetor obtido no produto vetorial é perpendicular a ambos os vetores, assim, o produto escalar deste novo vetor com qualquer um dos anteriores será nulo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Portanto, verificamos que o termo da força magnética é apenas responsável pela variação da direção de movimento das partículas, não alterando a magnitude da velocidade. A partir da Eq. (19) obtemos
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="b673af0297c398c60e7bae832c80f7b8a05af630">
+     <a name="b673af0297c398c60e7bae832c80f7b8a05af630">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgb673af0297c398c60e7bae832c80f7b8a05af630" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/b673af0297c398c60e7bae832c80f7b8a05af630.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A partir da
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     vemos que a Eq. (18) representa apenas uma rotação com ângulo θ dado por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="38f87e63a04d7ee18b0104c2e3bb192411c3b0ea">
+     <a name="38f87e63a04d7ee18b0104c2e3bb192411c3b0ea">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg38f87e63a04d7ee18b0104c2e3bb192411c3b0ea" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/38f87e63a04d7ee18b0104c2e3bb192411c3b0ea.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A velocidade das partículas é obtida seguindo quatro passos conforme mostrado abaixo, este procedimento é chamado de método de Buneman-Boris [2]
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="beca2f3f7155552803560cf07ee4ed461d8fa09e">
+     <a name="beca2f3f7155552803560cf07ee4ed461d8fa09e">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgbeca2f3f7155552803560cf07ee4ed461d8fa09e" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/beca2f3f7155552803560cf07ee4ed461d8fa09e.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <b>
+      E
+     </b>
+     <i>
+      <sup>
+       t
+      </sup>
+     </i>
+     e
+     <b>
+      B
+     </b>
+     <i>
+      <sup>
+       t
+      </sup>
+     </i>
+     são os campos elétrico e magnético interpolados linearmente a partir dos valores obtidos nos pontos da grade. A quantidade (
+     <i>
+      q
+     </i>
+     /
+     <i>
+      m
+     </i>
+     )
+     <i>
+      <sub>
+       s
+      </sub>
+     </i>
+     é a razão carga massa das espécies
+     <i>
+      s
+     </i>
+     , e
+     <b>
+      v
+     </b>
+     ,
+     <b>
+      E
+     </b>
+     e
+     <b>
+      B
+     </b>
+     são quantidades vetoriais.
+    </p>
+    <p>
+    </p>
+    <p>
+     As componentes dos campos elétrico
+     <b>
+      E
+     </b>
+     ≡ (
+     <i>
+      E
+      <sub>
+       x
+      </sub>
+     </i>
+     ,
+     <i>
+      E
+      <sub>
+       y
+      </sub>
+     </i>
+     ,
+     <i>
+      E
+      <sub>
+       z
+      </sub>
+     </i>
+     ) e magnético
+     <b>
+      B
+     </b>
+     ≡ (
+     <i>
+      B
+      <sub>
+       x
+      </sub>
+     </i>
+     ,
+     <i>
+      B
+      <sub>
+       y
+      </sub>
+     </i>
+     ,
+     <i>
+      B
+      <sub>
+       z
+      </sub>
+     </i>
+     ), são obtidas somente sobre os pontos discretos de uma grade espacial, a partir da densidade de carga ρ e densidade de corrente
+     <b>
+      J
+     </b>
+     definidas nestes mesmos pontos da grade. Estas densidades são obtidas a partir das velocidades e posições das partículas,
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="722db3307a7fc03dc0f8ea29a25c34a678dc01a3">
+     <a name="722db3307a7fc03dc0f8ea29a25c34a678dc01a3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg722db3307a7fc03dc0f8ea29a25c34a678dc01a3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/722db3307a7fc03dc0f8ea29a25c34a678dc01a3.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <b>
+      J
+     </b>
+     ≡ (
+     <i>
+      J
+      <sub>
+       x
+      </sub>
+     </i>
+     ,
+     <i>
+      J
+      <sub>
+       y
+      </sub>
+     </i>
+     ,
+     <i>
+      J
+      <sub>
+       z
+      </sub>
+     </i>
+     ),
+     <i>
+      c
+     </i>
+     e μ
+     <sub>
+      0
+     </sub>
+     são o vetor densidade de corrente, velocidade da luz e permeabilidade magnética no vácuo, respectivamente. Em simulação, os valores para a permissividade ε
+     <sub>
+      0
+     </sub>
+     e permeabilidade μ
+     <sub>
+      0
+     </sub>
+     no vácuo podem ser definidos arbitrariamente, apenas com a condição que devem satisfaz a relação
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="6f49c40b399f5ab618f52f861bb3f4206fbff3bc">
+     <a name="6f49c40b399f5ab618f52f861bb3f4206fbff3bc">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg6f49c40b399f5ab618f52f861bb3f4206fbff3bc" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/6f49c40b399f5ab618f52f861bb3f4206fbff3bc.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Adotando um sistema uni-dimensional ao longo do eixo
+     <i>
+      x
+     </i>
+     , o campo elétrico
+     <i>
+      E
+      <sub>
+       x
+      </sub>
+     </i>
+     deve satisfazer a condição inicial dada pela equação de Poisson [14] e pela equação de Gauss
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="514dfb78991340e09f3bba6c5fc75dea50e864e6">
+     <a name="514dfb78991340e09f3bba6c5fc75dea50e864e6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg514dfb78991340e09f3bba6c5fc75dea50e864e6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/514dfb78991340e09f3bba6c5fc75dea50e864e6.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde ρ e ε
+     <sub>
+      0
+     </sub>
+     são a densidade de carga e a permissividade elétrica, respectivamente. A equação de Poisson é resolvida somente como condição inicial do sistema, pois esta condição é satisfeita automaticamente se as Eqs. (26) e (27) forem resolvidas corretamente no tempo; a densidade de corrente
+     <b>
+      J
+     </b>
+     deve satisfazer a equação da continuidade e o campo magnético
+     <i>
+      B
+      <sub>
+       x
+      </sub>
+     </i>
+     , deve satisfazer à condição inicial
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="d1ef74b574930012e566e3450156de43cbec1ce8">
+     <a name="d1ef74b574930012e566e3450156de43cbec1ce8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgd1ef74b574930012e566e3450156de43cbec1ce8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/d1ef74b574930012e566e3450156de43cbec1ce8.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Esta condição garante que
+     <i>
+      B
+      <sub>
+       x
+      </sub>
+     </i>
+     seja constante no espaço e no tempo, uma vez que consideramos apenas o caso uni-dimensional e não temos os termos de
+     <i>
+      B
+      <sub>
+       x
+      </sub>
+     </i>
+     nas equações de Maxwell (26) e (27).
+    </p>
+    <p>
+    </p>
+    <p>
+     A densidade de corrente
+     <b>
+      J
+     </b>
+     e a densidade de carga ρ são obtidas a partir da equação de movimento para as partículas.
+    </p>
+    <p>
+    </p>
+    <p>
+     O campo elétrico é calculado integrando a equação abaixo
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="6ec68f3b542c739d6e854428144b8068d99762af">
+     <a name="6ec68f3b542c739d6e854428144b8068d99762af">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg6ec68f3b542c739d6e854428144b8068d99762af" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/6ec68f3b542c739d6e854428144b8068d99762af.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     que para um sistema unidimensional pode ser escrita para cada uma de suas componentes como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="4cd09a24304547315704b0cde9fec3e4fd119a1e">
+     <a name="4cd09a24304547315704b0cde9fec3e4fd119a1e">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg4cd09a24304547315704b0cde9fec3e4fd119a1e" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/4cd09a24304547315704b0cde9fec3e4fd119a1e.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O campo magnético é obtido integrando a equação abaixo
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="d61321a63dc727d18b8b639424c9ed55d7145edc">
+     <a name="d61321a63dc727d18b8b639424c9ed55d7145edc">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgd61321a63dc727d18b8b639424c9ed55d7145edc" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/d61321a63dc727d18b8b639424c9ed55d7145edc.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     a equação acima pode ser escrita em suas componentes
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="5a2d18ea5b58a0ec4706f36ecefdf9458186e960">
+     <a name="5a2d18ea5b58a0ec4706f36ecefdf9458186e960">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg5a2d18ea5b58a0ec4706f36ecefdf9458186e960" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/5a2d18ea5b58a0ec4706f36ecefdf9458186e960.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A densidade de carga é calculada a partir das super-partículas, as quais são consideradas de forma quadrada, como mostra a
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     . Uma super-partícula numa posição
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     tem uma distribuição de carga
+     <i>
+      q
+     </i>
+     /Δ
+     <i>
+      x
+     </i>
+     no intervalo
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     - Δ
+     <i>
+      x
+     </i>
+     /2 &lt;
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     &lt;
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     + Δ
+     <i>
+      x
+     </i>
+     /2. Por outro lado, cada ponto da grade, em
+     <i>
+      X
+      <sub>
+       j
+      </sub>
+     </i>
+     , tem um território que cobre um intervalo,
+     <i>
+      X
+      <sub>
+       j
+      </sub>
+     </i>
+     - Δ
+     <i>
+      x
+     </i>
+     /2 &lt;
+     <i>
+      X
+      <sub>
+       j
+      </sub>
+     </i>
+     &lt;
+     <i>
+      X
+      <sub>
+       j
+      </sub>
+     </i>
+     + Δ
+     <i>
+      x
+     </i>
+     /2. Dessa forma, a carga
+     <i>
+      q
+     </i>
+     da super-partícula é dividida para os pontos adjacentes da grade, proporcionalmente à área compartilhada pelo pontos da grade. Numericamente, escrevemos
+     <i>
+      Q
+     </i>
+     (
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     -
+     <i>
+      X
+      <sub>
+       j
+      </sub>
+     </i>
+     )/Δ
+     <i>
+      x
+     </i>
+     designado por ρ(
+     <i>
+      X
+     </i>
+     <sub>
+      <i>
+       j
+      </i>
+      +1
+     </sub>
+     ) e
+     <i>
+      q
+     </i>
+     (
+     <i>
+      X
+     </i>
+     <sub>
+      <i>
+       j
+      </i>
+      +1
+     </sub>
+     -
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     )/Δ
+     <i>
+      x
+     </i>
+     designado por ρ(
+     <i>
+      X
+      <sub>
+       j
+      </sub>
+     </i>
+     ).
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A densidade de corrente é obtida a partir de equação da continuidade
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="b5a6f5f0d7c0b8bc1350b3ef8a6e1835fc0815c5">
+     <a name="b5a6f5f0d7c0b8bc1350b3ef8a6e1835fc0815c5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgb5a6f5f0d7c0b8bc1350b3ef8a6e1835fc0815c5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/b5a6f5f0d7c0b8bc1350b3ef8a6e1835fc0815c5.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     que, através do método de diferenças finitas, torna-se
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="67be5d4f1d300b8bc4a83b02291c5fc94844d6ae">
+     <a name="67be5d4f1d300b8bc4a83b02291c5fc94844d6ae">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg67be5d4f1d300b8bc4a83b02291c5fc94844d6ae" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/67be5d4f1d300b8bc4a83b02291c5fc94844d6ae.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      J
+     </i>
+     é a componente
+     <i>
+      J
+      <sub>
+       x
+      </sub>
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Semelhante ao cálculo da densidade de carga, a densidade de corrente
+     <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/ee3d047441bfa072ac131a831e127cd626c68b9f.jpg" style="max-width:100%"/>
+     é obtida satisfazendo a Eq. (38). Podemos supor duas situações desde que a partícula não se mova mais de um espaçamento da grade Δ
+     <i>
+      x
+     </i>
+     em um passo temporal Δ
+     <i>
+      t
+     </i>
+     , isto é
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="b520c413df517a708880568267b9973c99793645">
+     <a name="b520c413df517a708880568267b9973c99793645">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgb520c413df517a708880568267b9973c99793645" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/b520c413df517a708880568267b9973c99793645.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     é a posição da partícula no instante
+     <i>
+      t
+     </i>
+     . O primeiro caso é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     , ambos
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     + Δ
+     <i>
+      t
+     </i>
+     ) estão no mesmo ponto da grade, entre
+     <i>
+      X
+      <sub>
+       i
+      </sub>
+     </i>
+     e
+     <i>
+      X
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      +1
+     </sub>
+     . O segundo caso é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     , neste caso
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <i>
+      x
+      <sub>
+       p
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     + Δ
+     <i>
+      t
+     </i>
+     ) estão em pontos da grade diferentes.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No primeiro caso, a densidade de corrente
+     <i>
+      J
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      +1/2
+     </sub>
+     em
+     <i>
+      X
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      +1/2
+     </sub>
+     é obtida calculando a quantidade de carga passando no ponto
+     <i>
+      X
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      +1/2
+     </sub>
+     em um passo temporal Δ
+     <i>
+      t
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="9a7098502894f89ba1eed24f8ef3d0e95affb81b">
+     <a name="9a7098502894f89ba1eed24f8ef3d0e95affb81b">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg9a7098502894f89ba1eed24f8ef3d0e95affb81b" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/9a7098502894f89ba1eed24f8ef3d0e95affb81b.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      q
+      <sub>
+       A
+      </sub>
+     </i>
+     e
+     <i>
+      q
+      <sub>
+       B
+      </sub>
+     </i>
+     são dados por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="90bbe652d88de1f75cdbbe8e8206473c25f4d29d">
+     <a name="90bbe652d88de1f75cdbbe8e8206473c25f4d29d">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg90bbe652d88de1f75cdbbe8e8206473c25f4d29d" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/90bbe652d88de1f75cdbbe8e8206473c25f4d29d.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No segundo caso, o movimento das partículas contribui para a corrente nos pontos
+     <i>
+      X
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      +1/2
+     </sub>
+     e
+     <i>
+      X
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      +3/2
+     </sub>
+     que são dados por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="bdcaecdd99b304ebda3a754dc66bcb6555a6824b">
+     <a name="bdcaecdd99b304ebda3a754dc66bcb6555a6824b">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgbdcaecdd99b304ebda3a754dc66bcb6555a6824b" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/bdcaecdd99b304ebda3a754dc66bcb6555a6824b.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Nas
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 12
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      13
+     </a>
+     , consideramos as velocidades das partículas positivas, para velocidade negativa é necessário multiplicar o lado direito das Eqs. (40) e (42) por (-1).
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      6.2. Grade espacial
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     No código de simulação KEMPO são definidas duas grades, uma temporal e outra espacial. Para a grade espacial a posição
+     <i>
+      j
+     </i>
+     sobre a grade é definida por
+     <i>
+      j
+     </i>
+     Δ
+     <i>
+      x
+     </i>
+     inteiro, (
+     <i>
+      j
+     </i>
+     = 1,2,3,...,
+     <i>
+      N
+      <sub>
+       x
+      </sub>
+     </i>
+     ), e uma outra posição
+     <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/e6477f5434f6128dd7ac734e82a002f312bc5ce8.jpg" style="max-width:100%"/>
+     também é definida sobre a grade, de forma que o próximo ponto intermediário na grade seja dado por
+     <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/1c0772fbe7819437ce5294c7fba470df2e640c39.jpg" style="max-width:100%"/>
+     , (
+     <i>
+      j
+     </i>
+     = 1,2,3,...,
+     <i>
+      N
+      <sub>
+       x
+      </sub>
+     </i>
+     ). Esta definição facilita a interpolação de diferenças finitas centrada no espaço para as derivadas espaciais das equações de Maxwell.
+    </p>
+    <p>
+    </p>
+    <p>
+     Dentro do código as componentes
+     <i>
+      E
+      <sub>
+       y
+      </sub>
+     </i>
+     ,
+     <i>
+      B
+      <sub>
+       y
+      </sub>
+     </i>
+     ,
+     <i>
+      J
+      <sub>
+       y
+      </sub>
+     </i>
+     e ρ são definidas sobre as
+     <i>
+      j
+     </i>
+     -ésimas posições da grade espacial,
+     <i>
+      j
+     </i>
+     Δ
+     <i>
+      x
+     </i>
+     (
+     <i>
+      j
+     </i>
+     = 1,2,3,...,
+     <i>
+      N
+      <sub>
+       x
+      </sub>
+     </i>
+     ), enquanto que as componentes
+     <i>
+      E
+      <sub>
+       z
+      </sub>
+     </i>
+     ,
+     <i>
+      B
+      <sub>
+       z
+      </sub>
+     </i>
+     ,
+     <i>
+      J
+      <sub>
+       x
+      </sub>
+     </i>
+     ,
+     <i>
+      J
+      <sub>
+       z
+      </sub>
+     </i>
+     são definidas sobre as
+     <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/1c0772fbe7819437ce5294c7fba470df2e640c39.jpg" style="max-width:100%"/>
+     -ésimas posições da grade espacial,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/1c0772fbe7819437ce5294c7fba470df2e640c39.jpg" style="max-width:100%"/>
+     , (
+     <i>
+      j
+     </i>
+     = 1,2,3,...,
+     <i>
+      N
+      <sub>
+       x
+      </sub>
+     </i>
+     ), sendo Δ
+     <i>
+      x
+     </i>
+     o espaçamento entre os pontos da grade espacial. Na
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. (14)
+     </a>
+     é apresentado o esquema de como são calculadas a densidade, as componentes dos campos eletromagnéticos e a densidade de corrente para as partículas na grade espacial. Os quadrados marcam os pontos inteiros e os círculos representam os pontos intermediários da grade espacial.
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      6.3. Grade temporal
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Da mesma forma que foi realizado para a grade espacial, a evolução temporal é realizada calculando as quantidades em pontos inteiros e meio pontos de grade temporal. Os pontos inteiros na grade temporal são determinados por
+     <i>
+      t
+     </i>
+     e os pontos intermediários por (
+     <i>
+      n
+     </i>
+     +1/2)Δ
+     <i>
+      t
+     </i>
+     . O campo elétrico
+     <b>
+      E
+     </b>
+     e o campo magnético
+     <b>
+      B
+     </b>
+     são calculados pelo método de
+     <i>
+      leap-frog
+     </i>
+     sendo
+     <b>
+      E
+     </b>
+     calculado em passos temporais inteiros
+     <i>
+      t
+     </i>
+     e
+     <b>
+      B
+     </b>
+     calculado em passos temporais intermediários (
+     <i>
+      n
+     </i>
+     +1/2)Δ
+     <i>
+      t
+     </i>
+     . No entanto, o avanço de Δ
+     <i>
+      t
+     </i>
+     para o campo magnético é feito em dois passos de Δ
+     <i>
+      t
+     </i>
+     /2; logo após o primeiro passo Δ
+     <i>
+      t
+     </i>
+     /2, seu valor é utilizado para avançar a posição das partículas (calculadas em múltiplos inteiros de Δ
+     <i>
+      t
+     </i>
+     )[9].
+    </p>
+    <p>
+    </p>
+    <p>
+     A posição
+     <b>
+      x
+     </b>
+     das partículas também é calculada nos pontos inteiros da grade temporal, enquanto a velocidade
+     <b>
+      v
+     </b>
+     é obtida nos pontos intermediários da grade temporal, pelo método de
+     <i>
+      leap-frog
+     </i>
+     . Semelhante ao que ocorre para os campos, a posição é avançada duas vezes com um meio passo temporal (Δ
+     <i>
+      t
+     </i>
+     /2), para obter o valor intermediário e calcular
+     <b>
+      J
+     </b>
+     em um ponto intermediário da grade temporal. A densidade de corrente é calculada a partir da posição e da velocidade das partículas. A densidade de carga é calculada nos passos temporais inteiros e é utilizada para obter o campo elétrico. Este processo é ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. (15)
+     </a>
+     e se repete quantas vezes for necessário para obter os resultados da simulação.
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      6.4. Normalização e sistema de unidades
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para realizar as simulações não é necessário definir um sistema de unidades real, como CGS ou SI. O importante é definir as razões entre as quantidades do sistema utilizado, isto é, a razão entre o campo magnético da onda e o campo magnetostático ou a razão entre a energia cinética do plasma ambiente e a energia total do sistema, etc. Durante as simulações as quantidades físicas são normalizadas pelos parâmetros básicos do sistema tornando-se adimensionais. Entretanto, a seleção dos parâmetros básicos podem ser diferentes dependendo do modelo físico adotado. Para desenvolver um código de simulação aplicável a vários problemas de física e com um amplo sistema de variáveis considerando um conjunto de parâmetros básicos para obter as equações fundamentais. Estes parâmetros são:
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       1. Frequência angular (plasma, cíclotron, frequência da onda, etc.) ω
+       <i>
+        <sub>
+         pi
+        </sub>
+       </i>
+       , Ω
+       <sub>
+        <i>
+         c
+        </i>
+        1
+       </sub>
+       , ω;
+      </p>
+      <p>
+       2. Comprimento do sistema
+       <i>
+        L
+        <sub>
+         x
+        </sub>
+       </i>
+       ;
+      </p>
+      <p>
+       3. Razão carga-massa (
+       <i>
+        q/m
+       </i>
+       )
+       <sub>
+        <i>
+         i
+        </i>
+       </sub>
+       ;
+      </p>
+      <p>
+       4. Número de super partículas no sistema
+       <i>
+        N
+        <sub>
+         i
+        </sub>
+       </i>
+       ;
+      </p>
+     </blockquote>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde o sub-índice
+     <i>
+      i
+     </i>
+     denota a
+     <i>
+      i
+     </i>
+     -ésima espécie de partículas. A frequência ciclotrônica é especificamente definida para a espécie 1, e está relacionada com o intensidade do campo magnético ambiente. Os valores destas quatro quantidades são dados de forma arbitrária, exceto que as razões entre as quantidades no mesmo sistema de unidade, ω
+     <i>
+      <sub>
+       pi
+      </sub>
+     </i>
+     /Ω
+     <sub>
+      <i>
+       c
+      </i>
+      1
+     </sub>
+     , Δ
+     <i>
+      x
+     </i>
+     /
+     <i>
+      L
+      <sub>
+       x
+      </sub>
+     </i>
+     ou (
+     <i>
+      q/m
+     </i>
+     )
+     <sub>
+      2
+     </sub>
+     /(
+     <i>
+      q/m
+     </i>
+     )
+     <sub>
+      1
+     </sub>
+     , sejam mantidas as mesmas das quantidades físicas reais. O número de super partículas não tem relação com a densidade numérica de partículas do plasma real e
+     <i>
+      N
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      N
+     </i>
+     <sub>
+      2
+     </sub>
+     são independentes um do outro.
+    </p>
+    <p>
+    </p>
+    <p>
+     As equações básicas são escritas de tal forma que serão idênticas às equações de movimento e Maxwell no sistema internacional. Os valores para a permissividade elétrica ε
+     <sub>
+      0
+     </sub>
+     e permeabilidade magnética μ
+     <sub>
+      0
+     </sub>
+     podem ser definidos arbitrariamente, apenas com a condição que devem satisfazer a relação
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="72a0e2815b6b63e3e61fc76de0cdd3bf7c45ddff">
+     <a name="72a0e2815b6b63e3e61fc76de0cdd3bf7c45ddff">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg72a0e2815b6b63e3e61fc76de0cdd3bf7c45ddff" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/72a0e2815b6b63e3e61fc76de0cdd3bf7c45ddff.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     As quantidades físicas são calculadas seguindo as relações obtidas a partir das equações básicas. A frequência ciclotrônica para a espécie 1 e a frequência de plasma para as espécies
+     <i>
+      i
+     </i>
+     são dadas por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="1f332c9a4919ce9e9452dae921862da0018f3d34">
+     <a name="1f332c9a4919ce9e9452dae921862da0018f3d34">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg1f332c9a4919ce9e9452dae921862da0018f3d34" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/1f332c9a4919ce9e9452dae921862da0018f3d34.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      n
+      <sub>
+       i
+      </sub>
+     </i>
+     é a densidade de partículas da espécie
+     <i>
+      i
+     </i>
+     que pode ser obtida por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="76782d7028c09bb4d0aed8d7cdc01dddac3ff7e2">
+     <a name="76782d7028c09bb4d0aed8d7cdc01dddac3ff7e2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg76782d7028c09bb4d0aed8d7cdc01dddac3ff7e2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/76782d7028c09bb4d0aed8d7cdc01dddac3ff7e2.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A partir das Eqs. (44) e (45) obtemos as seguintes quantidades físicas
+    </p>
+    <p>
+    </p>
+    <p>
+     - Carga da partícula
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="8a38b28b457b0dfcd6423253397ecd6f4102916e">
+     <a name="8a38b28b457b0dfcd6423253397ecd6f4102916e">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg8a38b28b457b0dfcd6423253397ecd6f4102916e" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/8a38b28b457b0dfcd6423253397ecd6f4102916e.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     - Massa da partícula
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="d37203ad3e39fb2fc20b854b0d2ffb520ad690dc">
+     <a name="d37203ad3e39fb2fc20b854b0d2ffb520ad690dc">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgd37203ad3e39fb2fc20b854b0d2ffb520ad690dc" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/d37203ad3e39fb2fc20b854b0d2ffb520ad690dc.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     - Campo magnetostático
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="33fbc68368ad435317c47d67c08536882752d103">
+     <a name="33fbc68368ad435317c47d67c08536882752d103">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg33fbc68368ad435317c47d67c08536882752d103" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/33fbc68368ad435317c47d67c08536882752d103.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Podemos notar que a massa
+     <i>
+      m
+      <sub>
+       i
+      </sub>
+     </i>
+     e a carga
+     <i>
+      q
+      <sub>
+       i
+      </sub>
+     </i>
+     têm pouca importância no sistema "físico" computacional. Para realizar as simulações, os parâmetros mais importantes, fisicamente, são as densidade de massa
+     <i>
+      n
+      <sub>
+       i
+      </sub>
+      m
+      <sub>
+       i
+      </sub>
+     </i>
+     e a densidade de carga
+     <i>
+      n
+      <sub>
+       i
+      </sub>
+      q
+      <sub>
+       i
+      </sub>
+     </i>
+     , que são dadas por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="e5bd9a82d585606bd6d8bb7f35bca4edf2e2da6a">
+     <a name="e5bd9a82d585606bd6d8bb7f35bca4edf2e2da6a">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImge5bd9a82d585606bd6d8bb7f35bca4edf2e2da6a" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/e5bd9a82d585606bd6d8bb7f35bca4edf2e2da6a.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Os valores de ω
+     <i>
+      <sub>
+       pi
+      </sub>
+     </i>
+     e (
+     <i>
+      q/m
+     </i>
+     )
+     <i>
+      <sub>
+       i
+      </sub>
+     </i>
+     para as diferentes espécies devem ser levados em conta durante as simulações. Uma vez definidas as grades espacial e temporal, bem como o sistema de equações que serão utilizados na simulação juntamente com as condições de contorno adequadas, pode-se utilizar as simulações por partículas para estudar uma série de fenômenos de física dos plasmas como veremos a seguir.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      7. Exemplos de simulação de partículas
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Através das simulações por partículas podemos obter muita informação a respeito do comportamento físico de plasmas espaciais e de laboratório.
+    </p>
+    <p>
+    </p>
+    <p>
+     A seguir, apresentaremos alguns resultados obtidos com simulações por partículas, para fenômenos clássicos de física dos plasma, que ocorrem tanto em plasmas de laboratórios quanto em plasmas espaciais. Procuraremos ainda exemplificar a importância da definição dos parâmetros utilizados de forma a garantir a boa solução do problema.
+    </p>
+    <p>
+    </p>
+    <p>
+     No primeiro exemplo, apresentamos o resultado de simulação de uma oscilação eletromagnética em um plasma com o objetivo de visualizar a importância de garantir que a condição CFL seja satisfeita ao longo das simulações. A
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     apresenta os parâmetros utilizados na simulação, onde
+     <i>
+      q/m
+     </i>
+     é a razão carga massa, PCH é o ângulo entre o número de onda
+     <b>
+      k
+     </b>
+     e o campo
+     <b>
+      B
+     </b>
+     ,
+     <i>
+      v
+      <sub>
+       pa
+      </sub>
+     </i>
+     e
+     <i>
+      v
+      <sub>
+       pe
+      </sub>
+     </i>
+     são as velocidades térmicas paralela e perpendicular das partículas,
+     <i>
+      NX
+     </i>
+     ,
+     <i>
+      NTIME
+     </i>
+     e
+     <i>
+      NP
+     </i>
+     são número de pontos na grade espacial, número de passos temporal e o número de partículas de uma determinada espécie (
+     <i>
+      NS
+     </i>
+     = 1) envolvidas na simulação. Os outros parâmetros estão definidos no texto.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No caso (a) a condição de CFL é satisfeita (Δ
+     <i>
+      x
+     </i>
+     &gt;
+     <i>
+      v
+      <sub>
+       max
+      </sub>
+     </i>
+     Δ
+     <i>
+      t
+     </i>
+     ) e os parâmetros utilizados são os mesmos da Tabela 1. Podemos perceber que durante a simulação a energia total do sistema (T) permanece constante. No caso (b) consideramos (Δ
+     <i>
+      x
+     </i>
+     ≈
+     <i>
+      v
+      <sub>
+       max
+      </sub>
+     </i>
+     Δ
+     <i>
+      t
+     </i>
+     ) de forma que a condição de CFL seja satisfeita marginalmente. Neste caso, podemos perceber variação na energia total do sistema. Esta variação está relacionada com as flutuações numéricas, uma vez que não introduzimos nenhum termo fonte no sistema. Neste caso a variação da energia total é resultado das instabilidades numéricas. No caso (b) acima citado, não poderíamos confiar plenamente nos resultados das simulações, uma vez que as instabilidades numéricas poderiam modificar o comportamento físico do sistema.
+    </p>
+    <p>
+    </p>
+    <p>
+     Outro exemplo de simulação pode ser visto na
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 17
+     </a>
+     , no qual mostramos as relações de dispersão para um plasma magnetizado e o espaço de fase das partículas. Neste exemplo consideramos os parâmetros da Tabela 1 com os seguintes parâmetros diferentes,
+     <i>
+      NX
+     </i>
+     = 256,
+     <i>
+      NTIME
+     </i>
+     = 1024, ω
+     <i>
+      <sub>
+       pe
+      </sub>
+     </i>
+     = 2,0 e
+     <i>
+      v
+      <sub>
+       pa
+      </sub>
+     </i>
+     =
+     <i>
+      v
+      <sub>
+       pe
+      </sub>
+     </i>
+     = 1,0. Consideramos propagação paralela ao campo magnético externo
+     <b>
+      k
+     </b>
+     ||
+     <b>
+      B
+      <sub>
+       0
+      </sub>
+     </b>
+     . Podemos observar os modos circularmente polarizado a direita (R) de alta e baixa frequência, cuja relação de dispersão é dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="523fd318085bba89bdae8b17e5635fb699f344de">
+     <a name="523fd318085bba89bdae8b17e5635fb699f344de">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg523fd318085bba89bdae8b17e5635fb699f344de" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/523fd318085bba89bdae8b17e5635fb699f344de.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     e o modo circularmente polarizado a esquerda (L), definido como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="7ebea6c6729410db1578a3733713d38628a15125">
+     <a name="7ebea6c6729410db1578a3733713d38628a15125">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg7ebea6c6729410db1578a3733713d38628a15125" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/VtzkfpHxnB6nsW4kHVrptqs/7ebea6c6729410db1578a3733713d38628a15125.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 18
+     </a>
+     mostramos uma simulação de instabilidade de dois feixes [1]. Os parâmetros utilizados são mostrados na
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     , sendo
+     <i>
+      v
+      <sub>
+       D
+      </sub>
+     </i>
+     (
+     <i>
+      a
+     </i>
+     ) e
+     <i>
+      v
+      <sub>
+       D
+      </sub>
+     </i>
+     (
+     <i>
+      b
+     </i>
+     ) as velocidades de deriva para as espécies (a) e (b) respectivamente.
+    </p>
+    <div class="row fig" id="f18">
+     <a name="f18">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf18" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Podemos observar quatro quadros na
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 18
+     </a>
+     : O primeiro quadro (1) é o espaço de fase no instante inicial da simulação. Podemos observar os dois feixes de elétrons com suas velocidades características. No quadro (2) observamos que os elétrons começam a mudar suas velocidades devido ao aprisionamento dos elétrons pelo potencial eletrostático, caracterizado pelo aumento da energia total do campo elétrico (E) (quadro superior esquerdo). Neste instante começa a formação de vórtices devido a interação dos dois feixes. O terceiro quadro (3) apresenta configuração final da simulação, no qual se observa a mistura dos dois feixes gerada pelo potencial eletrostático.
+    </p>
+    <p>
+    </p>
+    <p>
+     A combinação de experimentos computacionais, teoria e experimentos espaciais tem fornecido uma grande ferramenta para a compreensão de fenômenos de larga escala e processos cinéticos não lineares em plasmas espaciais.
+    </p>
+    <p>
+    </p>
+    <p>
+     Simulações cinéticas têm sido utilizadas para investigar fenômenos de plasma na magnetosfera terrestre, no vento solar e na região do arco de choque de planetas e cometas [4,14,16], entre outros.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma das maiores áreas de investigação de plasma espacial são ondas de choque não colisionais. O tipo mais comum de choque magnético são os choques rápidos, que surgem do escoamento das ondas magnetosônicas. Uma das regiões mais estudadas é o arco de choque terrestre, bem como a região de choque de outros planetas e cometas. O arco de choque é formado devido a interação do vento solar e a frente da magnetosfera em direção ao Sol. A interação da magnetosfera terrestre com o vento solar causa uma variação na velocidade do vento solar, aquecimento do plasma local e deflexão das partículas na direção do vento solar. Esta região envolve diversos fenômenos com várias escalas de tempo e espaço, e tem sido estudada cineticamente através de um grande número de técnicas, tais como, códigos implícitos [18], códigos explícitos [19], códigos por partículas e híbridos [20].
+    </p>
+    <p>
+    </p>
+    <p>
+     Outra região muito estudada em plasmas espaciais é a região acima do arco de choque da Terra conhecida como frente de choque. Esta região é caracterizada por partículas que escoam ou são refletidas a partir do arco de choque, retornando na direção do vento solar. A geometria desta região resulta em uma parte dominada pelos elétrons e outra dominada pelos íons que fluem em sentido contrário ao vento solar.
+    </p>
+    <p>
+    </p>
+    <p>
+     A frente de choque dos íons é uma região caracterizada pela presença de ondas de baixa frequência bem definidas (ULF -
+     <i>
+      ultra low frequency
+     </i>
+     ) com períodos característicos de meio a um minuto. Acredita-se que as ondas observadas são associadas à instabilidades eletromagnéticas geradas por feixes de íons, que envolvem campos de deriva dos íons contrapropagantes alinhados ao vento solar [21]. O processo de geração de ondas envolve uma ressonância ciclotrônica do feixe de íons com uma onda eletromagnética. Neste processo os elétrons não têm efeitos significantes, sugerindo que os fenômenos relevantes podem ser estudados numericamente usando um modelo no qual os elétrons podem ser tratados passivamente mas, os efeitos cinéticos dos íons são necessários. O modelo de simulação híbrida tem se mostrado a melhor ferramenta para explicar tais processos na frente de choque [3].
+    </p>
+    <p>
+    </p>
+    <p>
+     Um exemplo clássico de instabilidade cinética é a excitação de ondas de Langmuir devida à instabilidade resultante da existência de uma "corcova" na cauda da função de distribuição de velocidades dos elétrons,
+     <a class="open-asset-modal" data-target="#ModalFigf19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 19
+     </a>
+     . Este processo é utilizado para explicar as ondas de Langmuir observadas em diferentes regiões do plasma espacial e serve de base para a teoria das explosões de rádio solar tipo
+     <i>
+      III
+     </i>
+     . As simulações de partículas são utilizadas para investigar o processo de emissão de explosões de radio solar tipo III na região de reconexão magnética durante uma explosão solar
+     <i>
+      solar flare
+     </i>
+     [22].
+    </p>
+    <div class="row fig" id="f19">
+     <a name="f19">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf19" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      8. Considerações finais
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho apresentamos algumas características a respeito das simulações por partículas aplicadas à simulação de plasmas. Mostramos alguns critérios necessários para a realização das simulações computacionais e os passos que devem ser seguidos para a evolução temporal e espacial de um conjunto de partículas de um plasma magnetizado.
+    </p>
+    <p>
+    </p>
+    <p>
+     Ressaltamos o cuidado que deve ser tomado nas condições iniciais da simulação para evitar as instabilidades numéricas, que introduzem um falso comportamento físico do sistema. No caso onde não são incluídos termos fontes externos ao sistema as instabilidades numéricas são caracterizadas pela variação da energia total (T) do sistema, como pode ser observado na
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 16
+     </a>
+     caso (b).
+    </p>
+    <p>
+    </p>
+    <p>
+     Apresentamos alguns exemplos de diagnósticos que podem ser obtidos através das simulações computacionais, como as relações de dispersão de ondas que estão relacionadas com o índice de refração do meio no qual estas ondas se propagam. Outro tipo de diagnóstico muito utilizado é o espaço de fase. Através deste pode se acompanhar a trajetória das partículas e observar seu comportamento devido às interações com os campos eletromagnéticos. Outros diagnósticos podem ser obtidos através das simulações computacionais dependendo do tipo de fenômenos estudados.
+    </p>
+    <p>
+    </p>
+    <p>
+     As simulações computacionais não são e provavelmente nunca serão a solução para todos os problemas físicos estudados, mas representam uma poderosa ferramenta que pode auxiliar os pesquisadores a resolver diversos problemas de física que continuam sem respostas, principalmente problemas de sistemas não lineares e dependente do tempo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 9/4/2010; Aceito em 28/2/2011; Publicado em 30/3/2011
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] F.F.    Chen,
+        <i>
+         Introduction to Plasma Physics and Controlled Fusion
+        </i>
+        (Plenum Press,    New York, 1984), v. I.
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] C.K.    Birdsall and A.B. Langdon,
+        <i>
+         Plasma Physics via Computer Simulation
+        </i>
+        (Institute    of Physics Publishing, London, 1991).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] M.V.    Alves,
+        <i>
+         Kinetic Simulation in Plasmas: A General View and Some Application
+        </i>
+        INP-7171-PRE/3096 (1999).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] D.    Winske and N. Omidi, J. Geophysics Research
+        <b>
+         101
+        </b>
+        , 287 (1996).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] D.    Potter,
+        <i>
+         Computational Physics
+        </i>
+        (John Wiley &amp; Sons, 1973).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] R.W.    Hockney and J.W. Eastwood,
+        <i>
+         Computer Simulation Using Particles
+        </i>
+        (McGraw-Hill,    Bristol, 1981).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] T.    Tajima,
+        <i>
+         Computational Plasma Physics with Application to Fusion and Astrophysics
+        </i>
+        (Addison-wesley Publishing Company, New York, 1989).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] J.M.    Dawson, Reviews of Modern Physics , 403 (1983).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] H.    Matsumoto and Y. Omura
+        <i>
+         Computer Space Plasma Physics: Simulation Thecniques    and Software
+        </i>
+        (Terra scientific publishing company, Tokyo, 1993).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] R.W.    Hocney, Physics of Fluids 1826, (1969).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] C.K.    Birdsall and D. Fuss, J. of Computational Physics, , 141 (1997).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] H.    Okuda and C.K. Birdsall, Physics of Fluids , 2123 (1970).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] R.L.    Morse and C.W. Nielson, Physics of Fluids , 2418, (1969).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] H.    Matsumoto and T. Sato
+        <i>
+         Computer Simulation of Space Plasmas
+        </i>
+        (Terra Scientific    Publishing Company, Tokyo, 1985).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] A.B.    Langdon and C.K. Birdsall, Physics of Fluids 2115, (1970).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] H.    Okuda and J.M. Dowson, Physics of Fluids , 408 (1973).
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] A.O.    Fortuna,
+        <i>
+         Técnicas Computacionais Para Dinâmica dos Fluidos
+        </i>
+        (Editora da Universidade de São Paulo, São Paulo, 2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] D.    Krauss-Varban, Geophysical Research Letters , 3271 (1995).
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] P.    Savoini and B. Lembege, J. of Geophysics Research-Space Physics , 6609 (1994).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20] D.    Winske and M.M. Leroy, J. of Geophysics Research-Space Physics 7327 (1984).
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] S.P.    Gary, J. of Geophysics Research-Space Physics , 4331 (1981).
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] J.I.    Sakai, T. Kitamoto and S. Satio, The Astrophysical Journal , L157 (2005).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <li>
+    <span class="xref big">
+     1
+    </span>
+    <div>
+     E-mail:
+    </div>
+    <div>
+     <a href="mailto:fernando.simoes@ufpel.edu.br">
+      fernando.simoes@ufpel.edu.br
+     </a>
+     .
+    </div>
+   </li>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        18 Abr 2011
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Mar 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        09 Abr 2010
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        28 Fev 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

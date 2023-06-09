@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 33 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2011
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172011000100022" target="_blank">
+    https://doi.org/10.1590/S1806-11172011000100022
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172011000100022">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  SimQuest - ferramenta de modelagem computacional para o ensino de física
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  SimQuest - computational modeling tool for teaching physics
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Josiel R. Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  São José dos Campos,  
+          ,  São Paulo,  
+        ,  Instituto Tecnológico de Aeronáutica,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     José S.E. Germano
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  São José dos Campos,  
+          ,  São Paulo,  
+        ,  Instituto Tecnológico de Aeronáutica,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Roni S. Mariano
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  São José dos Campos,  
+          ,  São Paulo,  
+        ,  Instituto Tecnológico de Aeronáutica,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     O objetivo deste trabalho, é apresentar a ferramenta de modelagem computacional denominada SimQuest, e discutir algumas das possibilidades do seu uso como ferramenta auxiliar no ensino de física. Como característica principal, o SimQuest possibilita a construção de objetos de aprendizagem com inúmeros recursos gráficos e uma interação amigável. Outra caracterísitica interessante do Simquest, é a alteração em tempo real dos parâmetros que envolvem o problema analisado. Estes elementos básicos de uma simulação, credenciam o uso do SimQuest como uma importante ferramentano ensino de física. Para ilustrar o potencial do SimQuest, apresentamos os objetos de aprendizagem de dois problemas complexos no ensino de física, o pêndulo duplo e o atrator de Lorenz.
+    </p>
+    <p>
+     SimQuest; objetos de aprendizagem; ensino de física; modelagem computacional; simulações
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this paper, we present the computational modelling tool called SimQuest discussing some of the possibilities of its use as an auxiliary tool in the teaching of physics. As a main feature, the SimQuest allows the construction of learning objects with various graphics and a friendly interface. Another interesting feature is the possibility of changing the parameters of the problem analyzed in real time. These basic elements make real the possibility of using SimQuest as an important tool in the teaching of physics. To illustrate the potential of SimQuest, we present the learning objects of two complex problems in physics education, the double pendulum and the Lorenz attractor.
+    </p>
+    <p>
+     SimQuest; learning objects; teaching physics; computer modelling; simulations
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      DESENVOLVIMENTO EM ENSINO DE FÍSICA
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      SimQuest - ferramenta de modelagem computacional para o ensino de física
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      SimQuest - computational modeling tool for teaching physics
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Josiel R. Silva
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: 
+        josiel_fisica@hotmail.com.
+       </span>
+      </span>
+     </span>
+     ; José S.E. Germano; Roni S. Mariano
+    </p>
+    <p>
+    </p>
+    <p>
+     Instituto Tecnológico de Aeronáutica, São José dos Campos, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O objetivo deste trabalho, é apresentar a ferramenta de modelagem computacional denominada SimQuest, e discutir algumas das possibilidades do seu uso como ferramenta auxiliar no ensino de física. Como característica principal, o SimQuest possibilita a construção de objetos de aprendizagem com inúmeros recursos gráficos e uma interação amigável. Outra caracterísitica interessante do Simquest, é a alteração em tempo real dos parâmetros que envolvem o problema analisado. Estes elementos básicos de uma simulação, credenciam o uso do SimQuest como uma importante ferramentano ensino de física. Para ilustrar o potencial do SimQuest, apresentamos os objetos de aprendizagem de dois problemas complexos no ensino de física, o pêndulo duplo e o atrator de Lorenz.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     SimQuest, objetos de aprendizagem, ensino de física, modelagem computacional, simulações.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     In this paper, we present the computational modelling tool called SimQuest discussing some of the possibilities of its use as an auxiliary tool in the teaching of physics. As a main feature, the SimQuest allows the construction of learning objects with various graphics and a friendly interface. Another interesting feature is the possibility of changing the parameters of the problem analyzed in real time. These basic elements make real the possibility of using SimQuest as an important tool in the teaching of physics. To illustrate the potential of SimQuest, we present the learning objects of two complex problems in physics education, the double pendulum and the Lorenz attractor.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     SimQuest, learning objects, teaching physics, computer modelling, simulations.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O ensino de física nos dias atuais passa por momentos de transformações, sobretudo em virtude das possibilidades do uso do computador como ferramenta auxiliar de ensino. Neste trabalho, procuramos dar nossa contribuição nesse sentido, mostrando e discutindo as possibilidades de utilização da ferramenta de modelagem computacional SimQuest. Esta ferramenta pode ser útil aos professores que estão ávidos por construir os seus próprios objetos de aprendizagem. Uma das principais características do SimQuest, é a sua interface amigável, mesmo para pessoas que não tenham grandes habilidades ou conhecimentos com linguagens de programação, facilitando assim a construção dos objetos de aprendizagem
+    </p>
+    <p>
+    </p>
+    <p>
+     O ensino de física é uma das áreas de estudo que mais pode se beneficiar com o uso destas novas tecnologias computacionais, pois a física ao abordar temas tão amplos do nosso cotidiano e que por vezes tenta explicar situações que não podem ser demonstradas facilmente, leva os alunos a terem a sensação de que são incapazes de aprendê-la.
+    </p>
+    <p>
+    </p>
+    <p>
+     Há mais de duas décadas já se afirma: "o computador revolucionou o modo como se faz a investigação em física, mas não alterou significativamente o modo como se ensina física" [1]. Vemos que ainda hoje esta afirmação é válida para a maioria das escolas públicas e particulares brasileiras. Para fomentar o uso do computador nas escolas, programas foram desenvolvidos com o intuito de serem o mais simples e natural de se programar. Neste campo, se destacam na literatura científica duas ferramentas de modelagem computacional: o Modellus [2, 3] e o Easy Java Simulations (Ejs) [4, 5].
+    </p>
+    <p>
+    </p>
+    <p>
+     A aceitação destas ferramentas se deve, principalmente, ao fato de usarem a sintaxe matemática como linguagem de programação de seus modelos e por serem orientadas a objeto, tornando a aprendizagem de sua manipulação muito simples. Outro aspecto importante é o fato dos dois programas serem de distribuição gratuita, facilitando o acesso tanto por professores quanto pelos alunos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Mas alguns aspectos negativos se fazem notar em cada um dos programas. O Ejs, por exemplo, em algumas situações necessita da digitação de códigos na linguagem Java. Linguagem esta que certamente não é de aprendizagem simples e rápida. Já no Modellus, podemos lamentar a ausência de alguns elementos de animação que são úteis na construção de uma simulação, por exemplo, não existe um elemento que represente a visualização do comportamento de uma onda. Geralmente para corrigir esta deficiência do programa é usado um conjunto de bolas enfileiradas na horizontal que individualmente se movimentam apenas na vertical.
+    </p>
+    <p>
+    </p>
+    <p>
+     Baseados nestas considerações apresentamos a ferramenta de modelagem computacional SimQuest. Esta é uma ferramenta de modelagem computacional desenvolvida e distribuída gratuitamente pela Universidade de Twenteda Holanda [6]. Atualmente existem duas versões que podem ser obtidas no sitio do desenvolvedor: o SimQuest 5.3, desenvolvido em linguagem C e o SimQuest 6.3 desenvolvido Java.
+    </p>
+    <p>
+    </p>
+    <p>
+     Não avaliaremos se o SimQuest é melhor ou pior que os programas já citados, pois o nosso objetivo é apresentar uma alternativa para os professores que desejam desenvolver os seus modelos computacionais em física.
+    </p>
+    <p>
+    </p>
+    <p>
+     Por possuir uma interface amigável e ser de fácil usabilidade, com algumas aulas sobre o funcionamento do SimQuest, o professor que possui conhecimentos mínimos de informática, estará apto a construir seus próprios objetos de aprendizagem no SimQuest.
+    </p>
+    <p>
+    </p>
+    <p>
+      O SimQuest também satisfaz os requisitos necessários para apoiar a construção de programas de simulação [7], tais como:
+    </p>
+    <p>
+    </p>
+    <p>
+      Ser especificamente desenvolvido para ensino.
+    </p>
+    <p>
+    </p>
+    <p>
+      Possibilitar a construção de programas de simulação com diferentes tipos de modelos por trás (contínuos, discretos, qualitativos, etc.) e combinar ainda modelos de diferentes tipos.
+    </p>
+    <p>
+    </p>
+    <p>
+      Utilizar essencialmente técnicas de manipulação direta.
+    </p>
+    <p>
+    </p>
+    <p>
+      Permitir formas de visualização variadas (gráficos, figuras, ícones, etc.).
+    </p>
+    <p>
+    </p>
+    <p>
+      Técnicas de animação diversas (embora possa haver simulações sem animação, um programa animado permite uma percepção diferente da realidade: mais fácil, mais rápida, mais concreta, mais rica).
+    </p>
+    <p>
+    </p>
+    <p>
+      Formas de interação diversas poderosas (botões, menus, ícones, janelas, caixas de diálogo, perguntas de escolha múltipla/resposta simples/aberta, etc.).
+    </p>
+    <p>
+    </p>
+    <p>
+      A integração de outros meios num programa de simulação (som, imagens digitalizadas, seqüências animadas, seqüências de vídeo, etc.).
+    </p>
+    <p>
+    </p>
+    <p>
+      Registrar o desempenho do aluno, com vista a melhorar a aprendizagem.
+    </p>
+    <p>
+    </p>
+    <p>
+      Ter modos diferentes de funcionamento para o professor-autor, o professor-utilizador e o aluno.
+    </p>
+    <p>
+    </p>
+    <p>
+      Ser fácil de usar, permitindo fazer alterações, sempre que necessário
+    </p>
+    <p>
+    </p>
+    <p>
+      Permitir a criação de sub-modelos de pedaços de programas que se possam posteriormente reutilizar (facilita a construção e promove a partilha entre os autores).
+    </p>
+    <p>
+    </p>
+    <p>
+      Ser portável para outras máquinas, línguas e culturas, e permitir a utilização individual, ou em rede.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. SimQuest
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     SimQuest é uma ferramenta computacional com ênfase no processo de construção de objetos de aprendizagem, apoiada no desenvolvimento de autoria da simulação. Esta autoria é feita no modo orientado a objeto, ou seja, o usuário possui a sua disposição uma biblioteca de elementos para a construção dos seus objetos de aprendizagem no modo arrastar-soltar, e em seguida, usando uma tela de propriedades, pode-se inserir as características desejadas ao elemento.
+    </p>
+    <p>
+    </p>
+    <p>
+     O foco principal do SimQuest é o de ser uma ferramenta que possa ser utilizada pelo aluno na forma de atividades expressivas, ou seja, que o aluno crie seu modelo desde o embasamento matemático até a aquisição e análise dos resultados. Além disso, também se propõe a ser uma alternativa ao professor que não possui conhecimento de qualquer código de programação e que gostaria de produzir simulações que atendessem as características particulares de seus alunos, para que dessa forma haja a possibilidade destes alunos trabalharem os modelos de forma exploratória.
+    </p>
+    <p>
+    </p>
+    <p>
+     O processo de aprendizagem com o SimQuest está baseado em três pilares [8]:
+    </p>
+    <p>
+    </p>
+    <p>
+      quem controla o processo é o aluno;
+    </p>
+    <p>
+    </p>
+    <p>
+      o estudante trabalha como um cientista;
+    </p>
+    <p>
+    </p>
+    <p>
+      o aluno constrói seu próprio conhecimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     As características deste processo de aprendizagem são:
+    </p>
+    <p>
+    </p>
+    <p>
+      exploração;
+    </p>
+    <p>
+    </p>
+    <p>
+      fazer perguntas;
+    </p>
+    <p>
+    </p>
+    <p>
+      fazer descobertas;
+    </p>
+    <p>
+    </p>
+    <p>
+      buscar um novo entendimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para conseguir uma cópia do SimQuest, é necessário fazer um cadastro no site do programa [9], onde se recebe uma senha que possibilita o download do programa e das simulações existentes no site. Após a instalação, o programa pode ser rodado de duas formas:
+    </p>
+    <p>
+    </p>
+    <p>
+      Pelo SimQuestAuthoringEnvironment, onde se faz a construção dos objetos de aprendizagem.
+    </p>
+    <p>
+    </p>
+    <p>
+      Pelo SimQuestLearnerEnvironment, onde o usuário interage com os objetos de aprendizagem.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.1. Interfaces
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O primeiro passo para a construção de um modelo no SimQuest é o de especificar o comportamento do problema a ser resolvido. Isto pode ser feito de três modos:
+    </p>
+    <p>
+    </p>
+    <p>
+      O primeiro modo é feito digitando as expressões ou equações algébricas que comandam o modelo. As equações são inseridas no
+     <i>
+      Model Editor
+     </i>
+     . Este, após a digitação, relacionará no lado esquerdo as variáveis de saída e entrada do modelo, faltando apenas colocar os valores iniciais das variáveisde entrada, que neste caso estão na cor vermelha. Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     existe a representação do decaimento exponencial,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/8qNdx4GYLwjwJjcfmzpGqHM/fd643c24fe29cef31a68a179c47bcd768e7f9122.jpg" style="max-width:100%"/>
+     .
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Dependendo das equações colocadas no editor, o SimQuest interpretará a simulação do modelo como dinâmica ou discreta. Para os modelos dinâmicos, que são caracterizados pelas equações diferenciais, existem quatro métodos de resolução: Euler, Runge Kutta 2, Runge Kutta 4 e o único método que possui passo múltiplo, o Adams Bashfort 2.
+    </p>
+    <p>
+    </p>
+    <p>
+      O segundo modo de especificar o modelo é usando o
+     <i>
+      compound model
+     </i>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     , que é a representação de blocos de entrada e saída. O
+     <i>
+      compound model
+     </i>
+     é especialmente útil quando as equações matemáticas são muito grandes e há necessidade de fazer um
+     <i>
+      link
+     </i>
+     delas com outros modelos.
+    </p>
+    <p>
+    </p>
+    <p>
+      O terceiro modo de inserir comandos da simulação é usando a interface que o SimQuest fornece para escritas C++, Visual Basic e Delphi. O SimQuest interpreta qualquer programação feita nestas linguagens, da mesma forma que ele interpreta a sua linguagem interna.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O local onde se encontram os elementos de construção da simulação é a interface de elementos,
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     . A interface de elementos é constituída pelos elementos de animação, pelos elementos dinâmicos e pelos elementos estáticos.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O professor, se desejar, pode guiar o aluno no caminho e na forma como ele deve usar o objeto de aprendizagem. Para isto o SimQuest possui elementos de auxílio à instrução que são divididos em quatro grupos (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      Assignments:
+     </b>
+     são oito diferentes tipos de tarefas a disposição do professor:
+    </p>
+    <p>
+    </p>
+    <p>
+      Do it: instrução para o aluno realizar alguma ação específica. Não hánecessidade de se colocar uma resposta.
+    </p>
+    <p>
+    </p>
+    <p>
+      Do them: semelhante ao Do it, mas com múltiplas condições iniciais para a simulação.
+    </p>
+    <p>
+    </p>
+    <p>
+      Investigation: questão de múltipla escolha.
+    </p>
+    <p>
+    </p>
+    <p>
+      Explicitation: são múltiplas condições para serem testadas.
+    </p>
+    <p>
+    </p>
+    <p>
+      Open answer: o aluno digita em uma caixa a resposta relativa a pergunta colocada no modelo.
+    </p>
+    <p>
+    </p>
+    <p>
+      Optimisation: o aluno terá que testar diferentes valores para as variáveis da simulação, feito isso, deverá responder uma questão proposta pelo professor.
+    </p>
+    <p>
+    </p>
+    <p>
+      Specification: somente para modelos dinâmicos, esta tarefa é do tipo em que o aluno deverá especificar em um campo determinado o valor da resposta.
+    </p>
+    <p>
+    </p>
+    <p>
+      Static specification: semelhanteà Specification, só que para modelos estáticos.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Control:
+     </b>
+     são elementos de controle do professor, por exemplo, na especificação das tarefas o professor pode desejar que o aluno só prossiga em determinado ambiente, somente após a realização de algumas tarefas especificas.
+    </p>
+    <p>
+    </p>
+    <p>
+      New Instructional Composite: coleção de elementos de aplicação que começam ao mesmo tempo e podem ser especificadas quais delas que deverão ser feitas para a tarefa ser considerada concluída.
+    </p>
+    <p>
+    </p>
+    <p>
+      Simulation Daemon: controla instruções em função de um valor de uma variável. Por exemplo, uma explicação abre automaticamente quando uma variável alcança o valor previamente determinado.
+    </p>
+    <p>
+    </p>
+    <p>
+      Timer: controla o tempo de intervalo de duas ações no modelo.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Explanations:
+     </b>
+     são diferentes formas de especificar um assunto, tais como: vídeos, sons, imagens, textos e páginas da internet.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Tools:
+     </b>
+     são elementos à disposição do aluno para serem usados juntamente com os objetos de aprendizagem. Como exemplo citamos o elemento
+     <i>
+      Concept Map
+     </i>
+     , que é um editor de mapa conceitual e o
+     <i>
+      Math Editor
+     </i>
+     que é uma ferramenta de edição de formulas matemática.
+    </p>
+    <p>
+    </p>
+    <p>
+     Além destas ferramentas, destacamos o
+     <i>
+      SimQuest Meeting
+     </i>
+     , que possibilita aos alunos usarem a internet para compartilharem um objeto de aprendizagem em rede. Neste modo os usuários só podem operar a simulação um de cada vez.
+    </p>
+    <p>
+    </p>
+    <p>
+     O SimQuest por ser uma ferramenta de modelagem de autoria para aprendizagem por descoberta, fornece orientações para os professores em três diferentes aspectos: design, implementação e metodologia. Para alcançar estes objetivos ele fornece três tipos de suporte: advice, help, e wizard.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Advice:
+     </b>
+     auxilia no design dos ambientes de aprendizagem, para alcançar este objetivo está divido em quatro partes,
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     :
+    </p>
+    <p>
+    </p>
+    <p>
+      "What is?": fornece a descrição do aspecto de um design;
+    </p>
+    <p>
+    </p>
+    <p>
+      "Example": fornece um exemplo do aspecto de um design;
+    </p>
+    <p>
+    </p>
+    <p>
+      "Considerations": reporta por qual motivo determinado aspecto é importante;
+    </p>
+    <p>
+    </p>
+    <p>
+      "Background": fornece a base teórica do aspecto.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      Wizard:
+     </b>
+     auxilia o professor na execução de uma função para que ele fique da melhor forma,
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      Help:
+     </b>
+     mostra como usar os elementos do SimQuest. É um pequeno tutorial de cada elemento,
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A maneira de trabalhar com qualquer dos elementos do SimQuest na construção da simulação é o mesmo; primeiro coloca-se o cursor no elemento escolhido, em seguida aperte e segure o botão direito do mouse; arraste o elemento até o local desejado e solte-o. Por fim, se especifica as características que o usuário deseja para aquele elemento,
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Aplicações
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para apresentar o potencial de utilização do SimQuest no ensino de física, foram construídos dois objetos de aprendizagem para serem usados no estudo de sistemas não-lineares, são eles: o pêndulo duplo e o atrator de Lorenz. Nestas aplicações não daremos ênfase na fundamentação teórica dos assuntos, nem nos seus desenvolvimentos matemáticos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Um dos recursos que o uso da informática pode trazer ao estudo da física é a visualização de situações teóricas que normalmente são apresentadas somente por meio de equações diferenciais. Modelos dinâmicos que eram estudados com visualizações estáticas, agora são facilmente construídos com a ajuda de programas como o SimQuest.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3.1. Pêndulo duplo
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Caos, efeito borboleta, sistemas não-lineares, entre outros, são termos que a cada dia estão mais presentes no cotidiano das pessoas, porém apenas uma minoria sabe que estes termos estão relacionados com um ramo da física aplicada, o de sistemas dinâmicos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Dos vários modelos usados para introduzir o aluno nos conceitos de caos, o pêndulo duplo é considerado o conceito mais simples dentre todos [10, 11]. O pêndulo duplo consiste em dois pêndulos físicos que podem girar livremente em torno dos seus respectivos pontos de fixação.
+    </p>
+    <p>
+    </p>
+    <p>
+     Do esquema do pêndulo duplo da
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     , temos
+    </p>
+    <p>
+    </p>
+    <p>
+     x
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      L
+     </i>
+     <sub>
+      1
+     </sub>
+     senθ
+     <sub>
+      1
+     </sub>
+     ,
+    </p>
+    <p>
+    </p>
+    <p>
+     x
+     <sub>
+      2
+     </sub>
+     = x
+     <sub>
+      1
+     </sub>
+     +
+     <i>
+      L
+     </i>
+     <sub>
+      2
+     </sub>
+     senθ
+     <sub>
+      2
+     </sub>
+     ,
+    </p>
+    <p>
+    </p>
+    <p>
+     y
+     <sub>
+      1
+     </sub>
+     = -
+     <i>
+      L
+     </i>
+     <sub>
+      1
+     </sub>
+     cosθ
+     <sub>
+      1
+     </sub>
+     ,
+    </p>
+    <p>
+    </p>
+    <p>
+     y
+     <sub>
+      2
+     </sub>
+     = y
+     <sub>
+      1
+     </sub>
+     -
+     <i>
+      L
+     </i>
+     <sub>
+      2
+     </sub>
+     cosθ
+     <sub>
+      2
+     </sub>
+     .
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Após o desenvolvimento matemático, obtemos as equações de movimento do sistema
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="dc88fbad4146678792231ed352b72a0ea0e022e2">
+     <a name="dc88fbad4146678792231ed352b72a0ea0e022e2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgdc88fbad4146678792231ed352b72a0ea0e022e2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8qNdx4GYLwjwJjcfmzpGqHM/dc88fbad4146678792231ed352b72a0ea0e022e2.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde θ
+     <sub>
+      1
+     </sub>
+     e θ
+     <sub>
+      2
+     </sub>
+     são os ângulos iniciais,
+     <i>
+      L
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      L
+     </i>
+     <sub>
+      2
+     </sub>
+     são os comprimentos das hastes e por fim,
+     <i>
+      m
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      m
+     </i>
+     <sub>
+      2
+     </sub>
+     são as massas dos pêndulos.
+    </p>
+    <p>
+    </p>
+    <p>
+     O detalhamento das equações é encontrado em livros de mecânica clássica [13, 14] e na internet [15, 16].
+    </p>
+    <p>
+    </p>
+    <p>
+     Nos modelos construídos foram adotados os seguintes parâmetros:
+     <i>
+      m
+     </i>
+     <sub>
+      1
+     </sub>
+     =
+     <i>
+      m
+     </i>
+     <sub>
+      2
+     </sub>
+     =3kg;
+     <i>
+      l
+     </i>
+     <sub>
+      i
+     </sub>
+     =3m;
+     <i>
+      l
+     </i>
+     <sub>
+      2
+     </sub>
+     = 4m;
+     <i>
+      g
+     </i>
+     =9,81 m/s
+     <sup>
+      2
+     </sup>
+     e tempo de duração da simulação de 40 segundos.
+    </p>
+    <p>
+    </p>
+    <p>
+     No primeiro modelo que representa o comportamento do movimento periódico foram colocados, além dos citados no parágrafo anterior, os seguintes parâmetros:ω
+     <sub>
+      1
+     </sub>
+     = ω
+     <sub>
+      2
+     </sub>
+     = 0 rad/s,θ
+     <sub>
+      1
+     </sub>
+     e θ
+     <sub>
+      2
+     </sub>
+     rad. O sistema com esta configuração possui uma energia total de 5 J (
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para o segundo modelo, trocamos apenas o valor de θ
+     <sub>
+      2
+     </sub>
+     para 0,6 rad. Apesar do aumento em 100% a energia continua baixa, 21 J, e os gráficos continuam praticamente os mesmos (
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para altas energias, porém, o pêndulo duplo se comporta de modo caótico, ou seja, a previsão do seu comportamento não será possível, pois a mínima alteração de pelo menos um de seus parâmetros acarretará em uma situação completamente diferente. Vejamos o primeiro modelo usado para representar o movimento caótico,
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     , que possui os seguintes parâmetros: ω
+     <sub>
+      1
+     </sub>
+     = -2 rad/s,ω
+     <sub>
+      2
+     </sub>
+     = -3 rad/s,θ
+     <sub>
+      1
+     </sub>
+     = 1,57 rad e θ
+     <sub>
+      2
+     </sub>
+     = 1,57 rad.O sistema com esta configuração possui uma energia total de 400 J.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para o segundo modelo do movimento caótico trocamos o valor de θ
+     <sub>
+      2
+     </sub>
+     para 1,5706 rad (
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para uma melhor visualização das diferenças dos modelos, usaremos o recurso do SimQuest que permite guardar o resultado gráfico do primeiro modelo para ser usado posteriormente na comparação com outros modelos que venham a ser gerados. Neste caso, o gráfico gerado por ultimo é de cor mais intensa (
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 14
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Salientamos que uma alteração de 0,0006 rad, que representa um acréscimo de 0,04% , produz um comportamento totalmente diferente do modelo usado como base. Este comportamento é a característica principal dos movimentos caóticos: a dependência sensível às condições iniciais, ou seja, com a evolução do tempo, as diferenças aumentam de tal forma que, em dado momento, as trajetórias serão completamente diferentes.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3.2. O atrator de Lorenz
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Além do pêndulo duplo, outro modelo comumente usado para introduzir o estudo dos sistemas caóticos é o do atrator de Lorenz. Este sistema é usado no ensino de sistemas não-lineares e é de especial interesse para o público em geral, pois é deste modelo o ponto de partida para Edward Lorenz escrever o famoso artigo
+     <i>
+      Predictability: Does a flap of butterfly's wing in Brazil set off a tornado in Texas
+     </i>
+     . Este artigo mostrou a análise de um fenômeno que hoje chamamos de "efeito borboleta". O nome deste fenômeno se popularizou de tal forma que até Hollywood usou-o para dar nome a um filme. No filme, o personagem principal percebe que cada ação feita para consertar um novo erro que surgiu, resulta em situações inimagináveis e imprevisíveis.
+    </p>
+    <p>
+    </p>
+    <p>
+     Querendo Lorenz mostrar a dependência sensível das condições iniciais de uma forma tão convincente quanto possível, resolveu simplificar ainda mais o seu sistema de equações e concentrou-se exclusivamente no movimento de convecção do ar na atmosfera. O seu modelo simplificado representa o movimento do ar entre duas placas paralelas, onde a placa de baixo está mais quente que a de cima, e é governado pelo seguinte sistema de equações diferenciais
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="e5036a8a35c08a057daaae15d0f2e0f0c2729d08">
+     <a name="e5036a8a35c08a057daaae15d0f2e0f0c2729d08">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImge5036a8a35c08a057daaae15d0f2e0f0c2729d08" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8qNdx4GYLwjwJjcfmzpGqHM/e5036a8a35c08a057daaae15d0f2e0f0c2729d08.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde as funções
+     <i>
+      x(t)
+     </i>
+     ,
+     <i>
+      y(t)
+     </i>
+     e
+     <i>
+      z(t)
+     </i>
+     e contêm toda a informação sobre o estado do sistema, ou seja, sobre a distribuição de temperaturas e de velocidades do ar [17].
+    </p>
+    <p>
+    </p>
+    <p>
+     Estas equações diferenciais não-lineares, não possuem solução analítica, sendo desta forma o uso do computador essencial para a visualização do seu comportamento. Um detalhamento das equações pode ser encontrado na internet [18].
+    </p>
+    <p>
+    </p>
+    <p>
+     Geralmente para representar os planos de visualização em programas de duas dimensões, como o SimQuest, usa-se o recurso de colocá-los em quadros separados. Nestes modelos é comum a impossibilidade de se escolher o ângulo de visão.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma das limitações do SimQuest é o de não possuir visualização de modelos de três dimensões, especialmente na visualização de gráficos. Mas com uso de transformações geométricas pode-se em alguns casos resolver esta limitação do programa.
+    </p>
+    <p>
+    </p>
+    <p>
+     No modelo construído deve-se primeiramente escolher qual o ângulo de visão para cada um dos eixos, além disso, devem-se colocar os valores dos parâmetros do atrator para em seguida iniciar a animação,
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 15
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      16
+     </a>
+     . É importante ressaltar que ao término da animação, não se pode visualizar a rotação da figura formada. Se houver necessidade de visualização por outro ângulo de rotação, deve-se limpar a tela e então mandar gerar uma nova animação. Dependendo das equações do modelo, pode-se construir uma simulação que possua a opção de girar a figura em qualquer eixo, sem a necessidade de se limpar a figura.
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Considerações finais
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Os principais aspectos do SimQuest para uso pelo professor foram apresentados neste artigo. Percebe-se que os recursos do programa são muitos. Contudo, alguns aspectos ainda necessitam de melhorias quando se faz uma comparação com outras ferramentas de modelagem computacional, dentre elas destacamos:
+    </p>
+    <p>
+    </p>
+    <p>
+      não possui a opção da língua portuguesa;
+    </p>
+    <p>
+    </p>
+    <p>
+      não possui um elemento para construir tabelas;
+    </p>
+    <p>
+    </p>
+    <p>
+      não possui gráficos de região;
+    </p>
+    <p>
+    </p>
+    <p>
+      não possui gráficos de superfície;
+    </p>
+    <p>
+    </p>
+    <p>
+      não possui visualização em três dimensões;
+    </p>
+    <p>
+    </p>
+    <p>
+      não funciona na internet;
+    </p>
+    <p>
+    </p>
+    <p>
+      apesar da digitação das equações ser da mesma forma que em uma calculadora científica, a visualização no editor matemático não é da forma "como se apresenta nos livros".
+    </p>
+    <p>
+    </p>
+    <p>
+     Já os principais aspectos positivos do SimQuest que justificam o seu uso como ferramenta de modelagem computacional no ensino de física são:
+    </p>
+    <p>
+    </p>
+    <p>
+      a qualidade da interface dos objetos de aprendizagem produzidos;
+    </p>
+    <p>
+    </p>
+    <p>
+      a quantidade dos objetos de controle da interface e de aquisição de dados;
+    </p>
+    <p>
+    </p>
+    <p>
+      a possibilidade de representar o comportamento de uma onda;
+    </p>
+    <p>
+    </p>
+    <p>
+      a possibilidade da estruturação de modelos distintos de um mesmo tema em um único arquivo;
+    </p>
+    <p>
+    </p>
+    <p>
+      as diferentes formas de inserir textos para embasar a simulação;
+    </p>
+    <p>
+    </p>
+    <p>
+      avisualização de vários gráficos e animações ao mesmo tempo;
+    </p>
+    <p>
+    </p>
+    <p>
+      os elementos de tarefas, de testes e de explicação para o aluno;
+    </p>
+    <p>
+    </p>
+    <p>
+      a possibilidade de dois alunos, estando em lugares diferentes, compartilharem a construção de um modelo ao mesmo tempo, bastando para isso uma conexão com a internet.
+    </p>
+    <p>
+    </p>
+    <p>
+     Pela facilidade no desenvolvimento de objetos de aprendizagem pelos professores para serem usados como atividades exploratórias, ou ainda, como atividades expressivas pelos alunos, o SimQuest se habilita como alternativa de ferramenta de modelagem computacional no ensino de física.
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 2/7/2010; Aceito em 17/1/2011; Publicado em 29/3/2011
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] J.    Wilson and E. Redish, Physics Today
+        <b>
+         42
+        </b>
+        , 34 (1989).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] P.F.T.    Dorneles, I.S. Araujo e E.A. Veit, Revista Brasileia de Ensino de Física
+        <b>
+         30
+        </b>
+        , 3308 (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] P.F.T.    Dorneles, I.S. Araujo e E.A. Veit, Revista Brasileia de Ensino de Física
+        <b>
+         28
+        </b>
+        , 487 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] J.S.    Figueira, Revista Brasileia de Ensino de Física
+        <b>
+         27
+        </b>
+        , 613 (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] E.    Esquembre, Comp. Phys. Comm.
+        <b>
+         156
+        </b>
+        , 199 (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] Universidade de Twente, disponível em http://www.universiteittwente.nl/ Acesso em 26/4/2010.
+        <br/>
+        <a href="http://http://www.universiteittwente.nl/" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] M.    Marcelino e T. Mendes, in
+        <i>
+         II Congresso Ibero-americano de Informática    na Educação
+        </i>
+        , Lisboa, 1994. Disponível em http://www.c5.cl/ieinvestiga/actas/ribie94/II
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] G.    Marconato,
+        <i>
+         Inquiry-Based Learning, Simulazioni e SimQuest
+        </i>
+        Disponível    em http://oltreelearning.blogspot.com/2007/12/inquiry-based-learning-simulazioni-e.html    Acesso em 23/4/2010.
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] SimQuest, disponível em http://www.SimQuest.nl Acesso em 23/1/2010.
+        <br/>
+        <a href="http://http://www.SimQuest.nl" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] P.H.    Richter and H.J. Scholz, in:
+        <i>
+         Stochastic Phenomena and Chaotic Behavior in    Complex Systems
+        </i>
+        (Springer, Berlin, 1984), 86 p.
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] T.    Stachowiak and T. Okad, Chaos, Solitons and Fractals
+        <b>
+         29
+        </b>
+        , 417 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] Chaoticpendulum, disponível em http://www.fas.harvard.edu/ scdiroff/lds/MathamaticalTopics/ ChaoticPendulum/ChaoticPendulum.html Acesso em 23/4/2010.
+        <br/>
+        <a href="http://http://www.fas.harvard.edu/%20scdiroff/lds/MathamaticalTopics/%20ChaoticPendulum/ChaoticPendulum.html" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] H.J.    Korsch and H.-J. Jodl,
+        <i>
+         Chaos: A Program Collection for the PC
+        </i>
+        (Springer,    Berlin, 2008), 91 p.
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] J.R.    Taylor,
+        <i>
+         Classical Mechanics
+        </i>
+        (University Science Books, Sausalito, 2005)    430 p.
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] MyPhysicsLab-Physics Simulation with Java, disponível em http://www.myphysicslab.com/dbl
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] Double Pendulum, disponível em http://scienceworld.wolfram.com/physics/DoublePendulum.html Acesso em 23/4/2010.
+        <br/>
+        <a href="http://http://scienceworld.wolfram.com/physics/DoublePendulum.html" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [17]
+        <i>
+         A Azenha de Lorenz
+        </i>
+        , disponível em http://cftc.cii.fc.ul.pt/PRISMA/capitulos/capitulo2/modulo3/topico3.php Acesso em 23/4/2010.
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] E.W.    Weisstein, disponível em http://mathworld.wolfram.com/LorenzAttractor.html    Acesso em 23/4/2010.
+        <br/>
+        <a href="http://http://mathworld.wolfram.com/LorenzAttractor.html" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <li>
+    <span class="xref big">
+     1
+    </span>
+    <div>
+     E-mail:
+    </div>
+    <div>
+     <a href="mailto:josiel_fisica@hotmail.com">
+      josiel_fisica@hotmail.com
+     </a>
+     .
+    </div>
+   </li>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        18 Abr 2011
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Mar 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        02 Jul 2010
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        17 Jan 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

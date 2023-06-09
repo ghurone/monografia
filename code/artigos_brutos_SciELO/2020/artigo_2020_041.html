@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Articles
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2020-0002" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2020-0002
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0002">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Física de processos estocásticos aplicada a opções binárias no mercado financeiro
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  The physics of stochastic processes applied to binary options in financial markets
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     J. S. Lima
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Rio Grande do Norte, Departamento de Física, 59078-970, Natal, RN, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:jailsson18@gmail.com">
+      jailsson18@gmail.com
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-8901-6724">
+     http://orcid.org/0000-0002-8901-6724
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     T. C. Abdias
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal do Rio Grande do Norte, 59015-000, Natal, RN, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     I. M. Miranda
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto Federal do Rio Grande do Norte, 59015-000, Natal, RN, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     G. M. Viswanathan
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Rio Grande do Norte, Departamento de Física, 59078-970, Natal, RN, BrasilUniversidade Federal do Rio Grande do Norte, Instituto Nacional de Pesquisa de Ciência e Tecnologia de Sistemas Complexos, 59078-970, Natal, RN, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     É bem conhecido o paralelo exato entre o problema de um jogador que aposta dinheiro iterativamente em um jogo de azar e o de um caminhante aleatório em uma dimensão com uma parede absorvedora. Essa e outras conexões entre finanças e Física motivaram o surgimento, na década de 1990, da área de Econofísica. Como o assunto ainda é pouco conhecido no âmbito de cursos de graduação em Física, vimos primeiramente revisar alguns conceitos básicos relevantes, tais como martingale, derivativo financeiro e opções de ações. Focaremos em opções binárias (OB), que são derivativos financeiros. Os objetivos desse trabalho são: (i) mostrar como funcionam as OB; (ii) simular estocasticamente o comportamento da curva de saldo para diferentes taxas de acertos; (iii) realização de testes de taxa de sucesso do indicador chamado oscilador estocástico em séries temporais de dados financeiros históricos. Esse indicador é muito usado por operadores de OB, portanto é um exemplo ilustrativo ideal. Nossos resultados evidenciam que é difícil a lucratividade consistente, mesmo que se tente recuperar perdas aplicando estratégias baseadas em martingale ou alavancagem “soros”. Tal caracterização empírica dessa dificuldade ajuda a deixar mais claro a imprevisibilidade e o alto grau de complexidade do comportamento visto em mercados financeiros.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Martingale; econofísica; opções binárias; processo estocástico
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     The analogy between the problem of a player who bets money iteratively in a game of chance and a random walker in one dimension with an absorbing boundary is well known. These and other connections between finance and physics motivated the emergence of the field of econophysics in the 1990s. Since the subject matter is still not well known at the level of undergraduate physics programs, here we first review some basic concepts, such as martingales, financial derivatives and stock options. Our objectives are the following: (i) to explain how binary options work; (ii) to simulate stochastically the behavior of the balance sheet curve for different hit rates; (iii) to run tests of the success rates for the stochastic oscillator indicator in financial time series of historical data. This indicator is widely used by binary option traders, so it is an ideal illustrative example. Our results show that it is difficult to obtain consistent profits, even using strategies based on martingales or “Soros” leveraging to recover previous losses. The empirical characterization of this difficulty may help to make clearer the unpredictability and high degree of complexity of the behavior seen in financial markets.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Martingale; econophysics; binary options; stochastic process
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Entre muitos alunos de física existe a percepção de que foi Albert Einstein o principal responsável pelo desenvolvimento da teoria do movimento browniano. Tal pensamento não estaria completamente errado, pois, o artigo de 1905 de Einstein sobre o tema representa um marco histórico. No entanto, os primeiros estudos sobre o movimento browniano, no contexto do comportamento dos preços das ações, sua dinâmica futura e precificação das opções, foram realizados por Louis Bachelier no ano 1900 em sua tese de doutorado intitulada
+     <i>
+      Théorie de la spéculation
+     </i>
+     (teoria da especulação)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] E.J. Sullivan and T.M. Weithers, The Journal of Economic Education 22, 165 (1991).
+       </span>
+      </span>
+     </span>
+     . Bachelier sugeriu o modelo de caminhadas aleatórias como processo estocástico, ou seja, que tem uma dinâmica não-determinística e com aspectos aleatórios, para precificar as opções
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] L. Bachelier, Annales Scientifiques de l'École Normale Supérieure 17, 21(1900).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A teoria de caminhadas aleatórias foi aplicada na Física cinco anos depois da tese de Bachelier. Em 1905, apesar de nunca ter ao menos ouvido falar em Bachelier, Einstein usou a teoria do movimento browniano para tentar comprovar a existência de átomos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] A. Einstein, Annalen der Physik 322, 549 (1905).
+       </span>
+      </span>
+     </span>
+     . A teoria do movimento browniano e das caminhadas aleatórias descreve o processo de movimentos de partículas sujeito a forças aleatórias. O nome “browniano” refere-se ao movimento aleatório de partículas de pólen em uma solução aquosa, fenômeno que foi documentado em 1828 pelo botânico Robert Brown. Esses movimentos irregulares não podem ser descritos pela Física de meios contínuos, pois são resultantes do movimento térmico dos átomos que constituem o líquido. As trajetórias aleatórias do tipo “zigzag” dessas partículas ficaram conhecidos como movimento browniano
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] S.R.A. Salinas, Revista Brasileira de Ensino de Física 27, 263 (2005).
+       </span>
+      </span>
+     </span>
+     . O trabalho de Einstein de 1905 teve uma enorme influência científica, pois continua sendo uma fonte de inspiração para biólogos, físicos, matemáticos, economistas e outros cientistas.
+    </p>
+    <p>
+     Contudo, em 1963 Benoit Mandelbrot, matemático criador da geometria fractal, fez críticas ao modelo do movimento browniano no mercado financeiro. Ele acreditava que as mudanças de preço não seguiam uma distribuição gaussiana, mas sim distribuições estáveis do tipo Pareto-Lévy com variância infinita
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] B. Mandelbrot, International Economic Review 1, 79 (1960).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] B. Mandelbrot, The Journal of Business 36, 394 (1963).
+       </span>
+      </span>
+     </span>
+     . Tais distribuições, como exemplo, a Lorentziana ou Cauchy, têm caudas grossas de lei de potência assintótica. Também, Mandelbrot foi um dos primeiros, se não o primeiro, a sugerir que o mercado financeiro poderia ser visto pela óptica dos fractais
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] B.B. Mandelbrot and R.L. Hudson, The (Mis)Behaviour of Markets: A Fractal View of Risk, Ruin and Reward (Profile, Londres, 2010).
+       </span>
+      </span>
+     </span>
+     , que têm propriedades de simetria de invariância por mudanças de escala.
+    </p>
+    <p>
+     Mesmo assim, o movimento browniano, na década de 1970, serviu como inspiração para os economistas norte-americanos Fischer Black e Myron Scholes, em conjunto com Robert C. Merton, desenvolverem um modelo de precificação de opções sobre ações europeias
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] F. Black and M. Scholes, Journal of Political Economy 81, 637 (1973).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] R. Merton, J Econ Manage Sci 4, 141 (1973).
+       </span>
+      </span>
+     </span>
+     (a definição de opção está na seção seguinte deste artigo). Eles mostraram que é possível montar uma estratégia dinâmica pela qual o risco pode ser completamente eliminado. Este modelo rendeu o prêmio Nobel de economia do ano 1997 a Myron Scholes e Robert C. Merton. A teoria Black-Scholes foi em parte responsável pelo sucesso dos fundos de “Hedge”. Já as falhas na teoria possivelmente tiveram um papel, mesmo que pequeno, nas dificuldades teóricas para lidar com as crises financeiras do final da década de 1990. Especificamente, a teoria não considera o comportamento não-gaussiano na distribuição de retornos financeiros, o que a deixou inadequada e vulnerável aos eventos raros, mas extremos (os tais “cisnes negros”). Diversos estudos foram realizados nas décadas seguintes em busca da caracterização da distribuição de probabilidade de retornos financeiros. Sabemos hoje que a distribuição não é do tipo Lévy e que também não é gaussiano. As séries temporais financeiras aparentam ter dinâmica estocástica, logo são imprevisíveis, porém, isso não justifica tratá-las como sendo totalmente aleatórias, pois elas apresentam correlações de longo alcance
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Matsushita and S. Da Silva, Econofísica (Independently Published, 2017).
+       </span>
+      </span>
+     </span>
+     . Não há consenso sobre se a origem de caudas grossas é plenamente compreendida
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] H.B. do Nascimento Jr., U.L. Fulco, M.L. Lyra, M. Serva and G.M. Viswanathan, Revista Brasileira de Ensino de Física 29, 341 (2007).
+       </span>
+      </span>
+     </span>
+     . Sabemos hoje que a hipótese de Mandelbrot a respeito da distribuição ser do tipo Lévy está errada, mesmo que tenha sido uma ideia importante do ponto de vista histórico.
+    </p>
+    <p>
+     Devido aos esforços de físicos em tentar entender melhor uma variedade de problemas em finanças e em economia, acabou surgindo na década de 1990 um ramo da Física dedicada: a Econofísica. Esse nome foi cunhado em 1995
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] R. Matsushita and S. Da Silva, Econofísica (Independently Published, 2017).
+       </span>
+      </span>
+     </span>
+     pelo físico da Universidade de Boston, H. Eugene Stanley, ganhador da Medalha Boltzmann do ano 2004.
+    </p>
+    <p>
+     É notório que muitas pessoas, inclusive estudantes de Física, desejam entender melhor como funciona o mercado financeiro. Quantas pessoas não sonham em conseguir riquezas relacionadas ao mercado financeiro? Por outro lado, acreditamos que há um “deficit” grande no Brasil por partes dos estudantes de graduação e ensino médio no tocante aos conhecimentos sobre finanças e Econofísica. Então, este trabalho tem forte relevância, pois mostraremos nas seções seguintes um pouco sobre o mercado de derivativos, especialmente com a tentativa de previsibilidade em séries temporais para um tipo exótico de opções (as opções binárias). Assim, nosso trabalho serve de inspiração para que os alunos se interessem mais pela física de processos estocásticos (movimento browniano, martingales, etc.). Em outras palavras, este trabalho pode servir de incentivo para que estudantes de física se interessem ou mesmo se identifiquem com a Econofísica.
+    </p>
+    <p>
+     Por conta da Econofísica ainda ser pouco conhecida no âmbito de cursos de graduação em Física, vimos primeiramente revisar alguns conceitos básicos relevantes, como martingale, derivativos financeiros e opções de ações, com foco nas opções binárias (OB). Nossos objetivos são (i) mostrar como funcionam as OB do tipo “call/put”, (ii) simular o comportamento da curva de saldo para diferentes taxas de acertos, (iii) realização de “backtesting” do indicador chamado oscilador estocástico em séries temporais de dados financeiros históricos.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Derivativos financeiros e opções binárias
+    </h1>
+    <h2>
+     2.1. Derivativos e risco
+    </h2>
+    <p>
+     Os derivativos de renda variável são contratos financeiros, que têm vencimento e liquidação estabelecidos para uma data futura e preço determinado, cujo valor de compra ou venda deriva dos valores de outras variáveis subjacentes mais básicas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [12]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [12] J.C. Hull, Opções, Futuros e Outros Derivativos (Bookman Editora, Porto Alegre, 2016).
+       </span>
+      </span>
+     </span>
+     . O preço de um derivativo financeiro pode ser
+     <i>
+      derivado
+     </i>
+     desde uma ação, “commodities” ou até mesmo de moedas de câmbio. Os três maiores mercados derivativos negociados na bolsa de valores no Brasil são os do mercado de opções, a termo e futuro.
+    </p>
+    <p>
+     Esses instrumentos financeiros derivativos servem para efetivamente comprar ou vender risco. Para ilustrar a ideia, considere o seguinte exemplo. Quem tem um automóvel e deseja reduzir o risco ligado ao mesmo, pode comprar um seguro. Se considerarmos que o automóvel é o ativo principal, então o seguro é um instrumento derivativo dele. O seguro para automóveis é vantajoso tanto para o comprador do seguro (se o carro for roubado, etc.) como também para o vendedor (que tem ganho esperado positivo por contrato vendido). O seguro de automóvel permite que o risco ligado ao veículo seja transferido à seguradora. É essa habilidade de transferir risco que confere aos derivativos, grande importância nos mercados financeiros modernos. A origem de derivativos remonta a períodos pré-capitalistas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [13]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [13] P. Rossi, Cadernos do Desenvolvimento 7, 125 (2018).
+       </span>
+      </span>
+     </span>
+     , que sem dúvida, a invenção deles foi um passo importante no capitalismo contemporâneo, pois permitiu o gerenciamento de riscos na economia de forma incomparavelmente mais sofisticada e eficiente do que anteriormente. Neste artigo focamos nas opções de ações, que são derivativos delas.
+    </p>
+    <p>
+     Cada opção é um contrato que confere o direito de negociar uma determinada ação a um preço estabelecido até uma data predeterminada
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] E. Oliveira, Ganhe Dinheiro na Bolsa de Valores com Opções - Estratégias para alavancar suas operações na bolsa: opçõess, bolsa de valores, investir, ações, mercado de opções, alavancagem (2014).
+       </span>
+      </span>
+     </span>
+     . Existem dois tipos: a opção de compra (“call”) e a de venda (“put”).
+    </p>
+    <p>
+     <b>
+      “Call
+      <math>
+       <mo stretchy="false">
+        ↑
+       </mo>
+      </math>
+      ”
+     </b>
+     . Esse tipo pode ser facilmente entendido com o seguinte exemplo: se um investidor especular que o preço da ação X de uma empresa vai subir nos próximos dias, ele então poderá comprar esta opção que lhe dá o direito de adquirir esta X, posteriormente, por um valor estabelecido hoje num contrato.
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        O valor de compra estabelecido no contrato, ou o mesmo que dizer preço de exercício, é conhecido por “Strike”.
+       </span>
+      </span>
+     </span>
+     . O vendedor receberá um prêmio por estar dando o direito do investidor comprar a ação, que é exatamente o valor total que este último aplicará para a efetivação da compra da opção. Neste caso, o investidor tem o direito de comprar e o vendedor a obrigação de vender a ação.
+    </p>
+    <p>
+     O comprador da opção pode exercer o direito de comprar se assim ele quiser, porém, o vendedor da mesma é sempre obrigado a vender. Então, se a ação X estiver mais alta no vencimento do contrato, o investidor pode exercer o direito de comprá-la por um preço abaixo daquele atual de mercado e vender imediatamente para obter seus lucros. Caso o investidor não exerça o seu direito, então perderá 100% do valor investido na compra da opção. Em outras palavras, observa-se que a opção de compra pode ser vista como um “seguro” contra possíveis elevações do preço do ativo X. O comprador da opção paga um valor que lhe confere o direito de comprar X no futuro em um preço determinado, mesmo que este venha a subir acima daquele predeterminado. Se o preço de mercado de X ficar abaixo do predeterminado na data de vencimento, a opção perde sua utilidade e fica com valor zero.
+    </p>
+    <p>
+     Na verdade, as opções “call” são de dois tipos: (i) Americanas e (ii) Europeias. Em (i) o investidor pode exercer o seu direito em qualquer data até o vencimento, enquanto em (ii) só exercerá no dia dele.
+    </p>
+    <p>
+     <b>
+      “Put
+      <math>
+       <mo stretchy="false">
+        ↓
+       </mo>
+      </math>
+      ”
+     </b>
+     : Em opções “put”, o investidor paga um valor (prêmio) o qual lhe dá o direito de vender uma ação X a um preço estabelecido até uma data predeterminada. Por exemplo, suponhamos que tal ação X subiu bastante e está em um preço de R$ 25,00 e o investidor especula que o mercado dará uma correção para baixo. Então, ele pode comprar uma “put” a qual lhe dá o direito de vender a ação em R$ 23,00 até o vencimento do contrato. Supomos que realmente o mercado caiu bastante e X está em R$ 18,00. Logo, o investidor pode exercer o seu direito de vender a X nos R$ 23,00, permitindo um lucro de R$ 5,00 por ação. De outra maneira, caso o valor da X esteja superior ao preço de exercício da opção, então ele pode optar por não exercer o seu direito de venda. Isto é, perderá somente o capital investido na compra da opção (o prêmio). Em outras palavras, nota-se que a opção de venda pode ser vista como um “seguro” contra possíveis quedas do preço do ativo X. O comprador da opção dá um prêmio ao vendedor para adquirir o direito de vender X no futuro a um preço determinado, mesmo que este venha a cair abaixo daquele predeterminado. Assim, se o preço de mercado de X ficar acima daquele predeterminado para a data de vencimento, a opção perde sua utilidade e fica com valor zero.
+    </p>
+    <h2>
+     2.2. Opções Binárias (OB)
+    </h2>
+    <p>
+     As opções binárias (OB) são um tipo bastante distinto daquele de opções de ações descritos acima. Elas funcionam de uma forma muito mais simples e bem diferente. As OB são uma modalidade de investimento em que não se investe na compra/venda do instrumento financeiro, mas sim na aposta se o preço do mesmo vai estar mais alto ou mais baixo do que o atual após um período predeterminado de tempo.
+    </p>
+    <p>
+     Os instrumentos financeiros que são usados para operar OB são pares cambiais
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        Moedas de câmbio: EUR (Euro), USD (Dólar dos Estados Unidos), GBP (Libra Esterlina), JPY (Iene japonês).
+       </span>
+      </span>
+     </span>
+     (Ex: EUR/USD, GBP/USD, USD/JPY), “commodities” (Ex: Ouro, Prata, Petróleo), índices (Ex: Dow Jones, S&amp;P500, Nasdaq), acões (Ex: Google, Facebook, Audi) e criptomoedas (Ex: Bitcoin, Ripple, Ethereum).
+    </p>
+    <p>
+     Como exemplo ilustrativo, considere as ações da empresa, Facebook. Dessa forma, o “trader” vai estar apostando se o preço da ação estará mais alto ou mais baixo nos próximos três minutos, ou cinco minutos, uma hora, etc. O “trader” é quem estabelece um tempo de expiração da aposta. Vale ressaltar que, geralmente, tempos muito longos como um dia, dois dias, uma semana, não são disponíveis nas corretoras, já que para tais tempos, talvez ao se fazer uma análise fundamentalista no ativo poderia levar a taxas de acertos maiores, levando a modalidade OB perder o seu sentido. Logo, as opções tradicionais de venda e compra são em geral investimentos mais adequados a longo prazo. Então, vemos que OB é uma modalidade de investimento mais simples do que muitas outras mais populares (por exemplo, os mini-contratos ou mesmo as ações) que as pessoas conhecem. Justamente, deve-se ao fato de que simplesmente o investidor/apostador (“trader”) não precisa acertar de quanto será a variação no preço. Isto é, apenas interessa se finalizou acima ou abaixo daquele, no ato da abertura da operação. Portanto, tanto para a opção binária do tipo “call” (OB de compra) quanto para a do tipo “put” (OB de venda), só há duas possibilidades de resultados que são “sim” ou “não”. São chamadas de binárias por isso.
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     a seguir ilustra como é a realização das operações numa plataforma de “trading” (Ex: corretora de investimento).
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Ilustração de uma plataforma de “trading” de OB. Este é um exemplo para um investidor que tem um saldo de R$ 1.000,00 e abrirá uma ordem de compra ou venda apostando R$ 50,00 na tendência para três minutos de expiração. Esta é uma curva de preço em função do tempo, onde tal tempo é escalado em “time-frame” de, por exemplo, 1 minuto (M1), 5 minutos (M5), 1 hora (H1), etc. A título de exemplo, se o tempo for o M1, então cada vela (vela ou “candle”, representação que foi inventada pelos japoneses) tem duração de um minuto, onde há uma abertura, máximo, mínimo e fechamento do preço naquele minuto. As cores são para diferenciar variações positivas das negativas. Há algumas representações de curvas de preços em função do tempo, no entanto, a de “candles” é a mais usada pelos analistas técnicos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     mostra uma caixa de entrada onde o “trader” determinará o tempo de expiração da ordem (neste exemplo, 3 minutos) e outra de inserir o capital que ele quer abrir na operação. Também, há dois botões (“call
+     <math>
+      <mo stretchy="false">
+       ↑
+      </mo>
+     </math>
+     ”, “put
+     <math>
+      <mo stretchy="false">
+       ↓
+      </mo>
+     </math>
+     ”), através dos quais será aberta a ordem ao acionar em um deles. Geralmente, a corretora estabelece o “payout”
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         3
+        </strong>
+        “Payout”: é o pagamento a ser realizado caso o “trader” acerte a direção do preço.
+       </span>
+      </span>
+     </span>
+     para cada instrumento financeiro, podendo variar de 10% a 95%. Geralmente está em 80% (dificilmente será superior a 90%). Assim, considerando um “payout” de 80%, caso o “trader” acerte o sentido da tendência do preço para os próximos 3 minutos, o lucro será de R$ 40,00, logo o seu saldo aumentará para R$ 1.040,00. No entanto, se não acertar, a perda será de 100% do valor investido, ou seja, perderá os R$ 50,00, então o saldo reduzirá para R$ 950,00.
+    </p>
+    <p>
+     Cada corretora estabelece o capital mínimo que se pode abrir numa ordem. Uma vantagem é que tal capital é muito baixo. Geralmente com apenas R$ 2,00 já se pode abrir uma operação. Outra grande vantagem nessa modalidade de investimento é que nenhuma taxa de abertura de ordem é cobrada. Também, de fato, o próprio “trader” é quem estabelece o quanto ele irá ganhar na operação ou o quanto possivelmente perderá.
+    </p>
+    <h2>
+     2.3. Legislação no Brasil
+    </h2>
+    <p>
+     A Comissão de Valores Mobiliários (CVM) é uma entidade autárquica, normatizadora, fiscalizadora, vinculada ao ministério da economia e voltada ao mercado de títulos e valores mobiliários. Assim, investimentos que envolvem operações com o mercado de ações, ou de derivativos delas, no Brasil são supervisionados pela CVM.
+    </p>
+    <p>
+     Quando um investidor abre um cadastro numa corretora para operar na bolsa de valores no Brasil (Bovespa), ao mesmo tempo, ele estará abrindo cadastros também na Bovespa, no banco liquidante e na Companhia Brasileira de Liquidação e Custódia (CBLC). Então, na CBLC vão ficar registradas as ações e títulos. Desse modo, se a corretora do investidor quebrar, desaparecer, etc, o mesmo não correrá riscos de perder os valores mobiliários, pois tem tudo registrado na CBLC. Logo, ele pode solicitar a transferência de custódia dos valores para outra corretora que ele bem-queira
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [15]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [15] O.S. de Brito, Guia prático de economia e finanças (Editora Saraiva, São Paulo, 2017).
+       </span>
+      </span>
+     </span>
+     . Pois, uma corretora é apenas uma intermediadora dos seus investimentos, ela não guarda suas ações. Assim, são com base nessas questões de segurança nos investimentos que a CVM permite com que se possa operar no Brasil: ações, opções de ações, índice futuro, dólar, etc.
+    </p>
+    <p>
+     Já, as modalidades de investimento de mercado, Forex e OB, não são recomendadas pela CVM, justamente por não garantir essa segurança. Logo, ela não permite que empresas brasileiras, com sede ou escritórios no Brasil, forneçam esses produtos aos investidores, pois não são regulamentados utilizando as leis do Brasil.
+    </p>
+    <p>
+     Embora não seja recomendado pela CVM, de fato não é ilegal um brasileiro operar nessas modalidades no Brasil
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [16]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [16] Comissão de Valores Mobiliários, Mercado Forex, disponível em https://www.investidor.gov.br/portaldoinvestidor/export/sites/portaldoinvestidor/publicacao/Alertas/mercadoForex.pdf, acessado em 27/12/2019.
+       </span>
+       <br/>
+       <a href="https://www.investidor.gov.br/portaldoinvestidor/export/sites/portaldoinvestidor/publicacao/Alertas/mercadoForex.pdf" target="_blank">
+        https://www.investidor.gov.br/portaldoin...
+       </a>
+      </span>
+     </span>
+     . Então, para um indivíduo brasileiro fazer investimentos nesses mercados, o mesmo deve ter conta em corretoras que atuem em âmbito internacional e que tenham registros na CVM ou no Conselho Monetário Nacional (CMN) para atuarem no Brasil. Contudo, caso tais corretoras cometam injustiças, crimes, fraudes, etc, não tem como a CVM garantir que o investidor recuperará seu dinheiro, porque ela não pode fiscalizar. Assim, em princípio, não é possível descartar a possibilidade de que simplesmente ele poderá perder tudo, pois não se tem tanta segurança comparada aos investimentos que se tem na Bovespa com registros na CBLC.
+    </p>
+    <p>
+     Os riscos não são desprezíveis do ponto de vista de as corretoras estrangeiras cometerem falcatruas, bloquear contas sem motivos justos, atrapalhar tecnicamente nas operações para evitar lucros, etc. Além desses, outro ponto importante é a questão de confiabilidade, pois nas empresas (corretoras) que operam OB o depósito nelas é feito do nome do cliente para o da empresa e não de CPF para CPF do mesmo (abreviação de Cadastro de Pessoas Físicas). Assim, o seu dinheiro está sobre grandes riscos sempre que ele não estiver também no seu CPF na outra instituição, principalmente se não for uma empresa recomendada pela CVM. Tais depósitos geralmente são feitos por carteiras eletrônicas de pagamento “online”, cartão de crédito, boleto bancário, etc, tudo como se fosse um pagamento qualquer. Desse modo, caso a empresa simplesmente bloqueie a conta após o depósito não se tem nem como provar tais atos.
+    </p>
+    <p>
+     Por fim, o FBI cita exemplo de fraudes que ocorreram muito nos últimos anos no tocante a investimentos em OB
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [17]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [17] FBI, Binary Options Fraud, disponível em https://www.fbi.gov/news/stories/binary-options-fraud, acessado em 11/06/2019.
+       </span>
+       <br/>
+       <a href="https://www.fbi.gov/news/stories/binary-options-fraud" target="_blank">
+        https://www.fbi.gov/news/stories/binary-...
+       </a>
+      </span>
+     </span>
+     . Portanto, cabe ao investidor procurar por uma boa corretora para evitar perdas graves.
+    </p>
+    <h2>
+     2.4. Análise técnica como peça fundamental
+    </h2>
+    <p>
+     Devido ao tempo de expiração das “call/put” binárias ser curto, as estratégias que os “traders” utilizam para operar nesse mercado são geralmente baseadas em análises técnicas. Tais análises são geralmente muito práticas de se fazer, pois, nas plataformas de “trading” já existe uma variedade de indicadores financeiros com parâmetros facilmente ajustáveis. Logo, isso pode ser interessante e poderá proporcionar bons lucros como também serve de armas para atrair pessoas leigas para o mercado, possivelmente fazendo-as perder dinheiro por falta de conhecimento sobre a aplicabilidade adequada e de física envolvida nos diversos indicadores.
+    </p>
+    <p>
+     Análise técnica é um estudo único e exclusivamente de preço. Ela se contrapõe à análise fundamental, que considera uma variedade de dados, tal como inflação, fluxos de caixa, dividendos, etc. O que importa em análise técnica é a evolução do preço com o passar do tempo e a identificação de tendências, onde elas podem durar meses, semanas ou simplesmente poucos minutos, ou segundos. Os elementos importantes nessa análise são volume das negociações, padrões gráficos e indicadores técnicos. Tais análises são amplamente usadas para operar com OB.
+    </p>
+    <p>
+     Na “internet” há grupos de pessoas vendendo a ideia equivocada de que as OB são um investimento fácil e de altos ganhos em curtíssimo tempo. Elas estão vendendo cursos duvidosos e questionáveis porque nada garante que tais estratégias darão uma taxa média de acertos acima dos 50%. Por isso, questiona-se que estejam apenas lucrando com as vendas dos cursos e não com operações, de fato, lucrativas no mercado. Ou seja, estão praticando enganação e falsidade ideológica.
+    </p>
+    <p>
+     Infelizmente, muitas pessoas ingênuas entram para o investimento sem nenhuma base de conhecimento técnico sobre a modalidade, podendo em poucas operações perder completamente seu capital.
+    </p>
+    <p>
+     Há uma infinidade de indicadores técnicos disponíveis nas plataformas das corretoras de OB, tais como bandas de Bollinger, médias móveis, retrações Fibonacci, índice de força relativa, oscilador estocástico e diversos outros. Assim, para sentir o nível de dificuldade nas especulações dos preços usando um indicador, realizaremos um “backtesting ” com milhares de “candles”, utilizando o estocástico que é um dos osciladores de tendência mais utilizados em OB.
+    </p>
+    <p>
+     O estocástico é um indicador de “momentum” que foi criado para tentar prever ou indicar a tendência futura do preço do ativo através da divergência entre o fechamento com o máximo e o mínimo em um determinado período, conforme ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     . Em outras palavras, é o mesmo que medir onde está o fechamento atual em relação ao mínimo e ao máximo do período, onde este menor corresponde ao zero e o maior aos cem.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Ilustração do indicador oscilador estocástico. Esta curva de preço é semelhante àquela da
+      <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 1
+      </a>
+      . A curva do oscilador estocástico é construída de forma análoga ao procedimento de cálculo de uma média móvel de uma série de dados, onde para cada conjunto de 14 velas (ou “candles”) é calculado o valor de
+      <math>
+       <mi>
+        K
+       </mi>
+      </math>
+      através da
+      <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       Equação 1
+      </a>
+      . As variáveis “High” e “Low” são o mais alto e mais baixo níveis de preço atingidos no período, respectivamente, enquanto “Close” é o valor de fechamento do último “candle”.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Ele foi criado por George Lane em 1950
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [18]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [18] R. Rosillo, D. de la Fuente and J.A.L. Brugos, Applied Economics 45, 1541 (2013).
+       </span>
+      </span>
+     </span>
+     e sua definição é dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Equação 1
+     </a>
+     ,
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mi>
+         K
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mrow class="MJX-TeXAtom-ORD">
+         <mo maxsize="2.047em" minsize="2.047em">
+          (
+         </mo>
+        </mrow>
+        <mfrac>
+         <mrow>
+          <mi>
+           C
+          </mi>
+          <mi>
+           l
+          </mi>
+          <mi>
+           o
+          </mi>
+          <mi>
+           s
+          </mi>
+          <mi>
+           e
+          </mi>
+          <mo>
+           −
+          </mo>
+          <mi>
+           L
+          </mi>
+          <mi>
+           o
+          </mi>
+          <mi>
+           w
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           H
+          </mi>
+          <mi>
+           i
+          </mi>
+          <mi>
+           g
+          </mi>
+          <mi>
+           h
+          </mi>
+          <mo>
+           −
+          </mo>
+          <mi>
+           L
+          </mi>
+          <mi>
+           o
+          </mi>
+          <mi>
+           w
+          </mi>
+         </mrow>
+        </mfrac>
+        <mrow class="MJX-TeXAtom-ORD">
+         <mo maxsize="2.047em" minsize="2.047em">
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ×
+        </mo>
+        <mn>
+         100
+        </mn>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <mi>
+       K
+      </mi>
+     </math>
+     oscila num intervalo de valores limitado de 0 a 100%. Para
+     <math>
+      <mi>
+       K
+      </mi>
+     </math>
+     acima de 80% considera-se região de sobrecompra e abaixo de 20% é sobrevenda. Na terminologia usada no mercado financeiro, um ativo sobrecomprado (sobrevendido) é aquele que é excessivamente valorizado (desvalorizado) devido a preços de compra (venda) injustificados.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Metodologia
+    </h1>
+    <p>
+     Criamos dois programas simples. O primeiro programa serve para mostrar melhor como funciona a relação risco/benefício (R/B) nas opções binárias, onde simulamos duas situações para a curva de saldo: i) supõe-se que a taxa média de acertos seja de 50%; ii) supõe-se que a taxa média de acertos seja bem maior que 50%. Já o segundo programa calcula a taxa média de acertos do indicador oscilador estocástico nos dados históricos de algumas paridades cambiais como EUR/USD.
+    </p>
+    <p>
+     Utilizamos a linguagem de programação Fortran, por ela ter uma longa tradição na Física. No entanto, seria muito fácil adaptar o código para C ou Python, etc.
+    </p>
+    <p>
+     Os dados históricos que utilizamos foram obtidos da plataforma “Meta Trader 5”. Assim, utilizamos na estatística um total aproximado de 2,3 milhões de velas do “time-frame“ M1 que corresponde ao intervalo de datas 01/janeiro/2013 - 31/maio/2019. O período do oscilador estocástico utilizado foi de 14 velas, enquanto seus valores de sobrecompra/sobrevenda, respectivamente, foram
+     <math>
+      <mi>
+       K
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       95
+      </mn>
+      <mi mathvariant="normal">
+       %
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       K
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       5
+      </mn>
+      <mi mathvariant="normal">
+       %
+      </mi>
+     </math>
+     . Assim, nosso programa começa as buscas a partir da primeira data e, quando ele detecta que o estocástico atingiu o nível de
+     <math>
+      <mi>
+       K
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       95
+      </mn>
+      <mi mathvariant="normal">
+       %
+      </mi>
+     </math>
+     , checa se com “n” velas posteriores o preço da paridade finalizou inferior ao atual. Tal número de velas é o mesmo que o tempo de expiração da opção binária “put”. Desse modo, caso a resposta seja um sim, computa-se um acerto, senão uma perda. De forma bem semelhante é feito para o estocástico atingindo o nível baixo de 5%, em que a opção envolvida é a “call”. Então, ao alcançar a data final, checamos o quanto de acertos ocorreu em relação ao número total de operações realizadas.
+    </p>
+    <p>
+     Nossos códigos de ambos os programas estão como material suplementar no sítio “web” do Scielo.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados e Discussão
+    </h1>
+    <p>
+     Para um “trader” conseguir manter a sua curva de saldo crescente, é necessário ter um conjunto de habilidades que vai desde um bom gerenciamento dos riscos a uma boa estratégia que der uma taxa média de acertos muito acima de 50%. Assim, o primeiro programa simula dois “traders” distintos. Ambos iniciam com um saldo de R$ 1.000,00 na conta, operam somente com pagamento de 80% e pretendem fazer até 200 operações por dia durante três dias seguidos. O primeiro “trader” prefere operar totalmente aleatoriamente, jogando uma moeda no ar. Se sair cara ele aperta no botão de compra (
+     <math>
+      <mo stretchy="false">
+       ↑
+      </mo>
+     </math>
+     ); se a ocorrência for coroa ele aciona no de venda (
+     <math>
+      <mo stretchy="false">
+       ↓
+      </mo>
+     </math>
+     ). A moeda é livre de vício e pode cair cara ou coroa com 50% de probabilidade. Já o segundo “trader” opta por uma estratégia que acerta 70% em média das operações. Em situações realísticas, é muito difícil obter taxas de acerto tão altas, mas nas nossas simulações admitimos que isso é possível, só para realizar testes e assim poder tirar conclusões. Os resultados médios para ambos os “traders” são mostrados na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     .
+    </p>
+    <p>
+     Com uma simples observação na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     percebe-se que o “trader” que optou por jogar moeda praticamente quebrou a conta nos três dias. Assim, vemos que se a taxa média de acertos for cerca de 50%, isso leva a curva de saldo a zero em poucas operações. Em outras palavras, isto se deve a relação de risco/benefício (
+     <math>
+      <mi>
+       R
+      </mi>
+      <mrow class="MJX-TeXAtom-ORD">
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <mi>
+       B
+      </mi>
+     </math>
+     , onde
+     <math>
+      <mi>
+       R
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1.0
+      </mn>
+     </math>
+     e
+     <math>
+      <mi>
+       B
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0.8
+      </mn>
+     </math>
+     para “payout” de 80%) não ser favorável nas OB. Já o “trader” que optou pela estratégia dos 70% de acertos em média triplicou o saldo em cada dia.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Simulação computacional gerando números aleatoriamente entre 0 e 1. Em (a) consideramos taxa de acertos de 50% e em (b) de 70%.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Podemos imaginar a possibilidade de o “trader” jogador de moedas ter uma curva de saldo crescente mesmo com taxa de acerto de 50%. Isso poderia ser feito através de capital duplicado nas próximas operações de modo a compensar as perdas anteriores. Entretanto, vemos na figura que a ocorrência de mais de cinco erros seguidos é alta. Logo, em três ou quatro erros seguidos, a curva de saldo iria para zero. Consequentemente, só pioraria a situação. Esse processo de recuperar as perdas é conhecido por martingale.
+    </p>
+    <h2>
+     4.1. Martingale
+    </h2>
+    <p>
+     Um martingale é definido como sendo uma sequência de variáveis aleatórias cujo valor esperado condicional para o próximo valor, dado todos os valores do passado, é exatamente igual ao do tempo presente. É um processo estocástico muito conhecido na teoria das probabilidades
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [19]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [19] J.L. Doob, The American Mathematical Monthly 78, 451 (1971).
+       </span>
+      </span>
+     </span>
+     . No contexto da teoria de probabilidade, ele foi primeiramente apresentado em 1934 por Lévy
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [20]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [20] Martingale, disponível em https://pt.wikipedia.org/wiki/Martingale, acessado em 16/06/2019.
+       </span>
+       <br/>
+       <a href="https://pt.wikipedia.org/wiki/Martingale" target="_blank">
+        https://pt.wikipedia.org/wiki/Martingale...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [21]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [21] D. Williams, Probability with Martingales (Cambridge University Press, Cambridge, 1991).
+       </span>
+      </span>
+     </span>
+     . Em linguagem matemática, consideramos que existe um conjunto de variáveis aleatórias
+     <math>
+      <mo fence="false" stretchy="false">
+       {
+      </mo>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msub>
+      <mo>
+       ,
+      </mo>
+      <mo>
+       .
+      </mo>
+      <mo>
+       .
+      </mo>
+      <mo>
+       .
+      </mo>
+      <mo>
+       ,
+      </mo>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mi>
+        n
+       </mi>
+      </msub>
+      <mo fence="false" stretchy="false">
+       }
+      </mo>
+     </math>
+     , em que o valor esperado para
+     <math>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mi>
+        n
+       </mi>
+      </msub>
+     </math>
+     é igual ao de
+     <math>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mrow class="MJX-TeXAtom-ORD">
+        <mi>
+         n
+        </mi>
+        <mo>
+         −
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     No contexto de jogos de azar, a estratégia martingale consiste em apostar, em cada iteração do jogo, um valor suficiente para poder recuperar qualquer perda anterior. Considere um jogo onde em cada operação, o jogador pode perder toda a aposta com 50% de probabilidade ou então lucrar 100% com 50% de probabilidade. Então, se o jogador perder um valor
+     <math>
+      <mi>
+       X
+      </mi>
+     </math>
+     no primeiro jogo, basta apostar
+     <math>
+      <mn>
+       2
+      </mn>
+      <mi>
+       X
+      </mi>
+     </math>
+     no segundo para ter a possibilidade de recuperar a quantidade perdida anteriormente. Essa estratégia garante que, em média, um jogador com crédito infinito nunca terá perdas. Apesar disso, um jogador com um montante finito rapidamente pode ir à ruína.
+    </p>
+    <p>
+     Logo, a aplicação dessa estratégia pode trazer elevado risco. Caso o “trader” queira utilizá-la em suas operações, deve executá-la com bastante atenção e responsabilidade. Pois, como mostra o segundo gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     , apesar de acontecer com menor frequência, ainda com uma taxa média de acertos de 70% é inevitável se deparar com mais de seis erros seguidos.
+    </p>
+    <p>
+     Considere um exemplo. Um “trader” poderia criar uma estratégia baseada em martingale, com o objetivo de fazer 30 operações por dia, com taxa de sucesso de 100%. Cada operação pode consistir de várias transações. Nesse exemplo, suponha que ele tem um saldo de R$ 1.000,00 inicialmente e quer operar um capital mínimo de R$ 10,00 por operação. Para isso, com um “payout” de 80% isso daria R$ 8,00 por operação. Assim, conforme a
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , ele só poderia errar até quatro vezes seguidas e obrigatoriamente acertar a quinta tentativa. Pois, se ele errar na primeira tentativa, ele perde R$10,00. Assim sendo, para ter lucro de R$8,00 ele agora tem que ganhar R$18,00, portanto ele precisa apostar R$22,50. Deste jeito, somando com os R$10,00 que ele já perdeu, isso totaliza R$32,50. Logo, prossegue-se assim por diante.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Tabela de martingale para ganhar R$ 240,00 ao final de 30 operações, desde que garanta que não errará 5 vezes seguidas no meio do processo (“payout” de 80%). Assim, mesmo tendo errado as quatro operações anteriores (“LOSS”) e acertado a quinta (“WIN”), o ganho efetivo é de ter finalizado todas elas com êxito, em que o retorno por operação é de R$ 8,00.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Caso tudo ocorra bem, no final das 30 operações ele terá um ganho garantido de R$ 240,00. Assim, se fizer isso todos os dias, ao final do primeiro mês seu saldo aumentaria de R$ 1.000,00 para R$ 8.200,00. No entanto, como ele garantiria que não erraria cinco vezes seguidas com certa frequência? Na verdade, há uma possibilidade muito grande de zerar a conta no meio do processo, porque essa forma de gerenciamento exige um crescimento exponencial. A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     mostra os primeiros dez passos de martingale para o “trader” descrito acima.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Curva de crescimento de capital exigido para recuperar as perdas através do processo martingale.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Enfim, como o “trader” tem um capital finito, ele não consegue executar muitos passos. Assim, zerará a conta rapidamente. Portanto, um gerenciamento baseado em martingale para operar OB, se a taxa de acertos for próxima de 50%, com base nessas análises, é o mesmo que jogar dinheiro no lixo. Mesmo que seja bem alta como 70% de acertos, ainda há alto risco de zerar a conta.
+    </p>
+    <h2>
+     4.2. Soros
+    </h2>
+    <p>
+     George Soros é um investidor húngaro-americano que ficou conhecido como “o homem que quebrou o Banco da Inglaterra”, porque em 1992 lucrou mais de um bilhão de dólares, quando “chamou o blefe” do banco central do Reino Unido. Como aluno de Karl Popper, foi influenciado pela ideia de reflexividade, eventualmente a aplicando ao mercado financeiro. A estratégia que discutiremos a seguir tem o nome “soros”
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [22]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [22] Estratégia e gerenciamento de riscos Soros, disponível em https://forexnobrasil.com.br/estrategia-soros-para-opcoes-binarias-baixo-risco-e-altos-lucros/, acessado em 27/12/2019.
+       </span>
+       <br/>
+       <a href="https://forexnobrasil.com.br/estrategia-soros-para-opcoes-binarias-baixo-risco-e-altos-lucros/" target="_blank">
+        https://forexnobrasil.com.br/estrategia-...
+       </a>
+      </span>
+     </span>
+     , embora não esteja claro exatamente o motivo disso. Há relatos informais entre “traders” na “internet” de que isso se deva ao fato desse gerenciamento ou estratégia soros para OB ser extremamente agressivo do ponto de vista de lucratividade (de alavancagem de capital), que é uma característica em comum com o perfil lucrativo de George Soros. No entanto, não temos referencial bibliográfico constatando isso, apesar de ser uma estratégia bastante difundida entre “traders OB”. Ela tanto consegue alavancar com velocidade absurda quanto pode zerar a conta com pouquíssimas operações.
+    </p>
+    <p>
+     Diferente do martingale, onde o valor apostado vai crescendo exponencialmente a cada iteração do jogo, no gerenciamento soros o valor apostado é tipicamente uma pequena fração do montante. A estratégia tem um parâmetro livre que é o nível do soros, tipicamente 4 ou 5. A ideia por trás da estratégia é apostar e reinvestir o lucro na iteração seguinte, até que seja alcançado um número de operações igual ao nível, no caso, 4 ou 5 passos. Se houver perda antes de completar os níveis, o “trader” aborta a estratégia e começa tudo de novo.
+    </p>
+    <p>
+     Para ilustrar a estratégia, considere um exemplo. Suponhamos que um “trader” tem inicialmente R$ 1.000,00 e particionou esse saldo em dez partes. Em seguida, decidiu aplicar o soros de nível quatro em cada uma das dez partes, ou seja, em cada R$ 100,00. Então, caso ele acerte quatro operações seguidas, ele transformará R$ 100,00 em R$ 1.049,76, conforme mostra na
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 2
+     </a>
+     .
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Tabela de gerenciamento soros para um capital de R$ 100,00 e “payout” fixo em 80%.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Caso quem esteja aplicando este soros nas dez partes seja o “trader” jogador de moeda, a probabilidade dele acertar quatro operações seguidas é 0.06. Isso significa que se espera que em média ele dificilmente acertará uma tentativa de transformar R$ 100,00 em R$ 1.049,76. Assim, quebrará a conta. Todavia, se quem tiver operando for o “trader” que usa a estratégia de 70% de acertos em média, terá mais possibilidade de finalizar tentativas com êxito. Pois, agora a probabilidade é de 0.24. Tal probabilidade é obtida através da lei de potência,
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mi>
+         P
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mo stretchy="false">
+         (
+        </mo>
+        <msub>
+         <mi>
+          P
+         </mi>
+         <mrow class="MJX-TeXAtom-ORD">
+          <mi>
+           e
+          </mi>
+          <mi>
+           s
+          </mi>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </msub>
+        <msup>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+           <mi>
+            N
+           </mi>
+           <mi>
+            s
+           </mi>
+          </msub>
+         </mrow>
+        </msup>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <msub>
+       <mi>
+        P
+       </mi>
+       <mrow class="MJX-TeXAtom-ORD">
+        <mi>
+         e
+        </mi>
+        <mi>
+         s
+        </mi>
+        <mi>
+         t
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     é a taxa média de acertos da estratégia aplicada e
+     <math>
+      <msub>
+       <mi>
+        N
+       </mi>
+       <mi>
+        s
+       </mi>
+      </msub>
+     </math>
+     é o nível de soros almejado. Isto é melhor ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Curvas de probabilidades para gerenciamento baseado em soros.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Assim, espera-se que em média ele consiga duas vezes transformar R$ 100,00 em R$ 1.049,76. Então, ao término das dez tentativas de soros o saldo final será R$ 2.099,52. Isso se trata de resultados médios, não significa que ocorrerá exatamente isso. Por outro lado, caso se tenha estratégias com taxa de acerto média perto dos 80%, as possibilidades de se ter bastante êxito aplicando soros são muito favoráveis.
+    </p>
+    <h2>
+     4.3. “Backtest”
+    </h2>
+    <p>
+     Na terminologia do mercado financeiro,
+     <i>
+      backtesting
+     </i>
+     refere-se a testes ou estudos usando dados históricos, para avaliar o desempenho de uma dada estratégia
+     <i>
+      ex post
+     </i>
+     . A premissa é que se uma dada estratégia teria funcionado bem no passado, então deverá funcionar no futuro também. A
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     mostra o resultado da aplicação do segundo programa, utilizando o indicador estocástico, nos dados históricos das dez paridades cambiais mais operadas no mercado Forex e OB.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Taxa média de acertos do indicador oscilador estocástico em algumas paridades cambiais. Tempo de expiração igual a três velas. “Time-frame” M1.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Logo, os resultados do “backtesting” mostraram que a taxa média de acertos varia de 54.2% a 57.3% para um tempo de expiração de três velas aplicando o “time-frame” M1. A quantidade de velas utilizada na estatística foi um pouco mais de dois milhões, que corresponde à quantidade de minutos entre os anos 2013 a 2019.
+    </p>
+    <p>
+     Com isso, vemos que o indicador estocástico sozinho não é suficiente para dar previsões boas sobre as reversões de tendências de pelo menos três velas posteriores ao ponto de sinalização de compra ou venda. Dessa forma, é muito difícil conseguir consistência operando OB utilizando essa ideia de reversão de tendência com o estocástico muito sobrecomprado e sobrevendido, uma vez que uma taxa de acertos de 57% não é tão alta. Dessa forma, tem-se resultados semelhantes aos do “trader” jogador de moedas que discutimos nas seções anteriores. Na verdade, podemos especular que há algumas pessoas zerando contas, quem sabe até diariamente, operando dessa forma! Diante disso, é importante o “trader” ser muito cauteloso ao usar o indicador para gerar sinais dessa forma. É essencial conflitar as informações do estocástico com mais indicadores antes de abrir uma operação financeira. Também, o programa mostra no arquivo de saída “winloss.txt” que a ocorrência de até oito “loss” seguidos é alta. Isto é mais um fato que mostra a ineficiência de aplicação de estratégia baseada em martingale para baixa taxa de acertos.
+    </p>
+    <p>
+     Portanto, conseguir ganhar dinheiro de forma consistente operando opções binárias não é impossível, pois não é um cassino. Por outro lado, os resultados acima mostram que também não é fácil, podendo ser extremamente difícil dependendo de uma série de fatores cuja discussão está fora do escopo deste trabalho.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusões
+    </h1>
+    <p>
+     Neste artigo, foi mostrado como as OB são derivativos financeiros bastante simples. Nossos resultados mostram que essa simplicidade não implica em lucros fáceis e contradizem a propaganda enganosa que é encontrada na “internet”. Discutimos também a questão de legislação da modalidade no Brasil e os riscos relacionados a escolhas de corretoras de perfil questionável. Mostramos como fazer o teste de eficiência da estratégia utilizando os dados históricos dos ativos em questão (“backtesting”) antes de começar a operar OB. Também, apresentamos e discutimos sobre duas formas de gerenciar os riscos, que são as estratégias baseadas em processos estocásticos martingale e a alavancagem “soros”, muito aplicadas pelos operadores das OB (“traders”). Através da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     , foi mostrado o quão é difícil alguém conseguir lucrar com taxas de acertos próximas de 50%, mesmo que se aplique o processo martingale com intenções de recuperar as perdas.
+    </p>
+    <p>
+     Ainda, mostramos que o indicador oscilador estocástico sozinho não é suficiente para dar sinais verdadeiros de “call/put” só porque esteja em modo muito sobrecomprado ou muito sobrevendido. Pois, a maior taxa média de acertos que obtivemos foi de 57.3% na paridade cambial EUR/GBP que é muito abaixo dos 70% que consideramos nas seções anteriores sendo uma magnitude razoável que leve à consistência.
+    </p>
+    <p>
+     Os resultados acima mostram que não é fácil “ganhar dinheiro” no mercado financeiro. Chamamos atenção para dois fatos relevantes a este assunto. Primeiro, a hipótese do mercado eficiente, de Eugene Fama, sugere que no longo prazo deve ser impossível obter retornos financeiros acima da média do mercado no longo prazo
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [23]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [23] B.G. Malkiel and E.F. Fama, The Journal of Finance 25, 383 (1970).
+       </span>
+      </span>
+     </span>
+     . Sabemos que mercados não são perfeitamente eficientes
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [24]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [24] S. Basu, The Journal of Finance 32, 663 (1977).
+       </span>
+      </span>
+     </span>
+     , mas a hipótese pode ser considerada válida em uma primeira aproximação. O segundo ponto relevante é que Kelly em 1957 mostrou que, usando um modelo simples, a taxa máxima de crescimento de capital é proporcional a de recebimento de informação de Shannon
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [25]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [25] J.L. Kelly Jr., Bell System Technical Journal 35, 917 (1956).
+       </span>
+      </span>
+     </span>
+     . É a presença de informação que catalisa a transformação de um jogo de azar em uma estratégia de alta lucratividade. Operar no mercado financeiro sem ter acesso à informação, portanto, é contraindicado.
+    </p>
+    <p>
+     Encontramos no mercado financeiro, fenômenos bastante contraintuitivos. Esperamos que esse trabalho ajude chamar mais atenção a esse e outros aspectos da fenomenologia rica e diversa estudada em Econofísica.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Agradecemos ao CNPq e à CAPES pelo apoio financeiro.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Material suplementar">
+    <h1 class="articleSectionTitle">
+     Material suplementar
+    </h1>
+    <p>
+     O seguinte material suplementar está disponível online:
+    </p>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/QvvNPWh9tfVWzbcB6gGQc6Q/afbc49c990d3f8da4a9b6a44406dc5378fb784ed.pdf" target="_blank">
+     Programa I
+          
+            Calcula a curva de saldo através do sorteio de números aleatórios entre zero e um, onde “probEstrategia” é a suposta taxa média de acertos da estratégia.
+    </a>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/QvvNPWh9tfVWzbcB6gGQc6Q/12352579cf044f356988dcf76eb5ceb37dd261d5.pdf" target="_blank">
+     Programa II
+          
+            Realiza o “backtest” em paridades cambiais tais como EUR/USD utilizando o indicador oscilador estocástico.
+    </a>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] E.J. Sullivan and T.M. Weithers, The Journal of Economic Education
+        <b>
+         22
+        </b>
+        , 165 (1991).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] L. Bachelier, Annales Scientifiques de l'École Normale Supérieure
+        <b>
+         17
+        </b>
+        , 21(1900).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] A. Einstein, Annalen der Physik
+        <b>
+         322
+        </b>
+        , 549 (1905).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] S.R.A. Salinas, Revista Brasileira de Ensino de Física
+        <b>
+         27
+        </b>
+        , 263 (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] B. Mandelbrot, International Economic Review
+        <b>
+         1
+        </b>
+        , 79 (1960).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] B. Mandelbrot, The Journal of Business
+        <b>
+         36
+        </b>
+        , 394 (1963).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] B.B. Mandelbrot and R.L. Hudson,
+        <i>
+         The (Mis)Behaviour of Markets: A Fractal View of Risk, Ruin and Reward
+        </i>
+        (Profile, Londres, 2010).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] F. Black and M. Scholes, Journal of Political Economy
+        <b>
+         81
+        </b>
+        , 637 (1973).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] R. Merton, J Econ Manage Sci
+        <b>
+         4
+        </b>
+        , 141 (1973).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] R. Matsushita and S. Da Silva,
+        <i>
+         Econofísica
+        </i>
+        (Independently Published, 2017).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] H.B. do Nascimento Jr., U.L. Fulco, M.L. Lyra, M. Serva and G.M. Viswanathan, Revista Brasileira de Ensino de Física
+        <b>
+         29
+        </b>
+        , 341 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] J.C. Hull,
+        <i>
+         Opções, Futuros e Outros Derivativos
+        </i>
+        (Bookman Editora, Porto Alegre, 2016).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] P. Rossi, Cadernos do Desenvolvimento
+        <b>
+         7
+        </b>
+        , 125 (2018).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] E. Oliveira,
+        <i>
+         Ganhe Dinheiro na Bolsa de Valores com Opções - Estratégias para alavancar suas operações na bolsa: opçõess, bolsa de valores, investir, ações, mercado de opções, alavancagem
+        </i>
+        (2014).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] O.S. de Brito,
+        <i>
+         Guia prático de economia e finanças
+        </i>
+        (Editora Saraiva, São Paulo, 2017).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] Comissão de Valores Mobiliários,
+        <i>
+         Mercado Forex
+        </i>
+        , disponível em https://www.investidor.gov.br/portaldoinvestidor/export/sites/portaldoinvestidor/publicacao/Alertas/mercadoForex.pdf, acessado em 27/12/2019.
+        <br/>
+        <a href="https://www.investidor.gov.br/portaldoinvestidor/export/sites/portaldoinvestidor/publicacao/Alertas/mercadoForex.pdf" target="_blank">
+         » https://www.investidor.gov.br/portaldoinvestidor/export/sites/portaldoinvestidor/publicacao/Alertas/mercadoForex.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] FBI,
+        <i>
+         Binary Options Fraud
+        </i>
+        , disponível em https://www.fbi.gov/news/stories/binary-options-fraud, acessado em 11/06/2019.
+        <br/>
+        <a href="https://www.fbi.gov/news/stories/binary-options-fraud" target="_blank">
+         » https://www.fbi.gov/news/stories/binary-options-fraud
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] R. Rosillo, D. de la Fuente and J.A.L. Brugos, Applied Economics
+        <b>
+         45
+        </b>
+        , 1541 (2013).
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] J.L. Doob, The American Mathematical Monthly
+        <b>
+         78
+        </b>
+        , 451 (1971).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20]
+        <i>
+         Martingale
+        </i>
+        , disponível em https://pt.wikipedia.org/wiki/Martingale, acessado em 16/06/2019.
+        <br/>
+        <a href="https://pt.wikipedia.org/wiki/Martingale" target="_blank">
+         » https://pt.wikipedia.org/wiki/Martingale
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] D. Williams,
+        <i>
+         Probability with Martingales
+        </i>
+        (Cambridge University Press, Cambridge, 1991).
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] Estratégia e gerenciamento de riscos Soros, disponível em https://forexnobrasil.com.br/estrategia-soros-para-opcoes-binarias-baixo-risco-e-altos-lucros/, acessado em 27/12/2019.
+        <br/>
+        <a href="https://forexnobrasil.com.br/estrategia-soros-para-opcoes-binarias-baixo-risco-e-altos-lucros/" target="_blank">
+         » https://forexnobrasil.com.br/estrategia-soros-para-opcoes-binarias-baixo-risco-e-altos-lucros/
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [23] B.G. Malkiel and E.F. Fama, The Journal of Finance
+        <b>
+         25
+        </b>
+        , 383 (1970).
+       </div>
+      </li>
+      <li>
+       <div>
+        [24] S. Basu, The Journal of Finance
+        <b>
+         32
+        </b>
+        , 663 (1977).
+       </div>
+      </li>
+      <li>
+       <div>
+        [25] J.L. Kelly Jr., Bell System Technical Journal
+        <b>
+         35
+        </b>
+        , 917 (1956).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        O valor de compra estabelecido no contrato, ou o mesmo que dizer preço de exercício, é conhecido por “Strike”.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Moedas de câmbio: EUR (Euro), USD (Dólar dos Estados Unidos), GBP (Libra Esterlina), JPY (Iene japonês).
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        “Payout”: é o pagamento a ser realizado caso o “trader” acerte a direção do preço.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        22 Jun 2020
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        01 Jan 2020
+       </li>
+       <li>
+        <strong>
+         rev-received
+        </strong>
+        <br/>
+        01 Maio 2020
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        07 Maio 2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

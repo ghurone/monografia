@@ -1,0 +1,4400 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 40 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   2018
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2017-0253" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2017-0253
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2017-0253">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Síntese das Leis de Kepler
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Kepler's laws synthesis
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Marco Antonio Garms
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:magarms@terra.com.br">
+      magarms@terra.com.br
+     </a>
+     .
+    </div>
+    Universidade Paulista, São Paulo, SP, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Iberê Luiz Caldas
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de São Paulo, Instituto de Física, São Paulo, SP, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     O objetivo deste artigo é apresentar a concepção das leis de Kepler utilizando os aplicativos (livres)
+     <i>
+      Stellarium
+     </i>
+     e
+     <i>
+      Geogebra
+     </i>
+     para obter e analisar dados semelhantes aos que Kepler teve acesso. Embora o procedimento apresentado não seja exatamente igual ao de Kepler, ele permite, de forma didática, entender e aplicar a orientação seguida por ele para obter as leis sobre o movimento de planetas. Espera-se que o estudo quantitativo aqui desenvolvido esclareça o significado de algumas discussões qualitativas em diversas referências sobre este assunto e possa ser usado em aplicações didáticas.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     leis de Kepler; órbita elíptica; Marte; planetas; sistema solar
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The aim of this paper is to present the conception of the laws of planetary motion using the free softwares
+     <i>
+      Stellarium
+     </i>
+     and
+     <i>
+      Geogebra
+     </i>
+     to get and process data similar to those accessible to Kepler. Although this procedure is not exactly equal to the one accomplished by Kepler, it allows, in a didactic way, to understand and to apply the orientation followed by him in order to obtain his laws about the planetary motion. It is expected that the quantitative study here developed make clear the meaning of some qualitative discussions in several references on this subject and have didactic application.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Kepler's laws; elliptical orbit; Mars; planets; solar system
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Em 1600, Kepler aceitou o convite de Tycho Brahe para trabalhar com ele em Praga. Pouco depois, com a morte de Brahe, Kepler o sucedeu como Matemático Imperial na corte de Rudolph II de Habsburgo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] A. Postl, Am. J. Phys. 40, 660 (1972).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Kepler herdou de Brahe um volumoso conjunto de registros astronômicos realizados no observatório de Uraniburgo na ilha de Hven na Dinamarca. Tais observações, com boa precisão, foram realizadas por Brahe mesmo sem telescópio, inexistente naquela época [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] A. Postl, Am. J. Phys. 40, 660 (1972).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Com base em suas observações, Brahe havia solicitado que Kepler desenvolvesse uma nova teoria para os movimentos irregulares de Marte. Resultou que em 1609, após extenso estudo, Kepler apresentou sua obra
+     <i>
+      Astronomia Nova
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] J. Kepler, Astronomie Novelle (Diffuse par la Librarie A. Blanchard, Paris, 1974).
+       </span>
+      </span>
+     </span>
+     ] considerada um dos maiores trabalhos sobre ciências naturais de todas as épocas, na qual anunciou ao mundo a primeira e segunda leis do movimento planetário [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] A. Postl, Am. J. Phys. 40, 660 (1972).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Kepler buscou a descrição mais simples possível dos movimentos planetários para validar o modelo de Copérnico das órbitas em torno do Sol e, a partir dela, explicar a dinâmica do sistema solar.
+    </p>
+    <p>
+     Nota-se uma evolução desta posição com relação à Astronomia Antiga, que a priori considerava as órbitas circulares em torno da Terra [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E.J. Ailton, A. Beer e P. Beer, Kepler, Four Hundred Years (Pergamon Press, Oxford, 1975), p. 573.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A segunda e a terceira leis de Kepler sugerem que o Sol influencia o movimento dos planetas. Kepler discutiu os conceitos de
+     <i>
+      espécie immateriata
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E.J. Ailton, A. Beer e P. Beer, Kepler, Four Hundred Years (Pergamon Press, Oxford, 1975), p. 573.
+       </span>
+      </span>
+     </span>
+     ] e de força à distância [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ], mas não conseguiu deles derivar uma dinâmica para os movimentos planetários. Coube a Newton, a partir dos trabalhos de Kepler e Galileu, introduzir as equações da dinâmica e obter a lei da gravitação [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     O estudo direto da
+     <i>
+      Astronomia Nova
+     </i>
+     pode ser árduo por dois motivos: a notação empregada em geral não é atual, como também são discutidos muitos detalhes, incluindo tentativas sem êxito o que, embora seja interessante para o estudo das motivações do autor, talvez não seja a melhor abordagem inicial para fins didáticos.
+    </p>
+    <p>
+     No entanto, quando se enunciam as três leis de Kepler sem se detalhar como foram estabelecidas, o que é compreensível perto da complexidade deste trabalho, perde-se a oportunidade de apreciar como os dados experimentais suportam as previsões de um modelo teórico.
+    </p>
+    <p>
+     Analises geométrica e matemática e a aplicação de técnicas de medida devem fazer parte da formação de futuros cientistas e o estudo da obtenção das leis de Kepler pode ser uma boa oportunidade para exercitar essas análises e aplicação. Dentre outros esforços, com a finalidade de compreender aspectos quantitativos do trabalho de Kepler, a referência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] B.E. Morgado e Soares, Rev. Bras. Ens. Fís. 37, 1305 (2015).
+       </span>
+      </span>
+     </span>
+     ] apresenta um método, sugerido por ele, para a construção da órbita marciana em torno do Sol.
+    </p>
+    <p>
+     Neste artigo apresentamos detalhes quantitativos não comumente tratados nas obras sobre as leis de Kepler, tais como [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] A. Postl, Am. J. Phys. 40, 660 (1972).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] J.L.E. Dreyder, A History of Astronomy from Thales to Kepler (Dover Publications, New York, 1953).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] A. Koestler, Arthur, Sonâmbulos: História das Concepções dos Homens sobre o Universo (Ibrasa Editora, São Paulo, 1959).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] J.P. Verdet, Uma História da Astronomia (Jorge Zahar Editor, Rio de Janeiro, 1991).
+       </span>
+      </span>
+     </span>
+     ], de modo a complementá-las sob este ponto de vista.
+    </p>
+    <p>
+     Para compreender a contribuição de Kepler emprega-se o aplicativo
+     <i>
+      Stellarium
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] Stellarium, acessado em 23/01/2017: http://www.stellarium.org/pt/.
+       </span>
+       <br/>
+       <a href="http://www.stellarium.org/pt/" target="_blank">
+        http://www.stellarium.org/pt/...
+       </a>
+      </span>
+     </span>
+     ] com o intuito de gerar as observações, das órbitas de Marte e do Sol, vistas da Terra. Este aplicativo simula a esfera celeste permitindo obter as coordenadas astronômicas de planetas, estrelas, constelações e outros astros num determinado instante do passado, presente ou futuro, escolhido pelo operador.
+    </p>
+    <p>
+     Com esse procedimento obtêm-se medidas, como as que Kepler teve acesso para sintetizar suas leis, visando tratá-las de modo equivalente ao que ele fez. Não serão discutidos todos os pormenores apresentados por ele, mas apenas os considerados essenciais para o estabelecimento das leis de Kepler sobre o movimento dos planetas no sistema solar. Para executar esta sequência são necessárias observações em momentos de oposição de Marte, como também observações separadas dessas oposições por um ou mais anos marcianos.
+    </p>
+    <p>
+     Complementarmente, usaremos o aplicativo
+     <i>
+      Geogebra
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] Geogebra, acessado em 23/01/2017: http://www.geogebra.org/cms/pt_BR/download/.
+       </span>
+       <br/>
+       <a href="http://www.geogebra.org/cms/pt_BR/download/" target="_blank">
+        http://www.geogebra.org/cms/pt_BR/downlo...
+       </a>
+      </span>
+     </span>
+     ] para analisar essas observações e obter as características principais das órbitas de Marte e da Terra. Este é um aplicativo, sobre álgebra e geometria, pelo qual é possível desenhar-se pontos, vetores, segmentos, retas e cônicas bem como realizar operações para se determinar, entre outros resultados, intersecções, áreas, ângulos e curvas.
+    </p>
+    <p>
+     Os dois aplicativos utilizados,
+     <i>
+      Stellarium
+     </i>
+     e
+     <i>
+      Geogebra,
+     </i>
+     simplificam enormemente a obtenção das leis de Kepler, além de viabilizar o desenvolvimento de material didático sobre este tema.
+    </p>
+    <p>
+     Deste modo, com base nos procedimentos de Kepler, será determinada, inicialmente, uma órbita circular para a Terra, em torno do Sol, com precisão suficiente para usá-la na determinação da órbita de Marte [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ]. A seguir serão feitos um ajuste circular e outro elíptico para a órbita de Marte, comparando os erros desses ajustes, para assim estabelecer a primeira lei de Kepler sobre as órbitas elípticas. Finalmente, a partir dos dados e resultados obtidos com os aplicativos usados, serão também verificadas a segunda e terceira leis de Kepler.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Modelo inicial de Kepler para a órbita de Marte
+    </h1>
+    <p>
+     Inicialmente, na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     , é apresentado sucintamente o modelo geocêntrico de Ptolomeu [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] J. Evans, Am. J. Phys. 52, 12 (1984).
+       </span>
+      </span>
+     </span>
+     ]. (Posteriormente, esse modelo será usado para introduzir o modelo heliocêntrico adotado a princípio por Kepler, inspirado em Copérnico, para a sequência de análise a ser desenvolvida).
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Modelo de Ptolomeu para as trajetórias de um planeta, como Marte, em torno da Terra.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O modelo geocêntrico simplificado de Ptolomeu [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] J. Evans, Am. J. Phys. 52, 12 (1984).
+       </span>
+      </span>
+     </span>
+     ] é apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     :
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       Relativamente à órbita de Marte (M), a Terra (T), fixa, não está no centro (C) de um círculo, denominado deferente. Marte (M) move-se com velocidade constante, em torno do ponto E, ao longo de um círculo denominado epiciclo. O ponto E por sua vez percorre o deferente.
+      </p>
+     </li>
+     <li>
+      <p>
+       A linha dos apsides une o apogeu e o perigeu, que são, respectivamente, a maior e a menor distância TE.
+      </p>
+     </li>
+     <li>
+      <p>
+       Na linha dos apsides, deslocado igualmente do centro C, mas do lado contrario ao da Terra (T), localiza-se um ponto privilegiado, denominado ponto equante (Eq), para o qual é constante a velocidade angular do centro do epiciclo (E).
+      </p>
+     </li>
+    </ol>
+    <p>
+     Copérnico, embora tenha considerado o Sol no centro das órbitas dos planetas, descartou o ponto Equante de Ptolomeu, para manter a hipótese de Platão e Aristóteles que estabelecia o movimento circular uniforme como base para os corpos celestes. Por isto o ajuste das órbitas em torno do Sol exigiu-lhe um maior numero de círculos complementares ao epiciclo acima mencionado [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] J.L.E. Dreyder, A History of Astronomy from Thales to Kepler (Dover Publications, New York, 1953).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     De outra forma, Kleper defendia o heliocentrismo de Copérnico, mas considerou que adotando o ponto Equante poderia simplificar o modelamento das órbitas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] A. Koestler, Arthur, Sonâmbulos: História das Concepções dos Homens sobre o Universo (Ibrasa Editora, São Paulo, 1959).
+       </span>
+      </span>
+     </span>
+     ]. Assim, Kepler mudou a referência da Terra para o Sol (fixo) resultando a princípio, para uma dada órbita planetária, um círculo ao redor do Sol. Portanto, como no modelo de Ptolomeu, Kepler considerou o centro da órbita circular deslocado do Sol.
+    </p>
+    <p>
+     Como indicado na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     , Kepler considerou, em torno do centro (O) da órbita circular planetária, os deslocamentos, opostos entre si, do Sol (S) e do ponto equante (Eq), que neste modelo de órbita passa a ser o ponto para o qual é constante a velocidade angular do planeta, sendo que a direção destes deslocamentos determina a linha periélia pontilhada na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Modelo de órbita circular de Marte ou da Terra (P), em torno do Sol (S), adotado inicialmente por Kepler.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Este é o modelo de partida do tipo circular excêntrico com equante que será denominado, ao longo deste texto, simplesmente de órbita circular [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] M.C.D. Neves e C.A. Arguello, Astronomia de Régua e Compasso de Kepler a Ptolomeu (Papirus Livraria Editora, São Paulo, 1986).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Coordenadas astronômicas relevantes
+    </h1>
+    <p>
+     As coordenadas astronômicas geocêntricas empregadas ao longo deste artigo, estão indicadas na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     : a longitude eclíptica geocêntrica de Marte, ângulo
+     <math display="inline" id="m1">
+      <mi>
+       λ
+      </mi>
+     </math>
+     M, e a longitude eclíptica geocêntrica do Sol, ângulo
+     <math display="inline" id="m2">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S. Estes ângulos são obtidos utilizando-se o aplicativo
+     <i>
+      Stellarium
+     </i>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Longitudes eclípticas geocêntricas de um ponto P na esfera celeste (
+      <math display="inline" id="m3">
+       <mi>
+        λ
+       </mi>
+      </math>
+      P) e do Sol (
+      <math display="inline" id="m4">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S). Se P representar Marte, então
+      <math display="inline" id="m5">
+       <mi>
+        λ
+       </mi>
+      </math>
+      P
+      <math display="inline" id="m6">
+       <mo>
+        =
+       </mo>
+       <mi>
+        λ
+       </mi>
+      </math>
+      M. Neste caso
+      <math display="inline" id="m7">
+       <mi>
+        β
+       </mi>
+      </math>
+      M
+      <math display="inline" id="m8">
+       <mo>
+        ≈
+       </mo>
+      </math>
+      0
+      <math display="inline" id="m9">
+       <msup>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          o
+         </mi>
+        </mrow>
+       </msup>
+      </math>
+      , pois o plano da órbita de Marte encontra-se muito próximo do plano eclíptico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     o eixo x indica a direção do equinócio vernal (dia e noite com 12 horas no verão do hemisfério norte) relativamente à Terra. Este eixo define a referência para a medida dos ângulos
+     <math display="inline" id="m10">
+      <mi>
+       λ
+      </mi>
+     </math>
+     M e
+     <math display="inline" id="m11">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S.
+    </p>
+    <p>
+     Também necessária é a coordenada heliocêntrica da Terra, ângulo
+     <math display="inline" id="m12">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T (Terra-Sol-eixo x), calculada a partir do ângulo
+     <math display="inline" id="m13">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S de acordo com as expressões deduzidas a partir da
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     . Assim, se
+     <math display="inline" id="m14">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S for menor que 180° então
+     <math display="inline" id="m15">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T será igual a
+     <math display="inline" id="m16">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S
+     <math display="inline" id="m17">
+      <mo>
+       +
+      </mo>
+     </math>
+     180° e se
+     <math display="inline" id="m18">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S for maior ou igual a 180° então
+     <math display="inline" id="m19">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T será igual a
+     <math display="inline" id="m20">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S - 180°.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Obtenção da longitude eclíptica heliocêntrica da Terra (
+      <math display="inline" id="m21">
+       <mi>
+        λ
+       </mi>
+      </math>
+      T) a partir da longitude eclíptica geocêntrica do Sol (
+      <math display="inline" id="m22">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Observa-se que, por ser relativamente pequena, a latitude eclíptica geocêntrica de Marte (
+     <math display="inline" id="m23">
+      <mi>
+       β
+      </mi>
+     </math>
+     M) será desprezada neste artigo de modo a reduzir a complexidade da análise a ser desenvolvida. Na seção 11 (Conclusões) será discutido o impacto desta aproximação.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Alinhamento Sol Terra Marte.
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     apresentam-se os 8 dias com oposição de Marte (o ângulo
+     <math display="inline" id="m24">
+      <mi>
+       δ
+      </mi>
+     </math>
+     entre Sol, Terra e Marte torna-se igual a 180
+     <math display="inline" id="m25">
+      <msup>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         o
+        </mi>
+       </mrow>
+      </msup>
+     </math>
+     , isto é, estes astros ficam alinhados) que foram selecionados para realizar as medidas para estabelecer as órbitas da Terra e de Marte.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Oito oposições de Marte.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para ajustar uma órbita elíptica a principio são necessários cinco pontos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] H. Anton and C. Rorres, Elementary Linear Algebra with Applications (John Wiley &amp; Sons Inc., New York 1991), 5ª ed.
+       </span>
+      </span>
+     </span>
+     ]. Optou-se por amostrar mais três pontos para utilizá-los na determinação dos erros deste ajuste.
+    </p>
+    <p>
+     Usando o aplicativo
+     <i>
+      Stellarium
+     </i>
+     para a data da primeira oposição, registraram-se a cada 3 horas (a partir de 00:00:00), os ângulos
+     <math display="inline" id="m26">
+      <mi>
+       λ
+      </mi>
+     </math>
+     M e
+     <math display="inline" id="m27">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S. São calculados também os valores dos ângulos
+     <math display="inline" id="m28">
+      <mi>
+       δ
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       λ
+      </mi>
+     </math>
+     M -
+     <math display="inline" id="m29">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S e
+     <math display="inline" id="m30">
+      <mtext>
+       Δ
+      </mtext>
+      <mo>
+       =
+      </mo>
+      <mi>
+       δ
+      </mi>
+     </math>
+     - 180°. Os resultados encontram-se na
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     .
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Ângulo
+      <math display="inline" id="m31">
+       <mtext>
+        Δ
+       </mtext>
+      </math>
+      de 3 em 3 horas ao longo de 28/08/2003.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com estes dados é possível interpolar a grandeza
+     <math display="inline" id="m40">
+      <mtext>
+       Δ
+      </mtext>
+      <mo>
+       =
+      </mo>
+      <mi>
+       δ
+      </mi>
+     </math>
+     −180° buscando o valor da hora do dia em que ela passa pelo valor zero, conforme indicado na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     . Nestas condições o ângulo
+     <math display="inline" id="m41">
+      <mi>
+       δ
+      </mi>
+     </math>
+     assume o valor de 180° o que significa que exatamente neste momento ocorre uma oposição entre a Terra e Marte.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Ângulo
+      <math display="inline" id="m42">
+       <mtext>
+        Δ
+       </mtext>
+      </math>
+      de 3 em 3horas ao longo de 28/08/2003.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Este instante é obtido pela raiz da equação da reta apresentada no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     , “
+     <math display="inline" id="m43">
+      <mtext>
+       Δ
+      </mtext>
+     </math>
+     ×hora do dia”:
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m44">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <mstyle>
+             <mrow>
+              <mi>
+               o
+              </mi>
+              <mi>
+               p
+              </mi>
+              <mi>
+               o
+              </mi>
+              <mi>
+               s
+              </mi>
+              <mi>
+               i
+              </mi>
+              <mi>
+               ç
+              </mi>
+              <mover accent="true">
+               <mi>
+                a
+               </mi>
+               <mo>
+                ˜
+               </mo>
+              </mover>
+              <mi>
+               o
+              </mi>
+             </mrow>
+            </mstyle>
+            <mo>
+             =
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             7581
+            </mn>
+            <mo>
+             ∕
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             051
+            </mn>
+            <mo>
+             =
+            </mo>
+            <mn>
+             14
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             86471
+            </mn>
+            <mi>
+             h
+            </mi>
+            <mi>
+             o
+            </mi>
+            <mi>
+             r
+            </mi>
+            <mi>
+             a
+            </mi>
+            <mi>
+             s
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mo>
+             =
+            </mo>
+            <mn>
+             14
+            </mn>
+            <mo>
+             :
+            </mo>
+            <mn>
+             51
+            </mn>
+            <mo>
+             :
+            </mo>
+            <mn>
+             52
+            </mn>
+            <mo>
+             =
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             619363
+            </mn>
+            <mspace width="1em">
+            </mspace>
+            <mi>
+             d
+            </mi>
+            <mi>
+             i
+            </mi>
+            <mi>
+             a
+            </mi>
+            <mi>
+             s
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Interpolando os valores da
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     e considerando a reta mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     , obtemos o horário da oposição entre Marte e a Terra. Tal procedimento é repetido para todas as demais datas da
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , resultando a
+     <a class="open-asset-modal" data-target="#ModalTablet3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 3
+     </a>
+     onde se apresenta as datas e instantes de ocorrência no dia de cada uma das oposições.
+    </p>
+    <div class="row table" id="t3">
+     <a name="t3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3
+      </strong>
+      <br/>
+      Datas e instantes de ocorrência no dia para oito oposições.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. órbita Circular Terrestre
+    </h1>
+    <p>
+     Nesta seção usaremos as posições da Terra e de Marte para calcularmos a distância da Terra em torno do Sol, r
+     <math display="inline" id="m45">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         T
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Para isso, na
+     <a class="open-asset-modal" data-target="#ModalTablet4" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 4
+     </a>
+     apresentamos mais cinco observações (S
+     <i>
+      tellarium
+     </i>
+     ) dessas posições deslocadas de múltiplos de 687 dias da primeira oposição. Este valor corresponde ao ano marciano considerado neste trabalho (o valor medido atualmente é de 686,98 dias). Na seção 11 (Conclusões) será discutido o impacto desta aproximação.
+    </p>
+    <div class="row table" id="t4">
+     <a name="t4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet4" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 4
+      </strong>
+      <br/>
+      Ângulos
+      <math display="inline" id="m46">
+       <mi>
+        λ
+       </mi>
+      </math>
+      M,
+      <math display="inline" id="m47">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S (obtidos do aplicativo Stellarium) e
+      <math display="inline" id="m48">
+       <mi>
+        λ
+       </mi>
+      </math>
+      T (calculado pela
+      <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 4
+      </a>
+      ) de dados em instantes separados por um ano marciano, durante, após e antes da primeira oposição. Deslocamentos positivos e negativos fazem com que atrasos e avanços em torno desta oposição se compensem diminuindo o erro devido ao arredondamento (de 686,98 para 687 dias) do ano marciano.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para ajustar uma órbita circular a principio são necessários três pontos. Optou-se por amostrar mais dois pontos para utilizá-los na determinação dos erros deste ajuste.
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     apresenta-se o cálculo da posição da Terra, por exemplo, em 15/07/2005, às 14:51:52. Nessa Figura adota-se a distância de Marte ao Sol como sendo a unidade utilizada nos valores que se deseja obter para as distâncias da Terra ao Sol (pois nesses instantes separados pelo período de Marte, esse planeta está no mesmo local).
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Figura com a posição de Marte fixa e duas posições da Terra, T
+      <math display="inline" id="m56">
+       <msub>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          0
+         </mi>
+        </mrow>
+       </msub>
+      </math>
+      e T, respectivamente, na oposição considerada na
+      <a class="open-asset-modal" data-target="#ModalTablet4" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 4
+      </a>
+      e após um ano marciano. Triângulo MTS, determinado pelas posições do Sol, de Marte e da Terra (T), e seus ângulos internos
+      <math display="inline" id="m57">
+       <mi>
+        α
+       </mi>
+      </math>
+      ,
+      <math display="inline" id="m58">
+       <mi>
+        β
+       </mi>
+      </math>
+      e
+      <math display="inline" id="m59">
+       <mi>
+        γ
+       </mi>
+      </math>
+      . Os ângulos
+      <math display="inline" id="m60">
+       <mi>
+        λ
+       </mi>
+      </math>
+      T0 e
+      <math display="inline" id="m61">
+       <mi>
+        λ
+       </mi>
+      </math>
+      T indicados são os da
+      <a class="open-asset-modal" data-target="#ModalTablet4" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 4
+      </a>
+      . O ângulo
+      <math display="inline" id="m62">
+       <mi>
+        λ
+       </mi>
+      </math>
+      M é a coordenada geocêntrica de Marte obtida pelo Stellarium.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Define-se o ângulo
+     <math display="inline" id="m63">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T0 como sendo a longitude eclíptica heliocêntrica da Terra na data 28/08/2003 da primeira oposição,
+     <a class="open-asset-modal" data-target="#ModalTablet4" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 4
+     </a>
+     - primeira linha, como também as longitudes eclípticas geocêntricas da Terra (
+     <math display="inline" id="m64">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T) e de Marte (
+     <math display="inline" id="m65">
+      <mi>
+       λ
+      </mi>
+     </math>
+     M), lidos na
+     <a class="open-asset-modal" data-target="#ModalTablet4" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 4
+     </a>
+     em 15/07/2005, segunda linha.
+    </p>
+    <p>
+     Seguindo a sequência indicada na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     , obtém-se os ângulos do triângulo TSM, correspondentes às posições destes astros em 15/07/2005 às 14:51:52.
+    </p>
+    <p>
+     Com estes valores e aplicando a lei dos senos no triângulo TSM (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     ) pode-se então escrever:
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m66">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <mfrac>
+             <mrow>
+              <mi>
+               S
+              </mi>
+              <mi>
+               T
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               S
+              </mi>
+              <mi>
+               M
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             =
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               s
+              </mi>
+              <mi>
+               e
+              </mi>
+              <mi>
+               n
+              </mi>
+              <mi>
+               γ
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               s
+              </mi>
+              <mi>
+               e
+              </mi>
+              <mi>
+               n
+              </mi>
+              <mi>
+               β
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             =
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             736
+            </mn>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             S
+            </mi>
+            <mi>
+             T
+            </mi>
+            <mo>
+             =
+            </mo>
+            <msubsup>
+             <mrow>
+              <mi>
+               r
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               T
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               ′
+              </mi>
+             </mrow>
+            </msubsup>
+            <mo>
+             =
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             736
+            </mn>
+            <mstyle>
+             <mtext>
+              (na unidade em que SM
+             </mtext>
+            </mstyle>
+            <mo>
+             =
+            </mo>
+            <mstyle>
+             <mtext>
+              1)
+             </mtext>
+            </mstyle>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Repetem-se estes cálculos para os dias 02/06/2007, 19/04/2009, 10/10/2001 e 23/11/1999 resultando a
+     <a class="open-asset-modal" data-target="#ModalTablet5" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 5
+     </a>
+     correspondente às posições da Terra nestas observações (resultados semelhantes aos apresentados no capitulo 27 da
+     <i>
+      Astronomia Nova
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] J. Kepler, Astronomie Novelle (Diffuse par la Librarie A. Blanchard, Paris, 1974).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <div class="row table" id="t5">
+     <a name="t5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet5" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 5
+      </strong>
+      <br/>
+      Coordenadas das posições da Terra em A, B, C, D e E (veja
+      <a class="open-asset-modal" data-target="#ModalTablet4" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 4
+      </a>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os valores na coluna de r
+     <math display="inline" id="m77">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          T
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     correspondem aos de r'
+     <math display="inline" id="m78">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          T
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     em unidades astronômicas de distância (UA): 1UA é definida como sendo a distância média entre a Terra e o Sol.
+    </p>
+    <p>
+     Para obter r
+     <math display="inline" id="m79">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          T
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     divide-se cada valor r'
+     <math display="inline" id="m80">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          T
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     pelo valor r'
+     <math display="inline" id="m81">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          Tmédio
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     . Nestas condições obriga-se o valor médio de r
+     <math display="inline" id="m82">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          T
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     tornar-se unitário pois:
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m83">
+        <mrow>
+         <mover accent="false">
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>
+              r
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              T
+             </mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo accent="true">
+           _
+          </mo>
+         </mover>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <munderover accent="false" accentunder="false">
+            <mrow>
+             <mtext>
+              ∑
+             </mtext>
+            </mrow>
+            <mrow>
+             <mi>
+              i
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+            <mrow>
+             <mn>
+              5
+             </mn>
+            </mrow>
+           </munderover>
+           <mfrac>
+            <mrow>
+             <msubsup>
+              <mrow>
+               <mi>
+                r
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                T
+               </mi>
+               <mi>
+                i
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                ′
+               </mi>
+              </mrow>
+             </msubsup>
+            </mrow>
+            <mrow>
+             <mover accent="false">
+              <mrow>
+               <msubsup>
+                <mrow>
+                 <mi>
+                  r
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mi>
+                  T
+                 </mi>
+                </mrow>
+                <mrow>
+                 <mi>
+                  ′
+                 </mi>
+                </mrow>
+               </msubsup>
+              </mrow>
+              <mo accent="true">
+               _
+              </mo>
+             </mover>
+            </mrow>
+           </mfrac>
+          </mrow>
+          <mrow>
+           <mn>
+            5
+           </mn>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <munderover accent="false" accentunder="false">
+              <mrow>
+               <mtext>
+                ∑
+               </mtext>
+              </mrow>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                =
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+              <mrow>
+               <mn>
+                5
+               </mn>
+              </mrow>
+             </munderover>
+             <msubsup>
+              <mrow>
+               <mi>
+                r
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                T
+               </mi>
+               <mi>
+                i
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                ′
+               </mi>
+              </mrow>
+             </msubsup>
+            </mrow>
+            <mrow>
+             <mn>
+              5
+             </mn>
+            </mrow>
+           </mfrac>
+          </mrow>
+          <mrow>
+           <mover accent="false">
+            <mrow>
+             <msubsup>
+              <mrow>
+               <mi>
+                r
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                T
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                ′
+               </mi>
+              </mrow>
+             </msubsup>
+            </mrow>
+            <mo accent="true">
+             _
+            </mo>
+           </mover>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mstyle>
+          <mtext>
+          </mtext>
+         </mstyle>
+         <mi>
+          U
+         </mi>
+         <mi>
+          A
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     As colunas x e y são calculadas pelas seguintes expressões:
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m84">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             x
+            </mi>
+            <mo>
+             =
+            </mo>
+            <msub>
+             <mrow>
+              <mi>
+               r
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               T
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             cos
+            </mo>
+            <mi>
+             λ
+            </mi>
+            <mi>
+             T
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             y
+            </mi>
+            <mo>
+             =
+            </mo>
+            <msub>
+             <mrow>
+              <mi>
+               r
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               T
+              </mi>
+             </mrow>
+            </msub>
+            <mstyle>
+             <mtext>
+              sen
+             </mtext>
+            </mstyle>
+            <mi>
+             λ
+            </mi>
+            <mi>
+             T
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     6. Erro de ajuste para a órbita circular terrestre
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     é apresentada a órbita circular da Terra (obtida do aplicativo
+     <i>
+      Geogebra
+     </i>
+     ) por um ajuste dos pontos de A a E, da
+     <a class="open-asset-modal" data-target="#ModalTablet5" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 5
+     </a>
+     , de acordo com o procedimento indicado nessa Figura.
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Círculo determinado pelos pontos A, C, E com centro em O: ajuste circular da órbita terrestre por meio de mediatrizes. Também é estimada a excentricidade
+      <math display="inline" id="m85">
+       <mi>
+        ε
+       </mi>
+      </math>
+      desta órbita.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para estimar o erro no ajuste da órbita da Terra, introduzimos a
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     . Nela apresenta-se o procedimento para a determinação do erro resultante do ajuste da órbita circular de um planeta P similar à órbita da Terra na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     : sendo fixado o instante correspondente ao ponto P (medido) da órbita então o ângulo M fica estabelecido e, portanto P' (previsto pelo ajuste) deve encontrar-se na intersecção da órbita ajustada com o segmento EqP, que une o ponto equante à posição medida do planeta.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Cálculo do erro de ajuste da órbita de um planeta definido pelo ângulo P'SP sendo P' e P respectivamente a posição prevista e a medida deste planeta e S a posição do Sol.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Assim sendo, na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     o valor do erro é dado pelo ângulo
+     <math display="inline" id="m86">
+      <mi>
+       φ
+      </mi>
+     </math>
+     entre os pontos P'SP.
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     o procedimento da
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     é realizado, por meio do
+     <i>
+      Geogebra
+     </i>
+     , para todos os pontos de A a E da
+     <a class="open-asset-modal" data-target="#ModalTablet5" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 5
+     </a>
+     e com a órbita obtida na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     , sendo os resultados apresentados na
+     <a class="open-asset-modal" data-target="#ModalTablet6" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 6
+     </a>
+     , onde o erro encontra-se em minutos de arco: igual a
+     <math display="inline" id="m87">
+      <mi>
+       φ
+      </mi>
+     </math>
+     i ×60 (conversão de graus em minutos).
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Círculo por ACE com centro em O: erro deste ajuste circular para a órbita terrestre.
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t6">
+     <a name="t6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet6" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 6
+      </strong>
+      <br/>
+      Círculo por ACE com centro em O: erro deste ajuste circular para a órbita terrestre.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nesta figura,
+     <math display="inline" id="m88">
+      <msub>
+       <mrow>
+        <mi>
+         φ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     corresponde ao erro no ponto B e
+     <math display="inline" id="m89">
+      <msub>
+       <mrow>
+        <mi>
+         φ
+        </mi>
+       </mrow>
+       <mrow>
+        <mn>
+         2
+        </mn>
+       </mrow>
+      </msub>
+     </math>
+     corresponde ao erro no ponto D. Note que nos pontos A, C e E o erro é igual à zero, pois o circulo foi ajustado para conter estes pontos.
+    </p>
+    <p>
+     Em conclusão, nota-se (
+     <a class="open-asset-modal" data-target="#ModalTablet6" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 6
+     </a>
+     ) que os erros deste ajuste estão abaixo de 0,05' sendo menores que o valor de 2' correspondente ao máximo adotado neste trabalho como referência (este valor corresponde ao erro típico relativo às medidas realizadas por Tycho Brahe [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] J.P. Verdet, Uma História da Astronomia (Jorge Zahar Editor, Rio de Janeiro, 1991).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <h1 class="articleSectionTitle">
+     7. órbita circular para Marte
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalTablet7" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 7
+     </a>
+     são apresentadas as coordenadas polares,
+     <math display="inline" id="m90">
+      <mi>
+       λ
+      </mi>
+     </math>
+     <b>
+      T
+     </b>
+     e
+     <b>
+      r
+     </b>
+     <math display="inline" id="m91">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          T
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     , obtidas pelo
+     <i>
+      Geogebra,
+     </i>
+     de diversos pontos (A, … H) da órbita da Terra (centro no Sol) indicados na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Círculo por ACE com centro em O: coordenadas polares (centro no Sol). da órbita terrestre sendo r
+      <math display="inline" id="m92">
+       <msub>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          T
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+      </math>
+      ST.
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t7">
+     <a name="t7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet7" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 7
+      </strong>
+      <br/>
+      Coordenadas polares (centro no Sol) em oito pontos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Com os valores da
+     <a class="open-asset-modal" data-target="#ModalTablet7" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 7
+     </a>
+     obteve-se a função polinomial r
+     <math display="inline" id="m99">
+      <msub>
+       <mrow>
+       </mrow>
+       <mrow>
+        <mstyle>
+         <mtext>
+          T
+         </mtext>
+        </mstyle>
+       </mrow>
+      </msub>
+     </math>
+     <math display="inline" id="m100">
+      <mo>
+       =
+      </mo>
+     </math>
+     f(
+     <math display="inline" id="m101">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T), apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 11
+     </a>
+     , que será a seguir utilizada em interpolações.
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Função polinomial r
+      <math display="inline" id="m102">
+       <msub>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          T
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+      </math>
+      f(
+      <math display="inline" id="m103">
+       <mi>
+        λ
+       </mi>
+      </math>
+      T).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Realizaram-se observações (
+     <i>
+      Stellarium
+     </i>
+     ), ângulos
+     <math display="inline" id="m104">
+      <mi>
+       λ
+      </mi>
+     </math>
+     M e
+     <math display="inline" id="m105">
+      <mi>
+       λ
+      </mi>
+     </math>
+     S, em cada oposição da
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     e um ano marciano (aproximadamente 687 dias) após cada uma delas, sendo os resultados apresentados na
+     <a class="open-asset-modal" data-target="#ModalTablet8" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 8
+     </a>
+     .
+    </p>
+    <div class="row table" id="t8">
+     <a name="t8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet8" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 8
+      </strong>
+      <br/>
+      Medidas (
+      <i>
+       Stellarium
+      </i>
+      ) dos ângulos
+      <math display="inline" id="m106">
+       <mi>
+        λ
+       </mi>
+      </math>
+      M e
+      <math display="inline" id="m107">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S nas oposições da Tabela 1 e um ano marciano após cada uma delas. O ângulo
+      <math display="inline" id="m108">
+       <mi>
+        λ
+       </mi>
+      </math>
+      T é igual a
+      <math display="inline" id="m109">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S
+      <math display="inline" id="m110">
+       <mo>
+        +
+       </mo>
+      </math>
+      180° caso
+      <math display="inline" id="m111">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S &lt;180° e igual a
+      <math display="inline" id="m112">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S - 180° caso
+      <math display="inline" id="m113">
+       <mi>
+        λ
+       </mi>
+      </math>
+      S
+      <math display="inline" id="m114">
+       <mo>
+        ≥
+       </mo>
+      </math>
+      180° (ver
+      <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 4
+      </a>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     As duas primeiras linhas, referentes à 1ªoposição e 687 dias após, são utilizadas para se obter o triângulo STM (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     ) correspondente as posições de Marte, Sol e Terra no dia 15/07/2005 às 14:51:52.
+    </p>
+    <p>
+     Note que agora a distância SM não é assumida unitária, mas é o valor que se deseja obter em unidades astronômicas (UA).
+    </p>
+    <p>
+     Com esta Tabela calculam-se os ângulos
+     <math display="inline" id="m129">
+      <mi>
+       α
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m130">
+      <mi>
+       β
+      </mi>
+     </math>
+     e
+     <math display="inline" id="m131">
+      <mi>
+       γ
+      </mi>
+     </math>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     ) e a distância SM (pela lei dos senos - ver seção 5).
+    </p>
+    <p>
+     Neste caso se utiliza a expressão apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 11
+     </a>
+     para interpolar a distancia ST correspondente ao ângulo
+     <math display="inline" id="m132">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T de 293,334°, isto é,ST
+     <math display="inline" id="m133">
+      <mo>
+       =
+      </mo>
+     </math>
+     f (293,334)
+     <math display="inline" id="m134">
+      <mo>
+       =
+      </mo>
+     </math>
+     1,011 UA.
+    </p>
+    <p>
+     Logo:
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m135">
+        <mrow>
+         <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+          <mtr>
+           <mtd columnalign="left">
+            <mfrac>
+             <mrow>
+              <mi>
+               S
+              </mi>
+              <mi>
+               M
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               S
+              </mi>
+              <mi>
+               T
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             =
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               s
+              </mi>
+              <mi>
+               e
+              </mi>
+              <mi>
+               n
+              </mi>
+              <mi>
+               β
+              </mi>
+             </mrow>
+             <mrow>
+              <mi>
+               s
+              </mi>
+              <mi>
+               e
+              </mi>
+              <mi>
+               n
+              </mi>
+              <mi>
+               γ
+              </mi>
+             </mrow>
+            </mfrac>
+            <mo>
+             =
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             358
+            </mn>
+            <mo>
+             ;
+            </mo>
+            <mstyle>
+             <mtext>
+             </mtext>
+            </mstyle>
+            <mi>
+             S
+            </mi>
+            <mi>
+             T
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             011
+            </mn>
+            <mstyle>
+             <mtext>
+             </mtext>
+            </mstyle>
+            <mi>
+             U
+            </mi>
+            <mi>
+             A
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+            <mi>
+             S
+            </mi>
+            <mi>
+             M
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mi>
+             r
+            </mi>
+            <mi>
+             M
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             358
+            </mn>
+            <mo>
+             ×
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             011
+            </mn>
+            <mo>
+             =
+            </mo>
+            <mn>
+             1
+            </mn>
+            <mo>
+             ,
+            </mo>
+            <mn>
+             373
+            </mn>
+            <mstyle>
+             <mtext>
+             </mtext>
+            </mstyle>
+            <mi>
+             U
+            </mi>
+            <mi>
+             A
+            </mi>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd columnalign="left">
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Repete-se este procedimento para as demais linhas construindo-se assim a
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     .
+    </p>
+    <div class="row table" id="t9">
+     <a name="t9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet9" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 9
+      </strong>
+      <br/>
+      Coordenadas das posições de Marte em A, B, C, D, E, F, G e H veja
+      <a class="open-asset-modal" data-target="#ModalTablet8" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 8
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Note que a coluna
+     <math display="inline" id="m146">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T0 da
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     provém da coluna
+     <math display="inline" id="m147">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T da
+     <a class="open-asset-modal" data-target="#ModalTablet8" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 8
+     </a>
+     referindo-se a cada oposição selecionada e, portanto igual ao ângulo que Marte forma com o Sol e a direção do equinócio vernal (x),
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     .
+    </p>
+    <p>
+     Para as colunas x e y utilizam-se as seguintes expressões (pois Terra e Marte estão alinhados em
+     <math display="inline" id="m148">
+      <mi>
+       λ
+      </mi>
+     </math>
+     T0,
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     ):
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block" id="m179">
+        <mtable align="axis" columnlines="" equalcolumns="false" equalrows="false" style="">
+         <mtr>
+          <mtd columnalign="left">
+           <mi>
+            x
+           </mi>
+           <mo>
+            =
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              r
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              M
+             </mi>
+            </mrow>
+           </msub>
+           <mo>
+            cos
+           </mo>
+           <mi>
+            λ
+           </mi>
+           <mi>
+            T
+           </mi>
+           <mn>
+            0
+           </mn>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="left">
+           <mi>
+            y
+           </mi>
+           <mo>
+            =
+           </mo>
+           <msub>
+            <mrow>
+             <mi>
+              r
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              M
+             </mi>
+            </mrow>
+           </msub>
+           <mstyle>
+            <mtext>
+             sen
+            </mtext>
+           </mstyle>
+           <mi>
+            λ
+           </mi>
+           <mi>
+            T
+           </mi>
+           <mn>
+            0
+           </mn>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="left">
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Usando o
+     <i>
+      Geogebra
+     </i>
+     os pontos de A a H (
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     ) são plotados na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     (ajuste circular da órbita marciana) e na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     (cálculo do erro de ajuste - ver
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     ) nas quais são empregados procedimentos, semelhantes aos das
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 7
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     , para realizar o ajuste e estimar o erro deste ajuste.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Círculo por FGH com centro em O: ajuste circular para a órbita de Marte.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Círculo por FGH com centro em O: erro deste ajuste circular para a órbita de Marte.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Resultam os erros correspondentes aos ângulos
+     <math display="inline" id="m150">
+      <mi>
+       α
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m151">
+      <mi>
+       β
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m152">
+      <mi>
+       δ
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m153">
+      <mi>
+       ε
+      </mi>
+     </math>
+     e
+     <math display="inline" id="m154">
+      <mi>
+       γ
+      </mi>
+     </math>
+     (da
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 13
+     </a>
+     ) os quais são apresentados na
+     <a class="open-asset-modal" data-target="#ModalTablet10" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 10
+     </a>
+     já convertidos para minutos de arco.
+    </p>
+    <div class="row table" id="t10">
+     <a name="t10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet10" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 10
+      </strong>
+      <br/>
+      Círculo por FGH com centro em O: erro deste ajuste circular para a órbita de Marte.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em conclusão nota-se que os erros deste ajuste podem ser maiores que 7' o que é inadequado à precisão de 2' adotada como limite.
+    </p>
+    <h1 class="articleSectionTitle">
+     8. órbita elíptica para Marte
+    </h1>
+    <p>
+     Ao detectar um erro desta ordem de grandeza Kepler abandonou o ajuste circular e na busca de alternativas notou que na órbita havia um “achatamento no raio” perpendicular à linha periélia (ver observação na
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     ) o que o levou a equação da elipse para trajetória de Marte (primeira lei) em torno do Sol,
+     <a href="https://minio.scielo.br/documentstore/1806-9126/5nvgJkHd36vrSJxKBT8rcjL/2022f19f814074609c8b8f8c01c5266bd82f4ecb.pdf" target="_blank">
+      Apêndice B
+     </a>
+     , não sem antes considerar outros tipos de curvas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] A. Koestler, Arthur, Sonâmbulos: História das Concepções dos Homens sobre o Universo (Ibrasa Editora, São Paulo, 1959).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] J.P. Verdet, Uma História da Astronomia (Jorge Zahar Editor, Rio de Janeiro, 1991).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 14
+      </strong>
+      <br/>
+      Procedimento geométrico-numérico para definir o centro da elipse, ajustada aos pontos de A a H (veja
+      <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 9
+      </a>
+      ), a partir das mediatrizes f, …, m.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nesta seção será apenas verificada experimentalmente esta possibilidade: modela-se uma elipse pelos pontos de A a H (
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     ) da órbita de Marte sendo a seguir calculado o erro máximo deste ajuste para finalmente realizar a comparação com o erro máximo obtido para a órbita circular da seção 7 e assim confirmar a primeira lei de Kepler.
+    </p>
+    <p>
+     Descreve-se a seguir um procedimento geométrico-numérico (com o uso do
+     <i>
+      Geogebra
+     </i>
+     ), desenvolvido neste trabalho, para se definir o centro (O) da elipse procurada, ver alternativa na referência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] B.E. Morgado e Soares, Rev. Bras. Ens. Fís. 37, 1305 (2015).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     são assinalados os pontos de A a H, da
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     , e traçadas todas as mediatrizes entre dois pontos consecutivos. O encontro de cada duas mediatrizes “consecutivas” (
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 15
+     </a>
+     ) estabelece o centro de uma circunferência que passa pelos pontos que definem estas mediatrizes. Tomando-se a média aritmética dos centros destas circunferências (pontos de I a Q desta Figura) resulta o ponto O que será considerado como sendo o centro da elipse procurada.
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 15
+      </strong>
+      <br/>
+      Ampliação da
+      <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 14
+      </a>
+      em torno do ponto O
+      <math display="inline" id="m155">
+       <mo>
+        →
+       </mo>
+      </math>
+      centroide de IJKLMNPQ.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Tendo sido identificado o centro O e sabendo-se que o Sol está posicionado em um dos focos, resultado assumido no modelo circular excêntrico com Equante inicialmente adotado por Kepler (seção 2), obtém-se o outro foco desta elipse (F' da
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 14
+     </a>
+     ).
+    </p>
+    <p>
+     Pode-se construir uma elipse definida pelos seguintes elementos: os dois focos e um ponto que a ela pertence (
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 16
+     </a>
+     ), [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] C. Marmo, Curso de Desenho, Unidade 4: Cônicas (Editora Moderna Ltda., São Paulo, 1974).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 16
+      </strong>
+      <br/>
+      Obtenção de uma elipse definida pelos focos (F1 e F2) e por um ponto (Y0) a ela pertencente.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O
+     <i>
+      Geogebra
+     </i>
+     disponibiliza a seguinte ferramenta de ajuste: “cônica definida pelos focos (F', S) e passando por um dado ponto (H)”, a qual poderia se basear no procedimento da
+     <a class="open-asset-modal" data-target="#ModalFigf16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 16
+     </a>
+     . Utilizando-se esta ferramenta com os pontos da
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     resultou a
+     <a class="open-asset-modal" data-target="#ModalFigf17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 17
+     </a>
+     (ajuste elíptico).
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 17
+      </strong>
+      <br/>
+      Elipse de focos F' e S passando por H: ajuste elíptico da órbita de Marte.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 18
+     </a>
+     utiliza o mesmo procedimento de cálculo de erros apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     sendo que os resultados obtidos, em unidade de minutos de arco, estão compilados na
+     <a class="open-asset-modal" data-target="#ModalTablet11" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 11
+     </a>
+     (ângulos da
+     <a class="open-asset-modal" data-target="#ModalFigf18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 18
+     </a>
+     multiplicados por 60).
+    </p>
+    <div class="row fig" id="f18">
+     <a name="f18">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf18" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 18
+      </strong>
+      <br/>
+      Elipse de focos F' (
+      <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 13
+      </a>
+      ) e S passando por H: erro deste ajuste elíptico da órbita de Marte.
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t11">
+     <a name="t11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet11" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 11
+      </strong>
+      <br/>
+      Elipse de focos F' e S passando por H: erro deste ajuste elíptico da órbita de Marte.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em conclusão nota-se que os erros deste ajuste são menores que 0,8' o que pode ser considerado adequado à precisão de 2' adotada como limite.
+    </p>
+    <p>
+     Deste modo (compare com a conclusão da seção 7) comprova-se que o ajuste elíptico tem um melhor desempenho para a modelagem da órbita de Marte: primeira lei de Kepler.
+    </p>
+    <h1 class="articleSectionTitle">
+     9. Lei das áreas (Segunda lei)
+    </h1>
+    <p>
+     Construiu-se a
+     <a class="open-asset-modal" data-target="#ModalTablet12" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 12
+     </a>
+     com as observações (
+     <i>
+      Stellarium
+     </i>
+     ) em três oposições de Marte e, deslocados de 96 horas (quatro dias) de cada uma delas, outras três observações. Com estes dados e usando as órbitas obtidas anteriormente, elipse para Marte e círculo para a Terra, foram geradas na
+     <a class="open-asset-modal" data-target="#ModalFigf19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 19
+     </a>
+     (
+     <i>
+      Geogebra
+     </i>
+     ) além das posições, as áreas varridas pela Terra e por Marte.
+    </p>
+    <div class="row fig" id="f19">
+     <a name="f19">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf19" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 19
+      </strong>
+      <br/>
+      Posições e áreas varridas pela Terra e por Marte relacionadas à
+      <a class="open-asset-modal" data-target="#ModalTablet12" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 12
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t12">
+     <a name="t12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet12" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 12
+      </strong>
+      <br/>
+      Observações em três oposições de Marte e em três momentos deslocados de 96 horas (quatro dias) de cada uma delas. O deslocamento é escolhido para que a área varrida possa ser aproximada por um triângulo (exemplo MSM
+      <math display="inline" id="m156">
+       <msub>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          0
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </math>
+      e, também, visualizada na
+      <a class="open-asset-modal" data-target="#ModalFigf19" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Figura 19
+      </a>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os resultados são apresentados nas duas últimas colunas da
+     <a class="open-asset-modal" data-target="#ModalTablet12" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 12
+     </a>
+     . Por estas colunas verifica-se que praticamente não houve alteração no valor das áreas para cada astro uma vez que o intervalo de tempo de varredura foi fixado num valor constante (96horas): segunda lei de Kepler [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E.J. Ailton, A. Beer e P. Beer, Kepler, Four Hundred Years (Pergamon Press, Oxford, 1975), p. 573.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     10. Terceira Lei de Kepler
+    </h1>
+    <p>
+     Kepler aplicou as suas duas primeiras leis para ajustar as órbitas de todos os planetas conhecidos em sua época. Ele acreditava na existência de relações harmônicas, entre as grandezas associadas a estas órbitas, devido a uma dinâmica comum imposta aos planetas pelo Sol [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] A. Medeiros, Física na Escola 4(1), 19 (2003).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Em sua busca [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] A. Medeiros, Física na Escola 4(1), 19 (2003).
+       </span>
+      </span>
+     </span>
+     ] ele descobriu que a razão entre a distância média de um planeta ao Sol elevada ao cubo sobre o período orbital elevado ao quadrado era a mesma para todos os planetas considerados, e este é o enunciado de sua terceira lei apresentada em seu livro
+     <i>
+      Epitome Astronomia
+     </i>
+     , nove anos após a publicação do livro
+     <i>
+      Astronomia Nova
+     </i>
+     com as duas primeiras leis.
+    </p>
+    <p>
+     A seguir a terceira lei será verificada para as órbitas da Terra e Marte, consideradas anteriormente. Para tal a
+     <a class="open-asset-modal" data-target="#ModalTablet13" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 13
+     </a>
+     foi construída a partir dos pontos das órbitas na
+     <a class="open-asset-modal" data-target="#ModalTablet5" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 5
+     </a>
+     , para a Terra, e
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     , para Marte.
+    </p>
+    <div class="row table" id="t13">
+     <a name="t13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet13" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 13
+      </strong>
+      <br/>
+      Distâncias médias ao Sol, períodos orbitais e relação “distância média ao Sol (d
+      <math display="inline" id="m173">
+       <msub>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        )
+       </mo>
+      </math>
+      ao cubo sobre período (T) orbital ao quadrado (d
+      <math display="inline" id="m174">
+       <msubsup>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          m
+         </mi>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          3
+         </mi>
+        </mrow>
+       </msubsup>
+      </math>
+      / T
+      <math display="inline" id="m175">
+       <msup>
+        <mrow>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          2
+         </mi>
+        </mrow>
+       </msup>
+       <mo>
+        )
+       </mo>
+      </math>
+      ” para os planetas Marte e Terra.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para estes dois planetas a relação entre a distância média ao Sol elevada ao cubo sobre período orbital elevado ao quadrado é praticamente a mesma, sendo igual a 1 nas unidades adotadas (última linha da
+     <a class="open-asset-modal" data-target="#ModalTablet13" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 13
+     </a>
+     ), confirmando neste caso a validade da terceira lei de Kepler.
+    </p>
+    <h1 class="articleSectionTitle">
+     11. Conclusões
+    </h1>
+    <p>
+     Este artigo contem uma apresentação simplificada mas não usual procurando tornar acessível e didático o trabalho desenvolvido por Kepler para obter as suas leis. Para isso, alguns detalhes sobre elas foram discutidos e comprovados quantitativamente:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Obtenção de coordenadas, mensuráveis por observadores localizados na Terra, utilizando o aplicativo
+       <i>
+        Stellarium
+       </i>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       A órbita da Terra foi ajustada, com erro inferior a 0,1', por uma órbita circular excêntrica com Equante.
+      </p>
+     </li>
+     <li>
+      <p>
+       Inicialmente, a órbita de Marte foi também ajustada como uma órbita circular excêntrica com Equante, com erro inferior a 7'. Entretanto, foi mostrado que com um ajuste mais preciso obtem-se uma órbita elíptica com um erro menor que 0,8'.
+      </p>
+     </li>
+     <li>
+      <p>
+       Com os valores obtidos do aplicativo Stellarium, verificou-se as leis de Kepler (para a Terra e para Marte).
+      </p>
+     </li>
+    </ul>
+    <p>
+     Nos resultados obtidos estão embutidos diversos erros: o relativo a não consideração da latitude eclíptica de Marte ao longo de sua órbita (erro da ordem de 1' na determinação da posição de Marte), o devido à aproximação para o ano marciano (687 contra 686,98 dias - implica num erro da ordem de 0,6' na determinação posição de Marte), e outros como os de arredondamento, de interpolação e de ajuste de órbita (erro de 0,8' - ver seção 8 deste artigo). Esses erros levam a uma incerteza máxima de 2' nas órbitas, sendo essa precisão suficiente para verificar a validade das leis Kepler com precisão semelhante à obtida por ele.
+    </p>
+    <p>
+     Os procedimentos apresentados neste artigo foram desenvolvidos com recursos do
+     <i>
+      Stellarium
+     </i>
+     e do
+     <i>
+      Geogebra
+     </i>
+     , o que mostra a viabilidade de se elaborar futuramente, baseadas nestes aplicativos (livres), experiências e materiais de ensino, como os do CLEA (
+     <i>
+      Contemporary Laboratory Experiences in Astronomy
+     </i>
+     ) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] CLEA, acessado em 23/01/2017: http://www3.gettysburg.edu/~marschal/clea/CLEAhome.html.
+       </span>
+       <br/>
+       <a href="http://www3.gettysburg.edu/~marschal/clea/CLEAhome.html" target="_blank">
+        http://www3.gettysburg.edu/~marschal/cle...
+       </a>
+      </span>
+     </span>
+     ], para as leis de Kepler. Como exemplo de material didático desenvolvido com esses aplicativos, indicamos o site da referência [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] Professor M. A. Garms, acessado em 10/10/2017: http://www.marcogarms.pro.br.
+       </span>
+       <br/>
+       <a href="http://www.marcogarms.pro.br" target="_blank">
+        http://www.marcogarms.pro.br...
+       </a>
+      </span>
+     </span>
+     ], na qual pode ser acessado parte do procedimento utilizado na obtenção dos resultados apresentados neste artigo.
+    </p>
+    <p>
+     Um dos equívocos comuns sobre a obtenção das órbitas planetárias por Kepler é o de se considerar que o seu trabalho foi apenas um ajuste de dados ou ainda uma análise prática da cinemática do movimento. Com as suas duas primeiras leis, Kepler desenvolveu um método (seção 7.7 de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [18] H. Karttunen, P. Kroger, H. Oja, M. Poutanem and K.J. Donner, Fundamental Astronomy (Springer Verlag, New York, 1993), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ]) para determinar as posições dos planetas ao longo do tempo, que utilizou na construção de tábuas astronômicas. Embora suas leis tenham esta aplicação, o que ele realmente buscava eram explicações dinâmicas para os movimentos planetários, como a ação da
+     <i>
+      espécie immateriata
+     </i>
+     que emana do Sol e atua sobre os planetas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E.J. Ailton, A. Beer e P. Beer, Kepler, Four Hundred Years (Pergamon Press, Oxford, 1975), p. 573.
+       </span>
+      </span>
+     </span>
+     ]. Nesse sentido, ele também considerou a existência de forças magnéticas entre estes astros [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] C.R. Tossato, O Processo de Elaboração das Duas Primeiras Leis Keplerianas dos Movimentos Planetário (Departamento de Filosofia Faculdade de Filosofia, Letras e Ciências Humanas da USP, São Paulo, 1997).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Tais conceitos dinâmicos foram essenciais para o resultado final. Por exemplo, a
+     <i>
+      espécie immateriata
+     </i>
+     serviu de base para estabelecer a lei das áreas como fundamental. Assim, esta lei nunca foi desconsiderada, embora imprecisa para órbitas circulares, sendo chave para suas descobertas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] E.J. Ailton, A. Beer e P. Beer, Kepler, Four Hundred Years (Pergamon Press, Oxford, 1975), p. 573.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [19] C.R. Tossato, O Processo de Elaboração das Duas Primeiras Leis Keplerianas dos Movimentos Planetário (Departamento de Filosofia Faculdade de Filosofia, Letras e Ciências Humanas da USP, São Paulo, 1997).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Com um sentido moderno da comprovação teórica por resultados experimentais, não descartou erros “muito pequenos” para finalmente chegar ao destino ao qual ousadamente o levou a trocar o movimento circular pelo elíptico, o que ninguém antes dele havia estabelecido efetivamente e que se tornou um dos passos decisivos para a formulação da Teoria da Gravidade por Newton [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.B. Cohen, O Nascimento de uma Nova Física (Editora Edart, São Paulo, 1967).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Para que se tenha uma ideia do esforço por Kepler empreendido, no
+     <a href="https://minio.scielo.br/documentstore/1806-9126/5nvgJkHd36vrSJxKBT8rcjL/9a9ecf63f4ceb578c02454cdc62d3d2f363d6696.pdf" target="_blank">
+      Apêndice A
+     </a>
+     discute-se como avaliar grosseiramente o volume de cálculos, processados pelo aplicativo
+     <i>
+      Geogebra
+     </i>
+     , equivalentes aos que ele realizou manualmente.
+    </p>
+    <p>
+     Além disto, com relação à primeira lei discute-se no
+     <a href="https://minio.scielo.br/documentstore/1806-9126/5nvgJkHd36vrSJxKBT8rcjL/2022f19f814074609c8b8f8c01c5266bd82f4ecb.pdf" target="_blank">
+      Apêndice B
+     </a>
+     como se pode induzir previamente a equação da órbita elíptica marciana (passo decisivo na obra de Kepler) de modo a justificar a determinação do erro de ajuste deste tipo de trajetória aos dados experimentais da
+     <a class="open-asset-modal" data-target="#ModalTablet9" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 9
+     </a>
+     .
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimento">
+    <h1 class="articleSectionTitle">
+     Agradecimento
+    </h1>
+    <p>
+     Agradecimento ao Departamento de Astronomia do IAG/USP (referente ao curso de extensão universitária “Astronomia: uma visão geral”) pela disseminação do aplicativo
+     <i>
+      Stellarium
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] Stellarium, acessado em 23/01/2017: http://www.stellarium.org/pt/.
+       </span>
+       <br/>
+       <a href="http://www.stellarium.org/pt/" target="_blank">
+        http://www.stellarium.org/pt/...
+       </a>
+      </span>
+     </span>
+     ] e do material de ensino do
+     <i>
+      CLEA
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] CLEA, acessado em 23/01/2017: http://www3.gettysburg.edu/~marschal/clea/CLEAhome.html.
+       </span>
+       <br/>
+       <a href="http://www3.gettysburg.edu/~marschal/clea/CLEAhome.html" target="_blank">
+        http://www3.gettysburg.edu/~marschal/cle...
+       </a>
+      </span>
+     </span>
+     ] entre outros.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Material suplementar">
+    <h1 class="articleSectionTitle">
+     Material suplementar
+    </h1>
+    <p>
+     O seguinte material suplementar está disponível online:
+    </p>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/5nvgJkHd36vrSJxKBT8rcjL/9a9ecf63f4ceb578c02454cdc62d3d2f363d6696.pdf" target="_blank">
+     Apêndice A –
+          
+            Processamento numérico
+    </a>
+   </div>
+   <div class="articleSection">
+    <a href="https://minio.scielo.br/documentstore/1806-9126/5nvgJkHd36vrSJxKBT8rcjL/2022f19f814074609c8b8f8c01c5266bd82f4ecb.pdf" target="_blank">
+     Apêndice B –
+          
+            Indução da primeira Lei de Kepler
+    </a>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        A. Postl, Am. J. Phys.
+        <b>
+         40
+        </b>
+        , 660 (1972).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        J. Kepler,
+        <i>
+         Astronomie Novelle
+        </i>
+        (Diffuse par la Librarie A. Blanchard, Paris, 1974).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        I.B. Cohen,
+        <i>
+         O Nascimento de uma Nova Física
+        </i>
+        (Editora Edart, São Paulo, 1967).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        E.J. Ailton, A. Beer e P. Beer,
+        <i>
+         Kepler, Four Hundred Years
+        </i>
+        (Pergamon Press, Oxford, 1975), p. 573.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        B.E. Morgado e Soares, Rev. Bras. Ens. Fís.
+        <b>
+         37
+        </b>
+        , 1305 (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        J.L.E. Dreyder,
+        <i>
+         A History of Astronomy from Thales to Kepler
+        </i>
+        (Dover Publications, New York, 1953).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        A. Koestler,
+        <i>
+         Arthur, Sonâmbulos: História das Concepções dos Homens sobre o Universo
+        </i>
+        (Ibrasa Editora, São Paulo, 1959).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        J.P. Verdet,
+        <i>
+         Uma História da Astronomia
+        </i>
+        (Jorge Zahar Editor, Rio de Janeiro, 1991).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        Stellarium, acessado em 23/01/2017: http://www.stellarium.org/pt/
+        <br/>
+        <a href="http://www.stellarium.org/pt/" target="_blank">
+         » http://www.stellarium.org/pt/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        Geogebra, acessado em 23/01/2017: http://www.geogebra.org/cms/pt_BR/download/
+        <br/>
+        <a href="http://www.geogebra.org/cms/pt_BR/download/" target="_blank">
+         » http://www.geogebra.org/cms/pt_BR/download/
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        J. Evans, Am. J. Phys.
+        <b>
+         52
+        </b>
+        , 12 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        M.C.D. Neves e C.A. Arguello,
+        <i>
+         Astronomia de Régua e Compasso de Kepler a Ptolomeu
+        </i>
+        (Papirus Livraria Editora, São Paulo, 1986).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        H. Anton and C. Rorres,
+        <i>
+         Elementary Linear Algebra with Applications
+        </i>
+        (John Wiley &amp; Sons Inc., New York 1991), 5ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        C. Marmo,
+        <i>
+         Curso de Desenho, Unidade 4: Cônicas
+        </i>
+        (Editora Moderna Ltda., São Paulo, 1974).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        A. Medeiros, Física na Escola
+        <b>
+         4
+        </b>
+        (1), 19 (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        CLEA, acessado em 23/01/2017: http://www3.gettysburg.edu/~marschal/clea/CLEAhome.html
+        <br/>
+        <a href="http://www3.gettysburg.edu/~marschal/clea/CLEAhome.html" target="_blank">
+         » http://www3.gettysburg.edu/~marschal/clea/CLEAhome.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        Professor M. A. Garms, acessado em 10/10/2017: http://www.marcogarms.pro.br
+        <br/>
+        <a href="http://www.marcogarms.pro.br" target="_blank">
+         » http://www.marcogarms.pro.br
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        H. Karttunen, P. Kroger, H. Oja, M. Poutanem and K.J. Donner,
+        <i>
+         Fundamental Astronomy
+        </i>
+        (Springer Verlag, New York, 1993), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        C.R. Tossato,
+        <i>
+         O Processo de Elaboração das Duas Primeiras Leis Keplerianas dos Movimentos Planetário
+        </i>
+        (Departamento de Filosofia Faculdade de Filosofia, Letras e Ciências Humanas da USP, São Paulo, 1997).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        Wikipedia, acessado em 16/06/2017: https://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations
+        <br/>
+        <a href="https://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations" target="_blank">
+         » https://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        G. Iezzi,
+        <i>
+         Fundamentos de Matemática Elementar - Geometria Analítica
+        </i>
+        (Atual Editora, São Paulo, 1977), v. 7.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        P.R.M. Contador,
+        <i>
+         Matemática, uma breve História
+        </i>
+        (Livraria da Física Editora, São Paulo, 2005), v. 2.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        14 Ago 2017
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        16 Out 2017
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        18 Out 2017
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

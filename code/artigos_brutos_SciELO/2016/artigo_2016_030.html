@@ -1,0 +1,3653 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2016-0024" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2016-0024
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2016-0024">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Dinâmica de corpos rígidos em superfícies com atrito
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Dynamics of rigid bodies in surfaces with friction
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Antony M.M. Polito
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de Brasilia, Brasília, DF, Brasil
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:antony.polito@gmail.com">
+      antony.polito@gmail.com
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Maria P. de Laia
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de Brasilia, Brasília, DF, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Nesse trabalho, nös apresentamos os tratamentos teórico e experimental do movimento de um disco dotado de quatro pontos de apoio sobre uma superfície horizontal com atrito. A solução matemática do problema é obtida com o uso do formalismo lagrangiano. Diferentemente do caso de uma superfície lisa, é preciso adicionar, às equações dinâmicas, as forças generalizadas que acoplam a dinâmica de translação do centro de massa e a dinâmica de rotação em torno deste. Em virtude da complexidade das equações, soluções numéricas são requeridas. A solução numérica permite obter a trajetória do disco e observar os efeitos do acoplamento no decaimento das energias mecânicas rotacional e translacional. Para procurar reproduzir a dinâmica calculada, um aparato experimental foi idealizado e construído. Além de reproduzir qualitativamente os efeitos previstos, o aparato foi aproveitado para aplicar uma sequência didática cujo objetivo é apresentar os conceitos de energia mecânica (potencial e cinética), suas transformações e sua perda irreversível por dissipação, em um nível condizente com os de estudantes do primeiro ano do ensino médio.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     forças de atrito; dissipação; translação; rotação; energia mecânica
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this work, we present the theoretical and experimental treatment of the motion of a disc supported by four points lying on a horizontal surface with friction. The mathematical solution of this problem was obtained in the context of the lagrangian formalism. Unlike the case of smooth surfaces, we need add to the dynamical equations the generalized forces that couple the dynamics of translation of the center of mass and the dynamics of rotation around it. Due to the complexity of the equations, numerical solutions are required. The numerical solution allows both to obtain the trajectory of the disc and to observe the effects of the coupling in the decays of the rotational and translational mechanical energies. Seeking for reproduce the calculated dynamics an experimental device was idealized and effectively build. Beyond to reproduce qualitatively the predicted effects, the device was also utilized to implement a pedagogical sequence in order to present the concepts of mechanical energy (potential and kinetic), its transformations and its irreversible loss by dissipation, in a depth adequate for a first year high school class.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     friction; dissipation; translation; rotation; mechanical energy
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Um dos processos mais comuns a que um corpo sólido pode ser submetido é o de deslizamento sobre uma superfície com atrito, no qual se observa, geralmente, uma combinação dos movimentos de rotação e de translação. Essa situação geral guarda relação direta com um problema prático amplamente relacionado com vivências quotidianas, em particular, a dos estudantes do Ensino Médio:
+     <i>
+      o problema de um carro que entra em processo de derrapagem, após a perda de controle por parte de seu motorista. Nesse problema, observa-se, comumente, que os carros traçam, com suas rodas (no asfalto ou na terra), trajetórias curvas que são o resultado de uma combinação de movimentos de rotação e de translação
+     </i>
+     .
+    </p>
+    <p>
+     A modelagem matemática desse processo envolve a adoção de uma série de hipóteses simplificadoras, sendo o primeiro conjunto delas referente à modelagem da própria estrutura do objeto que se move. Como é padrão, nos textos de mecânica clássica, o modelo mais utilizado é o de
+     <i>
+      corpo rígido
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] H. Goldstein, C. Poole and J. Safko, Classical Mechanics (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ]. A modelagem de um corpo rígido pode ser ela própria mais ou menos sofisticada, envolvendo distribuições de massa que podem ser homogêneas ou heterogêneas, contínuas ou, em casos mais simples, até mesmo discretas.
+    </p>
+    <p>
+     Um outro conjunto de hipóteses simplificadoras corresponde à modelagem das forças que atuam sobre o corpo rígido. No caso de um deslizamento livre, onde não existem forças motoras atuando sobre o corpo, as únicas forças não equilibradas existentes são as provenientes do atrito entre os pontos sobre os quais o corpo se apoia sobre a superfície e a própria superfície de deslizamento (plano horizontal com atrito). A primeira preocupação consiste em estabelecer os pontos de atuação das forças de atrito. Em um sólido geral, de formato irregular, os pontos de apoio podem ser infinitos, distribuídos nas superfícies de contato com o plano com atrito. Assim, o modelo mais simples que pode ser adotado consiste em um conjunto finito de pontos de apoio. No nosso caso, com o objetivo de manter a analogia com um carro em deslizamento, assumiremos quatro pontos de apoio. Em um carro real, suas rodas dianteiras e traseiras não sustentam o mesmo peso, o que significa que elas não estão simetricamente dispostas com relação ao seu centro de massa. Além disso, carros tendem a ter um formato retangular. Essas não são condições difíceis de implementar, contudo, para manter a apresentação a mais simples possível, vamos tratar de uma distribuição de pontos de apoio completamente simétrica. Por fim, no movimento de derrapagem real de um carro, suas rodas encontram-se, quase sempre, girando e deslizando sobre a superfície. Uma situação menos geral, mas ainda de interesse, é aquela em que as rodas se encontram travadas. Nesse caso, os pontos de apoio, ou seja, as rodas, apresentam apenas deslizamento. Será essa a nossa suposição básica, ao nos referirmos a essa analogia.
+    </p>
+    <p>
+     A segunda preocupação refere-se à intensidade e à direção das forças. O modelo mais simples parece ser aquele que corresponde a forças constantes em módulo – Lei II de Coulomb – e exclusivamente proporcionais aos respectivos pesos sustentados – Lei I de Coulomb. Outras suposições tradicionais são as de independência da área aparente de contato (Lei III de Coulomb) e da dependência dos coeficientes de atrito da natureza dos materiais envolvidos (Lei IV de Coulomb) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] F. Palmer, Am. J. Phys. 17, 181 (1949).
+       </span>
+      </span>
+     </span>
+     ]. Quanto às suas direções, é natural assumir que sejam sempre contrárias às velocidades instantâneas dos pontos de apoio, sendo, portanto, variáveis com o tempo. Veremos, contudo, que esse modelo não é, como parece à primeira vista, o mais simples, do ponto de vista dinâmico. De fato, muitos outros modelos podem ser adotados. Mesmo supondo-se que as direções sejam sempre contrárias aos movimentos dos pontos de apoio, pode-se ainda modelar forças cujas intensidades sejam função do módulo das velocidades instantâneas. Entre as suposições mais simples, estão as de dependência direta (linear, quadrática, etc.) e dependência inversa (linear, etc.), que serão também estudadas, embora apenas de modo superficial, a título de comparação com o modelo de força constante. É importante destacar que a consideração de tais modelos serve, aqui, apenas para fins didáticos. Evidentemente, não se espera que nenhum deles seja, de fato, correto, pelo menos, não sem muitas considerações adicionais. A ciência por trás dos mecanismos que produzem a fricção é altamente complexa e sofisticada [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] F. Palmer, Am. J. Phys. 17, 181 (1949).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] R.S. Shankland, Am. J. Phys. 8, 64 (1940).
+       </span>
+      </span>
+     </span>
+     ] e não é nosso interesse, aqui, analisar o fenômeno do ponto de vista microscópico. Porém, vale a pena ressaltar que há indicações claras de que a validade de diferentes modelos está condicionada ao intervalo de velocidades relativas de deslizamento – com velocidades muito baixas, a força de fricção aumenta com a velocidade; em velocidades intermediárias (de ~ 0,025 m/s a ~ 0,3-1,0 m/s), a força é independente da velocidade; e, em altas velocidades, a força diminui com a velocidade [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] F. Palmer, Am. J. Phys. 17, 327 (1949).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] C.A. Maney, Am. J. Phys. 20, 203 (1952).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] R. Cross, Am. J. Phys. 73, 812 (2005).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Dado um corpo rígido e as forças que sobre ele atuam, o problema mecânico passa a ser, em geral, bem definido: trata-se de resolver o chamado
+     <i>
+      problema de valor inicial
+     </i>
+     (PVI) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] L.H.A. Monteiro, Sistemas Dinâmicos (Editora Livraria da Física, São Paulo, 2002).
+       </span>
+      </span>
+     </span>
+     ]. No caso em questão – claramente, um processo envolvendo perda monotônica de energia mecânica –, isso significa que, dadas as posições iniciais e as velocidades iniciais (não todas nulas) do corpo rígido, uma solução única para a sua trajetória deve ser obtida. Evidentemente, o corpo deve tender, assintoticamente, ao estado de repouso.
+    </p>
+    <p>
+     Uma abordagem inicial do problema poderia começar pela consideração de métodos vetoriais que implicariam, primeiramente, a obtenção das equações de Newton para as (possivelmente, infinitas) massas discretas (infinitesimais) que compõem o corpo rígido. Percebe-se, entretanto, que existem, pelo menos, dois complicadores para uma abordagem desse tipo: (i) as forças atuantes (de atrito) são funções desconhecidas e complicadas do tempo, pois dependem, de forma não-trivial, das velocidades instantâneas, e (ii) as forças internas (de vínculo) são também funções desconhecidas e complicadas do tempo e devem ajustar-se instantaneamente para manter a geometria rígida do corpo. Evidentemente, não apenas é bem-vindo evitar parte dessas complicações como é, também, completamente desnecessário, de um ponto de vista prático, ter que enfrentá-las.
+    </p>
+    <p>
+     Para contornar tais problemas e tratar situações como essa de maneira mais adequada é comum lançar mão de métodos analíticos. Tais métodos pressupõem a escolha de um sistema de coordenadas generalizadas e a obtenção das chamadas
+     <i>
+      equações de Euler-Lagrange
+     </i>
+     , a partir de uma função denominada
+     <i>
+      lagrangiana
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] H. Goldstein, C. Poole and J. Safko, Classical Mechanics (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ]. Em contextos didáticos, não é tão comum observar a aplicação de métodos analíticos em situações envolvendo forças que não sejam conservativas, como é justamente o caso das forças de atrito. Entretanto, é perfeitamente possível fazê-lo e um dos recursos disponíveis envolve a construção da chamada
+     <i>
+      função de dissipação de Rayleigh
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] H. Goldstein, C. Poole and J. Safko, Classical Mechanics (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] N.A. Lemos, Am. J. Phys. 59, 660 (1991).
+       </span>
+      </span>
+     </span>
+     ], embora esse não seja um expediente sempre necessário, ou mesmo, em todo caso, o mais conveniente [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] H.H. Denman, Am. J. Phys. 34, 1147 (1966).
+       </span>
+      </span>
+     </span>
+     ]. Com ela, as equações de Euler-Lagrange podem ser escritas da maneira habitual, embora com termos adicionais correspondentes às
+     <i>
+      forças generalizadas
+     </i>
+     .
+    </p>
+    <p>
+     É, em geral, muito difícil obter soluções analíticas das equações de Euler-Lagrange – um conjunto finito de equações diferenciais ordinárias, de segunda ordem, acopladas -, mesmo em exemplos relativamente simples. Assim, se quisermos obter as trajetórias que resultam da solução do sistema, devemos lançar mão de estratégias de integração numérica. Para tanto, pode-se construir programas computacionais específicos ou, de forma mais conveniente, utilizar as rotinas de integração numérica que já vêm embutidas em vários programas de computação algébrica, tal como o MAPLE [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] S. Lynch, Dynamical Systems with Applications using Maple (Springer, Boston, 2000).
+       </span>
+      </span>
+     </span>
+     ]. Mesmo antes de obter as trajetórias explicitamente, sabe-se que a simples presença de forças de atrito pode acarretar o surgimento de um efeito ausente da dinâmica de corpos rígidos submetidos a forças conservativas: o acoplamento dos graus de liberdade de rotação e de translação – análogo ao
+     <i>
+      efeito Magnus
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] B.S.G. de Almeida e R.C. Silva, Rev. Bras. Ens. Fís. 37,3505 (2015).
+       </span>
+      </span>
+     </span>
+     ] –, com o consequente acoplamento da evolução temporal das taxas de dissipação das energias translacional e rotacional.
+    </p>
+    <p>
+     <i>
+      O primeiro objetivo desse trabalho é apresentar alguns casos em que essa dinâmica é solucionada para, em seguida, observar as consequências do acoplamento dos movimentos rotacional e translacional, tanto no que se refere ao acoplamento entre as taxas de decaimento das energias cinéticas rotacional e translacional, quanto no que se refere aos
+     </i>
+     (
+     <i>
+      esperados
+     </i>
+     )
+     <i>
+      desvios com relação à forma retilínea da trajetória do centro de massa
+     </i>
+     .
+    </p>
+    <p>
+     Um outro problema interessante consiste em verificar em que medida a modelagem teórica, com todas as suas hipóteses simplificadoras, pode constituir uma aproximação minimamente acurada de uma dinâmica real. Sempre houve interesse por experimentos simples, mas tecnicamente bem realizados e metodologicamente bem conduzidos, que permitissem realizar julgamentos desse tipo, tanto com objetivos práticos quanto puramente teóricos e, até mesmo, pedagógicos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] C.A. Maney, Am. J. Phys. 20, 203 (1952).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] R. Cross, Am. J. Phys. 73, 812 (2005).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] E. Jensen, Am. J. Phys. 12, 370 (1944).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] Y. Xu, K.L. Yung and S.M. Ko, Am. J. Phys. 75, 571 (2007).
+       </span>
+      </span>
+     </span>
+     ]. No contexto desse trabalho, o interesse maior recai na possibilidade de julgar se a forma das trajetórias reais pode ser reproduzida por algum dos modelos teóricos estudados.
+     <i>
+      Para isso, faz-se necessário construir um modelo experimental que procure reproduzir
+     </i>
+     (
+     <i>
+      parte de
+     </i>
+     )
+     <i>
+      as condições envolvidas no modelo teórico. Com efeito, o segundo objetivo desse trabalho consiste em apresentar a idealização e a efetiva construção de um protótipo de aparato simples para realizar esse tipo de cotejamento
+     </i>
+     .
+    </p>
+    <p>
+     Dois pontos importantes devem ser ressaltados. O primeiro é que ainda não foi possível construir um aparato suficientemente sofisticado, de forma que o que será apresentado pretende ser meramente preliminar, tendo permitido, no máximo, comparações qualitativas. O segundo é que não é realmente nosso objetivo apresentar, em nenhum nível, um trabalho técnico na área da
+     <i>
+      tribologia
+     </i>
+     , já que essa é uma área de pesquisa para especialistas, fora de nossas próprias áreas de interesse e atuação. Nosso objetivo é, antes, meramente didático-pedagógico, como ficará melhor esclarecido adiante. De mais a mais, a testagem de modelos teóricos, tais como os considerados, dificilmente requereria situações experimentais tão complicadas. Aliás, nesses casos, quanto mais complicadas as situações, menores devem ser as chances de se obter bons resultados. Por outro lado, se o objetivo é didático, experimentos excessivamente simples podem ser ou conceitualmente muito restritos ou pouco atraentes.
+    </p>
+    <p>
+     Resumidamente, qualquer que seja o aparato a ser construído, ele deve consistir de um dispositivo de lançamento que imprima, no corpo, movimentos iniciais de rotação e translação – com velocidades que possam ser conhecidas – e que, em seguida, permita que o corpo deslize livremente sobre uma superfície. Em nosso caso, o corpo consistiu em um disco, dotado de quatro pontos de apoio (um ”carrinho”) que, inicialmente, encontrava-se acoplado a um eixo rotor, ambos suspensos verticalmente. O conjunto formado pelo carrinho e pelo eixo rotor entra em movimento de rotação a partir da ação de um cabo (fio fino), em cuja extremidade encontra-se um peso suspenso. O peso é solto de uma determinada altura e o carrinho desacopla-se do eixo rotor quando o peso atinge o fim de seu curso. O carrinho cai sobre uma superfície horizontal, girando, e, nesse exato instante, recebe um impacto horizontal de um dispositivo que possui uma energia potencial elástica estocada (um “ferrolho”, dotado de uma mola). O resultado obtido é uma trajetória que combina rotação e translação e que pode ser registrada na superfície por onde o móvel deslizou, já que os pontos de apoio podem ser dotados de pontas marcadoras (com tinta).
+    </p>
+    <p>
+     Evidentemente, muitos outros sistemas de lançamento poderiam ter sido utilizados.
+     <i>
+      O motivo pelo qual fizemos essa escolha específica encontra-se em nosso terceiro e último objetivo. Ele consistiu em utilizar o aparato experimental também como um instrumento pedagógico mais amplo, visando ensinar conceitos associados às formas mais comuns de energia mecânica e mostrar como essas formas de energia se transformam até, finalmente, serem todas dissipadas como resultado da atuação das forças de atrito
+     </i>
+     . Nesse caso, a forma e, principalmente, os comprimentos dos percursos dos pontos de apoio do carrinho devem ser medidos e analisados. Eles servem de base para o desenvolvimento de boa parte das discussões e ilustrações que apresentamos, nesse trabalho, sistematizadas em uma sequência didática sugerida.
+    </p>
+    <p>
+     Na verdade, acreditamos que a situação concreta acima descrita tem potencial para ser utilizada no ensino de grande quantidade de conceitos de mecânica. Esse entendimento encontra-se em consonância com o de muitos autores, que veem na utilização de experimentos, senão uma chave, pelo menos um ingrediente muito importante no ensino integrado de conceitos da física [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] P. Tamir, in: Practical Science, edited by B. Woolnough (Open University Press, Milton Keynes, 1991).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [21] M-G. Séré, S.M. Coelho e A.D. Nunes, Cad. Bras. Ens. Fís. 20, 30 (2003).
+       </span>
+      </span>
+     </span>
+     ]. A propósito, uma das vantagens que vemos no aparato que utilizamos está exatamente na integração e na instanciação dos conceitos mecânicos em um único ”fenômeno”, suficientemente complexo para ser atraente, porém, não tanto que não possa ser entendido em termos dos conceitos que normalmente são ensinados para estudantes do Ensino Médio ou dos semestres iniciais de um curso de graduação. Exemplos desses conceitos que aparecem necessariamente integrados no experimento da dinâmica de deslizamento são os de posição, trajetória, velocidade, velocidade angular, força de atrito, força elástica, energia potencial gravitacional, energia potencial elástica, energia cinética e dissipação. Com base nessas ideias, o protótipo construído foi utilizado na aplicação de uma sequência de aprendizagem, similar à que apresentaremos, em uma turma de estudantes do primeiro ano do Ensino Médio, no Instituto Federal do Norte de Minas Gerais (IFNMG) – Campus de Salinas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     O trabalho está dividido da seguinte forma. Na seção 2, discute-se a aplicação do formalismo lagrangiano para formular o problema de deslizamento de um corpo rígido em superfícies com atrito. Na seção 3, apresentamos as soluções numéricas do sistema dinâmico, com algumas diferentes escolhas de modelos de força, e analisamos a dinâmica acoplada de decaimento das energias cinéticas translacional e rotacional. Na seção 4, apresentamos um protótipo de aparato experimental desenhado para verificar a validade dos diferentes modelos teóricos. Na seção 5, realizamos uma importante discussão sobre os conceitos de energia, trabalho, transformação, conservação e dissipação e, em particular, sobre o teorema do trabalho-energia, com fins de subsidiar a aplicação do aparato experimental em sala de aula. Na seção 6, descrevemos a aplicação do aparato, bem como a sequência didática e a análise conceitual sugeridas. Por fim, na seção 7, apresentamos algumas considerações finais. Um exemplo do programa em MAPLE elaborado para solucionar numericamente o problema dinâmico, com instruções para sua implementação, pode ser encontrado no seguinte endereço eletrônico:
+     <a href="http://www.fis.unb.br/index.php?option=com_myjspace&amp;view=see&amp;pagename=antony" target="_blank">
+      http://www.fis.unb.br/index.php?option=com_myjspace&amp;view=see&amp;pagename=antony
+     </a>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Formalismo Lagrangiano Aplicado à Dinâmica de Corpo Rígido em Superfícies com Atrito
+    </h1>
+    <p>
+     Sem perda de generalidade, para tornar a apresentação mais simples e didática, vamos discutir o equacionamento e a solução do problema dinâmico de uma barra rígida que desliza, apoiada sobre suas duas extremidades, sobre uma superfície com atrito (plana e horizontal). Ao longo de toda a trajetória, considera-se que o peso da barra é sustentado de modo equitativo por suas duas extremidades. A despeito da simplicidade desse modelo, a extensão do tratamento para o caso de um corpo rígido de formato genérico, com distribuição de massa contínua, apoiado sobre um número finito de pontos simetricamente dispostos, é praticamente imediata.
+    </p>
+    <p>
+     Evidentemente, a principal diferença entre essa situação e aquela correspondente à dinâmica de corpos rígidos que normalmente é discutida nos textos de mecânica clássica usados em cursos de graduação é a presença das forças de atrito. De fato, em sua grande maioria, esses textos concentram-se no problema do corpo rígido submetido a forças de volume conservativas, tais como a força gravitacional. Como uma força conservativa deve ter rotacional nulo e deve ser função exclusiva das posições – ou seja, deve ser explicitamente independente do tempo, das velocidades, etc. –, isso implica, necessariamente, que ela é derivável de uma função escalar, a energia potencial
+     <i>
+      U
+     </i>
+     (
+     <i>
+      q
+      <sub>
+       i
+      </sub>
+     </i>
+     (
+     <i>
+      L
+     </i>
+     (
+     <i>
+      q
+      <sub>
+       i
+      </sub>
+     </i>
+     ,
+     <i>
+      T
+     </i>
+     (
+     <i>
+      q
+      <sub>
+       i
+      </sub>
+     </i>
+     ,
+     <i>
+      U
+     </i>
+     (
+     <i>
+      q
+      <sub>
+       i
+      </sub>
+     </i>
+     ), onde
+     <i>
+      T
+     </i>
+     representa a energia cinética do sistema. Em seguida, o princípio de Hamilton é utilizado para derivar as chamadas equações de Euler-Lagrange, cuja solução fornece as trajetórias
+     <i>
+      q
+      <sub>
+       i
+      </sub>
+     </i>
+     (
+     <i>
+      t
+     </i>
+     ;
+     <i>
+      q
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      0
+     </sub>
+     ,
+     <i>
+      q
+     </i>
+     <sub>
+      <i>
+       i
+      </i>
+      0
+     </sub>
+     ,
+     <i>
+      θ
+     </i>
+     – CM), já que elas permitem eliminar o (único) vínculo trivialmente. Além de conveniente, essa escolha é, também, significativa. De fato, pode-se demonstrar que, nas coordenadas
+     <i>
+      θ
+     </i>
+     – CM, as equações de movimento de qualquer corpo rígido submetido a forças conservativas se desacoplam e as energias rotacional e translacional se conservam de forma independente [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] H. Goldstein, C. Poole and J. Safko, Classical Mechanics (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ].
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/cc9f4e1639fd1f0326c51ac836c8946594a56643.jpg" style="max-width:100%"/>
+     ), que também é função exclusiva das posições. Assim, o formalismo lagrangiano pode ser aplicado, de acordo com as prescrições habituais, bastando, para tanto, que se escolha um sistema de coordenadas generalizadas
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/cc9f4e1639fd1f0326c51ac836c8946594a56643.jpg" style="max-width:100%"/>
+     )conveniente e se construa a função lagrangiana
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/d86e2951ea91d0c030b672b42be3e29164f78f82.jpg" style="max-width:100%"/>
+     ) em função das condições iniciais (
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/d86e2951ea91d0c030b672b42be3e29164f78f82.jpg" style="max-width:100%"/>
+     ). No caso da barra rígida, as coordenadas generalizadas mais adequadas são as coordenadas ângulo – centro de massa (
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/2a49c5977a16d941aac514f62afd5407edbfa67a.jpg" style="max-width:100%"/>
+     ) =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/2a49c5977a16d941aac514f62afd5407edbfa67a.jpg" style="max-width:100%"/>
+     ) –
+    </p>
+    <p>
+     A introdução de forças de atrito, ou seja, de forças de contato dissipativas, acarreta um cenário bastante diferente do previamente descrito. Em primeiro lugar, porque a energia mecânica não é conservada: ela se dissipa monotonicamente, de modo que o estado assintótico do corpo rígido é sempre o de repouso. O fato de as forças de atrito não serem conservativas não permite que uma função energia potencial seja construída, de modo que essas forças têm que ser convenientemente adicionadas às equações de Euler-Lagrange. No caso geral, a inclusão dessas forças pode não ser de todo trivial, pois é preciso escrevê-las como forças generalizadas correspondentes a cada uma das coordenadas generalizadas com as quais a dinâmica é descrita. A forma usual de se realizar essa tarefa consiste em encontrar a chamada
+     <i>
+      função de dissipação de Rayleigh
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] H. Goldstein, C. Poole and J. Safko, Classical Mechanics (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] N.A. Lemos, Am. J. Phys. 59, 660 (1991).
+       </span>
+      </span>
+     </span>
+     ]. A partir dela, as forças generalizadas podem ser obtidas, bastando que se calcule os negativos das derivadas parciais com relação às respectivas velocidades generalizadas. Em segundo lugar, a inclusão de forças dissipativas pode implicar, a depender do modelo de força adotado, o acoplamento entre os movimentos rotacional e translacional. Nos casos em que isso acontece, aparece um acoplamento entre as evoluções temporais das energias cinéticas rotacional e translacional. Isso significa que as suas respectivas
+     <i>
+      taxas de decaimento
+     </i>
+     passam a ser, em geral, além de variáveis,
+     <i>
+      não-monotônicas
+     </i>
+     . Ou seja, à medida que a energia mecânica total é dissipada, é possível que se observe uma ”transferência relativa”entre as energias rotacional e translacional.
+    </p>
+    <p>
+     Passemos, então, às considerações detalhadas. Consideremos uma barra rígida, de comprimento
+     <i>
+      h
+     </i>
+     , apoiada apenas sobre suas duas extremidades, cada uma concentrando uma massa
+     <i>
+      m
+     </i>
+     , em uma superfície horizontal, com atrito. As forças de atrito podem ser modeladas de qualquer forma, mas o modo aparentemente mais simples e ainda suficientemente realístico de fazê-lo é supô-las de módulo constante e diretamente proporcional ao peso sustentado (
+     <i>
+      mg
+     </i>
+     , com
+     <i>
+      g
+     </i>
+     representando a aceleração da gravidade), com suas direções opostas às das velocidades instantâneas dos pontos de apoio,
+     <b>
+      <i>
+       V
+      </i>
+     </b>
+     <sub>
+      1
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     ) e
+     <b>
+      <i>
+       V
+      </i>
+     </b>
+     <sub>
+      2
+     </sub>
+     (
+     <i>
+      t
+     </i>
+     )
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/d3652495ed51c0a29b29785884f24d78deb4d528.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     O valor do coeficiente de atrito
+     <i>
+      μ
+     </i>
+     – que caracteriza o deslizamento relativo entre as extremidades da barra e a superfície – é considerado conhecido, por experiência. A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     esquematiza a ação das forças de atrito sobre a barra girante, nesse caso.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      esquema de forças de módulo constante na barra girante sobre superfície com atrito. Cada massa possui uma velocidade instantânea que é a composição da velocidade do CM com a velocidade linear de rotação em torno do CM,
+      <i>
+       υ
+       <sub>
+        r
+       </sub>
+      </i>
+      = Ω
+      <i>
+       h
+      </i>
+      /2.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Devido à necessidade de considerar explicitamente as forças de vínculo entre as massas, torna-se bem mais complicado abordar o problema através de métodos vetoriais. De fato, isso é, inclusive, desnecessário, pois o número de graus de liberdade do sistema é apenas três, já que as coordenadas cartesianas estão submetidas ao seguinte vínculo
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/4cb5741eea9dcbd7002dd5816e7809c01b0b42b9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     que é o que define o corpo como sendo
+     <i>
+      rígido
+     </i>
+     . Nessas condições, é bem mais conveniente lançar mão de métodos analíticos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] H. Goldstein, C. Poole and J. Safko, Classical Mechanics (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ]. Em coordenadas cartesianas, as velocidades instantâneas se escrevem como
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/e712e599419a391202c2a440cdf03e22e4a16773.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A lagrangiana do sistema reduz-se apenas ao termo correspondente à soma das energias cinéticas de cada massa, já que não há forças conservativas atuando sobre o corpo. Ela será, portanto,
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/3bded4bba7784a03f89a93116102126bd2f9d20a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Devemos, agora, considerar as forças de atrito. Primeiramente, vamos escrevê-las como função das coordenadas e velocidades cartesianas
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/950c9f1508c39ee6a4dff926d86eb42719d12b15.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como queremos introduzir as forças de atrito nas equações de Euler-Lagrange para as coordenadas generalizadas, é conveniente definir a
+     <i>
+      função de dissipação de Rayleigh
+     </i>
+     Φ(
+     <i>
+      q
+      <sub>
+       j
+      </sub>
+     </i>
+     ,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/67fbc4b676201519dcd6229f55bc1a8fe7af5f29.jpg" style="max-width:100%"/>
+     ). Essa função é tal que os negativos de suas derivadas parciais com relação a cada uma das velocidades generalizadas fornecem as respectivas forças generalizadas que devem ser introduzidas nas equações de Euler-Lagrange
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/7a767a5a381b133d914f64b67e3f7bd4a82cf299.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Note-se que, se não eliminarmos o vínculo, as equações devem ser escritas com um
+     <i>
+      multiplicador de Lagrange
+     </i>
+     ,
+     <i>
+      λ
+     </i>
+     . Em particular, procuramos, primeiramente, por uma função Φ(
+     <i>
+      x
+      <sub>
+       j
+      </sub>
+     </i>
+     , ẋ
+     <sub>
+      j
+     </sub>
+     ) que satisfaça a
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/148b8a77763488ba9cf606205e84c8de540d3cf1.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     É imediato verificar que essa função pode ser
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/391fedfff46d7f9d5c5b8f72969a139d7db76134.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Assim, obtém-se o seguinte conjunto de cinco equações para cinco incógnitas (com o vínculo incluído)
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/7d1064dcf712ecee29536b54b94a311e619ffc5b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como já se notou, resolver essas cinco equações é desnecessário, uma vez que o número de graus de liberdade é de apenas três e não estamos interessados na obtenção da força de vínculo. É mais conveniente, portanto, usar coordenadas generalizadas, em virtude das quais o vínculo esteja trivialmente satisfeito. As três coordenadas generalizadas convenientes para esse problema são as coordenadas cartesianas do centro de massa (CM),
+     <i>
+      X
+     </i>
+     e
+     <i>
+      Y
+     </i>
+     , e uma coordenada angular, que pode ser, por exemplo, a inclinação da barra,
+     <i>
+      θ
+     </i>
+     , com relação ao eixo horizontal
+     <i>
+      x
+     </i>
+     . As coordenadas cartesianas se escrevem, em função das coordenadas generalizadas, da seguinte forma (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 2
+     </a>
+     )
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/94b2ec0d32389f9f173e6f262f72ace694569289.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      coordenadas generalizadas para a barra girante
+      <br/>
+     </div>
+    </div>
+    <p>
+     É trivial observar-se que o vínculo está automaticamente satisfeito. Quando descrita em termos das coordenadas generalizadas
+     <i>
+      θ
+     </i>
+     -CM, a energia cinética do sistema se desacopla naturalmente em uma parte
+     <i>
+      translacional
+     </i>
+     – ou seja, que só depende das coordenadas CM – e uma parte
+     <i>
+      rotacional
+     </i>
+     – ou seja, que só dependa do movimento do corpo em torno do centro de massa:
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/424a7947ac61c7fb6889f956282a174f9932174a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      M
+     </i>
+     = 2
+     <i>
+      m
+     </i>
+     é a massa total da barra. A parte rotacional depende, obviamente, do momento de inércia específico desse sistema,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/812e9fc42b728e0ff5b6818a2df3f07ade823312.jpg" style="max-width:100%"/>
+     . De fato, a energia cinética de um corpo rígido sempre aparece desacoplada, se se utiliza as coordenadas do CM:
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/109aa0ab62a0fb30a8208a149a0c353c9d2b5c27.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Isso significa que a informação sobre o formato específico do corpo rígido está toda contida no seu momento de inércia. Com o auxílio das transformações acima, torna-se fácil escrever a função de Rayleigh em função das coordenadas
+     <i>
+      θ
+     </i>
+     -CM
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/07bab99922cb1373f4c6924ca8401d7e79962b68.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em qualquer caso, as equações de Euler-Lagrange que se obtém são as seguintes:
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/944ab9cb435b313e0387205aecb73ba296a5871b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Note-se que, embora bastante complicadas e totalmente acopladas, elas podem ser resolvidas numericamente usando, por exemplo, um programa de computação algébrica, como o MAPLE. A solução da dinâmica depende, exclusivamente, de que se conheça a função energia cinética
+     <i>
+      T
+     </i>
+     e a função de Rayleigh Φ. É importante notar, também, que Φ
+     <i>
+      <sub>
+       c
+      </sub>
+     </i>
+     não é uma função homogênea das velocidades, razão pela qual não se aplica o resultado que permite escrever a equação dinâmica para a energia mecânica total diretamente a partir da função de Rayleigh [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] H. Goldstein, C. Poole and J. Safko, Classical Mechanics (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] N.A. Lemos, Am. J. Phys. 59, 660 (1991).
+       </span>
+      </span>
+     </span>
+     ]:
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/a706d961d6b73575495da98bcdbd2900250b4176.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     A generalização do procedimento acima para um corpo rígido qualquer deslizando em uma superfície sobre um número finito de pontos de apoio pode ou não ser trivial. É importante notar o seguinte. Quer o corpo rígido seja modelado como uma distribuição contínua de massa, quer como uma distribuição discreta, se o seu peso estiver equitativamente sustentado por um conjunto finito de pontos de apoio, então a solução do problema requer apenas que se obtenha o momento de inércia da nova configuração e o novo conjunto de transformações que reduz as coordenadas cartesianas dos pontos de apoio às três coordenadas generalizadas
+     <i>
+      θ
+     </i>
+     -CM. (Já que o número de graus de liberdade continua sendo três, em qualquer caso.) Isso é assim porque, além do momento de inércia, o único elemento realmente importante para a determinação da dinâmica são as forças de atrito que atuam sobre o corpo. Elas são as únicas forças em jogo, atuam apenas em cada um dos pontos de apoio e dependem do peso que cada um desses pontos sustenta. São as coordenadas cartesianas (finitas) desses pontos de apoio que devem ser transformadas e isso depende apenas das relações geométricas entre os pontos e o centro de massa do corpo. Portanto, se a distribuição de massas e a distribuição de pontos de apoio forem ambas simétricas, com relação ao eixo de simetria do corpo, a generalização é trivial. A generalização também é trivial no caso de um conjunto discreto assimétrico de massas distintas, mesmo que o corpo não possua um eixo de simetria. Nesse caso, é imediato saber quanto peso cada ponto de apoio sustenta e, principalmente, qual é a posição do centro de massa em relação aos pontos de apoio. Os únicos problemas que não são triviais são os relacionados com distribuições contínuas de massa que não possuam um eixo de simetria vertical – por não serem homogêneas ou pelo fato de o corpo ter formato irregular arbitrário – ou que, mesmo possuindo um eixo de simetria, sejam sustentadas por uma distribuição de pontos de apoio não-simétrica. Em ambos os casos, pode ser não-trivial determinar quanto peso cada ponto de apoio realmente sustenta.
+    </p>
+    <p>
+     Supostamente, o modelo mais elementar para um ”carro”em processo de deslizamento consiste em um conjunto discreto de massas dispostas em formato retangular, conforme a
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 3
+     </a>
+     . A
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 4
+     </a>
+     mostra o esquema geométrico para a obtenção das transformações entre coordenadas cartesianas e
+     <i>
+      θ
+     </i>
+     -CM. O tratamento analítico dessa nova situação é análogo ao da barra girante. O número de graus de liberdade do carro girante sobre a superfície com atrito continua sendo três. As equações de Euler-Lagrange, embora ainda mais complicadas, também podem ser resolvidas usando métodos numéricos.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      esquema das forças instantâneas atuantes em um “carro”deslizando sobre superfície com atrito.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      esquema geométrico para a obtenção das transformações entre coordenadas cartesianas e
+      <i>
+       θ
+      </i>
+      -CM, no caso de um carro retangular de lados
+      <i>
+       h
+      </i>
+      e
+      <i>
+       l
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Além do modelo de força constante (
+     <i>
+      modelo constante
+     </i>
+     ), muitos outros podem ser simulados. Por exemplo, pode-se supor que as forças de atrito sejam diretamente proporcionais às velocidades (
+     <i>
+      modelo linear
+     </i>
+     ):
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/3f18d98e98e9c44af755260386e23c0e6391eac9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     É imediato verificar que essa força pode ser obtida a partir da seguinte função de Rayleigh
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/aded69788b47c988c6de061505d3b5ad2eb12da0.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Outro modelo interessante corresponde a uma força proporcional ao quadrado do módulo das velocidades (
+     <i>
+      modelo quadrático
+     </i>
+     ):
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/dfcbd1e2467bd368c5dd9fcdc2924d8a684e6efa.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     que pode ser obtida a partir da seguinte função de Rayleigh
+    </p>
+    <div class="row formula" id="eeq19">
+     <a name="eq19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/aee755d71eaaa706adaefa5c4fa41a8cc0e7ce76.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Por fim, um modelo particularmente interessante corresponde a forças de atrito que sejam inversamente proporcionais aos módulos das velocidades (
+     <i>
+      modelo racional linear
+     </i>
+     ):
+    </p>
+    <div class="row formula" id="eeq20">
+     <a name="eq20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/ade602cda3d8345ebfef241ad2e2d2a46a105669.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     cuja função de Rayleigh pode ser a seguinte
+    </p>
+    <div class="row formula" id="eeq21">
+     <a name="eq21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/05c0f5bcb0544832d09593464206218986e0d6b2.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     O modelo racional linear não é realístico, pois a força diverge quando um dos pontos de apoio se aproxima do repouso. De fato, nenhum corpo poderia
+     <i>
+      começar
+     </i>
+     a se movimentar, nessas condições. Esse problema é pouco relevante, contudo, já que estamos sempre tratando de casos em que as velocidades iniciais são não-nulas.
+    </p>
+    <p>
+     É importante salientar que, dificilmente, o tratamento matemático desse problema poderia ser apresentado no contexto do Ensino Médio, em razão de sua elevada complexidade. E, mesmo no contexto do ensino de graduação, é provável que alunos que não tenham cursado ou não estejam cursando a disciplina de mecânica clássica (ou correlata) sintam dificuldades para compreender os detalhes técnicos envolvidos. Contudo, é bastante possível utilizar os procedimentos como um ”pacote fechado”de cálculo para desenhar as diversas trajetórias esperadas e, se possível, compará-las com algum modelo real. Nesse caso, discussões qualitativas sobre as peculiaridades que envolvem a presença das forças de atrito podem ser realizadas, postergando-se, para o momento oportuno, considerações de ordem técnica. De fato, nosso objetivo, até aqui, foi apenas mostrar que é perfeitamente possível calcular matematicamente as trajetórias desse sistema e que, se medidas precisas das condições iniciais, em um modelo de laboratório, puderem ser feitas, é possível fazer comparações e testar a validade do modelo teórico, com fins didáticos.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Soluções Numéricas das Equações de Movimento
+    </h1>
+    <p>
+     A partir dessa seção, consideraremos, exclusivamente, a dinâmica de um disco homogêneo de raio
+     <i>
+      R
+     </i>
+     , apoiado sobre quatro pontos de apoio simetricamente dispostos. O momento de inércia do disco é dado por
+     <i>
+      M
+     </i>
+     é a sua massa total. Vamos analisar um pouco mais detidamente o comportamento do modelo constante para, em seguida, tecer algumas considerações a respeito dos demais modelos. Como dissemos, o modelo constante parece ser o mais simples a ser adotado. Ele corresponde às suposições que geralmente são feitas quando se considera a ação de forças de atrito: que elas são diretamente proporcionais às forças normais nos pontos de sustentação e que são independentes da velocidade relativa de escorregamento. Como notamos, essas são suposições que encontram amplo suporte empírico, cuja validade abrange um intervalo intermediário de velocidades. A rotina que permite calcular, numericamente, a solução das equações de movimento encontra-se à disposição no endereço eletrônico mencionado na seção introdutória.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/8c1286b8c9e743b90352474f26e4a582e17151a1.jpg" style="max-width:100%"/>
+     , em que
+    </p>
+    <p>
+     A primeira observação que se pode fazer com base nesse modelo – e que se estende, com algumas poucas variações, aos modelos quadrático e racional linear – é que o comportamento do decaimento relativo das energias rotacional e translacional depende, exclusivamente, da relação geométrica entre o raio do disco e as distâncias entre os pontos de apoio que o sustentam. Por simplicidade, vamos considerar que os pontos de apoio estejam simetricamente distribuídos em torno do centro do disco, formando um quadrado, ou seja, tal que, na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 4
+     </a>
+     ,
+     <i>
+      h
+     </i>
+     =
+     <i>
+      l
+     </i>
+     . As
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 5
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     mostram os comportamentos típicos que permitem realizar a comparação entre os decaimentos das energias e as trajetórias de cada um dos pontos de apoio, nos casos em que
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R, h
+     </i>
+     &lt;
+     <i>
+      R
+     </i>
+     e
+     <i>
+      h
+     </i>
+     &gt;
+     <i>
+      R
+     </i>
+     .
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      simulações com
+      <i>
+       h
+      </i>
+      =
+      <i>
+       R
+      </i>
+      . Os gráficos do topo representam os decaimentos da energia total (
+      <i>
+       T
+      </i>
+      , azul), da energia translacional (
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      , preto) e da energia rotacional (
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      , vermelho). Os gráficos da base representam as trajetórias dos quatro pontos de apoio, marcadas, ao longo da trajetória do disco, em cores distintas. As figuras (a) e (d) mostram o caso no qual as condições iniciais foram escolhidas para que
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      =
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      . As figuras (b) e (e), o caso em que, inicialmente,
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      &gt;
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      . As figuras (c) e (f), o caso em que, inicialmente,
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      &lt;
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      simulações com
+      <i>
+       h
+      </i>
+      &gt;
+      <i>
+       R
+      </i>
+      . Os gráficos do topo representam os decaimentos da energia total (
+      <i>
+       T
+      </i>
+      , azul), da energia translacional (
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      , preto) e da energia rotacional (
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      , vermelho). Os gráficos da base representam as trajetórias dos quatro pontos de apoio, marcadas, ao longo da trajetória do disco, em cores distintas. As figuras (a) e (d) mostram o caso no qual as condições iniciais foram escolhidas para que
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      =
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      . As figuras (b) e (e), o caso em que, inicialmente,
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      &gt;
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      . As figuras (c) e (f), o caso em que, inicialmente,
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      &lt;
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      simulações com
+      <i>
+       h
+      </i>
+      &lt;
+      <i>
+       R
+      </i>
+      . Os gráficos do topo representam os decaimentos da energia total (
+      <i>
+       T
+      </i>
+      , azul), da energia translacional (
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      , preto) e da energia rotacional (
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      , vermelho). Os gráficos da base representam as trajetórias dos quatro pontos de apoio, marcadas, ao longo da trajetória do disco, em cores distintas. As figuras (a) e (d) mostram o caso no qual as condições iniciais foram escolhidas para que
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      =
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      . As figuras (b) e (e), o caso em que, inicialmente,
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      &gt;
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      . As figuras (c) e (f), o caso em que, inicialmente,
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      &lt;
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     As simulações ilustradas nessas figuras foram todas realizadas com os seguintes parâmetros fixados: massa do disco,
+     <i>
+      M
+     </i>
+     = 0,17 kg; raio do disco,
+     <i>
+      R
+     </i>
+     = 0,07 m;
+     <i>
+      h
+     </i>
+     = 0,07 m, 0,09 m e 0,05 m; coeficiente de atrito,
+     <i>
+      μ
+     </i>
+     = 1; aceleração da gravidade,
+     <i>
+      g
+     </i>
+     = 9,78 m/s
+     <sup>
+      2
+     </sup>
+     . Os valores correspondentes à massa, raio e pontos de apoio do disco foram tomados próximos aos do disco que efetivamente foi construído (cf. seção seguinte). Nas ilustrações, as condições iniciais foram escolhidas, em cada caso, de modo a produzir uma trajetória final que fosse suficientemente representativa dos comportamentos típicos observados. As posições iniciais do centro de massa foram tomadas no centro do sistema de coordenadas, com coordenada angular inicial nula. As velocidades iniciais do centro de massa em cada direção ortogonal foram escolhidas iguais, a fim de que se pudesse melhor visualizar quaisquer desvios da trajetória diagonal. A velocidade angular inicial foi escolhida sempre anti-horária e de modo que, em cada caso, produzisse uma situação em que as energias rotacional e translacional iniciais estivessem nas relações apresentadas.
+    </p>
+    <p>
+     A comparação entre as
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 6
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     mostra que, quando
+     <i>
+      h
+     </i>
+     &gt;
+     <i>
+      R
+     </i>
+     , ocorre um predomínio do movimento de translação sobre o movimento de rotação e, quando
+     <i>
+      h
+     </i>
+     &lt;
+     <i>
+      R
+     </i>
+     , é o movimento de rotação que predomina sobre o de translação. Com o termo ”predomínio”queremos expressar a seguinte ideia. Observe que o decaimento da
+     <i>
+      energia total
+     </i>
+     é sempre uma curva com concavidade para baixo, ou seja, suas taxas de decaimento são sempre cada vez menores – as taxas são monotonicamente decrescentes. Contudo, se observarmos as
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 6(a)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6(c)
+     </a>
+     , podemos constatar que esse não é o comportamento de
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     , pois suas curvas possuem pontos de inflexão. Em ambos os casos – energias iniciais iguais ou desiguais, com
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     &lt;
+     <i>
+      T
+      <sub>
+       rot
+      </sub>
+     </i>
+     –, as taxas de decaimento de
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     são, inicialmente, bem menores do que as taxas de decaimento de
+     <i>
+      T
+      <sub>
+       rot
+      </sub>
+     </i>
+     . Acontece, portanto, uma espécie de ”transferência relativa”de energia rotacional para translacional, sobretudo nessa fase. Antes do ponto de inflexão,
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     aumenta gradativamente sua taxa de decaimento, mas esta atinge um máximo e volta a cair, dessa vez monotonicamente: a curva, que antes apresentava concavidade para baixo, muda sua concavidade para cima. Contudo, até o disco atingir o ”repouso-- o que só pode acontecer, nas simulações, assintoticamente –
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     continua decrescendo sua energia a uma taxa menor do que
+     <i>
+      T
+      <sub>
+       rot
+      </sub>
+     </i>
+     . Evidentemente, no caso em que, inicialmente,
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     &gt;
+     <i>
+      T
+      <sub>
+       rot
+      </sub>
+     </i>
+     , não aparecem pontos de inflexão, mas é possível observar, na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 6(b)
+     </a>
+     , que, na fase final do movimento,
+     <i>
+      T
+      <sub>
+       rot
+      </sub>
+     </i>
+     esgota-se mais rápido do que
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     . As mesmas conclusões podem ser obtidas,
+     <i>
+      mutatis mutandis
+     </i>
+     , para o caso em que
+     <i>
+      h
+     </i>
+     &lt;
+     <i>
+      R
+     </i>
+     , como pode ser observado na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 7
+     </a>
+     . O caso em que
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R
+     </i>
+     é singular, nesse sentido, justamente por representar a única situação em que não há ”predomínio”de uma energia sobre a outra. De fato, se, inicialmente, elas são iguais, como na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 5(a)
+     </a>
+     , decaem exatamente nas mesmas taxas, até ambas esgotarem-se. Se, inicialmente, uma é maior do que a outra (
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 5(b)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5(c)
+     </a>
+     ), a maior energia inicial dissipa-se mais rapidamente, até que, antes de ambas se esgotarem, igualam seus valores e passam a decair em taxas, virtualmente, idênticas.
+    </p>
+    <p>
+     Esses comportamentos das dinâmicas de decaimento das energias refletem-se, de modo visualmente sugestivo – e com elevado apelo estético –, nas trajetórias dos pontos de apoio, como pode ser visto em todos os gráficos das partes de baixo das
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 5
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     . Em cada caso, a predominância, seja da energia translacional, seja da energia rotacional, reflete-se, respectivamente, no alongamento dos perfis das trajetórias ou no seu encurtamento, com formação de laços. Ou seja, no primeiro caso, o disco ”translada mais do que roda”e, no segundo, ocorre o oposto. A esse respeito, merece atenção especial o caso 5(a). Se observarmos atentamente, as trajetórias de todos os pontos de apoio parecem ser
+     <i>
+      ciclöides
+     </i>
+     . Isso significa que o disco ”translada tanto quanto gira”, com os movimentos translacional e rotacional sincronizados de tal forma que os pontos de apoio atingem, sucessivamente, o repouso, antes de voltarem a movimentar-se, novamente, perfazendo um arco. Ou seja, se o círculo de raio
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 5(b)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5(c)
+     </a>
+     , o movimento do disco tende à sincronia, pouco antes dele atingir o ”repouso”, e o movimento assintótico aparece, realmente, sempre cicloidal.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/99cb9b33fa56ca5e8b4579689ff45dc935687ef2.jpg" style="max-width:100%"/>
+     , que circunscreve os pontos de apoio, estivesse em contato com uma linha imaginária – a envoltória das curvas definida pelas infinitas cúspides das cicloides –, o movimento seria equivalente ao de uma roda que gira sobre uma superfície, sem escorregamento. Nos casos representados nas
+    </p>
+    <p>
+     Esses fatos não estão desconectados. É possível entender por que isso acontece precisamente quando
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R
+     </i>
+     . Para tanto, devemos recordar que a velocidade instantânea de cada ponto de apoio é uma composição das velocidades de rotação em torno do centro de massa e da velocidade do próprio centro de massa (cf.
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 1
+     </a>
+     ). Portanto, em todos os momentos em que um ponto de apoio se encontra em repouso, essas velocidades devem ser, necessariamente, iguais (em módulo) e opostas (em sentido). Logo,
+    </p>
+    <div class="row formula" id="eeq22">
+     <a name="eq22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/e916cb68742ddb7a92ac3160337d2fb504a654cc.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Podemos observar a velocidade de um dos pontos de apoio, ao longo do tempo, nos gráficos da base da
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 8
+     </a>
+     . Note-se que apenas no primeiro caso, que corresponde a
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R
+     </i>
+     , a velocidade realmente se anula, em todas as voltas. Evidentemente, em cada instante em que um dos pontos de apoio estiver em repouso, todos os demais pontos de apoio estarão se movendo com as mesmas velocidades de rotação em torno do centro de massa – embora, apenas em módulo – e com as mesmas velocidades vetoriais do centro de massa. Na verdade, qualquer ponto do disco a uma distância igual à
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     =
+     <i>
+      T
+      <sub>
+       rot
+      </sub>
+     </i>
+     . Assim,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/99cb9b33fa56ca5e8b4579689ff45dc935687ef2.jpg" style="max-width:100%"/>
+     da borda do disco estará nessas mesmas condições. Agora, vamos lançar mão do fato de que o movimento cicloidal só ocorre na condição em que
+    </p>
+    <div class="row formula" id="eeq23">
+     <a name="eq23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/67e5defee07865648a17432b9662919e84b2ca80.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Os gráficos do topo representam as diferenças entre as coordenadas X e Y, do centro de massa, ao longo do tempo de simulação, correspondentes aos seguintes ensaios: (a): ensaio da
+      <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 5(d)
+      </a>
+      ; (b): ensaio da
+      <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 6(f)
+      </a>
+      ; (c): ensaio da
+      <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 7(e)
+      </a>
+      . Os gráficos da base representam, respectivamente a cada um dos gráficos do topo, as velocidades de um dos pontos de apoio, ao longo do tempo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R
+     </i>
+     . Evidentemente, podemos inverter todo o argumento, e chegar à conclusão de que, se
+     <i>
+      T
+      <sub>
+       cm
+      </sub>
+     </i>
+     =
+     <i>
+      T
+      <sub>
+       rot
+      </sub>
+     </i>
+     , em qualquer que seja o instante do movimento, e se
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R
+     </i>
+     , então, naqueles instantes, o movimento dos pontos de apoio do disco deverá ser, necessariamente, cicloidal.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/8c1286b8c9e743b90352474f26e4a582e17151a1.jpg" style="max-width:100%"/>
+     , segue-se que
+    </p>
+    <p>
+     Por fim, um fato que chama bastante atenção é a ausência de deflexão aparente da trajetória do centro de massa. Em princípio, como o movimento é acoplado, não haveria por que não esperar por esse fenômeno – como já observado, ele é análogo ao chamado
+     <i>
+      efeito Magnus
+     </i>
+     , que designa a deflexão da trajetória de um corpo em movimento em um fluido viscoso. De fato, o efeito de deflexão realmente acontece, mas ele é bastante sutil. Em virtude de uma quase-simetria na atuação das forças ao longo do movimento do disco, o efeito de deflexão só se manifesta de maneira um pouco mais evidente nas proximidades do final do movimento, em parte, devido à acumulação do efeito.
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 8
+     </a>
+     , pode-se ver qual é sua ordem de grandeza típica (alguns milímetros) e como ele se torna mais acentuado quando o movimento se torna mais lento, embora isso não seja uma regra geral. Os gráficos do topo (
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figuras 8(a)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8(b)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8(c)
+     </a>
+     ) mostram as diferenças entre as coordenadas X e Y, do centro de massa, ao longo do tempo de simulação, evidenciando um desvio ”no mesmo sentido da rotação”(anti-horário, visto de cima). Se as velocidades angulares iniciais forem negativas (sentido horário, visto de cima), os desvios serão para o lado oposto.
+    </p>
+    <p>
+     Passemos, agora, a alguns breves comentários gerais sobre os demais modelos. Surpreendentemente, do ponto de vista da complexidade da dinâmica de acoplamento entre as energias, o modelo constante acaba por ser o mais interessante dentre os mencionados. O modelo linear – quando o módulo da força de atrito depende diretamente do módulo da velocidade, e não apenas de sua direção – é, na verdade, o que apresenta o comportamento mais simples, pois implica algo curioso: o desacoplamento total entre as equações de movimento para as coordenadas generalizadas
+     <i>
+      X, Y
+     </i>
+     e
+     <i>
+      θ
+     </i>
+     . Isso acontece porque, nesse caso, tanto a energia cinética quanto a função de Rayleigh são aditivamente separáveis, o que implica que cada coordenada generalizada passa a ser regida por uma equação diferencial (ordinária, de segunda ordem e homogênea) independente das demais, sendo, aliás, idênticas as correspondentes às coordenadas CM. Isso implica que os movimentos de translação e rotação são completamente independentes. Implica, também, que os decaimentos das respectivas velocidades generalizadas são exponenciais, assim como das energias rotacional e translacional. Contudo, com exceção do caso especial em que
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R
+     </i>
+     – no qual os decaimentos exponenciais são, quando normalizados, idênticos –, a energia total não apresenta decaimento exponencial. Nesse caso, por ser a função de Rayleigh homogênea nas velocidades generalizadas, aplica-se a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (15)
+     </a>
+     .
+    </p>
+    <p>
+     Com exceção do modelo linear, os demais – quadrático e racional linear – apresentam, na maioria dos casos, comportamento análogo ao do modelo constante: o decaimento relativo das energias rotacional e translacional depende da relação geométrica entre o raio do disco e as distâncias entre os pontos de apoio que o sustentam, apresentando ”predominância”da translação sobre a rotação, quando
+     <i>
+      h
+     </i>
+     &gt;
+     <i>
+      R
+     </i>
+     , e da rotação sobre a translação, se
+     <i>
+      h
+     </i>
+     &lt;
+     <i>
+      R
+     </i>
+     . O caso em que
+     <i>
+      h
+     </i>
+     =
+     <i>
+      R
+     </i>
+     , contudo, apresenta-se substancialmente distinto do modelo constante. Sendo as energias rotacional e translacional inicialmente iguais, elas decaem em sincronia, produzindo movimento cicloidal, pelo menos no modelo quadrático. O modelo racional linear acabou sendo inconclusivo, em virtude de dificuldades numéricas. Porém, se as energias iniciais forem distintas, ocorre o fenômeno da predominância. Se o modelo é quadrático, a predominância é da maior energia inicial. Porém, se o modelo é o racional linear, ocorre exatamente o oposto: a predominância é da menor energia inicial. A
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 9
+     </a>
+     apresenta alguns exemplos dos comportamentos de cada um desses modelos.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Os gráficos representam os decaimentos da energia total (
+      <i>
+       T
+      </i>
+      , azul), da energia translacional (
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      , preto) e da energia rotacional (
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      , vermelho), todos com condições iniciais tais que
+      <i>
+       T
+       <sub>
+        cm
+       </sub>
+      </i>
+      &gt;
+      <i>
+       T
+       <sub>
+        rot
+       </sub>
+      </i>
+      . Os gráficos da esquerda (a e d) representam simulações com o modelo linear. Os gráficos do centro (b e e) representam simulações com o modelo racional linear. Os gráficos da direita (c e f) representam simulações com o modelo quadrático.
+      <br/>
+     </div>
+    </div>
+    <p>
+     No que se refere aos desvios do centro de massa, eles também são muito pequenos, em todos os demais modelos. A novidade, contudo, fica por conta do modelo quadrático: ao contrário dos demais, ele implica um desvio do centro de massa ”no sentido oposto ao da rotação”. Isso significa que, se as velocidades angulares iniciais forem positivas (sentido anti-horário, visto de cima), então o desvio ocorre no sentido horário. Se as velocidades angulares iniciais forem negativas (sentido horário, visto de cima), os desvios serão para o lado oposto.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Aparato Experimental: um Protótipo
+    </h1>
+    <p>
+     Para verificar se algum dos modelos teóricos corresponde, ainda que dentro de certa aproximação, à dinâmica real de objetos postos para deslizar em superfícies com atrito, é necessário construir um modelo experimental. Para alcançar esse objetivo, qualquer aparato simples que consista de um dispositivo de lançamento que imprima movimento combinado de rotação e de translação pode ser utilizado. O que se precisa, é claro, é que as trajetórias dos pontos de apoio do objeto possam ser marcadas sobre a superfície de deslizamento, para que sejam medidas e comparadas com as soluções numéricas.
+    </p>
+    <p>
+     Portanto, se o objetivo for apenas comparar as trajetórias teóricas e reais, os detalhes envolvidos no dispositivo de lançamento são pouco importantes. Entretanto, para que as trajetórias teóricas possam ser calculadas e comparadas, é sumamente necessário que se possa medir, com razoável precisão, a posição e a velocidade iniciais do centro de massa e a posição e a velocidade angulares iniciais de rotação do corpo. As medidas de posição são relativamente simples. Porém, para se medir as velocidades, requer-se o uso de algumas estratégias um pouco mais sofisticadas. Pode-se, por exemplo, usar um conjunto de fotossensores associados a placas de processamento (p. ex.: placas Arduíno) que sejam capazes de capturar dados no exato instante em que o objeto inicia o seu movimento – ou, talvez, em arranjos mais sofisticados, ao longo de todo o movimento. Outra possibilidade é gravar o movimento em vídeo e analisá-lo a partir dos quadros do filme. Existem programas, como o
+     <i>
+      Tracker – Video Analysis and Modeling Tool for Physics Education
+     </i>
+     –, que são especialmente desenvolvidos para esses fins e que possuem ferramentas para, por exemplo, permitir o cálculo das velocidades desejadas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] Tracker – Video Analysis and Modeling Tool for Physics Education. Disponível em http://physlets.org/tracker/.
+       </span>
+       <br/>
+       <a href="http://physlets.org/tracker/" target="_blank">
+        http://physlets.org/tracker/...
+       </a>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Esse estudo, contudo, não pôde, ainda, ser realizada por nös e permanece como uma perspectiva de trabalho futuro Por outro lado, no processo de idealização de um dispositivo de lançamento, ficou claro que, do ponto de vista da aplicação didático-pedagógica, o fenômeno de movimento combinado de rotação e translação sobre superfícies com atrito podia ser utilizado de forma também interessante para alcançar um fim mais amplo e pertinente ao contexto do Ensino Médio: estudar os processos de transformação entre os vários tipos mais comuns de energia mecânica conjuntamente com o problema de sua dissipação irreversível em máquinas complexas. Por tratar-se de um movimento que guarda associação direta com o fenômeno de derrapagem de carros, exploramos essa conexão para prover uma motivação adicional para os estudantes. O interesse em explorar didaticamente essa analogia foi o principal motivo para que o número de pontos de apoio escolhido fosse quatro e não três, como seria, de fato, mais conveniente.
+    </p>
+    <p>
+     A estrutura conceitual por detrás do funcionamento do aparato que idealizamos e construímos consiste no seguinte. O aparato pode ser pensado, esquematicamente, como uma máquina que estoca e fornece parte de sua energia interna (energias potenciais gravitacional e elástica) para suprir a energia cinética (rotação e translação) necessária para o objeto deslizar. Como uma máquina puramente mecânica, o aparato processa a transformação de parte de sua energia potencial gravitacional em energia cinética de rotação e a transformação de parte de sua energia potencial elástica em energia cinética de translação. Toda a energia cinética suprida ao objeto é dissipada pelas forças de atrito produzidas pela superfície de deslizamento. A configuração estática que estoca a energia potencial gravitacional consiste em um peso inicialmente mantido a uma certa altura. A configuração estática que estoca a energia potencial elástica consiste, inicialmente, em uma mola comprimida. Evidentemente, essas transformações ”internas”de energia não podem ser realizadas com total eficiência, pois (grande) parte da energia estocada acaba sendo perdida ou pelo movimento das partes do aparato que necessariamente precisam ser acionadas ou pelo atrito entre essas mesmas partes móveis [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     O protótipo que foi efetivamente construído para implementar esse esquema geral consiste das seguintes partes. Primeiramente, temos um disco (”carrinho”) que é acoplado em uma haste vertical que cumpre a função de um eixo rotor. É esse eixo que transmite o movimento de rotação para o carrinho. O carrinho deve ser munido, em sua parte inferior, de quatro pontos de apoio (representando as ”rodas do carrinho”), constituídos por pontas de pincéis (marcadores de quadro) que podem ser tingidas com diferentes cores, antes de cada lançamento (ensaio). Dessa forma, ao deslizar sobre a superfície plana, as rodas do carrinho desenham suas respectivas trajetórias. Na sua parte superior, o carrinho deve ter uma reentrância que servirá para o engate do eixo rotor, em cuja extremidade encontra-se uma aleta dupla. Essa reentrância deve ter a sua forma e dimensões ajustadas para que o engate se dê por simples justaposição, de modo que a aleta de travamento não fique presa, impedindo que o carrinho se desacople do eixo no momento oportuno [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     O eixo rotor possui, na sua parte superior, uma polia (carretel), engastada fixamente no eixo, na qual se enrola um fio (p.ex.: náilon). Inicialmente, o fio de náilon encontra-se completamente enrolado na polia. Na outra ponta desse fio, encontra-se um peso, suspenso verticalmente com o auxílio de uma segunda polia. O carrinho e o eixo rotor adquirem movimento de rotação conjunto que lhes é transferido por meio do peso suspenso, à medida que ele cai sob ação da gravidade. No final de seu curso, a queda do peso terá transferido (parte de) sua energia potencial para o sistema eixo rotor e carrinho.
+    </p>
+    <p>
+     Como já mencionado, a conexão entre a extremidade inferior do eixo rotor e o carrinho deve ser feita por uma aleta horizontal dupla, em forma de borboleta, que se encaixará na reentrância, de formato análogo, escavada na parte superior do carrinho. O sistema de desacoplamento consiste no aproveitamento da inércia do próprio carrinho. Ao final do curso vertical do peso, o eixo rotor sofre uma brusca parada, mas o carrinho, que, inicialmente, girava impulsionado pelo eixo rotor, tenderá a continuar seu movimento. Isso é suficiente para que a aleta se desconecte da reentrância, permitindo que o carrinho se solte do eixo rotor e caia verticalmente sobre a superfície, munido de movimento de rotação pura em torno de seu próprio eixo. Aproximadamente no mesmo instante em que atinge a superfície, o carrinho deve sofrer um impacto horizontal, de modo a receber um impulso que, combinado com o movimento de rotação, faça com que deslize sobre a superfície girando e transladando. O dispositivo que o impulsiona horizontalmente é composto por uma haste metálica, acionada por uma mola comprimida (”ferrolho”), que transfere parte de sua energia potencial elástica para o carrinho. O carrinho movimenta-se sobre a superfície desenhando, com os seus pés tingidos, a trajetória que será analisada, até que toda a energia útil adquirida a partir da máquina seja completamente dissipada.
+    </p>
+    <p>
+     Observando o modo como o impulso horizontal é fornecido, deve ficar claro o motivo pelo qual nosso carrinho tem formato de disco: essa forma simétrica assegura que ele possa ser impulsionado, qualquer que seja o momento, de forma sempre aproximadamente igual. Para prover uma estrutura de sustentação para o peso e o eixo rotor, deve-se montar um suporte, em forma de T, com três pés de apoio. Esse suporte deve ser colocado sobre uma mesa. Sobre a mesa, coloca-se a superfície sobre a qual o carrinho deslizará. As alturas, tanto do suporte, quanto da mesa, devem ser adaptadas para que a base do disco (corpo do carrinho) fique suficientemente próxima da superfície de deslizamento (mais ou menos 5 cm), possibilitando um tempo razoável para o mais eficiente acionamento do ferrolho, no momento em que o carrinho atinge a superfície. A superfície de deslizamento pode ser feita com qualquer tipo de material. Entretanto, recomenda-se que o material utilizado seja bem liso (sem irregularidades perceptíveis) e tenha um coeficiente de atrito não muito elevado (tal como vidro), de modo a proporcionar trajetórias mais amplas, fáceis e interessantes de serem analisadas. A massa e a altura do peso suspenso, bem como a posição a partir da qual o ferrolho será disparado, podem variar e devem ser escolhidas de acordo com cada ensaio. Todo o aparato pode ser observado na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 10
+     </a>
+     . Alguns detalhes do carrinho, do eixo rotor e do ferrolho podem ser observados na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 11
+     </a>
+     . Algumas trajetórias traçadas pelo carrinho podem ser vistas na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      figura 12
+     </a>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      aparato experimental para o lançamento do carrinho sobre superfície de vidro.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      (a) face superior do carrinho, com a reentrância para o engate do eixo rotor; (b) eixo rotor; (c) carrinho e eixo rotor engatados; (d) ferrolho: haste com marcações para trava e mola; (e) ferrolho travado em uma das três posições, eixo rotor, aleta de engate do carrinho no eixo rotor e carrinho.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      trajetórias produzidas em três ensaios diferentes.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Energia e Trabalho: Conservação, Transformação e Dissipação
+    </h1>
+    <p>
+     Como dissemos, muitos outros sistemas de lançamento poderiam ter sido utilizados. Optamos, contudo, por utilizar um aparato experimental que pudesse cumprir, além da destinação original de reproduzir a dinâmica de deslizamento de um corpo rígido, uma tarefa de maior amplitude, como instrumento pedagógico. Desse modo, o estudo do sistema de lançamento passa a ser tão importante quanto o do movimento do carrinho. Associados, eles permitem apresentar conceitos relacionados com a transformação e a dissipação da energia mecânica, nas suas mais diversas formas.
+    </p>
+    <p>
+     O tema que envolve os conceitos de
+     <i>
+      energia e suas transformações
+     </i>
+     é central, em muitos aspectos. Não é necessário nem mesmo enfatizar demasiadamente a importância que a energia possui para a vida moderna e as dificuldades envolvidas com sua produção, estocagem e distribuição em um mundo cada vez mais dependente economicamente de insumos dessa natureza [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] A.P. Picolo, A.J. Rühler e G.A. Rampinelli, Rev. Bras. Ens. Fís. 36, 1 (2014).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [27] F.R. Martins, E.B. Pereira, e M.P. de Echer, Rev. Bras. Ens. Fís. 26, 145 (2004).
+       </span>
+      </span>
+     </span>
+     ]. Não é o caso de se pensar, evidentemente, que isso seja uma novidade: o ser humano, como todo o resto do mundo vivo, sempre foi dependente de energia para sobreviver. O que mudou sensivelmente, do século XVIII para cá, foi a
+     <i>
+      escala
+     </i>
+     , já que, somente no século XX, a população mundial quadruplicou. A área de ensino da física tem acompanhado essas preocupações, o que se pode observar no aumento crescente de publicações, envolvendo tanto aspectos puramente didáticos como também históricos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] A.B. Arons, Am. J. Phys.67, 1063(1999).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [37] J.L. Doménech, D.G. Pérez, A. Gras-Marti, J.G. Aranzabal, J. Martínez-Torregrosa, J. Salinas, R. Trumper e P. Valdés, Cad. Bras. Ens. Fís. 20, 285 (2003).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Em vista dessa importância e dos impactos altamente negativos que a escassez relativa de energia promete para o futuro, muita pesquisa aplicada tem sido realizada com o objetivo de descobrir e estudar estratégias que aumentem a eficiência e a economia dos muitos processos envolvendo a energia, seja em sua produção, no seu transporte ou no seu consumo. Nesse sentido, o problema mais pungente associado com os processos energéticos tem sido justamente aquele relacionado com a sua
+     <i>
+      dissipação
+     </i>
+     , ou seja, com a sua
+     <i>
+      perda irreversível
+     </i>
+     em processos termodinâmicos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       37
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [37] J.L. Doménech, D.G. Pérez, A. Gras-Marti, J.G. Aranzabal, J. Martínez-Torregrosa, J. Salinas, R. Trumper e P. Valdés, Cad. Bras. Ens. Fís. 20, 285 (2003).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       40
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [40] P. Roura and D. Oliu, Am. J. Phys. 80, 588 (2012).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Do ponto de vista do ensino, é notório que o aspecto mais enfatizado seja não o da dissipação, mas sim o da conservação da energia [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       41
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [41] J. Solbes y F. Tarín, Ensenãnza de las Ciencias 22, 185 (2004).
+       </span>
+      </span>
+     </span>
+     ]. Isso se deve ao evidente fato de que a física tem por fundamento
+     <i>
+      princípios de conservação
+     </i>
+     , pois todas as forças fundamentais da natureza são conservativas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       42
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [42] J.P. Baptista, Rev. Bras. Ens. Fís. 28, 541 (2006).
+       </span>
+      </span>
+     </span>
+     ]. Contudo, pode-se dizer, com um pouco de licença, que isso só é ”válido”microscopicamente. Ainda que se saiba que a
+     <i>
+      energia total
+     </i>
+     de um
+     <i>
+      sistema isolado
+     </i>
+     , de fato, se conserva, no mundo macroscópico – em que vive o cidadão comum – pode-se dizer que
+     <i>
+      a conservação de energia útil para realização de trabalho não é sequer uma exceção: ela, simplesmente, não existe
+     </i>
+     . Esse é um corolário da segunda lei da termodinâmica que, diferentemente da primeira lei, tem suas raízes assentadas em leis probabilísticas e não apenas nas leis fundamentais da física. A separação de escalas entre os fenômenos do mundo macroscópico e os do mundo microscópico é um reflexo desse fundamento conceitual distinto.
+    </p>
+    <p>
+     Ainda assim, muito embora a primeira lei da termodinâmica seja apenas uma paráfrase do princípio de conservação de energia, é exatamente nela que se pode encontrar os conceitos que permitem colocar esses dois mundos em contato: os conceitos de
+     <i>
+      energia
+     </i>
+     e de
+     <i>
+      trabalho
+     </i>
+     . Há, porém, no âmbito da mecânica, diferentes conceitos e definições de energia e de trabalho. Na verdade, com eles é possível articular muitos pares conceituais que permitem elaborar diferentes versões do chamado
+     <i>
+      teorema do trabalho-energia
+     </i>
+     , segundo uma ”taxonomia”e uma nomenclatura introduzidas por Mallinckrodt e Leff [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [43] A.J. Mallinckrodt and H.S. Leff, Am. J. Phys. 60, 356 (1992).
+       </span>
+      </span>
+     </span>
+     ]. Será interessante passarmos a adotá-las, nesse trabalho, para analisar o processo físico de que estamos tratando. (A propósito, ter em perspectiva essas diferentes definições será importante, mais abaixo, a fim de evitar quaisquer ambiguidades ou concepções equivocadas.)
+    </p>
+    <p>
+     Com efeito, o processo físico de que tratamos é composto, essencialmente, de duas partes. A primeira parte consiste em prover o carrinho de suas energias cinéticas iniciais (sistema de lançamento + carrinho). A segunda, no deslizamento do carrinho sobre a superfície (carrinho + superfície). Em uma situação idealizada, podemos considerar que essas duas partes compõem um sistema completo (sistema de lançamento + carrinho + superfície) que se encontra
+     <i>
+      isolado
+     </i>
+     e cujo centro de massa se encontra em
+     <i>
+      repouso
+     </i>
+     , no referencial do laboratório. Se tratarmos o problema do ponto de vista de leis fundamentais – sem realizar qualquer distinção entre os mundos microscópico e macroscópico – a ausência de forças externas implica, necessariamente, que a
+     <i>
+      energia interna U
+     </i>
+     do sistema completo deve ser constante. Como o sistema completo está em repouso, sua
+     <i>
+      energia translacional total K
+      <sub>
+       tr
+      </sub>
+     </i>
+     é zero. Isso significa que qualquer movimentação interna das partes do sistema, ou seja, qualquer mudança em sua
+     <i>
+      energia cinética interna K
+      <sub>
+       int
+      </sub>
+     </i>
+     , deve ser realizada às custas de sua
+     <i>
+      energia potencial interna ϕ
+     </i>
+     .
+    </p>
+    <p>
+     Embora estritamente correto, continuar a tratar o problema nesses termos não é nem interessante, nem conveniente. Afinal, estamos interessados apenas nos aspectos macroscópicos (mecânicos) do problema. Isso não significa, porém, que podemos nos restringir a tratá-lo apenas mecanicamente, sem levar em consideração também aspectos termodinâmicos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] A.B. Arons, Am. J. Phys.67, 1063(1999).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [43] A.J. Mallinckrodt and H.S. Leff, Am. J. Phys. 60, 356 (1992).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       48
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [48] C.E. Mungan, Phys. Teach. 43, 10 (2005).
+       </span>
+      </span>
+     </span>
+     ]. Ainda assim,
+     <i>
+      o tratamento puramente mecânico do sistema macroscópico completo não é, de fato, impossível, conceitualmente, contanto que se abra mão da ideia de considerá-lo isolado
+     </i>
+     . É sempre possível tratar todos os graus internos de liberdade microscópicos como um sistema à parte – um banho térmico, à temperatura constante – que se encontra em contato térmico com o sistema macroscópico e absorve sua energia até que o equilíbrio seja atingido. Ou seja, até que o sistema macroscópico entre em repouso. Essa é a essência da ideia por detrás do processo de dissipação da energia em um sistema dinâmico. Sua implementação requer que se postule a existência de forças não-conservativas, tais como as forças de atrito. As forças de atrito não são, portanto, fundamentais. Elas são mais propriamente descritas, dentro da mecânica, como um expediente matemático conveniente para reproduzir os complicados processos dinâmicos que, em última instância, implicam o decréscimo da energia interna do sistema macroscópico – em conformidade com a segunda lei da termodinâmica –, excitando os graus internos de liberdade e elevando a temperatura de todas as partes do sistema completo.
+    </p>
+    <p>
+     Todas as considerações feitas até aqui se aplicam, igualmente, quando se estuda cada uma das duas partes do processo físico, separadamente. Concentremo-nos, primeiramente, na análise da primeira parte do sistema (sistema de lançamento + carrinho). Queremos interpretar o sistema de lançamento como uma máquina que transforma energia potencial (interna) em energia cinética (interna). Parte considerável dessa energia cinética não é fornecida para o carrinho, mas para as partes móveis do sistema: o peso suspenso, o eixo rotor, as polias, o eixo de impacto do ferrolho, a mola. Após o carrinho soltar-se do eixo rotor, todas as partes móveis do dispositivo de lançamento entram em repouso. Portanto, esse processo não é puramente mecânico: ele envolve dissipação da energia não fornecida ao carrinho em fricção e deformação. Se queremos determinar a eficiência dessa máquina, basta verificar qual fração da energia estocada é transformada em energia cinética do carrinho, se a obtenção dessa última quantidade for possível.
+    </p>
+    <p>
+     A análise da segunda parte do sistema (carrinho + superfície), onde ocorre o processo mecânico de deslizamento, envolve considerar a dissipação completa da energia cinética do carrinho pelas forças de atrito da superfície, as únicas forças presentes. Novamente, o processo não é puramente mecânico. Se soubermos a energia cinética inicial do carrinho, o princípio de conservação da energia implica, necessariamente, que a energia interna do sistema carrinho + superfície será constante e a segunda lei da termodinâmica implica que a energia será absorvida pelos graus internos de liberdade, elevando a temperatura do carrinho e da superfície.
+    </p>
+    <p>
+     O que acontece, entretanto, se a energia cinética inicial do carrinho não puder ser obtida? Nesse caso, o cálculo direto da eficiência da máquina – o principal objetivo didático a ser explorado – não pode ser feito. Mas, há uma alternativa. Ela envolve uma instância de aplicação do teorema do trabalho-energia: se for possível calcular o trabalho executado pelas forças de atrito sobre o carrinho e se for possível relacionar esse trabalho, consistentemente, com o decréscimo de energia do carrinho, então, para calcular a eficiência da máquina, é suficiente comparar a energia potencial inicialmente estocada com o trabalho dissipado.
+    </p>
+    <p>
+     Apesar de parecer öbvia, a relação entre trabalho e variação de energia cinética, em casos que vão além da mecânica de uma partícula, não é sempre trivial. O problema essencial reside no fato de que nem todo produto de força por deslocamento é necessariamente equivalente a energia no sentido
+     <i>
+      termodinâmico
+     </i>
+     , ainda que a relação possa seja legítima, do ponto de vista dinâmico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] A.B. Arons, Am. J. Phys.67, 1063(1999).
+       </span>
+      </span>
+     </span>
+     ]. Os casos que envolvem corpos extensos deformáveis ou submetidos a forças de atrito são exemplos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] A.B. Arons, Am. J. Phys.67, 1063(1999).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [43] A.J. Mallinckrodt and H.S. Leff, Am. J. Phys. 60, 356 (1992).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       46
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [46] B.A. Sherwood and W.H. Bernard, Am. J. Phys. 52, 1001 (1984).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       47
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [47] H.S. Leff and A.J. Mallinckrodt, Am. J. Phys. 61, 121 (1993).
+       </span>
+      </span>
+     </span>
+     ]. No caso específico do deslizamento de corpos rígidos em superfícies com atrito, a dificuldade está, justamente, na impossibilidade de se conhecer os detalhes microscópicos que geram a força de resistência no arraste.
+    </p>
+    <p>
+     A situação de um corpo rígido de massa
+     <i>
+      m
+     </i>
+     deslizando retilineamente com velocidade de centro de massa constante
+     <i>
+      v
+      <sub>
+       cm
+      </sub>
+     </i>
+     , sob ação da força de atrito
+     <i>
+      f
+     </i>
+     , equilibrada por uma força
+     <i>
+      P
+     </i>
+     , ilustra de forma simples o problema envolvido. A relação dinâmica implicada pelo teorema de trabalho-energia é
+    </p>
+    <div class="row formula" id="eeq24">
+     <a name="eq24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/78ca900d810e10be8098d605d639894396491702.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Se
+     <i>
+      P
+     </i>
+     =
+     <i>
+      f
+     </i>
+     , o lado esquerdo da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      eq. (24)
+     </a>
+     é zero: nenhum trabalho líquido está sendo executado sobre o corpo e, portanto, a energia cinética do corpo não varia. Porém, nessas condições, como explicar o fato de que esse processo é acompanhado pelo aquecimento das superfícies de contato? Se a energia é conservada, qual é a origem da energia que eleva a temperatura do sistema (corpo + superfície)? O problema está em que o termo
+     <i>
+      f
+     </i>
+     Δ
+     <i>
+      s
+      <sub>
+       cm
+      </sub>
+     </i>
+     não é uma quantidade de trabalho que corresponda a uma energia conservada, no sentido termodinâmico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] A.B. Arons, Am. J. Phys.67, 1063(1999).
+       </span>
+      </span>
+     </span>
+     ]. A solução do problema está em invocar a relação correta, do ponto de vista termodinâmico
+    </p>
+    <div class="row formula" id="eeq25">
+     <a name="eq25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (25)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/17726a64c68ba01e992f9842387e4f8bea430275.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      U
+     </i>
+     é a energia interna do sistema (corpo + superfície),
+     <i>
+      Q
+     </i>
+     é o calor transferido no processo e
+     <i>
+      W
+     </i>
+     o trabalho mecânico. Por outro lado, o arraste sob forças de fricção é um processo adiabático [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] A.B. Arons, Am. J. Phys.67, 1063(1999).
+       </span>
+      </span>
+     </span>
+     ], portanto,
+     <i>
+      Q
+     </i>
+     = 0. No arraste sob ação de uma força
+     <i>
+      P
+     </i>
+     (equilibrada ou não), a relação
+     <a class="open-asset-modal" data-target="#ModalSchemeeq25" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (25)
+     </a>
+     implica
+    </p>
+    <div class="row formula" id="eeq26">
+     <a name="eq26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (26)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/f40c3f36ed6fda0f9990b75a6d2a81c3f7b0b3a6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Portanto, no caso de
+     <i>
+      P
+     </i>
+     =
+     <i>
+      f
+     </i>
+     – quando não há variação de energia cinética -, o trabalho mecânico da força de arraste
+     <i>
+      P
+     </i>
+     é a verdadeira origem da energia térmica envolvida na elevação da temperatura pelo processo de fricção entre as superfícies. A quantidade
+     <i>
+      f
+     </i>
+     Δ
+     <i>
+      s
+      <sub>
+       cm
+      </sub>
+     </i>
+     , propriamente referida como
+     <i>
+      pseudo-trabalho
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [43] A.J. Mallinckrodt and H.S. Leff, Am. J. Phys. 60, 356 (1992).
+       </span>
+      </span>
+     </span>
+     ], é dinamicamente correta, mas, termodinamicamente, não corresponde a uma energia.
+    </p>
+    <p>
+     Vamos verificar de que modo é possível estabelecer um teorema de trabalho-energia no caso do carrinho deslizante. É preciso começar de primeiros princípios. O trabalho total executado pelas forças atuantes em um sistema de N partículas é dado pela soma dos trabalhos executados pelas forças externas e internas sobre cada partícula
+    </p>
+    <div class="row formula" id="eeq27">
+     <a name="eq27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (27)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/71d4b7f3110982695b57b451daaa0872cc68b95a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em um corpo rígido, as forças internas não executam trabalho, ou seja,
+     <i>
+      W
+      <sub>
+       int
+      </sub>
+     </i>
+     = 0. De fato, podemos escrever
+     <i>
+      W
+      <sub>
+       int
+      </sub>
+     </i>
+     como
+    </p>
+    <div class="row formula" id="eeq28">
+     <a name="eq28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (28)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/3ac8b6eb7c42eae0a5f229701a6d8d834d862eba.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <b>
+      r
+     </b>
+     <sub>
+      <i>
+       cm
+      </i>
+     </sub>
+     é a posição do centro de massa do sistema e
+     <i>
+      i
+     </i>
+     com relação ao centro de massa. A primeira somatória é nula porque a terceira lei de Newton implica que a soma total das forças internas do sistema é nula. A segunda somatória é nula porque as partículas não se deslocam com relação ao centro de massa.
+     <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/1d75b04e15b1098030aad12d7c6fcc1876542be7.jpg" style="max-width:100%"/>
+     é a posição da partícula
+    </p>
+    <p>
+     As forças externas atuantes sobre o carrinho são apenas quatro, cada uma atuando sobre apenas quatro ”partículas”do sistema, na verdade, os pontos de apoio do disco sobre a superfície. Assim,
+    </p>
+    <div class="row formula" id="eeq29">
+     <a name="eq29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (29)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/471261aec3a0362e72c170dd967475c6cdc63d97.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Note que é até possível escrever o trabalho total como o trabalho executado pela resultante das quatro forças de atrito atuando sobre o centro de massa, ao longo de sua trajetória, ou seja,
+    </p>
+    <div class="row formula" id="eeq30">
+     <a name="eq30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (30)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/11b21f744bbd5c03d8d4edb6a7f98efe2b6e062e.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Porém, é muito mais difícil calcular o trabalho total pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq30" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      eq. (30)
+     </a>
+     , uma vez que a resultante das forças de atrito é um vetor cuja direção varia com o tempo de forma desconhecida. Calcular o trabalho total pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq29" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      eq. (29)
+     </a>
+     é, por outro lado, extremamente simples, pois as forças de atrito sempre apontam na direção oposta ao deslocamento de cada ponto de apoio e possuem, no caso do modelo constante, módulo constante e igual para todos os pontos de apoio. Assim,
+    </p>
+    <div class="row formula" id="eeq31">
+     <a name="eq31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (31)
+       </span>
+       <img src="https://minio.scielo.br/documentstore/1806-9126/NrTpnT5wFGNTzPCLdFYpFPp/2c9b6bca01be9f67c780641ad0b90c76c4764384.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      M
+     </i>
+     é a massa total do carrinho e Δ
+     <i>
+      s
+      <sub>
+       m
+      </sub>
+     </i>
+     é a média dos deslocamentos totais de cada um dos pontos de apoio do carrinho.
+    </p>
+    <p>
+     A questão agora é saber se esse trabalho é igual à energia cinética total inicial do carrinho, que sabemos ter sido completamente dissipada em energia térmica quando o carrinho entra em repouso (cf.
+     <a class="open-asset-modal" data-target="#ModalSchemeeq22" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      eq. (22)
+     </a>
+     ). A resposta é sim, mas não vamos reproduzir aqui os cálculos que conduzem a essa resposta, pois são idênticos aos cálculos efetuados entre as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (13)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (17)
+     </a>
+     da pág. 359 da ref. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       43
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [43] A.J. Mallinckrodt and H.S. Leff, Am. J. Phys. 60, 356 (1992).
+       </span>
+      </span>
+     </span>
+     ].
+     <i>
+      O resultado geral que se obtém é que o trabalho total é, de fato, sempre igual à soma da variação das energias cinéticas translacional K
+      <sub>
+       tr
+      </sub>
+      e interna K
+      <sub>
+       int
+      </sub>
+     </i>
+     . No caso do carrinho, a energia cinética interna é apenas a energia rotacional, uma vez que ele é um corpo rígido. Portanto, estamos justificados em utilizar a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq31" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      eq. (31)
+     </a>
+     para deduzir a energia cinética total inicial do carrinho ou para utilizá-la com o fim de estimar a eficiência de nossa máquina de conversão de energia potencial em cinética.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Aplicação em Sala de Aula
+    </h1>
+    <p>
+     De posse de um aparato como o nosso em funcionamento, surgem muitas opções de utilização. Cada uso requer que o professor elabore uma sequência didática adequada aos seus próprios fins. Aqui, nos concentraremos em descrever, brevemente, apenas uma delas, que foi efetivamente aplicada em sala de aula, para uma turma do Ensino Médio do Instituto Federal do Norte de Minas Gerais (IFNMG-Salinas). O campus IFNMG-Salinas possui cursos superiores e cursos técnicos integrados com Ensino Médio. Dentre esses, o Curso Técnico de Informática. A proposta foi aplicada em uma turma do 1° ano desse curso, com a participação de trinta e dois alunos. O aparato experimental e a sequência didática escolhida constituíram um produto educacional desenvolvido no âmbito de um Curso de Mestrado Profissional – Mestrado Nacional Profissional em Ensino de Física, cujas descrição completa e relato detalhado de aplicação encontram-se em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     A sequência didática foi elaborada com o objetivo de dirigir a execução do experimento e a análise conceitual que a ela deve seguir-se. Após a execução de cada ensaio (lançamento do carrinho), obtém-se quatro trajetórias, desenhadas sobre a superfície de vidro. Como vimos, esse desenho pode ser bem variado, a depender dos valores dos parâmetros escolhidos em cada ensaio. Antes, contudo, de cada ensaio, são necessárias algumas operações de medida. As medidas diretas que devem ser realizadas antes de cada ensaio são o curso total e a massa do peso suspenso, a deformação da mola (na posição em que for travada para o ensaio), a massa e o raio do carrinho. Em nosso caso, apenas um carrinho foi confeccionado, com as seguintes dimensões: massa de 0,170 kg; raio de 0,069 m e altura de 2,0 cm. A posição dos pontos de apoio, na parte inferior, formava um quadrado com 4,0 cm de lado (
+     <i>
+      h
+     </i>
+     &lt;
+     <i>
+      R
+     </i>
+     ).
+    </p>
+    <p>
+     As quantidades físicas a serem obtidas indiretamente, antes da realização de cada ensaio, são o momento de inércia do carrinho, o coeficiente de atrito da superfície de deslizamento, a constante elástica da mola, a energia potencial gravitacional do peso e a energia potencial elástica da mola. Os procedimentos utilizados para executar essas medidas também são descritos em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ]. Por fim, uma vez realizado o ensaio, deve-se medir o comprimento total das trajetórias descritas pelos pontos de apoio do carrinho, ao longo do percurso que este cumpre, até alcançar o repouso, para obter o trabalho realizado pelas forças de atrito no processo de dissipação da energia que lhe foi fornecida, de acordo com a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq31" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      eq. (31)
+     </a>
+     e com a discussão da seção anterior.
+    </p>
+    <p>
+     Se supusermos que as forças de atrito e as deformações presentes nas diversas partes do dispositivo de lançamento dissipam uma quantidade desprezível de energia, o princípio de conservação da energia mecânica implica, necessariamente, que a energia potencial gravitacional estocada no peso suspenso deverá ser convertida em energia cinética de rotação do carrinho, energia cinética de rotação do eixo rotor e polias e energia cinética adquirida pelo próprio peso suspenso, no final de seu curso. Da mesma forma, se supusermos que o choque entre a haste do ferrolho e o carrinho é perfeitamente elástico, a energia potencial elástica estocada na mola deverá ser transformada em energia cinética de translação do carrinho e nas energias cinéticas adquiridas pelo pistão do ferrolho e pelo próprio ferrolho, durante o seu recuo. Assim, utilizando as expressões matemáticas adequadas, pode-se calcular a velocidade de rotação inicial, ou seja, a velocidade de rotação que o carrinho possuirá no momento em que é desacoplado. Analogamente, as expressões adequadas nos permitem calcular a velocidade de translação inicial, ou seja, a velocidade de translação que o carrinho possui no momento em que é impulsionado pelo pistão do ferrolho.
+    </p>
+    <p>
+     Na verdade, sabemos que todas as suposições acima mencionadas não são verdadeiras. De fato, as forças de atrito presentes entre as partes móveis do dispositivo não são desprezíveis, o impacto entre o pistão do ferrolho e o carrinho não é perfeitamente elástico e a mola certamente dissipa energia na sua deformação. Isso se revelou (dramaticamente) na análise dos resultados dos diversos ensaios realizados. Esse é um ponto importantíssimo a ser destacado, do ponto de vista didático, pois ilustra o grau de afastamento que modelos ideais apresentam com relação ao comportamento real. Isso também ilustra o fato de que a maior parte dos avanços tecnológicos modernos envolvidos com o funcionamento de máquinas mecânicas, termodinâmicas e eletromecânicas está relacionada com o esforço para diminuir os efeitos da dissipação.
+     <i>
+      Esse ponto pode e deve ser explorado didaticamente. A partir dele, os estudantes podem começar a perceber que a física
+     </i>
+     (
+     <i>
+      e a ciência, em geral
+     </i>
+     )
+     <i>
+      está envolvida com a obtenção de leis gerais que devem ser obedecidas em casos ideais e cuja possibilidade de verificação está condicionada ao grau de controle que se pode ter daquelas condições
+     </i>
+     (
+     <i>
+      reguladas por parâmetros externos
+     </i>
+     )
+     <i>
+      que não são levadas em consideração por essas leis
+     </i>
+     .
+    </p>
+    <p>
+     Em primeira aproximação, ou seja, se desprezássemos o acoplamento entre a rotação e a translação do carrinho, o trabalho total executado pelas forças de atrito poderia ser dividido em duas partes independentes. Sabemos, contudo, que o acoplamento existe. Por isso, a única forma realmente prática e bem fundamentada para computar o trabalho total efetuado pelas forças de atrito é aquele discutido na seção anterior. Como dissemos acima,
+     <i>
+      na ausência de deformações e de processos dissipativos nas partes móveis do dispositivo, o princípio de conservação da energia mecânica implica que a soma do trabalho total realizado pelas forças de atrito da superfície de deslizamento sobre o carrinho e das energias cinéticas adquiridas pelo peso suspenso, pelo eixo rotor, pelas polias e pelo ferrolho deve ser igual à energia mecânica inicial estocada na configuração do sistema. O objetivo é verificar em que grau essa igualdade é violada
+     </i>
+     .
+    </p>
+    <p>
+     Nesse ponto, é interessante realizar uma consideração simplificadora muito útil. Para todos os efeitos práticos e, principalmente, didáticos, o mais importante é analisar todo o aparato como sendo uma máquina cujo objetivo é estocar energia que deverá ser o mais eficientemente possível transferida para o carrinho. Dessa forma, é irrelevante considerar, separadamente, as perdas de energia ocorridas por atrito e deformação daquelas ocorridas pela aquisição de energia cinética de todas as demais partes móveis do sistema. Aliás, essas partes móveis também terão, ao fim, suas energias cinéticas dissipadas por forças de fricção, internas ao próprio aparato. Portanto, a
+     <i>
+      diferença entre a energia potencial total estocada e o trabalho executado pelo atrito da superfície deve ser igual à soma de todas as energias dissipadas no dispositivo. As forças de atrito presentes entre as partes móveis do sistema fazem parte do conjunto das condições que não estão sendo consideradas – e, portanto, não estão sendo controladas – na situação teórica envolvida na validade estrita do princípio de conservação da energia mecânica
+     </i>
+     .
+    </p>
+    <p>
+     Desse modo, é possível salientar, para os estudantes, que modelos teóricos são limites que, embora não possam jamais ser alcançados, podem ser aproximados, na medida em que se passe a controlar aquelas condições que não foram consideradas. Isso se traduz, em parte, na eliminação, tanto quanto possível, das forças dissipativas, por meio de procedimentos de otimização de funcionamento como, por exemplo, lubrificação.
+    </p>
+    <p>
+     O resultado que obtivemos, na aplicação em sala de aula, foi considerado muito bom. Todos os integrantes da turma participaram ativamente das discussões sobre os resultados encontrados e as estratégias utilizadas para realizar as várias tarefas propostas. De fato, questionários de avaliação mostraram que quase todos os estudantes apresentaram excelente receptividade à nova abordagem experimental/teórica. Avaliações subjetivas mostraram que essa abordagem permitiu que eles visualizassem com mais clareza as possíveis ligações entre os conceitos novos aprendidos e seus conhecimentos quotidianos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ]
+    </p>
+    <h1 class="articleSectionTitle">
+     7. Considerações finais
+    </h1>
+    <p>
+     Nesse trabalho, discutimos vários aspectos relacionados com o problema da dinâmica de um corpo rígido em movimento combinado de rotação e translação sobre uma superfície com atrito. Aplicamos o formalismo lagrangiano para formular o problema teórico e obtivemos suas soluções numéricas, usando o pacote de computação MAPLE. Dentre as principais conclusões obtidas, estão os aspectos peculiares envolvidos na dinâmica acoplada de decaimento das energias cinética translacional e rotacional. Com o duplo objetivo de avaliar as soluções teóricas e aplicar a situação-problema à sala de aula, apresentamos a construção de um protótipo de aparato experimental que essencialmente, consiste em uma ”máquina”que estoca energia potencial para prover o corpo rígido (carrinho) de energia cinética e lançá-lo sobre a superfície. Para que as trajetórias teóricas possam ser calculadas e comparadas com as produzidas experimentalmente, é necessário que se meça, com razoável precisão, todas as posições e velocidades iniciais do carrinho. Porém, para se medir as velocidades, requer-se o uso de estratégias mais sofisticadas, o que está para além de nossas possibilidades, até o momento. Por esse motivo, as avaliações comparativas permaneceram qualitativas. A construção de modelos experimentais mais sofisticados continua, contudo, em nosso horizonte de perspectivas, para um futuro próximo. A despeito dessa impossibilidade, o protótipo pôde ser aplicado, em sala de aula, com o objetivo de ensinar diversos aspectos associados com os conceitos de energia e de trabalho, tais como transformação, conservação, dissipação e o teorema do trabalho-energia. Além disso, embora nosso foco, na aplicação, tenha sido o estudante de Ensino Médio, acreditamos que o estudo e as sugestões apresentadas possam ser bem aproveitadas também nos cursos de graduação, sejam de física, sejam de engenharias.
+    </p>
+    <p>
+     Com relação aos aspectos mais gerais envolvendo a aprendizagem de ciência e o ensino de sua natureza e objetivos, temos, no conteúdo específico que abordamos, um ponto chave a ser destacado. Ele diz respeito à diferença que existe entre as construções teóricas e suas aplicações práticas. Isso ficou bem ilustrado na tentativa de aplicação do princípio de conservação da energia mecânica à situação de estudo. É bastante provável que, nas exposições didáticas teóricas tradicionais, o estudante fique com a impressão de que o princípio é verificado, na prática, sem muitas qualificações adicionais, já que as idealizações que são normalmente feitas não são, em geral, foco de muita atenção.
+    </p>
+    <p>
+     De fato, no contexto da aplicação do aparato experimental em sala de aula, a suposição da ausência de perdas de energia útil através de fricção, deformação ou pela movimentação de outras partes do sistema, somada ao princípio de conservação da energia mecânica, implicaria que o trabalho total realizado pelas forças de atrito da superfície sobre o carrinho deveria ser igual à energia mecânica inicialmente estocada na configuração. Contudo, o que se observou foi que, em elevado grau, essa igualdade era dramaticamente violada. A eficiência do mecanismo, na geração de energia útil para a movimentação do carrinho, jamais superou a casa dos dez por cento.
+    </p>
+    <p>
+     Evidentemente, não é o caso de se veicular, para os alunos, a ideia equivocada de que o princípio de conservação da energia não seja verdadeiro. Talvez, até mesmo a problematização do exato caráter epistemológico desse princípio seja excessiva. Deve-se, contudo, levá-los a perceber que as ”violações”observadas correspondem, necessariamente, à energia dissipada, que reaparece na forma de energia interna e que pode ser, inclusive, observada, através da elevação da temperatura do sistema, depois que ele entra em repouso. E que as deformações e as forças de atrito presentes entre as partes móveis do sistema, assim como as energias cinéticas adquiridas por elas, fazem parte de um conjunto de condições que não estão sendo consideradas em quaisquer dos modelos idealizados. A partir desse ponto, os estudantes podem começar a perceber que a física (e a ciência, em geral) está envolvida com a obtenção de leis gerais que devem ser exatamente obedecidas nos casos ideais, cuja possibilidade de verificação está condicionada ao grau de controle que se tenha daquelas condições (reguladas por parâmetros externos) que, contudo, não estão sendo levadas em consideração por essas mesmas leis.
+    </p>
+    <p>
+     No que se refere à aplicação pedagógica, nossa hipótese de fundo foi a de que a utilização de situações experimentais proporcionaria um ambiente didático mais efetivo e propício para que os alunos adquirissem, de forma mais harmônica e integrada, domínio das partes qualitativa e quantitativa dos conceitos físicos. Com base nessa ideia, acreditamos que uma estratégia interessante consiste em ensinar os conceitos realizando a conexão íntima entre a intuição fenomênica e o formalismo que os fundamenta matematicamente.
+    </p>
+    <p>
+     Parte fundamental da estratégia utilizada para o desenvolvimento da sequência didática que foi proposta e desenvolvida em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.P. de Laia, Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações. Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </span>
+      </span>
+     </span>
+     ] é baseada na ideia de que a manipulação direta, pelos alunos, do aparato experimental, é necessária para suprir as condições acima mencionadas. A esse respeito, procurou-se fazer com que os estudantes fossem capazes de praticar a identificação, a medição e a conceptualização das grandezas físicas relevantes (energia, trabalho, força, etc.), com o objetivo de alcançar suas definições formais, de relacionar essas grandezas físicas entre si – constituindo tais relações em termos de leis e princípios gerais (transformação, conservação e dissipação de energia) – e, por fim, de analisar, resolver e interpretar problemas didáticos envolvendo esses princípios.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem ao Professor Júnio Márcio Rosa Cruz, pelas interessantes discussões e sugestões acerca dos temas tratados, e à CAPES – Coordenação de Aperfeiçoamento de Pessoal de Nível Superior – pela ajuda financeira.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] H. Goldstein, C. Poole and J. Safko,
+        <i>
+         Classical Mechanics
+        </i>
+        (Addison-Wesley, San Francisco, 2002), 3ª ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] F. Palmer, Am. J. Phys.
+        <b>
+         17
+        </b>
+        , 181 (1949).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] F. Palmer, Am. J. Phys.
+        <b>
+         17
+        </b>
+        , 327 (1949).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] F. Palmer, Am. J. Phys.
+        <b>
+         17
+        </b>
+        , 336 (1949).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] R.S. Shankland, Am. J. Phys.
+        <b>
+         8
+        </b>
+        , 64 (1940).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] C.A. Maney, Am. J. Phys.
+        <b>
+         20
+        </b>
+        , 203 (1952).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] R. Cross, Am. J. Phys.
+        <b>
+         73
+        </b>
+        , 812 (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] L.H.A. Monteiro,
+        <i>
+         Sistemas Dinâmicos
+        </i>
+        (Editora Livraria da Física, São Paulo, 2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] N.A. Lemos, Am. J. Phys.
+        <b>
+         59
+        </b>
+        , 660 (1991).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] H.H. Denman, Am. J. Phys.
+        <b>
+         34
+        </b>
+        , 1147 (1966).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] S. Lynch,
+        <i>
+         Dynamical Systems with Applications using Maple
+        </i>
+        (Springer, Boston, 2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] B.S.G. de Almeida e R.C. Silva, Rev. Bras. Ens. Fís.
+        <b>
+         37
+        </b>
+        ,3505 (2015).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] E. Jensen, Am. J. Phys.
+        <b>
+         12
+        </b>
+        , 370 (1944).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] U. Besson, L. Borghi, A. De Ambrosis and P. Mascheretti, Am. J. Phys.
+        <b>
+         75
+        </b>
+        , 1106 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] G.T. Fox, Am. J. Phys.
+        <b>
+         39
+        </b>
+        , 947 (1971).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] Y. Xu, K.L. Yung and S.M. Ko, Am. J. Phys.
+        <b>
+         75
+        </b>
+        , 571 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] P. Tamir, in:
+        <i>
+         Practical Science
+        </i>
+        , edited by B. Woolnough (Open University Press, Milton Keynes, 1991).
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] J. Lavonen, J. Jauhiainen, I.T. Koponen and K. Kurki-Suonio, Int. J. Sci. Educ.
+        <b>
+         26
+        </b>
+        , 309 (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] M.S.T. de Araújo e M.L.V.S. Abib, Rev. Bras. Ens. Fís.
+        <b>
+         25
+        </b>
+        , 176 (2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20] A.T. Borges, Cad. Bras. Ens. Fís.
+        <b>
+         19
+        </b>
+        , 291 (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] M-G. Séré, S.M. Coelho e A.D. Nunes, Cad. Bras. Ens. Fís.
+        <b>
+         20
+        </b>
+        , 30 (2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] M.P. de Laia,
+        <i>
+         Modelagem Teórica e Experimental da Dinâmica de Corpos Rígidos em Superfícies com Atrito Aplicada ao Ensino do Conceito de Energia e suas Transformações
+        </i>
+        Dissertação de Mestrado Profissional, MNPEF, UnB (2014).
+       </div>
+      </li>
+      <li>
+       <div>
+        [23]
+        <i>
+         Tracker – Video Analysis and Modeling Tool for Physics Education
+        </i>
+        Disponível em http://physlets.org/tracker/
+        <br/>
+        <a href="http://physlets.org/tracker/" target="_blank">
+         » http://physlets.org/tracker/
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [24] A.P. Picolo, A.J. Rühler e G.A. Rampinelli, Rev. Bras. Ens. Fís.
+        <b>
+         36
+        </b>
+        , 1 (2014).
+       </div>
+      </li>
+      <li>
+       <div>
+        [25] D.V. Fiorin, F.R. Martins, N.J. Schuch e E.B. Pereira, Rev. Bras. Ens. Fís.
+        <b>
+         33
+        </b>
+        , 1309 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [26] F.R. Martins, R.A. Guarnieri e E.B. Pereira, Rev. Bras. Ens. Fís.
+        <b>
+         30
+        </b>
+        , 1304 (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [27] F.R. Martins, E.B. Pereira, e M.P. de Echer, Rev. Bras. Ens. Fís.
+        <b>
+         26
+        </b>
+        , 145 (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [28] A.B. Arons, Am. J. Phys.
+        <b>
+         67
+        </b>
+        , 1063(1999).
+       </div>
+      </li>
+      <li>
+       <div>
+        [29] L.C. Gomes, Cad. Bras. Ens. Fís.
+        <b>
+         32
+        </b>
+        , 407 (2015).
+       </div>
+      </li>
+      <li>
+       <div>
+        [30] L.C. Gomes, Cad. Bras. Ens. Fís.
+        <b>
+         32
+        </b>
+        , 738 (2015).
+       </div>
+      </li>
+      <li>
+       <div>
+        [31] R.L. Coelho, Sci &amp; Educ.
+        <b>
+         18
+        </b>
+        , 961 (2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        [32] A. Morais e A. Guerra, Rev. Bras. Ens. Fís.
+        <b>
+         35
+        </b>
+        , 1502 (2013).
+       </div>
+      </li>
+      <li>
+       <div>
+        [33] M.T. Perrota, B.R. Follari, G.M. Dima, e E.E. Gutiérrez, Cad. Bras. Ens. Fís.
+        <b>
+         27
+        </b>
+        , 515 (2010).
+       </div>
+      </li>
+      <li>
+       <div>
+        [34] J.P.V. Barbosa w A.T. Borges, Cad. Bras. Ens. Fís.
+        <b>
+         23
+        </b>
+        , 182 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [35] C. Bañas, V. Mellado e C. Ruiz, Cad. Bras. Ens. Fís.
+        <b>
+         21
+        </b>
+        , 296 (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [36] B. Follari, M.T. Perrotta, G.N. Dima y E.E. Gutiérrez, Rev. Bras. Ens. Fís.
+        <b>
+         33
+        </b>
+        , 1311 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [37] J.L. Doménech, D.G. Pérez, A. Gras-Marti, J.G. Aranzabal, J. Martínez-Torregrosa, J. Salinas, R. Trumper e P. Valdés, Cad. Bras. Ens. Fís.
+        <b>
+         20
+        </b>
+        , 285 (2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [38] R.A. Sauerwein e I.P.S. Sauerwein, Cad. Bras. Ens. Fís.
+        <b>
+         29
+        </b>
+        , 812 (2012).
+       </div>
+      </li>
+      <li>
+       <div>
+        [39] J.P.S. Bizarro, Am. J. Phys.
+        <b>
+         80
+        </b>
+        , 298 (2012).
+       </div>
+      </li>
+      <li>
+       <div>
+        [40] P. Roura and D. Oliu, Am. J. Phys.
+        <b>
+         80
+        </b>
+        , 588 (2012).
+       </div>
+      </li>
+      <li>
+       <div>
+        [41] J. Solbes y F. Tarín, Ensenãnza de las Ciencias
+        <b>
+         22
+        </b>
+        , 185 (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [42] J.P. Baptista, Rev. Bras. Ens. Fís.
+        <b>
+         28
+        </b>
+        , 541 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [43] A.J. Mallinckrodt and H.S. Leff, Am. J. Phys.
+        <b>
+         60
+        </b>
+        , 356 (1992).
+       </div>
+      </li>
+      <li>
+       <div>
+        [44] A.B. Arons, Phys. Teach.
+        <b>
+         27
+        </b>
+        , 506 (1989).
+       </div>
+      </li>
+      <li>
+       <div>
+        [45] H. Erlichson, Am. J. Phys.
+        <b>
+         45
+        </b>
+        , 769 (1977).
+       </div>
+      </li>
+      <li>
+       <div>
+        [46] B.A. Sherwood and W.H. Bernard, Am. J. Phys.
+        <b>
+         52
+        </b>
+        , 1001 (1984).
+       </div>
+      </li>
+      <li>
+       <div>
+        [47] H.S. Leff and A.J. Mallinckrodt, Am. J. Phys.
+        <b>
+         61
+        </b>
+        , 121 (1993).
+       </div>
+      </li>
+      <li>
+       <div>
+        [48] C.E. Mungan, Phys. Teach.
+        <b>
+         43
+        </b>
+        , 10 (2005).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Jun 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        27 Jan 2016
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        25 Fev 2016
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        29 Fev 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

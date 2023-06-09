@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2020-0113" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2020-0113
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2020-0113">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Inversores de Potência: Conceitos teóricos e demonstração experimental
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Power Inverters: Theoretical concepts and experimental demonstration
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Ricardo Alberto Coppola Germanos
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de São Paulo, Escola de Engenharia de Lorena, Lorena, SP, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Fernando Catalani
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de São Paulo, Escola de Engenharia de Lorena, Lorena, SP, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Jader Souza Cabral
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Uberlândia, Instituto de Física, Uberlândia, MG, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Carlos Renato Menegatti
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade de São Paulo, Escola de Engenharia de Lorena, Lorena, SP, Brasil.
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:renatomenegatti@usp.br">
+      renatomenegatti@usp.br
+     </a>
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-1282-3381">
+     http://orcid.org/0000-0003-1282-3381
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Inversores de potência são circuitos elétricos capazes de transformar corrente contínua (CC) em corrente alternada (CA). Atualmente, devido à crescente tendência a substituição de motores a combustão por motores elétricos e também pela produção de energia elétrica solar residencial, inversores de potência estão tendo um papel fundamental intermediando as fontes geradoras de eletricidade com os diversos tipos cargas, que abrangem aplicações domésticas, automobilística e industrial. Neste trabalho, pretendemos explorar conceitos teóricos básicos sobre o funcionamento de inversores de potência e demonstrar seu princípio de funcionamento através de experimentos simplificados. Estes experimentos possuem carácter analítico podendo ser introduzidos em cursos de graduação com disciplinas práticas específicas para alunos dos cursos de física ou/e engenharias.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Inversores de potência; ponte H; técnica PWM; experimentos didáticos
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     Power inverters are electrical circuits capable of transforming direct current (DC) into alternating current (AC). Currently, due to the growing trend to replace combustion engines with electric motors and also for the production of residential solar electric power, power inverters are playing a fundamental role in mediating electricity generating sources with different types of loads, which include domestic applications, automotive and industrial. In this work, we intend to explore basic theoretical concepts on the operation of power inverters and demonstrate their principle of operation through simplified experiments. These experiments have an analytical character and can be introduced in undergraduate courses with specific practical subjects for students in physics or engineering courses.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Power inverters; full-bridge; PWM technique; didactic experiments
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A utilização de fontes de energia renovável está sendo cada vez mais demandada pela sociedade atual com o objetivo de diminuir a velocidade e o impacto das mudanças climáticas. O emprego de tecnologias mais eficientes, buscando a redução no consumo de energia e a substituição dos combustíveis fósseis por fontes de energia limpa, está entre as principais formas de se reduzir a emissão dos gases de efeito estufa. Diversas novas tecnologias, dentre elas a geração de energia fotovoltaica e os veículos elétricos, têm como elemento essencial para sua operação os inversores de potência. Esses dispositivos têm a capacidade de converter corrente contínua (CC) em corrente alternada (CA), podendo ser exclusivamente eletrônicos ou ainda combinar partes mecânicas e eletrônicas.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1:
+      </strong>
+      <br/>
+      Montagemde um inversor de potência com Ponte H ou
+      <i>
+       Full-Bridge
+      </i>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como motivação ao estudo de inversores de potência, devemos destacar que com a crescente demanda por medidas de controle das emissões de gases estufa, veículos elétricos serão cada vez mais utilizados. Vários países europeus decidiram iniciar um processo de substituição de veículos movidos a combustíveis fósseis por carros elétricos. A Alemanha, por exemplo, decidiu que essa substituição seja feita até 2030 e a Noruega em 2025
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] Adeus gasolina. Sete países proibirão veículos movidos a combustíveis fósseis. CETESB, São Paulo, 25 de setembro de 2017, disponível em: https://cetesb.sp.gov.br/proclima/2017/09/25/adeus-gasolina-sete-paises-proibirao-veiculos-movidos-a-combustiveis-fosseis/.
+       </span>
+       <br/>
+       <a href="https://cetesb.sp.gov.br/proclima/2017/09/25/adeus-gasolina-sete-paises-proibirao-veiculos-movidos-a-combustiveis-fosseis/" target="_blank">
+        https://cetesb.sp.gov.br/proclima/2017/0...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] S. Khan, Germany pushes to ban petrol-fuelled cars within next 20 years, The Independent, London, 10 de outubro de 2016, disponívelem:https://www.independent.co.uk/news/world/europe/gde Setembro de ermany-petrol-car-ban-no-combustion-diesel-vehicles-2030-a7354281.html.
+       </span>
+       <br/>
+       <a href="https://www.independent.co.uk/news/world/europe/gde%20Setembro%20de%20ermany-petrol-car-ban-no-combustion-diesel-vehicles-2030-a7354281.html" target="_blank">
+        https://www.independent.co.uk/news/world...
+       </a>
+      </span>
+     </span>
+     . Aumentar a eficiência (principalmente das baterias) e diminuir os custos dos veículos elétricos são alguns dos desafios que a indústria automotiva enfrenta. Em carros elétricos os motores trifásicos AC (corrente alternada) são frequentemente utilizados, por serem mais leves e compactos que os motores de corrente contínua. Quando comparados aos motores a combustão interna (MCI), os motores elétricos são mais eficientes, independentemente da velocidade de funcionamento do motor, enquanto que a eficiência dos MCI varia em função da velocidade e da carga do motor. Além disso, motores elétricos diferem dos motores a combustão por fornecer toda a capacidade de torque instantaneamente. A desvantagem dos veículos elétricos se encontra nas baterias, pois possuem densidade energética menor que os combustíveis convencionais
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] T. Gustafsson e A. Johansson, Comparison between battery electric vehicles and internal combustion engine vehicles fueled by electrofuels. Dissertação de Mestrado, Chalmers University of Technology, Göteborg(2008).
+       </span>
+      </span>
+     </span>
+     . Atualmente, veículos elétricos se dividem em veículos híbridos (equipados com motor elétrico e motor a combustão), veículos híbridos plug-in (que possuem uma bateria de alta densidade que permite carregamento externo), veículos puramente elétricos e veículos de célula de combustíveis (
+     <i>
+      fuelcells
+     </i>
+     , que utilizam hidrogênio para armazenar energia). Em todos eles há a necessidade de se utilizar um inversor de potência sendo peça fundamental não só para converter a corrente contínua da bateria em corrente alternada como para controlar a rotação e potência do motor
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] A. Emadi, Y. Lee e K. Rajashekara, IEEE Transactions on Industrial Electronics 55, 2237 (2008).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Ao longo das últimas décadas, inversores de potência vêm sendo aprimorados constantemente. Primeiramente foram desenvolvidos os inversores de primeira geração que usavam transistores de junção bipolar (BJTs) e transformadores de ferro. Tal geração usava o chaveamento produzido por circuitos integrados lineares. Já na segunda geração, além de diminuir tanto o peso como as dimensões dos inversores, foi implementada a técnica de Modulação de Largura de Pulso (PWM,
+     <i>
+      Pulse Width Modulation
+     </i>
+     ) para produzir chaveamentos sistemáticos. Tal geração fez o uso de transistores de efeito de campo de óxido de metal semicondutor, comumente conhecidos como MOSFETs, além de semicondutores de potência IGBTs que alia as características de chaveamento dos transistores bipolares com alta impedância dos MOSFETs. Nesta configuração o sistema é operado em baixa tensão de saturação e alta capacidade de corrente, além do mais se tem alta eficiência e rápida resposta de chaveamento. Ainda na segunda geração, transformadores toroidais são utilizados, estes que apresentam uma eficiência satisfatória e reduz muito o espaço do dispositivo eletrônico processado
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] D.A. Arrabaça e S.P. Gimenez, Eletrônica de potência: Conversores de energia CA/CC: Teoria, prática e simulação (Editora Érica, São Paulo, 2016), 2a ed.
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] D.W. Hart, Power Eletronics (McGraw-Hill Education, Nova York, 2010), 1a ed.
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] M. Rashid, Alternative Energy in Power Electronics (Butterworth-Heinemann, Oxford, 2014), 1a ed.
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Neste contexto, o estudo de inversores de potência acaba se tornando um tópico estratégico para a indústria que visa minimizar danos ambientais através da obtenção de energias de menor impacto ambiental e preferivelmente renováveis. Vale ressaltar que motores a combustão representam tecnologias obsoletas na extração de energia da matéria, que além de revelar um baixo rendimento, também corroboram para gerar os danos citados anteriormente
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] https://www.livescience.com/49594-electric-fuel-cell-vehicles-explainer.html, acessado em 11/05/2020.
+       </span>
+       <br/>
+       <a href="https://www.livescience.com/49594-electric-fuel-cell-vehicles-explainer.html" target="_blank">
+        https://www.livescience.com/49594-electr...
+       </a>
+      </span>
+     </span>
+     . O uso de inversores favorece a economia de espaço, baixo custo de equipamentos e alto desempenho. No entanto, seu princípio de funcionamento, baseado em sistemas de chaveamento, leva ao surgimento de harmônicos de tensão e corrente que são indesejáveis na formação de uma corrente alternada, perfeitamente senoidal
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] K.J. Phipps, J.P. Nelson e P.K. Sem, IEEE Transactions on Industrial Electronics 30, 476 (1994).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] J. Arrillaga, D.A. Bradley e P.S. Bodger, Power System Harmonics (John Wiley &amp; Sons, Nova Jersey, 1989).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] G. Dionisio e L.E.S. Spalding, Rev. Bras. Ensino Fís. 39, e1501 (2017).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] G.T. de Azevedo, C.J.T. Peixoto, F. Bargos e C.R. Menegatti, Rev. Bras. Ensino Fís. 39, e3503 (2017).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] G.T. de Azevedo, E.C. Romão e C.R. Menegatti, Rev. Bras. Ensino Fís. 41, e20180278 (2019).
+       </span>
+      </span>
+     </span>
+     . Contudo, é possível trabalharmos com filtros do tipo passa-baixa para eliminar tais harmônicos, favorecendo uma onda mais próxima de uma senoidal.
+    </p>
+    <p>
+     Neste trabalho serão explorados os princípios básicos de funcionamento dos inversores. Primeiramente, serão revisados os conceitos básicos de chaveamento como a Ponte H completa ou
+     <i>
+      Full-Bridge
+     </i>
+     e, na sequência, os conceitos que envolvem a técnica chamada Modulação de Largura de Pulso ou
+     <i>
+      Pulse Width Modulation
+     </i>
+     – PWM. Na parte prática, experimentos baseados em duas montagens elétricas didáticas em protoboards serão realizados. Os resultados obtidos com relação à forma de onda da corrente elétrica produzida nas duas montagens serão discutidos e quantificados através da medida de suas taxas de distorção harmônica.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Conceitos Teóricos
+    </h1>
+    <p>
+     A função de um inversor de potência é converter corrente contínua (CC) em corrente alternada (CA). Seu princípio de funcionamento é baseado em sistemas de chaveamento que ligam e desligam a corrente elétrica (
+     <i>
+      i
+     </i>
+     ), gerada por uma fonte contínua, com uma determinada frequência (
+     <math>
+      <mi>
+       υ
+      </mi>
+     </math>
+     ). A concepção mais simples de um inversor de potência pode ser obtida por uma fonte de corrente contínua controlada por um conjunto de chaves analógicas conectadas na montagem
+     <i>
+      Full-Bridge
+     </i>
+     ou Ponte H Completa
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] J.M.M. Liduário, Inversor de tensão de 12 Vdc para 127 Vac em 60 Hz com potência de 450 W. Trabalho de Conclusão de Curso, Universidade Estadual de Londrina, Londrina (2011).
+       </span>
+      </span>
+     </span>
+     como mostra a
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     .
+    </p>
+    <p>
+     Nesta montagem, por um período de tempo
+     <math>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+      </mrow>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     , as chaves S1 e S2 ficam fechadas enquanto as chaves S3 e S4 ficam abertas. Nesta fase, a carga recebe uma corrente
+     <math>
+      <mi>
+       i
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     no sentido da esquerda para direita de modo que o amperímetro
+     <b>
+      A
+     </b>
+     meça uma corrente positiva. A seguir, por um mesmo período de tempo, as chaves são invertidas ficando S1 e S2 abertas e S3 e S4 fechadas. Nesta fase, a carga recebe uma corrente no sentido da direita para esquerda fazendo o amperímetro indicar uma corrente negativa. Com este princípio a corrente na carga
+     <math>
+      <mi>
+       i
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     pode ser representada por uma forma de onda quadrada.
+    </p>
+    <p>
+     Na prática, este chaveamento pode ser feito por um conjunto de MOSFETs (
+     <i>
+      metal–oxide–semiconductorfield-effect transistor
+     </i>
+     ), circuitos integrados que podem ligar e desligar com frequência de KHz, ou seja, milhares de vezes por segundo. O controle dos MOSFETs é feito por um oscilador, que pode ser tanto produzido por um circuito integrado como por um gerador de sinal de onda quadrada. Nesta configuração, o oscilador é ligado aos quatros MOSFETS através da porta de controle comporta (
+     <i>
+      gate
+     </i>
+     ), enquanto que o dreno (
+     <i>
+      drain
+     </i>
+     ) e a fonte (
+     <i>
+      source
+     </i>
+     ) são ligados à carga em série com a fonte de corrente contínua. Com este princípio podemos, por exemplo, produzir uma alternância de corrente de 60 Hz, frequência igual às redes elétricas.
+    </p>
+    <p>
+     A onda quadrada de corrente elétrica
+     <math>
+      <mi>
+       i
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     produzida por esta montagem é uma aproximação de uma onda senoidal, mas por definição, já se pode dizer que a carga está operando no regime CA. Embora existam equipamentos que possam operar com este tipo de onda, como por exemplo: lâmpadas, equipamentos com resistência (aquecedores, ferro de solda e etc.), motores com sistema de escovação (serra mármore, serra tico-tico, esmeriladora, lixadeira e etc.), aparelhos de televisão e som; devido ao fato da onda conter diversos modos de frequência harmônicos, ruídos e aquecimentos indesejados podem ser gerados. Estes por sua vezque podem danificar os equipamentos
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] L.C.E. da Silva, Efeitos das Distorções Harmônicas (Tensões e Correntes) e Desequilíbrios (Tensões) em Medidores Eletrônicos Trifásicos de Energia Elétrica Ativa. Dissertação de Mestrado, Universidade Estadual Paulista, São Paulo (2008).
+       </span>
+      </span>
+     </span>
+     . Como exemplo, podemos citar o caso de motores de indução alimentados por ondas quadradas. Neste caso tem-se o aumento do aquecimento devido ao aumento das perdas no ferro e no cobre, afetando-se, assim, a eficiência e o torque disponível. Verifica-se também que com esse tipo de alimentação há a impossibilidade do equipamento atingir sua máxima potência e uma alimentação frequente com este tipo de onda poderá causar a redução da vida útil do aparelho. Observa-se notadamente a redução na rotação do aparelho e o aumento de ruído audível
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [16] M.A.B. Galhardo e J.T. Pinho, em V Encontro de Energia no Meio Rural e Geração Distribuída (Campinas, 2004).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Para contornar este tipo de problema, é possível modificar a forma de onda produzida pela ponte H tornando-a mais próxima de uma onda senoidal. Em geral, inversores modernos utilizam a técnica chamada Modulação de Largura de Pulso – PWM (
+     <i>
+      Pulse WidthModulation
+     </i>
+     ). Nesta técnica, através de chaveamentos sistemáticos na ponte H, são produzidos trens de pulso de corrente na carga,
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     (linha preta). As amplitudes podem ser 0, I
+     <sub>
+      max
+     </sub>
+     ou - I
+     <sub>
+      max
+     </sub>
+     . A média temporal
+     <math>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mrow>
+       <mover>
+        <mi>
+         I
+        </mi>
+        <mo stretchy="false">
+         ¯
+        </mo>
+       </mover>
+      </mrow>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     desses pulsos leva a uma melhor aproximação de uma corrente senoidal,
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     (linha azul), e é dada pela Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (1)
+     </a>
+     .
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mover>
+          <mi>
+           I
+          </mi>
+          <mo stretchy="false">
+           ¯
+          </mo>
+         </mover>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mn>
+          1
+         </mn>
+         <mi>
+          T
+         </mi>
+        </mfrac>
+        <mo stretchy="false">
+         (
+        </mo>
+        <msubsup>
+         <mo>
+          ∫
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mrow>
+          <mi>
+           D
+          </mi>
+          <mi>
+           T
+          </mi>
+         </mrow>
+        </msubsup>
+        <mrow>
+         <msub>
+          <mi>
+           I
+          </mi>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mi>
+            a
+           </mi>
+           <mi>
+            x
+           </mi>
+          </mrow>
+         </msub>
+         <mi>
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mspace width="thinmathspace">
+         </mspace>
+         <mo>
+          +
+         </mo>
+         <mspace width="thinmathspace">
+         </mspace>
+         <msubsup>
+          <mo>
+           ∫
+          </mo>
+          <mrow>
+           <mi>
+            D
+           </mi>
+           <mi>
+            T
+           </mi>
+          </mrow>
+          <mi>
+           T
+          </mi>
+         </msubsup>
+         <mrow>
+          <mn>
+           0
+          </mn>
+          <mi>
+           d
+          </mi>
+          <mi>
+           t
+          </mi>
+          <mspace width="thinmathspace">
+          </mspace>
+          <mo stretchy="false">
+           )
+          </mo>
+          <mspace width="thinmathspace">
+          </mspace>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mspace width="thinmathspace">
+         </mspace>
+        </mrow>
+        <msub>
+         <mi>
+          I
+         </mi>
+         <mrow>
+          <mi>
+           m
+          </mi>
+          <mi>
+           a
+          </mi>
+          <mi>
+           x
+          </mi>
+         </mrow>
+        </msub>
+        <mi>
+         D
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em que
+     <i>
+      T
+     </i>
+     é o período do pulso e
+     <i>
+      D
+     </i>
+     é o valor de seu
+     <i>
+      dutycycle
+     </i>
+     (ente 0 e 1) Quanto maior o número de pulsos produzidos mais próxima da forma senoidal será a onda da corrente
+     <math>
+      <mi>
+       i
+      </mi>
+      <mo stretchy="false">
+       (
+      </mo>
+      <mi>
+       t
+      </mi>
+      <mo stretchy="false">
+       )
+      </mo>
+     </math>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2:
+      </strong>
+      <br/>
+      Trem de pulsos produzidos na técnica PWM (linha preta). Média temporal dos pulsos (linha azul).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para produzir exatamente o trem de pulsos da
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     podem ser utilizados amplificadores operacionais comparadores de tensão. Circuitos comparadores são projetados para comparar as tensões em suas entradas V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          1
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     e V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          2
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     . Por exemplo, se V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          1
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     &gt; V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          2
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     o circuito responde com V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          u
+         </mi>
+         <mi mathvariant="normal">
+          t
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1
+      </mn>
+     </math>
+     V se V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          1
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     &lt; V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          2
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+         <mspace width="thinmathspace">
+         </mspace>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     o circuito responde com V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          u
+         </mi>
+         <mi mathvariant="normal">
+          t
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     . Assim, se tivermos uma situação onde V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          1
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+         <mspace width="thinmathspace">
+         </mspace>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     é uma função seno e V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          2
+         </mn>
+         <mi mathvariant="normal">
+          i
+         </mi>
+         <mi mathvariant="normal">
+          n
+         </mi>
+         <mspace width="thinmathspace">
+         </mspace>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     uma função triângulo, quando conectadas as entradas do comparador, teremos como V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          o
+         </mi>
+         <mi mathvariant="normal">
+          u
+         </mi>
+         <mi mathvariant="normal">
+          t
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     exatamente o trem de pulsos da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3:
+      </strong>
+      <br/>
+      Trem de pulsos produzidos por amplificadores operacionais comparadores de tensão. Para V
+      <sub>
+       1in
+      </sub>
+      (linha preta)&gt;V
+      <sub>
+       2in
+      </sub>
+      (linha vermelha) teremos V
+      <sub>
+       out
+      </sub>
+      = 1 V. Para V
+      <sub>
+       1in
+      </sub>
+      &lt;V
+      <sub>
+       2in
+      </sub>
+      teremos V
+      <sub>
+       out
+      </sub>
+      = 0.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para gerarmos o trem de pulsos completo representado na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     , utilizam-se dois comparadores. O primeiro controlará os MOSFETs, representando as chaves S
+     <sub>
+      1
+     </sub>
+     e S
+     <sub>
+      3
+     </sub>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ), gerando a tensão V
+     <sub>
+      A
+     </sub>
+     (linha preta da
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     ), no lado esquerdo da carga. O segundo comparador, recebendo uma tensão senoidal invertida (fase de 180
+     <sub>
+      o
+     </sub>
+     ) controlará os MOSFETs, representado as chaves S
+     <sub>
+      2
+     </sub>
+     e S
+     <sub>
+      4
+     </sub>
+     (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ), gerando uma tensão V
+     <sub>
+      B
+     </sub>
+     (linha vermelha da
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     ), no lado direito da carga. Assim a diferença de potencial total na carga será dada pela subtração dos dois trens de pulso V
+     <sub>
+      A
+     </sub>
+     - V
+     <sub>
+      B
+     </sub>
+     gerando finalmente o trem de pulsos representado pela linha azul
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     (
+     <i>
+      Note que os trens de pulso V
+     </i>
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mi>
+         A
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        V
+       </mi>
+       <mrow>
+        <mi>
+         B
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     <i>
+      são sinais que vão de 0 a 1, assim a subtração entre eles poderá gerar valores iguais a 1, 0 ou −1
+     </i>
+     ). É importante lembrar que entre os MOSFETs e a chaves que controlam deve haver uma Porta Lógica Inversora (Porta NOT) de modo que S
+     <sub>
+      1
+     </sub>
+     e S
+     <sub>
+      3
+     </sub>
+     ou S
+     <sub>
+      2
+     </sub>
+     e S
+     <sub>
+      4
+     </sub>
+     nunca recebam sinal 0 ou 1 ao mesmo tempo, caso contrário criaríamos por exemplo um curto-circuito na fonte CC.
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4:
+      </strong>
+      <br/>
+      Diferença de potencial gerada na carga pela técnica PWM.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Finalmente, para obtermos a média temporal dos pulsos, são conectados à carga filtros passivos, constituídos basicamente de capacitores e indutores, cuja frequência de seleção de faixa (ou frequência de ressonância - f
+     <sub>
+      R
+     </sub>
+     ) é dada por:
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <msub>
+         <mi>
+          f
+         </mi>
+         <mrow>
+          <mi>
+           R
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mrow>
+         <mo>
+          /
+         </mo>
+        </mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mi>
+         π
+        </mi>
+        <msqrt>
+         <mi>
+          L
+         </mi>
+         <mi>
+          C
+         </mi>
+        </msqrt>
+        <mo stretchy="false">
+         )
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      L
+     </i>
+     é a indutância e
+     <i>
+      C
+     </i>
+     é a capacitância do filtro. Desse modo qualquer equipamento que opere com corrente alternada pode ser ligado a este, desde que apresente potência e frequência compatível. Com esta onda modificada, variações abruptas de tensão e frequência serão atenuadas, contudo, apesar das modificações, este tipo de onda é restrito em relação à onda senoidal pura que é fornecida pela rede elétrica ou por geradores de corrente alternada.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Experimentos
+    </h1>
+    <p>
+     A montagem da ponte H combinada à técnica PWM, descritas na seção anterior, é a aproximação mais utilizada na maioria dos inversores, entretanto, para trabalharmos com versões com carácter mais didático, dois circuitos relativamente simples foram construídos. Os circuitos, 1 e 2 (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 6
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     ) foram montados em
+     <i>
+      protoboards
+     </i>
+     didáticas utilizadas nas disciplinas de Física Experimental III e Laboratório de Eletricidade da Escola de Engenharia de Lorena - USP,
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     . No Circuito 1, ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     , temos um protótipo mais simplista. Nele uma fonte de corrente contínua (
+     <i>
+      Modelo MPL-1303M, fabricante Minipa
+     </i>
+     ), conectada a uma carga de 10
+     <math>
+      <mi mathvariant="normal">
+       Ω
+      </mi>
+     </math>
+     (resistor), escolhida para que opere com potências compatíveis a pequenos equipamentos (
+     <math>
+      <mo>
+       ∼
+      </mo>
+     </math>
+     1000 W) quando ligados a uma rede de 110 V
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          R
+         </mi>
+         <mi mathvariant="normal">
+          M
+         </mi>
+         <mi mathvariant="normal">
+          S
+         </mi>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     era chaveada por um MOSFET (
+     <i>
+      modelo IRFZ 44N
+     </i>
+     ). Um gerador de função (
+     <i>
+      Modelo Pol-40, fabricante Politerm)
+     </i>
+     controlava o MOSFET com uma onda quadrada com frequência de 60 Hz e amplitude de 0 a 5 V (
+     <math>
+      <msub>
+       <mi>
+        V
+       </mi>
+       <mrow>
+        <mi>
+         g
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     ). Um osciloscópio (
+     <i>
+      TBS 1202B, fabricante Tektronix
+     </i>
+     ) foi utilizado para medir a forma de onda do gerador de função e também a forma de onda indireta da corrente, através da medida de tensão em um resistor de 1
+     <math>
+      <mi mathvariant="normal">
+       Ω
+      </mi>
+     </math>
+     ligado em série com a carga. Nesta mesma montagem, tínhamos a opção de conectar um filtro passa baixas em paralelo a carga constituído basicamente de um transformador com núcleo de ferro em paralelo com um capacitor eletrolítico. As opções de rolamentos dos transformadores utilizadas no laboratório eram: 250:250, 500:500 e 1000:1000 e capacitores:10, 47, 100 e 1000 F. Nos experimentos os transformadores foram utilizados no modo isolador N:N.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5:
+      </strong>
+      <br/>
+      Inversores de potência montados em
+      <i>
+       protoboards
+      </i>
+      didáticas. Montagem Circuito 2.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6:
+      </strong>
+      <br/>
+      Circuito 1: circuito de chaveamento para fonte CC. Gerador de função (
+      <math>
+       <msub>
+        <mi>
+         V
+        </mi>
+        <mrow>
+         <mi>
+          g
+         </mi>
+        </mrow>
+       </msub>
+      </math>
+      ) conectado à porta (gate) do MOSFET (IRFZ 44 N) operando com sinal TTL (0 a 5 V) a 60 Hz.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7:
+      </strong>
+      <br/>
+      Circuito 2: circuito de chaveamento para fonte CC. Gerador de função de dois canais (V
+      <sub>
+       g
+      </sub>
+      ) conectado à porta (
+      <i>
+       gate)
+      </i>
+      dos MOSFETs (IRFZ 44 N) operando com sinal TTL (0 a 5 V) a 60 Hz.
+      <br/>
+     </div>
+    </div>
+    <p>
+     No Circuito 2 (
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     ), temos um protótipo relativamente mais elaborado operando com dois MOSFETs. Os MOSFETs eram controlados pelo mesmo gerador de função operando agora com dois canais TTLs a 60 Hz com ondas defasadas em 180°. Nesta configuração, a fonte de corrente contínua era ligada ao centro do rolamento primário do transformador com tensão de 6 V. Uma carga resistiva de 10
+     <math>
+      <mi mathvariant="normal">
+       Ω
+      </mi>
+     </math>
+     era conectada ao rolamento secundário do transformador. O conjunto transformador em paralelo com capacitor e carga também funciona como um filtro de seleção de faixa de frequência e os valores de capacitância e rolamentos dos transformadores utilizados foram os mesmos citados anteriormente.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8:
+      </strong>
+      <br/>
+      Forma de onda da corrente na carga (medida em R = 1
+      <math>
+       <mi mathvariant="normal">
+        Ω
+       </mi>
+      </math>
+      ) produzida pelo circuito 1. Linha preta: Forma de onda quadrada com pico de 500 mA e frequência de 60 Hz. Linha azul: Forma de produzida quando conectado o transformador de 500:500. Uma fase negativa é gerada por indução.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Resultados
+    </h1>
+    <p>
+     No primeiro experimento, utilizamos o Circuito 1 para observar o efeito de chaveamento da corrente da fonte CC pelo MOSFET. Nesta primeira observação, o filtro não foi conectado ao circuito (chave S1 da
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     na posição 1). Dessa maneira, foi observada uma corrente com forma de onda quadrada, como no resultado da
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     (linha preta). Foi medida uma amplitude de aproximadamente 500 mA a uma taxa de 60 Hz. Com este resultado ainda não podemos afirmar que estamos operando emregime CA. Este passo é importante, na nossa proposta didático-pedagógica, para pré-diagnóstico mostrando ao estudante o princípio de funcionamento do MOSFET.
+    </p>
+    <p>
+     Para produzirmos algo mais próximo ao regime CA, devemos induzir uma fase negativa. Para isto, conectamos o rolamento primário do transformador (500:500) no lugar da carga e conectamos a carga no rolamento secundário (chave S1 na posição 2 e chave S2 aberta). Por efeito de indução, quando a corrente do circuito é desligada (
+     <i>
+      ou ligada, isto depende do sentido do rolamento
+     </i>
+     ) pelo MOSFET, o rolamento primário induzirá um campo magnético oposto, que por sua vez induzirá uma tensão negativa no rolamento secundário. Este efeito pode ser claramente observado fazendo a medida indireta da corrente ainda no resistor de 1
+     <math>
+      <mi mathvariant="normal">
+       Ω
+      </mi>
+     </math>
+     , ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     (linha azul).
+    </p>
+    <p>
+     Na sequência um capacitor é conectado em paralelo a carga e ao rolamento secundário do transformador (chave S1 na posição 2 e chave S2 fechada). O conjunto transformador isolador e capacitor têm a característica de filtrar frequências altas da corrente produzindo formas de onda mais próximas a de uma senóide. Na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     (linha preta) temos o resultado final produzido pelo inversor utilizando o transformador de 500:500 e capacitor de 47 F. Para efeito de comparação visual, ajustamos esta medida por uma função seno (linha vermelha) obtendo coeficiente de correlação de Pearson de R = 0,979.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9:
+      </strong>
+      <br/>
+      Forma de onda da corrente na carga produzida com transformador 500:500 e C = 47 F (linha preta). Ajuste da forma de onda por uma função seno (linha vermelha).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para qualificação do inversor fizemos a medida do Espectro de Fourier da forma de onda produzida. Através do mesmo osciloscópio utilizado nos experimentos obtivemos o espectro de Fourier através da função FFT (
+     <i>
+      Fast Fourier Transform
+     </i>
+     ). Esta função permite que o osciloscópio funcione como analisador de espectro decompondo a onda em seus respectivos harmônicos. Na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     apresentamos este espectro com os principais harmônicos que compõem a forma de onda. O espectro obtido pelo osciloscópio está na escala dB na forma
+     <i>
+      dB
+     </i>
+     =
+     <i>
+      20log(V
+     </i>
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mi>
+         i
+        </mi>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>
+        /
+       </mo>
+      </mrow>
+      <msub>
+       <mi>
+        V
+       </mi>
+       <mrow>
+        <mrow>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </mrow>
+      </msub>
+     </math>
+     ). Assim, concluímos que a forma de onda é basicamente composta pelo 1° harmônico (
+     <math>
+      <mo>
+       ∼
+      </mo>
+     </math>
+     60 Hz), que condiz com a frequência de chaveamento do MOSFET; e diversos outros harmônicos com menor intensidade, de ordem superior. Com este espectro calculamos a Taxa de Distorção Harmônica
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] K.J. Phipps, J.P. Nelson e P.K. Sem, IEEE Transactions on Industrial Electronics 30, 476 (1994).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] J. Arrillaga, D.A. Bradley e P.S. Bodger, Power System Harmonics (John Wiley &amp; Sons, Nova Jersey, 1989).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] G. Dionisio e L.E.S. Spalding, Rev. Bras. Ensino Fís. 39, e1501 (2017).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] G.T. de Azevedo, C.J.T. Peixoto, F. Bargos e C.R. Menegatti, Rev. Bras. Ensino Fís. 39, e3503 (2017).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] G.T. de Azevedo, E.C. Romão e C.R. Menegatti, Rev. Bras. Ensino Fís. 41, e20180278 (2019).
+       </span>
+      </span>
+     </span>
+     :
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mi>
+         T
+        </mi>
+        <mi>
+         H
+        </mi>
+        <mi>
+         D
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <msqrt>
+          <munderover>
+           <mo movablelimits="false">
+            ∑
+           </mo>
+           <mn>
+            2
+           </mn>
+           <mi>
+            n
+           </mi>
+          </munderover>
+          <msubsup>
+           <mi>
+            V
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+           </mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+           </mrow>
+          </msubsup>
+         </msqrt>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </msub>
+        </mfrac>
+        <mo>
+         ×
+        </mo>
+        <mn>
+         100
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e obtivemos um valor aproximado de 14,8%. Neste cálculo consideramos harmônicos de até 10ª ordem.
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10:
+      </strong>
+      <br/>
+      Espectro de Fourier da forma de onda. Obtivemos Taxa de Distorção Harmônica de aproximadamente 15%.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O resultado mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     é referente à configuração experimental que gerou a forma de onda mais próxima de uma senóide com a menor taxa de distorção harmônica. Outras configurações de filtro foram aplicadas e os resultados com relação das TDHs estão resumidos na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 11
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11:
+      </strong>
+      <br/>
+      Taxas de Distorção Harmônica em função do capacitor para o Circuito 1. (Quadrados em preto) transformador 250:250; (pontos em vermelho) transformador 500:500; (triângulos em azul) transformador 1000:1000. Melhor condição TDH = 14,8%(T 500:500 e C = 47 F).
+      <br/>
+     </div>
+    </div>
+    <p>
+     O Circuito 1 é um método bem simplificado de demonstrar o conceito e o funcionamento de inversores, porém apresentauma THD relativamente alta. Vale lembrar também que, devido ao fato de chavearmos a corrente com apenas um MOSFET, teoricamente estamos trabalhando com metade da potência fornecida pela fonte CC. Dessa forma, este tipo de inversor conseguiria ter no máximo 50% de eficiência com relação à transmissão de potência. Para trabalharmos com o dobro da potência precisamos de uma configuração com no mínimo 2 MOSFETs como o proposto no Circuito 2. Neste circuito, os MOSFETs são controlados por sinais TTLs defasados em 180°, ou seja, quando uma chave está aberta a outra está fechada e vice-versa. Desse modo, geramos duas correntes i
+     <sub>
+      1
+     </sub>
+     e i
+     <sub>
+      2
+     </sub>
+     . Essas correntes, por partirem do centro do rolamento primário do transformador, terão sentidos opostos no transformador e por isso são capazes de induzir a fase negativa e positiva no rolamento secundário. Neste experimento, as formas de onda da corrente foram medidas direto na carga resistiva de 10
+     <math>
+      <mi mathvariant="normal">
+       Ω
+      </mi>
+     </math>
+     . Diversasconfigurações de filtro, alternando os transformadores e capacitores, também foram experimentadas. Na
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     temos as TDHs calculadas utilizando os espectros de cada configuração de filtro. A menor TDH obtida foi em torno de 3,8% utilizando tanto o transformador de 500:500 como o de 1000:1000 e o capacitor de 1000 F. Na mesma figura há um gráfico inserido mostrando a forma de onda da corrente para a configuração T = 1000:1000 e C = 1000 F. Observamos que nesta configuração, apesar de mais complexa, a TDH é melhorada por um fator de 3,9 sem contar que ela teoricamente deverá ter uma eficiência de aproximadamente o dobro com relação à montagem do Circuito 1.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12:
+      </strong>
+      <br/>
+      Taxas de Distorção Harmônica em função do capacitor para o Circuito 2. (Quadrados em preto) transformador 250:250; (pontos em vermelho) transformador 500:500; (triângulos em azul) transformador 1000:1000. Melhor condição TDH = 3,8%(T 500:500 ou 1000:1000 e C = 1000 F). Gráfico inserido: (linha preta) Forma de onda da corrente para configuração T-1000:1000 e C = 1000 F. (linha vermelha) Ajuste da forma de onda por uma função seno.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Se aproximarmos o terminal onde a carga R é ligada por um circuito RLC em paralelo, podemos estimar a faixa de seleção de frequência da corrente que passa pela carga utilizando a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. 2
+     </a>
+     . Assim para f
+     <math>
+      <msub>
+       <mi>
+       </mi>
+       <mrow>
+        <mrow>
+         <mi mathvariant="normal">
+          R
+         </mi>
+        </mrow>
+       </mrow>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       60
+      </mn>
+     </math>
+     Hz teríamos a relação LxC
+     <math>
+      <mo>
+       ∼
+      </mo>
+     </math>
+     7 × 10
+     <sup>
+      −6
+     </sup>
+     , ou seja, para um indutor de L = 6,9 mH (valor real da indutância do rolamento secundário para o transformador 1000:1000) precisaríamos de um capacitor de C = 1020 F. Esta estimativa demonstra que experimento está próximo da situação ideal.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusões
+    </h1>
+    <p>
+     Neste trabalho foram explorados os fundamentos básicos do funcionamento de inversores de potência. Os conceitos teóricos para transformação de corrente em regime contínuo em alternado foram revisados. Neste contexto, foi apresentado o modelo básico de chaveamento com ponte H (
+     <i>
+      Full Bridge
+     </i>
+     ) para geração de formas de onda quadradas. Na sequência, com o intuito de explorar o funcionamento de inversores de potência modernos, foi revisado a técnica de Modulação de Largura de Pulso (PWM,
+     <i>
+      Pulse WidthModulation
+     </i>
+     ). Com esta técnica é possível produzir chaveamentos sistemáticos criando formas de onda mais próxima à da rede elétrica.
+    </p>
+    <p>
+     Na parte experimental, o funcionamento dos inversores foi demonstrado a partir de dois circuitos. No primeiro deles, apresentamos uma versão simplificada onde uma fonte de corrente contínua foi controlada com apenas um MOSFET. Tal circuito foi capaz de gerar uma corrente com forma de onda quadrada operando entre 0 e 500 mA a 60 Hz. No segundo, dois MOSFETs realizavam o chaveamento. Filtros compostos por um transformador isolador e um capacitor foram acoplados a carga para aproximarmos as ondas por uma senóide.
+    </p>
+    <p>
+     As medidas foram realizadas com osciloscópios digitais, com eles foram obtidas as formas de onda da corrente em cargas resistivas. Espectros de Fourier também foram medidos através da função FFT (
+     <i>
+      Fast Fourier Transform
+     </i>
+     ) do osciloscópio, possibilitando assim o cálculo da THD, grandeza também utilizada para qualificar os inversores. Foram medidas TDH de 14,8% e 3,8% com relação ao Circuito 1 e 2, respectivamente. Estes valores foram obtidos nas melhores condições de filtro, considerando os componentes utilizados no laboratório de ensino. Por ser o circuito mais elaborado, uma melhora por um fator de 3,9 foi verificada com relação a TDH no Circuito 2. Vale ressaltar que estes resultados experimentais são particulares para carga de 10
+     <math>
+      <mrow>
+       <mi mathvariant="normal">
+        Ω
+       </mi>
+      </mrow>
+     </math>
+     , variando a carga é esperado resultados diferentes para as TDH. Para melhores resultados a técnica PWM é uma alternativa que pode ser implementada.
+    </p>
+    <p>
+     Finalizando, os conceitos teóricos e circuitos experimentais apresentados nesse trabalho podem contribuir para o processo de ensino-aprendizagem dos discentes, a nível de graduação, na compreensão de diversos conceitos em física e engenharia elétrica.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Agradecimento especial ao Diretor, Setor de Compras e todo Corpo Técnico dos Laboratórios de Ensino do Instituto de Física de São Carlos (IFSC – USP) que se empenharam, no período de 2015 a 2018, no projeto de construção dos Laboratórios de Ensino de Física do DEBAS EEL-USP.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] Adeus gasolina. Sete países proibirão veículos movidos a combustíveis fósseis. CETESB, São Paulo, 25 de setembro de 2017, disponível em: https://cetesb.sp.gov.br/proclima/2017/09/25/adeus-gasolina-sete-paises-proibirao-veiculos-movidos-a-combustiveis-fosseis/
+        <br/>
+        <a href="https://cetesb.sp.gov.br/proclima/2017/09/25/adeus-gasolina-sete-paises-proibirao-veiculos-movidos-a-combustiveis-fosseis/" target="_blank">
+         » https://cetesb.sp.gov.br/proclima/2017/09/25/adeus-gasolina-sete-paises-proibirao-veiculos-movidos-a-combustiveis-fosseis/
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] S. Khan, Germany pushes to ban petrol-fuelled cars within next 20 years, The Independent, London, 10 de outubro de 2016, disponívelem:https://www.independent.co.uk/news/world/europe/gde Setembro de ermany-petrol-car-ban-no-combustion-diesel-vehicles-2030-a7354281.html
+        <br/>
+        <a href="https://www.independent.co.uk/news/world/europe/gde%20Setembro%20de%20ermany-petrol-car-ban-no-combustion-diesel-vehicles-2030-a7354281.html" target="_blank">
+         » https://www.independent.co.uk/news/world/europe/gde Setembro de ermany-petrol-car-ban-no-combustion-diesel-vehicles-2030-a7354281.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] T. Gustafsson e A. Johansson,
+        <i>
+         Comparison between battery electric vehicles and internal combustion engine vehicles fueled by electrofuels
+        </i>
+        Dissertação de Mestrado, Chalmers University of Technology, Göteborg(2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] A. Emadi, Y. Lee e K. Rajashekara, IEEE Transactions on Industrial Electronics
+        <b>
+         55
+        </b>
+        , 2237 (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] D.A. Arrabaça e S.P. Gimenez,
+        <i>
+         Eletrônica de potência: Conversores de energia CA/CC: Teoria, prática e simulação
+        </i>
+        (Editora Érica, São Paulo, 2016), 2
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] D.W. Hart,
+        <i>
+         Power Eletronics
+        </i>
+        (McGraw-Hill Education, Nova York, 2010), 1
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] M. Rashid,
+        <i>
+         Alternative Energy in Power Electronics
+        </i>
+        (Butterworth-Heinemann, Oxford, 2014), 1
+        <sup>
+         a
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] https://www.livescience.com/49594-electric-fuel-cell-vehicles-explainer.html, acessado em 11/05/2020.
+        <br/>
+        <a href="https://www.livescience.com/49594-electric-fuel-cell-vehicles-explainer.html" target="_blank">
+         » https://www.livescience.com/49594-electric-fuel-cell-vehicles-explainer.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] K.J. Phipps, J.P. Nelson e P.K. Sem, IEEE Transactions on Industrial Electronics
+        <b>
+         30
+        </b>
+        , 476 (1994).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] J. Arrillaga, D.A. Bradley e P.S. Bodger,
+        <i>
+         Power System Harmonics
+        </i>
+        (John Wiley &amp; Sons, Nova Jersey, 1989).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] G. Dionisio e L.E.S. Spalding, Rev. Bras. Ensino Fís.
+        <b>
+         39
+        </b>
+        , e1501 (2017).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] G.T. de Azevedo, C.J.T. Peixoto, F. Bargos e C.R. Menegatti, Rev. Bras. Ensino Fís.
+        <b>
+         39
+        </b>
+        , e3503 (2017).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] G.T. de Azevedo, E.C. Romão e C.R. Menegatti, Rev. Bras. Ensino Fís.
+        <b>
+         41
+        </b>
+        , e20180278 (2019).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] J.M.M. Liduário,
+        <i>
+         Inversor de tensão de 12 Vdc para 127 Vac em 60 Hz com potência de 450 W
+        </i>
+        Trabalho de Conclusão de Curso, Universidade Estadual de Londrina, Londrina (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] L.C.E. da Silva,
+        <i>
+         Efeitos das Distorções Harmônicas (Tensões e Correntes) e Desequilíbrios (Tensões) em Medidores Eletrônicos Trifásicos de Energia Elétrica Ativa
+        </i>
+        Dissertação de Mestrado, Universidade Estadual Paulista, São Paulo (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] M.A.B. Galhardo e J.T. Pinho, em
+        <i>
+         V Encontro de Energia no Meio Rural e Geração Distribuída
+        </i>
+        (Campinas, 2004).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        06 Jul 2020
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        27 Mar 2020
+       </li>
+       <li>
+        <strong>
+         rev-received
+        </strong>
+        <br/>
+        13 Maio 2020
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        30 Maio 2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

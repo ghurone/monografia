@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173822145" target="_blank">
+    https://doi.org/10.1590/S1806-11173822145
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173822145">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Túneis de vento numéricos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Numerical wind tunnels
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Paulo Victor Santos Souza
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto de Ciências Exatas, Universidade Federal Fluminense, Volta Redonda, RJ, BrasilInstituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro, Volta Redonda, RJ, Brasil
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:paulo.victor@ifrj.edu.br">
+      paulo.victor@ifrj.edu.br
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Paulo Murilo Castro de Oliveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Instituto de Física, Universidade Federal Fluminense, Niterói, RJ, BrasilInstituto Mercosul de Estudos Avançados, Universidade Federal da Integração Latino Americana, Foz do Iguaçu, PR, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Escoamentos viscosos não são, em geral, discutidos de maneira detalhada em cursos de física geral e básica. Isso se deve, em parte, ao fato da equação de Navier-Stokes admitir solução analítica apenas para alguns poucos casos restritos, enquanto problemas mais sofisticados só podem ser resolvidos por meio de métodos numéricos. Neste trabalho, apresentamos um túnel de vento simulado, i.e., apresentamos um conjunto de programas de resolver a equação de Navier-Stokes para um objeto de formato arbitrário inserido em um túnel de vento. O túnel nos possibilita visualizar a formação de vórtices atrás do objeto, os conhecidos vórtices de von Kármán. É possível também calcular a força de arrasto sobre o objeto. Acreditamos que este túnel de vento numérico possa subsidiar o professor e permitir que uma discussão mais elaborada de escoamentos viscosos seja realizada. As potencialidades do túnel são exemplificadas por meio do estudo do comportamento da força de arrasto sobre um modelo simplificado de asa cujo ângulo de ataque pode ser controlado. Um link para o download dos programas que compõem o túnel é apresentado ao final do texto.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     dinâmica dos fluidos; escoamentos viscosos; túneis de vento; força de arrasto
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     Flow of viscous fluids are not usually discussed in detail in general and basic courses of physics. This is due in part to the fact that the Navier-Stokes equation has analytical solution only for a few restricted cases, while more sophisticated problems can only be solved by numerical methods. In this text, we present a computer simulation of wind tunnel,
+     <i>
+      i.e.
+     </i>
+     , we present a set of programs to solve the Navier-Stokes equation for an arbitrary object inserted in a wind tunnel. The tunnel enables us to visualize the formation of vortices behind object, the so-called von Kármán vortices, and calculate the drag force on the object. We believe that this numerical wind tunnel can support the teacher and allow a more elaborate discussion of viscous flow. The potential of the tunnel is exemplified by the study of the drag on a simplified model of wing whose angle of attack can be controlled. A link to download the programs that make up the tunnel appears at the end.
+    </p>
+    <p>
+     <strong>
+      Key words:
+     </strong>
+     <br/>
+     fluid dynamics; viscous flows; wind tunnels; drag force
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Pode uma bolinha em queda frear? Um experimento recente [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] P.M.C. de Oliveira, S.M. de Oliveira, F.A. Pereira and J.C. Sartorelli, arXiv preprint arXiv:1005.4086 (2010).
+       </span>
+      </span>
+     </span>
+     ] mostra-nos que, surpreendentemente, a resposta é sim. Os autores sugerem que isto se deve à formação gradativa de uma esteira de vórtices no ar atrás da bolinha. Estes vórtices, que surgem em virtude da viscosidade do fluido, são arrastados pela bolinha em queda e, por isso, são responsáveis pela força de arrasto que se opõe ao movimento. No início do processo de formação da esteira, a força de arrasto é proporcional à velocidade. Uma vez que a esteira tenha sido completada, a força se torna proporcional ao quadrado da velocidade. Na transição entre um regime e outro, o arrasto torna-se maior que o peso e a frenagem é observada na bolinha. Este cenário é confirmado por meio de simulações numéricas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] P.M.C. de Oliveira, International Journal of Modern Physics C 23, 4 (2012).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] P.V.S. Souza, D. Girardi and P.M.C. de Oliveira, arXiv preprint arXiv:1505.01101 (2015).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Embora interessantes e profícuos, veja por exemplo as Refs. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] C.E. Aguiar e G. Rubini, Revista Brasileira de Ensino de Física 26, 4, (2004).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] B. Leroy, Revista Brasileira de Física 7, 3 (1977).
+       </span>
+      </span>
+     </span>
+     ], problemas físicos que envolvem dinâmica de fluidos viscosos não são, em geral, discutidos em cursos de física básica e geral. Quando isso ocorre, o assunto é tratado de maneira superficial [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] H.M. Nussenzveig, Curso de Física Básica 2 (Editora Edgard Blücher, São Paulo, 2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] S. Schneiderbauer and M. Krieger, European Journal of Physics 35, 1 (2014).
+       </span>
+      </span>
+     </span>
+     ]. Por quê? Para responder a esta pergunta precisamos primeiro definir o que são fluidos viscosos e discutir como são descritos.
+    </p>
+    <p>
+     Em mecânica dos fluidos, costuma-se definir como fluido qualquer substância que evidentemente não seja um sólido. Quando submetido a uma tensão de cisalhamento (tipo de tensão gerada por forças que atuam em sentidos opostos) um fluido tende a se deformar. A viscosidade, uma propriedade do fluido que determina quão facilmente o fluido se deforma, é uma função do fluido em questão e da temperatura e corresponde ao atrito interno resultante das interações entre as moléculas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] S. Schneiderbauer and M. Krieger, European Journal of Physics 35, 1 (2014).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] B.R. Munson, D.F. Young and T.H. Okiishi, Fundamentals of Fluid Mechanics (John Wiley &amp; Sons, New York, 1990).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Fluidos são descritos por meio de uma equação derivada independentemente por G. G. Stokes (1816-1903) e L.M.H. Navier (1785-1836), a equação de Navier-Stokes [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R.P. Feynman, R.B. Leighton and M. Sands, The Feynman Lectures on Physics 2 (Addison-Wesley, Reading, 1969).
+       </span>
+      </span>
+     </span>
+     ]
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Pode-se encontrar facilmente na literatura deduções fenomenológicas da equação de Navier-Stokes, embora não haja uma dedução a partir de primeiros princípios aplicados à estrutura atômica microscópica do fluido. Veja, por exemplo, Refs. [7,9].
+       </span>
+      </span>
+     </span>
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mo>
+            ∂
+           </mo>
+           <mo>
+            Ω
+           </mo>
+          </mrow>
+          <mrow>
+           <mo>
+            ∂
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mn>
+           1
+          </mn>
+          <mrow>
+           <mi>
+            R
+           </mi>
+           <mi>
+            e
+           </mi>
+          </mrow>
+         </mfrac>
+         <msup>
+          <mo>
+           ∇
+          </mo>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          Ω
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mo>
+          ∇
+         </mo>
+         <mo>
+          ×
+         </mo>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mo>
+          Ω
+         </mo>
+         <mo>
+          ×
+         </mo>
+         <mtext>
+          v
+         </mtext>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    em que
+    <math display="inline" id="m3">
+     <mi mathvariant="bold">
+      v
+     </mi>
+    </math>
+    é o campo de velocidades,
+    <math display="inline" id="m4">
+     <mi mathvariant="bold">
+      Ω
+     </mi>
+     <mo>
+      =∇×
+     </mo>
+     <mi mathvariant="bold">
+      v
+     </mi>
+    </math>
+    é a vorticidade e
+    <math display="inline" id="m5">
+     <mi>
+      R
+     </mi>
+     <mi>
+      e
+     </mi>
+    </math>
+    é o número de Reynolds, uma grandeza adimensional resultante da divisão de forças de inércia por forças de viscosidade em um elemento de fluido. Explicitamente,
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <mi>
+          R
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            ρ
+           </mi>
+           <mi>
+            V
+           </mi>
+           <mtext>
+           </mtext>
+           <mi>
+            D
+           </mi>
+          </mrow>
+          <mi>
+           μ
+          </mi>
+         </mfrac>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    em que
+    <i>
+     V
+    </i>
+    é a velocidade do vento (longe do obstáculo, para o caso de um objeto inserido no interior de um túnel de vento),
+    <i>
+     D
+    </i>
+    é uma dimensão característica do objeto,
+    <math display="inline" id="m6">
+     <mi>
+      μ
+     </mi>
+    </math>
+    é a viscosidade e
+    <math display="inline" id="m7">
+     <mi>
+      ρ
+     </mi>
+    </math>
+    é a massa específica do fluido. O número ou coeficiente de Reynolds foi introduzido por G.G. Stokes em 1851. Contudo, foi O. Reynolds (1842-1912) que popularizou o seu uso em 1883 e demonstrou, pela primeira vez, que o número poderia ser utilizado como um critério para distinção entre escoamento laminar, no qual as trajetórias das partículas do fluido tendem a ser paralelas, e turbulento, no qual as trajetórias das partículas são curvas, irregulares e entrecruzadas [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      8
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [8] B.R. Munson, D.F. Young and T.H. Okiishi, Fundamentals of Fluid Mechanics (John Wiley &amp; Sons, New York, 1990).
+      </span>
+     </span>
+    </span>
+    ,
+    <span class="ref">
+     <sup class="xref xrefblue">
+      10
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [10] N. Rott, Annual Review of Fluid Mechanics 22, 1 (1990).
+      </span>
+     </span>
+    </span>
+    ,
+    <span class="ref">
+     <sup class="xref xrefblue">
+      11
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [11] O. Reynolds, Proceedings of the Royal Society of London 35, 224 (1883).
+      </span>
+     </span>
+    </span>
+    ]. Por exemplo, para o escoamento sobre um cilindro, a transição entre o regime laminar e o turbulento ocorre quando
+    <math display="inline" id="m8">
+     <mrow>
+      <mn>
+       140
+      </mn>
+      <mo>
+       ≤
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mi>
+       e
+      </mi>
+      <mo>
+       ≤
+      </mo>
+      <mn>
+       300
+      </mn>
+     </mrow>
+    </math>
+    [
+    <span class="ref">
+     <sup class="xref xrefblue">
+      12
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [12] R.D. Blevins, Flow-Induced Vibration (Krieger Publishing Company, Malabar, 1990).
+      </span>
+     </span>
+    </span>
+    ,
+    <span class="ref">
+     <sup class="xref xrefblue">
+      13
+     </sup>
+     <span class="refCtt closed">
+      <span>
+       [13] J.S. Humphreys, Journal of Fluid Mechanics 9, 04 (1960).
+      </span>
+     </span>
+    </span>
+    ].
+    <p>
+     A equação de Navier-Stokes admite soluções analíticas para alguns poucos casos. Na verdade, a prova matemática da existência de uma solução global para a equação de Navier-Stokes ainda não existe e é um dos
+     <i>
+      Millennium Prize Problems
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] S. Schneiderbauer and M. Krieger, European Journal of Physics 35, 1 (2014).
+       </span>
+      </span>
+     </span>
+     ]. Com isso, resta-nos recorrer às simulações numéricas. Embora métodos numéricos para solução da equação de Navier-Stokes sejam numerosos na literatura (veja, por exemplo, as Refs. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] M.S. Engelman and M. Jamnia, International Journal for Numerical Methods in Fluids 11, 7 (1990).
+       </span>
+      </span>
+     </span>
+     –
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [17] U. Pesavento and Z.J. Wang, Physical Review Letters 93, 14 (2004).
+       </span>
+      </span>
+     </span>
+     ]), simulações voltadas para o ensino são bem menos abundantes. Neste texto apresentamos um túnel de vento simulado no qual se pode escolher o formato do objeto a ser inserido no túnel assim como a velocidade do vento. Imaginamos que esta ferramenta seja capaz de subsidiar o professor e permitir que uma discussão mais profunda de escoamentos viscosos seja realizada.
+    </p>
+    <p>
+     Este texto está organizado da seguinte maneira. Inicialmente, os procedimentos para solução da equação de Navier-Stokes para um objeto de formato arbitrário no interior de um túnel de vento são apresentados. Em seguida, descrevemos um método, recentemente introduzido [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] P.V.S. Souza, D. Girardi and P.M.C. de Oliveira, arXiv preprint arXiv:1505.01101 (2015).
+       </span>
+      </span>
+     </span>
+     ], para determinação da força sobre objetos imersos em túneis de vento. Posteriormente, exemplificamos potencialidades didáticas colocando no interior do túnel de vento uma asa cujo ângulo de ataque pode ser controlado. Finalmente, em uma seção concludente, apresentamos alguns comentários que julgamos ser relevantes ao leitor e eventual utilizador do túnel simulado.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Solução da equação de Navier-Stokes para um objeto de formato arbitrário imerso em um túnel de vento
+    </h1>
+    <p>
+     O sistema físico em questão é um túnel de vento, no qual a velocidade do vento é controlável e onde pode ser inserido um objeto de formato arbitrário, por exemplo, uma asa ou um cilindro.
+    </p>
+    <p>
+     Para descrever a dinâmica deste sistema físico, resolvemos a Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) em uma rede bidimensional de 400 x 200 pontos (correspondente a uma região que denominamos
+     <i>
+      região de interesse
+     </i>
+     ), suficiente para nossos propósitos (a resolução poderá ser ampliada no caso de necessidade de maior precisão). Para resolver a Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ), usamos um método [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] P.M.C. de Oliveira, International Journal of Modern Physics C 23, 4 (2012).
+       </span>
+      </span>
+     </span>
+     ] de diferenças finitas com relaxações sucessivas sobre as vorticidades.
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        Aplicamos o método das relaxações sucessivas aqui para resolver as equações de Stokes (Re=0) e de Navier-Stokes (Re≠0). No primeiro caso, o método consiste simplesmente na substituição da vorticidade em um ponto da rede pela média das vorticidades dos seus quatro vizinhos imediatos. Para o caso da equação de Navier-Stokes, outros termos aparecem e estes também precisam ser expressos em função dos valores das velocidades e vorticidades nos pontos em seu entorno, tantos pontos quantos forem necessários para que todas as diferenças finitas que substituirão as derivadas tenham precisão pelo menos até a segunda ordem no passo discreto espacial e no passo de tempo. Para uma explanação do uso de relaxações sucessivas na solução de equações diferenciais, veja as Refs. [18–20]. Curiosamente, na Ref. [21, Problem 3.29], o método das relaxações é aplicado na solução de um problema de eletrodinâmica, o que traz à tona o conhecido fato de que a hidrodinâmica e a eletrodinâmica são formalmente muito semelhantes.
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     As configurações iniciais dos campos de velocidades e vorticidades são as resultantes da solução da Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) no limite em que
+     <math display="inline" id="m9">
+      <mi>
+       R
+      </mi>
+      <mi>
+       e
+      </mi>
+      <mo>
+       →
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     . Neste limite, a equação de Navier-Stokes reduz-se a equação de Laplace. Utilizar esta configuração inicial é necessário pois do contrário, um comportamento transiente espúrio pode ser obtido. Veja, por exemplo, [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [22] M.A. Cruchaga, N.M Nigro, M.A. Storti e D.J. Celentano, Mecánica Computacional 21, 5 (2002).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     As condições de contorno são: (a) na superfície do obstáculo e dentro dele, são mantidas nulas as velocidades e vorticidades; (b) fora da região de interesse (definida acima), o vento tem apenas uma componente não nula, ao longo da direção X, de modo que nesta região,
+     <math display="inline" id="m10">
+      <mi mathvariant="bold">
+       v
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       V
+      </mi>
+      <mover accent="true">
+       <mrow>
+        <mi>
+         x
+        </mi>
+       </mrow>
+       <mo>
+        ^
+       </mo>
+      </mover>
+     </math>
+     (por conveniência, fez-se
+     <i>
+      V
+     </i>
+     = 1 em unidades adimensionais) e as vorticidades são nulas.
+    </p>
+    <p>
+     Em princípio, objetos de qualquer formato podem ser inseridos no túnel resguardada a condição de que suas dimensões não ultrapassem 20% do tamanho total do túnel, por exemplo, ou fração menor ainda caso seja necessário maior precisão. Ademais, o objeto precisa estar localizado no centro do túnel. Atendidas estas condições, fomos bem sucedidos em observar a formação da esteira de vórtices para
+     <math display="inline" id="m11">
+      <mi>
+       R
+      </mi>
+      <mi>
+       e
+      </mi>
+      <mo>
+       ≤
+      </mo>
+      <mn>
+       1000
+      </mn>
+     </math>
+     , sendo possível simular com números de Reynolds próximos de 1000 sem que alterações significativas no tamanho da rede, nas condições de contorno e na viscosidade numérica sejam necessárias.
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         3
+        </strong>
+        A introdução da viscosidade numérica é um procedimento muito usado tradicionalmente para suavizar as variações espaciais bruscas no campo de velocidades. Trata-se simplesmente de acrescentar às vorticidades uma pequena fração de seu próprio Laplaciano. A viscosidade numérica foi utilizada por nós na solução da equação de Navier-Stokes para Re&gt;0. Sua utilização produz uma suavização numérica, mas pode introduzir desvios quantitativos no resultado. Em princípio, a fração do Laplaciano somada ao campo de vorticidades deve ser pequena o suficiente para que tais desvios estejam controlados. No caso de Re=1000, a fração adotada foi 1/100.
+       </span>
+      </span>
+     </span>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     mostra o escoamento sobre um triângulo inserido no túnel. No link
+     <a href="https://www.dropbox.com/s/1s4jbk589df14qp/tunel_asa_1000_22.wmv?dl=0" target="_blank">
+      https://www.dropbox.com/s/1s4jbk589df14qp/tunel_asa_1000_22.wmv?dl=0
+     </a>
+     pode-se baixar um vídeo onde é mostrada a evolução do campo de velocidades quando, partindo da configuração de Stokes, o vento é ligado em
+     <math display="inline" id="m12">
+      <mi>
+       R
+      </mi>
+      <mi>
+       e
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1000
+      </mn>
+     </math>
+     e escoa sobre uma asa com o ângulo de ataque acionado em 22°. A evolução temporal observada atesta a adequação de nossos resultados a outros, experimentais e computacionais, presentes na literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] R.P. Feynman, R.B. Leighton and M. Sands, The Feynman Lectures on Physics 2 (Addison-Wesley, Reading, 1969).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] R.D. Blevins, Flow-Induced Vibration (Krieger Publishing Company, Malabar, 1990).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] G. Alfonsi and A. Giorgini, Fluid Dynamics Research 31, 1 (2002).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [23] D. You and P. Moin, Physics of Fluids 19, 8 (2007).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [24] O. Inoue and T. Yamazaki, Fluid Dynamics Research 25, 1 (1999).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figure 1
+      </strong>
+      <br/>
+      Vórtices aparecendo atrás de um objeto imerso no túnel.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Contudo, como é possível determinar a força de arrasto sobre o objeto no túnel? A próxima seção é dedicada à descrição de um método geral capaz de fazê-lo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] P.V.S. Souza, D. Girardi and P.M.C. de Oliveira, arXiv preprint arXiv:1505.01101 (2015).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Um método alternativo para determinação da força sobre objetos imersos em túneis de vento
+    </h1>
+    <p>
+     A maneira tradicional de calcular a força de arrasto sobre um obstáculo rígido envolve o conhecimento de dois elementos básicos: o campo de pressões e a viscosidade nas proximidades da interface objeto/fluido,
+     <i>
+      i.e.
+     </i>
+     , na região correspondente à camada limite [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [25] L.D. Landau and E.M. Lifshitz, Fluid Mechanics (Pergamon, Oxford, 1987).
+       </span>
+      </span>
+     </span>
+     ]. É possível, alternativamente, obter a força de arrasto unicamente a partir do conhecimento do campo de velocidades do fluido em torno de um obstáculo, por meio do gradiente deste campo ao longo da superfície da interface objeto/fluido. Neste caso, deve-se realizar uma integração sobre esta superfície [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] B.R. Munson, D.F. Young and T.H. Okiishi, Fundamentals of Fluid Mechanics (John Wiley &amp; Sons, New York, 1990).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [26] F. Noca, D. Shiels and D. Jeon, Journal of Fluids and Structures 13, 5 (1999).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       27
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [27] B.T. Tan, M.C. Thompson and K. Hourigan, Journal of Fluids and Structures 20, 1 (2005).
+       </span>
+      </span>
+     </span>
+     ]. Quando o campo de velocidades é determinado em pontos de uma rede discreta, a precisão para o cálculo do gradiente fica comprometida, a menos que se adote uma rede muito fina perto da superfície de integração, o que requer um grande esforço computacional. Para contornar este problema técnico, propomos substituir a integral de superfície por uma integral de volume sobre todo o volume ocupado pelo objeto, como descrevemos a seguir.
+    </p>
+    <p>
+     No instante
+     <i>
+      t
+     </i>
+     , o campo de velocidades em cada ponto
+     <math display="inline" id="m13">
+      <mi mathvariant="bold">
+       r
+      </mi>
+     </math>
+     da grade é
+     <math display="inline" id="m14">
+      <mrow>
+       <msub>
+        <mtext>
+         v
+        </mtext>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mtext>
+        r
+       </mtext>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     . Esta configuração no instante
+     <i>
+      t
+     </i>
+     é obtida a partir de configurações em instantes anteriores
+     <math display="inline" id="m15">
+      <mi>
+       t
+      </mi>
+      <mo>
+       −
+      </mo>
+      <mi>
+       d
+      </mi>
+      <mi>
+       t
+      </mi>
+     </math>
+     ,
+     <math display="inline" id="m16">
+      <mi>
+       t
+      </mi>
+      <mo>
+       −
+      </mo>
+      <mn>
+       2
+      </mn>
+      <mi>
+       d
+      </mi>
+      <mi>
+       t
+      </mi>
+     </math>
+     , etc. Nos pontos da grade no interior do obstáculo e na sua superfície,
+     <math display="inline" id="m17">
+      <msub>
+       <mtext>
+        v
+       </mtext>
+       <mi>
+        t
+       </mi>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     em qualquer instante
+     <i>
+      t
+     </i>
+     . Suponhamos que o objeto seja removido no instante
+     <i>
+      t
+     </i>
+     e o volume que o objeto ocupava seja preenchido com fluido estático. Partindo da configuração do campo de velocidades já conhecido
+     <math display="inline" id="m18">
+      <mrow>
+       <msub>
+        <mtext>
+         v
+        </mtext>
+        <mi>
+         t
+        </mi>
+       </msub>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mtext>
+        r
+       </mtext>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     , obtém-se a configuração futura no tempo
+     <i>
+      t
+     </i>
+     +
+     <i>
+      Dt
+     </i>
+     . Como o objeto rígido foi substituído por um fluido, algumas velocidades não nulas aparecem no interior do volume anteriormente ocupado pelo objeto. Em outras palavras, a remoção do objeto permite que o campo de velocidades penetre um pouco no interior do seu volume. Agora, este campo de velocidades interno pode ser integrado no volume. O resultado é multiplicado pela densidade do fluido, obtendo-se assim o momento que seria transferido do fluido para o objeto. Dividindo-se esse impulso por
+     <i>
+      Dt
+     </i>
+     , finalmente obtém-se a força de arrasto.
+     <span class="ref footnote">
+      <sup class="xref">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         4
+        </strong>
+        O tempo Dt necessário para que o vento entre na região anteriormente ocupada pelo objeto varia de acordo com o número de Reynolds e com as condições iniciais. Considera-se que uma estimativa do tempo é aceitável, quando multiplicado por dois, o momento transferido torna-se duas vezes maior.
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     Pode-se observar na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     a força de arrasto sobre um longo cilindro estático perpendicular ao vento no interior do túnel, em função do tempo; esta força corresponde aproximadamente à situação física que descrevemos na seção introdutória deste texto. O comportamento da força de arrasto para o cilindro estático se harmoniza com a interpretação sugerida na seção introdutória para o problema da bolinha em queda: há um tempo transiente durante o qual a esteira de von Kármán ainda não se formou e a força de arrasto não é proporcional a
+     <i>
+      v
+     </i>
+     <sup>
+      2
+     </sup>
+     , o que ocorre tão logo a esteira esteja formada. Na transição entre estes regimes, a força de arrasto torna-se maior que o peso da bolinha e a mesma experimenta uma frenagem.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figure 2
+      </strong>
+      <br/>
+      Força de arrasto sobre um cilindro estático no túnel de vento. Inicialmente o túnel está desligado. Em seguida, em
+      <i>
+       t
+      </i>
+      = 0, o túnel é ligado com número de Reynolds
+      <math display="inline" id="m19">
+       <mi>
+        R
+       </mi>
+       <mi>
+        e
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1000
+       </mn>
+      </math>
+      . A componente da força na direção perpendicular ao fluxo do vento é desprezível. A força de arrasto é representada em unidades arbitrárias, ignorando fatores como a densidade do fluido, etc. Durante uma unidade de tempo, o vento viaja o equivalente ao diâmetro do cilindro. A componente da força que é paralela ao fluxo de vento aumenta, atinge um valor máximo, diminui e finalmente se estabiliza, o que corresponde a uma situação dinâmica em que aparecem continuamente vórtices sucessivos girando em sentidos alternados atrás do cilindro. A esteira de vórtices de von Kármán é então formada. O destaque mostra o mesmo numa escala longa no tempo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Naturalmente, o método acima descrito pode ser aplicado não apenas a um cilindro, mas a um objeto de formato qualquer.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Uma asa em um túnel de vento
+    </h1>
+    <p>
+     Para exemplificar as potencialidades do túnel, apresentamos, nesta seção, um estudo do comportamento da força de arrasto sobre um modelo simplificado de asa cujo ângulo de ataque,
+     <i>
+      i.e.
+     </i>
+     , o ângulo que o eixo da asa faz com o vento, pode ser controlado.
+    </p>
+    <p>
+     Nossa simulação corresponde à situação física de um aeromodelo, cuja asa tem largura característica aproximada de 5 cm voando a uma velocidade aproximada de 30 cm/s no ar, cuja viscosidade é de 1.83 x 10
+     <sup>
+      −5
+     </sup>
+     kg m
+     <sup>
+      −1
+     </sup>
+     s
+     <sup>
+      −1
+     </sup>
+     . A asa que desenhamos é mostrada na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figure 3
+      </strong>
+      <br/>
+      Modelo simplificado de asa introduzida no túnel. O ângulo de ataque pode ser controlado entre
+      <math display="inline" id="m20">
+       <mo>
+        ±
+       </mo>
+       <mn>
+        22
+       </mn>
+       <mo>
+        °
+       </mo>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para a velocidade do vento fixa em
+     <math display="inline" id="m21">
+      <mi>
+       R
+      </mi>
+      <mi>
+       e
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mn>
+       1000
+      </mn>
+     </math>
+     , o ângulo de ataque pode variar entre
+     <math display="inline" id="m22">
+      <mo>
+       ±
+      </mo>
+      <mn>
+       22
+      </mn>
+      <mo>
+       °
+      </mo>
+     </math>
+     sem que as paredes do túnel interfiram fortemente na simulação. Neste caso, após o regime transiente, vórtices girando em sentidos contrários aparecem alternadamente atrás da asa, assim como ocorre com o cilindro.
+    </p>
+    <p>
+     A componente longitudinal do arrasto neste caso apresenta um comportamento qualitativo análogo ao observado para o cilindro (veja
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     ): a força cresce, atinge um valor máximo, reduz-se um pouco e estabiliza, passando a oscilar em torno de um valor fixo positivo. Este valor fixo aumenta com o ângulo de ataque. O comportamento da componente transversal do arrasto, igualmente, depende do ângulo de ataque. Para um ângulo de ataque igual a 0°, observa-se que esta componente, depois de um estágio transiente, flutua continuamente em torno de zero, o que é esperado para um obstáculo axialmente simétrico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] B.R. Munson, D.F. Young and T.H. Okiishi, Fundamentals of Fluid Mechanics (John Wiley &amp; Sons, New York, 1990).
+       </span>
+      </span>
+     </span>
+     ]. À medida que o ângulo de ataque cresce, os valores desta componente aumentam. Este resultado corresponde satisfatoriamente ao que se sabe sobre a relação entre a sustentação, força correspondente a componente transversal do arrasto, e o ângulo de ataque [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       28
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [28] H. Babinsky, Physics Education 38, 6 (2003).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       29
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [29] K. Weltner, M. Ingelman-Sundberg, A.S. Esperidião e P. Miranda, Revista Brasileira de Ensino de Física 23, 4 (2001).
+       </span>
+      </span>
+     </span>
+     ]. Veja as
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 4
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figure 4
+      </strong>
+      <br/>
+      Componentes do arrasto para ângulo de ataque igual a 0°. Em (a), apresenta-se a componente longitudinal e, em (b), a componente transversal. A componente longitudinal cresce, atinge um valor máximo, reduz-se um pouco e se estabiliza, passando a oscilar levemente (imperceptível na figura) em torno de um valor fixo positivo, enquanto a componente transversal, após o transiente, passa a flutuar em torno de um valor fixo, no caso do ângulo de ataque igual a 0°, este valor é nulo, como esperado para obstáculos simétricos.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figure 5
+      </strong>
+      <br/>
+      Componentes do arrasto para ângulo de ataque igual a 15°. Em (a), apresenta-se a componente longitudinal e, em (b), a componente transversal. Assim como antes, a componente longitudinal cresce, atinge um valor máximo, reduz-se um pouco e estabiliza, passando a oscilar em torno de um valor fixo positivo enquanto a componente transversal, após o transiente (neste caso, bem diferente do caso para ângulo de ataque 0°, pois a simetria axial foi quebrada), passa a flutuar em torno de um valor fixo, no caso do ângulo de ataque igual a 15°, este valor é positivo, embora pequeno se comparado com a componente longitudinal.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em nossa simulação, a asa pode ser ligeiramente modificada para incluir um tipo de flap. Flaps consistem em abas ou superfícies articuladas existentes na parte posterior das asas que alteram temporariamente a geometria das mesmas. Quando abaixados e/ou estendidos, os flaps aumentam o arrasto e a sustentação, o que é especialmente importante no procedimento de pouso. O flap que instalamos na asa é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     e é equivalente a um flap do tipo ventral. As alterações nas componentes do arrasto em função da presença do flap para um ângulo de ataque igual a 15° são mostradas na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     . Da análise do gráfico, percebe-se que a presença do flap altera a força de arrasto, aumentando o valor de ambas as componentes em relação ao seu valor sem o flap, o que se harmoniza com o que se sabe a respeito da função deste tipo de flap nas asas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] B.R. Munson, D.F. Young and T.H. Okiishi, Fundamentals of Fluid Mechanics (John Wiley &amp; Sons, New York, 1990).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figure 6
+      </strong>
+      <br/>
+      Modelo simplificado de asa com flap.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figure 7
+      </strong>
+      <br/>
+      Comparação das componentes do arrasto para a asa com e sem flap para um ângulo de ataque igual 15°. Em (a) e (b), se observam, respectivamente, as componentes longitudinal e transversal do arrasto para asa
+      <b>
+       sem
+      </b>
+      flap (repetido da
+      <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       Fig. 5
+      </a>
+      ) enquanto em (c) e (d), se observam, respectivamente, as componentes longitudinal e transversal do arrasto para asa
+      <b>
+       com
+      </b>
+      flap. Como esperado, para um mesmo ângulo de ataque, a asa com flap apresenta valores mais altos para suas componentes embora o comportamento qualitativo seja aproximadamente o mesmo com ou sem flap.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     Considerações finais
+    </h1>
+    <p>
+     O estudo de escoamentos viscosos, embora riquíssimo, é praticamente ausente em cursos de física geral e básica. Isso se deve, em parte, ao fato deste tipo de escoamento ser descrito pela equação de Navier-Stokes que, por sua vez, só admite solução analítica para alguns poucos casos. Diante deste quadro, apresentamos neste texto um túnel de vento simulado no qual se pode escolher o formato do objeto a ser inserido no túnel assim como a velocidade do vento. O objetivo do túnel é instrumentalizar o professor e viabilizar que uma discussão mais aprofundada do tema seja realizada.
+    </p>
+    <p>
+     Os programas que compõem a simulação, assim como um arquivo com instruções para utilização do túnel podem ser baixados no endereço
+     <a href="https://www.dropbox.com/s/t3y8og20zfhypk8/programas.rar?dl=0" target="_blank">
+      https://www.dropbox.com/s/t3y8og20zfhypk8/programas.rar?dl=0
+     </a>
+     .
+    </p>
+    <p>
+     Alguns comentários finais se fazem necessários. O túnel, concebido para analisar escoamentos bidimensionais, pode ser facilmente modificado para dar conta de escoamentos tridimensionais. Porém, nossa experiência com a utilização do túnel indica que isso exigiria enorme esforço computacional, o que até então não pode ser contornado nem mesmo com a utilização de clusters de alto desempenho. Isso se deve ao fato de ser difícil realizar um processo de computação em paralelo para o túnel uma vez que uma configuração é gerada a partir da anterior.
+    </p>
+    <p>
+     No túnel, “as paredes” que limitam a região de interesse, inevitavelmente, interferem nos resultados. Para minimizar sua influência, seria necessário adotar paredes muito mais afastadas do objeto. Na verdade, para
+     <math display="inline" id="m23">
+      <mi>
+       R
+      </mi>
+      <mi>
+       e
+      </mi>
+     </math>
+     pequenos, teríamos adicionalmente que adotar um túnel tridimensional, porque em duas dimensões, a influência das paredes se faz sentir até distâncias proporcionais a
+     <math display="inline" id="m24">
+      <mrow>
+       <mn>
+        1
+       </mn>
+       <mo>
+        /
+       </mo>
+       <mi>
+        R
+       </mi>
+       <mi>
+        e
+       </mi>
+      </mrow>
+     </math>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       30
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [30] W.T. Shaw, arXiv preprint arXiv:0901.3621 (2009).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       31
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [31] S. Childress, An Introduction to Theoretical Fluid Mechanics (Courant Institute of Mathematical Sciences, New York, 2009).
+       </span>
+      </span>
+     </span>
+     ]. Esta interferência, contudo, não modifica os principais aspectos qualitativos da solução, aspectos estes que são o foco deste trabalho.
+    </p>
+    <p>
+     Num formato piloto, o túnel foi utilizado em duas disciplinas, física térmica para o curso técnico de automação industrial e física geral II para licenciatura em física do Instituto Federal do Rio de Janeiro. Na aplicação no curso de automação, por tratar-se de um curso de nível médio, o tópico escoamentos viscosos foi apresentado como complementar. Neste caso, o problema da bolinha que freia ao cair foi apresentado e discutido em detalhes com o auxílio do túnel. Simulações com asas também foram utilizadas para discutir as razões físicas pelas quais o avião consegue manter-se no ar. No curso de licenciatura, o túnel foi utilizado por um pequeno número de alunos para elaboração do projeto de final do curso. Neste caso, inicialmente, os alunos se familiarizaram com túnel numérico. Posteriormente, inseriram diferentes objetos no túnel, como uma bala de revolver, um triângulo e um cilindro girando com velocidade angular controlável. Os dados obtidos por eles para este último caso foram contrapostos com os presentes em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] P.V.S. Souza, D. Girardi and P.M.C. de Oliveira, arXiv preprint arXiv:1505.01101 (2015).
+       </span>
+      </span>
+     </span>
+     ], o que viabilizou uma interessante discussão sobre o efeito Magnus e suas manifestações.
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Pode-se encontrar facilmente na literatura deduções fenomenológicas da equação de Navier-Stokes, embora não haja uma dedução a partir de primeiros princípios aplicados à estrutura atômica microscópica do fluido. Veja, por exemplo, Refs. [
+        <span class="ref">
+         <sup class="xref xrefblue">
+          7
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           [7] S. Schneiderbauer and M. Krieger, European Journal of Physics 35, 1 (2014).
+          </span>
+         </span>
+        </span>
+        ,
+        <span class="ref">
+         <sup class="xref xrefblue">
+          9
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           [9] R.P. Feynman, R.B. Leighton and M. Sands, The Feynman Lectures on Physics 2 (Addison-Wesley, Reading, 1969).
+          </span>
+         </span>
+        </span>
+        ].
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Aplicamos o método das relaxações sucessivas aqui para resolver as equações de Stokes (
+        <math display="inline" id="m25">
+         <mi>
+          R
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+        </math>
+        ) e de Navier-Stokes (
+        <math display="inline" id="m26">
+         <mi>
+          R
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mo>
+          ≠
+         </mo>
+         <mn>
+          0
+         </mn>
+        </math>
+        ). No primeiro caso, o método consiste simplesmente na substituição da vorticidade em um ponto da rede pela média das vorticidades dos seus quatro vizinhos imediatos. Para o caso da equação de Navier-Stokes, outros termos aparecem e estes também precisam ser expressos em função dos valores das velocidades e vorticidades nos pontos em seu entorno, tantos pontos quantos forem necessários para que todas as diferenças finitas que substituirão as derivadas tenham precisão pelo menos até a segunda ordem no passo discreto espacial e no passo de tempo. Para uma explanação do uso de relaxações sucessivas na solução de equações diferenciais, veja as Refs. [
+        <span class="ref">
+         <sup class="xref xrefblue">
+          18
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           [18] R.H. Landau, M.J. Paez and C.C Bordeianu, A Survey of Computational Physics (Wiley-VCH, Princeton, 2006).
+          </span>
+         </span>
+        </span>
+        –
+        <span class="ref">
+         <sup class="xref xrefblue">
+          20
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           [20] C. Scherer, Métodos Computacionais da Física (Editora Livraria da Física, São Paulo, 2005).
+          </span>
+         </span>
+        </span>
+        ]. Curiosamente, na Ref. [
+        <span class="ref">
+         <sup class="xref xrefblue">
+          21
+         </sup>
+         <span class="refCtt closed">
+          <span>
+           [21] E.M. Purcell, Electricity and Magnetism (McGraw-Hill, New York, 1965).
+          </span>
+         </span>
+        </span>
+        , Problem 3.29], o método das relaxações é aplicado na solução de um problema de eletrodinâmica, o que traz à tona o conhecido fato de que a hidrodinâmica e a eletrodinâmica são formalmente muito semelhantes.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        A introdução da viscosidade numérica é um procedimento muito usado tradicionalmente para suavizar as variações espaciais bruscas no campo de velocidades. Trata-se simplesmente de acrescentar às vorticidades uma pequena fração de seu próprio Laplaciano. A viscosidade numérica foi utilizada por nós na solução da equação de Navier-Stokes para
+        <math display="inline" id="m27">
+         <mi>
+          R
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mo>
+          &gt;
+         </mo>
+         <mn>
+          0
+         </mn>
+        </math>
+        . Sua utilização produz uma suavização numérica, mas pode introduzir desvios quantitativos no resultado. Em princípio, a fração do Laplaciano somada ao campo de vorticidades deve ser pequena o suficiente para que tais desvios estejam controlados. No caso de
+        <math display="inline" id="m28">
+         <mi>
+          R
+         </mi>
+         <mi>
+          e
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          1000
+         </mn>
+        </math>
+        , a fração adotada foi 1/100.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        4
+       </span>
+       <div>
+        O tempo
+        <i>
+         Dt
+        </i>
+        necessário para que o vento entre na região anteriormente ocupada pelo objeto varia de acordo com o número de Reynolds e com as condições iniciais. Considera-se que uma estimativa do tempo é aceitável, quando multiplicado por dois, o momento transferido torna-se duas vezes maior.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Os autores agradecem a P.M.C. Dias e ao primeiro árbitro pelas críticas e sugestões ao manuscrito. Os autores também agradecem as agências de fomento CAPES e CNPQ pelo financiamento.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] P.M.C. de Oliveira, S.M. de Oliveira, F.A. Pereira and J.C. Sartorelli, arXiv preprint arXiv:1005.4086 (2010).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] P.M.C. de Oliveira, International Journal of Modern Physics C
+        <b>
+         23
+        </b>
+        , 4 (2012).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] P.V.S. Souza, D. Girardi and P.M.C. de Oliveira, arXiv preprint arXiv:1505.01101 (2015).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] C.E. Aguiar e G. Rubini, Revista Brasileira de Ensino de Física
+        <b>
+         26
+        </b>
+        , 4, (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] B. Leroy, Revista Brasileira de Física
+        <b>
+         7
+        </b>
+        , 3 (1977).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] H.M. Nussenzveig,
+        <i>
+         Curso de Física Básica 2
+        </i>
+        (Editora Edgard Blücher, São Paulo, 2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] S. Schneiderbauer and M. Krieger, European Journal of Physics
+        <b>
+         35
+        </b>
+        , 1 (2014).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] B.R. Munson, D.F. Young and T.H. Okiishi,
+        <i>
+         Fundamentals of Fluid Mechanics
+        </i>
+        (John Wiley &amp; Sons, New York, 1990).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] R.P. Feynman, R.B. Leighton and M. Sands,
+        <i>
+         The Feynman Lectures on Physics 2
+        </i>
+        (Addison-Wesley, Reading, 1969).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] N. Rott, Annual Review of Fluid Mechanics
+        <b>
+         22
+        </b>
+        , 1 (1990).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] O. Reynolds, Proceedings of the Royal Society of London
+        <b>
+         35
+        </b>
+        , 224 (1883).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] R.D. Blevins,
+        <i>
+         Flow-Induced Vibration
+        </i>
+        (Krieger Publishing Company, Malabar, 1990).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] J.S. Humphreys, Journal of Fluid Mechanics
+        <b>
+         9
+        </b>
+        , 04 (1960).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] M.S. Engelman and M. Jamnia, International Journal for Numerical Methods in Fluids
+        <b>
+         11
+        </b>
+        , 7 (1990).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] G. Alfonsi and A. Giorgini, Fluid Dynamics Research
+        <b>
+         31
+        </b>
+        , 1 (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] J-C. Suh and K-S Kim, Fluid Dynamics Research
+        <b>
+         25
+        </b>
+        , 4 (1999).
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] U. Pesavento and Z.J. Wang, Physical Review Letters
+        <b>
+         93
+        </b>
+        , 14 (2004).
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] R.H. Landau, M.J. Paez and C.C Bordeianu,
+        <i>
+         A Survey of Computational Physics
+        </i>
+        (Wiley-VCH, Princeton, 2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] T. Pang,
+        <i>
+         An Introduction to Computational Physics
+        </i>
+        (Cambridge University Press, Cambridge, 2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20] C. Scherer,
+        <i>
+         Métodos Computacionais da Física
+        </i>
+        (Editora Livraria da Física, São Paulo, 2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] E.M. Purcell,
+        <i>
+         Electricity and Magnetism
+        </i>
+        (McGraw-Hill, New York, 1965).
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] M.A. Cruchaga, N.M Nigro, M.A. Storti e D.J. Celentano, Mecánica Computacional
+        <b>
+         21
+        </b>
+        , 5 (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [23] D. You and P. Moin, Physics of Fluids
+        <b>
+         19
+        </b>
+        , 8 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [24] O. Inoue and T. Yamazaki, Fluid Dynamics Research
+        <b>
+         25
+        </b>
+        , 1 (1999).
+       </div>
+      </li>
+      <li>
+       <div>
+        [25] L.D. Landau and E.M. Lifshitz,
+        <i>
+         Fluid Mechanics
+        </i>
+        (Pergamon, Oxford, 1987).
+       </div>
+      </li>
+      <li>
+       <div>
+        [26] F. Noca, D. Shiels and D. Jeon, Journal of Fluids and Structures
+        <b>
+         13
+        </b>
+        , 5 (1999).
+       </div>
+      </li>
+      <li>
+       <div>
+        [27] B.T. Tan, M.C. Thompson and K. Hourigan, Journal of Fluids and Structures
+        <b>
+         20
+        </b>
+        , 1 (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [28] H. Babinsky, Physics Education
+        <b>
+         38
+        </b>
+        , 6 (2003).
+       </div>
+      </li>
+      <li>
+       <div>
+        [29] K. Weltner, M. Ingelman-Sundberg, A.S. Esperidião e P. Miranda, Revista Brasileira de Ensino de Física
+        <b>
+         23
+        </b>
+        , 4 (2001).
+       </div>
+      </li>
+      <li>
+       <div>
+        [30] W.T. Shaw, arXiv preprint arXiv:0901.3621 (2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        [31] S. Childress,
+        <i>
+         An Introduction to Theoretical Fluid Mechanics
+        </i>
+        (Courant Institute of Mathematical Sciences, New York, 2009).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Jun 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        18 Set 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        05 Dez 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

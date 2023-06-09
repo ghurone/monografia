@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Pesquisa em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 42
+   <span class="_separator">
+    •
+   </span>
+   2020
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2019-0130" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2019-0130
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0130">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Utilização de um sensor de umidade para o Arduino na determinação da curva característica de retenção de água por um sistema poroso
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  The use of an Arduino moisture sensor for determining of the water retention curve of a porous systems
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Fabio A.M. Cássaro
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:fcassaro@uepg.br">
+      fcassaro@uepg.br
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-7240-3947">
+     http://orcid.org/0000-0002-7240-3947
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Jocenei A.T. de Oliveira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Hernani Cruz
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Luiz F. Pires
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual de Ponta Grossa, Departamento de Física, Ponta Grossa, PR, Brasil
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-5073-5900">
+     http://orcid.org/0000-0001-5073-5900
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Neste artigo é apresentada a utilização de um sensor de umidade para o Arduino no levantamento da curva característica de retenção de água por um sistema poroso, tal como, por exemplo, o solo. Essa curva é muito importante nos estudos ligados à caracterização físico-hídrica do meio poroso. Sua determinação possibilita a investigação das propriedades de retenção de água pelo meio poroso e também a obtenção de parâmetros ligados à geometria dos poros que o compõe. Os pontos experimentais foram interpolados usando a equação de van Genuchten e um modelo simples para a descrição dos poros presentes nas amostras porosas investigadas é apresentado. Este trabalho também teve por objetivo apresentar metodologia inovativa para a realização de experimentos em laboratórios de Física aplicada a estudantes de Engenharias, principalmente: a Ambiental, a Civil e a Agronômica.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Ensino de Física; Distribuição de poros; Função capacidade de água
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     In this paper, we present the use of an Arduino moisture sensor for determining the water retention curve of a porous system, such as, for instance, the soil. This curve is extremely important in studies related to the physical-hydric characterization of a porous systems. Its determination permits examining soil water retention properties and obtaining pore geometry parameters related to the system under investigation. The experimental data was fitted using the van Genuchten equation and a simple model for describing the pores presented in the investigated samples is presented. This work had also the objective of introducing innovative methodology for presenting experimental activities in Applied Physics for undergraduate students of Engineering, such as: Environmental, Agronomic and Civil.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Physics teaching; Pore distribution; Water capacity function
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Estudos de retenção de água em meios porosos, tal como, o solo, são de extrema importância em áreas como as engenharias civil, agronômica e ambiental. A capacidade do solo em reter água influencia diretamente, por exemplo, na quantidade de água disponível para uma determinada cultura agrícola se desenvolver satisfatoriamente
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Hillel, Introduction to Environmental Soil Physics (Academic Press, San Diego, 1998).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Uma baixa capacidade de retenção de água pelo solo pode ser um indicativo da presença de poros de grandes calibres neste meio poroso. Esses poros são em grande parte responsáveis pela infiltração de água a grandes velocidades na matriz do solo. Se nessa água existirem contaminantes (pesticidas, herbicidas, etc), estes poderão ser transportados rapidamente ao lençol freático, o que faz com que não tenham tempo de se degradar durante o processo de infiltração [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R.N. Onody, A.N.D. Posadas e S. Crestana, J. of Appl. Phys. 78, 2970 (1995).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] P.M. Dellamatrice e R.T.R. Monteiro, Rev. Bras. Eng. Agríc. Ambient. 18, 1296 (2014).
+       </span>
+      </span>
+     </span>
+     ]. Desta forma, sérios riscos à saúde humana podem decorrer desta infiltração de água a altas velocidades.
+    </p>
+    <p>
+     A quantidade de água no solo também pode afetar a qualidade das obras na área de construção civil
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] E. Ganju, S. Rahman, M. Prezzi, R. Salgado e N. Siddiki, Relatório FHWA/IN/JTRP-2016/27, Joint Transportation Research Program Publication, West Lafayette (2016).
+       </span>
+      </span>
+     </span>
+     . Por este motivo, é importante a verificação de como este solo retém e conduz a água em seu interior, de modo que, por exemplo, a impermeabilização dos materiais a serem utilizados na construção civil seja adequada. A quantidade de água no solo também é extremamente importante em obras de pavimentação.
+    </p>
+    <p>
+     A água se movimenta no solo por diferenças de potenciais (químico, hidráulico, gravitacional, etc) e a sua retenção envolve situações de equilíbrio
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] W.A. Jury e R. Horton, Soil Physics (Wiley, New York, 2004).
+       </span>
+      </span>
+     </span>
+     . Uma característica importante do solo é a sua curva de retenção de água (CRA). A partir dela é possível, por exemplo, fazer inferência sobre a distribuição de poros neste meio poroso assim como sobre suas funções hidráulico-energéticas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Hillel, Introduction to Environmental Soil Physics (Academic Press, San Diego, 1998).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] R. Armindo e O. Wendroth, Soil Sci. Soc. Am. J. 80, 1167 (2016).
+       </span>
+      </span>
+     </span>
+     ]. Portanto, neste sentido a obtenção da CRA é importante para estudantes dos cursos de Engenharia, Agronomia, Ciências Ambientais, Física do Solo e etc.
+    </p>
+    <p>
+     Neste artigo propomos a utilização de um sensor de umidade para o Arduino no levantamento da CRA de amostras porosas constituídas de areia. Devido à simplicidade e relativo baixo custo, o esquema experimental aqui proposto possui grande potencial para ser utilizado em aulas práticas nos cursos de graduação mencionados anteriormente. A exploração de vários conceitos físicos envolvidos nas medidas e a interpretação dos resultados obtidos, certamente contribuirá para uma formação mais especializada dos estudantes desses cursos.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Materiais e Métodos
+    </h1>
+    <h2>
+     2.1. Amostras porosas
+    </h2>
+    <p>
+     As amostras analisadas foram preparadas utilizando-se areia com granulometrias escolhidas. A primeira amostra foi constituída de areia com diâmetros característicos entre 212 e 500
+     <math>
+      <mi>
+       μ
+      </mi>
+      <mtext>
+       m
+      </mtext>
+     </math>
+     e a segunda com diâmetros entre 500 e 100 μm. A primeira é caracterizada como sendo uma areia fina e a segunda como uma areia média.
+    </p>
+    <p>
+     Para a realização dos experimentos, as amostras foram acondicionadas em cilindros, cujas dimensões internas eram de aproximadamente 5 cm de diâmetro e 5 cm de altura. Portanto, o volume das amostras analisadas foi de aproximadamente
+     <math>
+      <mn>
+       98
+      </mn>
+      <mtext>
+      </mtext>
+      <msup>
+       <mtext>
+        cm
+       </mtext>
+       <mn>
+        3
+       </mn>
+      </msup>
+     </math>
+     .
+    </p>
+    <h2>
+     2.2. Umidade à base de volume
+    </h2>
+    <p>
+     A umidade à base de volume "
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         V
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     " foi determinada pelo quociente entre o volume da amostra "
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         V
+        </mi>
+        <mi>
+         c
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     " (a do recipiente no qual a amostra foi acondicionada) e da água presente em seu interior "
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         V
+        </mi>
+        <mrow>
+         <mi>
+          a
+         </mi>
+         <mi>
+          g
+         </mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     " (a que foi gradativamente adicionada à amostra).
+    </p>
+    <p>
+     A expressão dessa umidade a base de volume é apresentada na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação 1
+     </a>
+     .
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <msub>
+          <mi>
+           θ
+          </mi>
+          <mi>
+           v
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mi>
+           c
+          </mi>
+         </msub>
+         <mo>
+          /
+         </mo>
+         <msub>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mi>
+            a
+           </mi>
+           <mi>
+            g
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h2>
+     2.3. Calibração do sensor
+    </h2>
+    <p>
+     A calibração do sensor (modelo YL-39) consiste em se relacionar a leitura M indicada pelo sensor à
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mrow>
+         <mi>
+          V
+         </mi>
+         <mtext>
+         </mtext>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     presente na amostra porosa.
+    </p>
+    <p>
+     Isso foi feito adicionando-se, pouco a pouco, quantidades conhecidas de água na base de uma amostra de areia, com grãos de diâmetros característicos entre 500 e 212 μm, até que a mesma fosse saturada. A quantidade de água acrescentada para a saturação da amostra analisada ficou torno de 40 ml, a qual foi acrescentada à amostra de aproximadamente 5 em 5 ml.
+    </p>
+    <p>
+     Cabe aqui salientar que para cada uma das medições usadas na calibração, esperou-se tempo suficiente para que os valores de M fossem obtidos no equilíbrio, o qual ocorre ao final da redistribuição, por capilaridade, da água acrescentada no interior da amostra.
+    </p>
+    <p>
+     Para o sensor e amostras utilizados, esse tempo ficou entre 10 e 15 minutos a cada nova umidade da amostra. Uma forma de se verificar o equilíbrio da redistribuição, é pelo acompanhamento temporal do valor de M, o qual se torna constante a partir do instante que o equilíbrio é atingido.
+    </p>
+    <p>
+     Além das medições para a amostra umedecida, a curva de calibração também levou em conta o valor de M para a amostra seca ao ar, o qual foi obtido antes de se iniciar o umedecimento da amostra.
+    </p>
+    <h2>
+     2.4. Curva de retenção de água (CRA)
+    </h2>
+    <p>
+     A curva de retenção foi obtida para a amostra de granulometria mais fina nas tensões entre 1 e 7 kPa, e a de granulometria mais grossa, entre tensões de 1 e 2,6 kPa.
+    </p>
+    <p>
+     Os pontos experimentais, relacionando a tensão e a umidade volumétrica, foram interpolados utilizando-se a equação de van Genuchten
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] F.A.M. Cássaro, L.F. Pires, R.A. dos Santos, D. Giménez e K. Reichardt, R. Bras. Ci. do Solo 32, 2555 (2008).
+       </span>
+      </span>
+     </span>
+     , a qual é apresentada na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação 2
+     </a>
+     .
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <msub>
+          <mi>
+           θ
+          </mi>
+          <mi>
+           v
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           θ
+          </mi>
+          <mi>
+           r
+          </mi>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <mfrac>
+          <mrow>
+           <msub>
+            <mi>
+             θ
+            </mi>
+            <mi>
+             s
+            </mi>
+           </msub>
+           <mo>
+            −
+           </mo>
+           <msub>
+            <mi>
+             θ
+            </mi>
+            <mi>
+             r
+            </mi>
+           </msub>
+          </mrow>
+          <mrow>
+           <msup>
+            <mrow>
+             <mrow>
+              <mo>
+               [
+              </mo>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                +
+               </mo>
+               <msup>
+                <mrow>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mrow>
+                   <mi>
+                    α
+                   </mi>
+                   <mi>
+                    h
+                   </mi>
+                  </mrow>
+                  <mo>
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+               </msup>
+              </mrow>
+              <mo>
+               ]
+              </mo>
+             </mrow>
+            </mrow>
+            <mi>
+             m
+            </mi>
+           </msup>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     na qual,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         S
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     é a umidade de saturação
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         r
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     é a umidade residual da amostra,
+     <math>
+      <mi>
+       α
+      </mi>
+     </math>
+     , n e m são parâmetros de ajuste. Em geral, utiliza-se a aproximação de Mualem
+     <math>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <mi>
+         m
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         −
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         /
+        </mo>
+        <mi>
+         n
+        </mi>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] F.A.M. Cássaro, L.F. Pires, R.A. dos Santos, D. Giménez e K. Reichardt, R. Bras. Ci. do Solo 32, 2555 (2008).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <h2>
+     2.5. Função capacidade de água (FCA) e equação da capilaridade
+    </h2>
+    <p>
+     A primeira derivada da CR representada em termos de diâmetros característicos "d", a FCA, fornece uma ideia de como os poros de uma amostra porosa estão distribuídos em termos de seus tamanhos
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] D.E. Radcliffe e J. Simunek, Soil Physics with Hydrus (CRC Press, Boca Raton, 2010).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A partir da equação de van Genuchten (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. 2
+     </a>
+     ), a expressão da FCA é fornecida por:
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mrow>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mi>
+               v
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <mi>
+              h
+             </mi>
+            </mrow>
+           </mfrac>
+          </mrow>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mi>
+               s
+              </mi>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mi>
+               r
+              </mi>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mi>
+            m
+           </mi>
+           <mi>
+            n
+           </mi>
+           <mi>
+            α
+           </mi>
+           <msup>
+            <mrow>
+             <mrow>
+              <mo>
+               (
+              </mo>
+              <mrow>
+               <mi>
+                α
+               </mi>
+               <mi>
+                h
+               </mi>
+              </mrow>
+              <mo>
+               )
+              </mo>
+             </mrow>
+            </mrow>
+            <mrow>
+             <mi>
+              n
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msup>
+          </mrow>
+          <mrow>
+           <msup>
+            <mrow>
+             <mrow>
+              <mo>
+               [
+              </mo>
+              <mrow>
+               <mn>
+                1
+               </mn>
+               <mo>
+                +
+               </mo>
+               <msup>
+                <mrow>
+                 <mrow>
+                  <mo>
+                   (
+                  </mo>
+                  <mrow>
+                   <mi>
+                    α
+                   </mi>
+                   <mi>
+                    h
+                   </mi>
+                  </mrow>
+                  <mo>
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+                <mi>
+                 n
+                </mi>
+               </msup>
+              </mrow>
+              <mo>
+               ]
+              </mo>
+             </mrow>
+            </mrow>
+            <mrow>
+             <mi>
+              m
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msup>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O diâmetro característico dos poros da amostra é fornecido pela equação da capilaridade, apresentada a seguir:
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mn>
+            4
+           </mn>
+           <mi>
+            γ
+           </mi>
+           <mi>
+            cos
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mi>
+             φ
+            </mi>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>
+             ρ
+            </mi>
+            <mrow>
+             <mi>
+              a
+             </mi>
+             <mi>
+              g
+             </mi>
+            </mrow>
+           </msub>
+           <mi>
+            g
+           </mi>
+           <mi>
+            h
+           </mi>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     na qual,
+     <math>
+      <mi>
+       γ
+      </mi>
+     </math>
+     é a tensão superficial da água,
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     o ângulo de contato da água e as paredes do poro
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mi>
+          φ
+         </mi>
+         <mo>
+          ≈
+         </mo>
+         <mn>
+          0
+         </mn>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     ,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ρ
+        </mi>
+        <mrow>
+         <mi>
+          a
+         </mi>
+         <mi>
+          g
+         </mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     a densidade da água, g a aceleração da gravidade, e h a tensão à qual a amostra é submetida
+    </p>
+    <p>
+     Para valores típicos dos parâmetros físicos envolvidos na equação, essa equação se torna:
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mn>
+            298
+           </mn>
+          </mrow>
+          <mi>
+           h
+          </mi>
+         </mfrac>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     a qual fornece o diâmetro característico do poro em micrômetros
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mi>
+          μ
+         </mi>
+         <mi>
+          m
+         </mi>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     a partir da tensão h aplicada à amostra dada em quilo Pascais
+     <math>
+      <mrow>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <mi>
+          k
+         </mi>
+         <mi>
+          P
+         </mi>
+         <mi>
+          a
+         </mi>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     .
+    </p>
+    <h2>
+     2.6 Modelo simplificado de Hilpert e Miller para a descrição dos poros de um meio poroso
+    </h2>
+    <p>
+     No modelo simplificado de Hilpert e Miller (HM)
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] M. Hilpert e C.T. Miller, Adv. Water Res. 24, 243 (2001).
+       </span>
+      </span>
+     </span>
+     o sistema poroso é idealizado como sendo constituído por um conjunto de esferas rígidas que formam uma estrutura do tipo cúbica simples (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1a
+     </a>
+     ). A intersecção das esferas com a célula unitária associada a essa estrutura determina o menor diâmetro do poro encontrado nesse meio poroso (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 1a
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1b
+     </a>
+     ) e o vazio encontrado entre as esferas nesse arranjo determina o diâmetro do maior poro (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 1a
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1c
+     </a>
+     )
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      a) Célula unitária associada à estrutura Cúbica Simples. b) Corte mostrando a geometria do menor poro da estrutura (determinado pelo plano paralelo a uma das faces dela, cinza claro na
+      <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 1a
+      </a>
+      ) c) Corte mostrando a geometria do maior poro encontrado na estrutura (determinado pelo plano diagonal a ela, cinza escuro na
+      <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+       <span class="sci-ico-fileFigure">
+       </span>
+       figura 1a
+      </a>
+      ).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Em corte, as geometrias utilizadas para se encontrar esses diâmetros são apresentadas na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 1(b)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1(c)
+     </a>
+    </p>
+    <p>
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Da Figura 1(b)
+     </a>
+     observa-se a seguinte relação entre o diâmetro do poro "
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         d
+        </mi>
+        <mi>
+         P
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     " e o diâmetro "
+     <math>
+      <mrow>
+       <mi>
+        D
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mi>
+        r
+       </mi>
+      </mrow>
+     </math>
+     " das partículas que compõem o sistema poroso:
+     <math>
+      <mrow>
+       <msup>
+        <mrow>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            r
+           </mi>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             d
+            </mi>
+            <mi>
+             P
+            </mi>
+           </msub>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <mn>
+        2
+       </mn>
+       <msup>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          r
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        ⇔
+       </mo>
+       <msub>
+        <mi>
+         d
+        </mi>
+        <mi>
+         P
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mi>
+        r
+       </mi>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <msqrt>
+          <mn>
+           2
+          </mn>
+         </msqrt>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        414
+       </mn>
+       <mi>
+        D
+       </mi>
+      </mrow>
+     </math>
+    </p>
+    <p>
+     O maior poro encontrado nesse mesmo empacotamento, o qual está localizado no interior da célula unitária é descrito pela geometria apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Pontos utilizados e a equação de calibração do sensor de umidades.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Da
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1(c)
+     </a>
+     observa-se a seguinte relação entre o maior diâmetro do poro "
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         d
+        </mi>
+        <mi>
+         P
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     " e o diâmetro "
+     <math>
+      <mrow>
+       <mi>
+        D
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mi>
+        r
+       </mi>
+      </mrow>
+     </math>
+     " das partículas que compõem o sistema poroso:
+     <math>
+      <mrow>
+       <msup>
+        <mrow>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            r
+           </mi>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             D
+            </mi>
+            <mi>
+             P
+            </mi>
+           </msub>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        =
+       </mo>
+       <msup>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          r
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        +
+       </mo>
+       <msup>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mn>
+          2
+         </mn>
+         <mi>
+          r
+         </mi>
+         <msqrt>
+          <mn>
+           2
+          </mn>
+         </msqrt>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        ⇔
+       </mo>
+       <msub>
+        <mi>
+         D
+        </mi>
+        <mi>
+         P
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mi>
+        r
+       </mi>
+       <mrow>
+        <mo>
+         (
+        </mo>
+        <mrow>
+         <msqrt>
+          <mn>
+           3
+          </mn>
+         </msqrt>
+         <mo>
+          −
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mo>
+         )
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        732
+       </mn>
+       <mi>
+        D
+       </mi>
+      </mrow>
+     </math>
+    </p>
+    <p>
+     Ao se analisar uma amostra composta pela mistura de partículas de vários diâmetros característicos,
+     <i>
+      D
+     </i>
+     é tomado como a média aritmética entre os diâmetros das maiores e das menores partículas que a compõe. Desta forma, considerando-se as areias de granulometrias 212-500 μm e 500-100 μm, esses diâmetros médios são, respectivamente, 356 e 750 μm.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Resultados Obtidos
+    </h1>
+    <p>
+     Os pontos utilizados para a calibração do sensor de umidade e a curva de calibração proposta para a interpolação dele é apresentada na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     .
+    </p>
+    <p>
+     Verifica-se que a curva proposta interpola muito bem os pontos experimentais, visto que o valor do coeficiente de determinação apresentado está muito próximo de 1
+     <math>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msup>
+        <mi>
+         r
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        ≈
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        996
+       </mn>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     Partindo-se dessa expressão, a umidade de uma amostra pode ser calculada a partir dos valores de M indicados pelo sensor como segue:
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <msub>
+          <mi>
+           θ
+          </mi>
+          <mi>
+           v
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mn>
+           1
+          </mn>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mo>
+            ,
+           </mo>
+           <mn>
+            763
+           </mn>
+          </mrow>
+         </mfrac>
+         <mi>
+          ln
+         </mi>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mn>
+              1024
+             </mn>
+             <mo>
+              ,
+             </mo>
+             <mn>
+              9
+             </mn>
+            </mrow>
+            <mi>
+             M
+            </mi>
+           </mfrac>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como pode ser observado, o sensor utilizado não possui uma resposta linear com a umidade da amostra. Portanto, a realização da calibração constitui-se numa importante tarefa, a qual deve ser conduzida inicialmente para a realização de experimentos envolvendo o sensor e as amostras porosas de interesse.
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     são apresentadas as curvas de retenção das duas amostras analisadas e na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     os coeficientes de ajuste da equação de van Genuchten
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] M.Th. van Genuchten, Soil Sci. Soc. Am. J. 44, 892 (1980).
+       </span>
+      </span>
+     </span>
+     para os pontos obtidos para a CRA.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Curvas de retenção para as areias investigadas. Nelas são apresentadas as tensões relativas aos poros do modelo simplificado de HM para cada amostra.
+      <br/>
+     </div>
+    </div>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Coeficientes de ajuste da equação de van Genuchten
+      <span class="ref">
+       <strong class="xref xrefblue">
+        [10]
+       </strong>
+       <span class="refCtt closed">
+        <span>
+         [10] M.Th. van Genuchten, Soil Sci. Soc. Am. J. 44, 892 (1980).
+        </span>
+       </span>
+      </span>
+      e o coeficiente de determinação
+      <math>
+       <mrow>
+        <msup>
+         <mtext>
+          r
+         </mtext>
+         <mn>
+          2
+         </mn>
+        </msup>
+       </mrow>
+      </math>
+      associado aos ajustes.
+      <br/>
+     </div>
+    </div>
+    <p>
+     É interessante observar que as maiores variações do conteúdo de água para a areia mais fina (212-500 μm) ocorrem no intervalo de tensões localizadas entre 1 e 5 kPa enquanto que para a mais grossa (500-1000 \textmu m) estas ocorrem entre 0,5 e 1 kPa. Isto é um indicativo de que, em média, amostras de texturas mais finas possuem capilares com dimensões características menores, nos quais as forças capilares são de maior intensidade, exigindo maiores valores de tensões aplicadas para serem drenados.
+    </p>
+    <p>
+     As FCAs das amostras analisadas são apresentadas na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      FCAs das amostras investigadas. Nelas são apresentados os diâmetros que aparecem no modelo simplificado de HM para cada amostra investigada.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como observado na curva de retenção, as FCAs indicam que a amostra de granulometria mais fina, areia 212-500 μm, possui em média poros de diâmetros característicos menores. O pico da distribuição para essa amostra ocorre em um valor de diâmetro ao redor de 160 μm, o qual corresponde na curva de retenção a uma tensão aplicada de aproximadamente 2 kPa. Já para a amostra de granulometria mais grossa, areia 500-100 μm, esses valores ficam, respectivamente, em torno de 400
+     <math>
+      <mi>
+       μ
+      </mi>
+      <mtext>
+       m
+      </mtext>
+     </math>
+     e 0,75 kPa.
+    </p>
+    <p>
+     Quanto ao modelo (HM) os limites relativos aos poros maiores e menores, respectivamente,
+     <math>
+      <mrow>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        732
+       </mn>
+       <mi>
+        D
+       </mi>
+       <mtext>
+       </mtext>
+       <mtext>
+        e
+       </mtext>
+       <mtext>
+       </mtext>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        41
+       </mn>
+       <mi>
+        D
+       </mi>
+      </mrow>
+     </math>
+     , estão indicados nas FCAs e CRAs relativas às amostras analisadas (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 3
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     ).
+    </p>
+    <p>
+     Verifica-se que grande parte da água das amostras é extraída entre esses dois limites o que indica que o modelo, em média, descreve razoavelmente os poros que devem estar presentes nas amostras.
+    </p>
+    <p>
+     Desta forma, a calibração do sensor de umidade permitiu a determinação da CRA com bastante sucesso. A curva de distribuição de poros foi obtida a partir da CRA e possibilitou inferir-se sobre a estrutura do meio poroso analisado. Estas duas propriedades físicas, a retenção e a distribuição dos poros da amostra, são de extrema importância nas áreas de Engenharias Civil, Agronômica e Ambiental. Desta forma, o experimento proposto e os procedimentos apresentados possuem grande potencial e podem ser facilmente implementados nos cursos de Física Experimental para cursos nessas áreas da Engenharia.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Conclusão
+    </h1>
+    <p>
+     Apresentou-se a utilização de um sensor de umidade para o Arduino no levantamento de pontos para a determinação da curva de retenção de amostras porosas constituídas de areias. Mostrou-se que uma etapa importante do estudo consiste na determinação da curva de calibração para o sensor, uma vez que a equação de calibração mais adequada para o sensor utilizado foi do tipo exponencial pois, o coeficiente de determinação associado à essa interpolação foi muito próximo de 1
+     <math>
+      <mrow>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msup>
+        <mi>
+         r
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo>
+        ≈
+       </mo>
+       <mn>
+        0
+       </mn>
+       <mo>
+        ,
+       </mo>
+       <mn>
+        996
+       </mn>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     . Os pontos das CRAs foram interpolados com sucesso pela equação de van Genuchten com coeficientes de determinação acima de 0,996. Das CRAs obtidas mostrou-se que os limites descritos no modelo HM
+     <math>
+      <mrow>
+       <mtext>
+        (0,41
+       </mtext>
+       <mi>
+        D
+       </mi>
+       <mtext>
+        e 0,732
+       </mtext>
+       <mi>
+        D
+       </mi>
+       <mtext>
+        )
+       </mtext>
+      </mrow>
+     </math>
+     são aqueles entre os quais ocorrem as maiores variações da umidade das amostras estudadas. Além disso a análise das FCAs mostra que grande parte dos poros das amostras se concentra entre esses limites
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        D. Hillel,
+        <i>
+         Introduction to Environmental Soil Physics
+        </i>
+        (Academic Press, San Diego, 1998).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        R.N. Onody, A.N.D. Posadas e S. Crestana, J. of Appl. Phys.
+        <b>
+         78
+        </b>
+        , 2970 (1995).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        P.M. Dellamatrice e R.T.R. Monteiro, Rev. Bras. Eng. Agríc. Ambient.
+        <b>
+         18
+        </b>
+        , 1296 (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        E. Ganju, S. Rahman, M. Prezzi, R. Salgado e N. Siddiki, Relatório FHWA/IN/JTRP-2016/27, Joint Transportation Research Program Publication, West Lafayette (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        W.A. Jury e R. Horton,
+        <i>
+         Soil Physics
+        </i>
+        (Wiley, New York, 2004).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        R. Armindo e O. Wendroth, Soil Sci. Soc. Am. J.
+        <b>
+         80
+        </b>
+        , 1167 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        F.A.M. Cássaro, L.F. Pires, R.A. dos Santos, D. Giménez e K. Reichardt, R. Bras. Ci. do Solo
+        <b>
+         32
+        </b>
+        , 2555 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        D.E. Radcliffe e J. Simunek,
+        <i>
+         Soil Physics with Hydrus
+        </i>
+        (CRC Press, Boca Raton, 2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        M. Hilpert e C.T. Miller, Adv. Water Res.
+        <b>
+         24
+        </b>
+        , 243 (2001).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        M.Th. van Genuchten, Soil Sci. Soc. Am. J.
+        <b>
+         44
+        </b>
+        , 892 (1980).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        09 Set 2019
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2020
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        04 Jun 2019
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        12 Jul 2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

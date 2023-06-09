@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173812059" target="_blank">
+    https://doi.org/10.1590/S1806-11173812059
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812059">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0" data-toggle="tooltip">
+  </span>
+  Deteção da radiação térmica emitida por um filamento de tungstênio aquecido
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Detection of the thermal radiation emitted by a hot tungsten filament
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Luis Peralta
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     *Endereço de correspondência:
+     <a href="mailto:luis@lip.pt">
+      luis@lip.pt
+     </a>
+     .
+    </div>
+    Faculdade de Ciências, Universidade de Lisboa, Lisboa, PortugalLaboratório de Instrumentação e Física Experimental de Partículas, Universidade de Lisboa, Lisboa, Portugal
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Florbela Rego
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Laboratório de Instrumentação e Física Experimental de Partículas, Universidade de Lisboa, Lisboa, Portugal
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     A demonstração da lei de Stefan-Boltzmann recorrendo a uma lâmpada de incandescência como corpo negro já se tornou uma experiência clássica. Neste artigo exploramos a utilização de fotodíodos de baixo custo como fotodetetores neste tipo de experiência e apresentamos uma discussão dos resultados obtidos com base na distribuição espetral de Planck.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     lei de Stefan-Boltzmann; distribuição de Planck; fotodíodos
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The demonstration of the Stefan-Boltzmann law using a hot tungsten filament has become a classical experiment. In this article we investigate the use of low cost photodiodes as the photodetectors of the experiment. The obtained results are discussed in the framework of Planck's spectral distribution.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Stefan-Boltzmann law; Planck's distribution; photodiodes
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Um corpo que se encontre a uma temperatura diferente de zero kelvin irá radiar energia sob a forma de radiação eletromagnética. Para um corpo de propriedades ideais, conhecido como corpo negro, a distribuição espectral da potência emitida por unidade de área é descrita pela distribuição de Planck
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.W. Rohlf, Modern Physics from a to Z0 (John Wiley and Sons, New York, 1994).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R.A. Serway and J.W. Jewett, Physics for Scientists and Engineers with Modern Physics (Cengage Learning, Boston, 2013), 9th ed.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+    </p>
+    <div class="row formula" id="ee1">
+     <a name="e1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/b1657a60da94a3dba1292617351b499f0a03e57a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      h
+     </i>
+     é a constante de Planck,
+     <i>
+      c
+     </i>
+     a velocidade da luz,
+     <i>
+      k
+     </i>
+     a constante de Boltzmann, λ o comprimento de onda e
+     <i>
+      T
+     </i>
+     a temperatura absoluta do corpo. A potência total radiada pelo corpo negro por unidade de área é assim obtida por integração da distribuição espectral para todos os comprimentos de onda
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] J.W. Rohlf, Modern Physics from a to Z0 (John Wiley and Sons, New York, 1994).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] R.A. Serway and J.W. Jewett, Physics for Scientists and Engineers with Modern Physics (Cengage Learning, Boston, 2013), 9th ed.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+    </p>
+    <div class="row formula" id="ee2">
+     <a name="e2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/b37c8c4eade7df1f2fcd52dfecbf1a0cc3fdb91b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     obtendo-se a conhecida lei de Stefan-Boltzmann onde σ = 5,6704 × 10−
+     <sup>
+      8
+     </sup>
+     Wm−
+     <sup>
+      2
+     </sup>
+     K
+     <sup>
+      −4
+     </sup>
+     . A potência por unidade de área radiada por um corpo real à temperatura
+     <i>
+      T
+     </i>
+     , é menor que a prevista pela lei de Stefan-Boltzmann para o corpo negro, pelo que se introduz a grandeza emissividade ε, tal que
+    </p>
+    <div class="row formula" id="ee3">
+     <a name="e3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/1b9f04585736e26a2c917f22eb01a75d184ec39a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Neste trabalho iremos descrever algumas experiências sobre radiação térmica que podem ser realizadas por estudantes do Ensino Médio ou superior utilizando dispositivos de baixo custo e que podem inclusive ser construídos pelos próprios estudantes.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. O fio de tungsténio como radiador
+    </h1>
+    <p>
+     Desde há várias décadas que foi reconhecido que o filamento de tungsténio de uma lâmpada de incandescência poderia ser utilizado como radiador sendo usado em experiências de verificação da lei de Stefan-Boltzmann
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] I.R. Edmonds, American Journal of Physics 36, 845 (1968).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [4] B.S.N. Prasad and Rita Mascarenhas, American Journal of Physics 46, 420 (1978).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [5] 36th International Olympaid, Salamanca, webpage http://www.jyu.fi/tdk/kastdk/olympiads/2005/Exp.pdf, acesso em 2015.
+       </span>
+       <br/>
+       <a href="http://www.jyu.fi/tdk/kastdk/olympiads/2005/Exp.pdf" target="_blank">
+        http://www.jyu.fi/tdk/kastdk/olympiads/2...
+       </a>
+       <br/>
+       <br/>
+       <span>
+        [6] Imtiaz Ahmad, Sidra Khalid and Ehsan E. Khawaja, Lat. Am. J. Phys. Educ. 4 74 (2010).
+       </span>
+       <br/>
+       <br/>
+       <span>
+        [7] Marcello Carla, Am. J. Phys. 81, 512 (2013).
+       </span>
+      </span>
+     </span>
+     <sup>
+      -
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] Francisco J. Abellan, Jose A. Ibañez, Ramon P. Valerdi and Jose A. Garcia, Eur. J. Phys. 34, 1221 (2013).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Uma das principais vantagens da sua utilização é a possibilidade de controlo e medida da temperatura do filamento a partir das medidas da diferença de potencial aplicada e da intensidade de corrente que o percorre.
+    </p>
+    <p>
+     Para pequenas variações de temperatura a resistividade ρ de um fio metálico pode ser aproximada pela expressão
+    </p>
+    <div class="row formula" id="ee4">
+     <a name="e4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/51fd339c01b3174beb646f684f718702f187e12b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que α é o coeficiente térmico de resistência, e ρ a resistividade à temperatura
+     <i>
+      T
+     </i>
+     . Para o tungsténio à temperatura ambiente α =0, 0053 K
+     <sup>
+      −1
+     </sup>
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] B.S.N. Prasad and Rita Mascarenhas, American Journal of Physics 46, 420 (1978).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] Francisco J. Abellan, Jose A. Ibañez, Ramon P. Valerdi and Jose A. Garcia, Eur. J. Phys. 34, 1221 (2013).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     ).
+    </p>
+    <p>
+     Para variações da ordem das dezenas ou centenas de kelvin, esta lei não é válida sendo necessário recorrer a tabelas de valores medidos ou a expressões empíricas ajustadas a esses dados
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] V. Zanetti, Am. J. Phys. 53, 546 (1985).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Várias parametrizações da dependência da resistividade na temperatura têm sido propostas com base nesses valores. Uma forma particularmente útil para a obtenção da temperatura a partir da medida da resistência elétrica do filamento de tungsténio é
+    </p>
+    <div class="row formula" id="ee5">
+     <a name="e5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/8c4c00d3b1343e8327ab5552c6cd16ae6b37a311.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     No nosso trabalho recorremos à tabela publicada por Desai
+     <i>
+      et al.
+     </i>
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] P.D. Desai, T.K. Chu, H.M. James and C.Y. Ho, J. Phys. Chem. Ref. Data 13, 1069 (1984).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Fazendo o ajuste a esses dados usando a
+     <a class="open-asset-modal" data-target="#ModalSchemee5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     obtemos os valores
+     <i>
+      T
+     </i>
+     = 297,7 K e
+     <i>
+      β
+     </i>
+     = 0,8087 sendo o valor de referência da resistência
+     <i>
+      R
+     </i>
+     medido à temperatura de 300 K.
+    </p>
+    <p>
+     A medida da temperatura do filamento pode ser negativamente afetada por um valor incorreto da resistência à temperatura ambiente. Em particular, no caso em que esse valor é da ordem de apenas alguns ohm, a incerteza cometida quando a medição é realizada com um ohmímetro de baixo custo pode ser bastante elevada (10% ou maior) comprometendo os valores obtidos de temperatura. Assim no caso de se utilizar um ohmímetro digital comum (resolução típica igual a 0,1 Ω) na experiência devem ser utilizadas de preferência lâmpadas de resistência ohmíca o mais elevada possível (superior a 10 Ω) de forma obtermos incertezas da ordem do 1 a 2%. No caso se empregarem lâmpadas de baixo valor de resistência (por exemplo de 1 a 5 Ω) deverá ser utilizado um ohmímetro com boa resolução (0,01 Ω ou melhor).
+    </p>
+    <p>
+     Os fabricantes não fornecem normalmente o valor da resistência elétrica das lâmpadas, mas a tensão de trabalho e a potência dissipada ou a intensidade de corrente. Usando a
+     <a class="open-asset-modal" data-target="#ModalSchemee5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     e a relação R = V
+     <sup>
+      2
+     </sup>
+     /P podemos obter a resistência
+     <i>
+      R
+     </i>
+     da lâmpada à temperatura ambiente
+     <i>
+      T
+     </i>
+     a partir do valor da tensão
+     <i>
+      V
+     </i>
+     e da potência dissipada
+     <i>
+      P
+     </i>
+    </p>
+    <div class="row formula" id="ee6">
+     <a name="e6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/81e8804aff87d0ac116b0cc10c8dd9c22c4d8198.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     Desta relação verificamos que para um determinado valor de tensão de trabalho da lâmpada, quanto menor for a potência dissipada maior é a sua resistência à temperatura ambiente. A temperatura de trabalho das lâmpadas varia num intervalo relativamente largo (2000 a 3000 K) pelo que não é possível à priori estabelecer só com os valores de
+     <i>
+      V
+     </i>
+     e
+     <i>
+      P
+     </i>
+     qual o valor de
+     <i>
+      R
+     </i>
+     . Assim a
+     <a class="open-asset-modal" data-target="#ModalSchemee6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (6)
+     </a>
+     serve apenas para dar uma indicação da lâmpada a escolher.
+    </p>
+    <p>
+     Devido ao baixo valor da resistência de uma lâmpada, as resistência parasitas podem inﬂuenciar a medição do seu valor. Assim, a medição da resistência da lâmpada não deve ser efetuada utilizando as pontas de prova do multímetro, mas soldando directamente fios de calibre adequado à lâmpada, na ponta dos quais se colocam fichas banana, para a ligação ao aparelho de medida. Em virtude dos baixos valores envolvidos, a resistência elétrica dos fios de ligação também devem ser medida separadamente da lâmpada de forma a que o seu valor possa ser descontado.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Construção do sistema de deteção
+    </h1>
+    <p>
+     Os fotodíodos de silício (do tipo PIN
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] Thomas L. Floyd, Electronic Devices, Conventional Current Version (Prentice Hall, Boston, 2012), 9th ed.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     ) são sensíveis a uma gama de comprimentos de onda que vai do ultravioleta próximo (≈300 nm) até ao infravermelho próximo (≈1200 nm) . Existem no mercado fotodíodos de baixo custo que permitem a realização de uma forma fácil de montagens para demonstrações experimentais. Neste trabalho usámos os fotodíodos BP104 (infravermelho) e BPW34 (visível e infravermelho). Para a amplificação do sinal optámos por construir um amplificador de transimpedância utilizando o integrado LM324. Este integrado é polarizado apenas com uma fonte de alimentação (que pode ser por exemplo uma pilha de 9 V) o que é uma vantagem para a sua utilização na escola. O sinal em corrente produzido no fotodíodo é amplificado e convertido numa tensão, que é lida à saída do amplificador com um voltímetro digital. O esquema de principio do amplificador é apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     . A resistência
+     <i>
+      Rf
+     </i>
+     de realimentação controla o ganho do amplificador, dado que a tensão de saída é dada pela relação
+     <i>
+      V
+      <sub>
+       out
+      </sub>
+     </i>
+     =
+     <i>
+      I
+      <sub>
+       f
+      </sub>
+      R
+      <sub>
+       f
+      </sub>
+     </i>
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] Thomas L. Floyd, Electronic Devices, Conventional Current Version (Prentice Hall, Boston, 2012), 9th ed.
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     , sendo
+     <i>
+      I
+      <sub>
+       f
+      </sub>
+     </i>
+     a corrente à entrada do amplificador. Para o tipo de aplicação deste trabalho um valor da ordem de 100 kΩ, mostrou ser adequado para
+     <i>
+      Rf
+     </i>
+     , pois obtivemos na tensão de saída valores que podiam chegar a vários volt. O filtro RC passa-baixo pretende eliminar interferências que possam perturbar o valor lido à saída, não sendo críticos os valores dos componentes. Este tipo de amplificador foi utilizado para a leitura dos fotodíodos BP104 e BPW34. A sua montagem pode ser realizada de forma fácil sobre uma placa de ensaio (
+     <i>
+      breadboard
+     </i>
+     em inglês
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] 
+					http://pt.wikipedia.org/wiki/Placa_de_Ensaio, acesso em 2015.
+       </span>
+       <br/>
+       <a href="http://pt.wikipedia.org/wiki/Placa_de_Ensaio" target="_blank">
+        http://pt.wikipedia.org/wiki/Placa_de_En...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     ) ou sobre uma placa de circuito impresso pré-perfurada
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] 
+					http://en.wikipedia.org/wiki/Stripboard, acesso em 2015.
+       </span>
+       <br/>
+       <a href="http://en.wikipedia.org/wiki/Stripboard" target="_blank">
+        http://en.wikipedia.org/wiki/Stripboard...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     no caso de pretendermos uma montagem com maior durabilidade.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Esquema do amplificador de transimpedância usado para ler o sinal do fotodíodo.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Montagem experimental
+    </h1>
+    <p>
+     Para a realização da experiência será conveniente evitar a interferência da luz ambiente. Escolhemos então um tubo de plástico, com 20 cm de comprimento, dos vulgarmente usados em instalações elétricas. Para garantir a total ausência de luz ambiente no seu interior, envolvemos o tubo em folha de alumínio. A lâmpada de incandescência de baixa tensão (do tipo usado nas lanternas de bolso) foi colocada numa extremidade do tubo e o fotodíodo na outra extremidade. Rolhas, feitas em espuma de alta densidade foram colocadas nas extremidades do tubo para impedir a saída da lâmpada e fotodíodo.
+    </p>
+    <p>
+     A lâmpada foi ligada em série com um amperímetro digital para a medida da intensidade de corrente. Este conjunto foi ligado a uma fonte variável de baixa tensão. Em paralelo com a lâmpada foi colocado um voltímetro digital para a leitura da queda de tensão. O fotodíodo foi ligado ao amplificador anteriormente descrito, sendo a saída deste ligada a um voltímetro digital. O esquema da montagem experimental usada é apresentado na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     . Na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     apresentamos uma fotografia do dispositivo com todos os elementos necessários à realização da experiência.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Esquema da montagem experimental usada
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Fotografia da montagem experimental. O fotodíodo e a lâmpada foram colocados dentro de um tubo de plástico envolvido em folha de alumínio para o tornar completamente opaco à luz ambiente.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Análise dos dados
+    </h1>
+    <p>
+     Se utilizarmos um detetor em que a janela de sensibilidade cobre apenas uma porção restrita do espetro de comprimentos de onda, apenas detetamos uma fração da potência radiada pela fonte. Assim em geral não iremos obter uma dependência da potência radiada com a quarta potência da temperatura. Nesse caso a potência radiada por unidade de área será dada pelo integral da distribuição espectral de potência por unidade de área na janela de comprimentos de onda correspondente à janela de sensibilidade do fotodetector
+    </p>
+    <div class="row formula" id="ee7">
+     <a name="e7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/3663ae88976e0f2594baa19f0595c2e703da9652.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      S
+     </i>
+     (λ) é a sensibilidade do fotodetector.
+    </p>
+    <p>
+     Os fotodetetores usados foram os fotodíodos BP104 e o BPW34 que são de baixo custo (o preço típico varia entre 1 a 2 euros). O primeiro fotodíodo cobre uma janela de comprimentos de onda no infravermelho (800-1100 nm) e o segundo cobre uma gama de comprimentos de onda que se estende do visível ao infravermelho (430-1100 nm).
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     está representada a distribuição de Planck para três valores de temperatura (1500, 2250 e 3000 K) e sobrepostas a tracejado as janelas de sensibilidade dos fotodíodos BP104 e BPW34.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Distribuição de Planck para 3 valores de temperatura: 1500, 2250 e 3000 K. A tracejado encontra-se a janela de sensibilidade de cada um dos fotodíodos: BP104 linhas vermelhas tracejado pequeno e BPW34 linhas azuis tracejado largo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os fotodíodos não possuem uma sensibilidade constante em toda a janela de comprimentos de onda tendo então as curvas de sensibilidade sido parametrizadas de forma aproximada por polinómios de grau 3 a partir da curva fornecida pelo fabricante dos fotodíodos. Na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     encontram-se o valor dos coeficientes dos polinómios utilizados. De notar que esta parametrização apenas reproduz de uma geral o comportamento da sensibilidade dos fotodíodos, não pretendendo ser um ajuste fiel das respetivas curvas, para o qual teríamos que utilizar polinómios de ordem superior. O procedimento para a obtenção da parametrização a partir das curvas dos fabricantes foi o seguinte: começámos por digitalizar o gráfico da sensibilidade do fotodíodo. A figura assim obtida foi transferida para uma folha de cálculo. Foi então sobreposto um gráfico
+     <i>
+      xy
+     </i>
+     de idênticas dimensões e de escalas em
+     <i>
+      x
+     </i>
+     e
+     <i>
+      y
+     </i>
+     idênticas ao gráfico do fabricante. Para um conjunto de 30 valores do comprimento de onda (eixo do
+     <i>
+      x
+     </i>
+     ) foram escolhidos valores de sensibilidade (eixo do
+     <i>
+      y
+     </i>
+     ) de forma a que os correspondentes pontos no gráfico coincidam com a curva do fabricante. Uma vez obtido este conjunto de ponto é efetuado aos mesmos um ajuste polinomial.
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Coeficientes do polinómio
+      <i>
+       S
+      </i>
+      (λ) =
+      <i>
+       A
+       <sub>
+        0
+       </sub>
+       + A
+       <sub>
+        1
+       </sub>
+       λ + A
+       <sub>
+        2
+       </sub>
+       λ
+       <sup>
+        2
+       </sup>
+       + A
+       <sub>
+        3
+       </sub>
+       λ
+       <sup>
+        3
+       </sup>
+      </i>
+      de ajuste das curvas de sensibilidade dos fatodíodos BP104 e BPW34 (comprimento de onda λ em metros).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para janelas de comprimento de onda pequenos (como as dos fotodíodos usados) o integral da
+     <a class="open-asset-modal" data-target="#ModalSchemee7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (7)
+     </a>
+     pode ser aproximado por um somatório (integração por trapézios)
+    </p>
+    <div class="row formula" id="ee8">
+     <a name="e8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/tCtw7CDTdd398RdxWxymbWF/06f5f42d6a590e5d1c37ae14c1887ae8a6fc71fd.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que o intervalo de comprimentos de onda λ
+     <sub>
+      <i>
+       n
+      </i>
+     </sub>
+     − λ
+     <sub>
+      1
+     </sub>
+     é dividido em n subintervalos de largura Δλ =(λ
+     <sub>
+      <i>
+       n
+      </i>
+     </sub>
+     − λ
+     <sub>
+      1
+     </sub>
+     ) /
+     <i>
+      n
+     </i>
+     sendo as funções calculadas nos n pontos intermédios λ
+     <sub>
+      <i>
+       k
+      </i>
+     </sub>
+     = λ
+     <sub>
+      1
+     </sub>
+     + (
+     <i>
+      k
+     </i>
+     − 1/2) Δλ (
+     <i>
+      k
+     </i>
+     = 1,
+     <i>
+      n
+     </i>
+     ) de cada um dos subintervalos . Este tipo de somatório pode ser facilmente obtido numa folha cálculo sendo a incerteza obtida com um passo Δλ = 10 nm menor que 0,1%.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Resultados
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     estão os resultados obtidos para os fotodíodos BP104 e BPW34 com uma lâmpada de resistência R = 15, 1Ω. O somatório foi obtido com o recurso a uma folha de cálculo e utilizou-se um passo Δλ = 10 nm. Para a emissividade do filamento foi considerado um valor constante. Para efeitos de comparação entre os dados e a curva teórica, normalizamos ambas as curvas ao ponto de temperatura aproximadamente igual a 2000 K. São apresentadas as curvas considerando as sensibilidades como constantes na janela de comprimentos de onda dos fotodíodos ou variando de acordo com as funções dadas na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     . Tal como pode ser verificado a partir dos gráficos o acordo obtido entre a previsão teórica e os dados obtidos experimentalmente é muito boa.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Sinal obtido com os fotodíodos BP104 e BPW34 em função da temperatura. As curvas são a previsão teórica da distribuição de Planck com sensibilidade constante (curva vermelha na versão eletrônica) e sensibilidade dada por uma das curvas da
+      <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+       <span class="sci-ico-fileTable">
+       </span>
+       Tabela 1
+      </a>
+      (curva verde na versão eletrônica). As curvas foram normalizadas ao valor do sinal correspondente à temperatura de aproximadamente 2000 K.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para temperaturas elevadas a janela de sensibilidade do fotodíodo BPW34 cobre uma porção importante do espectro de emissão térmico (ver
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     ). Para este intervalo de temperaturas o sinal dado pelo fotodíodo tem um comportamento que se aproxima de uma variação com a quarta potência da temperatura (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     ). Contudo, não é recomendável elevar a temperatura muito acima dos 3000 K. Embora o ponto de fusão do tungsténio se encontre a 3695 K, existe o perigo de antes de se atingir essa temperatura o filamento começar a vaporizar, indo depositar-se no vidro da lâmpada. Esta irá adquirir um aspecto acinzentado, perdendo parte da sua transparência, em consequência deixando passar uma menor quantidade de radiação, comprometendo os resultados obtidos.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Sinal obtido com o fotodíodo BPW34 em função da quarta potência da temperatura
+      <i>
+       T
+      </i>
+      <sup>
+       4
+      </sup>
+      , no intervalo entre 2200 e 3000 K. A linha a tracejado é um ajuste linear aos dados
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     7. Conclusão
+    </h1>
+    <p>
+     Esta experiência permite mostrar aos alunos diversos aspectos de uma medida experimental. Desde logo o facto do instrumento de medida ter um alcance limitado (em comprimento de onda) o que inﬂuencia de forma decisiva a medida que é possível obter. A sensibilidade em função do comprimento de onda do fotodíodo não é uniforme o que introduz uma pequena distorção na curva medida face ao previsto. Essa distorção pôde ser corrigida introduzindo uma função de sensibilidade do fotodíodo que, embora aproximada, permite obter uma curva mais próxima dos dados. O tratamento dos dados conduz também ao conceito de cálculo aproximado de um integral por métodos numéricos elementares.
+    </p>
+    <p>
+     Uma última palavra sobre sistema de deteção da luz. Existem no mercado conversores integrados luz-tensão como seja o caso dos TSL12S/13S/14S
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] 
+					http://www.ece.usu.edu/ece_store/spec/856-TSL14S-LF.pdf, acesso em 2015.
+       </span>
+       <br/>
+       <a href="http://www.ece.usu.edu/ece_store/spec/856-TSL14S-LF.pdf" target="_blank">
+        http://www.ece.usu.edu/ece_store/spec/85...
+       </a>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     que podem ser utilizados nesta experiência. Estes integrados necessitam apenas de uma fonte de alimentação (por exemplo uma pilha de 4,5 V) e a sua utilização é muito fácil uma vez que não necessitam de componentes exteriores para o seu funcionamento. Em particular, a janela de comprimento de onda acessível com estes fotodetetores é semelhante à do fotodíodo BPW34. Em virtude também do seu baixo custo (cerca de 1,5 euros por unidade) são uma excelente opção para a realização deste trabalho.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     São devidos agradecimentos à Agência Nacional para a Cultura Científica e Tecnológica de Portugal pelo apoio financeiro dado. Agradecemos igualmente a todos os colegas participantes no Projeto Radiação Ambiente que realizaram a experiência com seus alunos do Ensino Secundário e cujas sugestões permitiram melhorar esta atividade. Finalmente agradecemos ao Prof. Nilson Garcia pelos incentivos à escrita e comentários ao artigo.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        J.W. Rohlf,
+        <i>
+         Modern Physics from a to Z0
+        </i>
+        (John Wiley and Sons, New York, 1994).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        R.A. Serway and J.W. Jewett,
+        <i>
+         Physics for Scientists and Engineers with Modern Physics
+        </i>
+        (Cengage Learning, Boston, 2013), 9
+        <sup>
+         th
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        I.R. Edmonds, American Journal of Physics
+        <b>
+         36
+        </b>
+        , 845 (1968).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        B.S.N. Prasad and Rita Mascarenhas, American Journal of Physics
+        <b>
+         46
+        </b>
+        , 420 (1978).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        36th International Olympaid, Salamanca, webpage http://www.jyu.fi/tdk/kastdk/olympiads/2005/Exp.pdf, acesso em 2015.
+        <br/>
+        <a href="http://www.jyu.fi/tdk/kastdk/olympiads/2005/Exp.pdf" target="_blank">
+         » http://www.jyu.fi/tdk/kastdk/olympiads/2005/Exp.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        Imtiaz Ahmad, Sidra Khalid and Ehsan E. Khawaja, Lat. Am. J. Phys. Educ.
+        <b>
+         4 7
+        </b>
+        4 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        Marcello Carla, Am. J. Phys.
+        <b>
+         81
+        </b>
+        , 512 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        Francisco J. Abellan, Jose A. Ibañez, Ramon P. Valerdi and Jose A. Garcia, Eur. J. Phys.
+        <b>
+         34
+        </b>
+        , 1221 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        V. Zanetti, Am. J. Phys.
+        <b>
+         53
+        </b>
+        , 546 (1985).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        P.D. Desai, T.K. Chu, H.M. James and C.Y. Ho, J. Phys. Chem. Ref. Data
+        <b>
+         13
+        </b>
+        , 1069 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        Thomas L. Floyd,
+        <i>
+         Electronic Devices, Conventional Current Version
+        </i>
+        (Prentice Hall, Boston, 2012), 9
+        <sup>
+         th
+        </sup>
+        ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        http://pt.wikipedia.org/wiki/Placa_de_Ensaio, acesso em 2015.
+        <br/>
+        <a href="http://pt.wikipedia.org/wiki/Placa_de_Ensaio" target="_blank">
+         » http://pt.wikipedia.org/wiki/Placa_de_Ensaio
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        http://en.wikipedia.org/wiki/Stripboard, acesso em 2015.
+        <br/>
+        <a href="http://en.wikipedia.org/wiki/Stripboard" target="_blank">
+         » http://en.wikipedia.org/wiki/Stripboard
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        http://www.ece.usu.edu/ece_store/spec/856-TSL14S-LF.pdf, acesso em 2015.
+        <br/>
+        <a href="http://www.ece.usu.edu/ece_store/spec/856-TSL14S-LF.pdf" target="_blank">
+         » http://www.ece.usu.edu/ece_store/spec/856-TSL14S-LF.pdf
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        21 Jul 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        17 Out 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        <img alt="Creative Common - by 4.0" src="https://licensebuttons.net/l/by/4.0/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

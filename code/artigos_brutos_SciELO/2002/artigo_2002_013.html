@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Seção Especial: Informática no Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 24 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2002
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S0102-47442002000200005" target="_blank">
+    https://doi.org/10.1590/S0102-47442002000200005
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S0102-47442002000200005">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Simulação Monte Carlo com Repesagem Aplicada ao Calor Específico de Sólidos
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Roberto da Silva
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Ribeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto ,  Departamento de Física e Matemática,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     J. R. Drugowich de Felício
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Ribeirão Preto,  
+          ,  São Paulo,  
+        ,  Universidade de São Paulo,  Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto ,  Departamento de Física e Matemática,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Apresenta-se uma estimativa numérica para a contribuição das vibrações da rede para o calor específico de um sólido cristalino. O método Monte Carlo é utilizado tanto em sua forma original quanto em sua versão mais moderna, que emprega a técnica da repesagem para extrair mais informações de cada simulação. Mostra-se como obter curvas contínuas para grandezas como a energia e o calor específico em função da temperatura a partir de simulação feita em apenas uma temperatura. Os resultados analíticos são incluídos para facilitar a comparação com os resultados da simulação.
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     A numerical estimate for the contribution of the lattice to the specific heat of a crystalline solid is presented. The Monte Carlo method is used such in its original form as in its modern version which explores the reweighting technique to extract more information from each simulation. One reveals how to get continuous plots for quantities like energy and specific heat, in function of the temperature, performing just one simulation at a convenient temperature. For the sake of comparison we present also the pertinent analytical results.
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     Simulação Monte Carlo com Repesagem Aplicada ao Calor Específico de Sólidos
+    </p>
+    <p>
+    </p>
+    <p>
+     Roberto da Silva
+     <span class="ref footnote">
+      <sup class="xref">
+       *
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         *
+        </strong>
+        rsilva@dfm.ffclrp.usp.br
+       </span>
+      </span>
+     </span>
+     e J. R. Drugowich de Felício
+     <span class="ref footnote">
+      <sup class="xref">
+       
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         *
+        </strong>
+        rsilva@dfm.ffclrp.usp.br
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      Departamento de Física e Matemática
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto - USP
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      Av. Bandeirantes, 3900, 14040-901, Ribeirão Preto, São Paulo, SP, Brasil
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 9 de abril, 2002. Aceito em 12 de junho, 2002.
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       Apresenta-se uma estimativa numérica para a contribuição das vibrações da rede para o calor específico de um sólido cristalino. O método Monte Carlo é utilizado tanto em sua forma original quanto em sua versão mais moderna, que emprega a técnica da repesagem para extrair mais informações de cada simulação. Mostra-se como obter curvas contínuas para grandezas como a energia e o calor específico em função da temperatura a partir de simulação feita em apenas uma temperatura. Os resultados analíticos são incluídos para facilitar a comparação com os resultados da simulação.
+      </p>
+      <p>
+       A numerical estimate for the contribution of the lattice to the specific heat of a crystalline solid is presented. The Monte Carlo method is used such in its original form as in its modern version which explores the reweighting technique to extract more information from each simulation. One reveals how to get continuous plots for quantities like energy and specific heat, in function of the temperature, performing just one simulation at a convenient temperature. For the sake of comparison we present also the pertinent analytical results.
+      </p>
+     </blockquote>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      I Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Nos últimos anos, avançou bastante o conhecimento a respeito de sistemas de muitas partículas que não podem ser descritos de forma analítica. O progresso decorre, em grande parte, da rapidez com que os computadores realizam os cálculos necessários para uma simulação do tipo Monte Carlo, por exemplo. Aqui, quando falamos em evolução, estamos nos referindo ao progresso obtido na eletrônica (''hardware''). Houve, porém, um enorme avanço também na forma de extrair resultados das simulações. Nesse caso, a evolução ocorreu na programação (''software''). Resumidamente, um conjunto de operações que se repetia uma centena de vezes passou a ser feita de uma única vez, seus resultados dando origem a uma série de outros apenas por um artifício de ''repesagem'', que será explicado na seqüência.
+    </p>
+    <p>
+    </p>
+    <p>
+     O objetivo principal desse artigo é introduzir essa nova maneira de fazer simulações, partindo de um sistema simples como é o cristal de Einstein (a primeira aproximação ao calor específico de sólidos que prevê o limite correto quando
+     <i>
+      T
+     </i>
+     ® 0). Para esse sistema, todos os resultados exatos são exibidos na próxima seção, podendo ser acompanhados por alunos de um curso introdutório de mecânica estatística. Na seção III, explicamos a técnica de simulação conhecida como algorítmo de Metropolis ou Monte Carlo com amostragem por importância. São apresentadas estimativas para a energia e o calor específico em algumas temperaturas e comparadas com os resultados da seção II. Na seção IV, a técnica do histograma com repesagem é apresentada e os resultados da simulação, feita em apenas uma temperatura, são utilizados para obter curvas contínuas da energia e do calor específico em um intervalo da temperatura. Alguns comentários são feitos para ilustrar como essa abordagem tem evoluído nos últimos anos.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      II O modelo
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerar um sólido cristalino como um conjunto de osciladores independentes, cada um deles com energia
+     <i>
+      kT
+     </i>
+     , de acordo com o teorema da equipartição, conduz a uma capacidade térmica igual a 3
+     <i>
+      N
+     </i>
+     <sub>
+      0
+     </sub>
+     <i>
+      k
+     </i>
+     = 3
+     <i>
+      R cal/mol
+     </i>
+     , independente da temperatura. Esse é o resultado da aproximação de Dulong-Petit que vale para sólidos à temperatura ambiente. No entanto, quando a temperatura é reduzida, os resultados experimentais diferem dessa constante e tendem a zero quando
+     <i>
+      T
+     </i>
+     ® 0. Para corrigir a distorção da curva teórica, Einstein propôs, em 1907 [1], a quantização da energia dos átomos que vibram em torno dos sítios da rede. Seguindo uma idéia usada antes por Planck (1900) para tratar a radiação do corpo negro, ele imaginou que apenas alguns valores seriam permitidos para a energia de cada oscilador, o que ele escreveu como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm01">
+     <a name="frm01">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/05e7fc170b6ae4e98ad0c0879b6f00911d34bc19.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      n
+     </i>
+     é um inteiro não negativo,
+     <i>
+      h
+     </i>
+     é a constante de Planck e n a freqüência. Com essa hipótese para a energia e tratando as vibrações como sendo independentes - todas com a mesma freqüência - Einstein chegou à expressão
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm02">
+     <a name="frm02">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/5aa234a52a59552e7e90a91fe573b2829cebc10a.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     para a contribuição da rede com o calor específico do sólido. Para calcular essa grandeza, basta lembrar que, em contato com um banho térmico (ensemble canônico), a probabilidade para um desses osciladores ocupar um estado com energia e decresce exponencialmente com a energia (fator de Boltzmann). Assim, com
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm03">
+     <a name="frm03">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/9617c20938e1fef268834d610ccd441608d1aef9.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     e e dada pela equação (1), teremos para a energia média de cada oscilador a expressão
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm04">
+     <a name="frm04">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/8518933aa4ee607fa2da17c911d83b619548a323.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde b = 1/
+     <i>
+      kT
+     </i>
+     ,
+     <i>
+      T
+     </i>
+     é a temperatura e
+     <i>
+      k
+     </i>
+     a constante de Boltzmann. O produto de b por
+     <i>
+      h
+     </i>
+     n que aparece nas exponenciais costuma ser representado por q
+     <i>
+      <sub>
+       E
+      </sub>
+      /T
+     </i>
+     , onde q
+     <i>
+      <sub>
+       E
+      </sub>
+     </i>
+     =
+     <i>
+      hv/k
+     </i>
+     é conhecida como a ''temperatura'' de Einstein.
+    </p>
+    <p>
+    </p>
+    <p>
+     Observando que
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm05">
+     <a name="frm05">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/f3bcda9c1d237de8f31c2477b80cd81d49319068.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     e que o somatório entre parênteses é uma progressão geométrica de razão
+     <i>
+      q
+     </i>
+     =
+     <i>
+      e
+     </i>
+     <sup>
+      -b
+      <i>
+       h
+      </i>
+      n
+     </sup>
+     , concluímos que
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm06">
+     <a name="frm06">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/1f47828e584b959e5207d25f98603b94591342ce.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     e, portanto,
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm07">
+     <a name="frm07">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/d7478d33c5cc99a9c117b7bdd41a80d3e85eeb52.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     De maneira análoga, pode-se obter o valor médio de e
+     <sup>
+      2
+     </sup>
+     e, finalmente, através da seguinte expressão
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm08">
+     <a name="frm08">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/78a6d852a04d35d1b2aff33ba5a830c310d055f8.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     chegar à expressão (2), lembrando que o fator 3 é proveniente dos três graus de liberdade para os átomos da rede.
+    </p>
+    <p>
+    </p>
+    <p>
+     O cálculo da energia média do conjunto de osciladores pode ser feito lançando-se mão da expressão
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm09">
+     <a name="frm09">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/4577bf90f2e57e24d8988eac1a4463e3cb13eb7d.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde a soma não é feita sobre os estados quânticos mas sim sobre os níveis de energia. Como a cada nível de energia estão associados diferentes estados dos osciladores, é preciso multiplicar o fator de Boltzmann pela degenerescência W do nível de energia
+     <i>
+      E
+     </i>
+     =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/a3cd81ddc409c353e1ecac12dcfc2c019e54f80b.gif" style="max-width:100%"/>
+     n
+     <sub>
+      <i>
+       i
+      </i>
+     </sub>
+     e
+     <i>
+      <sub>
+       i
+      </sub>
+     </i>
+     , cujo valor exato é [2]
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm10">
+     <a name="frm10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/955458ba2b172659b66615c572475873753b7f65.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      K
+     </i>
+     =
+     <i>
+      E/h
+     </i>
+     n.
+    </p>
+    <p>
+    </p>
+    <p>
+     É importante observar que W(
+     <i>
+      E
+     </i>
+     ) é uma função crescente da energia, enquanto o fator de Boltzmann é uma função que decresce exponencialmente com
+     <i>
+      E
+     </i>
+     . O produto de W(
+     <i>
+      E
+     </i>
+     ) pelo fator exp(-b
+     <i>
+      E
+     </i>
+     ), daqui por diante chamada
+     <i>
+      P
+     </i>
+     (
+     <i>
+      E
+     </i>
+     ), tem valores próximos de zero quando a energia é baixa (W é pequeno) e também quando a energia é alta (a exponencial vai assintoticamente a zero para
+     <i>
+      E
+     </i>
+     ® ¥). O produto só tem valores apreciáveis em uma faixa de valores de energia que engloba a energia média. Essa faixa é tanto menor quanto maior for o número de osciladores. A
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     mostra o comportamento da probabilidade
+     <i>
+      P
+     </i>
+     (
+     <i>
+      E
+     </i>
+     ) de encontrar o conjunto de 3
+     <i>
+      N
+     </i>
+     osciladores com energia igual a
+     <i>
+      E
+     </i>
+     , quando o sistema está em contato com um banho térmico à temperatura q
+     <i>
+      <sub>
+       E
+      </sub>
+     </i>
+     /
+     <i>
+      T
+     </i>
+     = b
+     <i>
+      h
+     </i>
+     n = 1/3.
+    </p>
+    <div class="row fig" id="fig01">
+     <a name="fig01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      III O algoritmo de Metropolis
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para obter numericamente os resultados da seção anterior, vamos primeiramente fazer uma simulação Monte Carlo tradicional [3]. Essa técnica tem sido utilizada em uma gama de situações que inclui minimização de funções (método que ficou conhecido como ''recozimento simulado'' [4]), o cálculo de integrais multidimensionais [5], transições de fase estruturais em sólidos [6], além de outras aplicações [7]. Iniciamos a simulação com 3
+     <i>
+      N
+     </i>
+     osciladores (300 já é um número razoável). A energia de cada oscilador é igual a um número inteiro de quantas de energia
+     <i>
+      h
+     </i>
+     n que expressaremos por e
+     <i>
+      <sub>
+       n
+      </sub>
+     </i>
+     /
+     <i>
+      hv
+     </i>
+     =
+     <i>
+      n
+     </i>
+     onde
+     <i>
+      n
+     </i>
+     Î IN (a menos da energia de ponto zero,
+     <i>
+      h
+     </i>
+     n/2). No início da simulação, as energias (em unidades de
+     <i>
+      h
+     </i>
+     n) são escolhidas aleatoriamente entre 0 e um teto
+     <i>
+      n
+      <sub>
+       MAX
+      </sub>
+     </i>
+     que estipulamos. Verificamos que 300 é um bom número para esse limite. A partir desse ponto, vamos evoluir o conjunto de 3
+     <i>
+      N
+     </i>
+     osciladores durante 2000 passos que servirão para termalizar o sistema. Como fazer isso? Bem, um novo nível é sorteado para cada oscilador e, na seqüência, comparado com o nível anterior. Se o nível sorteado for menor que o anterior (a energia decresce), o novo nível é aceito com probabilidade 1. Em caso contrário (De &gt; 0), um número aleatório entre 0 e 1 é sorteado e comparado com a razão entre os fatores de Boltzmann dos níveis velho e novo (probabilidade de transição do velho para o novo nível). Se o número aleatório for menor que exp(-bDe), o novo estado é aceito. Se for maior, o oscilador continua com a energia anterior. Um passo de Monte Carlo é concluído quando todos os osciladores tiverem sido visitados uma vez (se eles forem escolhidos de forma determinística) ou quando 3
+     <i>
+      N
+     </i>
+     osciladores tiverem sido visitados aleatoriamente (caso em que cada oscilador também será visitado uma vez por passo, na média). Esse processo imita a troca de energia entre o sistema e um banho térmico à temperatura
+     <i>
+      T
+     </i>
+     e, de acordo com o princípio do balanceamento detalhado (veja [8]), depois de várias iterações desse tipo os
+     <i>
+      estados
+     </i>
+     serão visitados com probabilidade proporcional ao fator de Boltzmann exp(-be). Esse algoritmo recebe o nome de Metropolis, em homenagem ao primeiro autor de um trabalho publicado em 1953 [9], cuja originalidade estava justamente em propor a amostragem por importância. Em poucas palavras, trata-se de um método que despende pouco tempo visitando estados de baixa probabilidade, como é o caso dos estados cujas energias estejam fora da região onde ocorre o pico da
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Terminados os 2000 passos de Monte Carlo de termalização, o que significa que cada átomo foi visitado e teve a possibilidade de trocar o seu estado 2000 vezes, começamos a medir a energia média á
+     <i>
+      E
+     </i>
+     ñ e também o seu segundo momento, á
+     <i>
+      E
+     </i>
+     <sup>
+      2
+     </sup>
+     ñ . Para isso, 18000 passos serão executados, seguindo o mesmo procedimento anterior (resumido no
+     <a class="open-asset-modal" data-target="#ModalFigqdr01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      quadro 1
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="qdr01">
+     <a name="qdr01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigqdr01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A diferença é que agora, ao final de cada passo, a energia do sistema será acumulada em uma variável ETOT, que servirá para estimar a energia média. Também o quadrado da energia será armazenado em uma outra variável EQUAD, que servirá para estimar a energia quadrática média, após o término dos 18000 passos. Como os estados pelos quais o sistema passa obedecem à distribuição de Boltzmann (o princípio do balanceamento detalhado garante isso), o cálculo da energia média pode ser feito como simples média aritmética das energias obtidas ao final de cada passo. O mesmo se aplica ao cálculo da energia quadrática média. Dessa forma, a conhecida fórmula para o cálculo da média da
+     <i>
+      n
+     </i>
+     -ésima potência da energia
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm11">
+     <a name="frm11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/0c801c827e6948c15a8535312f6de0e2bfe29e64.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     no ensemble canônico, é substituída por uma simples média aritmética quando usamos o algoritmo de Metropolis (simulação por amostragem de importância):
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm12">
+     <a name="frm12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/82d280b041df07cf6f045fc6f2c6390b065d0576.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      N
+      <sub>
+       MC
+      </sub>
+     </i>
+     é o número de passos de Monte Carlo válidos da simulação (número total menos o número de passos utilizados para a termalização).
+    </p>
+    <p>
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalTabletab01" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      tabela 1
+     </a>
+     , apresentamos os valores para a energia média e para o calor específico para dois valores de temperatura, utilizando o método da amostragem por importância. O tempo de cada simulação foi de 5 segundos em um Pentium III de 933 MHz e 256 Mb de memória RAM, usando-se a linguagem Fortran [10]. Os erros foram estimados executando-se o programa com 5 diferentes sementes, o que significa que foram obtidos 5 pontos para o cálculo da média e do desvio-padrão da média para cada temperatura. Os valores são comparados com resultados exatos discutidos na seção anterior.
+    </p>
+    <div class="row table" id="tab01">
+     <a name="tab01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTabletab01" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A dificuldade com esse procedimento é que para levantar uma curva de calor específico, por exemplo, há necessidade de repetir a simulacão para uma série de valores da temperatura. Na próxima seção, nós vamos mostrar como é possível aperfeiçoar a técnica e evitar a repetição do processo. Para isso, será preciso gerar um histograma que registre o número de vezes que cada energia foi visitada, durante os
+     <i>
+      N
+      <sub>
+       MC
+      </sub>
+     </i>
+     passos da simulação.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      IV Histograma e a técnica de repesagem
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Nos últimos anos, ganhou força uma abordagem que visa extrair mais informação das simulações. A idéia [11], já proposta nos anos 60 ([12],[13]) , consiste em separar o efeito de temperatura (que é um parâmetro da simulação) dos efeitos entrópicos, característicos do sistema e independentes da temperatura. Explicando melhor, quando se realiza uma simulação amostrando os estados por importância (usando o algoritmo de Metropolis, por exemplo), o número de vezes que cada
+     <i>
+      estado
+     </i>
+     aparece obedece à distribuição de Boltzmann. Porém o número de vezes que uma dada
+     <i>
+      energia
+     </i>
+     é encontrada será proporcional ao produto do fator de Boltzmann pela degenerescência daquele nível de energia W(
+     <i>
+      E
+     </i>
+     ). Isso acontece porque a cada nível de energia estão associados diversos
+     <i>
+      estados
+     </i>
+     quânticos do sistema compatíveis com ela e, quanto maior esse número, maior será a chance daquela
+     <i>
+      energia
+     </i>
+     aparecer. Dessa forma, o que se obtém em uma simulação com amostragem por importância, na qual se constrói o histograma
+     <i>
+      H
+     </i>
+     <sub>
+      b
+     </sub>
+     (
+     <i>
+      E
+     </i>
+     ), é o número de vezes que o sistema apresenta energia igual a
+     <i>
+      E
+     </i>
+     em
+     <i>
+      N
+      <sub>
+       MC
+      </sub>
+     </i>
+     passos de Monte Carlo. Esse número é proporcional à degenerescência e contém o fator de Boltzmann, de forma que :
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm13">
+     <a name="frm13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/33ea443ef6b39ccae3ac2dc639763d27f4950f60.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Deve-se ver, portanto, o termo
+     <i>
+      H
+     </i>
+     <sub>
+      b
+     </sub>
+     (
+     <i>
+      E
+     </i>
+     )/
+     <i>
+      N
+      <sub>
+       MC
+      </sub>
+     </i>
+     como uma estimativa para a probabilidade de encontrar o sistema com uma dada energia
+     <i>
+      E
+     </i>
+     , que no ensemble canônico é usualmente escrita como :
+    </p>
+    <p>
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigfig02" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     , esboçamos o histograma
+     <i>
+      H
+     </i>
+     (
+     <i>
+      E
+     </i>
+     ) obtido em b
+     <i>
+      h
+     </i>
+     n = 1/3. O histograma foi obtido com
+     <i>
+      N
+      <sub>
+       MC
+      </sub>
+     </i>
+     = 20000 passos de Monte Carlo, dispensando 2000 passos para termalização, e se compara bem com o resultado exato. Podemos notar que a curva tem a mesma forma da
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     (linha cheia) e apresenta um pico na região da energia média (nesse exemplo, á
+     <i>
+      E
+     </i>
+     ñ = 300(
+     <i>
+      e
+     </i>
+     <sup>
+      1/3
+     </sup>
+     -1)
+     <sup>
+      -1
+     </sup>
+     <i>
+      erg
+     </i>
+     » 758
+     <i>
+      erg
+     </i>
+     ).
+    </p>
+    <div class="row fig" id="fig02">
+     <a name="fig02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig02" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Na seqüência, o que se faz é ''repesar'' o histograma para obtê-lo em uma outra temperatura
+     <i>
+      T
+     </i>
+     ' = 1/
+     <i>
+      k
+     </i>
+     b', sem precisar repetir a simulação. Ressalte-se que esse procedimento tem limitações e em alguns casos é recomendável obter o histograma em três ou quatro temperaturas para depois chegar à melhor estimativa para W(
+     <i>
+      E
+     </i>
+     ). Voltaremos a essa discussão no final desta seção, mas, por enquanto, vamos apenas mostrar como proceder para estender os resultados de um histograma simples para outros valores de temperatura. Para isso, basta seguir o raciocínio de Ferrenberg e Swendsen [11], observando-se que para um b
+     <sup>
+      '
+     </sup>
+     ¹ b, tendo em vista a expressão (13), podemos escrever
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm15">
+     <a name="frm15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/b7fd0980a071facf19423dd0766fd050520e4565.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     de forma que grandezas como a energia média e seus momentos possam ser calculadas nessa outra temperatura, utilizando-se simplesmente a equação
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm16">
+     <a name="frm16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/WgFtRFTFv4ZwbJZqB7tHbmK/b187527a0cd3402b1f4972c1fc1f3adbb03633cc.gif" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Convém ressaltar que essa técnica foi utilizada com sucesso em uma coleção de problemas de mecânica estatística [14] [15]. Na
+     <a class="open-asset-modal" data-target="#ModalFigfig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     , esboçamos o calor específico e a energia média dos átomos, em função da temperatura, utilizando o método do histograma. Nesse gráfico, a simulação foi executada em b
+     <i>
+      h
+     </i>
+     n = 1.0 e a repesagem foi feita para as temperaturas
+     <i>
+      T
+     </i>
+     /q
+     <i>
+      <sub>
+       E
+      </sub>
+     </i>
+     = (b
+     <i>
+      h
+     </i>
+     n)
+     <sup>
+      -1
+     </sup>
+     no intervalo [0.1,1.0]. Podemos constatar que, para altas temperaturas, a energia varia linearmente com a temperatura, o que implica um calor específico constante (lei de Dulong-Petit), como realmente se espera nesse limite. A curva obtida com a repesagem coincide com a curva teórica em todo o intervalo e apresenta, na região em que
+     <i>
+      T
+     </i>
+     ® 0, a mesma tendência que o resultado analítico. Vale ressaltar que a concordância entre as curvas não será boa se o histograma for construído em uma temperatura mais baixa, pois nesse caso níveis mais altos de energia dificilmente serão visitados. Para determinar objetivamente o intervalo de temperaturas em que a repesagem é válida [16], é preciso examinar a variação da energia média com a temperatura e exigir que os extremos do intervalo estejam associados a energias que estejam dentro de
+     <i>
+      E
+     </i>
+     ± 2s onde s é o desvio quadrático médio da distribuição
+     <i>
+      P
+     </i>
+     (
+     <i>
+      E
+     </i>
+     ).
+    </p>
+    <div class="row fig" id="fig03">
+     <a name="fig03">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig03" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O passo seguinte é extrair apenas as informações que não dependam da temperatura. Essa é a tendência dos trabalhos mais recentes nos quais a busca é pela densidade de estados, com a qual todas as grandezas podem ser calculadas, seja qual for a temperatura. No presente caso, basta multiplicar o histograma
+     <i>
+      H
+     </i>
+     <sub>
+      b
+     </sub>
+     (
+     <i>
+      E
+     </i>
+     ) por exp(b
+     <i>
+      E
+     </i>
+     ) para eliminar o fator de Boltzmann (único que depende da temperatura) e ficar apenas com a densidade de estados W(
+     <i>
+      E
+     </i>
+     ), fator entrópico que é independente da temperatura. Na
+     <a class="open-asset-modal" data-target="#ModalFigfig04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     , esboçamos um gráfico de W em função de
+     <i>
+      E
+     </i>
+     , obtido dessa maneira. Através da expressão (10), é possível também obter a curva teórica para W(
+     <i>
+      E
+     </i>
+     ) e compará-la com a estimativa numérica. Note-se que a concordância é razoável em todo o intervalo de energia que foi explorado nessa simulação.
+    </p>
+    <div class="row fig" id="fig04">
+     <a name="fig04">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig04" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Uma outra variante que pode ser explorada nesse caso refere-se à dependência exclusiva com a temperatura. Para isso, devemos gerar um histograma da energia individual dos osciladores. Procedendo assim, não estaremos levando em conta a degenerescência dos níveis e mediremos, portanto, apenas a probabilidade de encontrar um oscilador com energia e. O novo histograma corresponde simplesmente ao fator de Boltzmann (conforme equação 3). O resultado dessa investigação, já dividido por uma constante adequada, está mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     , onde também está representada a curva teórica exp(-be) com b
+     <i>
+      h
+     </i>
+     n = 1/10.
+    </p>
+    <div class="row fig" id="fig05">
+     <a name="fig05">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig05" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Finalmente, alguns comentários sobre a validade dessa técnica e as inovações dos últimos anos são pertinentes. Há uma limitação da técnica do histograma que é imposta pela ausência de passagens pelos estados em que a probabilidade é muito baixa (asas da distribuição). É por essa razão que o intervalo em que fazemos a repesagem não pode abranger temperaturas que conduzam a energias médias fora da região onde
+     <i>
+      P
+     </i>
+     <sub>
+      b
+     </sub>
+     (
+     <i>
+      E
+     </i>
+     ) seja apreciável. Também é preciso observar que o próprio intervalo em que a distribuição de probabilidades é apreciável vai ficando menor, quando o número de partículas (
+     <i>
+      N
+     </i>
+     ) do sistema aumenta. Sendo assim, a extensão dos resultados para o caso de sistemas maiores deve necessariamente ser feita dentro de um intervalo menor de temperatura. Essa limitação fez com que outras abordagens fossem propostas para calcular a densidade de estados. Uma delas foi introduzida por Ferrenberg e Swendsen [17],[18]. Trata-se da técnica do histograma múltiplo, construído iterativamente a partir de simulações feitas em uma coleção de temperaturas. Uma extensão inteligente desse método foi proposta por Berg e Neuhaus [19] e ficou conhecida como ensemble multicanônico. Ela consiste em ''experimentar'' cada intervalo de energia com um banho que privilegie o aparecimento de estados daquela faixa. Com isso, a probabilidade de encontrar os estados daquele intervalo torna-se apreciável e de mesma ordem de grandeza que os estados de outros intervalos. É como se substituíssemos a distribuição da
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     por uma outra que fosse um platô. Naturalmente que será necessário retornar à verdadeira distribuição de probabilidades, artificialmente modificada pelos diversos banhos que compunham o ensemble multicanônico. Essa técnica tem sido utilizada com relativo sucesso mas é de difícil implementação [20]. Uma outra abordagem foi proposta por P. M. C. de Oliveira, T. J. Penna e H. J. Herrmann [21] e ficou conhecida como ''broad-histogram''. Essa nova abordagem e suas generalizações têm passado por diversos testes para verificar se ela obedece ao balanceamento detalhado. Tudo indica que, além de um interessante estudo de casos no tocante a métodos de amostragem estatística, ela será uma ferramenta de pesquisa muito útil ( [8],[22], [23]).
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      V Conclusões
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Utilizamos neste texto simulações de Monte Carlo para calcular a energia da rede e a sua contribuição para o calor específico de um sólido isolante, de acordo com a aproximação de Einstein. Trabalhando primeiramente com o método da amostragem por importância (algoritmo de Metropolis), fomos capazes de encontrar valores tanto para a energia quanto para o calor específico, para alguns valores da temperatura. Os resultados encontrados numericamente comparam-se muito bem com os resultados exatos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Em seguida, introduzimos o método da repesagem para obter curvas contínuas para o calor específico e para a energia em função da temperatura. Elas estão em completo acordo com os resultados analíticos apresentados na seção II. Vale a pena ressaltar que a extensão pela técnica da repesagem no presente caso deve ser feita para temperaturas menores do que a da simulação (valores de b maiores). Isso porque, fazendo-se a simulação com uma temperatura mais alta, os diversos níveis de energia podem ser ocupados durante a simulação. Verificamos pela curva da energia um crescimento linear com a temperatura, no limite de altas temperaturas. É esse comportamento que leva a um calor específico constante nesse mesmo limite, conforme estabelece a Lei de Dulong-Petit. Mais interessante, no entanto, foi observar a variação do calor específico com a temperatura, conforme preconiza a teoria de Einstein e garante a experiência. Os alunos saberão explorar esse modelo de brinquedo para testar as idéias fundamentais da mecânica estatística. Ele tem a vantagem de não ter limitação para os níveis de energia, como ocorre com sistemas de spins.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Agradecimentos
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Agradecemos à FAPESP, pelo apoio financeiro. JRDF agradece também a Jorge Chahine, Nelson A. Alves, Nestor Caticha e Valter Líbero pelas discussões esclarecedoras sobre o assunto.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      References
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     [1] A. Einstein, Ann. Physik, 22, 186 (1907).
+    </p>
+    <p>
+    </p>
+    <p>
+     [2] S. R. A. Salinas,
+     <i>
+      Introdução à Física Estatística
+     </i>
+     , Edusp (1997).
+    </p>
+    <p>
+    </p>
+    <p>
+     [3] V. L. Líbero, Revista Brasileira de Ensino de Física,
+     <b>
+      22
+     </b>
+     , 346 (2000).
+    </p>
+    <p>
+    </p>
+    <p>
+     [4] S. Kirkpatrick, C. D. Gelatt, M. P. Vecchi, Science
+     <b>
+      220
+     </b>
+     , 671 (1983),  J. Stat. Phys.
+     <b>
+      34
+     </b>
+     , 975 (1984).
+    </p>
+    <p>
+    </p>
+    <p>
+     [5] H. Gould, J. Tobochnik,
+     <i>
+      An Introduction to Computer Simulation Methods
+     </i>
+     , Addison Wesley (1996).
+    </p>
+    <p>
+    </p>
+    <p>
+     [6] G. Meissner, K. Binder, Phys. Rev. B
+     <b>
+      12
+     </b>
+     , 3948(1975).
+    </p>
+    <p>
+    </p>
+    <p>
+     [7] M. E. J. Newman, G. T. Barkema,
+     <i>
+      Monte Carlo Simulation in Statistical Physics
+     </i>
+     , Clarendin Press-Oxford (1999).
+    </p>
+    <p>
+    </p>
+    <p>
+     [8] D. P. Landau e K. Binder,
+     <i>
+      A guide to Monte Carlo simulations in Statistical Physics
+     </i>
+     , Cambridge University Press (2000).
+    </p>
+    <p>
+    </p>
+    <p>
+     [9] N. Metropolis, A. Rosenbluth, M. Rosenbluth, A. Teller e E. Teller, J. Chem. Phys.
+     <b>
+      21
+     </b>
+     , 1087 (1953).
+    </p>
+    <p>
+    </p>
+    <p>
+     [10] Os programas relativos e este artigo podem ser obtidos com os autores.
+    </p>
+    <p>
+    </p>
+    <p>
+     [11] A. M. Ferrenberg e R. H. Swendsen, Phys. Rev. Lett.
+     <b>
+      61
+     </b>
+     , 2635 (1988).
+    </p>
+    <p>
+    </p>
+    <p>
+     [12] D. A. Chesnut e Z. W. Salsburg, J. Chem. Phys.
+     <b>
+      38
+     </b>
+     , 2861 (1963).
+    </p>
+    <p>
+    </p>
+    <p>
+     [13] G. M. Torrie e J. P. Valleau, J. Comp. Phys.
+     <b>
+      23
+     </b>
+     , 187 (1977).
+    </p>
+    <p>
+    </p>
+    <p>
+     [14] R. H. Swendsen,A. M. Ferrenberg, J. S. Wang, Top. Apl. Phys,
+     <b>
+      71
+     </b>
+     , 75 (1995).
+    </p>
+    <p>
+    </p>
+    <p>
+     [15] N. A. Caticha, J. Chahine e J. R. Drugowich de Felício, Phys. Rev. A
+     <b>
+      40
+     </b>
+     , 7431 (1989);  Phys. Rev. B
+     <b>
+      43
+     </b>
+     , 1173 (1991).
+    </p>
+    <p>
+    </p>
+    <p>
+     [16] N. A. Alves, Phys. Rev. D
+     <b>
+      46
+     </b>
+     , 3678 (1992).
+    </p>
+    <p>
+    </p>
+    <p>
+     [17] A. M. Ferrenberg e R. H. Swendsen, Phys. Rev. Lett.
+     <b>
+      63
+     </b>
+     , 1196 (1989).
+    </p>
+    <p>
+    </p>
+    <p>
+     [18] J. R. Drugowich de Felício e V. L. Líbero, Am. J. Phys.
+     <b>
+      64
+     </b>
+     , 1281 (1996).
+    </p>
+    <p>
+    </p>
+    <p>
+     [19] B. A. Berg, T. Neuhaus, Phys. Rev. Lett.
+     <b>
+      68
+     </b>
+     9 (1992).
+    </p>
+    <p>
+    </p>
+    <p>
+     [20] N. A. Alves, J. R. Drugowich de Felício, U. H. E. Hansmann, J. Phys. A
+     <b>
+      33
+     </b>
+     , 7489 (2000).
+    </p>
+    <p>
+    </p>
+    <p>
+     [21] P. M. C de Oliveira, T. J. Penna e H. J. Herrmann, Braz. J. Phys.
+     <b>
+      26
+     </b>
+     , 677 (1996).
+    </p>
+    <p>
+    </p>
+    <p>
+     [22] A. R. Lima, P.M.C. de Oliveira e T. J. Penna, Solid State Communications
+     <b>
+      114
+     </b>
+     , 447 (2000),  J. Stat. Phys.
+     <b>
+      99
+     </b>
+     , 691 (2000).
+    </p>
+    <p>
+    </p>
+    <p>
+     [23] P. M. C. de Oliveira, Braz. J. Phys.
+     <b>
+      30
+     </b>
+     , 766 (2000) e 195 (2000).
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      
+     </sup>
+     <a href="mailto:drugo@usp.br">
+      drugo@usp.br
+     </a>
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1]  A. Einstein, Ann. Physik, 22, 186 (1907).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2]  S. R. A. Salinas,
+        <i>
+         Introduçăo ŕ Física Estatística
+        </i>
+        , Edusp (1997).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3]  V. L. Líbero, Revista Brasileira de Ensino de Física,
+        <b>
+         22
+        </b>
+        , 346 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4]  S. Kirkpatrick, C. D. Gelatt, M. P. Vecchi, Science
+        <b>
+         220
+        </b>
+        , 671 (1983),
+       </div>
+      </li>
+      <li>
+       <div>
+        J. Stat. Phys.
+        <b>
+         34
+        </b>
+        , 975 (1984).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5]  H. Gould, J. Tobochnik,
+        <i>
+         An Introduction to Computer Simulation Methods
+        </i>
+        , Addison Wesley (1996).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6]  G. Meissner, K. Binder, Phys. Rev. B
+        <b>
+         12
+        </b>
+        , 3948(1975).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7]  M. E. J. Newman, G. T. Barkema,
+        <i>
+         Monte Carlo Simulation in Statistical Physics
+        </i>
+        , Clarendin Press-Oxford (1999).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8]  D. P. Landau e K. Binder,
+        <i>
+         A guide to Monte Carlo simulations in Statistical Physics
+        </i>
+        , Cambridge University Press (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9]  N. Metropolis, A. Rosenbluth, M. Rosenbluth, A. Teller e E. Teller, J. Chem. Phys.
+        <b>
+         21
+        </b>
+        , 1087 (1953).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11]  A. M. Ferrenberg e R. H. Swendsen, Phys. Rev. Lett.
+        <b>
+         61
+        </b>
+        , 2635 (1988).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12]  D. A. Chesnut e Z. W. Salsburg, J. Chem. Phys.
+        <b>
+         38
+        </b>
+        , 2861 (1963).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13]  G. M. Torrie e J. P. Valleau, J. Comp. Phys.
+        <b>
+         23
+        </b>
+        , 187 (1977).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14]  R. H. Swendsen,A. M. Ferrenberg, J. S. Wang, Top. Apl. Phys,
+        <b>
+         71
+        </b>
+        , 75 (1995).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15]  N. A. Caticha, J. Chahine e J. R. Drugowich de Felício, Phys. Rev. A
+        <b>
+         40
+        </b>
+        , 7431 (1989);
+       </div>
+      </li>
+      <li>
+       <div>
+        Phys. Rev. B
+        <b>
+         43
+        </b>
+        , 1173 (1991).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16]  N. A. Alves, Phys. Rev. D
+        <b>
+         46
+        </b>
+        , 3678 (1992).
+       </div>
+      </li>
+      <li>
+       <div>
+        [17]  A. M. Ferrenberg e R. H. Swendsen, Phys. Rev. Lett.
+        <b>
+         63
+        </b>
+        , 1196 (1989).
+       </div>
+      </li>
+      <li>
+       <div>
+        [18]  J. R. Drugowich de Felício e V. L. Líbero, Am. J. Phys.
+        <b>
+         64
+        </b>
+        , 1281 (1996).
+       </div>
+      </li>
+      <li>
+       <div>
+        [19]  B. A. Berg, T. Neuhaus, Phys. Rev. Lett.
+        <b>
+         68
+        </b>
+        9 (1992).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20]  N. A. Alves, J. R. Drugowich de Felício, U. H. E. Hansmann, J. Phys. A
+        <b>
+         33
+        </b>
+        , 7489 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [21]  P. M. C de Oliveira, T. J. Penna e H. J. Herrmann, Braz. J. Phys.
+        <b>
+         26
+        </b>
+        , 677 (1996).
+       </div>
+      </li>
+      <li>
+       <div>
+        [22]  A. R. Lima, P.M.C. de Oliveira e T. J. Penna, Solid State Communications
+        <b>
+         114
+        </b>
+        , 447 (2000),
+       </div>
+      </li>
+      <li>
+       <div>
+        J. Stat. Phys.
+        <b>
+         99
+        </b>
+        , 691 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [23]  P. M. C. de Oliveira, Braz. J. Phys.
+        <b>
+         30
+        </b>
+        , 766 (2000) e 195 (2000).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <li>
+    <span class="xref big">
+     <sup>
+      *
+     </sup>
+    </span>
+    <div>
+     <a href="mailto:rsilva@dfm.ffclrp.usp.br">
+      rsilva@dfm.ffclrp.usp.br
+     </a>
+    </div>
+   </li>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        01 Dez 2006
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Jun 2002
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        12 Jun 2002
+       </li>
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        09 Abr 2002
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

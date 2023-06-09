@@ -1,0 +1,7805 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 41 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2019
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2019-0020" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2019-0020
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2019-0020">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Braquistócrona na esfera
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Brachistochrone on the sphere
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Rafael Xavier Deiga Ferreira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Rio Grande do Norte, Departamento de Física, Natal, RN, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:rafaeldeiga@hotmail.com">
+      rafaeldeiga@hotmail.com
+     </a>
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-9591-3886">
+     http://orcid.org/0000-0002-9591-3886
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Hector Leny Carrion Salazar
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal do Rio Grande do Norte, Escola de Ciência e Tecnologia, Natal, RN, Brasil
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-5401-4390">
+     http://orcid.org/0000-0002-5401-4390
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     O problema consiste em determinar a trajetória (entre dois pontos dados) de menor tempo de um corpo, que parte do repouso, restrito a se mover numa superfície esférica e sujeito a um campo gravitacional constante. Através da equação de Euler-Lagrange, obtém-se uma expressão para o tempo total de percurso. O problema foi resolvido numericamente usando técnicas de física computacional e foram obtidos valores numéricos para alguns casos particulares usando o software Mathematica, os quais foram comparados com o tempo de queda livre e com o tempo que o corpo levaria caso se deslocasse pela geodésica da esfera (que liga os dois pontos dados). Além disso, foi estudada a dependência do tempo que o corpo leva para chegar ao final da trajetória com a posição na qual ele é solto numa mesma curva de tempo mínimo (análogo ao problema da tautócrona no plano).
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Equação de Euler-Lagrange; Braquistócrona; Shooting method
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     The problem is to find the path (between two given points) of minimum time of a body, which is released from rest, restricted to a sphere surface and under a constant gravitational field. Using Euler-Lagrange equation, it is found a expression to the total travel time. The problem was solved numerically using computation physics techniques and some numerical values were obtain using the software Mathematica, which were compared with the free fall time and with the time that the body would do if it moved in the sphere geodesic (which connects the two given points). Besides, it was studied the time dependence of the body with the position in which it is released in a same path of minimum time (analogous to the tautochrone problem in the plane).
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Euler-Lagrange equation; Brachistochrone; Shooting method
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Neste trabalho, foi resolvido um problema de otimização que consiste em determinar a trajetória (entre dois pontos dados) de menor tempo de um corpo, que parte do repouso, preso à superfície de uma esfera e sujeito a um campo gravitacional constante. Esse problema já foi resolvido quando o corpo está preso a um plano vertical (com o vetor gravidade contido no plano). A curva obtida para esse caso mais simples é uma cicloide ou braquistócrona, o que explica o título deste trabalho. As soluções desse caso podem ser encontras nas referências
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Morin, Introduction to Classical Mechanics (Cambridge University Press, New York, 2008).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] N. Lemos, Mecânica Analítica (Livraria da Física, São Paulo, 2007), 2ª ed.
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     É importante enfatizar que o corpo está sempre preso à superfície esférica, o que pode parecer contraditório fisicamente à primeira vista. Numa situação real, por exemplo, se soltarmos um corpo no equador da esfera, ele não ficará restrito a se mover na superfície e cairá verticalmente. Contudo, no problema abordado neste trabalho, impomos que o corpo esteja preso à superfície esférica e o nosso objetivo é achar qual caminho tem o tempo de percurso mínimo. Tal caminho pode ser realizado experimentalmente usando tubos.
+    </p>
+    <p>
+     Na seção embasamento teórico, é feita uma breve descrição dos métodos matemáticos para resolver o problema. Para solucionar o problema proposto, primeiro obteve-se uma expressão para o tempo total de percurso dado através de uma integral. Então, utilizou-se a equação de Euler-Lagrange para minimizar o valor dessa integral. Assim, chegou-se a uma equação diferencial de primeira ordem que fornece o percurso ao longo da superfície esférica (para o presente problema, pode-se usar uma integral primeira da equação de Euler-Lagrange que fornece diretamente uma equação diferencial de primeira ordem). Tal equação diferencial foi manipulada algebricamente e resolvida numericamente, devido a sua complexidade. Ao final, obteve-se o tempo total de percurso através de uma integral, a qual foi calculada usando o software
+     <i>
+      Mathematica
+     </i>
+     , uma vez que essa integral era difícil de resolver, tendo em vista que ela possui uma singularidade num dos extremos do intervalo de integração. Assim como no caso restrito ao plano, a solução obtida difere do caminho de comprimento mínimo entre os dois pontos dados, isto é, a curva achada não é a geodésica da esfera.
+    </p>
+    <p>
+     Para testar a solução numérica, foi determinado o tempo que o corpo leva para percorrer a geodésica entre os dois pontos dados, o qual sempre foi maior do que o para a curva determinada pela equação de Euler-Lagrange para os casos particulares testados. Calculou-se também o tempo de queda livre que o corpo levaria se percorresse a diferença de altura entre os dois pontos dados, apenas para ter uma ideia da ordem de grandeza do tempo. Além disso, concordando com o previsto, os tempos de queda livre foram menores do que os tempos no caminho de tempo mínimo.
+    </p>
+    <p>
+     Já que a curva deve sair de um ponto
+     <i>
+      A
+     </i>
+     e chegar a um ponto
+     <i>
+      B
+     </i>
+     , o problema já possui as suas fronteiras determinadas. Assim, foi utilizado o
+     <i>
+      shooting method
+     </i>
+     para garantir que a curva comece em
+     <i>
+      A
+     </i>
+     e termine em
+     <i>
+      B
+     </i>
+     . Nessa etapa, foi utilizada a regra de Simpson para calcular certas integrais. Tais métodos são discutidos em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] M. Newman, Computational Physics (Createspace, Michigan, 2012).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] N.J. Giordano e H. Nakanishi, Computational Physics (Pearson Prentice Hall, Londres, 2005), 2ª ed.
+       </span>
+      </span>
+     </span>
+     . O
+     <i>
+      shooting method
+     </i>
+     será suficientemente discutido durante a explicação da solução numérica.
+    </p>
+    <p>
+     Em seguida, calculou-se a posição espacial de alguns pontos para certas trajetórias de curvas de tempo mínimo e geodésicas. Com os dados obtidos, gerou-se imagens dessas trajetórias para visualizar a diferença entre elas.
+    </p>
+    <p>
+     Por fim, foi estudada a dependência do tempo que o corpo leva para chegar no ponto mais baixo da curva com a posição na qual ele é solto numa mesma curva de tempo mínimo. A motivação para isso foi a seguinte: num plano vertical, considere uma curva que começa num ponto
+     <i>
+      A
+     </i>
+     e termina num ponto
+     <i>
+      B
+     </i>
+     . Ela é tal que para qualquer posição na qual o corpo é solto entre os pontos
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     , o tempo total de percurso até ao seu ponto mais baixo é constante. Tal curva se chama tautócrona e uma possível solução é a braquistócrona (conforme constatado na referência
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] G.F. Simmons, Differential equations with applications and historical notes (CRC Press, Boca Raton, 2017), 3ª ed.
+       </span>
+      </span>
+     </span>
+     ). Neste trabalho, foi constatado que a "braquistócrona na esfera" não coincide com a "tautócrona na esfera".
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Embasamento Teórico
+    </h1>
+    <p>
+     Em muitos problemas de otimização, chega-se a expressões do tipo
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <mi>
+          J
+         </mi>
+         <mo stretchy="false">
+          [
+         </mo>
+         <mi>
+          y
+         </mi>
+         <mo stretchy="false">
+          ]
+         </mo>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msubsup>
+            <mo>
+             ∫
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+            <mrow>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+            </mrow>
+           </msubsup>
+           <mi mathvariant="script">
+            L
+           </mi>
+          </mrow>
+         </mstyle>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          y
+         </mi>
+         <mo>
+          ,
+         </mo>
+         <msup>
+          <mi>
+           y
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <mo>
+          ,
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+         <mi>
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     na qual
+     <math>
+      <mrow>
+       <mi mathvariant="script">
+        L
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mi>
+         y
+        </mi>
+        <mo>
+         ′
+        </mo>
+       </msup>
+       <mo>
+        ,
+       </mo>
+       <mi>
+        t
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     é uma função de
+     <i>
+      y
+     </i>
+     ,
+     <math>
+      <msup>
+       <mi>
+        y
+       </mi>
+       <mo>
+        ′
+       </mo>
+      </msup>
+     </math>
+     e
+     <i>
+      t
+     </i>
+     , com
+     <i>
+      y
+     </i>
+     sendo uma função de
+     <i>
+      t
+     </i>
+     . Exemplos de
+     <math>
+      <mrow>
+       <mi>
+        J
+       </mi>
+       <mo stretchy="false">
+        [
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        ]
+       </mo>
+      </mrow>
+     </math>
+     são o tempo total de percurso, a energia total de um sistema ou a distância (medida ao longo da superfície) entre dois pontos. Deseja-se minimizar ou maximizar a expressão
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (1)
+     </a>
+     . Contudo, há múltiplos valores que o resultado da integral pode assumir, pois há infinitas funções
+     <math>
+      <mrow>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        t
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     possíveis que se pode substituir em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (1)
+     </a>
+     , o que dará infinitos valores diferentes para
+     <i>
+      J
+     </i>
+     (Por isso, se escreve
+     <math>
+      <mrow>
+       <mi>
+        J
+       </mi>
+       <mo stretchy="false">
+        [
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        ]
+       </mo>
+      </mrow>
+     </math>
+     , pois
+     <i>
+      J
+     </i>
+     é uma função de uma outra função
+     <i>
+      y
+     </i>
+     ; além disso,
+     <i>
+      J
+     </i>
+     só assume valores reais, quando isso acontece, chama-se
+     <i>
+      J
+     </i>
+     de funcional).
+    </p>
+    <p>
+     Conforme discutido em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Morin, Introduction to Classical Mechanics (Cambridge University Press, New York, 2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] N. Lemos, Mecânica Analítica (Livraria da Física, São Paulo, 2007), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] S.T. Thornton e J.B. Marion, Dinâmica Clássica de Partículas e Sistemas (Cengage Learning, São Paulo, 2011).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] M. Kot, A First Course in the Calculus of Variations (American Mathematical Society, Providence, 2014).
+       </span>
+      </span>
+     </span>
+     , para achar um extremo de
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (1)
+     </a>
+     , utiliza-se a equação de Euler-Lagrange, que é uma equação diferencial a qual irá determinar
+     <i>
+      y
+     </i>
+     . A equação de Euler-Lagrange é
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <msub>
+          <mi mathvariant="script">
+           L
+          </mi>
+          <mi>
+           y
+          </mi>
+         </msub>
+         <mo>
+          −
+         </mo>
+         <mfrac>
+          <mi>
+           d
+          </mi>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <msub>
+          <mi mathvariant="script">
+           L
+          </mi>
+          <msup>
+           <mi>
+            y
+           </mi>
+           <mo>
+            ′
+           </mo>
+          </msup>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <math>
+      <mrow>
+       <msub>
+        <mrow>
+         <mi mathvariant="script">
+          L
+         </mi>
+        </mrow>
+        <mi>
+         y
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mrow>
+         <mi mathvariant="script">
+          L
+         </mi>
+        </mrow>
+        <msup>
+         <mi>
+          y
+         </mi>
+         <mo>
+          ′
+         </mo>
+        </msup>
+       </msub>
+      </mrow>
+     </math>
+     são as derivadas parciais de
+     <math>
+      <mrow>
+       <mi mathvariant="script">
+        L
+       </mi>
+      </mrow>
+     </math>
+     em relação a
+     <i>
+      y
+     </i>
+     e
+     <math>
+      <msup>
+       <mi>
+        y
+       </mi>
+       <mo>
+        ′
+       </mo>
+      </msup>
+     </math>
+     , respectivamente. Para utilizar a equação de Euler-Lagrange,
+     <math>
+      <mrow>
+       <mi mathvariant="script">
+        L
+       </mi>
+      </mrow>
+     </math>
+     e
+     <i>
+      y
+     </i>
+     devem satisfazer:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       <math>
+        <mrow>
+         <mi>
+          y
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mi>
+          y
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </math>
+       , sendo necessário que
+       <i>
+        y
+       </i>
+       esteja definido no intervalo
+       <math>
+        <mrow>
+         <mo stretchy="false">
+          [
+         </mo>
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          ,
+         </mo>
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mi>
+           f
+          </mi>
+         </msub>
+         <mo stretchy="false">
+          ]
+         </mo>
+        </mrow>
+       </math>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       <i>
+        y
+       </i>
+       deve ter a sua segunda derivada contínua no intervalo
+       <math>
+        <mrow>
+         <mo stretchy="false">
+          [
+         </mo>
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          ,
+         </mo>
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mi>
+           f
+          </mi>
+         </msub>
+         <mo stretchy="false">
+          ]
+         </mo>
+        </mrow>
+       </math>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       <math>
+        <mrow>
+         <mi mathvariant="script">
+          L
+         </mi>
+        </mrow>
+       </math>
+       deve ter derivadas parciais até de segunda ordem contínuas em relação a todos os seus argumentos.
+      </p>
+     </li>
+    </ul>
+    <p>
+     Além disso, a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (2)
+     </a>
+     é uma equação diferencial de segunda ordem, que não necessariamente possui solução ou quando possui, pode não ser única. Em geral, é necessário impor restrições sobre a equação diferencial para garantir a existência de solução, como discutido em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] G.F. Simmons, Differential equations with applications and historical notes (CRC Press, Boca Raton, 2017), 3ª ed.
+       </span>
+      </span>
+     </span>
+     . Normalmente, várias condições são impostas, entre as quais, determinar as condições iniciais, isto é, especificar os valores de
+     <math>
+      <mrow>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         t
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msup>
+        <mi>
+         y
+        </mi>
+        <mo>
+         ′
+        </mo>
+       </msup>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         t
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     ou determinar as condições de contorno, isto é, especificar os valores de
+     <math>
+      <mrow>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         t
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        y
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         t
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     .
+    </p>
+    <p>
+     Um caso particular de interesse é quando
+     <math>
+      <mrow>
+       <mi mathvariant="script">
+        L
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi mathvariant="script">
+        L
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        y
+       </mi>
+       <mo>
+        ,
+       </mo>
+       <msup>
+        <mi>
+         y
+        </mi>
+        <mo>
+         ′
+        </mo>
+       </msup>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     não depende explicitamente da variável de integração
+     <i>
+      t
+     </i>
+     . Segundo a referência
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] S.T. Thornton e J.B. Marion, Dinâmica Clássica de Partículas e Sistemas (Cengage Learning, São Paulo, 2011).
+       </span>
+      </span>
+     </span>
+     , obtemos uma equação diferencial de primeira ordem para
+     <i>
+      y
+     </i>
+     dada por
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mrow>
+         <mi mathvariant="script">
+          L
+         </mi>
+         <mo>
+          −
+         </mo>
+         <msup>
+          <mi>
+           y
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <msub>
+          <mrow>
+           <mi mathvariant="script">
+            L
+           </mi>
+          </mrow>
+          <msup>
+           <mi>
+            y
+           </mi>
+           <mo>
+            ′
+           </mo>
+          </msup>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          k
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      k
+     </i>
+     depende das condições iniciais ou de fronteira. Note que são necessárias duas condições dadas pela situação física para resolver o problema: uma para poder determinar
+     <i>
+      k
+     </i>
+     e a outra para solucionar a equação diferencial de primeira ordem.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. O problema
+    </h1>
+    <p>
+     Considere um corpo de massa
+     <i>
+      m
+     </i>
+     que apenas pode se mover sobre uma superfície esférica de raio
+     <i>
+      R
+     </i>
+     e que está num campo gravitacional constante de intensidade
+     <i>
+      g
+     </i>
+     . Ele parte do repouso de um ponto
+     <i>
+      A
+     </i>
+     da superfície esférica e vai até um ponto
+     <i>
+      B
+     </i>
+     . Qual é a forma da curva entre
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     para que o tempo de percurso seja mínimo?
+    </p>
+    <p>
+     <b>
+      Solução:
+     </b>
+    </p>
+    <p>
+     Considere o eixo
+     <i>
+      z
+     </i>
+     paralelo ao campo gravitacional e com o sentido positivo contrário ao vetor gravidade. Considere a origem do sistemas de coordenas no centro da esfera. Seja
+     <i>
+      v
+     </i>
+     a velocidade do corpo. Pela conservação de energia,
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mi>
+          Δ
+         </mi>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           c
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           W
+          </mi>
+          <mrow>
+           <mi>
+            p
+           </mi>
+           <mi>
+            e
+           </mi>
+           <mi>
+            s
+           </mi>
+           <mi>
+            o
+           </mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mo>
+          ⇒
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <msup>
+            <mi>
+             v
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mi>
+          m
+         </mi>
+         <mi>
+          g
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <msub>
+          <mi>
+           z
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          −
+         </mo>
+         <mi>
+          z
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mo>
+          ⇒
+         </mo>
+         <mi>
+          v
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            g
+           </mi>
+           <mo stretchy="false">
+            (
+           </mo>
+           <msub>
+            <mi>
+             z
+            </mi>
+            <mn>
+             0
+            </mn>
+           </msub>
+           <mo>
+            −
+           </mo>
+           <mi>
+            z
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         z
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     é altura inicial. Sabendo que
+     <math>
+      <mrow>
+       <mi>
+        d
+       </mi>
+       <mi>
+        s
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        v
+       </mi>
+       <mi>
+        d
+       </mi>
+       <mi>
+        t
+       </mi>
+      </mrow>
+     </math>
+     , em que
+     <i>
+      s
+     </i>
+     é o comprimento de arco e
+     <i>
+      t
+     </i>
+     , o tempo, tem-se
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            s
+           </mi>
+          </mrow>
+          <mrow>
+           <msqrt>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              z
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </msqrt>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ±
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <msubsup>
+              <mi>
+               x
+              </mi>
+              <mi>
+               ϕ
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+             <mo>
+              +
+             </mo>
+             <msubsup>
+              <mi>
+               y
+              </mi>
+              <mi>
+               ϕ
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+             <mo>
+              +
+             </mo>
+             <msubsup>
+              <mi>
+               z
+              </mi>
+              <mi>
+               ϕ
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              z
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+         <mi>
+          d
+         </mi>
+         <mi>
+          ϕ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde escolhemos o ângulo
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     para parametrizar a curva. Assim,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         x
+        </mi>
+        <mi>
+         ϕ
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     é a derivada de
+     <i>
+      x
+     </i>
+     em relação a
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     . Analogamente para
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         y
+        </mi>
+        <mi>
+         ϕ
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         z
+        </mi>
+        <mi>
+         ϕ
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     . O sinal na frente da raiz depende do sinal de
+     <math>
+      <mrow>
+       <mfrac>
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mi>
+          s
+         </mi>
+        </mrow>
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mi>
+          ϕ
+         </mi>
+        </mrow>
+       </mfrac>
+      </mrow>
+     </math>
+     , que pode ser positivo ou negativo a depender das posições dos pontos
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     . Utilizando coordenadas esféricas (vide
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ), tem-se:
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <mi>
+            x
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mi>
+            R
+           </mi>
+           <mi>
+            sin
+           </mi>
+           <mi>
+            θ
+           </mi>
+           <mi>
+            cos
+           </mi>
+           <mi>
+            ϕ
+           </mi>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mi>
+            y
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mi>
+            R
+           </mi>
+           <mi>
+            sin
+           </mi>
+           <mi>
+            θ
+           </mi>
+           <mi>
+            sin
+           </mi>
+           <mi>
+            ϕ
+           </mi>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mtext>
+           </mtext>
+           <mtext>
+           </mtext>
+           <mtext>
+           </mtext>
+           <mtext>
+           </mtext>
+           <mtext>
+           </mtext>
+           <mtext>
+           </mtext>
+           <mi>
+            z
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mi>
+            R
+           </mi>
+           <mi>
+            cos
+           </mi>
+           <mi>
+            θ
+           </mi>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Coordenadas esféricas. Fonte
+      <span class="ref">
+       <strong class="xref xrefblue">
+        [8]
+       </strong>
+       <span class="refCtt closed">
+        <span>
+         [8] Learning about Electronics, Calculadora da Conversão de Coordenadas Cartesianas para Esféricas, disponível em: http://www.learningaboutelectronics.com/Artigos/Calculadora-conversao-de-coordenadas-cartesianas-a-esfericas.php, acessado em 09/04/2019.
+        </span>
+        <br/>
+        <a href="http://www.learningaboutelectronics.com/Artigos/Calculadora-conversao-de-coordenadas-cartesianas-a-esfericas.php" target="_blank">
+         http://www.learningaboutelectronics.com/...
+        </a>
+       </span>
+      </span>
+      <br/>
+     </div>
+    </div>
+    <p>
+     Assim, as derivadas em relação a
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     das componentes são:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mtable columnalign="left">
+         <mtr columnalign="left">
+          <mtd columnalign="left">
+           <mrow>
+            <msub>
+             <mi>
+              x
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mi>
+             R
+            </mi>
+            <mo stretchy="false">
+             (
+            </mo>
+            <msub>
+             <mi>
+              θ
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </msub>
+            <mi>
+             cos
+            </mi>
+            <mi>
+             θ
+            </mi>
+            <mi>
+             cos
+            </mi>
+            <mi>
+             ϕ
+            </mi>
+            <mo>
+             −
+            </mo>
+            <mi>
+             sin
+            </mi>
+            <mi>
+             θ
+            </mi>
+            <mi>
+             sin
+            </mi>
+            <mi>
+             ϕ
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr columnalign="left">
+          <mtd columnalign="left">
+           <mrow>
+            <msub>
+             <mi>
+              y
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mi>
+             R
+            </mi>
+            <mo stretchy="false">
+             (
+            </mo>
+            <msub>
+             <mi>
+              θ
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </msub>
+            <mi>
+             cos
+            </mi>
+            <mi>
+             θ
+            </mi>
+            <mi>
+             sin
+            </mi>
+            <mi>
+             ϕ
+            </mi>
+            <mo>
+             +
+            </mo>
+            <mi>
+             sin
+            </mi>
+            <mi>
+             θ
+            </mi>
+            <mi>
+             cos
+            </mi>
+            <mi>
+             ϕ
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr columnalign="left">
+          <mtd columnalign="left">
+           <mrow>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <mtext>
+            </mtext>
+            <msub>
+             <mi>
+              z
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </msub>
+            <mo>
+             =
+            </mo>
+            <mo>
+             −
+            </mo>
+            <mi>
+             R
+            </mi>
+            <msub>
+             <mi>
+              θ
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </msub>
+            <mi>
+             sin
+            </mi>
+            <mi>
+             θ
+            </mi>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (4)
+     </a>
+     e sabendo que
+     <math>
+      <msub>
+       <mi>
+        z
+       </mi>
+       <mn>
+        0
+       </mn>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mi>
+       R
+      </mi>
+      <mi>
+       cos
+      </mi>
+      <msub>
+       <mi>
+        θ
+       </mi>
+       <mn>
+        0
+       </mn>
+      </msub>
+     </math>
+     , obtém-se:
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <mi>
+          d
+         </mi>
+         <mi>
+          t
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ±
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              R
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msubsup>
+              <mi>
+               θ
+              </mi>
+              <mi>
+               ϕ
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+         <mi>
+          d
+         </mi>
+         <mi>
+          ϕ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Assim, queremos minimizar o tempo total do percurso, que é dado pela seguinte expressão
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m7">
+        <mrow>
+         <mi>
+          t
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ±
+         </mo>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msubsup>
+            <mo>
+             ∫
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               ϕ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+            <mrow>
+             <msub>
+              <mi>
+               ϕ
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+            </mrow>
+           </msubsup>
+           <mrow>
+            <msqrt>
+             <mrow>
+              <mfrac>
+               <mrow>
+                <mi>
+                 R
+                </mi>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <msup>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mi>
+                   sin
+                  </mi>
+                  <mi>
+                   θ
+                  </mi>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+                <mo>
+                 +
+                </mo>
+                <msubsup>
+                 <mi>
+                  θ
+                 </mi>
+                 <mi>
+                  ϕ
+                 </mi>
+                 <mn>
+                  2
+                 </mn>
+                </msubsup>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+               <mrow>
+                <mn>
+                 2
+                </mn>
+                <mi>
+                 g
+                </mi>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <msub>
+                 <mi>
+                  θ
+                 </mi>
+                 <mn>
+                  0
+                 </mn>
+                </msub>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <mi>
+                 θ
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mfrac>
+             </mrow>
+            </msqrt>
+           </mrow>
+          </mrow>
+         </mstyle>
+         <mi>
+          d
+         </mi>
+         <mi>
+          ϕ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O sinal deve ser escolhido de tal modo a
+     <i>
+      t
+     </i>
+     ser positivo. Note que o funcional na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (7)
+     </a>
+     não depende explicitamente da variável de integração
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     , então podemos usar a integral primeira da equação de Euler-Lagrange dada pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (3)
+     </a>
+     :
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mi mathvariant="script">
+          L
+         </mi>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mi>
+           θ
+          </mi>
+          <mi>
+           ϕ
+          </mi>
+         </msub>
+         <msub>
+          <mrow>
+           <mi mathvariant="script">
+            L
+           </mi>
+          </mrow>
+          <mrow>
+           <msub>
+            <mi>
+             θ
+            </mi>
+            <mi>
+             ϕ
+            </mi>
+           </msub>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          k
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      k
+     </i>
+     depende das condições de fronteira. Prosseguindo,
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mrow>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mi>
+                    sin
+                   </mi>
+                   <mi>
+                    θ
+                   </mi>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <mo>
+                  +
+                 </mo>
+                 <msubsup>
+                  <mi>
+                   θ
+                  </mi>
+                  <mi>
+                   ϕ
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msubsup>
+                </mrow>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <msub>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   0
+                  </mn>
+                 </msub>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <mo>
+              +
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mo>
+              −
+             </mo>
+             <mfrac>
+              <mrow>
+               <msub>
+                <mi>
+                 θ
+                </mi>
+                <mi>
+                 ϕ
+                </mi>
+               </msub>
+              </mrow>
+              <mrow>
+               <msqrt>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <msub>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   0
+                  </mn>
+                 </msub>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </msqrt>
+              </mrow>
+             </mfrac>
+             <mfrac>
+              <mrow>
+               <mn>
+                2
+               </mn>
+               <msub>
+                <mi>
+                 θ
+                </mi>
+                <mi>
+                 ϕ
+                </mi>
+               </msub>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+               <msqrt>
+                <mrow>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mi>
+                    sin
+                   </mi>
+                   <mi>
+                    θ
+                   </mi>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <mo>
+                  +
+                 </mo>
+                 <msubsup>
+                  <mi>
+                   θ
+                  </mi>
+                  <mi>
+                   ϕ
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msubsup>
+                </mrow>
+               </msqrt>
+              </mrow>
+             </mfrac>
+             <mo>
+              =
+             </mo>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  g
+                 </mi>
+                </mrow>
+                <mi>
+                 R
+                </mi>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <mi>
+              k
+             </mi>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mo>
+              ⇒
+             </mo>
+             <mfrac>
+              <mrow>
+               <msup>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  sin
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                +
+               </mo>
+               <msubsup>
+                <mi>
+                 θ
+                </mi>
+                <mi>
+                 ϕ
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msubsup>
+               <mo>
+                −
+               </mo>
+               <msubsup>
+                <mi>
+                 θ
+                </mi>
+                <mi>
+                 ϕ
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msubsup>
+              </mrow>
+              <mrow>
+               <msqrt>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <msub>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   0
+                  </mn>
+                 </msub>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mi>
+                    sin
+                   </mi>
+                   <mi>
+                    θ
+                   </mi>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <mo>
+                  +
+                 </mo>
+                 <msubsup>
+                  <mi>
+                   θ
+                  </mi>
+                  <mi>
+                   ϕ
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msubsup>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </msqrt>
+              </mrow>
+             </mfrac>
+             <mo>
+              =
+             </mo>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  g
+                 </mi>
+                </mrow>
+                <mi>
+                 R
+                </mi>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <mi>
+              k
+             </mi>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mo>
+              ⇒
+             </mo>
+             <mfrac>
+              <mrow>
+               <mi>
+                R
+               </mi>
+               <msup>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  sin
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+                <mn>
+                 4
+                </mn>
+               </msup>
+              </mrow>
+              <mrow>
+               <mn>
+                2
+               </mn>
+               <mi>
+                g
+               </mi>
+               <msup>
+                <mi>
+                 k
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                cos
+               </mi>
+               <msub>
+                <mi>
+                 θ
+                </mi>
+                <mn>
+                 0
+                </mn>
+               </msub>
+               <mo>
+                −
+               </mo>
+               <mi>
+                cos
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+             </mfrac>
+             <mo>
+              =
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msubsup>
+              <mi>
+               θ
+              </mi>
+              <mi>
+               ϕ
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Logo,
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m8">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mi>
+           θ
+          </mi>
+          <mi>
+           ϕ
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ±
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              R
+             </mi>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               4
+              </mn>
+             </msup>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+             <msup>
+              <mi>
+               k
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mfrac>
+           <mo>
+            −
+           </mo>
+           <msup>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </msup>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O sinal na frente da raiz vai depender das condições de fronteira. Por exemplo, se a partícula parte do ponto com
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        4
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        4
+       </mn>
+      </mrow>
+     </math>
+     e vai para o ponto com
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        3
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        3
+       </mn>
+      </mrow>
+     </math>
+     , o sinal + deve ser o escolhido.
+    </p>
+    <p>
+     Não foi possível achar soluções analíticas para as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (7)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (8)
+     </a>
+     . Então, adotou-se uma abordagem numérica para resolver o problema. Como será visto, o algoritmo proposto resolve variados casos e possivelmente qualquer caso.
+    </p>
+    <h2>
+     3.1. Solução numérica
+    </h2>
+    <p>
+     Vamos reescrever a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (8)
+     </a>
+     de uma maneira mais conveniente, denotando
+     <math>
+      <mrow>
+       <mi>
+        R
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mi>
+        g
+       </mi>
+       <msup>
+        <mi>
+         k
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+      </mrow>
+     </math>
+     :
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m9">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ±
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              cos
+             </mi>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+            </mrow>
+            <mrow>
+             <mi>
+              c
+             </mi>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               4
+              </mn>
+             </msup>
+             <mo>
+              −
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Integrando em relação a
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     , obtemos:
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m10">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              −
+             </mo>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              =
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mo>
+              ±
+             </mo>
+             <mstyle displaystyle="true">
+              <mrow>
+               <msubsup>
+                <mo>
+                 ∫
+                </mo>
+                <mrow>
+                 <msub>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   0
+                  </mn>
+                 </msub>
+                </mrow>
+                <mi>
+                 θ
+                </mi>
+               </msubsup>
+               <mrow>
+                <msqrt>
+                 <mrow>
+                  <mfrac>
+                   <mrow>
+                    <mi>
+                     cos
+                    </mi>
+                    <msub>
+                     <mi>
+                      θ
+                     </mi>
+                     <mn>
+                      0
+                     </mn>
+                    </msub>
+                    <mo>
+                     −
+                    </mo>
+                    <mi>
+                     cos
+                    </mi>
+                    <msup>
+                     <mi>
+                      θ
+                     </mi>
+                     <mo>
+                      ′
+                     </mo>
+                    </msup>
+                   </mrow>
+                   <mrow>
+                    <mi>
+                     c
+                    </mi>
+                    <msup>
+                     <mrow>
+                      <mo stretchy="false">
+                       (
+                      </mo>
+                      <mi>
+                       sin
+                      </mi>
+                      <msup>
+                       <mi>
+                        θ
+                       </mi>
+                       <mo>
+                        ′
+                       </mo>
+                      </msup>
+                      <mo stretchy="false">
+                       )
+                      </mo>
+                     </mrow>
+                     <mn>
+                      4
+                     </mn>
+                    </msup>
+                    <mo>
+                     −
+                    </mo>
+                    <msup>
+                     <mrow>
+                      <mo stretchy="false">
+                       (
+                      </mo>
+                      <mi>
+                       sin
+                      </mi>
+                      <msup>
+                       <mi>
+                        θ
+                       </mi>
+                       <mo>
+                        ′
+                       </mo>
+                      </msup>
+                      <mo stretchy="false">
+                       )
+                      </mo>
+                     </mrow>
+                     <mn>
+                      2
+                     </mn>
+                    </msup>
+                    <mo stretchy="false">
+                     (
+                    </mo>
+                    <mi>
+                     cos
+                    </mi>
+                    <msub>
+                     <mi>
+                      θ
+                     </mi>
+                     <mn>
+                      0
+                     </mn>
+                    </msub>
+                    <mo>
+                     −
+                    </mo>
+                    <mi>
+                     cos
+                    </mi>
+                    <msup>
+                     <mi>
+                      θ
+                     </mi>
+                     <mo>
+                      ′
+                     </mo>
+                    </msup>
+                    <mo stretchy="false">
+                     )
+                    </mo>
+                   </mrow>
+                  </mfrac>
+                 </mrow>
+                </msqrt>
+               </mrow>
+              </mrow>
+             </mstyle>
+             <mi>
+              d
+             </mi>
+             <msup>
+              <mi>
+               θ
+              </mi>
+              <mo>
+               ′
+              </mo>
+             </msup>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Agora temos
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     como uma função do ângulo
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     . Contudo, note que devemos satisfazer as condições de fronteira, isto é, a curva deve começar no ponto
+     <i>
+      A
+     </i>
+     e terminar em
+     <i>
+      B
+     </i>
+     . Esses pontos podem ficar determinados através dos ângulos
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     e
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     (vide coordenas esféricas em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (5)
+     </a>
+     ). Considere que
+     <i>
+      A
+     </i>
+     seja determinado por
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <i>
+      B
+     </i>
+     por
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     . Perceba que na integral em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     ,
+     <i>
+      c
+     </i>
+     é uma constante que depende de
+     <i>
+      A
+     </i>
+     e
+     <i>
+      B
+     </i>
+     , porém ela não é conhecida a priori. É necessário saber o seu valor para podermos calcular a integral e obter
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     como função de
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     . Para tanto, utilizou-se o
+     <i>
+      shooting method
+     </i>
+     , que basicamente consiste em chutar valores iniciais para
+     <i>
+      c
+     </i>
+     e usar o método da bisseção (discutido em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] M. Newman, Computational Physics (Createspace, Michigan, 2012).
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] N.J. Giordano e H. Nakanishi, Computational Physics (Pearson Prentice Hall, Londres, 2005), 2ª ed.
+       </span>
+      </span>
+     </span>
+     ) para garantir que a curva atinja o ponto final
+     <i>
+      B
+     </i>
+     com uma certa precisão desejada. Para evitar falhas, o algoritmo foi testado para algumas equações simples cujas soluções já são conhecidas.
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Os casos testados foram x″=1, x″=cos(x) e também o caso da equação diferencial do problema da braquistócrona restrita a um plano vertical, todas partindo de um ponto A e chegando num ponto final B. As soluções numéricas concordaram com grande precisão com as soluções analíticas.
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     Para dar chutes iniciais no
+     <i>
+      shooting method
+     </i>
+     que gerem soluções, plotou-se o gráfico da integral em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (10)
+     </a>
+     para um intervalo de valores de
+     <i>
+      c
+     </i>
+     (com o intervalo de integração indo de
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     até
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     ). Com efeito, na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (10)
+     </a>
+     , com
+     <math>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     , a expressão da direita pode ser vista como uma função de
+     <i>
+      c
+     </i>
+     , que deve ser igual à
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        −
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     . Assim, recaímos numa equação do tipo:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           ϕ
+          </mi>
+          <mi>
+           f
+          </mi>
+         </msub>
+         <mo>
+          −
+         </mo>
+         <msub>
+          <mi>
+           ϕ
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mi>
+          f
+         </mi>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          c
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     na qual devemos encontrar
+     <i>
+      c
+     </i>
+     . O procedimento utilizado foi plotar o gráfico de
+     <math>
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        −
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     para estimar o intervalo no qual a raiz se encontra. Usou-se, então, o método da bisseção para achar
+     <i>
+      c
+     </i>
+     com uma boa precisão.
+    </p>
+    <p>
+     Com o valor de
+     <i>
+      c
+     </i>
+     , a curva fica determinada na superfície esférica. Agora, para determinar o tempo, partindo da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (6)
+     </a>
+     , obteve-se:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mo>
+              ±
+             </mo>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mi>
+                 R
+                </mi>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  g
+                 </mi>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mrow>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mi>
+                    sin
+                   </mi>
+                   <mi>
+                    θ
+                   </mi>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <mo>
+                  +
+                 </mo>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mfrac>
+                    <mrow>
+                     <mi>
+                      d
+                     </mi>
+                     <mi>
+                      θ
+                     </mi>
+                    </mrow>
+                    <mrow>
+                     <mi>
+                      d
+                     </mi>
+                     <mi>
+                      ϕ
+                     </mi>
+                    </mrow>
+                   </mfrac>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                </mrow>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <msub>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   0
+                  </mn>
+                 </msub>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <mi>
+              d
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mo>
+              ±
+             </mo>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mi>
+                 R
+                </mi>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  g
+                 </mi>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mrow>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mi>
+                    sin
+                   </mi>
+                   <mi>
+                    θ
+                   </mi>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mfrac>
+                    <mrow>
+                     <mi>
+                      d
+                     </mi>
+                     <mi>
+                      ϕ
+                     </mi>
+                    </mrow>
+                    <mrow>
+                     <mi>
+                      d
+                     </mi>
+                     <mi>
+                      θ
+                     </mi>
+                    </mrow>
+                   </mfrac>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <mo>
+                  +
+                 </mo>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <msub>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   0
+                  </mn>
+                 </msub>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <mfrac>
+              <mrow>
+               <mi>
+                d
+               </mi>
+               <mi>
+                θ
+               </mi>
+              </mrow>
+              <mrow>
+               <mi>
+                d
+               </mi>
+               <mi>
+                ϕ
+               </mi>
+              </mrow>
+             </mfrac>
+             <mi>
+              d
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              d
+             </mi>
+             <mi>
+              t
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mo>
+              ±
+             </mo>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mi>
+                 R
+                </mi>
+                <mrow>
+                 <mn>
+                  2
+                 </mn>
+                 <mi>
+                  g
+                 </mi>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <msqrt>
+              <mrow>
+               <mfrac>
+                <mrow>
+                 <msup>
+                  <mrow>
+                   <mo stretchy="false">
+                    (
+                   </mo>
+                   <mi>
+                    sin
+                   </mi>
+                   <mi>
+                    θ
+                   </mi>
+                   <mo stretchy="false">
+                    )
+                   </mo>
+                  </mrow>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <msubsup>
+                  <mi>
+                   ϕ
+                  </mi>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msubsup>
+                 <mo>
+                  +
+                 </mo>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <msub>
+                  <mi>
+                   θ
+                  </mi>
+                  <mn>
+                   0
+                  </mn>
+                 </msub>
+                 <mo>
+                  −
+                 </mo>
+                 <mi>
+                  cos
+                 </mi>
+                 <mi>
+                  θ
+                 </mi>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mfrac>
+              </mrow>
+             </msqrt>
+             <mi>
+              d
+             </mi>
+             <mi>
+              θ
+             </mi>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Prosseguindo, basta substituir
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         θ
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     dado na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (9)
+     </a>
+     e lembrando que
+     <math>
+      <mrow>
+       <mi>
+        R
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mn>
+        2
+       </mn>
+       <mi>
+        g
+       </mi>
+       <msup>
+        <mi>
+         k
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mi>
+        c
+       </mi>
+      </mrow>
+     </math>
+     é uma constante, obtemos que o tempo total da trajetória é, após integrar em
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     ,
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m11">
+        <mrow>
+         <mi>
+          t
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mi>
+              R
+             </mi>
+             <mi>
+              c
+             </mi>
+            </mrow>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msubsup>
+            <mo>
+             ∫
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+            <mrow>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+            </mrow>
+           </msubsup>
+           <mrow>
+            <mfrac>
+             <mrow>
+              <mi>
+               sin
+              </mi>
+              <mi>
+               θ
+              </mi>
+              <mi>
+               d
+              </mi>
+              <mi>
+               θ
+              </mi>
+             </mrow>
+             <mrow>
+              <msqrt>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <msub>
+                 <mi>
+                  θ
+                 </mi>
+                 <mn>
+                  0
+                 </mn>
+                </msub>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <mi>
+                 θ
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 c
+                </mi>
+                <msup>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mi>
+                   sin
+                  </mi>
+                  <mi>
+                   θ
+                  </mi>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+                <mo>
+                 +
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <mi>
+                 θ
+                </mi>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <msub>
+                 <mi>
+                  θ
+                 </mi>
+                 <mn>
+                  0
+                 </mn>
+                </msub>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </msqrt>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </mrow>
+         </mstyle>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     É importante ressaltar que para alguns casos é difícil achar os chutes iniciais de
+     <i>
+      c
+     </i>
+     , pois estamos tirando a raiz de um número durante o processo e dependendo do intervalo escolhido para
+     <i>
+      c
+     </i>
+     variar (na etapa de gerar o gráfico de
+     <math>
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        −
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     ), podemos obter valores imaginários, o que pode resultar em erros no programa. O procedimento adotado para lidar com tais casos foi fazer um algoritmo para achar valores de
+     <i>
+      c
+     </i>
+     cuja raiz quadrada na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (10)
+     </a>
+     dê real. Para tanto, basta começar com um valor inicial de
+     <i>
+      c
+     </i>
+     válido, isto é, de tal modo que o argumento da raiz seja positivo e depois fazer o programa ir abaixando esses valores até que
+     <math>
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        −
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     troque de sinal. No algoritmo, o valor de
+     <i>
+      c
+     </i>
+     foi diminuído de um valor constante
+     <i>
+      r
+     </i>
+     em cada passo (como em uma PA). Agora, se o argumento da raiz desse negativo antes de
+     <math>
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        −
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     trocar de sinal, divide-se o valor de
+     <i>
+      r
+     </i>
+     por 10 e repete-se o processo até
+     <math>
+      <mrow>
+       <mi>
+        f
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <mi>
+        c
+       </mi>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        −
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+      </mrow>
+     </math>
+     trocar de sinal. Tal algoritmo funcionou para todos os casos testados.
+    </p>
+    <p>
+     Neste algoritmo, sempre diminuíamos o valor de
+     <i>
+      c
+     </i>
+     em cada passo, mas poderia ser que fosse necessário sempre aumentá-lo, porém em todos os casos testados, sempre tivemos que diminuí-lo.
+    </p>
+    <h2>
+     3.2. Movimento ao longo de uma geodésica
+    </h2>
+    <p>
+     Considere o mesmo problema, porém suponha agora que se ligue os pontos de fronteira pela geodésica. Vamos obter o tempo total do percurso. Usando conservação de energia e procedendo de maneira análoga à solução do problema anterior, sabemos que:
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m12">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <msup>
+              <mi>
+               v
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              =
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              z
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mo>
+              ⇒
+             </mo>
+             <msup>
+              <mover accent="true">
+               <mi>
+                x
+               </mi>
+               <mo>
+                ˙
+               </mo>
+              </mover>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mover accent="true">
+               <mi>
+                y
+               </mi>
+               <mo>
+                ˙
+               </mo>
+              </mover>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mover accent="true">
+               <mi>
+                z
+               </mi>
+               <mo>
+                ˙
+               </mo>
+              </mover>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              =
+             </mo>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+             <mi>
+              R
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Derivando em relação ao tempo as coordenadas dadas em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     , obtemos:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mover accent="true">
+              <mi>
+               x
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mo>
+              =
+             </mo>
+             <mi>
+              R
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mover accent="true">
+              <mi>
+               θ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mover accent="true">
+              <mi>
+               ϕ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mover accent="true">
+              <mi>
+               y
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mo>
+              =
+             </mo>
+             <mi>
+              R
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mover accent="true">
+              <mi>
+               θ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mover accent="true">
+              <mi>
+               ϕ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mover accent="true">
+              <mi>
+               z
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mo>
+              =
+             </mo>
+             <mo>
+              −
+             </mo>
+             <mi>
+              R
+             </mi>
+             <mover accent="true">
+              <mi>
+               θ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              θ
+             </mi>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Assim, substituindo essas derivadas em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      12
+     </a>
+     , obtemos
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m13">
+        <mrow>
+         <msup>
+          <mover accent="true">
+           <mi>
+            θ
+           </mi>
+           <mo>
+            ˙
+           </mo>
+          </mover>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          +
+         </mo>
+         <msup>
+          <mrow>
+           <mo stretchy="false">
+            (
+           </mo>
+           <mi>
+            sin
+           </mi>
+           <mi>
+            θ
+           </mi>
+           <mo stretchy="false">
+            )
+           </mo>
+          </mrow>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <msup>
+          <mover accent="true">
+           <mi>
+            ϕ
+           </mi>
+           <mo>
+            ˙
+           </mo>
+          </mover>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mfrac>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mi>
+            g
+           </mi>
+          </mrow>
+          <mi>
+           R
+          </mi>
+         </mfrac>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          cos
+         </mi>
+         <msub>
+          <mi>
+           θ
+          </mi>
+          <mn>
+           0
+          </mn>
+         </msub>
+         <mo>
+          −
+         </mo>
+         <mi>
+          cos
+         </mi>
+         <mi>
+          θ
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como a curva é uma geodésica, sabemos que ela se mantêm num plano que contêm o centro da superfície esférica e os dois pontos de fronteira. Logo, a posição do corpo satisfaz a seguinte equação:
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m14">
+        <mrow>
+         <mi>
+          a
+         </mi>
+         <mi>
+          x
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          b
+         </mi>
+         <mi>
+          y
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          z
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde não foi considerado o caso dos planos que contêm o eixo
+     <i>
+      z
+     </i>
+     . Os coeficientes
+     <i>
+      a
+     </i>
+     e
+     <i>
+      b
+     </i>
+     são determinados através do seguinte sistema de equações:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mi>
+              a
+             </mi>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mi>
+              b
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <mi>
+              a
+             </mi>
+             <mo>
+              +
+             </mo>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <mi>
+              b
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que as coordenadas cartesianas são obtidas através das fórmulas de coordenadas esféricas (vide
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (5)
+     </a>
+     ) e dos valores dos ângulos dos pontos inicial e final. Resolvendo o sistema em função das coordenadas cartesianas, obtemos:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mtable columnalign="left">
+         <mtr>
+          <mtd>
+           <mi>
+            a
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+           </mfrac>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd>
+           <mi>
+            b
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mfrac>
+            <mrow>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               z
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+            </mrow>
+            <mrow>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               y
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+             <msub>
+              <mi>
+               x
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+           </mfrac>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Prosseguindo, considere a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (14)
+     </a>
+     . Substituindo por coordenadas esféricas, obtém-se:
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m15">
+        <mrow>
+         <mi>
+          a
+         </mi>
+         <mi>
+          cos
+         </mi>
+         <mi>
+          ϕ
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          b
+         </mi>
+         <mi>
+          sin
+         </mi>
+         <mi>
+          ϕ
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mi>
+          cot
+         </mi>
+         <mi>
+          θ
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m16">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              cot
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo>
+              =
+             </mo>
+             <mo>
+              −
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mo>
+              =
+             </mo>
+             <msup>
+              <mrow>
+               <mi>
+                cot
+               </mi>
+              </mrow>
+              <mrow>
+               <mo>
+                −
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msup>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mo>
+              −
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que fornece a trajetória do corpo em função apenas de
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     . Para obter o tempo, deriva-se
+     <a class="open-asset-modal" data-target="#ModalSchemeeq15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (15)
+     </a>
+     e isola-se
+     <math>
+      <mover accent="true">
+       <mi>
+        θ
+       </mi>
+       <mo>
+        ˙
+       </mo>
+      </mover>
+     </math>
+     :
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mtable>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mo>
+              −
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <mover accent="true">
+              <mi>
+               ϕ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mo>
+              −
+             </mo>
+             <mfrac>
+              <mover accent="true">
+               <mi>
+                θ
+               </mi>
+               <mo>
+                ˙
+               </mo>
+              </mover>
+              <mrow>
+               <msup>
+                <mrow>
+                 <mi>
+                  sin
+                 </mi>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mi>
+                θ
+               </mi>
+              </mrow>
+             </mfrac>
+             <mo>
+              =
+             </mo>
+             <mn>
+              0
+             </mn>
+            </mrow>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mrow>
+             <mo>
+              ⇒
+             </mo>
+             <mover accent="true">
+              <mi>
+               θ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+             <mo>
+              =
+             </mo>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              b
+             </mi>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo>
+              −
+             </mo>
+             <mi>
+              a
+             </mi>
+             <mi>
+              sin
+             </mi>
+             <mi>
+              ϕ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mover accent="true">
+              <mi>
+               ϕ
+              </mi>
+              <mo>
+               ˙
+              </mo>
+             </mover>
+            </mrow>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo o
+     <math>
+      <mover accent="true">
+       <mi>
+        θ
+       </mi>
+       <mo>
+        ˙
+       </mo>
+      </mover>
+     </math>
+     em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (13)
+     </a>
+     e isolando-se
+     <math>
+      <mover accent="true">
+       <mi>
+        ϕ
+       </mi>
+       <mo>
+        ˙
+       </mo>
+      </mover>
+     </math>
+     , obtém-se:
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ±
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <msub>
+              <mi>
+               θ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <mi>
+              cos
+             </mi>
+             <mi>
+              θ
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mrow>
+             <mi>
+              R
+             </mi>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mn>
+              1
+             </mn>
+             <mo>
+              +
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                b
+               </mi>
+               <mi>
+                cos
+               </mi>
+               <mi>
+                ϕ
+               </mi>
+               <mo>
+                −
+               </mo>
+               <mi>
+                a
+               </mi>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                ϕ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mi>
+                sin
+               </mi>
+               <mi>
+                θ
+               </mi>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que permite obter
+     <i>
+      t
+     </i>
+     como uma função de
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     . Considerando
+     <math>
+      <mrow>
+       <mi>
+        t
+       </mi>
+       <mo stretchy="false">
+        (
+       </mo>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo stretchy="false">
+        )
+       </mo>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , obtemos que o tempo total do percurso é
+    </p>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m17">
+        <mrow>
+         <mi>
+          t
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mo>
+          ±
+         </mo>
+         <msqrt>
+          <mrow>
+           <mfrac>
+            <mi>
+             R
+            </mi>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mi>
+              g
+             </mi>
+            </mrow>
+           </mfrac>
+          </mrow>
+         </msqrt>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msubsup>
+            <mo>
+             ∫
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               ϕ
+              </mi>
+              <mn>
+               0
+              </mn>
+             </msub>
+            </mrow>
+            <mrow>
+             <msub>
+              <mi>
+               ϕ
+              </mi>
+              <mi>
+               f
+              </mi>
+             </msub>
+            </mrow>
+           </msubsup>
+           <mrow>
+            <msqrt>
+             <mrow>
+              <mfrac>
+               <mrow>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 +
+                </mo>
+                <msup>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mi>
+                   b
+                  </mi>
+                  <mi>
+                   cos
+                  </mi>
+                  <mi>
+                   ϕ
+                  </mi>
+                  <mo>
+                   −
+                  </mo>
+                  <mi>
+                   a
+                  </mi>
+                  <mi>
+                   sin
+                  </mi>
+                  <mi>
+                   ϕ
+                  </mi>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+                <msup>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mi>
+                   sin
+                  </mi>
+                  <mi>
+                   θ
+                  </mi>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                 <mn>
+                  2
+                 </mn>
+                </msup>
+               </mrow>
+               <mrow>
+                <mi>
+                 cos
+                </mi>
+                <msub>
+                 <mi>
+                  θ
+                 </mi>
+                 <mn>
+                  0
+                 </mn>
+                </msub>
+                <mo>
+                 −
+                </mo>
+                <mi>
+                 cos
+                </mi>
+                <mi>
+                 θ
+                </mi>
+               </mrow>
+              </mfrac>
+             </mrow>
+            </msqrt>
+           </mrow>
+          </mrow>
+         </mstyle>
+         <mi>
+          sin
+         </mi>
+         <mi>
+          θ
+         </mi>
+         <mi>
+          d
+         </mi>
+         <mi>
+          ϕ
+         </mi>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     é uma função de
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (16)
+     </a>
+     ), pode-se resolver a equação acima numericamente. Os coeficientes
+     <i>
+      a
+     </i>
+     e
+     <i>
+      b
+     </i>
+     são constantes. O sinal deve ser escolhido de tal modo que
+     <i>
+      t
+     </i>
+     seja positivo.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados numéricos e discussões
+    </h1>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     foram colocados os resultados numéricos para diversas trajetórias. Os ângulos em radiano informam a posição inicial e final, e o restante corresponde ao tempo total (em
+     <i>
+      s
+     </i>
+     ) de percurso para cada tipo de trajetória. Foram calculados três tipos de percursos. O primeiro é de um corpo em queda livre percorrendo apenas a diferença de altura entre o ponto inicial e final. O segundo tempo corresponde ao da curva de tempo mínimo na superfície esférica (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (11)
+     </a>
+     ). O terceiro tempo corresponde ao da geodésica da esfera (
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (17)
+     </a>
+     ). Foi considerado que
+     <math>
+      <mrow>
+       <mi>
+        g
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        10
+       </mn>
+       <mi>
+        m
+       </mi>
+       <mo>
+        /
+       </mo>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <mi>
+        R
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1
+       </mn>
+       <mi>
+        m
+       </mi>
+      </mrow>
+     </math>
+     . As integrais das
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (11)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (17)
+     </a>
+     foram calculadas usando o software
+     <i>
+      Mathematica
+     </i>
+     , porém o restante do processo (cálculo de
+     <i>
+      c
+     </i>
+     ,
+     <i>
+      a
+     </i>
+     e
+     <i>
+      b
+     </i>
+     ) foi efetuado usando
+     <i>
+      Python
+     </i>
+     .
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Tempo de percurso (em
+      <i>
+       s
+      </i>
+      ) para diversos trajetos. Os ângulos estão em radiano. QL: queda livre; Mín: curva de tempo mínimo; Geod: geodésica.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Note que na
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     , os resultados confirmam as nossas expectativas: o tempo de trajeto para a curva de tempo mínimo está entre o tempo da queda livre e o da geodésica. Foram feitos alguns gráficos. No gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     , considerou-se fixos
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        6
+       </mn>
+      </mrow>
+     </math>
+     ,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        3
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , e variou-se
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     . No gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     , considerou-se fixos
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        6
+       </mn>
+      </mrow>
+     </math>
+     ,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        2
+       </mn>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        2
+       </mn>
+      </mrow>
+     </math>
+     , e variou-se
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     . Os gráficos confirmam, novamente, as nossas expectativas. Note que alguns tempos para a geodésica no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     não foram colocados devido a grandes erros numéricos que ocorreram durante o cálculo da integral da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (17)
+     </a>
+     no
+     <i>
+      Mathematica
+     </i>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Tempos para
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+       </mrow>
+      </math>
+      fixos.
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Tempos para
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+       </mrow>
+      </math>
+      fixos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     É interessante também testar o algoritmo para o caso em que
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     é muito próximo de 0 e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     de
+     <math>
+      <mi>
+       π
+      </mi>
+     </math>
+     , que são casos limites nos quais o corpo é solto muito próximo do polo norte e o ponto final é muito próximo do polo sul, respectivamente. Os resultados obtidos estão na
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     . O último dado referente ao tempo da geodésica deu um erro muito alto no cálculo da integral na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (17)
+     </a>
+     no
+     <i>
+      Mathematica
+     </i>
+     , e por isso não foi colocado. Novamente, os dados concordam com as nossas expectativas.
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Dados para casos limites. Ângulos em radianos e tempo em segundos. QL: queda livre; Mín: curva de tempo mínimo; Geod: geodésica.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para visualizar a curva de tempo mínimo e compará-la com a geodésica, foram geradas figuras usando os recursos gráficos do
+     <i>
+      Python
+     </i>
+     . Para gerar os pontos da curva de tempo mínimo, utilizou-se a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (10)
+     </a>
+     , que fornece
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     em função de
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     . Para gerar os pontos da geodésica, utilizou-se a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (16)
+     </a>
+     , que fornece
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     em função de
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     .
+    </p>
+    <p>
+     Nas
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figuras 4
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     , podemos ver as formas das curvas de tempo mínimo (cor branca) e as geodésicas (cor preta).
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Curva de tempo mínimo (branca) e geodésica (preta) entre os pontos
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         6
+        </mn>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         3
+        </mn>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         10
+        </mn>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Curva de tempo mínimo (branca) e geodésica (preta) entre os pontos
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         6
+        </mn>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          v
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         5
+        </mn>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         8
+        </mn>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mo>
+         −
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         5
+        </mn>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Curva de tempo mínimo (branca) e geodésica (preta) entre os pontos
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         075
+        </mn>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mn>
+          0
+         </mn>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         3
+        </mn>
+       </mrow>
+      </math>
+      e
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          θ
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         5
+        </mn>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         6
+        </mn>
+       </mrow>
+      </math>
+      ,
+      <math>
+       <mrow>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         /
+        </mo>
+        <mn>
+         4
+        </mn>
+       </mrow>
+      </math>
+      .
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. A curva de tempo mínimo é a tautócrona?
+    </h1>
+    <p>
+     A discussão do problema da tautócrona pode ser encontrada em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] G.F. Simmons, Differential equations with applications and historical notes (CRC Press, Boca Raton, 2017), 3ª ed.
+       </span>
+      </span>
+     </span>
+     e
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] M. Kot, A First Course in the Calculus of Variations (American Mathematical Society, Providence, 2014).
+       </span>
+      </span>
+     </span>
+     . No plano, uma curva é chamada de tautócrona se o tempo levado para o corpo sob gravidade constante atingir o ponto mais baixo da curva é independente de onde ele é solto. Uma solução possível é a cicloide. Então, é interessante investigar se a curva que achamos para o tempo mínimo na superfície esférica também tem essa propriedade. Isto é, vamos investigar se para a curva que achamos, o tempo para o corpo atingir o seu ponto mais baixo independe de onde é solto. Para tanto, obtemos os dados da
+     <a class="open-asset-modal" data-target="#ModalTablet3" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 3
+     </a>
+     .
+    </p>
+    <div class="row table" id="t3">
+     <a name="t3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet3" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 3
+      </strong>
+      <br/>
+      Dependência do tempo total de percurso com a posição em que o corpo é solto para uma mesma curva de tempo mínimo.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A curva de tempo mínimo considerada foi a que liga os pontos com ângulos
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mfrac>
+        <mi>
+         π
+        </mi>
+        <mn>
+         6
+        </mn>
+       </mfrac>
+      </mrow>
+     </math>
+     ,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mfrac>
+        <mi>
+         π
+        </mi>
+        <mn>
+         3
+        </mn>
+       </mfrac>
+      </mrow>
+     </math>
+     e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+      </mrow>
+     </math>
+     ,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mfrac>
+        <mi>
+         π
+        </mi>
+        <mrow>
+         <mn>
+          10
+         </mn>
+        </mrow>
+       </mfrac>
+      </mrow>
+     </math>
+     . Neste caso particular, o ponto final da curva é o polo sul e, portanto, é o ponto mais baixo da curva. O parâmetro
+     <math>
+      <mi>
+       θ
+      </mi>
+     </math>
+     é o ângulo correspondente à posição de onde o corpo é solto. Soltamos o corpo em várias posições ao longo da curva e constatamos claramente que o tempo de percurso depende de onde o corpo é solto. Logo, o caso do plano não se generaliza para o caso da superfície esférica.
+    </p>
+    <p>
+     Essa dependência é óbvia ao olharmos para o caso limite em que
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mn>
+         0
+        </mn>
+       </msub>
+      </mrow>
+     </math>
+     é muito próximo de 0 e
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         θ
+        </mi>
+        <mi>
+         f
+        </mi>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+      </mrow>
+     </math>
+     , isto é, a curva de tempo mínimo que inicia próximo ao polo norte e que termina no polo sul. Para tal curva, quando o corpo é solto muito próximo do polo norte, a aceleração é muito pequena, pois o plano tangente à esfera é praticamente horizontal. Porém, ao soltar o corpo em
+     <math>
+      <mrow>
+       <mi>
+        θ
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mi>
+        π
+       </mi>
+       <mo>
+        /
+       </mo>
+       <mn>
+        2
+       </mn>
+      </mrow>
+     </math>
+     , a força normal sob o corpo é zero e apenas a força gravitacional atua sob ele, logo a aceleração é máxima e o corpo chega bem mais rápido ao final da curva.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Considerações Finais
+    </h1>
+    <p>
+     Diante do exposto, conseguimos achar uma solução numérica para a curva que minimiza o tempo de percusso numa superfície esférica de um corpo solto sob gravidade constante, a qual funciona para vários casos como foi exposto na seção 4 (funciona até para os casos limites para a curva com os extremos tendendo aos polos). Apenas o cálculo do tempo para a curva geodésica que, para certos casos limites, possui consideráveis erros numéricos.
+    </p>
+    <p>
+     Como no caso do plano, constatamos que a curva de tempo mínimo difere da geodésica. No entanto, verificamos que a "braquistócrona na esfera" não coincide com a "tautócrona na esfera". Isto é, consideramos um corpo percorrendo a curva de tempo mínimo na esfera até o ponto mais baixo da curva. Soltamos o corpo em diversas posições ao longo da curva e verificamos que o tempo variava consideravelmente com a posição na qual o corpo era solto.
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Os casos testados foram
+        <math>
+         <mrow>
+          <msup>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ″
+           </mo>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </math>
+        ,
+        <math>
+         <mrow>
+          <msup>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ″
+           </mo>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <mi>
+           cos
+          </mi>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           x
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </math>
+        e também o caso da equação diferencial do problema da braquistócrona restrita a um plano vertical, todas partindo de um ponto
+        <i>
+         A
+        </i>
+        e chegando num ponto final
+        <i>
+         B
+        </i>
+        . As soluções numéricas concordaram com grande precisão com as soluções analíticas.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        D. Morin,
+        <i>
+         Introduction to Classical Mechanics
+        </i>
+        (Cambridge University Press, New York, 2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        N. Lemos,
+        <i>
+         Mecânica Analítica
+        </i>
+        (Livraria da Física, São Paulo, 2007), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        M. Newman,
+        <i>
+         Computational Physics
+        </i>
+        (Createspace, Michigan, 2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        N.J. Giordano e H. Nakanishi,
+        <i>
+         Computational Physics
+        </i>
+        (Pearson Prentice Hall, Londres, 2005), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        S.T. Thornton e J.B. Marion,
+        <i>
+         Dinâmica Clássica de Partículas e Sistemas
+        </i>
+        (Cengage Learning, São Paulo, 2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        G.F. Simmons,
+        <i>
+         Differential equations with applications and historical notes
+        </i>
+        (CRC Press, Boca Raton, 2017), 3ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        M. Kot,
+        <i>
+         A First Course in the Calculus of Variations
+        </i>
+        (American Mathematical Society, Providence, 2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        Learning about Electronics,
+        <i>
+         Calculadora da Conversão de Coordenadas Cartesianas para Esféricas
+        </i>
+        , disponível em: http://www.learningaboutelectronics.com/Artigos/Calculadora-conversao-de-coordenadas-cartesianas-a-esfericas.php, acessado em 09/04/2019.
+        <br/>
+        <a href="http://www.learningaboutelectronics.com/Artigos/Calculadora-conversao-de-coordenadas-cartesianas-a-esfericas.php" target="_blank">
+         » http://www.learningaboutelectronics.com/Artigos/Calculadora-conversao-de-coordenadas-cartesianas-a-esfericas.php
+        </a>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        22 Jul 2019
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        25 Jan 2019
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        24 Maio 2019
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        04 Jun 2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

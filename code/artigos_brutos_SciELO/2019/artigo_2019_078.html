@@ -1,0 +1,7186 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 41 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   2019
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2018-0304" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2018-0304
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2018-0304">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Uma interface de controle para a Fluidodinâmica Computacional
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  A control interface for Computational Fluid Dynamics
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Thiago F. D. Dias Fernandes
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Faculdade de Caldas Novas, Caldas Novas, GO, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:profthiagomecflu@gmail.com">
+      profthiagomecflu@gmail.com
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-7969-1825">
+     http://orcid.org/0000-0001-7969-1825
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Nilton L. Moreira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Catalão, Unidade Acadêmica de Física, Catalão, GO, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Neste artigo apresentaremos uma proposta para a utilização da dinâmica de fluidos computacional sob uma perspectiva educacional, tendo como alvo as disciplinas de mecânica dos fluidos e fenômenos de transporte, nos períodos iniciais de cursos de Engenharia e Física. A importância da utilização da simulação na formação de base é amplamente corroborada pela literatura, contudo, pretende-se que o uso da CFD não seja somente demonstrativo, mas que coloque o usuário final como agente diretamente responsável por manipular e codificar dados e resultados das simulações propostas. Propõe-se então uma interface de manipulação e controle para o software
+     <i>
+      opensource OpenFOAM
+     </i>
+     , cujo objetivo principal é evitar a complexa edição e manipulação do código-fonte e
+     <i>
+      scripts
+     </i>
+     de controle típicos desse programa.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Fluidodinâmica Computacional; Mecânica dos Fluidos; Modelagem Computacional; Ensino de Física
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     In this article we will present a proposal for the use of computational fluid dynamics under an educational perspective, targeting disciplines of fluid mechanics and transport phenomena, on initial periods of engineering and physics courses. The importance of the use of simulation in undergraduated education is widely supported by the literature, however, is proposing to work it so not only statement, but the final users as officer directly responsible for handling and encode data and results of simulations. Second, a manipulation and control interface for the opensource software
+     <i>
+      OpenFOAM
+     </i>
+     , in order to take out the users the responsibility of editing the source code and scripts of typical control of this program.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Computational Fluid Dynamics; Fluid Mechanics; Computational Modeling; Physics Teaching
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A utilização da simulação como forma de ensino, além de seu apelo visual, possui precisão suficiente para que sejam coletados dados concretos acerca das condições envolvidas no problema, dentro de certo grau de precisão e validade. Tal perspectiva acaba por motivar o aluno e o docente em focar o estudo no problema em vez de somente concentrar esforços na manipulação de equações do sistema. Heidemann
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] L.A. Heideman, I.S. Araujo e E.A. Veit, Cad. Bras. Ensino Física 29, 965 (2012).
+       </span>
+      </span>
+     </span>
+     demonstra isso quando compara o enfoque do ensino, entre o tradicional e o uso de modelagem dos fenômenos físicos, concluindo que a modelagem se destaca frente a resolução de problemas teóricos por não utilizar “truques”, de modo que o aprendizado ocorre pela experiência e não pela resolução de um grande número de problemas. Logo, a utilização didática de técnicas de simulação acaba por demonstrar que atividades que se diferenciem da abordagem tradicional, acabam por se tornar não só efetivas, mas também motivadoras
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [2]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [2] R. Tavares, Rev. Online Cie. Cog. 13, 99 (2008).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Este trabalho propõe inicialmente contribuir para a discussão sobre esse tema e a implementação do uso da simulação computacional em fluidodinâmica como ferramenta de ensino. Na intenção desta, nota-se que a utilização da CFD (
+     <i>
+      Computational Fluid Dynamics
+     </i>
+     ) exige, por vezes, experiência em programação básica e ainda relativa habituação a sistemas operacionais diferentes. Quando não se fazem presentes tais pré-requisitos, torna improdutivo a utilização de ferramentas como o CFD em cursos de um semestre, devido a necessidade de modificação de
+     <i>
+      scripts
+     </i>
+     e códigos fontes. Levando em conta estas possíveis dificuldades associadas à utilização destas técnicas, tanto no ambiente profissional quanto acadêmico, propôe-se também a construção de uma interface de simulação para tornar a utilização do pacote
+     <i>
+      OpenFOAM
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] C.J. Greenshields Openfoam user guide (OpenFOAM Foundation, London, 2015).
+       </span>
+      </span>
+     </span>
+     mais amigável ao usuário final.
+    </p>
+    <p>
+     A interface J.A.R.V.E.S. (acrônimo para
+     <i>
+      Just a Rather Very Educative Simulator
+     </i>
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Apenas um Simulador Muito Educativo
+       </span>
+      </span>
+     </span>
+     -
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     ), objeto da proposta, é um conjunto de
+     <i>
+      scripts
+     </i>
+     de controle e edição que, de forma direcionada, manipula
+     <i>
+      scripts
+     </i>
+     do software
+     <i>
+      OpenFOAM
+     </i>
+     . Na construção dessa ferramenta buscou-se uma melhor adaptabilidade às distribuições baseadas em GNU/LINUX, ofertando uma interface na qual seja possível sua utilização tanto no ambiente gráfico, quanto em modo texto, seja em
+     <i>
+      desktops
+     </i>
+     ou em terminais de comando de
+     <i>
+      clusters
+     </i>
+     de processamento paralelo.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Logomarca da Interface J.A.R.V.E.S.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Inicialmente na seção 2 apresentamos um aporte teórico das principais equações que regem o escoamento, tendo como foco a obtenção da Equação de Navier-Stokes. Na seção 3 discorremos sobre os métodos de modelagem da dinâmica de fluidos, com enfoque no Método dos Volumes Finitos e, ao longo da seção 4, discutimos sobre o
+     <i>
+      software OpenFOAM
+     </i>
+     e a caracterização completa das funcionalidades da interface de simulação J.A.R.V.E.S.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Segunda Lei de Newton aplicada ao escoamento
+    </h1>
+    <p>
+     Define-se por escoamento toda movimentação de uma porção fluida em relação a um sistema referencial inercial adotado, onde sua dinâmica é regida por axiomas não-relativísticos, com quantidade de partículas suficientemente grande para que flutuações provocadas por descontinuidades sejam desconsideradas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] R.D. Blevins, Applied fluid dynamics handbook (Van Nostrand Reinhold, New York, 1984).
+       </span>
+      </span>
+     </span>
+     . A Segunda Lei de Newton aplicada a um volume infinitesimal é descrita por
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <mrow>
+         <mfrac>
+          <mi>
+           d
+          </mi>
+          <mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msub>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="script">
+             V
+            </mi>
+           </msub>
+           <mi>
+            ρ
+           </mi>
+          </mrow>
+         </mstyle>
+         <msub>
+          <mi>
+           u
+          </mi>
+          <mi>
+           i
+          </mi>
+         </msub>
+         <mi>
+          d
+         </mi>
+         <mi>
+          V
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msub>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="script">
+             V
+            </mi>
+           </msub>
+           <mi>
+            ρ
+           </mi>
+          </mrow>
+         </mstyle>
+         <msub>
+          <mi>
+           f
+          </mi>
+          <mi>
+           i
+          </mi>
+         </msub>
+         <mi>
+          d
+         </mi>
+         <mi>
+          V
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msub>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="script">
+             S
+            </mi>
+           </msub>
+           <mrow>
+            <msub>
+             <mi>
+              t
+             </mi>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+          </mrow>
+         </mstyle>
+         <mi>
+          d
+         </mi>
+         <mi>
+          S
+         </mi>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      V
+     </i>
+     e
+     <i>
+      S
+     </i>
+     são o volume e a superfice respectivamente do volume de controle considerado, ρ é a densidade do meio material em questão,
+     <i>
+      u
+      <sub>
+       i
+      </sub>
+     </i>
+     o campo de velocidades e
+     <i>
+      f
+      <sub>
+       i
+      </sub>
+     </i>
+     um campo externo qualquer, aqui considerado como sendo o campo gravitacional. O vetor tração
+     <i>
+      t
+      <sub>
+       i
+      </sub>
+     </i>
+     pode ser descrito em termos do tensor tensão σ
+     <sub>
+      <i>
+       ij
+      </i>
+     </sub>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] D.R. Smith, An Introduction to Continuum Mechanics — after Truesdell and Noll (Springer, Dordrecht, 1993), p. 143.
+       </span>
+      </span>
+     </span>
+     , na forma de
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mrow>
+         <msub>
+          <mi>
+           t
+          </mi>
+          <mi>
+           i
+          </mi>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mover accent="true">
+           <mi>
+            n
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <msub>
+          <mi>
+           σ
+          </mi>
+          <mrow>
+           <mi>
+            j
+           </mi>
+           <mi>
+            i
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e a transposta do tensor tensão na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (2)
+     </a>
+     indica que a atuação da força de tração
+     <i>
+      t
+      <sub>
+       j
+      </sub>
+     </i>
+     sobre uma superfície de normal
+     <math>
+      <mrow>
+       <msub>
+        <mover accent="true">
+         <mi>
+          n
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mi>
+         i
+        </mi>
+       </msub>
+      </mrow>
+     </math>
+     cria o estado de tensão traduzido pela matriz tensor tensão σ
+     <sub>
+      <i>
+       ij
+      </i>
+     </sub>
+     , onde
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mrow>
+         <msub>
+          <mi>
+           σ
+          </mi>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mi>
+            j
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           |
+          </mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  11
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  12
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  13
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  21
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  22
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  23
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  31
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  32
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+             <mtd>
+              <mrow>
+               <msub>
+                <mi>
+                 σ
+                </mi>
+                <mrow>
+                 <mn>
+                  33
+                 </mn>
+                </mrow>
+               </msub>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo>
+           |
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em simulações computacionais envolvendo difusões moleculares, um dos grandes problemas é a reprodução das forças intra e intermoleculares existentes entre os elementos do modelo. Na modelagem de fluidos, tais como a água, existem potenciais associados às forças intermoleculares, que modelam as forças de atração e repulsão existente nessas interações
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] R. Laprise, Mont. Weather Rev. 120, 197 (1992).
+       </span>
+      </span>
+     </span>
+     . Seguindo esse raciocínio, o estado de stress interno existente é traduzido pela contribuição das forças de repulsão intermolecular, devido às forças de superfície que tendem a diminuir a distância existente entre estes elementos. Neste momento diferencia-se portanto, a pressão termodinâmica daquela advinda da própria interação intermolecular.
+    </p>
+    <p>
+     Assumindo que as tensões normais do fluido tem relação com a pressão hidrostática média no centro do volume, decompõe-se o tensor σ
+     <sub>
+      <i>
+       ij
+      </i>
+     </sub>
+     na forma de
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mrow>
+         <munder>
+          <munder>
+           <mrow>
+            <msub>
+             <mi>
+              σ
+             </mi>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mi>
+               j
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+           <mo stretchy="true">
+            ︸
+           </mo>
+          </munder>
+          <mrow>
+           <mtext>
+            Tensor Stress Total
+           </mtext>
+          </mrow>
+         </munder>
+         <mo>
+          =
+         </mo>
+         <munder>
+          <munder>
+           <mrow>
+            <mo>
+             −
+            </mo>
+            <mi>
+             p
+            </mi>
+            <msub>
+             <mi>
+              δ
+             </mi>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mi>
+               j
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+           <mo stretchy="true">
+            ︸
+           </mo>
+          </munder>
+          <mrow>
+           <mtext>
+            Tensor Pressão Mecânica
+           </mtext>
+          </mrow>
+         </munder>
+         <mtext>
+          +
+         </mtext>
+         <munder>
+          <munder>
+           <mrow>
+            <msub>
+             <mi>
+              τ
+             </mi>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mi>
+               j
+              </mi>
+             </mrow>
+            </msub>
+            <mo>
+             .
+            </mo>
+           </mrow>
+           <mo stretchy="true">
+            ︸
+           </mo>
+          </munder>
+          <mrow>
+           <mtext>
+            Tensor Deviatórico
+           </mtext>
+          </mrow>
+         </munder>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde o negativo do termo
+     <math>
+      <mrow>
+       <mi>
+        p
+       </mi>
+       <msub>
+        <mi>
+         δ
+        </mi>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mi>
+          j
+         </mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </math>
+     representa que na atuação da tração, a pressão é negativa em relação ao ponto analisado
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] P.M. Dixit e U.S. Dixit, Modeling of metal forming and machining processes: by finite element and soft computing methods (Springer-Verlag, London, 2008).
+       </span>
+      </span>
+     </span>
+     . Considera-se também que
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mrow>
+         <mi>
+          p
+         </mi>
+         <msub>
+          <mi>
+           δ
+          </mi>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mi>
+            j
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mfrac>
+          <mn>
+           1
+          </mn>
+          <mn>
+           3
+          </mn>
+         </mfrac>
+         <msub>
+          <mi>
+           σ
+          </mi>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mi>
+            i
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          =
+         </mo>
+         <mo>
+          −
+         </mo>
+         <mfrac>
+          <mn>
+           1
+          </mn>
+          <mn>
+           3
+          </mn>
+         </mfrac>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <msub>
+            <mi>
+             σ
+            </mi>
+            <mrow>
+             <mn>
+              11
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             σ
+            </mi>
+            <mrow>
+             <mn>
+              22
+             </mn>
+            </mrow>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             σ
+            </mi>
+            <mrow>
+             <mn>
+              33
+             </mn>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Dentre as ferramentas utilizadas na descrição de sistemas contínuos, destaca-se o conceito de Derivada Material. O intuito principal da derivada material é estabelecer uma função de relação entre as abordagens lagrangiana e euleriana de uma grandeza qualquer analisada no escoamento de um fluido. Na notação aqui utilizada, é descrita por
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mrow>
+         <mfrac>
+          <mrow>
+           <mi>
+            D
+           </mi>
+           <mi>
+            f
+           </mi>
+          </mrow>
+          <mrow>
+           <mi>
+            D
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mfrac>
+         <mo>
+          =
+         </mo>
+         <msub>
+          <mo>
+           ∂
+          </mo>
+          <mi>
+           o
+          </mi>
+         </msub>
+         <mi>
+          f
+         </mi>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mi>
+           u
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <msub>
+          <mo>
+           ∂
+          </mo>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mi>
+          f
+         </mi>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde o primeiro termo do lado direito da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (5)
+     </a>
+     é a derivada local de uma grandeza
+     <i>
+      f
+     </i>
+     qualquer, e tal como no referencial euleriano, determina a variação desta ao longo do tempo na posição determinada. O segundo termo do lado direito é a derivada de transporte ou advectiva, indicando a variação instantânea da grandeza decorrente de uma variação de posição fruto do campo de velocidades
+     <i>
+      u
+      <sub>
+       i
+      </sub>
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] J. Sokolowski e J.P. Zolesio, Introduction to shape optimization (Springer, Berlin, 1992).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     Na aplicação da derivada material no termo esquerdo da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (1)
+     </a>
+     , juntamente com a substituição do Tensor de Cauchy, descrito em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (2)
+     </a>
+     , chega-se na forma do Teorema de Transporte de Reynolds
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] B.R. Munson, T.H. Okiishi, W.W. Huebsch e A.P. Rothmayer, Fluid mechanics (Wiley, Singapore, 2013).
+       </span>
+      </span>
+     </span>
+     aplicada à Segunda Lei de Newton para um volume de controle. Tais modificações resultam na forma primária do princípio do momento linear
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mrow>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msub>
+            <mo>
+             ∫
+            </mo>
+            <mi>
+             ℳ
+            </mi>
+           </msub>
+           <mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <msub>
+               <mo>
+                ∂
+               </mo>
+               <mi>
+                o
+               </mi>
+              </msub>
+              <mi>
+               ρ
+              </mi>
+              <msub>
+               <mi>
+                u
+               </mi>
+               <mi>
+                i
+               </mi>
+              </msub>
+              <mo>
+               +
+              </mo>
+              <msub>
+               <mo>
+                ∂
+               </mo>
+               <mi>
+                j
+               </mi>
+              </msub>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 ρ
+                </mi>
+                <msub>
+                 <mi>
+                  u
+                 </mi>
+                 <mi>
+                  j
+                 </mi>
+                </msub>
+                <msub>
+                 <mi>
+                  u
+                 </mi>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mstyle>
+         <mi>
+          d
+         </mi>
+         <mi>
+          V
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msub>
+            <mo>
+             ∫
+            </mo>
+            <mi>
+             ℳ
+            </mi>
+           </msub>
+           <mi>
+            ρ
+           </mi>
+          </mrow>
+         </mstyle>
+         <msub>
+          <mi>
+           f
+          </mi>
+          <mi>
+           i
+          </mi>
+         </msub>
+         <mi>
+          d
+         </mi>
+         <mi>
+          V
+         </mi>
+         <mo>
+          +
+         </mo>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msub>
+            <mo>
+             ∫
+            </mo>
+            <mi mathvariant="script">
+             S
+            </mi>
+           </msub>
+           <mrow>
+            <msub>
+             <mover accent="true">
+              <mi>
+               n
+              </mi>
+              <mo>
+               ^
+              </mo>
+             </mover>
+             <mi>
+              j
+             </mi>
+            </msub>
+           </mrow>
+          </mrow>
+         </mstyle>
+         <msub>
+          <mi>
+           σ
+          </mi>
+          <mrow>
+           <mi>
+            j
+           </mi>
+           <mi>
+            i
+           </mi>
+          </mrow>
+         </msub>
+         <mi>
+          d
+         </mi>
+         <mi>
+          S
+         </mi>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Transformando o segundo termo do lado direto da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (6)
+     </a>
+     usando o Teorema de Gauss, reescreve-se na forma de
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m7">
+        <mrow>
+         <mstyle displaystyle="true">
+          <mrow>
+           <msub>
+            <mo>
+             ∫
+            </mo>
+            <mi>
+             ℳ
+            </mi>
+           </msub>
+           <mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <msub>
+               <mo>
+                ∂
+               </mo>
+               <mi>
+                o
+               </mi>
+              </msub>
+              <mi>
+               ρ
+              </mi>
+              <msub>
+               <mi>
+                u
+               </mi>
+               <mi>
+                i
+               </mi>
+              </msub>
+              <mo>
+               +
+              </mo>
+              <msub>
+               <mo>
+                ∂
+               </mo>
+               <mi>
+                j
+               </mi>
+              </msub>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 ρ
+                </mi>
+                <msub>
+                 <mi>
+                  u
+                 </mi>
+                 <mi>
+                  j
+                 </mi>
+                </msub>
+                <msub>
+                 <mi>
+                  u
+                 </mi>
+                 <mi>
+                  i
+                 </mi>
+                </msub>
+               </mrow>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mo>
+               −
+              </mo>
+              <mi>
+               ρ
+              </mi>
+              <msub>
+               <mi>
+                f
+               </mi>
+               <mi>
+                i
+               </mi>
+              </msub>
+              <mo>
+               −
+              </mo>
+              <msub>
+               <mo>
+                ∂
+               </mo>
+               <mi>
+                j
+               </mi>
+              </msub>
+              <msub>
+               <mi>
+                σ
+               </mi>
+               <mrow>
+                <mi>
+                 j
+                </mi>
+                <mi>
+                 i
+                </mi>
+               </mrow>
+              </msub>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mstyle>
+         <mi>
+          d
+         </mi>
+         <mi>
+          V
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mn>
+          0.
+         </mn>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Dado que o diferencial
+     <i>
+      dV
+     </i>
+     é arbitrário, toma-se portanto que o integrando é nulo, escrevemos
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m8">
+        <mrow>
+         <msub>
+          <mo>
+           ∂
+          </mo>
+          <mi>
+           o
+          </mi>
+         </msub>
+         <mi>
+          ρ
+         </mi>
+         <msub>
+          <mi>
+           u
+          </mi>
+          <mi>
+           i
+          </mi>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mo>
+           ∂
+          </mo>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mi>
+            ρ
+           </mi>
+           <msub>
+            <mi>
+             u
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msub>
+           <msub>
+            <mi>
+             u
+            </mi>
+            <mi>
+             i
+            </mi>
+           </msub>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mi>
+          ρ
+         </mi>
+         <msub>
+          <mi>
+           f
+          </mi>
+          <mi>
+           i
+          </mi>
+         </msub>
+         <mo>
+          +
+         </mo>
+         <msub>
+          <mo>
+           ∂
+          </mo>
+          <mi>
+           j
+          </mi>
+         </msub>
+         <msub>
+          <mi>
+           σ
+          </mi>
+          <mrow>
+           <mi>
+            j
+           </mi>
+           <mi>
+            i
+           </mi>
+          </mrow>
+         </msub>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (8)
+     </a>
+     é conhecida como Equação de Cauchy
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] A.J. Chorin e J.E. Marsden, A mathematical introduction to fluid mechanics (Springer, New York, 1990).
+       </span>
+      </span>
+     </span>
+     , válida para qualquer meio contínuo, onde o termo σ
+     <sub>
+      <i>
+       ij
+      </i>
+     </sub>
+     carrega a informação da microestrutura, modelando suas consequência na macroestrutura. Como no caso analisado,
+     <math>
+      <mrow>
+       <msub>
+        <mi>
+         σ
+        </mi>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mi>
+          i
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mo>
+        −
+       </mo>
+       <mi>
+        p
+       </mi>
+       <msub>
+        <mi>
+         δ
+        </mi>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mi>
+          j
+         </mi>
+        </mrow>
+       </msub>
+       <mo>
+        +
+       </mo>
+       <msub>
+        <mi>
+         τ
+        </mi>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mi>
+          i
+         </mi>
+        </mrow>
+       </msub>
+       <mtext>
+       </mtext>
+      </mrow>
+     </math>
+     temos
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m9">
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          o
+         </mi>
+        </msub>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           ρ
+          </mi>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mo>
+         =
+        </mo>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          f
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mo>
+           −
+          </mo>
+          <mi>
+           p
+          </mi>
+          <msub>
+           <mi>
+            δ
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mi>
+             j
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mi>
+            τ
+           </mi>
+           <mrow>
+            <mi>
+             j
+            </mi>
+            <mi>
+             i
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m10">
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          o
+         </mi>
+        </msub>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           ρ
+          </mi>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mo>
+         =
+        </mo>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          f
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mi>
+         p
+        </mi>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          τ
+         </mi>
+         <mrow>
+          <mi>
+           j
+          </mi>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Apesar da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (10)
+     </a>
+     descrever matematicamente o formalismo do momento linear, sua relação com a microestrutura do fluido ainda não se faz presente. Entende-se por hora que o tensor
+     <math>
+      <msub>
+       <mi>
+        τ
+       </mi>
+       <mrow>
+        <mi>
+         i
+        </mi>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     carrega a informação das tensões cisalhantes e, consequentemente, relação intrínseca com a viscosidade do fluido.
+    </p>
+    <h2>
+     2.1. Equações de Navier-Stokes para fluidos isotrópicos
+    </h2>
+    <p>
+     Na mecânica de meios contínuos, as equações constitutivas contribuem, assim como dito, na transposição do axioma matemático, em uma equação que consiga realmente definir a especifidade macroscópica do sistema material. Das equações principais que regem o escoamento, percebe-se uma forte relação entre a microestrutura e as forças externas. Tal situação emprega de modo prático uma equação constitutiva que se relaciona de modo direto com o tensor deviatórico e a interação viscosa do sistema material. Na tentativa de definir esse sistema, determinadas condições são impostas ao fluido, tais como:
+    </p>
+    <ol type="a">
+     <li>
+      <p>
+       o fluido é
+       <b>
+        homogêneo
+       </b>
+       , ou seja, não é função explícita da posição
+       <i>
+        x
+        <sub>
+         i
+        </sub>
+       </i>
+       ;
+      </p>
+     </li>
+     <li>
+      <p>
+       o fluido é
+       <b>
+        isotrópico
+       </b>
+       , ou seja, não adota direção preferencial;
+      </p>
+     </li>
+     <li>
+      <p>
+       na ausência de tensões de deformação, o único stress considerado será o hidrostático e
+      </p>
+     </li>
+     <li>
+      <p>
+       o tensor deviatórico
+       <math>
+        <msub>
+         <mi>
+          τ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+       </math>
+       é função linear e explícita do gradiente de velocidades.
+      </p>
+     </li>
+    </ol>
+    <p>
+     Tais condições, modelam o que se conhece como fluido stokesiano
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] J. Serrin, J. Math. Mec. 4, 459 (1959).
+       </span>
+      </span>
+     </span>
+     . Considerando, portanto, a quarta condição como início e que somente a parte simétrica do tensor gradiente de velocidades é responsável pela efetiva deformação do sistema material analisado, pode-se escrever
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m11">
+        <msub>
+         <mi>
+          τ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          A
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+          <mi>
+           k
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           k
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mrow>
+          <mi>
+           l
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </msub>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A condição da isotropia do fluido permite resumir o tensor de proporcionalidade
+     <i>
+      A
+      <sub>
+       ijkl
+      </sub>
+     </i>
+     , escrito na forma do produto entre tensores de Levi-Civita ε
+     <sub>
+      <i>
+       ijk
+      </i>
+     </sub>
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m12">
+        <msub>
+         <mi>
+          A
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+          <mi>
+           k
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          ϵ
+         </mi>
+         <mrow>
+          <mi>
+           h
+          </mi>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          ϵ
+         </mi>
+         <mrow>
+          <mi>
+           h
+          </mi>
+          <mi>
+           k
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          C
+         </mi>
+         <mn>
+          1
+         </mn>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           k
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          C
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           k
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           j
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          C
+         </mi>
+         <mn>
+          3
+         </mn>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           j
+          </mi>
+          <mi>
+           k
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e consequentemente, na admissão da homogeneidade as, constantes
+     <i>
+      C
+     </i>
+     <sub>
+      2
+     </sub>
+     e
+     <i>
+      C
+     </i>
+     <sub>
+      3
+     </sub>
+     são iguais, resultando na forma final do tensor de proporcionalidade
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m13">
+        <msub>
+         <mi>
+          A
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+          <mi>
+           k
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          C
+         </mi>
+         <mn>
+          1
+         </mn>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           k
+          </mi>
+          <mi>
+           l
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          C
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            δ
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mi>
+             k
+            </mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>
+            δ
+           </mi>
+           <mrow>
+            <mi>
+             j
+            </mi>
+            <mi>
+             l
+            </mi>
+           </mrow>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mi>
+            δ
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mi>
+             l
+            </mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>
+            δ
+           </mi>
+           <mrow>
+            <mi>
+             j
+            </mi>
+            <mi>
+             k
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Ao analisarmos o experimento proposto por Newton, contido na seção IX do livro 2 da obra
+     <i>
+      Philosophiae Naturalis Principia Mathematica
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [12]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [12] I. Newton Philosophiae Naturalis Principia Mathematica (Cambridge University Press, London, 1972).
+       </span>
+      </span>
+     </span>
+     , onde discorre sobre a viscosidade de um fluido encerrado entre dois cilindros concêntricos, percebemos que os fatores
+     <i>
+      C
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      C
+     </i>
+     <sub>
+      2
+     </sub>
+     são escritos em termos da viscosidade absoluta μ. Ao final de todo trabalho de reconstrução do tensor de proporcionalidade, obtem-se que a forma final do tensor deviatórico é definida com
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m14">
+        <msub>
+         <mi>
+          τ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mi>
+         μ
+        </mi>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           i
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <mfrac>
+         <mn>
+          2
+         </mn>
+         <mn>
+          3
+         </mn>
+        </mfrac>
+        <mi>
+         μ
+        </mi>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           k
+          </mi>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mrow>
+          <mi>
+           k
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </msub>
+        <msub>
+         <mi>
+          δ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde observa-se que o segundo termo corresponde a chamada ”segunda viscosidade”, acontecendo exclusivamente para fluidos ditos compressíveis. Após esta determinação, pode-se finalmente obter o mais importante conjunto de equações da dinâmica dos fluidos, as Equações de Navier-Stokes. Inicialmente derivadas em 1822 por Claude Louis Marie Henri Navier
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [13]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [13] C.L.M.H. Navier, Ann. Chim. Phys 19, 234 (1822).
+       </span>
+      </span>
+     </span>
+     , que utilizando a noção da interação intermolecular, propôs uma solução onde levava em consideração os efeitos viscosos do escoamento. Vinte e três anos após a publicação de Navier, George Gabriel Stokes rederivou em 1845
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] G.G. Stokes, Trans. Cambridge Philos. Soc. 8, 287 (1845).
+       </span>
+      </span>
+     </span>
+     o trabalho de Navier, apresentando-as na forma como conhecemos hoje.
+    </p>
+    <p>
+     Percebe-se de antemão que a operação do termo
+     <math>
+      <msub>
+       <mo>
+        ∂
+       </mo>
+       <mi>
+        j
+       </mi>
+      </msub>
+      <msub>
+       <mi>
+        τ
+       </mi>
+       <mrow>
+        <mi>
+         i
+        </mi>
+        <mi>
+         j
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     corresponde ao real interesse desse tópico, por conta de sua relação com os termos viscosos do escoamento. Para tanto, toma-se a derivada da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (14)
+     </a>
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m15">
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          τ
+         </mi>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mi>
+           j
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           μ
+          </mi>
+          <msub>
+           <mo>
+            ∂
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             i
+            </mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </msub>
+          <mo>
+           −
+          </mo>
+          <mfrac>
+           <mn>
+            2
+           </mn>
+           <mn>
+            3
+           </mn>
+          </mfrac>
+          <mi>
+           μ
+          </mi>
+          <msub>
+           <mo>
+            ∂
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             k
+            </mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mrow>
+            <mi>
+             k
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>
+            δ
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mi>
+             j
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m16">
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          o
+         </mi>
+        </msub>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           ρ
+          </mi>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          f
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mi>
+         p
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mn>
+         2
+        </mn>
+        <mi>
+         μ
+        </mi>
+        <mrow>
+         <mo>
+          [
+         </mo>
+         <mrow>
+          <mfrac>
+           <mn>
+            1
+           </mn>
+           <mn>
+            2
+           </mn>
+          </mfrac>
+          <msub>
+           <mo>
+            ∂
+           </mo>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <msub>
+             <mo>
+              ∂
+             </mo>
+             <mi>
+              i
+             </mi>
+            </msub>
+            <msub>
+             <mi>
+              u
+             </mi>
+             <mi>
+              j
+             </mi>
+            </msub>
+            <mo>
+             +
+            </mo>
+            <msub>
+             <mo>
+              ∂
+             </mo>
+             <mi>
+              j
+             </mi>
+            </msub>
+            <msub>
+             <mi>
+              u
+             </mi>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           −
+          </mo>
+          <mfrac>
+           <mn>
+            1
+           </mn>
+           <mn>
+            3
+           </mn>
+          </mfrac>
+          <msub>
+           <mo>
+            ∂
+           </mo>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <msub>
+             <mo>
+              ∂
+             </mo>
+             <mi>
+              k
+             </mi>
+            </msub>
+            <msub>
+             <mi>
+              u
+             </mi>
+             <mi>
+              k
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <msub>
+           <mi>
+            δ
+           </mi>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mi>
+             j
+            </mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          ]
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m17">
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          o
+         </mi>
+        </msub>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mi>
+           ρ
+          </mi>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mi>
+         ρ
+        </mi>
+        <msub>
+         <mi>
+          f
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mi>
+         p
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mi>
+         μ
+        </mi>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mo>
+            ∂
+           </mo>
+           <mi>
+            i
+           </mi>
+          </msub>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mo>
+            ∂
+           </mo>
+           <mi>
+            j
+           </mi>
+          </msub>
+          <msub>
+           <mi>
+            u
+           </mi>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Vale ressaltar, no entanto, que a forma apresentada em
+     <a class="open-asset-modal" data-target="#ModalSchemeeq16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (16)
+     </a>
+     refere-se à fluidos newtonianos viscosos e compressíveis. No caso de fluidos incompressíveis, onde o traço do tensor gradiente de velocidade é nulo (
+     <math>
+      <msub>
+       <mo>
+        ∂
+       </mo>
+       <mi>
+        k
+       </mi>
+      </msub>
+      <msub>
+       <mi>
+        u
+       </mi>
+       <mi>
+        k
+       </mi>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       0
+      </mn>
+     </math>
+     ), temos a forma incompressível da equação de Navier-Stokes conforme é apresentada na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (17)
+     </a>
+     . Considerando que
+     <math>
+      <msub>
+       <mo>
+        ∂
+       </mo>
+       <mi>
+        j
+       </mi>
+      </msub>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          j
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+      <mo>
+       =
+      </mo>
+      <msup>
+       <mo>
+        ∇
+       </mo>
+       <mn>
+        2
+       </mn>
+      </msup>
+      <msub>
+       <mi>
+        u
+       </mi>
+       <mi>
+        i
+       </mi>
+      </msub>
+     </math>
+     e que
+     <math>
+      <mstyle scriptlevel="+1">
+       <mfrac>
+        <mi>
+         μ
+        </mi>
+        <mi>
+         ρ
+        </mi>
+       </mfrac>
+      </mstyle>
+      <mo>
+       =
+      </mo>
+      <mi>
+       ν
+      </mi>
+     </math>
+     apresenta-se as equações de Navier-Stokes em sua forma mais conhecida
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block" id="m18">
+        <mo>
+         ∇
+        </mo>
+        <mo>
+         ⋅
+        </mo>
+        <mi>
+         u
+        </mi>
+        <mtext>
+        </mtext>
+        <mo>
+         =
+        </mo>
+        <mtext>
+        </mtext>
+        <mn>
+         0
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq19">
+     <a name="eq19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block" id="m19">
+        <mfrac>
+         <mo>
+          ∂
+         </mo>
+         <mrow>
+          <mo>
+           ∂
+          </mo>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </mfrac>
+        <mi>
+         u
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mi>
+         u
+        </mi>
+        <mo>
+         ∇
+        </mo>
+        <mo>
+         ⋅
+        </mo>
+        <mi>
+         u
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         f
+        </mi>
+        <mo>
+         −
+        </mo>
+        <mfrac>
+         <mn>
+          1
+         </mn>
+         <mi>
+          ρ
+         </mi>
+        </mfrac>
+        <mo>
+         ∇
+        </mo>
+        <mi>
+         p
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mi>
+         ν
+        </mi>
+        <msup>
+         <mo>
+          ∇
+         </mo>
+         <mn>
+          2
+         </mn>
+        </msup>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Apesar de sua dedução ser trivial, quando se lança mão de termos e noções corretas, a não-linearidade da equação obtida impede uma solução analítica direta. Sua importância estende-se desde a análise de escoamentos na ótica da mecânica do contínuo até a movimentação de galáxias nos estudos de astronomia. A larga aplicabilidade dessas equações, no entanto, são feitas de modo extremamente restrito, sendo modeladas sequencialmente por equações constitutivas, colaborando com a construção de um modelo numérico restrito. As Equações de Navier-Stokes são consideradas um dos problemas do milênio pela
+     <i>
+      Clay Mathematics Institute
+     </i>
+     , oferecendo um prêmio de $1,000,000.00 baseado no seguinte enunciado:
+    </p>
+    <div>
+     <blockquote>
+      <p>
+       <i>
+        Prove or give a counter-example of the following statement
+       </i>
+      </p>
+      <p>
+       <i>
+        In three space dimensions and time, given an initial velocity field, there exists a vector velocity and a scalar pressure field, which are both smooth and globally defined, that solve the Navier–Stokes equations.
+       </i>
+      </p>
+     </blockquote>
+    </div>
+    <p>
+     Portanto, como se demonstra, a intensão é comprovar a existência e suavidade de soluções em
+     <math>
+      <msup>
+       <mi>
+        ℝ
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msup>
+     </math>
+     das equações de Navier-Stokes
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [15]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [15] L. Tartar, An introduction to Navier-Stokes equation and oceanography (Springer-Verlag, Berlin, 2006).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     3. A Modelagem da Dinâmica de Fluidos
+    </h1>
+    <p>
+     Existem hoje disponíveis no mercado uma grande quantidade de softwares de simulação em fluidodinâmica, onde se pode citar o
+     <i>
+      Fluent
+     </i>
+     ,
+     <i>
+      Ansys
+     </i>
+     ,
+     <i>
+      Flow3D
+     </i>
+     entre outros. Grande parte dos sistemas proprietários dessa classe oferecem soluções completas, desde interfaces de criação de malha e pré-processamento até softwares integrados de pós-processamento. Uma tendência hoje é o desenvolvimento de softwares
+     <i>
+      Open Source
+     </i>
+     , na qual a colaboração mútua de desenvolvedores em fóruns na internet permite uma melhor adaptabilidade do software, implicando porém em uma maior dificuldade de utilização, visto a não preocupação com a interface gráfica de utilização. Mesmo com toda a complexidade computacional agregada ao uso de simuladores, o conhecimento acerca da fenomenologia e da reologia do escoamento é imprescindível, visto que a imposição das condições de contorno em softwares mais completos ou adaptação das sub-rotinas em códigos via linha de comando são de responsabilidade do pesquisador.
+    </p>
+    <h2>
+     3.1. Método dos Volumes Finitos
+    </h2>
+    <p>
+     Enquanto o método das diferenças finitas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [16]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [16] A.R. Mitchell e D.F. Griffiths, The finite difference method in partial differential equations (Wiley, New York, 1980).
+       </span>
+      </span>
+     </span>
+     recorre à utilização de ferramentas como a Série de Taylor, o método dos volumes finitos discretiza uma equação integrando-a sobre toda a região
+     <math>
+      <msup>
+       <mi>
+        ℛ
+       </mi>
+       <mn>
+        3
+       </mn>
+      </msup>
+     </math>
+     de interesse. Ao executar este primeiro passo, obtêm-se um conjunto semi-discretizado de equações que, por métodos de interpolação, transforma as relações algébricas em um conjunto de equações algébricas solucionáveis. Para o caso específico, considera-se a malha unidimensional, conforme ilustra a
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Malha unidimensional estruturada
+      <br/>
+     </div>
+    </div>
+    <p>
+     Um ponto geral
+     <i>
+      P
+     </i>
+     tem em sua vizinhança dois pontos,
+     <i>
+      W
+     </i>
+     e
+     <i>
+      E
+     </i>
+     , com superfícies de fronteira
+     <i>
+      w
+     </i>
+     e
+     <i>
+      e
+     </i>
+     . As distâncias nodais são definidas por
+     <math>
+      <mi>
+       δ
+      </mi>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mrow>
+        <mi>
+         W
+        </mi>
+        <mi>
+         P
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math>
+      <mi>
+       δ
+      </mi>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mrow>
+        <mi>
+         P
+        </mi>
+        <mi>
+         E
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e as distâncias nodo-fronteira por
+     <math>
+      <mi>
+       δ
+      </mi>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mrow>
+        <mi>
+         w
+        </mi>
+        <mi>
+         P
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     e
+     <math>
+      <mi>
+       δ
+      </mi>
+      <msub>
+       <mi>
+        x
+       </mi>
+       <mrow>
+        <mi>
+         P
+        </mi>
+        <mi>
+         e
+        </mi>
+       </mrow>
+      </msub>
+     </math>
+     .
+    </p>
+    <p>
+     Considerando a equação geral de conservação, na sua forma permanente e exclusivamente difusiva
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] R.D. Blevins, Applied fluid dynamics handbook (Van Nostrand Reinhold, New York, 1984).
+       </span>
+      </span>
+     </span>
+     , onde o negativo do divergente do vetor gradiente de
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     é igual ao termo de fonte
+     <i>
+      Q
+     </i>
+    </p>
+    <div class="row formula" id="eeq20">
+     <a name="eq20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <math display="block" id="m20">
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          [
+         </mo>
+         <mrow>
+          <mi>
+           Γ
+          </mi>
+          <msub>
+           <mo>
+            ∂
+           </mo>
+           <mi>
+            i
+           </mi>
+          </msub>
+          <mi>
+           ϕ
+          </mi>
+         </mrow>
+         <mo>
+          ]
+         </mo>
+        </mrow>
+        <mo>
+         +
+        </mo>
+        <mi>
+         Q
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     é a grandeza analisada e Γ é a constante de difusão.
+    </p>
+    <p>
+     Integrando a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq20" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (20)
+     </a>
+     sobre todo o volume considerado e aplicando o Teorema de Gauss na primeira integral obtêm-se
+    </p>
+    <div class="row formula" id="eeq21">
+     <a name="eq21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <math display="block" id="m21">
+        <mstyle displaystyle="true">
+         <mrow>
+          <msub>
+           <mo>
+            ∫
+           </mo>
+           <mi>
+            S
+           </mi>
+          </msub>
+          <mrow>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mi>
+              Γ
+             </mi>
+             <msub>
+              <mo>
+               ∂
+              </mo>
+              <mi>
+               i
+              </mi>
+             </msub>
+             <mi>
+              ϕ
+             </mi>
+            </mrow>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+        </mstyle>
+        <msub>
+         <mi>
+          n
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mi>
+         d
+        </mi>
+        <mi>
+         S
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mstyle displaystyle="true">
+         <mrow>
+          <msub>
+           <mo>
+            ∫
+           </mo>
+           <mi>
+            V
+           </mi>
+          </msub>
+          <mi>
+           Q
+          </mi>
+         </mrow>
+        </mstyle>
+        <mi>
+         d
+        </mi>
+        <mi>
+         V
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0.
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Observando o exposto na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     , onde
+     <i>
+      w
+     </i>
+     e
+     <i>
+      e
+     </i>
+     são as interfaces do volume de controle, nota-se que esta integral tem seu resultado definido por
+    </p>
+    <div class="row formula" id="eeq22">
+     <a name="eq22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <math display="block" id="m22">
+        <mstyle displaystyle="true">
+         <mrow>
+          <msubsup>
+           <mo>
+            ∫
+           </mo>
+           <mi>
+            w
+           </mi>
+           <mi>
+            e
+           </mi>
+          </msubsup>
+          <mi>
+           Γ
+          </mi>
+         </mrow>
+        </mstyle>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mi>
+         ϕ
+        </mi>
+        <msub>
+         <mi>
+          n
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mi>
+         d
+        </mi>
+        <mi>
+         S
+        </mi>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            A
+           </mi>
+           <msub>
+            <mo>
+             ∂
+            </mo>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mi>
+          w
+         </mi>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            A
+           </mi>
+           <msub>
+            <mo>
+             ∂
+            </mo>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <a class="open-asset-modal" data-target="#ModalSchemeeq21" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (21)
+     </a>
+     é reescrita como sendo
+    </p>
+    <div class="row formula" id="eeq23">
+     <a name="eq23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <math display="block" id="m23">
+        <msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            A
+           </mi>
+           <msub>
+            <mo>
+             ∂
+            </mo>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mi>
+          w
+         </mi>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            A
+           </mi>
+           <msub>
+            <mo>
+             ∂
+            </mo>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <mi>
+         Q
+        </mi>
+        <mi>
+         Δ
+        </mi>
+        <mi>
+         V
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0.
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O termo fonte pode ser expresso pela soma de uma constante
+     <i>
+      Q
+      <sub>
+       u
+      </sub>
+     </i>
+     mais uma função da variável depentente
+     <i>
+      Q
+      <sub>
+       p
+      </sub>
+     </i>
+     <math>
+      <msub>
+       <mi>
+        ϕ
+       </mi>
+       <mi>
+        p
+       </mi>
+      </msub>
+     </math>
+     na forma
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [17]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [17] H.K. Versteeg e W. Malalasekera, An introduction to computational fluid dynamics: the finite volume method (Longman Scientific &amp; Techincal, Essex, 2007).
+       </span>
+      </span>
+     </span>
+    </p>
+    <div class="row formula" id="eeq24">
+     <a name="eq24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <math display="block" id="m24">
+        <mi>
+         Q
+        </mi>
+        <mi>
+         Δ
+        </mi>
+        <mi>
+         V
+        </mi>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          Q
+         </mi>
+         <mi>
+          u
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          Q
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Admitindo-se que o fluxo convectivo de massa e a condutância difusiva ocorrem nas fronteiras dos volumes de controle, discretiza-se por interpolação linear o valor de Γ como sendo
+    </p>
+    <div class="row formula" id="eeq25">
+     <a name="eq25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (25)
+       </span>
+       <math display="block" id="m25">
+        <msub>
+         <mi>
+          Γ
+         </mi>
+         <mi>
+          w
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            W
+           </mi>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            P
+           </mi>
+          </msub>
+         </mrow>
+         <mn>
+          2
+         </mn>
+        </mfrac>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          Γ
+         </mi>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            P
+           </mi>
+          </msub>
+          <mo>
+           +
+          </mo>
+          <msub>
+           <mi>
+            Γ
+           </mi>
+           <mi>
+            E
+           </mi>
+          </msub>
+         </mrow>
+         <mn>
+          2
+         </mn>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e para as derivadas de
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+    </p>
+    <div class="row formula" id="eeq26">
+     <a name="eq26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (26)
+       </span>
+       <math display="block" id="m26">
+        <msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <msub>
+            <mo>
+             ∂
+            </mo>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mi>
+          w
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           ϕ
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <msub>
+           <mi>
+            x
+           </mi>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+        </mfrac>
+        <msub>
+         <mo>
+          |
+         </mo>
+         <mi>
+          w
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              ϕ
+             </mi>
+             <mi>
+              P
+             </mi>
+            </msub>
+            <mo>
+             −
+            </mo>
+            <msub>
+             <mi>
+              ϕ
+             </mi>
+             <mi>
+              W
+             </mi>
+            </msub>
+           </mrow>
+           <mrow>
+            <mi>
+             δ
+            </mi>
+            <msub>
+             <mi>
+              x
+             </mi>
+             <mrow>
+              <mi>
+               W
+              </mi>
+              <mi>
+               P
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq27">
+     <a name="eq27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (27)
+       </span>
+       <math display="block" id="m27">
+        <msub>
+         <mrow>
+          <mo>
+           (
+          </mo>
+          <mrow>
+           <msub>
+            <mo>
+             ∂
+            </mo>
+            <mi>
+             i
+            </mi>
+           </msub>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mo>
+           )
+          </mo>
+         </mrow>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <mi>
+           ϕ
+          </mi>
+         </mrow>
+         <mrow>
+          <mi>
+           d
+          </mi>
+          <msub>
+           <mi>
+            x
+           </mi>
+           <mi>
+            i
+           </mi>
+          </msub>
+         </mrow>
+        </mfrac>
+        <msub>
+         <mo>
+          |
+         </mo>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              ϕ
+             </mi>
+             <mi>
+              E
+             </mi>
+            </msub>
+            <mo>
+             −
+            </mo>
+            <msub>
+             <mi>
+              ϕ
+             </mi>
+             <mi>
+              P
+             </mi>
+            </msub>
+           </mrow>
+           <mrow>
+            <mi>
+             δ
+            </mi>
+            <msub>
+             <mi>
+              x
+             </mi>
+             <mrow>
+              <mi>
+               P
+              </mi>
+              <mi>
+               E
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Resultando na forma final da substituição da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (24)
+     </a>
+     na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq23" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (23)
+     </a>
+     , levando em conta o demonstrado nas
+     <a class="open-asset-modal" data-target="#ModalSchemeeq25" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equações (25)
+     </a>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq26" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (26)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (27)
+     </a>
+     .
+    </p>
+    <div class="row formula" id="eeq28">
+     <a name="eq28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (28)
+       </span>
+       <math display="block" id="m28">
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          W
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          W
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          E
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          E
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <mn>
+         2
+        </mn>
+        <msub>
+         <mi>
+          Q
+         </mi>
+         <mi>
+          u
+         </mi>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      a
+      <sub>
+       i
+      </sub>
+     </i>
+     referem-se aos coeficientes de difusão efetivos, discretizados na malha em questão
+    </p>
+    <div class="row formula" id="eeq29">
+     <a name="eq29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (29)
+       </span>
+       <math display="block" id="m29">
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          W
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              Γ
+             </mi>
+             <mi>
+              W
+             </mi>
+            </msub>
+            <mo>
+             +
+            </mo>
+            <msub>
+             <mi>
+              Γ
+             </mi>
+             <mi>
+              P
+             </mi>
+            </msub>
+           </mrow>
+           <mrow>
+            <mi>
+             δ
+            </mi>
+            <msub>
+             <mi>
+              x
+             </mi>
+             <mrow>
+              <mi>
+               W
+              </mi>
+              <mi>
+               P
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+          <msub>
+           <mi>
+            A
+           </mi>
+           <mi>
+            w
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ;
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq30">
+     <a name="eq30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (30)
+       </span>
+       <math display="block" id="m30">
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          E
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              Γ
+             </mi>
+             <mi>
+              P
+             </mi>
+            </msub>
+            <mo>
+             +
+            </mo>
+            <msub>
+             <mi>
+              Γ
+             </mi>
+             <mi>
+              E
+             </mi>
+            </msub>
+           </mrow>
+           <mrow>
+            <mi>
+             δ
+            </mi>
+            <msub>
+             <mi>
+              x
+             </mi>
+             <mrow>
+              <mi>
+               P
+              </mi>
+              <mi>
+               E
+              </mi>
+             </mrow>
+            </msub>
+           </mrow>
+          </mfrac>
+          <msub>
+           <mi>
+            A
+           </mi>
+           <mi>
+            e
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         ;
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq31">
+     <a name="eq31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (31)
+       </span>
+       <math display="block" id="m31">
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          W
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          E
+         </mi>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <mn>
+         2
+        </mn>
+        <msub>
+         <mi>
+          Q
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Este resultado determina a discretização sob a perspectiva do método dos volumes finitos. Esta equação pode ser definida para cada nó da malha, a fim de solucionar o problema, quando apropriadamente adaptada as suas condições de contorno típicas. Seu resultado determina a distribuição da propriedade
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     , discreta, sobre todo os nós da malha. A generalização para os casos bidimensional e tridimensional podem ser obtidos de formas semelhantes, de modo que a equação para o caso geral escreve-se na forma
+    </p>
+    <div class="row formula" id="eeq32">
+     <a name="eq32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (32)
+       </span>
+       <math display="block" id="m32">
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          P
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mstyle displaystyle="true">
+         <mo>
+          ∑
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            a
+           </mi>
+           <mi>
+            n
+           </mi>
+          </msub>
+         </mrow>
+        </mstyle>
+        <msub>
+         <mi>
+          ϕ
+         </mi>
+         <mi>
+          n
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <mn>
+         2
+        </mn>
+        <msub>
+         <mi>
+          Q
+         </mi>
+         <mi>
+          p
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     de modo que, para os casos especificados abaixo, os valores de
+     <i>
+      n
+     </i>
+     para as diferentes direções tratadas no problema
+    </p>
+    <div class="row formula" id="eeq33">
+     <a name="eq33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (33)
+       </span>
+       <math display="block" id="m33">
+        <mn>
+         1
+        </mn>
+        <mi>
+         D
+        </mi>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          W
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          E
+         </mi>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq34">
+     <a name="eq34">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (34)
+       </span>
+       <math display="block" id="m34">
+        <mn>
+         2
+        </mn>
+        <mi>
+         D
+        </mi>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          W
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          E
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          N
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          S
+         </mi>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <div class="row formula" id="eeq35">
+     <a name="eq35">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (35)
+       </span>
+       <math display="block" id="m35">
+        <mn>
+         3
+        </mn>
+        <mi>
+         D
+        </mi>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          W
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          E
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          N
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          S
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          F
+         </mi>
+        </msub>
+        <mo>
+         ,
+        </mo>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          B
+         </mi>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Observa-se também que a generalização para o tratamento de casos advectivos/convectivos também pode ser obtido de forma semelhante, tornando esse método uma ferramenta amplamente usada na abordagem da dinâmica de fluidos computacional.
+    </p>
+    <h2>
+     3.2. O algoritmo SIMPLE / PISO
+    </h2>
+    <p>
+     Dado a construção do conjunto de equações discretizadas, faz-se necessário estabelecer a rotina de funcionamento deste modelo. Analisando o obtido na discretização da equação geral de conservação, poderia em primeiro momento concluir-se que a equação da continuidade e o princípio da conservação da quantidade de movimento são casos específicos desta, demonstrada sem os termos transiente e convectivo na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq20" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (20)
+     </a>
+     . Mesmo que tal definição induza a pensar na simplicidade da solução, o desconhecimento
+     <i>
+      a priori
+     </i>
+     do campo de velocidades que efetivamente realiza o transporte da grandeza
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     já induziria uma significativa complexidade, visto que este faz parte das equações a serem resolvidas. Tal fato gera termos não lineares como a derivada de
+     <math>
+      <mi>
+       ρ
+      </mi>
+      <msub>
+       <mi>
+        u
+       </mi>
+       <mi>
+        i
+       </mi>
+      </msub>
+      <msub>
+       <mi>
+        u
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msub>
+     </math>
+     , o que torna ainda mais complexa a obtenção da solução numérica desejada.
+    </p>
+    <p>
+     Discretizando a equação da continuidade, para o caso de um fluido invíscido, obtem-se
+    </p>
+    <div class="row formula" id="eeq36">
+     <a name="eq36">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (36)
+       </span>
+       <math display="block" id="m36">
+        <msub>
+         <mi>
+          a
+         </mi>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mstyle displaystyle="true">
+         <mo>
+          ∑
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            a
+           </mi>
+           <mi>
+            n
+           </mi>
+          </msub>
+         </mrow>
+        </mstyle>
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mi>
+          n
+         </mi>
+        </msub>
+        <mo>
+         −
+        </mo>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            p
+           </mi>
+           <mi>
+            P
+           </mi>
+          </msub>
+          <mo>
+           −
+          </mo>
+          <msub>
+           <mi>
+            p
+           </mi>
+           <mi>
+            E
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <msub>
+         <mi>
+          A
+         </mi>
+         <mi>
+          e
+         </mi>
+        </msub>
+        <mo>
+         +
+        </mo>
+        <mn>
+         2
+        </mn>
+        <msub>
+         <mi>
+          S
+         </mi>
+         <mi>
+          u
+         </mi>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Na análise da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq36" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      equação (36)
+     </a>
+     percebe-se um acoplamento da solução da equação da quantidade de movimento com a determinação do campo de pressão. Uma abordagem a ser utilizada nesse problema é a solução acoplada das equações de momento, conjuntamente com um correlator do campo de pressão. Tal rotina caracteriza o algoritmo SIMPLE (acrônimo para
+     <i>
+      Semi-Implicit Method for Pressure-Linked Equations
+     </i>
+     )
+    </p>
+    <p>
+     O algoritmo SIMPLE
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [18]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [18] S. Patankar Numerical heat transfer and fluid flow (Hemisphere, Washington, 1980).
+       </span>
+      </span>
+     </span>
+     baseia-se no princípio que a equação do momento linear somente irá satisfazer a equação da continuidade se, e somente se, o campo de pressões correto for determinado
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [19]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [19] J.P. Van Doormaal e G.D. Raithby, Num. Heat Trans. 2, 147 (1984).
+       </span>
+      </span>
+     </span>
+     . Nesse algoritmo existe a necessidade de corrigir-se tanto o campo de pressão como o de velocidades
+    </p>
+    <div class="row formula" id="eeq37">
+     <a name="eq37">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (37)
+       </span>
+       <math display="block" id="m37">
+        <msub>
+         <mi>
+          u
+         </mi>
+         <mrow>
+          <mi>
+           n
+          </mi>
+          <mi>
+           f
+          </mi>
+         </mrow>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msubsup>
+         <mi>
+          u
+         </mi>
+         <mrow>
+          <mi>
+           n
+          </mi>
+          <mi>
+           f
+          </mi>
+         </mrow>
+         <mo>
+          *
+         </mo>
+        </msubsup>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <msup>
+          <mi>
+           u
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <msub>
+         <mi>
+          p
+         </mi>
+         <mi>
+          α
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msubsup>
+         <mi>
+          p
+         </mi>
+         <mi>
+          α
+         </mi>
+         <mo>
+          *
+         </mo>
+        </msubsup>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <msup>
+          <mi>
+           p
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <mi>
+          α
+         </mi>
+        </msub>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde de modo direto, relaciona-se a correção da velocidade e a correção do campo de pressão na forma de
+    </p>
+    <div class="row formula" id="eeq38">
+     <a name="eq38">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (38)
+       </span>
+       <math display="block" id="m38">
+        <msub>
+         <msup>
+          <mi>
+           u
+          </mi>
+          <mo>
+           ′
+          </mo>
+         </msup>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <msub>
+         <mi>
+          d
+         </mi>
+         <mi>
+          f
+         </mi>
+        </msub>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <msup>
+            <mi>
+             p
+            </mi>
+            <mo>
+             ′
+            </mo>
+           </msup>
+           <mi>
+            α
+           </mi>
+          </msub>
+          <mo>
+           −
+          </mo>
+          <msub>
+           <msup>
+            <mi>
+             p
+            </mi>
+            <mo>
+             ′
+            </mo>
+           </msup>
+           <mrow>
+            <mi>
+             α
+            </mi>
+            <mo>
+             +
+            </mo>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O algoritmo SIMPLE possui a seguinte sequência de execução
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       determinar um campo de pressões
+       <i>
+        p
+       </i>
+       *;
+      </p>
+     </li>
+     <li>
+      <p>
+       resolver a equação do momento linear, afim de obter os valores para
+       <i>
+        u
+       </i>
+       * (consequentemente para
+       <i>
+        v
+       </i>
+       * e
+       <i>
+        w
+       </i>
+       * no caso tridimensional);
+      </p>
+     </li>
+     <li>
+      <p>
+       resolver a equação de
+       <i>
+        p
+       </i>
+       ′;
+      </p>
+     </li>
+     <li>
+      <p>
+       determinar o valor exato do campo
+       <i>
+        p
+       </i>
+       ;
+      </p>
+     </li>
+     <li>
+      <p>
+       resolver a equação de correção para determinar o valor de
+       <i>
+        u
+       </i>
+       (consequentemente para
+       <i>
+        v
+       </i>
+       e
+       <i>
+        w
+       </i>
+       no caso tridimensional);
+      </p>
+     </li>
+     <li>
+      <p>
+       usar o novo campo de pressões
+       <i>
+        p
+       </i>
+       para determinar um novo campo de pressões
+       <i>
+        p
+       </i>
+       * e repetir novamente todo o processo até a obtenção da solução.
+      </p>
+     </li>
+    </ol>
+    <p>
+     O algoritmo SIMPLE mostra-se eficiente na solução de diversos tipos de escoamentos desde que em seu estado estacionário, sejam eles laminares ou turbulentos. Para regimes de escoamento transientes utiliza-se o algoritmo PISO (acrônimo para
+     <i>
+      Pressure Implicit with Splitting of Operator
+     </i>
+     )
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [20]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [20] D.S. Jang, R. Jetli e S. Acharya, Num. Heat Trans. 3, 209 (1986).
+       </span>
+      </span>
+     </span>
+     , sendo uma extensão do algoritmo SIMPLE, no qual são gerados dois níveis de correção, na intensão de melhor caracterizar o regime transiente simulado.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. A Simulação Computacional e a Interface de Controle
+    </h1>
+    <p>
+     O
+     <i>
+      OpenFOAM
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] C.J. Greenshields Openfoam user guide (OpenFOAM Foundation, London, 2015).
+       </span>
+      </span>
+     </span>
+     é um conjunto de bibliotecas escritas em
+     <i>
+      C
+     </i>
+     + + desenvolvidas para simulações de sistemas na qual a fenomenologia é escrita em termos de campos tensoriais. Dentro dessas bibliotecas, existem vários modelos nas mais diversas áreas, onde por consequência uma das aplicabilidades mais usadas e com maior suporte online
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        existe diversos fóruns de discussão e comunidades na internet que dispõe de FAQ's e conteúdos voltados à utilização do OpenFOAM
+       </span>
+      </span>
+     </span>
+     é exatamente a Dinâmica de Fluidos Computacional. Inicialmente desenvolvido em 1993 por Henry Weller e Hrvoje Jasak, enquanto estudantes do Imperial College, o FOAM (acrônimo de
+     <i>
+      Field Operation and Manipulation
+     </i>
+     ) foi uma proposta frente a inacessibilidade aos softwares de simulação disponíveis na época. Escrito em
+     <i>
+      C
+     </i>
+     + + , o
+     <i>
+      OpenFOAM
+     </i>
+     é um software de simulação em CFD, que pode ser obtido via repositório da SourceForge, Github e da própria NABLA, detentora da licença oficial de desenvolvimento e distribuição do FOAM até o ano de 2005 e que posteriormente o liberou sob licença pública GNU. Hoje o código
+     <i>
+      OpenFOAM
+     </i>
+     é mantido e desenvolvido pela OpenCFD
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [21]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [21] http://www.openfoam.com, acessado em 08/08/2018.
+       </span>
+       <br/>
+       <a href="http://www.openfoam.com" target="_blank">
+        http://www.openfoam.com...
+       </a>
+      </span>
+     </span>
+     e paralelamente a Wikki mantém e desenvolve o FoamExtended, similar ao
+     <i>
+      OpenFOAM
+     </i>
+     .
+    </p>
+    <p>
+     A estrutura de linguagem do
+     <i>
+      OpenFOAM
+     </i>
+     foi desenvolvida para aproximar de forma eficiente a linguagem matemática da linguagem de programação. A
+     <a class="open-asset-modal" data-target="#ModalTablet1" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 1
+     </a>
+     demonstra alguns operadores diferenciais que estão disponíveis dentro da biblioteca de códigos do
+     <i>
+      OpenFOAM
+     </i>
+     .
+    </p>
+    <div class="row table" id="t1">
+     <a name="t1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet1" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 1
+      </strong>
+      <br/>
+      Tabela de equivalência das operações e a sitaxe utilizada no
+      <i>
+       software OpenFOAM
+      </i>
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na manipulação das dimensões das grandezas representadas, o
+     <i>
+      OpenFOAM
+     </i>
+     permite operações algébricas nessas propriedades desde que devidamente representadas. Como forma de prevenir a implementação errada de determinadas rotinas, o código executa o cálculo dimensional em todas as operações tensoriais efetuadas. Para representá-las, o usuário tem disponível a seguinte linha de comando
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+     </a>
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     De modo que cada entrada entre os colchetes representa a dimensão abaixo especificada
+    </p>
+    <p>
+     De acordo com a
+     <a class="open-asset-modal" data-target="#ModalTablet2" data-toggle="modal" href="">
+      <span class="sci-ico-fileTable">
+      </span>
+      Tabela 2
+     </a>
+     , percebe-se que na linha de comando exemplificada, a dimensão da grandeza é em
+     <math>
+      <mfrac>
+       <mrow>
+        <msup>
+         <mi>
+          m
+         </mi>
+         <mn>
+          2
+         </mn>
+        </msup>
+       </mrow>
+       <mrow>
+        <msup>
+         <mi>
+          t
+         </mi>
+         <mn>
+          3
+         </mn>
+        </msup>
+       </mrow>
+      </mfrac>
+     </math>
+     . Em relação a sintaxe do programa, onde utilizando como exemplo a equação de transporte
+    </p>
+    <div class="row table" id="t2">
+     <a name="t2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalTablet2" data-toggle="modal">
+       <div class="thumbOff">
+        Thumbnail
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Tabela 2
+      </strong>
+      <br/>
+      Tabela de entrada das dimensões suportadas pelo
+      <i>
+       software OpenFOAM
+      </i>
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eeq39">
+     <a name="eq39">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (39)
+       </span>
+       <math display="block" id="m39">
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          o
+         </mi>
+        </msub>
+        <mi>
+         ρ
+        </mi>
+        <mi>
+         T
+        </mi>
+        <mo>
+         +
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         ρ
+        </mi>
+        <mi>
+         ϕ
+        </mi>
+        <mi>
+         T
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         −
+        </mo>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         d
+        </mi>
+        <mi>
+         t
+        </mi>
+        <msub>
+         <mo>
+          ∂
+         </mo>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mi>
+         T
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     em que
+     <i>
+      dt
+     </i>
+     é o passo temporal, observa-se as seguintes regras:
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+     </a>
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Convém notar que a variável
+     <math>
+      <mi>
+       ϕ
+      </mi>
+     </math>
+     (phi) presente no código descrito acima, corresponde ao campo de velocidades linearmente interpolado para as fronteiras do volume de controle, conforme a equação abaixo
+    </p>
+    <div class="row formula" id="eeq40">
+     <a name="eq40">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (40)
+       </span>
+       <math display="block" id="m40">
+        <mi>
+         ϕ
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mstyle displaystyle="true">
+         <mrow>
+          <msub>
+           <mo>
+            ∫
+           </mo>
+           <mi mathvariant="script">
+            A
+           </mi>
+          </msub>
+          <mrow>
+           <msub>
+            <mi>
+             u
+            </mi>
+            <mi>
+             i
+            </mi>
+           </msub>
+          </mrow>
+         </mrow>
+        </mstyle>
+        <msub>
+         <mi>
+          n
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+        <mi>
+         d
+        </mi>
+        <mi>
+         A
+        </mi>
+        <mo>
+         .
+        </mo>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O
+     <i>
+      OpenFOAM
+     </i>
+     tem implementado o Método dos Volumes Finitos, como operação para discretização das EDP's a serem calculadas ao longo da simulação. Para tanto o software possui duas bibliotecas específicas, a FVM.H e a FVC.H. A primeira biblioteca corresponde ao conjunto de operações de discretização típicas do método dos volumes finitos. Os resultados fornecidos são armazenados em um objeto tipo fvMatrix&lt;Type&gt;, de modo a serem armazenados em uma matriz que será solucionada pelo próprio método. A segunda biblioteca traz o ferramental para manipular os termos da EDP de modo explícito não guardando-os porém, dentro de uma matriz solucionável pelo sistema.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Estrutura de Funcionamento
+    </h1>
+    <p>
+     A interface J.A.R.V.E.S. foi construída para disponibilizar uma biblioteca de simulações pré definidas, baseadas nos exemplos mais utilizados nos cursos de mecânica dos fluidos, tais como:
+    </p>
+    <ol type="a">
+     <li>
+      <p>
+       escoamento laminar externo sobre um cilindro com dois módulos de Reynolds diferentes:
+       <i>
+        Re
+       </i>
+       = 30 e
+       <i>
+        Re
+       </i>
+       = 195;
+      </p>
+     </li>
+     <li>
+      <p>
+       escoamento turbulento interno em um alargamento tipo degrau (reprodução do experimento de Robert W. Pitz e John W. Daily de 1980)
+       <span class="ref">
+        <strong class="xref xrefblue">
+         [22]
+        </strong>
+        <span class="refCtt closed">
+         <span>
+          [22] R.W. Pitz e J.W. Daily, AIAA Journal 11, 1565 (1983).
+         </span>
+        </span>
+       </span>
+       ;
+      </p>
+     </li>
+     <li>
+      <p>
+       escoamento multi fase com dois fluidos imiscíveis de viscosidades absolutas distintas;
+      </p>
+     </li>
+     <li>
+      <p>
+       escoamento laminar interno em uma curva
+       <math>
+        <msup>
+         <mn>
+          90
+         </mn>
+         <mo>
+          °
+         </mo>
+        </msup>
+       </math>
+       com injetor;
+      </p>
+     </li>
+     <li>
+      <p>
+       simulação da esteira de Von-Karman
+       <span class="ref">
+        <strong class="xref xrefblue">
+         [23]
+        </strong>
+        <span class="refCtt closed">
+         <span>
+          [23] T. Von Kármán e L. Edson, The wind and beyond (Little, Brown &amp; Company, Boston, 1967).
+         </span>
+        </span>
+       </span>
+       ;
+      </p>
+     </li>
+     <li>
+      <p>
+       escoamento supersônico de um fluido compressível sobre um estreitamento tipo degrau (
+       <i>
+        T
+       </i>
+       = 3
+       <i>
+        K
+       </i>
+       e
+       <i>
+        P
+       </i>
+       = 1
+       <i>
+        N
+       </i>
+       /
+       <i>
+        m
+       </i>
+       <sup>
+        2
+       </sup>
+       );
+      </p>
+     </li>
+     <li>
+      <p>
+       escoamento de transição em um alargamento tipo degrau.
+      </p>
+     </li>
+    </ol>
+    <p>
+     A interface J.A.R.V.E.S. está baseado em três ferramentas nativas ao Linux, onde o funcionamento conjunto auxilia a utilização, controle e edição dos
+     <i>
+      scripts
+     </i>
+     do OpenFOAM.
+    </p>
+    <h2>
+     5.1. Linguagem
+     <i>
+      ShellScript
+     </i>
+    </h2>
+    <p>
+     A escolha da linguagem de extensão
+     <i>
+      Shell Script
+     </i>
+     veio da necessidade de adaptação e controle do OpenFOAM. Como a intenção principal na construção da interface J.A.R.V.E.S é controlar a forma como se trata a pré-montagem fragmentada da simulação no OpenFOAM. Outras linguagens como Python e C++, nativa do próprio OpenFOAM, não atenderam a necessidade de controle direto das ações no computador, tal como a linguagem nativa do próprio Shell consegue executar.
+    </p>
+    <p>
+     O primeiro shell foi criado pelo próprio desenvolvedor do sistema OS UNIX
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [24]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [24] M.J. Bach. The design of the UNIX operating system (Prentice-Hall, Englewood Cliffs, 1986).
+       </span>
+      </span>
+     </span>
+     , Kenneth Lane Thompson (1943), e foi distribuído nas versões 1 a 6 do UNIX, entre os anos 1971 a 1975 e, embora em desuso, o
+     <i>
+      Thompson Shell
+     </i>
+     foi o precursor de outros sistemas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [25]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [25] S.R. Bourne, Bell System Tec. J. 6, 1971 (1978).
+       </span>
+      </span>
+     </span>
+     . O
+     <i>
+      Bash
+     </i>
+     , interpretador Shell nativo da grande maioria das distribuições baseadas no GNU/LINUX foi desenvolvido por Brian Fox em 1988, a pedido de Richard Stallman, fundador da
+     <i>
+      Free Software Foundation
+     </i>
+     . Stallman desejava um shell livre e ao mesmo tempo eficiente, sendo um dos únicos projetos financiados pela FSF. O
+     <i>
+      Bash
+     </i>
+     foi mantido por Fox até 1994, sendo hoje assegurado por Chet Ramey, também da FSF.
+    </p>
+    <p>
+     Trabalhando em conjunto com o
+     <i>
+      Bash
+     </i>
+     , a linguagem
+     <i>
+      Shell Script
+     </i>
+     dá ação o comando escrito em código fonte, em um arquivo com extensão .sh, permitindo a construção de um programa ordenado, onde é possível estruturas que contenham:
+    </p>
+    <ol type="a">
+     <li>
+      <p>
+       estruturas de decisão (
+       <i>
+        if
+       </i>
+       );
+      </p>
+     </li>
+     <li>
+      <p>
+       estruturas de repetição (
+       <i>
+        for
+       </i>
+       ou
+       <i>
+        while
+       </i>
+       );
+      </p>
+     </li>
+     <li>
+      <p>
+       funções e argumentos;
+      </p>
+     </li>
+     <li>
+      <p>
+       definições de variáveis e formalismo de funcionamento.
+      </p>
+     </li>
+    </ol>
+    <p>
+     A primeira linha de um
+     <i>
+      ShellScript
+     </i>
+     começa obrigatoriamente com um comando #! (Vale ressaltar no entanto que o indicativo de comentário no
+     <i>
+      Shell Bash
+     </i>
+     é o comando ”#”, sendo diferente do par utilizando no início do arquivo, que em inglês é pronunciado como ”
+     <i>
+      shebang
+     </i>
+     ”), informando diretamente ao núcleo qual shell ele deverá usar, sendo escrito tal como:
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+     </a>
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Tal comando determina que o shell
+     <i>
+      Bash
+     </i>
+     , localizado no diretório /bin execute o script. Após isso, todos os comandos devem vir em linhas separadas.
+    </p>
+    <h2>
+     5.2. Ferramenta SED
+    </h2>
+    <p>
+     A ferramenta SED, acrônimo para
+     <i>
+      Stream Editor
+     </i>
+     ou editor de fluxo, que cumpre o papel de edição dos scripts típicos da simulação em OpenFOAM
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [26]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [26] E. Siever, S. Figgins, R. Love e A. Robins, Linux in a Nutshell (O'Reilly Media, Sebastopol, 2005).
+       </span>
+      </span>
+     </span>
+     . Como a interface precisava manipular e editar dados ou seções inteiras dentro do OpenFOAM, foi escolhido a ferramenta SED em função da praticidade de inserir, apagar, substituir e editar partes de um documento qualquer. A ferramenta SED foi criada por Lee E. McMahon entre os anos 1973 e 1974, quando era programador da BellLabs. Foi inicialmente disponibilizado na versão 7 do UNIX, sendo considerado um dos primeiros comandos para edição de texto via linha de comando. Vale ressaltar porém que existe uma grande diferença entre a ferramenta SED e editores nativos ao terminal como o VI e o VI-M, pois o SED edita por orientação de linha, não necessitando de ”abrir e editar” o arquivo, trabalhando-o dentro do espaço padrão (
+     <i>
+      Pattern space
+     </i>
+     ).
+    </p>
+    <p>
+     A ferramenta SED usa a seguinte seguinte sintaxe básica:
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+     </a>
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     As opções possíveis para a ferramenta SED estão disponíveis no comando ~$ sed --help, onde sua saída no terminal de comando lê-se, de modo traduzido como: Um exemplo prático da uso do comando SED é visto no script abaixo, retirado da interface J.A.R.V.E.S:
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+     </a>
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Este comando trabalha diretamente na linha 20 do arquivo
+     <i>
+      k
+     </i>
+     , localizado no diretório original. O comando descrito na linha 15 executa a remoção da linha 20, através da opção ”d = delete” e o comando da linha 17 executa a inserção do valor internalField uniform $num; nesta mesma linha através da opção ”s = substitute” e o comando ” /^/ \”, onde o espaço entre o
+     <i>
+      slash
+     </i>
+     e o
+     <i>
+      backslash
+     </i>
+     é considerado um valor e não mais um comando, captando a string $num do stream anterior e substituindo-a pelo seu valor determinado. Apesar de aparentemente trabalhosa, a ação ”apagar – substituir” mostrou-se bastante útil, visto que elimina a exigência da interferência do usuário na edição do script do OpenFOAM, automatizando significativamente a interface J.A.R.V.E.S.
+    </p>
+    <h2>
+     5.3. A Interface DIALOG
+    </h2>
+    <p>
+     Tendo estruturado o cerne de operação da interface J.A.R.V.E.S., faz-se necessário agora determinar as dependências da interface com o usuário. Das muitas opções disponíveis para as distribuições LINUX, a interface DIALOG foi a que melhor adaptou-se na proposta. A interface DIALOG foi criada por Savio Lam, sendo sua primeira versão lançada em dezembro de 1993, ainda na versão 0.1. Após 1999, o código-fonte do DIALOG está sendo mantido por Thomas E. Dickey, conforme destacado no site
+     <a href="https://invisible-island.net/dialog/" target="_blank">
+      https://invisible-island.net/dialog/
+     </a>
+     onde preserva o log de alterações do código fonte
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [27]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [27] J.C. Neves Programação Shell Linux (Brasport, Rio de Janeiro, 2008).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A interface de usuário é uma das partes mais importantes quando se trata da construção e funcionalidade de um software. Através dela, o usuário realiza tarefas, determina comandos e altera condições na estrutura de dados ou de processamento do computador. Seu surgimento deu-se exatamente para simplificar e tornar menos hostil a interação usuário-computador, disponibilizando elementos gráficos que, de modo intuitivo, guiem e correlacionem entradas e saídas de informação. Desde os primórdios da computação até meados da década de 80, a maioria dos computadores tinha sua interface baseada em texto (
+     <i>
+      Text-based User Interface
+     </i>
+     – TUI), onde a entrada dos comandos necessários é feita prioritariamente pelo teclado. As interfaces baseadas em texto caracterizam-se por disponibilizar exclusivamente texto e admitir entrada exclusivamente de texto, onde o principal benefício é a baixa exigência de processamento durante o uso e principal desvantagem é a pouca interatividade da interface.
+    </p>
+    <p>
+     A escolha de uma interface baseada em texto para o J.A.R.V.E.S. deu-se devido a possibilidade de sua utilização em terminais de comando, sem a exigência de ter-se instalado uma interface gráfica na distribuição LINUX, e a lista dos tipos de caixas disponíveis é dado pelo comando dialog – help.
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+     </a>
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Esta caixa baseada em DIALOG é disponibilizada para determinar qual tipo de escoamento será simulado. A string FLOW é relacionada à saída da caixa tipo menu, onde existem duas opções disponibilizadas, nas linhas 24 (INTERNO) e 25 (EXTERNO). A encadeamento de opções utilizadas determina que a caixa tenha uma mensagem de fundo (linha 18, opção --backtitle), que a saída seja interpretada como direta (linha 19, opção --stdout), sem a presença do botão CANCEL (linha 20, opção --nocancel|) e que o título da caixa seja visto como J.A.R.V.E.S. (linha 21, opção --title). É criado um direcionamento caso o botão ESC do teclado seja pressionado (valor ”0” na saída), direcionando o terminal a uma tela de confirmação. Capturando a saída da caixa, o condicional case escrito das linhas 30 a 40 direciona para a execução de outro dois nós de direcionamentos descritos nas linhas 34 e 38. A saída do script, quando executado, é visualizado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Caixa de texto criada pelo comando SED
+      <br/>
+     </div>
+    </div>
+    <p>
+     A junção destas poderosas ferramentas possibilitou a criação da interface automatizada, permitindo que o usuário concentre-se na modelagem básica do problema, eximindo um largo ”
+     <i>
+      know-how
+     </i>
+     ” em manipulação de scripts. Apesar do detrimento da forma em função da usabilidade, a interface J.A.R.V.E.S. busca cumprir o papel de simplificar e popularizar o uso educacional da CFD, mais precisamente descomplexificar o formalismo do OpenFOAM.
+    </p>
+    <h2>
+     5.4. Instalação e Manuais
+    </h2>
+    <p>
+     O código-fonte da interface, juntamente com o pacote OpenFOAM adaptado está hospedado no site
+     <a href="https://so-urceforge.net/projects/jarves-1-0/" target="_blank">
+      https://so-urceforge.net/projects/jarves-1-0/
+     </a>
+     , estando inicialmente compactado em protocolo .tar.gz. Juntamente a este, encontra-se o arquivo MANUAL.pdf onde está disposto um revisional sobre a dinâmica de fluidos do ponto de vista teórico e computacional, o manual de instalação, toda a rotina de simulação com os
+     <i>
+      scripts
+     </i>
+     associados discutidos e os objetivos e perspectivas do ponto de vista educacional.
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Considerações Finais
+    </h1>
+    <p>
+     A computação como ferramenta de ensino permite que fenômenos inteiros sejam modelados, de modo que além de sua ampla utilização no campo da pesquisa, a visualização e a manipulação de dados e condições da simulação contribuem para a construção do conhecimento
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [28]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [28] A. Medeiros e C.F. de Medeiros, Rev. Bras. Ensino Física 2, 77 (2002).
+       </span>
+      </span>
+     </span>
+     . No caso específico da sua utilização na educação superior, demonstra uma potencialidade ainda maior
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [29]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [29] I.S. Araujo e E.A. Veit, Rev. Bras. Pesq. Educação Ciências 3, (2011).
+       </span>
+      </span>
+     </span>
+     . Em disciplinas abstratas como o caso da Mecânica dos Fluidos, onde apesar da larga utilização de ferramentas experimentais, determinadas características do escoamento acabam sendo assimiladas exclusivamente através em esquemas ou ilustrações. Dado que grande parte do estudo dedicar-se a dinâmica do escoamento, tais modos de representação acabam por serem falhos.
+    </p>
+    <p>
+     A pré existência de ferramentas computacionais em dinâmica dos fluidos colaborou significativamente, motivando a pesquisa sobre os métodos relacionados a este campo de estudo. A simulação computacional como ciência busca, dentre outros intuitos, ser uma ferramenta na análise de cenários. Modelar um problema computacionalmente é não só buscar reproduzi-lo como representação da situação real, mas também buscar possíveis cenários onde resultados colaborem com a predição de acontecimentos em escala real, demonstrando não somente a perspectiva de visualização, mas também a predição de acontecimentos, limitados claramente em validade e precisão. Sendo portanto uma ferramenta com aplicabilidade tão vasta em análise, predição e
+     <i>
+      design
+     </i>
+     , uma perspectiva educacional pode ser almejada, desde que adaptada apropriadamente para a situação. Como já enunciado anteriormente, a dificuldade intrínseca na manipulação da estrutura de algoritmo e o necessário
+     <i>
+      know-how
+     </i>
+     pré-existente em programação acaba por desmotivar docentes em inserir em suas disciplinas, estruturas de simulação de sistemas dinâmicos, abrindo portanto uma interessante demanda. A solução proposta na criação da interface J.A.R.V.E.S vem de encontro exatamente com esta necessidade, realizando em primeira instância, o papel de ”programador-base” da simulação a ser apresentada educacionalmente.
+    </p>
+    <p>
+     Apesar de tratar problemas específicos a simulação computacional como ferramenta de solução de modelos matemáticos colabora para o entendimento acerca do fenômeno com um todo. Sua especificidade fica clara quando, ainda citando Heidemann
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [1]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [1] L.A. Heideman, I.S. Araujo e E.A. Veit, Cad. Bras. Ensino Física 29, 965 (2012).
+       </span>
+      </span>
+     </span>
+     , demonstra que: “Os modelos computacionais são ‘recortes’ da realidade, ou seja, são implementações computacionais de modelos específicos, e, como tais, desprezam diversos aspectos do sistema real, a fim de focar a atenção em certos aspectos particulares da natureza, o que facilita a compreensão do fenômeno físico”. Durante a construção da interface, buscou-se não somente criar mais uma ferramenta de controle, mas sim um aparato baseado em teorias educacionais que efetivamente corroborasse com os preceitos teóricos pré-definidos, buscando gerar ao discente que, imerso em suas dependências, consiga alcançar um aprendizado significativo. Tal intensão vai de encontro com o apresentado por Araújo
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [29]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [29] I.S. Araujo e E.A. Veit, Rev. Bras. Pesq. Educação Ciências 3, (2011).
+       </span>
+      </span>
+     </span>
+     quando diz ”Não se melhora o ensino simplesmente produzindo novos e sofisticados recursos instrucionais. O desenvolvimento instrucional deve estar acoplado à pesquisa em ensino ou, pelo menos, levar em conta o conhecimento produzido pela pesquisa em ensino e os enfoques teóricos sobre aprendizagem compartilhados pela comunidade de educadores e pesquisadores em Ensino de Física”.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Agradecimentos">
+    <h1 class="articleSectionTitle">
+     Agradecimentos
+    </h1>
+    <p>
+     Thiago F. D. Dias Fernandes agradece ao FAPEG pela bolsa de aperfeiçoamento concedida, ao Mestrado Nacional Profissional em Ensino de Física – MNPEF, Polo UFG/Catalão e à Faculdade de Caldas Novas pelas instalações para o desenvolvimento da pesquisa.
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Apenas um Simulador Muito Educativo
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        existe diversos fóruns de discussão e comunidades na internet que dispõe de FAQ's e conteúdos voltados à utilização do
+        <i>
+         OpenFOAM
+        </i>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        L.A. Heideman, I.S. Araujo e E.A. Veit, Cad. Bras. Ensino Física
+        <b>
+         29
+        </b>
+        , 965 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        R. Tavares, Rev. Online Cie. Cog.
+        <b>
+         13
+        </b>
+        , 99 (2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        C.J. Greenshields
+        <i>
+         Openfoam user guide
+        </i>
+        (OpenFOAM Foundation, London, 2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        R.D. Blevins,
+        <i>
+         Applied fluid dynamics handbook
+        </i>
+        (Van Nostrand Reinhold, New York, 1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        D.R. Smith,
+        <i>
+         An Introduction to Continuum Mechanics — after Truesdell and Noll
+        </i>
+        (Springer, Dordrecht, 1993), p. 143.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        R. Laprise, Mont. Weather Rev.
+        <b>
+         120
+        </b>
+        , 197 (1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        P.M. Dixit e U.S. Dixit,
+        <i>
+         Modeling of metal forming and machining processes: by finite element and soft computing methods
+        </i>
+        (Springer-Verlag, London, 2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        J. Sokolowski e J.P. Zolesio,
+        <i>
+         Introduction to shape optimization
+        </i>
+        (Springer, Berlin, 1992).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        B.R. Munson, T.H. Okiishi, W.W. Huebsch e A.P. Rothmayer,
+        <i>
+         Fluid mechanics
+        </i>
+        (Wiley, Singapore, 2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        A.J. Chorin e J.E. Marsden,
+        <i>
+         A mathematical introduction to fluid mechanics
+        </i>
+        (Springer, New York, 1990).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        J. Serrin, J. Math. Mec.
+        <b>
+         4
+        </b>
+        , 459 (1959).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        I. Newton
+        <i>
+         Philosophiae Naturalis Principia Mathematica
+        </i>
+        (Cambridge University Press, London, 1972).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        C.L.M.H. Navier, Ann. Chim. Phys
+        <b>
+         19
+        </b>
+        , 234 (1822).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        G.G. Stokes, Trans. Cambridge Philos. Soc.
+        <b>
+         8
+        </b>
+        , 287 (1845).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        L. Tartar,
+        <i>
+         An introduction to Navier-Stokes equation and oceanography
+        </i>
+        (Springer-Verlag, Berlin, 2006).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        A.R. Mitchell e D.F. Griffiths,
+        <i>
+         The finite difference method in partial differential equations
+        </i>
+        (Wiley, New York, 1980).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        H.K. Versteeg e W. Malalasekera,
+        <i>
+         An introduction to computational fluid dynamics: the finite volume method
+        </i>
+        (Longman Scientific &amp; Techincal, Essex, 2007).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        S. Patankar
+        <i>
+         Numerical heat transfer and fluid flow
+        </i>
+        (Hemisphere, Washington, 1980).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        J.P. Van Doormaal e G.D. Raithby, Num. Heat Trans.
+        <b>
+         2
+        </b>
+        , 147 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        D.S. Jang, R. Jetli e S. Acharya, Num. Heat Trans.
+        <b>
+         3
+        </b>
+        , 209 (1986).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [21]
+       </sup>
+       <div>
+        http://www.openfoam.com, acessado em 08/08/2018.
+        <br/>
+        <a href="http://www.openfoam.com" target="_blank">
+         » http://www.openfoam.com
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [22]
+       </sup>
+       <div>
+        R.W. Pitz e J.W. Daily, AIAA Journal
+        <b>
+         11
+        </b>
+        , 1565 (1983).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [23]
+       </sup>
+       <div>
+        T. Von Kármán e L. Edson,
+        <i>
+         The wind and beyond
+        </i>
+        (Little, Brown &amp; Company, Boston, 1967).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [24]
+       </sup>
+       <div>
+        M.J. Bach.
+        <i>
+         The design of the UNIX operating system
+        </i>
+        (Prentice-Hall, Englewood Cliffs, 1986).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [25]
+       </sup>
+       <div>
+        S.R. Bourne, Bell System Tec. J.
+        <b>
+         6
+        </b>
+        , 1971 (1978).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [26]
+       </sup>
+       <div>
+        E. Siever, S. Figgins, R. Love e A. Robins,
+        <i>
+         Linux in a Nutshell
+        </i>
+        (O'Reilly Media, Sebastopol, 2005).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [27]
+       </sup>
+       <div>
+        J.C. Neves
+        <i>
+         Programação Shell Linux
+        </i>
+        (Brasport, Rio de Janeiro, 2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [28]
+       </sup>
+       <div>
+        A. Medeiros e C.F. de Medeiros, Rev. Bras. Ensino Física
+        <b>
+         2
+        </b>
+        , 77 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [29]
+       </sup>
+       <div>
+        I.S. Araujo e E.A. Veit, Rev. Bras. Pesq. Educação Ciências
+        <b>
+         3
+        </b>
+        , (2011).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        27 Jun 2019
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        27 Out 2018
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        11 Abr 2019
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        13 Maio 2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

@@ -1,0 +1,7771 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 44
+   <span class="_separator">
+    •
+   </span>
+   2022
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2022-0077" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2022-0077
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2022-0077">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Discretização: Uma discussão analisando o oscilador harmônico simples
+  <br/>
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Discretization: A discussion analyzing the case of the harmonic oscillator
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Igor Antonio Cancela Melnik
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:igorcancela@gmail.com">
+      igorcancela@gmail.com
+     </a>
+    </div>
+    Universidade Federal do Pampa, Caçapava do Sul, RS, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0002-9107-2573">
+     http://orcid.org/0000-0002-9107-2573
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre o autor
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Nesse trabalho será descrita a dinâmica do oscilador harmônico simples a partir de variáveis discretas. As relações de recorrência resultantes dessa análise serão escritas sob a forma de transformações matriciais e, através de um processo de diagonalização, será demonstrado que a solução obtida a partir dessa abordagem converge para a solução analítica do sistema. Um abordagem nesse sentido contorna a hipótese de continuidade e é relevante por descrever a dinâmica desse sistema físico em particular a partir de um ponto de vista computacional. Além disso, o algoritmo proposto foi implementado computacionalmente e uma discussão sobre a análise do erro foi construída a partir do princípio da conservação da energia mecânica.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     Discretização; Simulação; Oscilador harmônico
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this work we will model the dynamics of the simple harmonic oscillator using discrete variables. The resulting recurrence relations were written as matrix transformations and, from a diagonalization process, we will show that the solution obtained converges to the well-known analytical solutions of the system. This approach avoids the continuity hypothesis and is relevant as it describes the dynamical of this particular system from a computational point of view. Furthermore, the algorithm we are proposing was implemented, and an error analysis was built from the principle of the conservation of mechanical energy.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     Discretization; Simulation; harmonic oscillator
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     Ao utilizarmos o operador derivada para modelarmos a cinemática de partículas, estamos implicitamente admitindo que a noção de continuidade se aplica a grandezas como espaço e tempo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2006), v. 1.
+       </span>
+      </span>
+     </span>
+     ]. O questionamento acerca da continuidade do tempo e do espaço faz parte da trajetória humana, tendo iniciado já na Grécia Antiga [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] C.A. Strong, Mind 37, 393 (1928).
+       </span>
+      </span>
+     </span>
+     ]. O próprio desenvolvimento da física leva ao entendimento de que algumas grandezas concebidas como sendo de natureza contínua, são de fato de natureza discreta [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 1995), v. 4.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     O debate acerca do significado de continuidade constituí uma importante parte da história da matemática, e a busca por uma definição formal dessa noção empírica motivou o surgimento da
+     <i>
+      análise na reta
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] G.S.S. Ávila, Introdução à Análise Matemática (Edgard Blucher, São Paulo, 1999), v. 1.
+       </span>
+      </span>
+     </span>
+     ]. Uma discussão nesse sentido, no entanto, não é realizada em detalhes em livros introdutórios de cálculo diferencial [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] H. Anton, Cálculo: um novo horizonte (Bookman, Porto Alegre, 2006), v. 1.
+       </span>
+      </span>
+     </span>
+     ], e de física básica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2006), v. 1.
+       </span>
+      </span>
+     </span>
+     ]. É natural que um primeiro texto sobre cálculo diferencial se oriente na direção que explora as capacidades descritivas desse ferramental matemático, e não na que discute o significado preciso dos fundamentos que o sustenta.
+    </p>
+    <p>
+     Existe a expectativa de que sempre é possível modelar processos físicos de forma exata através de modelos discretizados. Estes serviriam como alternativa aos modelos desenvolvidos usando a linguagem da
+     <i>
+      matemática do contínuo
+     </i>
+     . Essas ideias estão fundamentadas na percepção de que a
+     <i>
+      teoria do autômato
+     </i>
+     serve como cenário para estabelecer uma linguagem universal, do qual as relações de recorrência são um caso particular. A expectativa é de que um dia sejamos capazes de formular as regras de um
+     <i>
+      automato
+     </i>
+     de forma análoga a qual atualmente derivamos equações diferenciais para modelar sistemas físicos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] T. Toffoli, Physica 10D 10, 117 (1984).
+       </span>
+      </span>
+     </span>
+     ]. Essas ideias foram extensivamente discutidas na literatura, estando presente nos trabalhos de pioneiros da computação, a exemplo do emblemático livro
+     <i>
+      calculating space
+     </i>
+     de Konrad Zuse
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Desenvolveu o primeiro computador programável, Z1, e também a primeira linguagem de programação de alto nível.
+       </span>
+      </span>
+     </span>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [7] K. Zuse, Rechnender Raum (Friedrich Vieweg &amp; Sohn, Braunschweigm, 1969), v.1.
+       </span>
+      </span>
+     </span>
+     ]. Nessa mesma linha Toffoli [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [6] T. Toffoli, Physica 10D 10, 117 (1984).
+       </span>
+      </span>
+     </span>
+     ] sugere que modelamos sistemas físicos partindo de equações diferenciais por razões históricas. Argumenta que, em geral, a comparação desses modelos com as observações se dá através de um processo de discretização, uma vez que esses modelos são convertidos em equações de diferenças finitas. Sob essa ótica o maquinário matemático da
+     <i>
+      matemática do contínuo
+     </i>
+     contém muito mais informações do que seria necessário para descrever os processos físicos em questão.
+    </p>
+    <p>
+     Neste trabalho a cinemática do oscilador harmônico simples será descrita admitindo que tanto o espaço quanto o tempo são grandezas discretizadas. Dessa forma, a definição de derivada será evitada, e consequentemente a hipótese de continuidade será contornada durante a análise da dinâmica desse sistema físico em particular. Tradicionalmente o processo de discretização de uma equação diferencial é apresentado como um recurso numérico para obter uma aproximação de sua solução. Esse tipo de abordagem é explorada no vasto campo da análise numérica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [8] W.H. Press, S.A. Teukolsky, W.T. Vetterling e B.P. Flannery, Numerical Recipes: The Art of Scientific Computing (Cambridge University Press, Cambridge, 2007), v. 1, p. 899.
+       </span>
+      </span>
+     </span>
+     ]. Recentemente uma abordagem que segue essa linha foi apresentada em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [9] B.R. Segatto, Revista Brasileira de Ensino de Física 42, e20180346 (2020).
+       </span>
+      </span>
+     </span>
+     ] para esse mesmo sistema físico. O presente trabalho serve como alternativa à discussão apresentada pelo autor.
+    </p>
+    <p>
+     O tratamento que será apresentado faz uso de alguns resultados desenvolvidos em álgebra linear e assume a forma de relações de recorrência. Essa abordagem pode servir como estímulo para que os estudantes estabeleçam um primeiro contato com simulações computacionais visto que, uma vez estabelecido o algoritmo, sua implementação é trivial. A implementação pode ser realizada até mesmo gerando uma tabela numérica usando uma calculadora. Nessa mesma linha, é também trivial realizar uma simulação computacional através de alguma linguagem de programação de alto nível e, consequentemente, produzir uma animação.
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         2
+        </strong>
+        Ver mais detalhes em
+        <a href="https://www.glowscript.org/" target="_blank">
+         https://www.glowscript.org/
+        </a>
+        .
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+     Mostraremos que a solução desenvolvida nesse trabalho converge para a solução analítica do sistema evocando a noção intuitiva de limite. Nesse caminho utilizaremos resultados que muitas vezes são os precursores dos utilizados em uma descrição realizada através da
+     <i>
+      matemática do contínuo
+     </i>
+     . Esses fatos reforçam o caráter didático de nossa proposta.
+    </p>
+    <p>
+     Além disso, as relações de recorrência resultantes da nossa análise serão exploradas computacionalmente, e por essa razão uma discussão sobre propagação de erro e custo computacional será apresentada no presente trabalho.
+    </p>
+    <p>
+     Por fim, defenderemos que essa análise serve como ponto de partida para uma discussão sobre o conceito de
+     <i>
+      natureza finita
+     </i>
+     estabelecido for Eduard Fredkin
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         3
+        </strong>
+        Pioneiro da computação, estabeleceu o gate de Fredkin e um modelo conservativo de computação baseado em colisões elásticas. Sugere que, em um nível fundamental, todas as grandezas físicas são discretizadas. Cunhou o termo física digital
+       </span>
+      </span>
+     </span>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] E. Fredkin, International Journal of Theoretical Physics 42, 189 (2003).
+       </span>
+      </span>
+     </span>
+     ]. Esse conceito contrasta com a idéia de que o processo de discretização de uma equação diferencial está necessariamente associado a uma aproximação [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [11] W.E. Boyce e R.C. Diprima, Equações diferenciais elementares e problemas de valores de contorno (LTC, Rio de Janeiro, 2002), v. 1.
+       </span>
+      </span>
+     </span>
+     ], linha que usualmente guia a análise computacional de sistemas dinâmicos. Esse trabalho foi, em parte, motivado pela recente experiência vivida pelo autor ao desenhar um modelo de computação baseado em colisões elásticas para integrais elípticas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] I.A.C. Melnik, Russian Journal of Nonlinear Dynamics 18, 83 (2022).
+       </span>
+      </span>
+     </span>
+     ]. Por essa razão a discussão do trabalho segue um enfoque voltado para questões computacionais.
+    </p>
+    <h2>
+     1.1. Solução usual
+    </h2>
+    <p>
+     O problema do oscilador harmônico simples é descrito por uma equação diferencial cuja solução é trivial. Será reproduzida aqui a solução dessa equação usando uma notação vetorial, uma notação que é semelhante a da solução baseada em variáveis discretas que é apresentada posteriormente. Considere que inicialmente o sistema está em uma posição
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     com velocidade
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Dado
+     <math display="inline">
+      <mrow>
+       <mi>
+        ω
+       </mi>
+       <mo>
+        ∈
+       </mo>
+       <mi>
+        R
+       </mi>
+      </mrow>
+     </math>
+     , a equação que descreve a dinâmica do oscilador é
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS1_E1">
+     <a name="S1_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msup>
+             <mi>
+              d
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             x
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+           <mrow>
+            <mi>
+             d
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              t
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+           </mrow>
+          </mfrac>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <msup>
+             <mi>
+              ω
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             x
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mi>
+              t
+             </mi>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     que também pode ser representado pelo sistema de equações lineares de primeira ordem, cuja representação matricial é
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS1_E2">
+     <a name="S1_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mfrac>
+           <mi>
+            d
+           </mi>
+           <mrow>
+            <mi>
+             d
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mfrac>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo>
+            [
+           </mo>
+           <mtable displaystyle="true" rowspacing="0pt">
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                x
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 t
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                v
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 t
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+           <mo>
+            ]
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mo>
+            [
+           </mo>
+           <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+            <mtr>
+             <mtd columnalign="center">
+              <mn>
+               0
+              </mn>
+             </mtd>
+             <mtd columnalign="center">
+              <mn>
+               1
+              </mn>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mo>
+                -
+               </mo>
+               <msup>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+             </mtd>
+             <mtd columnalign="center">
+              <mn>
+               0
+              </mn>
+             </mtd>
+            </mtr>
+           </mtable>
+           <mo>
+            ]
+           </mo>
+          </mrow>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo>
+            [
+           </mo>
+           <mtable displaystyle="true" rowspacing="0pt">
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                x
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 t
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                v
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 t
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+           <mo>
+            ]
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Ao supormos que as soluções são da forma
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mover accent="true">
+         <mi>
+          u
+         </mi>
+         <mo stretchy="false">
+          →
+         </mo>
+        </mover>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          (
+         </mo>
+         <mi>
+          t
+         </mi>
+         <mo stretchy="false">
+          )
+         </mo>
+        </mrow>
+       </mrow>
+       <mo>
+        ≡
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mrow>
+         <mi>
+          x
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         ,
+        </mo>
+        <mrow>
+         <mi>
+          v
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mi>
+           t
+          </mi>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mover accent="true">
+         <mi>
+          ϵ
+         </mi>
+         <mo stretchy="false">
+          →
+         </mo>
+        </mover>
+        <mo>
+         ⁢
+        </mo>
+        <msup>
+         <mi>
+          e
+         </mi>
+         <mrow>
+          <mi>
+           r
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           t
+          </mi>
+         </mrow>
+        </msup>
+       </mrow>
+      </mrow>
+     </math>
+     concluímos que existem dois valores de
+     <i>
+      r
+     </i>
+     que tornam essa igualdade verdadeira. Esses valores são
+     <math display="inline">
+      <mrow>
+       <msub>
+        <mi>
+         λ
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mi>
+         i
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         ω
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <msub>
+        <mi>
+         λ
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         -
+        </mo>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <mi>
+          ω
+         </mi>
+        </mrow>
+       </mrow>
+      </mrow>
+     </math>
+     e definem os
+     <i>
+      autovalores
+     </i>
+     da matriz dos coeficientes em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS1_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ). Sejam
+     <math display="inline">
+      <mrow>
+       <msub>
+        <mi>
+         v
+        </mi>
+        <mn>
+         1
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mrow>
+         <mi>
+          i
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <mi>
+          ω
+         </mi>
+        </mrow>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <msub>
+        <mi>
+         v
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msub>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mrow>
+         <mo>
+          -
+         </mo>
+         <mrow>
+          <mi>
+           i
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           ω
+          </mi>
+         </mrow>
+        </mrow>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     os autovetores associados a
+     <math display="inline">
+      <msub>
+       <mi>
+        λ
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e a
+     <math display="inline">
+      <msub>
+       <mi>
+        λ
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     , a solução geral do sistema é
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS1_E3">
+     <a name="S1_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             u
+            </mi>
+            <mo stretchy="false">
+             →
+            </mo>
+           </mover>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mo>
+            [
+           </mo>
+           <mtable displaystyle="true" rowspacing="0pt">
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                x
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 t
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                v
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 (
+                </mo>
+                <mi>
+                 t
+                </mi>
+                <mo stretchy="false">
+                 )
+                </mo>
+               </mrow>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+           <mo>
+            ]
+           </mo>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <msub>
+             <mi>
+              c
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo>
+              [
+             </mo>
+             <mtable displaystyle="true" rowspacing="0pt">
+              <mtr>
+               <mtd columnalign="center">
+                <mn>
+                 1
+                </mn>
+               </mtd>
+              </mtr>
+              <mtr>
+               <mtd columnalign="center">
+                <mrow>
+                 <mi>
+                  i
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  ω
+                 </mi>
+                </mrow>
+               </mtd>
+              </mtr>
+             </mtable>
+             <mo>
+              ]
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              e
+             </mi>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               ω
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </msup>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <msub>
+             <mi>
+              c
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo>
+              [
+             </mo>
+             <mtable displaystyle="true" rowspacing="0pt">
+              <mtr>
+               <mtd columnalign="center">
+                <mn>
+                 1
+                </mn>
+               </mtd>
+              </mtr>
+              <mtr>
+               <mtd columnalign="center">
+                <mrow>
+                 <mo>
+                  -
+                 </mo>
+                 <mrow>
+                  <mi>
+                   i
+                  </mi>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi>
+                   ω
+                  </mi>
+                 </mrow>
+                </mrow>
+               </mtd>
+              </mtr>
+             </mtable>
+             <mo>
+              ]
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              e
+             </mi>
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                ω
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mrow>
+            </msup>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      c
+     </i>
+     <sub>
+      1
+     </sub>
+     e
+     <i>
+      c
+     </i>
+     <sub>
+      2
+     </sub>
+     são constantes a serem determinadas a partir das condições iniciais do problema. Utilizando a
+     <i>
+      identidade de Euler
+     </i>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS1_E4">
+     <a name="S1_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <msup>
+          <mi>
+           e
+          </mi>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mrow>
+           <mi>
+            cos
+           </mi>
+           <mo>
+            ⁡
+           </mo>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+          <mo>
+           +
+          </mo>
+          <mrow>
+           <mpadded width="+2pt">
+            <mi>
+             i
+            </mi>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            sen
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            θ
+           </mi>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     temos que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS1_E5">
+     <a name="S1_E5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mi>
+             x
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mi>
+              cos
+             </mi>
+             <mo>
+              ⁡
+             </mo>
+             <mrow>
+              <mi>
+               ω
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </mrow>
+           </mrow>
+           <mo>
+            +
+           </mo>
+           <mrow>
+            <mpadded width="+2pt">
+             <mfrac>
+              <mrow>
+               <mi>
+                v
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 [
+                </mo>
+                <mn>
+                 0
+                </mn>
+                <mo stretchy="false">
+                 ]
+                </mo>
+               </mrow>
+              </mrow>
+              <mi>
+               ω
+              </mi>
+             </mfrac>
+            </mpadded>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             sen
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             w
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     2. Solução Através da Matemática do Discreto
+    </h1>
+    <p>
+     Iremos analisar a dinâmica do sistema descrito anteriormente sem utilizar explicitamente os conceitos de derivada e integral. Nessa abordagem será assumido que o espaço e o tempo são variáveis discretas. Não serão questionados nesse momento as validades dessas hipóteses, serão sim analisadas suas consequências no processo de descrição do movimento do oscilador harmônico simples.
+    </p>
+    <p>
+     Assuma que a dinâmica ocorra durante o tempo
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       f
+      </i>
+     </sub>
+     que é constituído por um número
+     <math display="inline">
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        ∈
+       </mo>
+       <mi>
+        ℕ
+       </mi>
+      </mrow>
+     </math>
+     de subintervalos indivisíveis. Sendo assim, a duração de cada intervalo é
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E6">
+     <a name="S2_E6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mfrac>
+           <msub>
+            <mi>
+             t
+            </mi>
+            <mi>
+             f
+            </mi>
+           </msub>
+           <mi>
+            N
+           </mi>
+          </mfrac>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Nesse cenário, o tempo será sempre um múltiplo de
+     <math display="inline">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        t
+       </mi>
+      </mrow>
+     </math>
+     , e assim escrevemos
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E7">
+     <a name="S2_E7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           t
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mi>
+             j
+            </mi>
+            <mo>
+             *
+            </mo>
+            <mi mathvariant="normal">
+             Δ
+            </mi>
+           </mrow>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     com
+     <math display="inline">
+      <mrow>
+       <mi>
+        j
+       </mi>
+       <mo>
+        ≤
+       </mo>
+       <mi>
+        N
+       </mi>
+       <mo>
+        ∈
+       </mo>
+       <mi>
+        ℕ
+       </mi>
+      </mrow>
+     </math>
+     . Tanto a posição, denotada por
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , quanto a velocidade, denotada por
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , passam a ser variáveis discretas indexadas pela variável
+     <i>
+      j
+     </i>
+     . Assim como o que ocorre em uma animação, onde vários desenhos são manipulados para gerar a impressão de movimento, a dinâmica da partícula passa a ser constituída por vários
+     <i>
+      frames
+     </i>
+     que mudam com uma frequência
+     <math display="inline">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <msup>
+        <mi>
+         t
+        </mi>
+        <mrow>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msup>
+      </mrow>
+     </math>
+     . Para cada
+     <i>
+      frame
+     </i>
+     temos um valor correspondente de
+     <i>
+      j
+     </i>
+     , e consequentemente de
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Tanto
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     quanto
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     variam abruptamente entre dois estados sucessivos. A massa, inicialmente localizada em
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , onde está com velodidade
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , tem sua dinâmica modelada pelas seguintes relações de recorrência
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E8">
+     <a name="S2_E8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block">
+        <mtable displaystyle="true" rowspacing="0pt">
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mrow>
+             <mi>
+              x
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mrow>
+              <mo stretchy="false">
+               [
+              </mo>
+              <mi>
+               j
+              </mi>
+              <mo stretchy="false">
+               ]
+              </mo>
+             </mrow>
+            </mrow>
+            <mo>
+             =
+            </mo>
+            <mrow>
+             <mrow>
+              <mi>
+               x
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                [
+               </mo>
+               <mrow>
+                <mi>
+                 j
+                </mi>
+                <mo>
+                 -
+                </mo>
+                <mn>
+                 1
+                </mn>
+               </mrow>
+               <mo stretchy="false">
+                ]
+               </mo>
+              </mrow>
+             </mrow>
+             <mo>
+              +
+             </mo>
+             <mrow>
+              <mi>
+               v
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                [
+               </mo>
+               <mrow>
+                <mi>
+                 j
+                </mi>
+                <mo>
+                 -
+                </mo>
+                <mn>
+                 1
+                </mn>
+               </mrow>
+               <mo stretchy="false">
+                ]
+               </mo>
+              </mrow>
+              <mo>
+               ⁢
+              </mo>
+              <mi mathvariant="normal">
+               Δ
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </mrow>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="right">
+           <mrow>
+            <mrow>
+             <mrow>
+              <mi>
+               v
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                [
+               </mo>
+               <mi>
+                j
+               </mi>
+               <mo stretchy="false">
+                ]
+               </mo>
+              </mrow>
+             </mrow>
+             <mo>
+              =
+             </mo>
+             <mrow>
+              <mrow>
+               <mi>
+                v
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 [
+                </mo>
+                <mrow>
+                 <mi>
+                  j
+                 </mi>
+                 <mo>
+                  -
+                 </mo>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+                <mo stretchy="false">
+                 ]
+                </mo>
+               </mrow>
+              </mrow>
+              <mo>
+               +
+              </mo>
+              <mrow>
+               <mi>
+                a
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mrow>
+                <mo stretchy="false">
+                 [
+                </mo>
+                <mrow>
+                 <mi>
+                  j
+                 </mi>
+                 <mo>
+                  -
+                 </mo>
+                 <mn>
+                  1
+                 </mn>
+                </mrow>
+                <mo stretchy="false">
+                 ]
+                </mo>
+               </mrow>
+               <mo>
+                ⁢
+               </mo>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mo>
+             ,
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi>
+         a
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          [
+         </mo>
+         <mrow>
+          <mi>
+           j
+          </mi>
+          <mo>
+           -
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+         <mo stretchy="false">
+          ]
+         </mo>
+        </mrow>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mo>
+         -
+        </mo>
+        <mrow>
+         <msup>
+          <mi>
+           ω
+          </mi>
+          <mn>
+           2
+          </mn>
+         </msup>
+         <mo>
+          ⁢
+         </mo>
+         <mi>
+          x
+         </mi>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           [
+          </mo>
+          <mrow>
+           <mi>
+            j
+           </mi>
+           <mo>
+            -
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+          <mo stretchy="false">
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+       </mrow>
+      </mrow>
+     </math>
+     pois no caso do oscilador harmônico a aceleração é proporcional à posição. A constante de proporcionalidade é a variável
+     <math display="inline">
+      <mrow>
+       <mo>
+        -
+       </mo>
+       <msup>
+        <mi>
+         ω
+        </mi>
+        <mn>
+         2
+        </mn>
+       </msup>
+      </mrow>
+     </math>
+     , definida pela massa e pela constante elástica da mola. Dados
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     as esquações anteriores definem quaisquer
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     para
+     <math display="inline">
+      <mrow>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ≤
+       </mo>
+       <mi>
+        j
+       </mi>
+       <mo>
+        ≤
+       </mo>
+       <mi>
+        N
+       </mi>
+      </mrow>
+     </math>
+     , com
+     <math display="inline">
+      <mrow>
+       <mi>
+        j
+       </mi>
+       <mo>
+        ∈
+       </mo>
+       <mi>
+        ℕ
+       </mi>
+      </mrow>
+     </math>
+     . Estamos assim admitindo que a particula move-se entre
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     sem passar por nenhum ponto intermediário, em um tempo
+     <math display="inline">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        t
+       </mi>
+      </mrow>
+     </math>
+     e com velocidade
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Além disso ao atingir a posição
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     a velocidade da partícula muda abruptamente desde
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     até
+     <math display="inline">
+      <mrow>
+       <mi>
+        v
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Após uma análise matricial, mostraremos que o resultado obtido dessa análise converge para a equação mostrada em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS1_E5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      5
+     </a>
+     ) quando
+     <math display="inline">
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        →
+       </mo>
+       <mi mathvariant="normal">
+        ∞
+       </mi>
+      </mrow>
+     </math>
+     . Iniciaremos definindo
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E9">
+     <a name="S2_E9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mover accent="true">
+           <mi>
+            u
+           </mi>
+           <mo stretchy="false">
+            →
+           </mo>
+          </mover>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            [
+           </mo>
+           <mi>
+            j
+           </mi>
+           <mo stretchy="false">
+            ]
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           (
+          </mo>
+          <mrow>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mi>
+             j
+            </mi>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           ,
+          </mo>
+          <mrow>
+           <mi>
+            v
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mi>
+             j
+            </mi>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo stretchy="false">
+           )
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E10">
+     <a name="S2_E10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          A
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+           <mtr>
+            <mtd columnalign="center">
+             <mn>
+              1
+             </mn>
+            </mtd>
+            <mtd columnalign="center">
+             <mrow>
+              <mi mathvariant="normal">
+               Δ
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               t
+              </mi>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="center">
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mrow>
+               <msup>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                ⁢
+               </mo>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd columnalign="center">
+             <mrow>
+              <mn>
+               1
+              </mn>
+              <mo>
+               ,
+              </mo>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e assim as equações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) podem ser escritas na forma matricial como
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E11">
+     <a name="S2_E11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             u
+            </mi>
+            <mo stretchy="false">
+             →
+            </mo>
+           </mover>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mi>
+             j
+            </mi>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            A
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mover accent="true">
+            <mi>
+             u
+            </mi>
+            <mo stretchy="false">
+             →
+            </mo>
+           </mover>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mrow>
+             <mi>
+              j
+             </mi>
+             <mo>
+              -
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e é trivial mostrar que a solução dessa relação de recorrência é
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E12">
+     <a name="S2_E12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mover accent="true">
+            <mi>
+             u
+            </mi>
+            <mo stretchy="false">
+             →
+            </mo>
+           </mover>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mi>
+             j
+            </mi>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msup>
+            <mi>
+             A
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mover accent="true">
+            <mi>
+             u
+            </mi>
+            <mo stretchy="false">
+             →
+            </mo>
+           </mover>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Dessa forma
+     <math display="inline">
+      <msup>
+       <mi>
+        A
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msup>
+     </math>
+     relaciona a posição e a velocidade inicial com a posição em um estado posterior indexado pela variável
+     <i>
+      j
+     </i>
+     .
+    </p>
+    <p>
+     Podemos determinar
+     <math display="inline">
+      <msup>
+       <mi>
+        A
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msup>
+     </math>
+     de forma mais eficiente se formos capazes de determinar a matriz
+     <i>
+      P
+     </i>
+     tal que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E13">
+     <a name="S2_E13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           A
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            P
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            D
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             P
+            </mi>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde a matriz
+     <i>
+      D
+     </i>
+     é uma
+     <i>
+      matriz diagonal
+     </i>
+     . Em uma linguagem usada em álgebra linear a matriz
+     <i>
+      A
+     </i>
+     representa o
+     <i>
+      operador linear
+     </i>
+     que leva
+     <math display="inline">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         u
+        </mi>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mrow>
+         <mi>
+          j
+         </mi>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     no vetor
+     <math display="inline">
+      <mrow>
+       <mover accent="true">
+        <mi>
+         u
+        </mi>
+        <mo stretchy="false">
+         →
+        </mo>
+       </mover>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e a matriz
+     <i>
+      D
+     </i>
+     é a sua forma diagonal, tendo como elementos não nulos os
+     <i>
+      autovalores
+     </i>
+     de
+     <i>
+      A
+     </i>
+     . A matriz
+     <i>
+      P
+     </i>
+     é a
+     <i>
+      matriz mudança de base
+     </i>
+     entre a
+     <i>
+      base canônica
+     </i>
+     e a
+     <i>
+      base de autovetores
+     </i>
+     de
+     <i>
+      A
+     </i>
+     . Para uma revisão detalhada desse assunto o leitor deve buscar livros especializados de álgebra linear, à exemplo de [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] J.L. Boldrini, S.I.R. Costa, V.L. Figueiredo e H.G. Wetzler, Álgebra Linear (Harbra, São Paulo, 1986), v. 1.
+       </span>
+      </span>
+     </span>
+     ]. Temos que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E14">
+     <a name="S2_E14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          D
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+           <mtr>
+            <mtd columnalign="center">
+             <mrow>
+              <mn>
+               1
+              </mn>
+              <mo>
+               +
+              </mo>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                ω
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd columnalign="center">
+             <mn>
+              0
+             </mn>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="center">
+             <mn>
+              0
+             </mn>
+            </mtd>
+            <mtd columnalign="center">
+             <mrow>
+              <mn>
+               1
+              </mn>
+              <mo>
+               -
+              </mo>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                ω
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E15">
+     <a name="S2_E15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block">
+        <mrow>
+         <mi>
+          P
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mo>
+           [
+          </mo>
+          <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+           <mtr>
+            <mtd columnalign="center">
+             <mn>
+              1
+             </mn>
+            </mtd>
+            <mtd columnalign="center">
+             <mi>
+              i
+             </mi>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd columnalign="center">
+             <mrow>
+              <mo>
+               -
+              </mo>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                ω
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mrow>
+            </mtd>
+            <mtd columnalign="center">
+             <mi>
+              ω
+             </mi>
+            </mtd>
+           </mtr>
+          </mtable>
+          <mo>
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math display="inline">
+      <mrow>
+       <mi>
+        i
+       </mi>
+       <mo>
+        =
+       </mo>
+       <msqrt>
+        <mrow>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msqrt>
+      </mrow>
+     </math>
+     . Como consequência da propriedade associativa da multiplicação de matrizes e da definição de matriz inversa temos que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E16">
+     <a name="S2_E16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msup>
+           <mi>
+            A
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            P
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             D
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             P
+            </mi>
+            <mrow>
+             <mo>
+              -
+             </mo>
+             <mn>
+              1
+             </mn>
+            </mrow>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     De um ponto de vista computacional, a igualdade em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      16
+     </a>
+     ) fornece uma maneira mais eficiente de determinar a matriz
+     <math display="inline">
+      <msup>
+       <mi>
+        A
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msup>
+     </math>
+     . Através dela o problema de calcular a
+     <i>
+      j-ésima
+     </i>
+     potência de uma matriz passa a ser equivalente ao problema de calcular a
+     <i>
+      j-ésima
+     </i>
+     potência de dois números, e assim o número de operações envolvidas na implementação das recorrências em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) é reduzido. Nesse sentido a
+     <i>
+      diagonalização
+     </i>
+     da matriz
+     <i>
+      A
+     </i>
+     nos permite obter o estado
+     <i>
+      j
+     </i>
+     do sistema sem a necessidade de determinar todos os estados anteriores, como fica sugerido pelas relações de recorrências que definem o algoritmo. Além disso, conforme mostraremos a seguir, a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      16
+     </a>
+     ) pode ser usada para obter a solução analítica do problema proposto.
+    </p>
+    <p>
+     Para determinar a matriz
+     <math display="inline">
+      <msup>
+       <mi>
+        D
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msup>
+     </math>
+     considere as
+     <i>
+      variáveis complexas
+     </i>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E17">
+     <a name="S2_E17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            z
+           </mi>
+           <mo>
+            ±
+           </mo>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mn>
+            1
+           </mn>
+           <mo>
+            ±
+           </mo>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             ω
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi mathvariant="normal">
+             Δ
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             t
+            </mi>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            r
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mrow>
+             <mrow>
+              <mi>
+               cos
+              </mi>
+              <mo>
+               ⁡
+              </mo>
+              <mrow>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                ϕ
+               </mi>
+              </mrow>
+             </mrow>
+             <mo>
+              ±
+             </mo>
+             <mrow>
+              <mpadded width="+2pt">
+               <mi>
+                i
+               </mi>
+              </mpadded>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               sen
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi mathvariant="normal">
+               Δ
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               ϕ
+              </mi>
+             </mrow>
+            </mrow>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde a segunda igualdade define a
+     <i>
+      forma polar
+     </i>
+     de
+     <math display="inline">
+      <msub>
+       <mi>
+        z
+       </mi>
+       <mo>
+        ±
+       </mo>
+      </msub>
+     </math>
+     , de forma que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E18">
+     <a name="S2_E18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           r
+          </mi>
+          <mo>
+           =
+          </mo>
+          <msqrt>
+           <mrow>
+            <mn>
+             1
+            </mn>
+            <mo>
+             +
+            </mo>
+            <mrow>
+             <msup>
+              <mi>
+               ω
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              ⁢
+             </mo>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <msup>
+              <mi>
+               t
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+           </mrow>
+          </msqrt>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E19">
+     <a name="S2_E19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mpadded lspace="2pt" width="+2pt">
+            <mi>
+             tg
+            </mi>
+           </mpadded>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mrow>
+             <mi mathvariant="normal">
+              Δ
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              ϕ
+             </mi>
+            </mrow>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <i>
+      fórmula de De Moivre
+     </i>
+     é uma igualdade precursora a
+     <i>
+      identidade de Euler
+     </i>
+     (
+     <a class="open-asset-modal" data-target="#ModalSchemeS1_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ). Evocando esse resultado em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      17
+     </a>
+     ) concluímos que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E20">
+     <a name="S2_E20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (20)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msubsup>
+           <mi>
+            z
+           </mi>
+           <mo>
+            ±
+           </mo>
+           <mi>
+            j
+           </mi>
+          </msubsup>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msup>
+            <mi>
+             r
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mrow>
+             <mrow>
+              <mi>
+               cos
+              </mi>
+              <mo>
+               ⁡
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 j
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi mathvariant="normal">
+                 Δ
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 ϕ
+                </mi>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+             </mrow>
+             <mo>
+              ±
+             </mo>
+             <mrow>
+              <mpadded width="+2pt">
+               <mi>
+                i
+               </mi>
+              </mpadded>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               sen
+              </mi>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo stretchy="false">
+                (
+               </mo>
+               <mrow>
+                <mi>
+                 j
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi mathvariant="normal">
+                 Δ
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 ϕ
+                </mi>
+               </mrow>
+               <mo stretchy="false">
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e portanto
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E21">
+     <a name="S2_E21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (21)
+       </span>
+       <math display="block">
+        <mrow>
+         <msup>
+          <mi>
+           D
+          </mi>
+          <mi>
+           j
+          </mi>
+         </msup>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <msup>
+           <mi>
+            r
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msup>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo>
+            [
+           </mo>
+           <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+            <mtr>
+             <mtd columnalign="center">
+              <msubsup>
+               <mi>
+                z
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mi>
+                j
+               </mi>
+              </msubsup>
+             </mtd>
+             <mtd columnalign="center">
+              <mn>
+               0
+              </mn>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd columnalign="center">
+              <mn>
+               0
+              </mn>
+             </mtd>
+             <mtd columnalign="center">
+              <msubsup>
+               <mi>
+                z
+               </mi>
+               <mo>
+                -
+               </mo>
+               <mi>
+                j
+               </mi>
+              </msubsup>
+             </mtd>
+            </mtr>
+           </mtable>
+           <mo>
+            ]
+           </mo>
+          </mrow>
+         </mrow>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     fica definida em termos de
+     <i>
+      r
+     </i>
+     e do ângulo
+     <math display="inline">
+      <mrow>
+       <mi>
+        j
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        ϕ
+       </mi>
+      </mrow>
+     </math>
+     . Determinando a matriz
+     <math display="inline">
+      <msup>
+       <mi>
+        P
+       </mi>
+       <mrow>
+        <mo>
+         -
+        </mo>
+        <mn>
+         1
+        </mn>
+       </mrow>
+      </msup>
+     </math>
+     , a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E16" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      16
+     </a>
+     ) implica que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E22">
+     <a name="S2_E22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (22)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msup>
+           <mi>
+            A
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msup>
+            <mi>
+             r
+            </mi>
+            <mi>
+             j
+            </mi>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+             <mtr>
+              <mtd columnalign="center">
+               <mrow>
+                <mi>
+                 cos
+                </mi>
+                <mo>
+                 ⁡
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mrow>
+                  <mi>
+                   j
+                  </mi>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi mathvariant="normal">
+                   Δ
+                  </mi>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi>
+                   ϕ
+                  </mi>
+                 </mrow>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+              </mtd>
+              <mtd columnalign="center">
+               <mrow>
+                <mpadded width="+2pt">
+                 <mstyle displaystyle="false">
+                  <mfrac>
+                   <mn>
+                    1
+                   </mn>
+                   <mi>
+                    ω
+                   </mi>
+                  </mfrac>
+                 </mstyle>
+                </mpadded>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 sen
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mrow>
+                  <mi>
+                   j
+                  </mi>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi mathvariant="normal">
+                   Δ
+                  </mi>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi>
+                   ϕ
+                  </mi>
+                 </mrow>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+              </mtd>
+             </mtr>
+             <mtr>
+              <mtd columnalign="center">
+               <mrow>
+                <mo>
+                 -
+                </mo>
+                <mrow>
+                 <mpadded width="+2pt">
+                  <mi>
+                   ω
+                  </mi>
+                 </mpadded>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mi>
+                  sen
+                 </mi>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   (
+                  </mo>
+                  <mrow>
+                   <mi>
+                    j
+                   </mi>
+                   <mo>
+                    ⁢
+                   </mo>
+                   <mi mathvariant="normal">
+                    Δ
+                   </mi>
+                   <mo>
+                    ⁢
+                   </mo>
+                   <mi>
+                    ϕ
+                   </mi>
+                  </mrow>
+                  <mo stretchy="false">
+                   )
+                  </mo>
+                 </mrow>
+                </mrow>
+               </mrow>
+              </mtd>
+              <mtd columnalign="center">
+               <mrow>
+                <mi>
+                 cos
+                </mi>
+                <mo>
+                 ⁡
+                </mo>
+                <mrow>
+                 <mo stretchy="false">
+                  (
+                 </mo>
+                 <mrow>
+                  <mi>
+                   j
+                  </mi>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi mathvariant="normal">
+                   Δ
+                  </mi>
+                  <mo>
+                   ⁢
+                  </mo>
+                  <mi>
+                   ϕ
+                  </mi>
+                 </mrow>
+                 <mo stretchy="false">
+                  )
+                 </mo>
+                </mrow>
+               </mrow>
+              </mtd>
+             </mtr>
+            </mtable>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     E assim a matriz
+     <math display="inline">
+      <msup>
+       <mi>
+        A
+       </mi>
+       <mi>
+        j
+       </mi>
+      </msup>
+     </math>
+     não possuí parte imaginária. Fazendo
+     <math display="inline">
+      <mrow>
+       <mi>
+        N
+       </mi>
+       <mo>
+        →
+       </mo>
+       <mi mathvariant="normal">
+        ∞
+       </mi>
+      </mrow>
+     </math>
+     , a igualdade em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ) implica que
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        →
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     . Da equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      19
+     </a>
+     ) concluímos que
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         ϕ
+        </mi>
+       </mrow>
+       <mo>
+        →
+       </mo>
+       <mrow>
+        <mi>
+         ω
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         t
+        </mi>
+       </mrow>
+      </mrow>
+     </math>
+     , e da igualdade (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      7
+     </a>
+     ) temos
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E23">
+     <a name="S2_E23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (23)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            j
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            ϕ
+           </mi>
+          </mrow>
+          <mo>
+           →
+          </mo>
+          <mrow>
+           <mi>
+            j
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            ω
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            ω
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Do teorema binomial temos que nessa situação
+     <math display="inline">
+      <mrow>
+       <msup>
+        <mi>
+         r
+        </mi>
+        <mi>
+         j
+        </mi>
+       </msup>
+       <mo>
+        →
+       </mo>
+       <mn>
+        1
+       </mn>
+      </mrow>
+     </math>
+     , e assim
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E24">
+     <a name="S2_E24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (24)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msup>
+           <mi>
+            A
+           </mi>
+           <mi>
+            j
+           </mi>
+          </msup>
+          <mo>
+           →
+          </mo>
+          <mrow>
+           <mo>
+            [
+           </mo>
+           <mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt">
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                cos
+               </mi>
+               <mo>
+                ⁡
+               </mo>
+               <mrow>
+                <mi>
+                 ω
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+              </mrow>
+             </mtd>
+             <mtd columnalign="center">
+              <mrow>
+               <mpadded width="+2pt">
+                <mstyle displaystyle="false">
+                 <mfrac>
+                  <mn>
+                   1
+                  </mn>
+                  <mi>
+                   ω
+                  </mi>
+                 </mfrac>
+                </mstyle>
+               </mpadded>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                sen
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                ω
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                t
+               </mi>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd columnalign="center">
+              <mrow>
+               <mo>
+                -
+               </mo>
+               <mrow>
+                <mpadded width="+2pt">
+                 <mi>
+                  ω
+                 </mi>
+                </mpadded>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 sen
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 ω
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+              </mrow>
+             </mtd>
+             <mtd columnalign="center">
+              <mrow>
+               <mi>
+                cos
+               </mi>
+               <mo>
+                ⁡
+               </mo>
+               <mrow>
+                <mi>
+                 ω
+                </mi>
+                <mo>
+                 ⁢
+                </mo>
+                <mi>
+                 t
+                </mi>
+               </mrow>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+           <mo>
+            ]
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Ao substituirmos esse limite na equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      12
+     </a>
+     ) obtemos o mesmo resultado que obteríamos usando a
+     <i>
+      abordagem usual
+     </i>
+     .
+    </p>
+    <p>
+     O método apresentado aqui deve ser encarado como um recurso didático, onde o problema proposto é solucionado sem apelar explicitamente as definições de derivada e de integral, e portanto sem evocar a hipótese de continuidade na qual essas definições se apoiam.
+    </p>
+    <h2>
+     2.1. Discussão
+    </h2>
+    <p>
+     As hipóteses de discretização usadas para descrever a cinemática do sistema não possuem significado físico dentro da concepção estabelecida pela mecânica newtoniana que opera dentro da
+     <i>
+      matemática do contínuo
+     </i>
+     . No entanto, mostramos que quando
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        →
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     a solução obtida a partir desse tratamento converge para a solução obtida a partir de uma equação diferencial.
+    </p>
+    <p>
+     De fato, as recorrências em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) podem ser obtidas a partir de aplicações sucessivas do
+     <i>
+      método de Euler
+     </i>
+     para a equação diferencial em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS1_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ). Dessa forma, a convergência expressa em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E24" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      24
+     </a>
+     ) revela a convergência desse método numérico quando aplicado ao caso do oscilador harmônico simples.
+    </p>
+    <p>
+     Ao serem desacopladas, as relações de recorrência em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) assumem a forma de relações de segunda ordem ordem, sendo trivial mostrar que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E25">
+     <a name="S2_E25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (25)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            x
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mrow>
+             <mi>
+              j
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mn>
+              2
+             </mn>
+            </mrow>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             x
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mrow>
+              <mi>
+               j
+              </mi>
+              <mo>
+               +
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mn>
+               1
+              </mn>
+              <mo>
+               +
+              </mo>
+              <mrow>
+               <msup>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                ⁢
+               </mo>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <msup>
+                <mi>
+                 t
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             x
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mi>
+              j
+             </mi>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS2_E26">
+     <a name="S2_E26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (26)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <mi>
+            v
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mrow>
+             <mi>
+              j
+             </mi>
+             <mo>
+              +
+             </mo>
+             <mn>
+              2
+             </mn>
+            </mrow>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             v
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mrow>
+              <mi>
+               j
+              </mi>
+              <mo>
+               +
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+           </mrow>
+           <mo>
+            -
+           </mo>
+           <mrow>
+            <mrow>
+             <mo stretchy="false">
+              (
+             </mo>
+             <mrow>
+              <mn>
+               1
+              </mn>
+              <mo>
+               +
+              </mo>
+              <mrow>
+               <msup>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                ⁢
+               </mo>
+               <mi mathvariant="normal">
+                Δ
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <msup>
+                <mi>
+                 t
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+             </mrow>
+             <mo stretchy="false">
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             v
+            </mi>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mi>
+              j
+             </mi>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Recorrências que definem o
+     <i>
+      método de Verlet
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [14] L. Verlet, Physical Review 159, 98 (1967).
+       </span>
+      </span>
+     </span>
+     ], método que foi redescoberto diversas vezes ao longo do tempo e que é empregado para integrar as equações de movimento. Assim como a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS1_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ) é uma equação diferencial de segunda ordem em
+     <math display="inline">
+      <mrow>
+       <mi>
+        x
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         (
+        </mo>
+        <mi>
+         t
+        </mi>
+        <mo stretchy="false">
+         )
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , as recorrências acima são de segunda ordem. Uma interessante demonstração foi apresentada recentemente por [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] M.M. Almeida, Revista Brasileira de Ensino de Física 41, e20190039 (2019).
+       </span>
+      </span>
+     </span>
+     ], onde a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E25" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      25
+     </a>
+     ) foi obtida a partir da aplicação sucessiva do
+     <i>
+      teorema do valor médio para derivadas
+     </i>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Implementação do Algoritmo
+    </h1>
+    <p>
+     Demonstramos que o algoritmo fornecido pelas relações de recorrência escritas em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) está correto, uma vez que a solução obtida através delas converge para a solução correta desde que
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        →
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     . Assim, implementa-lo em alguma linguagem de computação é um caminho natural. Caso os alunos envolvidos nessa atividade não tenham familiaridade com implementação de algoritmos, sugerimos que essas equações sejam usadas para pelo menos gerar uma tabela com algumas estimativas para a posição da partícula.
+    </p>
+    <p>
+     Ao simular computacionalmente a evolução de um sistema dinâmico, devemos especificar a duração da simulação
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       f
+      </i>
+     </sub>
+     . Além disso devemos especificar uma unidade elementar de tempo,
+     <math display="inline">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        t
+       </mi>
+      </mrow>
+     </math>
+     , definindo o número de subintervalos
+     <i>
+      N
+     </i>
+     que divide
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       f
+      </i>
+     </sub>
+     . Essas hipóteses, inerentes a qualquer simulação computacional, embasam a percepção de que a natureza é fundamentalmente
+     <i>
+      finita
+     </i>
+     [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [10] E. Fredkin, International Journal of Theoretical Physics 42, 189 (2003).
+       </span>
+      </span>
+     </span>
+     ]. Seguindo essa hipótese, nosso mundo é um sistema finito que, além disso, armazena uma quantidade finita de informação por unidade de volume.
+    </p>
+    <p>
+     Nesse trabalho especificamos
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       f
+      </i>
+     </sub>
+     em unidades do período de oscilação
+     <math display="inline">
+      <mrow>
+       <mi>
+        T
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mrow>
+        <mn>
+         2
+        </mn>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         π
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <msup>
+         <mi>
+          ω
+         </mi>
+         <mrow>
+          <mo>
+           -
+          </mo>
+          <mn>
+           1
+          </mn>
+         </mrow>
+        </msup>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        t
+       </mi>
+      </mrow>
+     </math>
+     é determinado considerando que cada intervalo de tempo
+     <i>
+      T
+     </i>
+     é dividido em um número
+     <i>
+      n
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     de subintervalos de mesma largura. Dessas considerações, segue que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E27">
+     <a name="S3_E27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (27)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            t
+           </mi>
+           <mi>
+            f
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msub>
+            <mi>
+             t
+            </mi>
+            <mi>
+             T
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            T
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     equação que define a variável adimensional
+     <i>
+      t
+     </i>
+     <sup>
+      <i>
+       T
+      </i>
+     </sup>
+     , além disso
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E28">
+     <a name="S3_E28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (28)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           N
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msub>
+            <mi>
+             n
+            </mi>
+            <mi>
+             T
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <msub>
+            <mi>
+             t
+            </mi>
+            <mi>
+             T
+            </mi>
+           </msub>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <i>
+      n
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     e
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     são parâmetros livres da simulação.
+    </p>
+    <div class="row fig" id="S3_F1">
+     <a name="S3_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/9fQ7rPc8pDpYHhytvZskwgB/1f7faa60afff556e67c06777369a96eeb0abb9a5.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Os painéis da esquerda mostram variação relativa da energia cinética por partícula ao longo da evolução do sistema. Os pontos foram obtidos aplicando os algoritmo descrito no texto, enquanto que a curva contínua representa a equação (
+      <a class="open-asset-modal" data-target="#ModalSchemeS3_E34" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       34
+      </a>
+      ). Os paineis a direita mostram o espaço de fase do sistema. Os pontos foram obtidos aplicando o algoritmo considerando com
+      <math display="inline">
+       <mrow>
+        <mi>
+         ω
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0.25
+        </mn>
+       </mrow>
+      </math>
+      e
+      <math display="inline">
+       <mrow>
+        <mrow>
+         <mrow>
+          <mrow>
+           <msub>
+            <mi>
+             E
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mi>
+             N
+            </mi>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           /
+          </mo>
+          <msub>
+           <mi>
+            E
+           </mi>
+           <mi>
+            m
+           </mi>
+          </msub>
+         </mrow>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           [
+          </mo>
+          <mn>
+           0
+          </mn>
+          <mo stretchy="false">
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1.3
+        </mn>
+       </mrow>
+      </math>
+      . As elipses contínuas limitam os pontos da simulação e foram geradas a partir da análise do erro associado ao algoritmo. Em
+      <i>
+       a t
+      </i>
+      <sub>
+       <i>
+        T
+       </i>
+      </sub>
+      = 1, em
+      <i>
+       bt
+      </i>
+      <sub>
+       <i>
+        T
+       </i>
+      </sub>
+      = 2 e em
+      <i>
+       c t
+      </i>
+      <sub>
+       <i>
+        T
+       </i>
+      </sub>
+      = 4.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.1. Conservação de energia e análise de erro
+    </h2>
+    <p>
+     Mostramos que quando
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        →
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     a solução gerada pelas relações de recorrência em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) converge para a solução analítica. Agora estamos interessados em avaliar como a diferença entre essas soluções varia a medida que
+     <math display="inline">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        t
+       </mi>
+      </mrow>
+     </math>
+     se aproxima de zero.
+    </p>
+    <p>
+     A análise que segue está baseada no princípio da conservação da energia mecânica. Obteremos uma equação para a energia mecânica por unidade de massa para cada estado
+     <i>
+      j
+     </i>
+     , aqui denotada por
+     <math display="inline">
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mi>
+         m
+        </mi>
+       </msub>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         j
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . A razão
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mrow>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           [
+          </mo>
+          <mi>
+           j
+          </mi>
+          <mo stretchy="false">
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         /
+        </mo>
+        <msub>
+         <mi>
+          E
+         </mi>
+         <mi>
+          m
+         </mi>
+        </msub>
+       </mrow>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     será usada como um estimador do erro que, quando
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        →
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , mostraremos depender do parâmetro
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E29">
+     <a name="S3_E29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (29)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           γ
+          </mi>
+          <mo>
+           ≡
+          </mo>
+          <mfrac>
+           <msub>
+            <mi>
+             t
+            </mi>
+            <mi>
+             T
+            </mi>
+           </msub>
+           <msub>
+            <mi>
+             n
+            </mi>
+            <mi>
+             T
+            </mi>
+           </msub>
+          </mfrac>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mfrac>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mi>
+               T
+              </mi>
+             </msub>
+             <mi>
+              T
+             </mi>
+            </mfrac>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            ⁢
+           </mo>
+           <mi mathvariant="normal">
+            Δ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde a igualdade foi obtida das equações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ), (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      27
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      28
+     </a>
+     ). Da definição de energia mecânica temos
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E30">
+     <a name="S3_E30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (30)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <msub>
+            <mi>
+             E
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mi>
+             j
+            </mi>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mfrac>
+            <mrow>
+             <msup>
+              <mi>
+               ω
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msup>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              x
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                [
+               </mo>
+               <mi>
+                j
+               </mi>
+               <mo stretchy="false">
+                ]
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+           <mo>
+            +
+           </mo>
+           <mfrac>
+            <mrow>
+             <mi>
+              v
+             </mi>
+             <mo>
+              ⁢
+             </mo>
+             <msup>
+              <mrow>
+               <mo stretchy="false">
+                [
+               </mo>
+               <mi>
+                j
+               </mi>
+               <mo stretchy="false">
+                ]
+               </mo>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </msup>
+            </mrow>
+            <mn>
+             2
+            </mn>
+           </mfrac>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Das igualdades (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      9
+     </a>
+     ), (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      12
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E22" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      22
+     </a>
+     ) temos
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E31">
+     <a name="S3_E31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (31)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mrow>
+           <msub>
+            <mi>
+             E
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mi>
+             j
+            </mi>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msup>
+            <mi>
+             r
+            </mi>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              j
+             </mi>
+            </mrow>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mfrac>
+              <mrow>
+               <msup>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                ⁢
+               </mo>
+               <mi>
+                x
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <msup>
+                <mrow>
+                 <mo stretchy="false">
+                  [
+                 </mo>
+                 <mn>
+                  0
+                 </mn>
+                 <mo stretchy="false">
+                  ]
+                 </mo>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </mfrac>
+             <mo>
+              +
+             </mo>
+             <mfrac>
+              <mrow>
+               <mi>
+                v
+               </mi>
+               <mo>
+                ⁢
+               </mo>
+               <msup>
+                <mrow>
+                 <mo stretchy="false">
+                  [
+                 </mo>
+                 <mn>
+                  0
+                 </mn>
+                 <mo stretchy="false">
+                  ]
+                 </mo>
+                </mrow>
+                <mn>
+                 2
+                </mn>
+               </msup>
+              </mrow>
+              <mn>
+               2
+              </mn>
+             </mfrac>
+            </mrow>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msub>
+            <mi>
+             E
+            </mi>
+            <mi>
+             m
+            </mi>
+           </msub>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo stretchy="false">
+             [
+            </mo>
+            <mn>
+             0
+            </mn>
+            <mo stretchy="false">
+             ]
+            </mo>
+           </mrow>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             r
+            </mi>
+            <mrow>
+             <mn>
+              2
+             </mn>
+             <mo>
+              ⁢
+             </mo>
+             <mi>
+              j
+             </mi>
+            </mrow>
+           </msup>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e das equações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      18
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      6
+     </a>
+     ) decorre que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E32">
+     <a name="S3_E32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (32)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             j
+            </mi>
+           </mrow>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <msup>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <mn>
+              1
+             </mn>
+             <mo>
+              +
+             </mo>
+             <mfrac>
+              <mrow>
+               <msup>
+                <mi>
+                 ω
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msup>
+               <mo>
+                ⁢
+               </mo>
+               <msubsup>
+                <mi>
+                 t
+                </mi>
+                <mi>
+                 f
+                </mi>
+                <mn>
+                 2
+                </mn>
+               </msubsup>
+              </mrow>
+              <msup>
+               <mi>
+                N
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+             </mfrac>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <msup>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mn>
+              1
+             </mn>
+             <mo>
+              +
+             </mo>
+             <mrow>
+              <mfrac>
+               <mn>
+                1
+               </mn>
+               <mi>
+                N
+               </mi>
+              </mfrac>
+              <mo>
+               ⁢
+              </mo>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mfrac>
+                <mrow>
+                 <msup>
+                  <mi>
+                   ω
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <msubsup>
+                  <mi>
+                   t
+                  </mi>
+                  <mi>
+                   T
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msubsup>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <msup>
+                  <mi>
+                   T
+                  </mi>
+                  <mn>
+                   2
+                  </mn>
+                 </msup>
+                </mrow>
+                <mrow>
+                 <msub>
+                  <mi>
+                   t
+                  </mi>
+                  <mi>
+                   T
+                  </mi>
+                 </msub>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <msub>
+                  <mi>
+                   n
+                  </mi>
+                  <mi>
+                   T
+                  </mi>
+                 </msub>
+                </mrow>
+               </mfrac>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mrow>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msup>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde na segunda igualdade foram usadas as equações (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E27" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      27
+     </a>
+     ) e (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E28" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      28
+     </a>
+     ). Usando ainda a definição em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E29" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      29
+     </a>
+     ) é trivial mostrar que
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E33">
+     <a name="S3_E33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (33)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msup>
+           <mi>
+            r
+           </mi>
+           <mrow>
+            <mn>
+             2
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             j
+            </mi>
+           </mrow>
+          </msup>
+          <mo>
+           =
+          </mo>
+          <msup>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mrow>
+             <mn>
+              1
+             </mn>
+             <mo>
+              +
+             </mo>
+             <mrow>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mfrac>
+                <mn>
+                 1
+                </mn>
+                <mi>
+                 N
+                </mi>
+               </mfrac>
+               <mo>
+                )
+               </mo>
+              </mrow>
+              <mo>
+               ⁢
+              </mo>
+              <mn>
+               4
+              </mn>
+              <mo>
+               ⁢
+              </mo>
+              <msup>
+               <mi>
+                π
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msup>
+              <mo>
+               ⁢
+              </mo>
+              <mi>
+               γ
+              </mi>
+             </mrow>
+            </mrow>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+           <mi>
+            j
+           </mi>
+          </msup>
+          <mo>
+           ≈
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mfrac>
+              <mi>
+               j
+              </mi>
+              <mi>
+               N
+              </mi>
+             </mfrac>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mn>
+             4
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              π
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             γ
+            </mi>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa aproximação, válida desde que
+     <math display="inline">
+      <mrow>
+       <mi>
+        γ
+       </mi>
+       <mo>
+        →
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     , é mais precisa do que a que seria obtida considerando apenas o primeiro termo da expansão binomial. Ao compararmos as séries de Taylor destas funções, concluímos que a aproximação é válida mesmo quando termos que envolvem
+     <math display="inline">
+      <msup>
+       <mi>
+        γ
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msup>
+     </math>
+     não sejam despreziveis. Com essas considerações temos
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E34">
+     <a name="S3_E34">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (34)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mfrac>
+           <mrow>
+            <msub>
+             <mi>
+              E
+             </mi>
+             <mi>
+              m
+             </mi>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mi>
+              j
+             </mi>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+           </mrow>
+           <mrow>
+            <msub>
+             <mi>
+              E
+             </mi>
+             <mi>
+              m
+             </mi>
+            </msub>
+            <mo>
+             ⁢
+            </mo>
+            <mrow>
+             <mo stretchy="false">
+              [
+             </mo>
+             <mn>
+              0
+             </mn>
+             <mo stretchy="false">
+              ]
+             </mo>
+            </mrow>
+           </mrow>
+          </mfrac>
+          <mo>
+           =
+          </mo>
+          <msup>
+           <mi>
+            e
+           </mi>
+           <mrow>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mfrac>
+              <mi>
+               j
+              </mi>
+              <mi>
+               N
+              </mi>
+             </mfrac>
+             <mo>
+              )
+             </mo>
+            </mrow>
+            <mo>
+             ⁢
+            </mo>
+            <mn>
+             4
+            </mn>
+            <mo>
+             ⁢
+            </mo>
+            <msup>
+             <mi>
+              π
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msup>
+            <mo>
+             ⁢
+            </mo>
+            <mi>
+             γ
+            </mi>
+           </mrow>
+          </msup>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e portanto a variação relativa máxima da energia por unidade de massa, que ocorre quando
+     <i>
+      j=N
+     </i>
+     , é definida pela variável
+     <math display="inline">
+      <mi>
+       γ
+      </mi>
+     </math>
+     . Essa variação é consequência do erro associado a
+     <i>
+      discretização
+     </i>
+     e não possuí signficado físico. Assim a equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E34" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      34
+     </a>
+     ) mostra que uma certa energia mecânica por unidade de massa é artificialmente inserida em cada interação.
+    </p>
+    <p>
+     Os gráficos na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     foram gerados aplicando as relações de recorrência em (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      8
+     </a>
+     ) considerando
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi>
+         x
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          [
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          ]
+         </mo>
+        </mrow>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mn>
+        0
+       </mn>
+      </mrow>
+     </math>
+     <i>
+      m
+     </i>
+     e
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi>
+         v
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          [
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          ]
+         </mo>
+        </mrow>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mn>
+        5
+       </mn>
+      </mrow>
+     </math>
+     <math display="inline">
+      <mrow>
+       <mi>
+        m
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <msup>
+        <mi>
+         s
+        </mi>
+        <mrow>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msup>
+      </mrow>
+     </math>
+     . Para o painel
+     <i>
+      a t
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     = 1, para o painel
+     <i>
+      b t
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     = 2 e para o painel
+     <i>
+      c t
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     = 4. Em todos os casos assumimos que
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            E
+           </mi>
+           <mi>
+            m
+           </mi>
+          </msub>
+          <mo>
+           ⁢
+          </mo>
+          <mrow>
+           <mo stretchy="false">
+            [
+           </mo>
+           <mi>
+            N
+           </mi>
+           <mo stretchy="false">
+            ]
+           </mo>
+          </mrow>
+         </mrow>
+         <mo>
+          /
+         </mo>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+        </mrow>
+        <mo>
+         ⁢
+        </mo>
+        <mrow>
+         <mo stretchy="false">
+          [
+         </mo>
+         <mn>
+          0
+         </mn>
+         <mo stretchy="false">
+          ]
+         </mo>
+        </mrow>
+       </mrow>
+       <mo>
+        =
+       </mo>
+       <mn>
+        1.3
+       </mn>
+      </mrow>
+     </math>
+     . Nos paineis á esquerda é apresentado o gráfico da função (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E34" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      34
+     </a>
+     ), em vermelho, junto com o valor da razão
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mrow>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           [
+          </mo>
+          <mi>
+           j
+          </mi>
+          <mo stretchy="false">
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         /
+        </mo>
+        <msub>
+         <mi>
+          E
+         </mi>
+         <mi>
+          m
+         </mi>
+        </msub>
+       </mrow>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     para
+     <math display="inline">
+      <mrow>
+       <mi>
+        j
+       </mi>
+       <mo>
+        ∈
+       </mo>
+       <mi>
+        ℕ
+       </mi>
+       <mo>
+        ≤
+       </mo>
+       <mi>
+        N
+       </mi>
+      </mrow>
+     </math>
+     , em preto. Já nos painéis à direita temos o plano de fase do sistema. Os pontos em preto estão limitados pelas elipses associadas as energias
+     <math display="inline">
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mi>
+         m
+        </mi>
+       </msub>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e
+     <math display="inline">
+      <mrow>
+       <msub>
+        <mi>
+         E
+        </mi>
+        <mi>
+         m
+        </mi>
+       </msub>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mi>
+         N
+        </mi>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     e representam os valores da posição e velocidade associada a cada estado.
+    </p>
+    <p>
+     A equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS3_E34" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      34
+     </a>
+     ) será usadada para, uma vez definido o valor da razão
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mrow>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           [
+          </mo>
+          <mi>
+           N
+          </mi>
+          <mo stretchy="false">
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         /
+        </mo>
+        <msub>
+         <mi>
+          E
+         </mi>
+         <mi>
+          m
+         </mi>
+        </msub>
+       </mrow>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     , calcular o respectivo número de iterações. O custo computacional depende dessa variável, que é pode ser calculada considerando o primeiro número natural maior do que
+     <i>
+      N
+     </i>
+     , onde
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="eS3_E35">
+     <a name="S3_E35">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (35)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           N
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mn>
+            4
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <msup>
+            <mi>
+             π
+            </mi>
+            <mn>
+             2
+            </mn>
+           </msup>
+           <mo>
+            ⁢
+           </mo>
+           <mrow>
+            <mo>
+             [
+            </mo>
+            <mfrac>
+             <msubsup>
+              <mi>
+               t
+              </mi>
+              <mi>
+               T
+              </mi>
+              <mn>
+               2
+              </mn>
+             </msubsup>
+             <mrow>
+              <mi>
+               ln
+              </mi>
+              <mo>
+               ⁡
+              </mo>
+              <mrow>
+               <mo>
+                (
+               </mo>
+               <mfrac>
+                <mrow>
+                 <msub>
+                  <mi>
+                   E
+                  </mi>
+                  <mi>
+                   m
+                  </mi>
+                 </msub>
+                 <mo>
+                  ⁢
+                 </mo>
+                 <mrow>
+                  <mo stretchy="false">
+                   [
+                  </mo>
+                  <mi>
+                   N
+                  </mi>
+                  <mo stretchy="false">
+                   ]
+                  </mo>
+                 </mrow>
+                </mrow>
+                <mrow>
+                 <msub>
+                  <mi>
+                   E
+                  </mi>
+                  <mi>
+                   m
+                  </mi>
+                 </msub>
+                 <mrow>
+                  <mo stretchy="false">
+                   [
+                  </mo>
+                  <mn>
+                   0
+                  </mn>
+                  <mo stretchy="false">
+                   ]
+                  </mo>
+                 </mrow>
+                 <mo stretchy="false">
+                  ]
+                 </mo>
+                </mrow>
+               </mfrac>
+               <mo>
+                )
+               </mo>
+              </mrow>
+             </mrow>
+            </mfrac>
+            <mo>
+             ]
+            </mo>
+           </mrow>
+          </mrow>
+         </mrow>
+         <mo>
+          .
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Essa equação mostra a dependência do tempo de execução do algoritmo com os parâmetros de entrada
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     e
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mrow>
+         <msub>
+          <mi>
+           E
+          </mi>
+          <mi>
+           m
+          </mi>
+         </msub>
+         <mo>
+          ⁢
+         </mo>
+         <mrow>
+          <mo stretchy="false">
+           [
+          </mo>
+          <mi>
+           N
+          </mi>
+          <mo stretchy="false">
+           ]
+          </mo>
+         </mrow>
+        </mrow>
+        <mo>
+         /
+        </mo>
+        <msub>
+         <mi>
+          E
+         </mi>
+         <mi>
+          m
+         </mi>
+        </msub>
+       </mrow>
+       <mo>
+        ⁢
+       </mo>
+       <mrow>
+        <mo stretchy="false">
+         [
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo stretchy="false">
+         ]
+        </mo>
+       </mrow>
+      </mrow>
+     </math>
+     . Estes estipulam, respectivamente, o tempo de duração da simulação e o erro máximo que será admitido.
+    </p>
+    <p>
+     Os pontos pretos da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     representam estimativas da posição obtidas adotando distintos valores para
+     <i>
+      t
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     e
+     <i>
+      n
+     </i>
+     <sub>
+      <i>
+       T
+      </i>
+     </sub>
+     . A linha sólida representa a solução exata correspondente as condições iniciais do problema. O erro é um elemento inerente a qualquer técnica numérica, e na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     fica evidenciado pela discrepância entre os pontos e a curva sólida.
+    </p>
+    <p>
+     A cada interação o algoritmo possuí associado um erro que depende do valor de
+     <math display="inline">
+      <mrow>
+       <mi mathvariant="normal">
+        Δ
+       </mi>
+       <mo>
+        ⁢
+       </mo>
+       <mi>
+        t
+       </mi>
+      </mrow>
+     </math>
+     adotado. Esse erro se propaga de uma interação para a outra, e por essa razão observamos a discrepância entre os pontos e a curva aumentar com
+     <i>
+      j
+     </i>
+     nessa figura. O erro é máximo quando
+     <i>
+      j
+     </i>
+     =
+     <i>
+      N
+     </i>
+     , de onde concluímos que ele é proporcional a
+     <i>
+      t
+      <sub>
+       T
+      </sub>
+     </i>
+     . Por outro lado, se considerarmos
+     <i>
+      t
+      <sub>
+       T
+      </sub>
+     </i>
+     fixo, esperamos que o erro em cada interação seja inversamente proporcional a
+     <i>
+      n
+      <sub>
+       T
+      </sub>
+     </i>
+     , uma vez que
+     <math display="inline">
+      <mrow>
+       <mrow>
+        <mi mathvariant="normal">
+         Δ
+        </mi>
+        <mo>
+         ⁢
+        </mo>
+        <mi>
+         t
+        </mi>
+       </mrow>
+       <mo>
+        ∝
+       </mo>
+       <msubsup>
+        <mi>
+         n
+        </mi>
+        <mi>
+         T
+        </mi>
+        <mrow>
+         <mo>
+          -
+         </mo>
+         <mn>
+          1
+         </mn>
+        </mrow>
+       </msubsup>
+      </mrow>
+     </math>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Conclusão
+    </h1>
+    <p>
+     A relevância da nossa análise consiste no fato de que ela mostra que a dinâmica do oscilador harmônico simples pode ser modelada a partir da
+     <i>
+      matemática do discreto
+     </i>
+     , o que contrasta com a solução tradicionalmente exposta na literatura [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] D. Halliday, R. Resnick e J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2006), v. 1.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Nessa análise a
+     <i>
+      fórmula de De Moivre
+     </i>
+     é evocada, resultado que pode ser demonstrado a partir das identidades trigonométricas envolvendo a soma de arcos e que é uma fórmula precursora à
+     <i>
+      identidade de Euler
+     </i>
+     . Na abordagem que seguimos são utilizados resultados estudados em um curso básico de álgebra linear de nível introdutório. Defendemos assim que, embora a solução apresentada seja formalmente imprecisa, pois viola os axiomas da mecânica clássica, ela é um interessante complemento a abordagem tradicional, realizada através da
+     <i>
+      matemática do contínuo
+     </i>
+     .
+    </p>
+    <p>
+     As relações de recorrência foram implementadas numericamente, e assim construímos o plano de fase de alguns estados do sistema juntos às curvas obtidas a partir da solução da equação diferencial em questão. Nesse caso a solução obtida não é exata, e por essa razão mostramos como o controle do erro está relacionado com o custo computacional do algoritmo. Esses elementos são inerentes a qualquer simulação computacional, e a discussão aqui apresentada torna-se relevante para estudantes que buscam um primeiro contato com simulações computacionais.
+    </p>
+    <p>
+     A abordagem proposta nesse trabalho, ao ser realizada usando linguagem estabelecida pela
+     <i>
+      matemática do discreto
+     </i>
+     , não evoca explicitamente a noção de
+     <i>
+      continuidade
+     </i>
+     . Sugerimos que esse simples exemplo analítico e computacional possa servir como cenário onde questões mais fundamentais possam ser discutidas. A ideia de que o próprio espaço e o tempo talvez possuam natureza granular também nos remete aos trabalhos e alguns pioneiros da computação. Acreditamos que uma discussão nesse sentido seja particularmente importante, principalmente quando vivemos em uma sociedade que migra para a digitalização do cotidiano e onde o real cada vez mais se mistura ao digital. A um nível fundamental, não podemos esquecer que a computação é realizada por processos físicos, sendo as máquinas apenas os meios no qual o processamento da informação ocorre. Não nos esqueçamos também que o estudo das máquinas sempre esteve intrinsicamente associado ao desenvolvimento científico.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        D. Halliday, R. Resnick e J. Walker,
+        <i>
+         Fundamentos de Física
+        </i>
+        (LTC, Rio de Janeiro, 2006), v. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        C.A. Strong, Mind 37, 393 (1928).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        D. Halliday, R. Resnick e J. Walker,
+        <i>
+         Fundamentos de Física
+        </i>
+        (LTC, Rio de Janeiro, 1995), v. 4.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        G.S.S. Ávila,
+        <i>
+         Introdução à Análise Matemática
+        </i>
+        (Edgard Blucher, São Paulo, 1999), v. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        H. Anton,
+        <i>
+         Cálculo: um novo horizonte
+        </i>
+        (Bookman, Porto Alegre, 2006), v. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        T. Toffoli, Physica 10D 10, 117 (1984).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        K. Zuse,
+        <i>
+         Rechnender Raum
+        </i>
+        (Friedrich Vieweg &amp; Sohn, Braunschweigm, 1969), v.1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        W.H. Press, S.A. Teukolsky, W.T. Vetterling e B.P. Flannery,
+        <i>
+         Numerical Recipes: The Art of Scientific Computing
+        </i>
+        (Cambridge University Press, Cambridge, 2007), v. 1, p. 899.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        B.R. Segatto, Revista Brasileira de Ensino de Física 42, e20180346 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        E. Fredkin, International Journal of Theoretical Physics 42, 189 (2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        W.E. Boyce e R.C. Diprima,
+        <i>
+         Equações diferenciais elementares e problemas de valores de contorno
+        </i>
+        (LTC, Rio de Janeiro, 2002), v. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        I.A.C. Melnik, Russian Journal of Nonlinear Dynamics 18, 83 (2022).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        J.L. Boldrini, S.I.R. Costa, V.L. Figueiredo e H.G. Wetzler,
+        <i>
+         Álgebra Linear
+        </i>
+        (Harbra, São Paulo, 1986), v. 1.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        L. Verlet, Physical Review 159, 98 (1967).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        M.M. Almeida, Revista Brasileira de Ensino de Física 41, e20190039 (2019).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Desenvolveu o primeiro computador programável,
+        <i>
+         Z1
+        </i>
+        , e também a primeira linguagem de programação de alto nível.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Ver mais detalhes em
+        <a href="https://www.glowscript.org/" target="_blank">
+         https://www.glowscript.org/
+        </a>
+        .
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        Pioneiro da computação, estabeleceu o
+        <i>
+         gate de Fredkin
+        </i>
+        e um modelo conservativo de computação baseado em colisões elásticas. Sugere que, em um nível fundamental, todas as grandezas físicas são discretizadas. Cunhou o termo
+        <i>
+         física digital
+        </i>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        01 Ago 2022
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2022
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        02 Mar 2022
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        09 Jun 2022
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        03 Jul 2022
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

@@ -1,0 +1,2328 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 43
+   <span class="_separator">
+    •
+   </span>
+   2021
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2021-0267" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2021-0267
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2021-0267">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 deed.en" data-toggle="tooltip">
+  </span>
+  Desenvolvimento de um sismógrafo empregando sensores piezoelétricos em plataforma Arduino
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Development of a seismograph using piezoelectric sensors in Arduino platform
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Cleber Alexandre de Amorim
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:cleber.amorim@unesp.br">
+      cleber.amorim@unesp.br
+     </a>
+    </div>
+    Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0003-4123-2740">
+     http://orcid.org/0000-0003-4123-2740
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Lúcia Adriana Villas-Bôas
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Flávio José de Morais
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Mariana Matulovic
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual Paulista (UNESP), Faculdade de Ciências e Engenharia, Tupã, SP, Brasil.
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-6626-4621">
+     http://orcid.org/0000-0001-6626-4621
+    </a>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Desde 2018, o aprofundamento teórico da componente de física – na área de Ciências da Natureza e suas Tecnologias – subdivide-se nas seguintes unidades temáticas de conhecimento: matéria e energia; vida, Terra e cosmos; tecnologia e linguagem científica. Neste contexto, o ensino de física deve ter como um dos seus pilares, na sociedade contemporânea, a busca por explicações a respeito das novas tecnologias integradas à vida, à profissão e ao cotidiano do estudante, tendo como suporte a indissociabilidade entre a teoria e prática no processo de ensino-aprendizagem. O presente artigo tem como objetivo destacar a potencialidade da articulação do ensino de física, subsidiado por projetos e prática, com aporte das tecnologias. Particularmente, neste trabalho expõe-se três ensaios experimentais a respeito do sismógrafo para ser aplicado no contexto da sala de aula. Propõe-se delinear uma ferramenta que atua como um laboratório em sala de aula, auxiliando professores e alunos em uma melhor assimilação de conceitos da área de Ciências da Natureza e suas Tecnologias, de modo a dotá-los com demonstrações e experimentos científicos que os conduzam a decisões à luz da ciência e do saber científico.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave
+     </strong>
+     <br/>
+     Arduino; Interdisciplinaridade; Novo Ensino Médio; Ensino
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     Since 2018, the theoretical deepening of the physics component – in the area of Natural Sciences and its Technologies – is subdivided into the following thematic units of knowledge: matter and energy; life, Earth and cosmos; technology and scientific language. In this context, the teaching of physics must have as one of its pillars, in contemporary society, the search for explanations about new technologies integrated into the student’s life, profession and daily life, supported by the inseparability between theory and practice in the teaching-learning process. This article aims to highlight the potential of articulating physics education, subsidized by projects and practice, with the contribution of technologies. This work exposes three experimental tests about the seismograph to be applied in the context of the classroom. It is proposed to outline a tool that acts as a laboratory in the classroom, helping teachers and students in a better assimilation of concepts in Natural Sciences and its Technologies, in order to provide them with demonstrations and scientific experiments that lead them to decisions in the light of science and scientific knowledge.
+    </p>
+    <p>
+     <strong>
+      Keywords
+     </strong>
+     <br/>
+     Arduino; Interdisciplinarity; New High School; Teaching
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A física, como ciência, vem tentando explicar as regularidades da natureza desde a antiguidade pré-clássica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        1. R. Sousa, A Relação Do Homem Com A Natureza, disponível em: https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm.
+       </span>
+       <br/>
+       <a href="https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm" target="_blank">
+        https://educador.brasilescola.uol.com.br...
+       </a>
+      </span>
+     </span>
+     ]. O ensino de física permite aos alunos do ensino fundamental e médio analisarem situações concretas e reais, possibilitando um maior entendimento da natureza e desenvolvendo um instinto investigativo. No Brasil o ensino de física inicia-se no 1o. ano do E.M. (Ensino Médio) e estende-se até o 3o. ano do E.M.
+    </p>
+    <p>
+     Caracteriza-se como letramento científico à capacidade que os estudantes têm de resolver problemas fundamentados em ciência e tecnologia. Dentre as competências almejadas para atingir esse letramento destacam-se: potencialidade de se explicar cientificamente os fenômenos naturais e tecnológicos; planejar, desenvolver e executar investigações do tipo científicas; analisar dados e indicativos científicos; validar teorias e argumentos ([
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).
+       </span>
+      </span>
+     </span>
+     ], 2018, p. 118).
+    </p>
+    <p>
+     O Programa de Avaliação Internacional de Estudantes (PISA) é um instrumento de análise do desempenho dos estudantes em escala mundial que contempla, atualmente, um estudo em 79 países. No âmbito das Ciências, o PISA avalia os estudantes mediante sete níveis de proficiências descritos por conjuntos de competências e habilidades que os mesmos devem alcançar em termos de letramento científico, mediante seus desenvolvimentos cognitivos para a faixa etária em questão (neste caso, para alunos de 15 anos) ([
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).
+       </span>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     Nos dados expostos em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        2. MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).
+       </span>
+      </span>
+     </span>
+     ], 49,2% dos discentes brasileiros estão no nível 1 ou abaixo dele (1a, 1b abaixo de 1b)
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Abaixo de 1b: sem especificação de habilidades a serem contempladas; 1b: associação mínima e básica entre os conhecimentos científicos e os fenômenos físicos e 1a: entendimento de frases curtas e passagens de texto.
+       </span>
+      </span>
+     </span>
+     de proficiência em Ciências da edição do PISA 2018. Isso significa que quase 50% dos nossos estudantes adquiriram apenas as habilidades e competências mínimas da área, sendo 4% com ausência total delas. Outro dado importante refere-se aos percentis de estudantes que atingiram os níveis maiores, 6 e 7: nível 7 foi de 0% e nível 6 de 0,8%.
+    </p>
+    <p>
+     Em tempos de uma crescente onda de programas e
+     <i>
+      youtubers
+     </i>
+     que entretém os adolescentes para o tema projetos, sendo estes dos mais variados assuntos e aplicações, conectar novamente a cultura maker com o ensino de física atreladas às tecnologias 4.0 pode ser uma alternativa de amenização do lacuna que se abriu entre o ensinar e aprender em física.
+    </p>
+    <p>
+     A física é vista pela maioria dos estudantes como difícil e abstrata, principalmente devido ao excesso de linguagem matemática utilizada. Outros fatores que contribuem para a falta de interesse na disciplina de física são devido ao afastamento entre o que se ensina em sala de aula e o mundo exterior; além do distanciamento entre docente e discente e a falta de interdisciplinaridade. Uma forma de contornar estes problemas é através do uso de experimentos didáticos que possam elucidar o conteúdo teórico ministrado pelo professor em sala de aula ([
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. MINISTÉRIO DA EDUCAÇÃO, Base Nacional Comum Curricular – Ensino Médio, 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf.
+       </span>
+       <br/>
+       <a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">
+        http://basenacionalcomum.mec.gov.br/imag...
+       </a>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     A Base Nacional Comum Curricular (BNCC) para o E.M., em vigência desde 2018, insere as disciplinas de física, biologia e química dentro da área de Ciências da Natureza e suas Tecnologias, sistematizando e aprofundando as competências e habilidades dessas componentes curriculares sob o escopo das temáticas Matéria e Energia; Vida e Evolução, Terra e Universo [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. MINISTÉRIO DA EDUCAÇÃO, Base Nacional Comum Curricular – Ensino Médio, 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf.
+       </span>
+       <br/>
+       <a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">
+        http://basenacionalcomum.mec.gov.br/imag...
+       </a>
+      </span>
+     </span>
+     ]. Adicionalmente, o plano curricular do estado de São Paulo ressalta a necessidade de transcender as fronteiras das teorias clássicas para atingir os desafios de uma sociedade moderna, agregando a essa temática uma nova área: Tecnologia e Linguagem Científica (Novo Ensino Médio [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        4. GOVERNO DO ESTADO DE SÃO PAULO, Currículo Paulista: etapa ensino médio 2020, 12 de junho de 2020. São Paulo, 2020. Disponível em:https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf.
+       </span>
+       <br/>
+       <a href="https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf" target="_blank">
+        https://efape.educacao.sp.gov.br/curricu...
+       </a>
+      </span>
+     </span>
+     ]).
+    </p>
+    <p>
+     Compete, portanto, ao ensino de física “analisar situações-problema e avaliar aplicações do conhecimento científico e tecnológico e suas implicações no mundo, utilizando procedimentos e linguagens próprias das Ciências da Natureza” ([
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        3. MINISTÉRIO DA EDUCAÇÃO, Base Nacional Comum Curricular – Ensino Médio, 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf.
+       </span>
+       <br/>
+       <a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">
+        http://basenacionalcomum.mec.gov.br/imag...
+       </a>
+      </span>
+     </span>
+     ], 2018, p. 539). Entre as atividades as quais pretende-se atribuir aos discentes do ensino médio, destaca-se a necessidade de que os alunos se apropriem do conhecimento de forma significativa, garantindo sua autonomia. Aprender a aprender necessita de uma pedagogia voltada para situações didáticas favorecedoras a ela, para dar sentido ao que se aprende. Não se aprende apenas ouvindo, escrevendo, memorizando e reproduzindo conhecimentos em provas, é necessário a participação dos alunos de forma a protagonizar as situações de ensino-aprendizagem propostas.
+    </p>
+    <p>
+     Assim, este artigo tem como finalidade delinear uma proposta da construção de um experimento de um sismógrafo que possa atuar de forma paralela ao ensino teórico de conteúdos de física do Ensino Básico (fundamental e médio). Para isso apresentam-se três ensaios experimentais:
+     <i>
+      i
+     </i>
+     . oscilações sobre uma mesa de madeira aferida por um osciloscópio;
+     <i>
+      ii
+     </i>
+     . oscilações sobre uma mesa de madeira aferida por um sistema utilizando um Arduino e
+     <i>
+      iii
+     </i>
+     . oscilações sobre uma mesa de granito aferida por um Arduino. A proposta tem como foco demonstrar uma ferramenta que atua como um laboratório em sala de aula, auxiliando professores e alunos em uma melhor assimilação de conceitos da área de Ciências da Natureza e suas Tecnologias para os discentes do Ensino Básico.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Discussão Teórica
+    </h1>
+    <p>
+     A construção do protótipo de um sismógrafo, com a plataforma Arduino, foi desenvolvida por meio de um simples circuito de condicionamento de sinais munido de poucos elementos eletrônicos, a saber: sonorizador piezoelétrico, resistores, LEDs e jumpers. A função principal de um dispositivo desse tipo é detectar vibrações sísmicas e emitir uma resposta visual ou sonora, possível apenas graças ao uso de um sensor piezoelétrico (de composição natural ou sintético).
+    </p>
+    <h2>
+     2.1. Sensores Piezoelétricos
+    </h2>
+    <p>
+     Sensores são dispositivos cuja finalidade é detectar eventos ou mudanças no ambiente, respondendo a um estímulo. No caso do sensor piezelétrico, seu princípio de funcionamento baseia-se no efeito piezoelétrico, que consiste na indução de uma diferença de potencial quando uma força compressiva ou de tração é aplicada sobre o mesmo. Inversamente, uma tensão mecânica é produzida quando um campo elétrico é aplicado ao material, o que é chamado de efeito piezoelétrico reverso (Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      1
+     </a>
+     ) [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="S2_F1">
+     <a name="S2_F1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/a1afff15bc8499f0a4a26a836136d46e6e39b43b.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Ilustração esquemática dos efeitos piezoelétricos diretos e reversos (fonte; autores).
+      <br/>
+     </div>
+    </div>
+    <p>
+     O efeito piezoelétrico foi primeiro observado em cristais sem centro de simetria, tal como quartzo e turmalina e, posteriormente, em outros materiais policristalinos sintéticos, particularmente em materiais cerâmicos. Esses materiais têm uma estrutura de polarização dependendo dos átomos que compõem o cristal e da forma como os cristais são formados [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Os dipolos elétricos dentro do material piezoelétrico são responsáveis pela criação da resposta elétrica/diferença de potencial através do material quando ele está conectado a um circuito externo. Cargas positivas e negativas são induzidas em várias partes na superfície do cristal quando este é tensionado em diferentes direções. No estado sem tensão, as cargas positivas e negativas estão num estado de equilíbrio e os dipolos elétricos se cancelam e, portanto, não há saída elétrica. Quando uma força externa é aplicada, ocorrem mudanças na posição relativa das cargas em relação umas às outras, o que resulta na mudança do momento de dipolo. Ou seja, o material está polarizado.
+    </p>
+    <p>
+     Quando o material fica deformado, ele mostra uma tendência de acumular carga positiva em uma extremidade e carga negativa no outro lado do material; a diferença de potencial criada permite que as cargas sejam conduzidas ao redor do circuito e esse fluxo de carga resulta na produção de eletricidade [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. A. Arnau and D. Soares, em: Piezoelectric Transducers and Applications, editado por A.A. Vives (Springer, Berlin 2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng 304, 1800463 (2019).
+       </span>
+      </span>
+     </span>
+     ]. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     apresenta um modelo molecular simples que explica a geração de uma carga elétrica como resultado de uma força exercida sobre o material [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="S2_F2">
+     <a name="S2_F2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/402fd3ba7d19a1f85cd8ced02d3e99bd7817a660.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Modelo molecular simples para explicar o efeito piezoelétrico de (a) uma molécula não perturbada e (b) submetida a uma força externa (fonte; autores).
+      <br/>
+     </div>
+    </div>
+    <p>
+     A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      2
+     </a>
+     mostra um material piezoelétrico no qual uma força de tração é aplicada. Quando uma pressão é exercida no material, uma densidade de carga ligada aparecerá nas superfícies do cristal em contato com os eletrodos. Esta polarização gera um campo elétrico que provoca o fluxo das cargas livres. Dependendo do sinal, as cargas livres se moverão em direção às extremidades onde a carga ligada de sinal oposto é gerada pela polarização do cristal. Esse fluxo de cargas livres permanecerá até que a carga livre neutralize o efeito de polarização. Ao retirar a pressão exercida no cristal, a polarização desaparecerá e o fluxo de cargas livres será revertido, retornando à condição inicial [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. A. Arnau and D. Soares, em: Piezoelectric Transducers and Applications, editado por A.A. Vives (Springer, Berlin 2008).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     2.2. Aplicações
+    </h2>
+    <p>
+     A capacidade dos materiais piezoelétricos de converter energia mecânica em elétrica e, inversamente, energia elétrica em mecânica, tem sido explorada em diversas aplicações, tais como em receptores, acelerômetros, sonares, hidrofones, dentre outros [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. L.J. Medeiros, Hidrofone ultrassônico com piezoeletreto como elemento transdutor. Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11. E.T.F. Dias, Mapeamento de ambientes utilizando sonares e problemas inversos. Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).
+       </span>
+      </span>
+     </span>
+     ]. O efeito piezoelétrico direto é responsável pela capacidade do material de funcionar como um sensor enquanto que, ao efeito inverso, cabe operar como um atuador.
+    </p>
+    <p>
+     Materiais piezoelétricos têm sido amplamente utilizados para fabricar transdutores (conversor de energia elétrica em energia mecânica): sensores, atuadores e ressonadores, filtros para telecomunicação são alguns exemplos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12. A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade 11, 63 (2019).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13. L.F.S.S. Ferreira, Sistema de geração de energia via sensores piezoelétricos. Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).
+       </span>
+      </span>
+     </span>
+     ]. Atuam, também, como parte vital em contextos biomédicos tais como em imagens ecográficas; novas estratégias de imagem e uso em cirurgia ultrassônica; sensores miniaturizados e amplificadores portáteis; na indústria de transporte, como sensores de
+     <i>
+      air bag
+     </i>
+     , microbombas e micromotores [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        5. B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text 51, 297 (2021).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       7
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        7. A. Arnau and D. Soares, em: Piezoelectric Transducers and Applications, editado por A.A. Vives (Springer, Berlin 2008).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng 304, 1800463 (2019).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. L.J. Medeiros, Hidrofone ultrassônico com piezoeletreto como elemento transdutor. Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11. E.T.F. Dias, Mapeamento de ambientes utilizando sonares e problemas inversos. Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12. A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade 11, 63 (2019).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13. L.F.S.S. Ferreira, Sistema de geração de energia via sensores piezoelétricos. Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       14
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        14. J.P. Polizzi, B. Fain e F. Maspero, em: Handbook of Silicon Based MEMS Materials and Technologies (Third Edition), editado por M. Tilli, M. Paulasto-Krockel, M. Petzold, H. Theuss, T. Motooka e V. Lindroos (Elsevier, Amsterdã, 2020), p. 879.
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Recentemente, muitos grupos de pesquisa têm concentrado esforços no desenvolvimento de tecnologia
+     <i>
+      Energy Harvesting
+     </i>
+     com materiais piezoelétricos em razão, principalmente, de sua configuração simples, eficiência elevada de conversão e alta capacidade de serem integrados em sistemas mais complexos. O efeito piezoelétrico pode ser implementado para coletar energia mecânica de diversos mecanismos, que pode ser convertida em energia elétrica útil e utilizada para alimentar dispositivos eletrônicos portáteis [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       6
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        6. H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews, 5, 041306 (2018).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       8
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        8. S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng 304, 1800463 (2019).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       15
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        15. S. Azmi, S.M.H. Varkiani, M. Latifi e R. Bagherzadeh, J Ind Text, 10.1177/1528083720928822 (2020).
+       </span>
+       <br/>
+       <a href="https://doi.org/10.1177/1528083720928822" target="_blank">
+        https://doi.org/10.1177/1528083720928822...
+       </a>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       16
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        16. M.R. Sarker, S. Julai, M.F.M. Sabri, S.M. Said, M.M. Islam e M. Tahir, Sensors and Actuators A: Physical 300, 111634 (2019).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <h2>
+     2.3. Utilização do piezoelétrico no sismógrafo
+    </h2>
+    <p>
+     A participação de estudantes em práticas em sala de aula é uma ferramenta importante para a assimilação de conceitos teóricos. A prática, como mecanismo de associação entre o conhecimento científico e a realidade, aproxima o estudante dos aspectos mais interessantes e variados das Ciências, conduzindo-os para o desenvolvimento de uma educação apta para o enfrentamento dos desafios cotidianos, de modo crítico e sustentável [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       17
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        17. A. Saraò, M. Clocchiatti, C. Barnaba e D. Zuliani, Seismol. Res. Lett. 87, 186 (2016).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Um exemplo de como uma atividade experimental pode otimizar a assimilação de um conjunto de conteúdos de física refere-se à simulação de um abalo sísmico por meio da construção de um sismógrafo constituído por um
+     <i>
+      hardware
+     </i>
+     , gerenciado por Arduino, e outros componentes eletrônicos.
+    </p>
+    <p>
+     O uso de
+     <i>
+      hardware
+     </i>
+     Arduino para a construção de sismógrafos não é inédito, sendo possível encontrar diversas referências abordando esse assunto, bem como vários experimentos escolares, como o apresentado por van Wijk et al. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       18
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        18. K. Van Wijk, T. Channel, K. Viskupic e M.L. Smith, Phys. Teach. 51, 552 (2013).
+       </span>
+      </span>
+     </span>
+     ]. Este experimento é importante pois, para atingir seu objetivo, os alunos têm que aplicar estratégias de resolução de problemas possibilitando o desenvolvimento de novas habilidades que não fazem parte de seu conhecimento prévio. Tal prática permite ao docente trabalhar diversos aspectos interdisciplinares, como elementos da física de um terremoto, diferentes conteúdos como energia e conservação de energia, noções básicas de linguagens de programação, além de uma investigação científica e tecnológica.
+    </p>
+    <p>
+     O conceito de energia e conservação de energia é um dos mais importantes trabalhados neste experimento. O processo de conservação é muito intuitivo para um estudante de E.M., visto que eles vivenciam e conhecem que a principal matriz energética brasileira é a hídrica e que é possível gerar energia elétrica através do movimento de marés, vento e sol. No entanto, a geração de energia através da pressão mecânica não é tão familiar. Tal fenômeno é devido ao efeito piezoelétrico, já descrito anteriormente, e que tem sua origem no século XIX.
+    </p>
+    <p>
+     Neste escopo, tem-se quatro aplicações principais para a captação de energia: piezoelétrica, eletromagnética, termoelétrica e fotovoltaica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       19
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        19. N. Sezer e M. Koç, Nano Energy 80, 105567 (2020).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       20
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        20. P. Carneiro, M.P.S. Santos, A. Rodrigues, J.A.F. Ferreira, J.A.O. Simões, A.T. Marques e A.L. Kholkin, Applied Energy 260, 114191 (2020).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       21
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        21. A. Nozariasbmarz, H. Collins, K. Dsouza, M.H. Polash, M. Hosseini, M. Hyland, J. Liu, A. Malhotra, F.M. Ortiz, F. Mohaddes et al., Applied Energy 258, 114069 (2020).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       22
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        22. X. Yue, M. Kauer, M. Bellanger, O. Beard, M. Brownlow, D. Gibson, C. Clark, C. MacGregor e S. Song, IEEE Internet Things J. 4, 2092 (2017).
+       </span>
+      </span>
+     </span>
+     ]. O uso de materiais piezoelétricos na geração de energia já vem sendo amplamente utilizado, como um exemplo, pode-se citar a inserção de sensores em pneus de carro. Tal aplicação demonstra-se atrativa visto que os pneus já se deformam naturalmente com o rodar dos veículos [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        23. N. Makki, R. Pop-Iliev, em: SPIE Smart Structures and Materials + Nondestructive Evaluation and Health Monitoring (San Diego, 2011).
+       </span>
+      </span>
+     </span>
+     ]. Em [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       23
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        23. N. Makki, R. Pop-Iliev, em: SPIE Smart Structures and Materials + Nondestructive Evaluation and Health Monitoring (San Diego, 2011).
+       </span>
+      </span>
+     </span>
+     ], os autores observaram que sob uma velocidade média de aproximadamente 100 Km/h é possível gerar até 4,6 Watt.
+    </p>
+    <p>
+     Uma outra aplicação foi implementada em uma casa noturna na Holanda cuja energia gerada foi de aproximadamente 10% da energia consumida pelo estabelecimento [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       24
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        24. E. Rosenthal, Partying helps power a dutch nightclub, New York Times, Nova Iorque, 23 de outubro de 2008.
+       </span>
+      </span>
+     </span>
+     ]. A instalação dos geradores piezoelétricos em estradas também já foi colocada em prática. Em um projeto piloto feito pela empresa Innowattech, um trecho de 10 metros foi preparado com geradores piezoelétricos gerando até 1 KWh. Extrapolando para uma avenida de uma grande cidade com quatro faixas e extensão de 1,6 km é possível gerar cerca de 1 MWh. As opções são incontáveis, por exemplo, pode-se utilizar os geradores em trilhos de trem, calçadas, esteiras em aeroportos e shoppings.
+    </p>
+    <p>
+     Os contextos abordados evidenciam a transformação de energia mecânica em energia elétrica. João et al. demonstraram a eficiência da transformação de energia mecânica em eletricidade por meio de um sensor piezoelétrico [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     No experimento proposto na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      3
+     </a>
+     tem-se o seguinte processo de conversão de energia em curso: (i) energia potencial gravitacional (ii) esta energia será transformada em energia cinética é transferida para o sensor piezoelétrico (iii) conservação do momento linear para em seguida ser novamente transformada, agora para (iv) energia potencial elétrica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <div class="row fig" id="S2_F3">
+     <a name="S2_F3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS2_F3" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9310e9bd52ebe54a94430bb21f0252278ff68e0d.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Processo de conversão de energia (i) energia potencial gravitacional, (ii) energia cinética, (iii) conservação do momento linear e (iv) energia potencial elétrica.
+      <br/>
+     </div>
+    </div>
+    <h2>
+     2.4. Conservação da energia mecânicae do momento linear
+    </h2>
+    <p>
+     Quando um objeto é deixado cair, por exemplo um peso de massa
+     <b>
+      <i>
+       m
+      </i>
+     </b>
+     em direção a um sensor piezoelétrico, a Terra exerce uma força gravitacional
+     <b>
+      F
+     </b>
+     <sub>
+      g
+     </sub>
+     = m
+     <b>
+      g
+     </b>
+     nesse objeto, o sentido da força é o mesmo da direção do objeto. A força gravitacional atua no objeto aumentando sua energia cinética. O sistema objeto-Terra tem energia potencial quando o objeto está a uma distância
+     <b>
+      <i>
+       h
+      </i>
+     </b>
+     acima do solo e esta energia potencial é transformada em energia cinética. Este processo de conversão de energia ocorre de forma contínua enquanto o objeto está caindo. Define-se energia potencial gravitacional como
+    </p>
+    <div class="row formula" id="eS2_E1">
+     <a name="S2_E1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <msub>
+           <mi>
+            U
+           </mi>
+           <mi>
+            g
+           </mi>
+          </msub>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            m
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            g
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            h
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde g é aceleração gravitacional e
+     <b>
+      <i>
+       h
+      </i>
+     </b>
+     a altura do objeto em relação ao solo.
+    </p>
+    <p>
+     Quando o objeto se encontra a uma altura
+     <b>
+      <i>
+       h
+      </i>
+     </b>
+     acima do solo não há energia cinética, no entanto, a energia potencial gravitacional do sistema objeto-Terra é dada pela equação 1. O movimento de descida do objetivo, quando deixado cair, ocasiona o aumento de sua velocidade, bem como de sua energia cinética. Por outro lado, a energia potencial tende a diminuir pois
+     <b>
+      <i>
+       h
+      </i>
+     </b>
+     está diminuindo. Em outras palavras, a soma das energias cinética e potencial, energia mecânica do sistema (
+     <i>
+      E
+     </i>
+     ), permanece constante. Este é um exemplo do princípio de conservação da energia mecânica. Observe que a energia mecânica total de um sistema permanece constante em qualquer sistema isolado de objetos que interagem apenas por meio de forças conservativas.
+    </p>
+    <p>
+     Como a energia mecânica total
+     <i>
+      E
+     </i>
+     de um sistema é definida como a soma das energias cinética e potencial, pode-se escrever
+    </p>
+    <div class="row formula" id="eS2_E2">
+     <a name="S2_E2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           E
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <msub>
+            <mi>
+             E
+            </mi>
+            <mi>
+             C
+            </mi>
+           </msub>
+           <mo>
+            +
+           </mo>
+           <msub>
+            <mi>
+             U
+            </mi>
+            <mi>
+             g
+            </mi>
+           </msub>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Considerando que toda energia potencial do sistema objeto-Terra seja convertida em energia cinética, e que se tratando de forças conservativas, pode-se relacionar estas energias da seguinte forma
+    </p>
+    <div class="row formula" id="eS2_E3">
+     <a name="S2_E3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mfrac>
+           <mn>
+            1
+           </mn>
+           <mn>
+            2
+           </mn>
+          </mfrac>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           m
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <msup>
+           <mi>
+            v
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msup>
+         </mrow>
+         <mo>
+          =
+         </mo>
+         <mrow>
+          <mi>
+           m
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mi>
+           g
+          </mi>
+          <mo>
+           ⁢
+          </mo>
+          <mpadded width="+5pt">
+           <mi>
+            h
+           </mi>
+          </mpadded>
+         </mrow>
+         <mo>
+          ⟹
+         </mo>
+         <mi>
+          v
+         </mi>
+         <mo>
+          =
+         </mo>
+         <msqrt>
+          <mrow>
+           <mn>
+            2
+           </mn>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            g
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            h
+           </mi>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O sistema descrito acima, integrado com o sensor piezoelétrico, constitui um conjunto de duas partículas isoladas, que interagem somente entre si. Assim como na energia, tem-se também que levar em consideração a conservação do momento linear, de acordo com a segunda Lei de Newton. Nesta perspectiva, Júnior et al. e Filho et al. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        26. D.P. Meira, J.K.S. Kamassury, R.C.S. Meira, Rev. Bras. Ensino Fís. 39, e4302 (2017).
+       </span>
+      </span>
+     </span>
+     ] caracterizaram que a tensão elétrica gerada é descrita segundo a relação
+    </p>
+    <div class="row formula" id="eS2_E4">
+     <a name="S2_E4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block">
+        <mrow>
+         <mrow>
+          <mi>
+           V
+          </mi>
+          <mo>
+           =
+          </mo>
+          <mrow>
+           <mi>
+            λ
+           </mi>
+           <mo>
+            ⁢
+           </mo>
+           <mi>
+            F
+           </mi>
+          </mrow>
+         </mrow>
+         <mo>
+          ,
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde λ é uma constante de proporcionalidade e F é a força aplicada no sensor devido à transferência de energia dada pela equação (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      2
+     </a>
+     ).
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Materiais e Métodos
+    </h1>
+    <p>
+     Nesta seção apresentam-se os materiais e os métodos utilizados para a realização do experimento: construção de um sismógrafo utilizando sensor piezoelétrico na plataforma Arduino. Para uma melhor dentificação dos materiais estes serão apresentados na forma de lista:
+    </p>
+    <ol type="1">
+     <li>
+      i.
+      <p>
+       Arduino UNO R3;
+      </p>
+     </li>
+     <li>
+      ii.
+      <p>
+       Sensor piezoelétrico;
+      </p>
+     </li>
+     <li>
+      iii.
+      <p>
+       Resistores (330 Ω e 1 MΩ);
+      </p>
+     </li>
+     <li>
+      iv.
+      <p>
+       LEDs;
+      </p>
+     </li>
+     <li>
+      v.
+      <p>
+       Bola de Gude
+       <span class="ref footnote">
+        <sup class="xref">
+         2
+        </sup>
+        <span class="refCtt closed">
+         <span class="refCttPadding">
+          <strong class="fn-title">
+           2
+          </strong>
+          Durante o artigo, utiliza-se a expressão esfera para denotar a bola de gude.
+         </span>
+        </span>
+       </span>
+       ;
+      </p>
+     </li>
+     <li>
+      vi.
+      <p>
+       Osciloscópio.
+      </p>
+     </li>
+    </ol>
+    <h2>
+     3.1. Arduino UNO e sensor piezoelétrico
+    </h2>
+    <p>
+     Alguns materiais dispensam apresentações pois são de ampla aplicabilidade, como resistores, osciloscópio e computador. No entanto, tanto o Arduino UNO quanto o sensor piezoelétrico necessita que suas principais características sejam expostas. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      4
+     </a>
+     ilustra estes dois elementos.
+    </p>
+    <div class="row fig" id="S3_F4">
+     <a name="S3_F4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F4" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/b44b1be0c89b182cfddfd17552b8f4a039ca7e9e.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      (a)
+      <i>
+       Hardware
+      </i>
+      Arduino UNO R3, modelo utilizado no experimento enquanto em (b) o sensor piezoelétrico, imagem frontal e posterior.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Arduino é um
+     <i>
+      hardware
+     </i>
+     simples e de código aberto para novos desenvolvimentos, capaz de ler diferentes entradas (analógica e/ou digital) e, mediante uma programação prévia, controlar um ou mais atuadores (motor, LED, etc.) A sua linguagem de programação é baseada em
+     <i>
+      Wiring
+     </i>
+     enquanto o
+     <i>
+      software
+     </i>
+     (IDE) é baseado em
+     <i>
+      Processing
+     </i>
+     . Composto por um microcontrolador e periféricos que potencializam suas funções, controlando vários dispositivos, isto o torna apto para ser aplicado em instrumentação embarcada e robótica [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     O sonorizador piezoelétrico é uma pequena placa que vibra produzindo som, desde que uma corrente elétrica esteja passando por ela. Um material piezoelétrico reage a uma passagem de corrente pela vibração. Seu funcionamento é semelhante ao do
+     <i>
+      buzzer
+     </i>
+     (sonoro). Entretanto, este último é um pouco mais robusto e possui uma proteção, em geral plástica, que também serve como meio para controlar a propagação do som.
+    </p>
+    <p>
+     Os sonorizadores e os
+     <i>
+      buzzers
+     </i>
+     – ambos polarizados – são muito utilizados em dispositivos de sinalização como alarmes e buzinas. Isso quer dizer que eles possuem um terminal positivo e um terminal negativo que devem ser conectados de maneira adequada no circuito. Em resumo,
+     <i>
+      buzzer
+     </i>
+     é um elemento que internamente possui um material piezoelétrico que pode, ao ser submetido por um sinal elétrico pulsado, emitir som. Ele é capaz de reproduzir sons numa faixa de frequência que vai de 2–4 kHz, aproximadamente. Um dispositivo que emite sons pode ser utilizado de formas diferentes em seus projetos (por exemplo, ele funciona como um alarme ou até como um pequeno alto-falante que reproduz notas musicais).
+    </p>
+    <h2>
+     3.2. Descrição Experimental
+    </h2>
+    <p>
+     O objetivo deste artigo é apresentar aos docentes e discentes, principalmente aqueles do E.M., um experimento capaz de emular um terremoto. Utiliza-se uma esfera de aproximadamente 10 g como objeto gerador do tremor. Associa-se a distância horizontal (
+     <i>
+      l
+     </i>
+     ) do sensor como o epicentro do terremoto e a altura (
+     <i>
+      h
+     </i>
+     ) está relacionado com a intensidade do tremor. Dessa forma, espera-se que quanto mais próximo do epicentro e maior a energia, maior será a intensidade do sinal, assim como um sismógrafo convencional.
+    </p>
+    <p>
+     Segundo o sismólogo João Willy Corrêa Rosa, pesquisador da Universidade de Brasília, um fator importante na intensidade sentida está relacionado com a composição do solo. Se o tremor ocorrer sobre uma rocha dura, tende a tremer menos do que sobre um terreno arenoso ou argiloso. Segundo o pesquisador, a lâmina do solo funciona como uma lente amplificando o movimento do terremoto [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       9
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        9. F.P.C. Souza, E. Schler e A.A. Susin, em: IX Salão de Iniciação Científica – 1997. (Porto Alegre, 1997).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       10
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        10. L.J. Medeiros, Hidrofone ultrassônico com piezoeletreto como elemento transdutor. Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       11
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        11. E.T.F. Dias, Mapeamento de ambientes utilizando sonares e problemas inversos. Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Dessa maneira, propõe-se que o experimento descrito neste trabalho ocorra em duas superfícies diferentes (madeira e granito), constituindo duas etapas de análise, a saber: etapa (1): medições na superfície de madeira; etapa (2): medições na superfície de granito. Desse modo, pode-se verificar se a propagação do sinal depende do material, já que ambos possuem propriedades mecânicas bem distintas [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        12. A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade 11, 63 (2019).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        13. L.F.S.S. Ferreira, Sistema de geração de energia via sensores piezoelétricos. Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).
+       </span>
+      </span>
+     </span>
+     ].
+    </p>
+    <p>
+     Cada etapa do ensaio constituiu de deixar a esfera cair de três alturas diferentes (
+     <i>
+      h
+     </i>
+     <sub>
+      1
+     </sub>
+     = 20 cm;
+     <i>
+      h
+     </i>
+     <sub>
+      2
+     </sub>
+     = 40 cm e
+     <i>
+      h
+     </i>
+     <sub>
+      3
+     </sub>
+     = 60 cm) para quatro distâncias horizontais distintas (l
+     <sub>
+      1
+     </sub>
+     = 10 cm; l
+     <sub>
+      2
+     </sub>
+     = 20 cm; l
+     <sub>
+      3
+     </sub>
+     = 40 cm e l
+     <sub>
+      4
+     </sub>
+     = 60 cm), sendo repetidos quatro vezes as medições – para cada altura e distância – de modo a verificar a acurácia dos dados. Em todos os experimentos a esfera não foi deixada cair sobre o sensor e, sim, a uma distância deste como apresentado na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     .
+    </p>
+    <div class="row fig" id="S3_F5">
+     <a name="S3_F5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/495b206be6d150dd15be8b1f55e4b19c2b9e4d46.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Esquema que descreve a posição vertical do objeto e suas respectivas posições horizontais. Adicionalmente é mostrado o
+      <i>
+       software
+      </i>
+      Arduino acoplado a um PC juntamente com o sensor piezoelétrico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Uma vez definidos os parâmetros experimentais, prossegue-se para a montagem dos componentes e suas ligações no Arduino e computador. A descrição e comentários do
+     <i>
+      firmware
+     </i>
+     inserido no Arduino estão expostos no Apêndice. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      6
+     </a>
+     ilustra o esquema elétrico da montagem utilizada no ensaio.
+    </p>
+    <div class="row fig" id="S3_F6">
+     <a name="S3_F6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS3_F6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/62dbe20067d14ef9e5b74ad1d6298c899410555c.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Montagem experimental do experimento envolvendo o Arduino, sensor piezoelétrico, resistores, LEDs e cabos.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A partir da execução do experimento, em suas respectivas etapas, os resultados corroboraram com as hipóteses levantadas, conforme explícito na próxima seção.
+    </p>
+    <h1 class="articleSectionTitle">
+     4. Resultados e Discussão
+    </h1>
+    <p>
+     Segundo Júnior et al. e Filho et al. [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       25
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        25. J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís. 41, e20180219 (2018).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       26
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        26. D.P. Meira, J.K.S. Kamassury, R.C.S. Meira, Rev. Bras. Ensino Fís. 39, e4302 (2017).
+       </span>
+      </span>
+     </span>
+     ], a Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ) descreve uma relação linear entre a diferença de potencial e a força aplicada (dada pela Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     )). A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      7
+     </a>
+     mostra um gráfico da diferença de potência gerada em relação à força aplicada (gravitacional). Portanto, é possível observar a concordância dos dados com o modelo descrito pela Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      4
+     </a>
+     ) com
+     <i>
+      λ
+     </i>
+     = 6,40 ± 0,19.
+    </p>
+    <div class="row fig" id="S4_F7">
+     <a name="S4_F7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F7" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/2df9118f9842a60a266ca5127fb0090b8e5a61ab.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Figura referente à Eq. (
+      <a class="open-asset-modal" data-target="#ModalSchemeS2_E4" data-toggle="modal" href="">
+       <span class="sci-ico-fileFormula">
+       </span>
+       4
+      </a>
+      ), mostrando a relação linear entre a diferença de potencial gerada com a força aplicada.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Uma vez demonstrada a relação de transferência de energia mecânica para energia elétrica, coloca-se em prática nosso modelo de sismógrafo como descrito na seção material e métodos. Inicialmente utilizou-se um osciloscópio para aferir a diferença de potencial, pois é um instrumento mais sensível e serve de base comparativa para com os resultados medidos pelo Arduino.
+    </p>
+    <p>
+     Na Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     tem-se os resultados obtidos para o modelo de sismógrafo aferido por um osciloscópio – na etapa 1 (madeira) – sendo em (
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     a) exibidos os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto na (
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     b) são mostrados os valores máximos para os respectivos
+     <i>
+      L
+     </i>
+     ’s e
+     <i>
+      h
+     </i>
+     ’s.
+    </p>
+    <div class="row fig" id="S4_F8">
+     <a name="S4_F8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9aec312c0afd5c5fefbf0ac393758efeb34afc04.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Resultados obtidos para o modelo de sismógrafo aferido por um osciloscópio, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para
+      <i>
+       L
+      </i>
+      ’s e
+      <i>
+       h
+      </i>
+      ’s diferentes.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Durante a execução do experimento – em suas duas etapas – foi impossível manter a padronização do sinal devido a exigência de repetibilidade do movimento de descida das esferas (idênticos) e da flexibilidade de movimentos da esfera (em termos de reverberação do sinal e de quicar do material). No entanto, para efeito de comparação, tomou-se sempre a média entre o primeiro e o segundo sinal. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     a mostra estes resultados comparando os
+     <i>
+      h
+     </i>
+     ’s dentro de um mesmo L e, consequentemente, entre diferentes L’s.
+    </p>
+    <p>
+     É possível observar que a escala do osciloscópio é modificada da primeira medida para a última, L = 10 e 60 cm, respectivamente, evidenciando o aumento do sinal conforme a esfera é deixada cair mais próxima do sensor piezoelétrico. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      8
+     </a>
+     b apresenta os valores máximos em função da energia (altura h), segundo a Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ). O sinal obtido corrobora com o senso comum, de que quanto mais distante do sensor piezoelétrico, epicentro, menor o sinal obtido e, quanto maior a energia do tremor (maior altura –
+     <i>
+      h
+     </i>
+     ), maior o sinal registrado.
+    </p>
+    <p>
+     Os resultados apresentados anteriormente são promissores para o ensino, tanto da física envolvida em um terremoto quanto para o estudo da conservação na energia. No entanto, o osciloscópio não é um instrumento comum nas instituições de ensino básico em razão, por exemplo, de seu custo elevado. Uma alternativa para substituir o osciloscópio, em termos de aquisição e apresentação dos dados, está na utilização do Arduino conectado ao computador.
+    </p>
+    <p>
+     Além de aprofundar nos conhecimentos de física, é possível trabalhar com os discentes conceitos matemáticos e de tecnologias, pois é necessário utilizar informações de lógica e programação para que o Arduino possa aferir o sinal que é enviado a suas entradas analógicas e saídas digitais. A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     mostra, na etapa (1), estes resultados obtidos por meio do Arduino para aferir o sinal da vibração do toque da esfera com a mesa de madeira.
+    </p>
+    <div class="row fig" id="S4_F9">
+     <a name="S4_F9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/9defb45a89f6ad9ad4a1bcbdf49683958f687bf1.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de madeira, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para
+      <i>
+       L
+      </i>
+      ’s e
+      <i>
+       h
+      </i>
+      ’s diferentes.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A Figura (
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     a) mostra estes resultados comparando os
+     <i>
+      h
+     </i>
+     ’s dentro de um mesmo L e, consequentemente, entre diferentes L’s. A escala horizontal foi mantida fixa para uma fácil comparação, tornando nítido que quanto mais distante da fonte geradora do tremor e quanto menor a energia, menor será o sinal captado pelo sensor piezoelétrico. A Figura (
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     b) apresenta os valores máximos em função da energia (altura
+     <i>
+      h
+     </i>
+     ), segundo a Eq. (
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     ). O sinal obtido também corrobora com o senso comum, de que quanto mais distante do sensor piezoelétrico menor o sinal obtido e, quanto maior a energia do tremor, maior o sinal registrado.
+    </p>
+    <p>
+     Os resultados da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     foram obtidos por processos análogos aos realizados para a aferição no osciloscópio. As curvas da Figura (
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     a) exprimem a média das medidas, bem como o desvio padrão obtido, sendo este último sinalizado por uma barra vertical inserida em cada ponto da curva. Observa-se na Figura (
+     <a class="open-asset-modal" data-target="#ModalFigS4_F9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      9
+     </a>
+     b) o valor máximo de cada curva (quadruplicada), o valor médio e o respectivo desvio padrão. Assim como os resultados apresentados para o osciloscópio estes também obedeceram a Eq.
+     <a class="open-asset-modal" data-target="#ModalSchemeS2_E1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      1
+     </a>
+     e corroboram com as noções do senso comum sobre a natureza dos terremotos.
+    </p>
+    <p>
+     Embora seja possível construir o sismógrafo utilizando o osciloscópio para aferir o “abalo sísmico”, os resultados indicam que a utilização do Arduino é mais do que suficiente para estudar a física envolvida em um terremoto. Embora o Arduino exija conhecimento de programação, o processo de configuração de um osciloscópio não é trivial para um leigo. Além do mais, é possível aproveitar a mesma programação do Arduino em outros projetos.
+    </p>
+    <p>
+     Com vistas a consolidar a ideia de que o movimento/força do terremoto está intrinsecamente relacionado com o tipo de constituição do solo ao qual ele se propaga, a etapa (2) do experimento foi executada (somente para a captação das medidas pelo Arduino). A Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     exibe as medições aferidas.
+    </p>
+    <div class="row fig" id="S4_F10">
+     <a name="S4_F10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/TsxXdsWxbXmTmWSpvFKMTGF/4305d4dd59e51668eaa5e13a6634d991c4959410.jpg"/>
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Resultados obtidos para o modelo de sismógrafo aferido por pelo Arduino, sob uma superfície de Granito, em (a) são apresentados os gráficos para as distâncias L = 60, 40, 20 e 10 cm para três alturas diferentes h = 60, 40 e 20 cm; enquanto em (b) são mostrados os valores máximos para
+      <i>
+       L
+      </i>
+      ’s e
+      <i>
+       h
+      </i>
+      ’s diferentes.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os resultados da Figura
+     <a class="open-asset-modal" data-target="#ModalFigS4_F10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      10
+     </a>
+     evidenciam que o sinal obtido na superfície de granito apresentou um valor até 4x maior do que aqueles encontrados na superfície de madeira. O lado negativo é que não foi possível observar a relação de epicentro e intensidade neste ensaio. No entanto, é possível confirmar a relação apresentada por João Willy Corrêa Rosa, que a lâmina do solo funciona como uma lente amplificando o movimento do terremoto.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Conclusão
+    </h1>
+    <p>
+     Terremoto é um fenômeno natural inerente ao nosso planeta, não dependente da interferência humana. Sua grandiosidade é capaz tanto de impressionar por sua magnitude quanto de assustar pelo caos que pode causar. Aguçar a curiosidade do aluno é uma ótima estratégia para instigar sua procura pelo conhecimento.
+    </p>
+    <p>
+     O propósito deste trabalho é apresentar um sistema capaz de estudar a física dos terremotos além de conceitos como conservação e transferência de energia utilizando Arduino. Para isto utilizou-se uma esfera que foi deixada cair de alturas e de distâncias diferentes. O experimento foi realizado em duas superfícies, madeira e granito, os resultados demonstram a influência do solo na propagação de energia, similar ao observado na literatura. O uso posterior deste experimento pode ser uma ferramenta valiosa para estabelecer bases de estudo em salas de aula, agregando o microcontrolador Arduino e seus periféricos como um minilaboratório de física devido sua ampla variedade de aplicações.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     References
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        1.
+       </sup>
+       <div>
+        R. Sousa,
+        <i>
+         A Relação Do Homem Com A Natureza
+        </i>
+        , disponível em: https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm
+        <br/>
+        <a href="https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm" target="_blank">
+         » https://educador.brasilescola.uol.com.br/estrategias-ensino/a-relacao-homem-com-natureza.htm
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        2.
+       </sup>
+       <div>
+        MINISTÉRIO DA EDUCAÇÃO, Relatório Brasil no PISA 2018, Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira, Brasília (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        3.
+       </sup>
+       <div>
+        MINISTÉRIO DA EDUCAÇÃO,
+        <i>
+         Base Nacional Comum Curricular – Ensino Médio
+        </i>
+        , 17 de maio de 2021. Brasília, 2018. Disponível em: http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf
+        <br/>
+        <a href="http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf" target="_blank">
+         » http://basenacionalcomum.mec.gov.br/images/historico/BNCC_EnsinoMedio_embaixa_site_110518.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        4.
+       </sup>
+       <div>
+        GOVERNO DO ESTADO DE SÃO PAULO,
+        <i>
+         Currículo Paulista: etapa ensino médio 2020
+        </i>
+        , 12 de junho de 2020. São Paulo, 2020. Disponível em:https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf
+        <br/>
+        <a href="https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf" target="_blank">
+         » https://efape.educacao.sp.gov.br/curriculopaulista/wp-content/uploads/2020/08/CURR%C3%8DCULO%20PAULISTA%20etapa%20Ensino%20M%C3%A9dio.pdf
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        5.
+       </sup>
+       <div>
+        B. Zaarour, L. Zhu, C. Huang, X. Jin, H. Alghafari, J. Fang and T. Lin., J Ind Text
+        <b>
+         51
+        </b>
+        , 297 (2021).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        6.
+       </sup>
+       <div>
+        H. Liu, J. Zhong, C. Lee, S.W. Lee and L. Lin, Applied Physics Reviews,
+        <b>
+         5
+        </b>
+        , 041306 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        7.
+       </sup>
+       <div>
+        A. Arnau and D. Soares, em:
+        <i>
+         Piezoelectric Transducers and Applications
+        </i>
+        , editado por A.A. Vives (Springer, Berlin 2008).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        8.
+       </sup>
+       <div>
+        S. Mishra, L. Unnikrishnan, S.K. Nayak and S. Mohanty, Macromol Mater Eng
+        <b>
+         304
+        </b>
+        , 1800463 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        9.
+       </sup>
+       <div>
+        F.P.C. Souza, E. Schler e A.A. Susin, em:
+        <i>
+         IX Salão de Iniciação Científica – 1997
+        </i>
+        (Porto Alegre, 1997).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        10.
+       </sup>
+       <div>
+        L.J. Medeiros,
+        <i>
+         Hidrofone ultrassônico com piezoeletreto como elemento transdutor
+        </i>
+        Tese de Doutorado, Universidade de São Paulo, São Carlos (2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        11.
+       </sup>
+       <div>
+        E.T.F. Dias,
+        <i>
+         Mapeamento de ambientes utilizando sonares e problemas inversos
+        </i>
+        Dissertação de Mestrado, Universidade Tecnológica Federal do Paraná, Curitiba (2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        12.
+       </sup>
+       <div>
+        A.C.C. Massone, S.O. Reis e F.M. Viola, Conhecimento &amp; Diversidade
+        <b>
+         11
+        </b>
+        , 63 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        13.
+       </sup>
+       <div>
+        L.F.S.S. Ferreira,
+        <i>
+         Sistema de geração de energia via sensores piezoelétricos
+        </i>
+        Trabalho de Conclusão de Curso, Centro Universitário de Brasília, Brasília (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        14.
+       </sup>
+       <div>
+        J.P. Polizzi, B. Fain e F. Maspero, em:
+        <i>
+         Handbook of Silicon Based MEMS Materials and Technologies (Third Edition)
+        </i>
+        , editado por M. Tilli, M. Paulasto-Krockel, M. Petzold, H. Theuss, T. Motooka e V. Lindroos (Elsevier, Amsterdã, 2020), p. 879.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        15.
+       </sup>
+       <div>
+        S. Azmi, S.M.H. Varkiani, M. Latifi e R. Bagherzadeh, J Ind Text, 10.1177/1528083720928822 (2020).
+        <br/>
+        <a href="https://doi.org/10.1177/1528083720928822" target="_blank">
+         » https://doi.org/10.1177/1528083720928822
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        16.
+       </sup>
+       <div>
+        M.R. Sarker, S. Julai, M.F.M. Sabri, S.M. Said, M.M. Islam e M. Tahir, Sensors and Actuators A: Physical
+        <b>
+         300
+        </b>
+        , 111634 (2019).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        17.
+       </sup>
+       <div>
+        A. Saraò, M. Clocchiatti, C. Barnaba e D. Zuliani, Seismol. Res. Lett.
+        <b>
+         87
+        </b>
+        , 186 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        18.
+       </sup>
+       <div>
+        K. Van Wijk, T. Channel, K. Viskupic e M.L. Smith, Phys. Teach.
+        <b>
+         51
+        </b>
+        , 552 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        19.
+       </sup>
+       <div>
+        N. Sezer e M. Koç, Nano Energy
+        <b>
+         80
+        </b>
+        , 105567 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        20.
+       </sup>
+       <div>
+        P. Carneiro, M.P.S. Santos, A. Rodrigues, J.A.F. Ferreira, J.A.O. Simões, A.T. Marques e A.L. Kholkin, Applied Energy
+        <b>
+         260
+        </b>
+        , 114191 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        21.
+       </sup>
+       <div>
+        A. Nozariasbmarz, H. Collins, K. Dsouza, M.H. Polash, M. Hosseini, M. Hyland, J. Liu, A. Malhotra, F.M. Ortiz, F. Mohaddes et al., Applied Energy
+        <b>
+         258
+        </b>
+        , 114069 (2020).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        22.
+       </sup>
+       <div>
+        X. Yue, M. Kauer, M. Bellanger, O. Beard, M. Brownlow, D. Gibson, C. Clark, C. MacGregor e S. Song, IEEE Internet Things J.
+        <b>
+         4
+        </b>
+        , 2092 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        23.
+       </sup>
+       <div>
+        N. Makki, R. Pop-Iliev, em:
+        <i>
+         SPIE Smart Structures and Materials + Nondestructive Evaluation and Health Monitoring
+        </i>
+        (San Diego, 2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        24.
+       </sup>
+       <div>
+        E. Rosenthal, Partying helps power a dutch nightclub, New York Times, Nova Iorque, 23 de outubro de 2008.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        25.
+       </sup>
+       <div>
+        J.F. Nascimento Júnior, V.E.S. Borges e R.M.M.F. Nascimento, Rev. Bras. Ensino Fís.
+        <b>
+         41
+        </b>
+        , e20180219 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        26.
+       </sup>
+       <div>
+        D.P. Meira, J.K.S. Kamassury, R.C.S. Meira, Rev. Bras. Ensino Fís.
+        <b>
+         39
+        </b>
+        , e4302 (2017).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Abaixo de 1b: sem especificação de habilidades a serem contempladas; 1b: associação mínima e básica entre os conhecimentos científicos e os fenômenos físicos e 1a: entendimento de frases curtas e passagens de texto.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Durante o artigo, utiliza-se a expressão esfera para denotar a bola de gude.
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        17 Set 2021
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        27 Jul 2021
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        02 Ago 2021
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        04 Ago 2021
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 deed.en" src="https://licensebuttons.net/l/by/4.0/deed.en/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank" title="">
+        This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

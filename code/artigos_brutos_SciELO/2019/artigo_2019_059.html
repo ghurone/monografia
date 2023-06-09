@@ -1,0 +1,3431 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Pesquisa em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 41 
+                (3)
+   <span class="_separator">
+    •
+   </span>
+   2019
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/1806-9126-RBEF-2018-0219" target="_blank">
+    https://doi.org/10.1590/1806-9126-RBEF-2018-0219
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/1806-9126-RBEF-2018-0219">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0 " data-toggle="tooltip">
+  </span>
+  Descrição temporal de forças de colisão: um modelo didático para laboratório de física assistido por sistema embarcado
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Temporal description of colision forces: a didactic model for physics laboratory aided by embedded system
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     João F. Nascimento Júnior
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    IPOG - Instituto de Pós-Graduação e Graduação, Departamento de Engenharia Civil, Goiânia, GO, Brasil
+    <div class="corresp">
+     <sup>
+      *
+     </sup>
+     Endereço de correspondência:
+     <a href="mailto:joao.felipe@ipog.edu.br">
+      joao.felipe@ipog.edu.br
+     </a>
+     .
+    </div>
+    <a class="btnContribLinks orcid" href="http://orcid.org/0000-0001-5033-9393">
+     http://orcid.org/0000-0001-5033-9393
+    </a>
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Vanessa E. S. Borges
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    IPOG - Instituto de Pós-Graduação e Graduação, Departamento de Engenharia Civil, Goiânia, GO, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Raphael M. M. F. Nascimento
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Federal de Goiás, IPTSP, Goiânia, GO, Brasil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumo">
+    <h1 class="articleSectionTitle">
+     Resumo
+    </h1>
+    <p>
+     Nesse trabalho é modelado um experimento para laboratório de física para descrever temporalmente a força de colisão em uma bola. O modelo emprega um sensor piezoelétrico, um singelo circuito programável (
+     <i>
+      Arduino
+     </i>
+     ) ligado a um computador e um suporte para a liberação da bola em queda livre. Um programa em linguagem
+     <i>
+      C
+     </i>
+     foi confeccionado para ler o sinal do sensor e calcular a intensidade da força, bem como para calibrar o sistema. O algoritmo do processamento, empregando as leis da física, é apresentado, assim como o código-fonte. Após a colisão o sistema fornece uma tabela
+     <i>
+      força x tempo
+     </i>
+     com resolução de 120
+     <i>
+      μ
+     </i>
+     s, permitindo o aluno elaborar o gráfico da força ou fazer análise numérica, comprovando as leis da conservação do momento e da energia. Testes de desempenho são discutidos, mostrando que o modelo fornece uma exatidão muito boa, validando assim o método de calibragem. De baixo custo e montagem simples esse sistema embarcado, ou seja, controlado por programa, permite uma exploração minuciosa da força durante a colisão. Pode também ser estendido a outros fenômenos da física, bastando trocar o sensor e ajustar o programa.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     força; colisão; sistema embarcado; Arduino; laboratório de física
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Abstract">
+    <h1 class="articleSectionTitle">
+     Abstract
+    </h1>
+    <p>
+     In this study is modelled an experiment for physics laboratory to describe the temporal force in a ball collision. The model employs a piezoeletric sensor, a modest programable circuit (
+     <i>
+      Arduino
+     </i>
+     ) connected to a computer and a vertical support to release the ball in free fall. A C-language program was created to read the sensor signal and calculate the force intensity as well as to calibrate the system. The processing algorithm employing the physical laws is presented as the source-code. After the collision a 120
+     <i>
+      μ
+     </i>
+     s resolution
+     <i>
+      force x time
+     </i>
+     table is provided, allowing the student to plot the graphic of force or to do numeric analisys, verifying the momentum and energy conservation laws. Performance tests are discussed showing that the model offers very good accuracy, thus validating the calibration method. At low cost and simple assembly, this embedded system, that is, program-controlled, allows a detailed exploration of force during the colision. As well it can be extended to another phisics effects, merely changing the sensor and ajusting the program.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     force; colision; embedded system; Arduino; phisics laboratory
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     O estudo de colisões é um tema clássico em experimentos de física. Nesse fenômeno a força de interação começa do zero, atinge um valor máximo e cai a zero novamente. Estudos podem ser concebidos mediante teoria de oscilações e conservação do momento e energia a fim de identificar a forma temporal da força [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] M.P. Norton e D.G. Karczub, Fundamentals of Noyse and Vibrations Analysis for Engineers (Cambridge University Press, Cambridge, 2003).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] D. Halliday, R. Resnick eý J. Walker, Fundamentos de Física (LTC, Rio de Janeiro, 2014), 9ª ed.
+       </span>
+      </span>
+     </span>
+     ],
+     <i>
+      F(t)
+     </i>
+     . Essa curva pode ser mapeada em laboratório mediante um sensor piezoelétrico, que gera um sinal elétrico quando pressionado, e uma placa
+     <i>
+      Arduino
+     </i>
+     <span class="ref footnote">
+      <sup class="xref">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Nome dado ao dispositivo
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] https://www.arduino.cc, acessado em dez. 2017.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc" target="_blank">
+        https://www.arduino.cc...
+       </a>
+      </span>
+     </span>
+     , um modesto módulo eletrônico de fácil programação. Ambos baratos e facilmente encontrados no mercado.
+    </p>
+    <p>
+     Ligado a um computador via cabo
+     <i>
+      USB
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [4]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [4] M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ensino Fís. 33, 4503 (2011).
+       </span>
+      </span>
+     </span>
+     o
+     <i>
+      Arduino
+     </i>
+     , programado em linguagem Wiring (semelhante à linguagem
+     <i>
+      C++)
+     </i>
+     , permite interação com o operador do experimento mediante uma janela de console. Ali são solicitados dados como massa da bola, altura da queda, entre outros, bem como mostra resultados. Uma rotina de calibragem calcula a constante de proporcionalidade entre o sinal elétrico e a força aplicada, gravando o parâmetro na memória
+     <i>
+      EEPROM
+     </i>
+     <span class="ref footnote">
+      <sup class="xref">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Nome dado ao dispositivo
+       </span>
+      </span>
+     </span>
+     do módulo e ali permanecendo mesmo com o sistema desligado. A listagem gerada permite o aluno elaborar o gráfico da força assim como comprovar as leis da mecânica clássica. A seguir serão abordados os requisitos para a compreensão desse trabalho
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Teoria da conservação da energia e momento linear
+    </h1>
+    <p>
+     A energia mecânica
+     <i>
+      E
+      <sub>
+       m
+      </sub>
+     </i>
+     em um sistema compreende a energia cinética
+     <i>
+      K
+     </i>
+     e a energia potencial
+     <i>
+      U
+     </i>
+     , ou seja,
+    </p>
+    <div class="row formula" id="eeq1">
+     <a name="eq1">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (1)
+       </span>
+       <math display="block" id="m1">
+        <msub>
+         <mi>
+          E
+         </mi>
+         <mi>
+          m
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         K
+        </mi>
+        <mo>
+         +
+        </mo>
+        <mi>
+         U
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+    </p>
+    <div class="row formula" id="eeq2">
+     <a name="eq2">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (2)
+       </span>
+       <math display="block" id="m2">
+        <mi>
+         K
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mi>
+           m
+          </mi>
+          <msup>
+           <mi>
+            v
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msup>
+         </mrow>
+         <mn>
+          2
+         </mn>
+        </mfrac>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mi>
+         e
+        </mi>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mtext>
+        </mtext>
+        <mi>
+         U
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         m
+        </mi>
+        <mi>
+         g
+        </mi>
+        <mi>
+         h
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Em queda livre
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [5]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [5] V.R. Coluci, G. Paulino, D.C. Souza e E.P.R. Vasconcelos, Rev. Bras. Ensino Fís. 35, 1 (2013).
+       </span>
+      </span>
+     </span>
+     sua energia potencial gravitacional se converte em cinética. Assim, igualando as
+     <a class="open-asset-modal" data-target="#ModalSchemeeq2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (2)
+     </a>
+     e desprezando as forças dissipativas no ar tem-se
+    </p>
+    <div class="row formula" id="eeq3">
+     <a name="eq3">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (3)
+       </span>
+       <math display="block" id="m3">
+        <mi>
+         v
+        </mi>
+        <mo>
+         =
+        </mo>
+        <msqrt>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           g
+          </mi>
+          <mi>
+           h
+          </mi>
+         </mrow>
+        </msqrt>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     e o momento linear
+     <math>
+      <mi>
+       p
+      </mi>
+      <mo>
+       =
+      </mo>
+      <mi>
+       m
+      </mi>
+      <mi>
+       v
+      </mi>
+     </math>
+     passa a ser
+    </p>
+    <div class="row formula" id="eeq4">
+     <a name="eq4">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (4)
+       </span>
+       <math display="block" id="m4">
+        <mi>
+         p
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         m
+        </mi>
+        <msqrt>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           g
+          </mi>
+          <mi>
+           h
+          </mi>
+         </mrow>
+        </msqrt>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Durante a colisão a força de interação
+     <i>
+      F(t)
+     </i>
+     assume uma forma semelhante à exibida na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     . A bola desce de uma altura
+     <math>
+      <msub>
+       <mi>
+        h
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     e sobe até uma altura menor
+     <math>
+      <msub>
+       <mi>
+        h
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     , devido a dissipação de energia no choque.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Perfil aproximado da força de colisão. O detalhe mostra, para uma queda livre, as velocidades inicial e final durante impacto.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Nessa condição a bola recebe um impulso total
+     <i>
+      I
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] F.J. Arnold, A.G. Godeny, M.M. Costa, J.F. Viana e R.L. Ximenes, Rev. Bras. Ensino Fís. 40, e2502 (2018).
+       </span>
+      </span>
+     </span>
+     do solo, que equivale à variação da quantidade de movimento
+     <math>
+      <mi>
+       m
+      </mi>
+      <mi>
+       Δ
+      </mi>
+      <mi>
+       v
+      </mi>
+     </math>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] F.P. Beer, R.E. Johnston, D.F. Mazurek e E.R. Eisenberg, Mecânica Vetorial para Engenheiros (McGraw-Hill, São Paulo, 2001), 5ª ed.
+       </span>
+      </span>
+     </span>
+     , ou seja,
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mi>
+         I
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         m
+        </mi>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <msub>
+           <mi>
+            v
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msub>
+          <mo>
+           −
+          </mo>
+          <msub>
+           <mi>
+            v
+           </mi>
+           <mn>
+            1
+           </mn>
+          </msub>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Considerando
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     positivo e
+     <math>
+      <msub>
+       <mi>
+        v
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     negativo tem-se
+    </p>
+    <div class="row formula" id="eeq5">
+     <a name="eq5">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (5)
+       </span>
+       <math display="block" id="m5">
+        <mtable columnalign="left">
+         <mtr columnalign="left">
+          <mtd columnalign="left">
+           <mi>
+            I
+           </mi>
+          </mtd>
+          <mtd columnalign="left">
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mi>
+             m
+            </mi>
+            <mtext>
+            </mtext>
+            <mo stretchy="false">
+             (
+            </mo>
+            <msqrt>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               g
+              </mi>
+              <msub>
+               <mi>
+                h
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+             </mrow>
+            </msqrt>
+            <mo>
+             +
+            </mo>
+            <msqrt>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               g
+              </mi>
+              <msub>
+               <mi>
+                h
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+             </mrow>
+            </msqrt>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr columnalign="left">
+          <mtd columnalign="left">
+           <mi>
+            I
+           </mi>
+          </mtd>
+          <mtd columnalign="left">
+           <mo>
+            =
+           </mo>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mi>
+             m
+            </mi>
+            <mtext>
+            </mtext>
+            <msqrt>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               g
+              </mi>
+              <mtext>
+              </mtext>
+             </mrow>
+            </msqrt>
+            <mo stretchy="false">
+             (
+            </mo>
+            <msqrt>
+             <mrow>
+              <msub>
+               <mi>
+                h
+               </mi>
+               <mn>
+                2
+               </mn>
+              </msub>
+             </mrow>
+            </msqrt>
+            <mo>
+             +
+            </mo>
+            <msqrt>
+             <mrow>
+              <msub>
+               <mi>
+                h
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+             </mrow>
+            </msqrt>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     O coeficiente de restituição da bola
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [7]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [7] F.P. Beer, R.E. Johnston, D.F. Mazurek e E.R. Eisenberg, Mecânica Vetorial para Engenheiros (McGraw-Hill, São Paulo, 2001), 5ª ed.
+       </span>
+      </span>
+     </span>
+     é
+    </p>
+    <div class="row formula" id="eeq6">
+     <a name="eq6">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (6)
+       </span>
+       <math display="block" id="m6">
+        <mi>
+         e
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>
+            p
+           </mi>
+           <mn>
+            2
+           </mn>
+          </msub>
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>
+            p
+           </mi>
+           <mn>
+            1
+           </mn>
+          </msub>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <msub>
+       <mi>
+        p
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+     </math>
+     e
+     <math>
+      <msub>
+       <mi>
+        p
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     são respectivamente os momentos lineares da bola imediatamente antes e após o choque. Uma discussão mais detalhada sobre esse coeficiente pode ser vista em
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [8]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [8] D.P. Meira Filho, J.K.S. Kamassury e R.C.S. Meira, Rev. Bras. Ensino Fís. 39, e4302 (2017).
+       </span>
+      </span>
+     </span>
+     . Substituindo a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (4)
+     </a>
+     na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (6)
+     </a>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [6]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [6] F.J. Arnold, A.G. Godeny, M.M. Costa, J.F. Viana e R.L. Ximenes, Rev. Bras. Ensino Fís. 40, e2502 (2018).
+       </span>
+      </span>
+     </span>
+    </p>
+    <div class="row formula" id="eeq7">
+     <a name="eq7">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (7)
+       </span>
+       <math display="block" id="m7">
+        <mi>
+         e
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msqrt>
+           <mrow>
+            <msub>
+             <mi>
+              h
+             </mi>
+             <mn>
+              2
+             </mn>
+            </msub>
+           </mrow>
+          </msqrt>
+         </mrow>
+         <mrow>
+          <msqrt>
+           <mrow>
+            <msub>
+             <mi>
+              h
+             </mi>
+             <mn>
+              1
+             </mn>
+            </msub>
+           </mrow>
+          </msqrt>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalSchemeeq5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (5)
+     </a>
+     fica então
+    </p>
+    <div class="row formula" id="eeq8">
+     <a name="eq8">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (8)
+       </span>
+       <math display="block" id="m8">
+        <mtable columnalign="left">
+         <mtr columnalign="left">
+          <mtd columnalign="left">
+           <mi>
+            I
+           </mi>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mo>
+             =
+            </mo>
+            <mi>
+             m
+            </mi>
+            <msqrt>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               g
+              </mi>
+             </mrow>
+            </msqrt>
+            <mtext>
+            </mtext>
+            <mo stretchy="false">
+             (
+            </mo>
+            <mi>
+             e
+            </mi>
+            <msqrt>
+             <mrow>
+              <msub>
+               <mi>
+                h
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+             </mrow>
+            </msqrt>
+            <mo>
+             +
+            </mo>
+            <msqrt>
+             <mrow>
+              <msub>
+               <mi>
+                h
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+             </mrow>
+            </msqrt>
+            <mo stretchy="false">
+             )
+            </mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr columnalign="left">
+          <mtd columnalign="left">
+           <mrow>
+           </mrow>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mi>
+             I
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mi>
+             m
+            </mi>
+            <msqrt>
+             <mrow>
+              <mn>
+               2
+              </mn>
+              <mi>
+               g
+              </mi>
+              <msub>
+               <mi>
+                h
+               </mi>
+               <mn>
+                1
+               </mn>
+              </msub>
+             </mrow>
+            </msqrt>
+            <mrow>
+             <mo>
+              (
+             </mo>
+             <mrow>
+              <mn>
+               1
+              </mn>
+              <mo>
+               +
+              </mo>
+              <mi>
+               e
+              </mi>
+             </mrow>
+             <mo>
+              )
+             </mo>
+            </mrow>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Esse impulso corresponde à área do gráfico
+     <math>
+      <mi>
+       F
+      </mi>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mi>
+        t
+       </mi>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 1
+     </a>
+     , ou seja
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [9]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [9] J. Santos, B.P.W. Oliveira e O.R. Nelson, Rev. Bras. Ensino Fís. 34, 1 (2012).
+       </span>
+      </span>
+     </span>
+     ,
+    </p>
+    <div class="row formula" id="eeq9">
+     <a name="eq9">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (9)
+       </span>
+       <math display="block" id="m9">
+        <mi>
+         I
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mstyle displaystyle="true">
+         <mrow>
+          <mo>
+           ∫
+          </mo>
+          <mrow>
+           <mi>
+            F
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mi>
+             t
+            </mi>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mi>
+            d
+           </mi>
+           <mi>
+            t
+           </mi>
+          </mrow>
+         </mrow>
+        </mstyle>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Chamando essa área de
+     <math>
+      <msub>
+       <mi>
+        A
+       </mi>
+       <mi>
+        F
+       </mi>
+      </msub>
+     </math>
+     e fazendo uso da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (8)
+     </a>
+     , já nomeando
+     <math>
+      <msub>
+       <mi>
+        h
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+     </math>
+     de
+     <i>
+      h
+     </i>
+     tem-se
+    </p>
+    <div class="row formula" id="eeq10">
+     <a name="eq10">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (10)
+       </span>
+       <math display="block" id="m10">
+        <msub>
+         <mi>
+          A
+         </mi>
+         <mi>
+          F
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mi>
+         m
+        </mi>
+        <msqrt>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           g
+          </mi>
+          <mi>
+           h
+          </mi>
+         </mrow>
+        </msqrt>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           +
+          </mo>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Considerando uma bola caindo de alturas diferentes
+     <i>
+      m
+     </i>
+     passa a ser constante e
+     <i>
+      I
+     </i>
+     na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (8)
+     </a>
+     dependerá apenas da altura
+     <i>
+      h
+     </i>
+     . Portanto
+    </p>
+    <div class="row formula" id="eeq11">
+     <a name="eq11">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (11)
+       </span>
+       <math display="block" id="m11">
+        <mi>
+         I
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         α
+        </mi>
+        <msqrt>
+         <mi>
+          h
+         </mi>
+        </msqrt>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+    </p>
+    <div class="row formula" id="eeq12">
+     <a name="eq12">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (12)
+       </span>
+       <math display="block" id="m12">
+        <mi>
+         α
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         m
+        </mi>
+        <msqrt>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           g
+          </mi>
+         </mrow>
+        </msqrt>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           +
+          </mo>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     3. Sensor piezoelétrico
+    </h1>
+    <p>
+     Dentre os sensores de força o piezoelétrico figura entre os mais simples. Ele responde apenas a forças dinâmicas
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] A. Balbinot e V.J. Brusamarello, Instrumentação e Fundamentos de Medidas (LTC, Rio de Janeiro, 2011), 2ª ed.
+       </span>
+      </span>
+     </span>
+     . Mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 2
+     </a>
+     , na forma de pastilha
+     <span class="ref footnote">
+      <sup class="xref">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Nome dado ao dispositivo
+       </span>
+      </span>
+     </span>
+     , uma camada de cristal piezoelétrico é depositada na região central (branca) da lâmina. Essa região gera uma tensão elétrica quando pressionada.
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Sensor Piezoelétrico.
+      <br/>
+     </div>
+    </div>
+    <p>
+     A tensão elétrica gerada é proporcional à força aplicada
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [11]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [11] W. B. Lima, Transdutores de deformação à base de sensores piezoelétricos. Dissertação de Mestrado, Universidade Federal Fluminense, Rio de Janeiro (2013).
+       </span>
+      </span>
+     </span>
+     . Assim ela pode ser escrita como
+    </p>
+    <div class="row formula" id="eeq13">
+     <a name="eq13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (13)
+       </span>
+       <math display="block" id="m13">
+        <mi>
+         V
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         λ
+        </mi>
+        <mi>
+         F
+        </mi>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     é uma constante de proporcionalidade e
+     <i>
+      F
+     </i>
+     é a força aplicada no sensor.
+    </p>
+    <p>
+     Esse tipo de sensor não exige manutenção alguma, não requer fonte de alimentação e é sensível a deformações nanométricas. Responde rápido às deformações na sua rede cristalina, permitindo trabalhar com freqüências da ordem de dezenas de kHz.
+    </p>
+    <p>
+     Como praticamente não há atraso no sensor a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (13)
+     </a>
+     diz que os gráficos temporais de V e F são proporcionais. Quando a força atinge seu valor máximo a tensão gerada pelo cristal piezoelétrico também será máxima conforme ilustrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Perfis da força e da tensão elétrica gerada pelo sensor durante a colisão
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Plataforma Arduino
+    </h1>
+    <p>
+     <i>
+      Arduino
+     </i>
+     , licenciado pela
+     <i>
+      Ceative Commons
+     </i>
+     , é uma plataforma, de tecnologia aberta, para projetos eletrônicos de pequeno porte. É uma placa programável com um microcontrolador [
+     <span class="ref">
+      <sup class="xref xrefblue">
+       12
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [12] F. Pereira, Microcontroladores PIC. Programação em C (Érica, São Paulo, 2002).
+       </span>
+      </span>
+     </span>
+     ,
+     <span class="ref">
+      <sup class="xref xrefblue">
+       13
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [13] S. Silveira e M. Girardi, Rev. Bras. Ensino Fís. 39, e4502 (2017)
+       </span>
+      </span>
+     </span>
+     ] (
+     <i>
+      Atmega
+     </i>
+     ) e várias portas (canais) [14, 15 e 4] para comunicar com outros dispositivos. Sua estrutura pode ser vista na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 4
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Arduino. As portas de comunicação estão disponíveis na forma de orifícios nas laterais da placa.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os dados processados podem ser mostrados no seu console, na forma de uma janela na tela do computador. O diagrama da
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 5
+     </a>
+     ilustra as fases de programação e operação desse dispositivo. Para programá-lo basta conectá-lo ao computador via cabo
+     <i>
+      USB
+     </i>
+     e executar o ambiente de desenvolvimento
+     <i>
+      IDE
+     </i>
+     <span class="ref footnote">
+      <sup class="xref">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        Nome dado ao dispositivo
+       </span>
+      </span>
+     </span>
+     <i>
+      Arduino
+     </i>
+     , fornecido pelo próprio fabricante. Esse
+     <i>
+      IDE
+     </i>
+     emprega a linguagem
+     <i>
+      Wiring, baseada em C++
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [16]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [16] S. Holzner, Programando em C++: um guia prático para a programação profissional (Campus, Rio de Janeiro, 1993).
+       </span>
+      </span>
+     </span>
+     , e é disponível na Internet
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] https://www.arduino.cc, acessado em dez. 2017.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc" target="_blank">
+        https://www.arduino.cc...
+       </a>
+      </span>
+     </span>
+     . Após ser programado o
+     <i>
+      Arduino
+     </i>
+     pode ser levado ao local onde irá funcionar, necessitando apenas de alimentação elétrica.
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      (a) Durante a programação o programa é transferido para o Arduino via cabo USB. (b) Em operação os dados processados podem ser exibidos numa janela de console
+      <br/>
+     </div>
+    </div>
+    <p>
+     Quando um mecanismo é controlado por microcontrolador ele é dito
+     <i>
+      sistema embarcado
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] S. L. Stevan Junior e R.A. Silva, Automação e instrumentação industrial com Arduino: teoria e projetos (Érica, São Paulo, 2015).
+       </span>
+      </span>
+     </span>
+     . O módulo computacional é destinado a monitorar as propriedades do sistema bem como controlar seus mecanismos.
+    </p>
+    <h1 class="articleSectionTitle">
+     5. Montagem
+    </h1>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     ilustra o suporte usado para a queda da bola. Fabricado em metal, a barra horizontal possui altura ajustável, regulada conforme uma régua anexada à barra vertical. Vibrações na base, decorrentes da própria colisão, são transmitidas ao sensor
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [10]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [10] A. Balbinot e V.J. Brusamarello, Instrumentação e Fundamentos de Medidas (LTC, Rio de Janeiro, 2011), 2ª ed.
+       </span>
+      </span>
+     </span>
+     , deformando o sinal gerado. Nesse sentido a base deve ser rígida, de massa considerável e estar bem assentada em superfície plana. A base aqui empregada, uma chapa de ferro, possui massa de 1,822 kg e dimensões 8,2 cm x 14,9 cm x 1,9 cm.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Suporte para a queda da bola.
+      <br/>
+     </div>
+    </div>
+    <p>
+     O circuito elétrico está esquematizado na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 7
+     </a>
+     . A base do sensor é ligada à porta
+     <i>
+      GND
+     </i>
+     (terra) do
+     <i>
+      Arduino
+     </i>
+     e a região central é ligada à porta
+     <i>
+      A2
+     </i>
+     (porta analógica)
+     <span class="ref">
+      <sup class="xref xrefblue">
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [15] L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T. Dorneles, Rev. Bras. Ensino Fís. 38, e3503 (2016).
+       </span>
+      </span>
+     </span>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [14]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [14] S. L. Stevan Junior e R.A. Silva, Automação e instrumentação industrial com Arduino: teoria e projetos (Érica, São Paulo, 2015).
+       </span>
+      </span>
+     </span>
+     . Quando essa região é pressionada a tensão elétrica gerada é lida pela porta
+     <i>
+      A2
+     </i>
+     , que deve estar aterrada mediante um resistor
+     <i>
+      R,
+     </i>
+     conforme ilustra o circuito elétrico. Isso garante na porta uma tensão de referência
+     <i>
+      V
+     </i>
+     =0. Caso contrário irá manifestar valores arbitrários de leitura, mesmo sem nenhum sinal do sensor. Ao mesmo tempo esse resistor protege a porta de altas correntes, uma vez que ele atua como um divisor de corrente
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [17]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [17] R.C. Dorf e J.A. Svoboda, Circuitos Elétricos (LTC, Rio de Janeiro, 2008), 7ª ed.
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Circuito elétrico
+      <br/>
+     </div>
+    </div>
+    <p>
+     Percebeu-se, mediante análise em osciloscópio, que o valor de R afeta a intensidade do sinal. Essa relação matemática não foi investigada. Para o tipo de sensor aqui empregado encontrou-se boa resposta para
+     <math>
+      <mrow>
+       <mi>
+        R
+       </mi>
+       <mo>
+        =
+       </mo>
+       <mn>
+        10
+       </mn>
+       <mtext>
+       </mtext>
+       <mi>
+        k
+       </mi>
+       <mtext>
+        Ω
+       </mtext>
+      </mrow>
+     </math>
+     .
+    </p>
+    <h1 class="articleSectionTitle">
+     6. Calibragem
+    </h1>
+    <p>
+     Em funcionamento o sistema deve gerar uma tabela de forças a partir das tensões elétricas lidas pelo
+     <i>
+      Arduino
+     </i>
+     . A força é obtida pela
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (13)
+     </a>
+     , resultando assim em uma força para cada tensão. Esses dois conjuntos de dados, tensão e força, fornecem dois gráficos e duas áreas de integração, conforme mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 3
+     </a>
+     . Outrossim a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (13)
+     </a>
+     permite calcular a constante que relaciona força e tensão elétrica.
+    </p>
+    <div class="row formula" id="eeq14">
+     <a name="eq14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (14)
+       </span>
+       <math display="block" id="m14">
+        <mi>
+         λ
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <msub>
+           <mi>
+            A
+           </mi>
+           <mi>
+            V
+           </mi>
+          </msub>
+         </mrow>
+         <mrow>
+          <msub>
+           <mi>
+            A
+           </mi>
+           <mi>
+            F
+           </mi>
+          </msub>
+         </mrow>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <msub>
+       <mi>
+        A
+       </mi>
+       <mi>
+        V
+       </mi>
+      </msub>
+     </math>
+     é a área sob a curva no gráfico das tensões e
+     <i>
+      A
+      <sub>
+       F
+      </sub>
+     </i>
+     é a área sob a curva no gráfico das forças.
+    </p>
+    <p>
+     Calibrar o aparelho equivale a encontrar o valor de
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     . O cálculo dessa constante faz uso da
+     <a class="open-asset-modal" data-target="#ModalSchemeeq14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (14)
+     </a>
+     , onde a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     fornece um valor teórico para
+     <math>
+      <msub>
+       <mi>
+        A
+       </mi>
+       <mi>
+        F
+       </mi>
+      </msub>
+     </math>
+     . Quanto à área
+     <math>
+      <msub>
+       <mi>
+        A
+       </mi>
+       <mi>
+        V
+       </mi>
+      </msub>
+     </math>
+     ela pode ser obtida por integração numérica na tabela de tensões, ou seja,
+    </p>
+    <div class="row formula" id="eeq15">
+     <a name="eq15">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (15)
+       </span>
+       <math display="block" id="m15">
+        <msub>
+         <mi>
+          A
+         </mi>
+         <mi>
+          V
+         </mi>
+        </msub>
+        <mo>
+         =
+        </mo>
+        <mstyle displaystyle="true">
+         <munderover>
+          <mo>
+           ∑
+          </mo>
+          <mrow>
+           <mi>
+            i
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            0
+           </mn>
+          </mrow>
+          <mrow>
+           <mi>
+            n
+           </mi>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1
+           </mn>
+          </mrow>
+         </munderover>
+         <mrow>
+          <mi>
+           V
+          </mi>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <msub>
+             <mi>
+              t
+             </mi>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+          <mo>
+           .
+          </mo>
+          <mrow>
+           <mo>
+            (
+           </mo>
+           <mrow>
+            <msub>
+             <mi>
+              t
+             </mi>
+             <mrow>
+              <mi>
+               i
+              </mi>
+              <mo>
+               +
+              </mo>
+              <mn>
+               1
+              </mn>
+             </mrow>
+            </msub>
+            <mo>
+             −
+            </mo>
+            <msub>
+             <mi>
+              t
+             </mi>
+             <mi>
+              i
+             </mi>
+            </msub>
+           </mrow>
+           <mo>
+            )
+           </mo>
+          </mrow>
+         </mrow>
+        </mstyle>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Esses cálculos são realizados pelo
+     <i>
+      Arduino
+     </i>
+     . Portanto no processo de calibragem, segundo a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (10)
+     </a>
+     , é necessário, antes de soltar a bola, informar a massa
+     <i>
+      m
+     </i>
+     da bola, a altura
+     <i>
+      h
+     </i>
+     da queda e o coeficiente de restituição
+     <i>
+      e
+     </i>
+     da bola.
+    </p>
+    <p>
+     Uma vez conhecido
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     , a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (13)
+     </a>
+     converte o conjunto de tensões {V} no conjunto {F}de forças da seguinte forma
+    </p>
+    <div class="row formula" id="eeq16">
+     <a name="eq16">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (16)
+       </span>
+       <math display="block" id="m16">
+        <mrow>
+         <mo>
+          {
+         </mo>
+         <mi>
+          F
+         </mi>
+         <mo>
+          }
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mrow>
+           <mo>
+            {
+           </mo>
+           <mi>
+            V
+           </mi>
+           <mo>
+            }
+           </mo>
+          </mrow>
+         </mrow>
+         <mi>
+          λ
+         </mi>
+        </mfrac>
+       </math>
+      </div>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     7. Programação
+    </h1>
+    <p>
+     Os cálculos executados no programa estão diagramados no fluxograma da
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     . A cada calibragem a constante
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     é recalculada e gravada na memória
+     <i>
+      EEPROM
+     </i>
+     do
+     <i>
+      Arduino
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [3]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [3] https://www.arduino.cc, acessado em dez. 2017.
+       </span>
+       <br/>
+       <a href="https://www.arduino.cc" target="_blank">
+        https://www.arduino.cc...
+       </a>
+      </span>
+     </span>
+     , ali permanecendo, como já mencionado, mesmo após ele desligado. A partir daí, durante as execuções, o programa calcula a força de colisão mediante a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (13)
+     </a>
+     , buscando essa constante na memória. Vale comentar que essa memória possui uma vida útil de 100.000 gravações.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Fluxograma do programa no Arduino.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Um material suplementar disponível no final desse documento contém a listagem completa do programa desenvolvido. Nesse material a rotina que faz a leitura do sinal denomina-se
+     <i>
+      loop()
+     </i>
+     , começando na linha 64. Cuidado especial foi tomado no primeiro comando
+     <i>
+      for()
+     </i>
+     . O bloco desse comando rege a taxa de amostragem do sistema. Quanto menos comandos alí houver menor será o tempo entre duas leituras consecutivas. Nesse sentido há apenas duas linhas de comando: uma para ler a tensão e outra para registar o tempo.
+    </p>
+    <p>
+     A porta analógica do
+     <i>
+      Arduino
+     </i>
+     lê tensões de 0 a 5V numa escala de 0 a 1023. O bloco do segundo comando for faz a conversão da escala 0-1023 para a escala 0-5
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [12]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [12] F. Pereira, Microcontroladores PIC. Programação em C (Érica, São Paulo, 2002).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A rotina do programa que faz a calibragem, ou seja, calcula
+     <math>
+      <mi>
+       λ
+      </mi>
+     </math>
+     , denomina-se
+     <i>
+      calculaLambda()
+     </i>
+     e começa na linha 177. A chamada a essa rotina passa como parâmetros
+     <i>
+      m
+     </i>
+     ,
+     <i>
+      h
+     </i>
+     e
+     <i>
+      e
+     </i>
+     que são respsctivamente a massa da bola, a altura da queda e o coeficiente de restituição. As equações contempladas nesses cálculos são acompanhados pelo ramo esquerdo da
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 8
+     </a>
+     . A linha que calcula a variável
+     <i>
+      delta_t
+     </i>
+     divide cada tempo por 10
+     <sup>
+      6
+     </sup>
+     (linha 190), uma vez que eles são registrados em
+     <i>
+      μ
+     </i>
+     s.
+    </p>
+    <p>
+     Uma captura de tela do console, ilustrada na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 9
+     </a>
+     , mostra a interação com o usuário. Os dados solicitados ao operador são digitados no campo ao lado do botão
+     <i>
+      Enviar
+     </i>
+     , dessa forma, não aparecendo na imagem.
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Console a caractere do Arduino.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     8. Medição
+    </h1>
+    <p>
+     O trabalho executou 5 colisões para 8 alturas diferentes que são 4 cm, 5 cm, 6 cm, 7 cm, 8 cm, 9 cm, 10 cm e 11 cm. Em cada colisão a força foi medida a cada 120
+     <i>
+      μ
+     </i>
+     s, num total de quarenta medidas. A massa da bola é 9,21 g e o diâmetro 25,1 mm. Confeccionada em borracha e apresentando pouca perda de energia na colisão ela é vendida em máquinas de ficha em lanchonetes.
+    </p>
+    <p>
+     O coeficiente de restituição
+     <i>
+      e
+     </i>
+     ,
+     <a class="open-asset-modal" data-target="#ModalSchemeeq7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (7)
+     </a>
+     , da bola foi estimado medindo, na régua do próprio aparato (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 6
+     </a>
+     ), as alturas de descida e subida da bola em queda livre. Foi escolhido
+     <math>
+      <msub>
+       <mi>
+        h
+       </mi>
+       <mn>
+        1
+       </mn>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       27
+      </mn>
+     </math>
+     cm e obtido
+     <math>
+      <msub>
+       <mi>
+        h
+       </mi>
+       <mn>
+        2
+       </mn>
+      </msub>
+      <mo>
+       =
+      </mo>
+      <mn>
+       17
+      </mn>
+     </math>
+     cm resultando em
+     <i>
+      e
+     </i>
+     = 0,9. Esse resultado não é o mesmo para alturas bem maiores. Um método mais preciso para determinar esse coeficiente pode ser obtido mediante
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [18]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [18] M.A. Cavalcante, E. Silva, R. Prado e R. Hagg, Rev. Bras. Ensino Fís. 24, 150 (2002).
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     contém a listagem gerada pelo sistema após uma das colisões. É uma tabela
+     <i>
+      força x tempo
+     </i>
+     . Os três primeiros campos,
+     <i>
+      massa da bola, altura da queda
+     </i>
+     , e
+     <i>
+      coeficiente de restituição
+     </i>
+     são informados pelo usuário. O campo
+     <i>
+      Impulso
+     </i>
+     é mostrado para fins didáticos, visto que ele equivale à integral da força, conforme indica a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (9)
+     </a>
+     . Essa integral é aqui calculada numericamente como
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Captura da tela do console listando o resultado de uma colisão.
+      <br/>
+     </div>
+    </div>
+    <div class="row formula" id="eeq17">
+     <a name="eq17">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (17)
+       </span>
+       <math display="block" id="m17">
+        <mrow>
+         <mi>
+          I
+         </mi>
+         <mo>
+          =
+         </mo>
+         <mstyle displaystyle="true">
+          <munderover>
+           <mo>
+            ∑
+           </mo>
+           <mrow>
+            <mi>
+             i
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             0
+            </mn>
+           </mrow>
+           <mrow>
+            <mi>
+             n
+            </mi>
+            <mo>
+             =
+            </mo>
+            <mn>
+             1
+            </mn>
+           </mrow>
+          </munderover>
+          <mrow>
+           <mi>
+            F
+           </mi>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mi>
+               i
+              </mi>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+           <mo>
+            .
+           </mo>
+           <mrow>
+            <mo>
+             (
+            </mo>
+            <mrow>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mrow>
+               <mi>
+                i
+               </mi>
+               <mo>
+                +
+               </mo>
+               <mn>
+                1
+               </mn>
+              </mrow>
+             </msub>
+             <mo>
+              −
+             </mo>
+             <msub>
+              <mi>
+               t
+              </mi>
+              <mi>
+               i
+              </mi>
+             </msub>
+            </mrow>
+            <mo>
+             )
+            </mo>
+           </mrow>
+          </mrow>
+         </mstyle>
+        </mrow>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     onde
+     <math>
+      <msub>
+       <mi>
+        t
+       </mi>
+       <mi>
+        i
+       </mi>
+      </msub>
+     </math>
+     e
+     <math>
+      <mi>
+       F
+      </mi>
+      <mrow>
+       <mo>
+        (
+       </mo>
+       <mrow>
+        <msub>
+         <mi>
+          t
+         </mi>
+         <mi>
+          i
+         </mi>
+        </msub>
+       </mrow>
+       <mo>
+        )
+       </mo>
+      </mrow>
+     </math>
+     correspondem respectivamente às colunas
+     <i>
+      Tempo
+     </i>
+     e
+     <i>
+      Força
+     </i>
+     na listagem. O fator
+     <i>
+      Lambda
+     </i>
+     (calibragem) é buscado na memória EEPROM.
+    </p>
+    <p>
+     Embora esse estudo considerasse apenas uma determinada bola na análise dos resultados, colisões com outras bolas de tamanhos e massas diferentes também foram efetuadas a título de ilustração. A
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 11
+     </a>
+     mostra os gráficos de colisão para bolas diferentes. A tabela
+     <i>
+      tempo x força
+     </i>
+     foi copiada do console para o aplicativo
+     <i>
+      WinPython
+     </i>
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [19]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [19] L.E. Borges, Python Para Desenvolveres (Novatec Editora, São Paulo, 2014).
+       </span>
+      </span>
+     </span>
+     que gerou o gráfico. Na legenda
+     <i>
+      m
+     </i>
+     é a massa da bola e
+     <i>
+      h
+     </i>
+     a altura da queda. A curva onde
+     <i>
+      m
+     </i>
+     = 9,21 g corresponde à listagem da
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Forças de colisão para três bolas distintas em material e tamanho.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     9. Discussão
+    </h1>
+    <p>
+     O impulso
+     <i>
+      I
+     </i>
+     em cada colisão foi calculado e apresentado no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     . O cálculo segue a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq17" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (17)
+     </a>
+     e o resultado é indicado no cabeçalho da listagem de resultados (campo
+     <i>
+      Impulso
+     </i>
+     na
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 10
+     </a>
+     ).
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      Impulso recebido pela bola para quedas de 4 cm a 11 cm de altura.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Como a massa da bola é constante o valor teórico do impulso é proporcional à altura da queda
+     <i>
+      h
+     </i>
+     , conforme aponta a
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (11)
+     </a>
+     . A
+     <a class="open-asset-modal" data-target="#ModalSchemeeq12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (12)
+     </a>
+     permite calcular o valor da constante de proporcionalidade, onde para
+     <i>
+      m
+     </i>
+     = 9,21 g,
+     <i>
+      g
+     </i>
+     = 9,81 m/s
+     <sup>
+      2
+     </sup>
+     e
+     <i>
+      e
+     </i>
+     = 0,9 tem-se
+    </p>
+    <div class="row formula" id="e">
+     <a name="">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <math display="block">
+        <mi>
+         α
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mi>
+         m
+        </mi>
+        <msqrt>
+         <mrow>
+          <mn>
+           2
+          </mn>
+          <mi>
+           g
+          </mi>
+         </mrow>
+        </msqrt>
+        <mrow>
+         <mo>
+          (
+         </mo>
+         <mrow>
+          <mn>
+           1
+          </mn>
+          <mo>
+           +
+          </mo>
+          <mi>
+           e
+          </mi>
+         </mrow>
+         <mo>
+          )
+         </mo>
+        </mrow>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         0775
+        </mn>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Substituindo esse valor na
+     <a class="open-asset-modal" data-target="#ModalSchemeeq11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (11)
+     </a>
+     chega-se à forma teórica de
+     <i>
+      I
+     </i>
+     como
+    </p>
+    <div class="row formula" id="eeq18">
+     <a name="eq18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (18)
+       </span>
+       <math display="block" id="m18">
+        <mi>
+         I
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         0775
+        </mn>
+        <msup>
+         <mi>
+          h
+         </mi>
+         <mrow>
+          <mn>
+           0
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           5
+          </mn>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     Como dito anteriormente foram efetuadas cinco colisões para cada uma das alturas estipuladas. Uma regressão potencial
+     <span class="ref">
+      <strong class="xref xrefblue">
+       [20]
+      </strong>
+      <span class="refCtt closed">
+       <span>
+        [20] R. Zentgraf, Estatística Objetiva (ZTG, Rio de Janeiro, 2001).
+       </span>
+      </span>
+     </span>
+     foi realizada com esses valores e foi obtido
+    </p>
+    <div class="row formula" id="eeq19">
+     <a name="eq19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <span class="label">
+        (19)
+       </span>
+       <math display="block" id="m19">
+        <mi>
+         I
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mn>
+         0
+        </mn>
+        <mo>
+         ,
+        </mo>
+        <mn>
+         0765
+        </mn>
+        <mtext>
+        </mtext>
+        <msup>
+         <mi>
+          h
+         </mi>
+         <mrow>
+          <mn>
+           0
+          </mn>
+          <mo>
+           ,
+          </mo>
+          <mn>
+           486
+          </mn>
+         </mrow>
+        </msup>
+       </math>
+      </div>
+     </div>
+    </div>
+    <p>
+     As duas curvas, teórica e experimental, dadas respectivamente pelas
+     <a class="open-asset-modal" data-target="#ModalSchemeeq18" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      Eq. (18)
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalSchemeeq19" data-toggle="modal" href="">
+      <span class="sci-ico-fileFormula">
+      </span>
+      (19)
+     </a>
+     , estão representadas no gráfico da
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figura 12
+     </a>
+     . A comparaçao entre essas equações manifesta grande semelhança, onde o fator multiplicador e o expoente apresentam erros de 1,29% e 2,8% respectivamente. Essa exatidão é visível também no gráfico, mediante a proximidade entre as duas curvas.
+    </p>
+    <h1 class="articleSectionTitle">
+     10. Conclusão
+    </h1>
+    <p>
+     O experimento permitiu descrever minuciosamente a força de interação durante a colisão elástica de uma bola, gerando uma listagem
+     <i>
+      tempo x força
+     </i>
+     com uma resolução de 120
+     <i>
+      μ
+     </i>
+     s. Essa tabela permite o aluno elaborar gráficos bem como fazer análise numérica dos dados verificando as leís da mecânica clássica. O modelo oferece notável exatidão, respaldando o método de calibragem criado. A montagem é simples e os componentes, exceto o computador, são de baixo custo. O sensor piezoelétrico custou por volta de R$ 1,00 e a plataforma Arduino, amplamente utilizada e com vasta literatura na Internet, custou aproximadamente R$ 50,00. O suporte de liberação da bola ficou em 100,00, entre material e mão de obra. O algoritmo da calibragem implica conhecimentos de mecânica clássica e cálculo integral. Alunos podem programar a plataforma
+     <i>
+      Arduino
+     </i>
+     mediante outros algoritmos, modificando assim o experimento. O modelo pode ser estendido a outros fenômenos na física, bastando trocar o sensor e ajustar o programa de calibragem.
+    </p>
+   </div>
+   <div class="articleSection" data-anchor="Supplementary material">
+    <h1 class="articleSectionTitle">
+     Supplementary material
+    </h1>
+    <p>
+     O seguinte material suplementar está disponível online:
+    </p>
+    <a href="https://minio.scielo.br/documentstore/1806-9126/rBZCBT6jtWhBQpCh4YSV54s/d32240e63a75a8e278b37a37b5ed42eca3d8f769.pdf" target="_blank">
+     Material suplementar
+          
+            Programa fonte desenvolvido para a plataforma Arduino.
+    </a>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList footnote">
+      <li>
+       <span class="xref big">
+        1
+       </span>
+       <div>
+        Nome dado ao dispositivo
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        2
+       </span>
+       <div>
+        Electrically-Erasable Programmable Read-Only Memory
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        3
+       </span>
+       <div>
+        Há vários formatos para esse tipo de sensor. Uma diversidade de licações podem empregar esse dispositivo.
+       </div>
+      </li>
+      <li>
+       <span class="xref big">
+        4
+       </span>
+       <div>
+        IDE - Integrated Development Environment
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Referências bibliográficas">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        M.P. Norton e D.G. Karczub,
+        <i>
+         Fundamentals of Noyse and Vibrations Analysis for Engineers
+        </i>
+        (Cambridge University Press, Cambridge, 2003).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        D. Halliday, R. Resnick eý J. Walker,
+        <i>
+         Fundamentos de Física
+        </i>
+        (LTC, Rio de Janeiro, 2014), 9ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        https://www.arduino.cc, acessado em dez. 2017.
+        <br/>
+        <a href="https://www.arduino.cc" target="_blank">
+         » https://www.arduino.cc
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        M.A. Cavalcante, C.R.C. Tavolaro e E. Molisani, Rev. Bras. Ensino Fís.
+        <b>
+         33
+        </b>
+        , 4503 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        V.R. Coluci, G. Paulino, D.C. Souza e E.P.R. Vasconcelos, Rev. Bras. Ensino Fís.
+        <b>
+         35
+        </b>
+        , 1 (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        F.J. Arnold, A.G. Godeny, M.M. Costa, J.F. Viana e R.L. Ximenes, Rev. Bras. Ensino Fís.
+        <b>
+         40
+        </b>
+        , e2502 (2018).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        F.P. Beer, R.E. Johnston, D.F. Mazurek e E.R. Eisenberg,
+        <i>
+         Mecânica Vetorial para Engenheiros
+        </i>
+        (McGraw-Hill, São Paulo, 2001), 5ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [8]
+       </sup>
+       <div>
+        D.P. Meira Filho, J.K.S. Kamassury e R.C.S. Meira, Rev. Bras. Ensino Fís.
+        <b>
+         39
+        </b>
+        , e4302 (2017).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [9]
+       </sup>
+       <div>
+        J. Santos, B.P.W. Oliveira e O.R. Nelson, Rev. Bras. Ensino Fís.
+        <b>
+         34
+        </b>
+        , 1 (2012).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [10]
+       </sup>
+       <div>
+        A. Balbinot e V.J. Brusamarello,
+        <i>
+         Instrumentação e Fundamentos de Medidas
+        </i>
+        (LTC, Rio de Janeiro, 2011), 2ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [11]
+       </sup>
+       <div>
+        W. B. Lima,
+        <i>
+         Transdutores de deformação à base de sensores piezoelétricos
+        </i>
+        Dissertação de Mestrado, Universidade Federal Fluminense, Rio de Janeiro (2013).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [12]
+       </sup>
+       <div>
+        F. Pereira,
+        <i>
+         Microcontroladores PIC. Programação em C
+        </i>
+        (Érica, São Paulo, 2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [13]
+       </sup>
+       <div>
+        S. Silveira e M. Girardi, Rev. Bras. Ensino Fís.
+        <b>
+         39
+        </b>
+        , e4502 (2017)
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [14]
+       </sup>
+       <div>
+        S. L. Stevan Junior e R.A. Silva,
+        <i>
+         Automação e instrumentação industrial com Arduino: teoria e projetos
+        </i>
+        (Érica, São Paulo, 2015).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [15]
+       </sup>
+       <div>
+        L.A. Dworakowski, A.M. Hartmann, E.M. Kakuno e P.F.T. Dorneles, Rev. Bras. Ensino Fís.
+        <b>
+         38
+        </b>
+        , e3503 (2016).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [16]
+       </sup>
+       <div>
+        S. Holzner,
+        <i>
+         Programando em C
+        </i>
+        ++:
+        <i>
+         um guia prático para a programação profissional
+        </i>
+        (Campus, Rio de Janeiro, 1993).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [17]
+       </sup>
+       <div>
+        R.C. Dorf e J.A. Svoboda,
+        <i>
+         Circuitos Elétricos
+        </i>
+        (LTC, Rio de Janeiro, 2008), 7ª ed.
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [18]
+       </sup>
+       <div>
+        M.A. Cavalcante, E. Silva, R. Prado e R. Hagg, Rev. Bras. Ensino Fís.
+        <b>
+         24
+        </b>
+        , 150 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [19]
+       </sup>
+       <div>
+        L.E. Borges,
+        <i>
+         Python Para Desenvolveres
+        </i>
+        (Novatec Editora, São Paulo, 2014).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [20]
+       </sup>
+       <div>
+        R. Zentgraf,
+        <i>
+         Estatística Objetiva
+        </i>
+        (ZTG, Rio de Janeiro, 2001).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        2019
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        30 Jul 2018
+       </li>
+       <li>
+        <strong>
+         Revisado
+        </strong>
+        <br/>
+        24 Set 2018
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        12 Nov 2018
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by 4.0 " src="https://licensebuttons.net/l/by/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">
+        License information: This is an open-access article distributed under the terms of the Creative Commons Attribution License (type CC-BY), which permits unrestricted use, distribution and reproduction in any medium, provided the original article is properly cited.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

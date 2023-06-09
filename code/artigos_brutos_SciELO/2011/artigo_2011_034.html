@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Artigos Gerais
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 33 
+                (2)
+   <span class="_separator">
+    •
+   </span>
+   Jun 2011
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172011000200013" target="_blank">
+    https://doi.org/10.1590/S1806-11172011000200013
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172011000200013">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Solução computacional do problema da cavidade cúbica através das equações de Navier-Stokes tridimensionais
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Computational solution of the cubic cavity problem using the tridimensional Navier-Stokes equations
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Darlon Vasata
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Guilherme Galante
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Rogério Luis Rizzi
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Reginaldo A. Zara
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Cascavel,  
+          ,  Paraná,  
+        ,  Universidade Estadual do Oeste do Paraná,  Centro de Ciências Exatas e Tecnológicas ,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Este trabalho apresenta uma abordagem para a solução de problemas de escoamento tridimensional de fluidos com aplicação no problema da cavidade cúbica com tampa deslizante. A quantidade de movimento é modelada pelas equações de Navier-Stokes, as quais são discretizadas utilizando o método de diferenças finitas. A solução para o problema foi obtida utilizando o método SOR (Successive Over Relaxation) para resolver a equação de Poisson para pressão para cada passo de tempo. Apresentam-se os resultados de simulações numéricas na forma de gráficos da velocidade, pressão e superfícies de corrente. É observada a formação vórtices a partir do cantos da cavidade próximo à tampa deslizante. Os resultados generalizam a solução do problema da caixa bidimensional e mostram que as estratégias numérico-computacionais empregadas são válidas e possuem boa qualidade numérica.
+    </p>
+    <p>
+     Navier-Stokes; cavidade cúbica; método SOR
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     This paper presents an approach to solving problems of three-dimensional fluid flow with application to the problem cubic cavity with sliding covering. The fluid flow is modeled by the Navier-Stokes equations which are discretized using the finite difference method. The solution to the problem was obtained using the SOR method (Successive Over Relaxation) to solve the Poisson equation for pressure for each time step. The results of numerical simulations are presented as graphs of velocity, pressure and surface current. It is observed the formation of tridimensional vortices rising from the corners of the cavity near the covering. The results generalize the solution of the two-dimensional case and show the numerical-computational strategies employed are appropriated and exhibit good numerical quality.
+    </p>
+    <p>
+     Navier-Stokes; cubic cavity; SOR method
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      ARTIGOS GERAIS
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Solução computacional do problema da cavidade cúbica através das equações de Navier-Stokes tridimensionais
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Computational solution of the cubic cavity problem using the tridimensional Navier-Stokes equations
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Darlon Vasata; Guilherme Galante; Rogério Luis Rizzi; Reginaldo A. Zara
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: 
+        reginaldo.zara@unioeste.br.
+       </span>
+      </span>
+     </span>
+    </p>
+    <p>
+    </p>
+    <p>
+     Centro de Ciências Exatas e Tecnológicas, Universidade Estadual do Oeste do Paraná, Cascavel, PR, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Este trabalho apresenta uma abordagem para a solução de problemas de escoamento tridimensional de fluidos com aplicação no problema da cavidade cúbica com tampa deslizante. A quantidade de movimento é modelada pelas equações de Navier-Stokes, as quais são discretizadas utilizando o método de diferenças finitas. A solução para o problema foi obtida utilizando o método SOR (
+     <i>
+      Successive Over Relaxation
+     </i>
+     ) para resolver a equação de Poisson para pressão para cada passo de tempo. Apresentam-se os resultados de simulações numéricas na forma de gráficos da velocidade, pressão e superfícies de corrente. É observada a formação vórtices a partir do cantos da cavidade próximo à tampa deslizante. Os resultados generalizam a solução do problema da caixa bidimensional e mostram que as estratégias numérico-computacionais empregadas são válidas e possuem boa qualidade numérica.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     Navier-Stokes, cavidade cúbica, método SOR.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     This paper presents an approach to solving problems of three-dimensional fluid flow with application to the problem cubic cavity with sliding covering. The fluid flow is modeled by the Navier-Stokes equations which are discretized using the finite difference method. The solution to the problem was obtained using the SOR method (
+     <i>
+      Successive Over Relaxation
+     </i>
+     ) to solve the Poisson equation for pressure for each time step. The results of numerical simulations are presented as graphs of velocity, pressure and surface current. It is observed the formation of tridimensional vortices rising from the corners of the cavity near the covering. The results generalize the solution of the two-dimensional case and show the numerical-computational strategies employed are appropriated and exhibit good numerical quality.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     Navier-Stokes, cubic cavity, SOR method.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Escoamentos de fluidos podem ser encontrados em diferentes ramos da ciência e da tecnologia, envolvendo a indústria, a agricultura, as diversas engenharias, ciências ambientais entre outros [1, 2]. A área da ciência que investiga os fluidos e suas propriedades, chamada de mecânica dos fluidos, desenvolveu-se inicialmente de forma experimental, com o estudo do movimento dos fluidos em canais e tubos. O início da investigação de caráter matemático pode ser atribuído a Euler e sua descrição, através de equações, das relações entre o movimento dos fluidos e as forças envolvidas neste movimento. A hidrodinâmica introduzida pelas equações de Euler ganhou impulso no século XIX através dos trabalhos de Claude Navier, Simeon Poisson e George Stokes, com a proposição de um conjunto de equações conhecidas como equações de Navier-Stokes [1].
+    </p>
+    <p>
+    </p>
+    <p>
+     O modelo hidrodinâmico de Navier-Stokes é um conjunto de equações diferenciais que descrevem o transporte de massa, momento e energia. Quando resolvidas com as condições de contorno apropriadas, as soluções destas equações fornecem uma descrição detalhada do processo de escoamento, sendo que as propriedades macroscópicas do sistema tais como a velocidade de escoamento, as quedas de pressão e os coeficientes de transporte são calculadas como médias das quantidades microscópicas correspondentes. Estas médias devem ser tomadas em um volume pequeno quando comparado ao tamanho do sistema mas grande o bastante para que as equações de movimento sejam válidas. Assim, realizando médias sobre todos os pontos do espaço pode-se obter as grandezas macroscópicas do sistema as quais, em geral, podem ser relaciondas através da lei empírica de Darcy. No entanto, resolver as equações de movimento é um problema difícil, mesmo para os sistemas mais simples. Além disso, sistemas demasiadamente simplificados não são suficientemente precisos para a determinação das quantidades físicas relevantes da maioria das situações reais de interesse.
+    </p>
+    <p>
+    </p>
+    <p>
+     As equações de Navier-Stokes são equações diferenciais parciais não lineares para as quais soluções analíticas são conhecidas apenas para alguns casos específicos. Como a solução de problemas hidrodinâmicos importantes não podem aguardar pela solução analítica das equações matemáticas correspondentes, métodos alternativos de solução devem ser empregados. Muitas aplicações tecnológicas hoje essenciais foram desenvolvidas através de ensaios experimentais realizados em tanques de água ou túneis de vento. Porém, além de dispendiosos e de tomar tempo considerável para execução, os ensaios nem sempre são suficientes para dirimir dúvidas sobre a dinâmica do escoamento ou sobre as propriedades físicas do sistema.
+    </p>
+    <p>
+    </p>
+    <p>
+     A dinâmica dos fluidos computacional (DFC) é uma abordagem contemporânea para pesquisas em dinâmica dos fluidos [1]. Ela surgiu com o advento dos computadores e integra a física e a matemática com a computação de forma a proporcionar solução de vários problemas complexos. O emprego da DFC permite que problemas para os quais a realização de experimentos é economicamente inviável possam ser investigados numericamente sob as mais diferentes condições. Assim, a partir das informações fornecidas pela DFC, pesquisas teóricas podem ser validadas ou novas abordagens podem ser sugeridas e os testes experimentais necessários podem ser melhor planejados e executados [2].
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho são construídos e implementados modelos matemáticos aplicados à DFC baseados nas equações de Navier-Stokes tridimensionais visando a solução numérica para o problema da cavidade cúbica com tampa deslizante. A complexidade matemática das equações resultantes impossibilita encontrar soluções analíticas a partir da análise teórica, havendo a necessidade da utilização de métodos numéricos de solução. Na seção 2 são apresentadas as condições físicas do fluido investigado, o conjunto de equações de Navier-Stokes resultante para tais condições. Estratégias de solução das equações são discutidas descrevendo o processo de discretização das equações, as aproximações e as condições de fronteira utilizadas. A seção 3 detalha o funcionamento do procedimento numérico utilizado para a solução das equações de escoamento. Na seção 4 é apresentado o problema da cavidade cúbica, os parâmetros da simulação são apresentados e os resultados obtidos são discutidos.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Equações de Navier-Stokes
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     As equações de Navier-Stokes são equações diferenciais parciais que permitem determinar os campos de velocidade e pressão de um fluido [1], descrevendo a física de um grande número de fenômenos de interesse acadêmico, tecnologicos e economicamente importantes, podendo ser usadas para modelar desde o escoamento de fluidos em dutos até correntes oceânicas e atmosféricas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para formular uma solução das equações de Navier-Stokes princípios básicos de conservação da massa, momento e energia devem ser levados em conta. Considerando o fluido Newtoniano, contínuo e incompressível as propriedades do escoamento podem ser descritas em termos de grandezas macroscópicas como velocidade, pressão, temperatura e densidade [3].
+    </p>
+    <p>
+    </p>
+    <p>
+     Para obter uma representação da conservação das propriedades físicas do sistema é necessário resolver a equação da continuidade, a qual é uma expressão matemática da conservação da massa. Essa equação pode ser escrita matematicamente como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm01">
+     <a name="frm01">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/767ab40b513cc4af797e561ff8297f147fbd471c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      ρ
+     </i>
+     é a densidade do fluido e
+     <i>
+      u
+     </i>
+     ,
+     <i>
+      υ
+     </i>
+     e
+     <i>
+      w
+     </i>
+     são as componentes da velocidade do fluido nas direções coordenadas
+     <i>
+      x, y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     respectivamente.
+    </p>
+    <p>
+    </p>
+    <p>
+     As equações para a conservação da quantidade de movimento nas direções
+     <i>
+      x, y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     podem ser escritas, respectivamente, como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm02">
+     <a name="frm02">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/bdaffbb185280c65baef16c220413867c4c59e03.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      p
+     </i>
+     representa a pressão, e
+     <i>
+      µ
+     </i>
+     <sub>
+      <i>
+       H
+      </i>
+     </sub>
+     e
+     <i>
+      µ
+     </i>
+     <sub>
+      υ
+     </sub>
+     representam os coeficientes de viscosidade cinemática horizontal e vertical, respectivamente.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma estratégia de solução para as equações de Navier-Stokes é reescrevê-las, após certa manipulação algébrica, na forma de uma equação de Poisson para a pressão a cada passo de tempo. A representação da equação de Poisson em sua forma analítica é mostrada na Eq. (5), a seguir
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm05">
+     <a name="frm05">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/1df345cb26d46324f526e22aa69583e1a54e29b9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      g
+     </i>
+     agrega as contribuições dos operadores explícitos para a velocidade e demais termos, sendo que p designa pressão [1].
+    </p>
+    <p>
+    </p>
+    <p>
+     Resolver as equações de Navier-Stokes significa encontrar, para um dado conjunto de condições iniciais e de contorno, as funções soluções
+     <i>
+      u
+     </i>
+     (
+     <i>
+      x, y, z, t
+     </i>
+     ), v(x, y, z, t),
+     <i>
+      w
+     </i>
+     (
+     <i>
+      x, y, z, t
+     </i>
+     ),
+     <i>
+      p
+     </i>
+     (
+     <i>
+      x, y, z, t
+     </i>
+     ) e
+     <i>
+      ρ
+     </i>
+     (
+     <i>
+      x, y, z, t
+     </i>
+     ) nas direções
+     <i>
+      x, y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     respectivamente. Como, até o momento, soluções analíticas para as equações de Navier-Stokes ainda não são disponíveis a investigação numérica tem sido utilizada para solucionar as situações de interesse. Para isto, métodos numérico-computacionais têm sido desenvolvidos e testados em diferentes condições para análise de acurácia e condições de aplicação.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.1. Discretização do domínio e das equações
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para a solução do problema da cavidade cúbica, utilizando-se as equações de Navier-Stokes tridimensionais, empregou-se o método de diferenças finitas. Na discretização das derivadas espaciais utilizou-se a malha de Akarawa tipo C. Nesse tipo de malha o posicionamento das variáveis tem um arranjo deslocado, que inibe as oscilações de pressão decorrentes da independência entre a pressão e a velocidade no mesmo ponto quando da solução da equação de conservação da massa. Para a abordagem de solução empregada esta escolha tem se mostrado adequada, já que alguns métodos que resolver as equações de Navier-Stokes para a pressão em malha co-localizada nem sempre garantem conservação da massa nas células da malha. Na malha descentrada as velocidades são armazenadas nas faces enquanto a pressão e as outras propriedades do fluido são armazenadas no centro do elemento da malha, como mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     .
+    </p>
+    <div class="row fig" id="fig01">
+     <a name="fig01">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig01" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Em diversas abordagens encontradas na literatura para soluções de escoamentos, as velocidades
+     <i>
+      u,
+     </i>
+     <i>
+      υ
+     </i>
+     e
+     <i>
+      w
+     </i>
+     e a pressão
+     <i>
+      p
+     </i>
+     são representadas no mesmo ponto, ao centro de cada célula da malha. Porém, essa representação pode levar a instabilidades na solução numérica do problema, existindo assim a necessidade de uma nova representação física das velocidades e pressão na malha [4]. Assim, de modo a evitar este tipo de inconveniente, neste trabalho utiliza-se a abordagem de malha tridimensional deslocada.
+    </p>
+    <p>
+    </p>
+    <p>
+     A malha tridimensional deslocada consiste em representar a velocidade
+     <i>
+      u
+     </i>
+     nas paredes inferior e superior, a velocidade
+     <i>
+      υ
+     </i>
+     nas paredes esquerda e direita, e velocidade
+     <i>
+      w
+     </i>
+     nas paredes de frente e fundo e a pressão
+     <i>
+      p
+     </i>
+     no centro da célula, como mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigfig01" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Dessa forma, a Eq. (2) é discretizada no ponto (
+     <i>
+      i
+     </i>
+     + 1/2,
+     <i>
+      j, k
+     </i>
+     ) utilizando as seguintes aproximações para as derivadas espaciais e
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm06">
+     <a name="frm06">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/f8ee396e5711ef1dd2fe2e793b4e1e7f7c16c00b.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     para a derivada temporal
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm13">
+     <a name="frm13">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/d182336a59e7231e86adf9e33b846cf88389afbb.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Porém nas Eqs. (6), (7) e (8) os termos
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/4a715720ed933d5e99af39f25b8dceb1c7fc3dac.jpg" style="max-width:100%"/>
+     ,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/03bfdf84f5285db179b831bb67c0e345f600557b.jpg" style="max-width:100%"/>
+     e
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/2d26aef24dde7251b19f36a4aecb45c946c7a2be.jpg" style="max-width:100%"/>
+     não estão definidos na malha. Estes valores devem ser calculados através da interpolação dos valores de u, v e w das faces das células, como
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/b88191f5571a0cb0722067d4e56857fa274719e0.jpg" style="max-width:100%"/>
+     e
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/04e014d39f9e2e11960daaa2d98784a09cb9c129.jpg" style="max-width:100%"/>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm14">
+     <a name="frm14">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/fe27988f48fa46f2a7ad41a29b200584c404fd8f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Nesse caso, ainda sem substituir os termos que não estão definidos na malha, a versão discreta da Eq. (2) pode ser escrita como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm18">
+     <a name="frm18">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/701106933997b8ffaffc6716e52731697231c843.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Reorganizando os termos da Eq. (18) de forma a isolar
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/7f676f118fd3f231f8765a5fec6680a6847ffbe7.jpg" style="max-width:100%"/>
+     obtém-se
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm19">
+     <a name="frm19">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/dc6b2d9e0e4dbdbe0b6b7a345825f6efe3bef713.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde representa-se como
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/f09fec9584b3f47093b3a3e765378ff9a2df1bf6.jpg" style="max-width:100%"/>
+     os termos convectivos no passo de tempo
+     <i>
+      n
+     </i>
+     , já discretizados
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm20">
+     <a name="frm20">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/ec1c99955af8e18d5be2c027f3da5424f4896fc9.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Sendo
+     <i>
+      ν
+     </i>
+     <i>
+      <sub>
+       H
+      </sub>
+     </i>
+     =
+     <i>
+      µ
+     </i>
+     <i>
+      <sub>
+       h
+      </sub>
+     </i>
+     /
+     <i>
+      ρ
+     </i>
+     e
+     <i>
+      ν
+      <sub>
+       υ
+      </sub>
+     </i>
+     =
+     <i>
+      µ
+     </i>
+     <i>
+      <sub>
+       υ
+      </sub>
+     </i>
+     /
+     <i>
+      ρ
+     </i>
+     os coeficientes de viscosidade cinemática, para as componentes nas direções
+     <i>
+      x, y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     , respectivamente,
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/9c3194ec92f4e353fb6a78845c00e28e66fd5cc9.jpg" style="max-width:100%"/>
+     representa os termos viscosos, também já discretizados para o passo de tempo
+     <i>
+      n
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm21">
+     <a name="frm21">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/3ed3580f2828e3d394533583e92c23b76e4635b4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Substituindo na Eq. (20) as aproximações para os termos não definidos na malha
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm22">
+     <a name="frm22">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/9d32a36bb3810ef2d64bae12cdc5904fe5989510.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Torna-se conveniente, para efeitos da discretização, isolar os termos convectivos, viscosos e a velocidade
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/4531873ac910a5dd9f9de54e403ae6d114fc9ba5.jpg" style="max-width:100%"/>
+     para separar os operadores explícitos a serem utilizados em cálculos posteriores, sendo sua soma representada como
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/304a31277b1ac7f9db2d00077c5eb852c180eecb.jpg" style="max-width:100%"/>
+     . Tem-se então
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm23">
+     <a name="frm23">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/b1d2ed31614f55982976dda61eabecc4394b8955.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Agora, a Eq. (19) pode ser expressa de forma mais suscinta por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm24">
+     <a name="frm24">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/17b1367d702a225f2a89eb2842ef8f76877cb090.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Analogamente, a Eq. (3) é discretizada no ponto (
+     <i>
+      i, j
+     </i>
+     + 1/2,
+     <i>
+      k
+     </i>
+     ) utilizando aproximações análogas, obtendo
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm25">
+     <a name="frm25">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/46dde9f97e654086270b8e71f717346a318df5e3.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm26">
+     <a name="frm26">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/edb37a4f185fb0b843aa84d8b53f795ab86f4e38.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     sendo
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/f09fec9584b3f47093b3a3e765378ff9a2df1bf6.jpg" style="max-width:100%"/>
+     e
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/9c3194ec92f4e353fb6a78845c00e28e66fd5cc9.jpg" style="max-width:100%"/>
+     expressões análogas às Eqs. (20) e (21), porém para o ponto (
+     <i>
+      i, j
+     </i>
+     + 1/2,
+     <i>
+      k
+     </i>
+     ). Da mesma forma, a Eq. (4) é discretizada no ponto (
+     <i>
+      i, j, k
+     </i>
+     +1/2) utilizando aproximações análogas, obtendo
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm27">
+     <a name="frm27">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/d50cd8160d0741849585906e789e827a27ac63f6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm28">
+     <a name="frm28">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/9dfcb4e9dabc27b87ae916ed19ccd2b6ac3e6586.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     e sendo
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/f09fec9584b3f47093b3a3e765378ff9a2df1bf6.jpg" style="max-width:100%"/>
+     e
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/9c3194ec92f4e353fb6a78845c00e28e66fd5cc9.jpg" style="max-width:100%"/>
+     expressões análogas às Eqs. (20) e (21), porém estas para o ponto (
+     <i>
+      i, j, k
+     </i>
+     +1/2).
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2. Aproximação para pressão
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Diferentemente das equações das velocidades a equação para a pressão é discretizada no ponto (
+     <i>
+      i, j, k
+     </i>
+     ). Aplicando a Eq. 1 para o ponto (
+     <i>
+      i, j, k
+     </i>
+     ) e utilizando diferenças centrais de segunda ordem, obtém-se
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm29">
+     <a name="frm29">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/a5c18cb743f3411a8c005ece064d5de9d3771fb4.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     ou seja,
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm30">
+     <a name="frm30">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/4cae773705d8c7dce39e8f4bcda33e8d1228fcc6.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A Eq. (24) implica, por um deslocamento no índice
+     <i>
+      i
+     </i>
+     , como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm31">
+     <a name="frm31">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/8ded6ff9ce53a929073bb834a0292aacf8ec6293.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     tem-se também que a Eq. (25) implica
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm32">
+     <a name="frm32">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/89102187a9bc5a6595d4fa34d3a200b2dc5214a0.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     que e a Eq. (27) implica que
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm33">
+     <a name="frm33">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/8182bac5ffed37dd567997087713522794921cb5.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Substituindo as Eqs. (31), (32) e (33) na Eq. (30), tem-se a equação de Poisson para a pressão tridimensional discretizada, como
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm34">
+     <a name="frm34">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/f650ec46cff0b7022298c5137b55e2634c6db52a.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.3. Condições de fronteira
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     As condições de fronteira são artifícios utilizados para representar a interação do sistema com o meio externo. Consiste em adicionar valores nas células de borda do domínio computacional, sendo assim denominadas
+     <i>
+      células de fronteira
+     </i>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho, as células de fronteira aplicam a técnica da reflexão, podendo comportar-se das formas escorregadia, ou
+     <i>
+      fronteira de simetria
+     </i>
+     e não escorregadia ou
+     <i>
+      fronteira sólida
+     </i>
+     . Assim, as condições de fronteira, pela técnica de reflexão são:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Para células de fronteira escorregadias nas bordas laterais da malha: O valor referente a
+       <i>
+        u
+       </i>
+       da célula interna vizinha recebe o valor de
+       <i>
+        u
+       </i>
+       da célula de fronteira, com seu sinal invertido.
+      </p>
+     </li>
+     <li>
+      <p>
+       Para células de fronteira não-escorregadias nas bordas laterais da malha: O valor referente a
+       <i>
+        u
+       </i>
+       da célula interna vizinha recebe o valor de
+       <i>
+        u
+       </i>
+       da célula de fronteira.
+      </p>
+     </li>
+     <li>
+      <p>
+       Para células de fronteira escorregadias nas bordas superior ou inferior da malha: O valor referente a
+       <i>
+        υ
+       </i>
+       da célula interna vizinha recebe o valor de
+       <i>
+        υ
+       </i>
+       da célula de fronteira, com seu sinal invertido.
+      </p>
+     </li>
+     <li>
+      <p>
+       Para células de fronteira escorregadias nas bordas superior ou inferior da malha: O valor de
+       <i>
+        υ
+       </i>
+       da célula interna vizinha recebe o valor de
+       <i>
+        υ
+       </i>
+       da célula de fronteira.
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Algoritmo de solução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O procedimento para o cálculo das variáveis e da pressão no nível de tempo
+     <i>
+      n
+     </i>
+     + 1 consiste em resolver os passos descritos na
+     <a class="open-asset-modal" data-target="#ModalFigfig02" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     e descrito a seguir.
+    </p>
+    <div class="row fig" id="fig02">
+     <a name="fig02">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigfig02" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Inicialmente é feito todo pré-processamento, que inclui a leitura dos arquivos de entrada são e a inicialização das variáveis e parâmetros da simulação.
+    </p>
+    <p>
+    </p>
+    <p>
+     Na sequência define-se as
+     <i>
+      condições de fronteira
+     </i>
+     , de acordo com o descrito na seção 2.3. Nos dois passos subsequentes, efetua-se as operações relacionadas ao cálculo das variáveis
+     <i>
+      F, G
+     </i>
+     e
+     <i>
+      H
+     </i>
+     no interior e nas bordas do domínio.
+    </p>
+    <p>
+    </p>
+    <p>
+     No quarto passo resolve-se o lado direito da Eq. (34), que envolve o cálculo das pressões, para todos os pontos internos da malha, gerando um sistema de equações. Para resolver tal sistema utiliza-se o método numérico SOR (
+     <i>
+      Successive Over Relaxation
+     </i>
+     ). Assim, a Eq. (35) deve a ser aplicada para cada ponto interno da malha
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm35">
+     <a name="frm35">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/9360da3ebfcb1b02cf3ca0d4cc9836e74c0f037f.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde (
+     <i>
+      k
+     </i>
+     ) representa a iteração do SOR,
+     <i>
+      β
+     </i>
+     =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/45911ba3704ecec5e3a5c0ef7582b6fcf35845af.jpg" style="max-width:100%"/>
+     , γ =
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/0a446c188aed5a1b01a472fee750f3c603956d93.jpg" style="max-width:100%"/>
+     ,
+     <i>
+      w
+     </i>
+     é um fator de relaxação, que deve estar entre 0 &lt;
+     <i>
+      w
+     </i>
+     &lt; 2, e
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm36">
+     <a name="frm36">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/d0c102ca381756ba1282fe77815e60e2fcd7491c.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A abordagem de solução utilizada, que é obter as componentes da velocidade a partir dos valores atualizados da pressão, obriga a que em cada iteração do SOR seja efetuada uma correção da pressão com o intuito de estimar o campo de velocidades, de forma a satisfazer a equação da continuidade e obter uma representação física consistente [1].
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando que não há no escoamento dentro da cavidade, a pressão deve ser normalizada após cada iteração do método SOR de modo a se evitar que os valores da pressão cresçam ou diminuam arbitrariamente. A normalização consiste em manter constante o valor da pressão em uma determinada célula da malha. Como manter um valor constante pode ocasionar instabilidades na solução, uma alternativa é tomar uma determinada célula como referência e aplicar a correção (Eq. (37)) a todos os pontos da malha a cada iteração do método SOR, indicada pelo índice k. Repare que utilizando a técnica de correção, o valor da pressão na célula de referência é mantido constante em 0 [1].
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm37">
+     <a name="frm37">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/3717766fb2a24f0c0e4663913d8e1afa707f11b7.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O método apresentado pode ser aplicado a diversos níveis de tempo, incrementando seu passo de tempo
+     <i>
+      t
+     </i>
+     até que um determinado critério de parada seja satisfeito. Neste artigo o critério de parada escolhido é
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row formula" id="efrm38">
+     <a name="frm38">
+     </a>
+     <div class="col-md-12">
+      <div class="formula-container">
+       <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/29c3f69fa0f2a937d0e661d9d434113e67097b9d.jpg" style="max-width:100%"/>
+      </div>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      NI, NJ
+     </i>
+     e
+     <i>
+      NK
+     </i>
+     representam o número de células nas direções
+     <i>
+      x, y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     , respectivamente. A escolha deste critério deve-se a que, quanto menor for o valor da soma do módulo das velocidades internas, mais perto estamos do estado estacionário. A escolha do valor
+     <i>
+      ε
+     </i>
+     deve ser um valor tão pequeno que faça com que a diferença entre as duas soluções seja desprezível. É razoável adotar valores
+     <i>
+      ε
+     </i>
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/bde25091a667fe651daed9c0791650a482b6b68f.jpg" style="max-width:100%"/>
+     10
+     <sup>
+      -7
+     </sup>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma vez finalizada a resolução dos sistemas de equações, é verificado se a simulação atingiu um estado estacionário. Em caso negativo, inicia-se uma nova iteração no tempo
+     <i>
+      t
+     </i>
+     . Em caso positivo encerra-se a aplicação e gera-se os gráficos para a visualização de resultados, como pode ser visto na seção 4.1.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. O problema da cavidade cúbica
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O problema da cavidade cúbica é uma extensão para a dimensão
+     <i>
+      Z
+     </i>
+     do problema de uma cavidade quadrada resolvida no plano XY, o qual é um problema de escoamento bidimensional amplamente estudado e sobre o qual é possível encontrar muitos trabalhos na literatura [5-8]. Este problema é frequentemente utilizado para validações de precisão, condições de contorno e eficiência de soluções numéricas.
+    </p>
+    <p>
+    </p>
+    <p>
+     No problema da cavidade cúbica um fluido encontra-se inicialmente em repouso, contido em uma caixa de formato cúbico de dimensão linear
+     <i>
+      L
+     </i>
+     , preenchendo a caixa por completo. As paredes da caixa são rígidas e impermeáveis, as paredes laterais e inferior são não-escorregadias e a superior é móvel e escorregadia. Instantaneamente, a tampa superior do cubo desloca-se com uma velocidade
+     <i>
+      u
+     </i>
+     <sub>
+      0
+     </sub>
+     ao longo da coordenada
+     <i>
+      x
+     </i>
+     . O resultado esperado é a movimentação do fluido no interior da caixa, devido ao contato do mesmo com a parede superior em movimento. As equações de Navier-Stokes são resolvidas numericamente determinando-se para cada instante de tempo o campo de velocidade e pressão, permitindo obter uma descrição completa da movimentação do fluido no interior da caixa. Na próxima seção os parâmetros da simulação são apresentados e os resultados obtidos são discutidos.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4.1. Resultados
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O algoritmo para o cálculo tridimensional da pressão e das velocidades foi implementado utilizando a linguagem de programação C com o compilador GCC (
+     <i>
+      Gnu Compiler Collection
+     </i>
+     ) sob sistema operacional Linux, kernel 2.6.5. O objetivo é simular o escoamento de fluidos em um determinado domínio computacional tridimensional regular através da solução do conjunto des equações de Navier-Stokes associadas à caixa cúbica. Para que a solução possa ser visualizada, o software disponibiliza arquivos de saída com dados sobre os valores da pressão e velocidades, que podem ser analisados através da ferramenta VisIT [9].
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho são apresentados resultados da simulação para problema da caixa cúbica de lado L = 40 efetuada com o seguinte conjunto de como parâmetros de entrada: Δ
+     <i>
+      t
+     </i>
+     = 1.0 ×10
+     <sup>
+      -1
+     </sup>
+     , Δ
+     <i>
+      x
+     </i>
+     = 1.0 ×10
+     <sup>
+      -1
+     </sup>
+     , Δ
+     <i>
+      y
+     </i>
+     = 1.0 ×10
+     <sup>
+      -1
+     </sup>
+     , Δ
+     <i>
+      z
+     </i>
+     = 1.0 ×10
+     <sup>
+      -1
+     </sup>
+     ,
+     <i>
+      u
+     </i>
+     <sub>
+      0
+     </sub>
+     = 1.541667 ×10
+     <sup>
+      -4
+     </sup>
+     ,
+     <i>
+      ν
+     </i>
+     <sub>
+      <i>
+       H
+      </i>
+     </sub>
+     = 1.850 ×10
+     <sup>
+      -3
+     </sup>
+     ,
+     <i>
+      ν
+      <sub>
+       υ
+      </sub>
+     </i>
+     = 1.850 ×10
+     <sup>
+      -4
+     </sup>
+     . O coeficiente de relaxação empregado no SOR foi
+     <i>
+      w
+     </i>
+     = 0.7 e, como critério de convergência, admitiu-se que a diferença entre grandezas físicas não fosse superior a
+     <img src="https://minio.scielo.br/documentstore/1806-9126/9xrTYBk8637zjdfcFpgNRTc/b9a934af0c5a157f9defd9560aa1e91548988c78.jpg" style="max-width:100%"/>
+     = 1.0 ×10
+     <sup>
+      -5
+     </sup>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Os resultados obtidos são apresentados na forma de gráficos tridimensionais para o deslocamento do fluido em dois instantes (iterações do método) de tempo o que permite compreender a dinâmica do fluido no interior da caixa nas três direções de interesse. Para isto são utilizados gráficos tridimensionais para os campos de velocidade
+     <i>
+      u, v
+     </i>
+     e
+     <i>
+      w
+     </i>
+     (respectivamente nas direções
+     <i>
+      x y
+     </i>
+     e
+     <i>
+      z
+     </i>
+     ), pressão no interior do fluido e para as superfícies de corrente. Estas últimas mostram a trajetória do fluido no domínio.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFiga13fig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     mostra as componentes da velocidade nas direções
+     <i>
+      X, Y
+     </i>
+     e
+     <i>
+      Z
+     </i>
+     , denotadas por
+     <i>
+      u, v
+     </i>
+     e
+     <i>
+      w
+     </i>
+     respectivamente, em uma escala de tons na qual os tons mais claros correspondem a velocidades mais baixas, conforme indicado nas legendas. Esta figura permite descrever o movimento do fluido pois os valores de
+     <i>
+      u, v
+     </i>
+     e
+     <i>
+      w
+     </i>
+     retratam os valores da velocidade do fluido ao longo de cada um dos eixos, enquanto seus sinais indicam o sentido o movimento ao longo dos eixos. Ao longo do eixo
+     <i>
+      X
+     </i>
+     , nas regiões mais próximas às paredes a velocidade do fluido é menor devido à reflexão nas paredes da caixa. De fato, próximo às paredes observa-se valores negativos para a componente
+     <i>
+      u
+     </i>
+     da velocidade indicando a colisão do fluido com as paredes localizadas no eixo
+     <i>
+      Z
+     </i>
+     . Ao analisar, em conjunto com a componente
+     <i>
+      u
+     </i>
+     , o valores e a direção da componente da velocidade ao longo do eixo
+     <i>
+      Y
+     </i>
+     (
+     <i>
+      υ
+     </i>
+     ), obtém-se uma imagem bidimensional do movimento: o fluido produz vórtices no plano
+     <i>
+      XY
+     </i>
+     ao colidir com as paredes da caixa, sendo que, em uma das paredes a componente
+     <i>
+      υ
+     </i>
+     da velocidade assume valores negativos. Os resultados obtidos para o movimento do fluido no plano
+     <i>
+      XY
+     </i>
+     são consistents com outros trabalhos disponíveis na literatura para o caso bidimensional. Resultados para o caso tridimensional são escassos sendo que, muitas vezes, o caso tridimensional é analisado através de extrapolações do caso em duas dimensões. Como na simulação aqui apresentada as três componentes da velocidade são numericamente calculadas, é possível também analisar a componente da velocidade ao longo do eixo
+     <i>
+      Z
+     </i>
+     . Estas componentes podem ser visualizadas na
+     <a class="open-asset-modal" data-target="#ModalFiga13fig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     . Os resultados mostram que no plano
+     <i>
+      XZ
+     </i>
+     também ocorre a formação de vórtices, porém ao contrário do plano
+     <i>
+      XY
+     </i>
+     onde dois os vórtices possuem o mesmo sentido, no plano
+     <i>
+      XZ
+     </i>
+     são formados quatro vórtices a partir dos cantos superiores da caixa.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="a13fig03">
+     <a name="a13fig03">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFiga13fig03" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A partir das componentes da velocidade é possível construir o gráfico da velocidade resultante do fluido no interior da caixa, conforme mostrado na
+     <a class="open-asset-modal" data-target="#ModalFiga13fig04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     . Pode-se perceber que a interação entre os vórtices formados nos planos
+     <i>
+      XY
+     </i>
+     e
+     <i>
+      XZ
+     </i>
+     produz um vórtice central o qual forma-se a partir dos cantos superiores da caixa. Este efeito também pode ser visualizado a partir das superfícies de correntes na
+     <a class="open-asset-modal" data-target="#ModalFiga13fig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     . As superfícies circulares mostradas na figura indicam alguns pontos os valores das velocidades
+     <i>
+      u
+     </i>
+     e
+     <i>
+      υ
+     </i>
+     possuem o mesmo módulo. Através destas, é possível acompanhar o movimento no interior da caixa e visualizar o vórtice interior. A figura também ilustra a influência da componente vertical da velocidade sobre o sistema. Nota-se ainda que os valores da componente
+     <i>
+      w
+     </i>
+     da velocidade possui valores consideravelmente menores do que as demais velocidades.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="a13fig04">
+     <a name="a13fig04">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFiga13fig04" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="a13fig05">
+     <a name="a13fig05">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFiga13fig05" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Os resultados mostrados na
+     <a class="open-asset-modal" data-target="#ModalFiga13fig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     também ilustram como as componentes da velocidade são dependentes dos valores das pressões no sistema, evidenciado matematicamente pelas Eqs. (24), (25) e (27). Comparando com as
+     <a class="open-asset-modal" data-target="#ModalFiga13fig03" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 3
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFiga13fig05" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      5
+     </a>
+     é possível visualizar que os movimentos circulares internos que ocorrem a partir dos cantos superiores da caixa, onde estão os pontos que contêm os valores extremos das pressões. Ressalta-se ainda que estes pontos são justamente onde a força exterior que rege o movimento na tampa da caixa é aplicada. Pode-se observar ainda que nos pontos onde acontece a colisão do fluido com a parede a pressão é maior, como mostra a
+     <a class="open-asset-modal" data-target="#ModalFiga13fig06" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig 6
+     </a>
+     . Percebe-se também que no momento de estabilidade do sistema a pressão é distribuída em todo o sistema, fazendo com que os valores de tais variáveis sejam menores nos cantos superiores.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="a13fig06">
+     <a name="a13fig06">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFiga13fig06" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      5. Conclusões
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho foi apresentada uma abordagem para a solução de problemas de escoamento do fluido com atenção ao problema da cavidade cúbica com tampa deslizante. As equações de Navier-Stokes que governam o movimento do fluido foram discretizadas utilizando o método de diferenças finitas e resolvidas utilizando o método de relaxação SOR (
+     <i>
+      Successive Over Relaxation
+     </i>
+     ) para a equação de Poisson para pressão. Os resultados das simulações numéricas foram apresentados na forma de gráficos para a velocidade e pressão no fluido.Além disso, foram apresentadas as superfícies de corrente que permitem construir a representação do movimento do fluido na cavidade, na qual percebe-se a formação de vórtices tridimensionais a partir dos cantos da cavidade próximos à tampa.
+    </p>
+    <p>
+    </p>
+    <p>
+     [9] VisIt é uma ferramente livre e interativa para visualização e análise gráfica de dados científicos. Permite ao usuário gerar a visualição de seus dados, compor animações temporais e manipulá-los de forma gráfica.
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 9/4/2010; Aceito em 27/5/2011; Publicado em 8/7/2011
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] A. Fortuna,
+        <i>
+         Técnicas Computacionais para Dinâmica dos Fluidos: Conceitos Básicos e Aplicações
+        </i>
+        (Editora EDUSP,  São Paulo,  2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] R.L. Rizzi,
+        <i>
+         Modelo Computacional Paralelo para a Hidrodinâmica e para   o Transporte de Substâncias Bidimensional e Tridimensional
+        </i>
+        Tese de Doutorado,  UFGRS,  2002.
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] J.M. McDonough,
+        <i>
+         Lectures on Computational Numerical Analysis of Partial Differencial Equations
+        </i>
+        , Disponível em http://www.engr.uky.edu/~acfd/,  acessado   em 7/2/2007.
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] J.D. Anderson,
+        <i>
+         Computational Fluid Dynamics
+        </i>
+        (McGraw-Hill,  New York,  1995).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] A.C.H. Marques e J.L. Doricio,  in:
+        <i>
+         XXVIII Congresso Brasileiro de Matemática Aplicada e Computacional
+        </i>
+        , São Paulo,  2005.
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] A.C.H. Marques J.L. Doricio,  in:
+        <i>
+         XXVI Iberian Latin American Congress on Computational Methods in Engineering
+        </i>
+        , Guarapari,  2005,  p. 411.
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] C.H. Bruneau and M. Saad,  Computers and Fluids,
+        <b>
+         35
+        </b>
+        , 326 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] T.P. Chiang and W.H. Sheu,  Computational Mechanics
+        <b>
+         20
+        </b>
+        , 379 (1997).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <li>
+    <span class="xref big">
+     1
+    </span>
+    <div>
+     E-mail:
+    </div>
+    <div>
+     <a href="mailto:reginaldo.zara@unioeste.br">
+      reginaldo.zara@unioeste.br
+     </a>
+     .
+    </div>
+   </li>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        02 Set 2011
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Jun 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        09 Abr 2010
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        27 Maio 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

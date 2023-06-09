@@ -1,0 +1,2503 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 33 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2011
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172011000100019" target="_blank">
+    https://doi.org/10.1590/S1806-11172011000100019
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172011000100019">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Desenvolvimento de software de análise gráfica para planos de radioproteção
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Software development of graphical analysis to radioprotection plans
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Ronaldo Celso Viscovini
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Maringá,  
+          ,  Paraná,  
+        ,  Universidade Estadual de Maringá,  Departamento de Ciências ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Nilson Benedito Lopes
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Maringá,  
+          ,  Paraná,  
+        ,  Universidade Estadual de Maringá,  Departamento de Física ,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Daniel Pereira
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Campinas,  
+          ,  São Paulo,  
+        ,  Universidade Estadual de Campinas,  Instituto de Física Gleb Wathagin ,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Neste trabalho desenvolvemos um software que calcula os valores das doses externas numa instalação radioativa, e os apresenta graficamente em curvas de nível de doses (isodoses), utilizando o método geométrico. Ele foi criado para auxiliar as aulas sobre radioproteção, mas pode ser utilizado para análise de planos de radioproteção. O software foi escrito para a versão 6.0 do aplicativo Mathematica® da Wolfram Research para o cálculo algébrico e numérico, mas pode ser facilmente traduzido para Maple®, Matlab® ou mesmo Delphi®. Para demonstrar sua aplicação, este software é utilizado para elaborar o plano de radioproteção de um laboratório que utiliza um laser de gás isotópico (14CO²).
+    </p>
+    <p>
+     plano de radioproteção; física médica; mathematica; laser
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this work we developed a software that calculates the external doses in a plant radioactive, and presented graphically in contour dose (isodoses) using the geometric method. It was created to help the lessons of radioprotection, but can be used to review plans for radioprotection. The software was written for version 6.0 of the application Mathematica® from Wolfram Research for the algebraic and numerical calculation, but can be easily translated into Maple®, Matlab® or Delphi®. To demonstrate its application, this software is used to prepare the plan for radioprotection of a laboratory that uses a gas isotopic laser (14CO²).
+    </p>
+    <p>
+     radioprotection plan; medical physics; mathematica; laser
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      DESENVOLVIMENTO EM ENSINO DE FÍSICA
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Desenvolvimento de
+      <i>
+       software
+      </i>
+      de análise gráfica para planos de radioproteção
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Software development of graphical analysis to radioprotection plans
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Ronaldo Celso ViscoviniI,
+     <span class="ref footnote">
+      <sup class="xref">
+       <b>
+        1
+       </b>
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        <strong class="fn-title">
+         1
+        </strong>
+        E-mail: 
+        viscovin@gmail.com.
+       </span>
+      </span>
+     </span>
+     ; Nilson Benedito Lopes
+     <sup>
+      <b>
+       II
+      </b>
+     </sup>
+     ; Daniel Pereira
+     <sup>
+      <b>
+       III
+      </b>
+     </sup>
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      I
+     </sup>
+     Departamento de Ciências, Universidade Estadual de Maringá, Maringá, PR, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      II
+     </sup>
+     Departamento de Física, Universidade Estadual de Maringá, Maringá, PR, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      III
+     </sup>
+     Instituto de Física "Gleb Wathagin", Universiade Estadual de Campinas, Campinas, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho desenvolvemos um
+     <i>
+      software
+     </i>
+     que calcula os valores das doses externas numa instalação radioativa, e os apresenta graficamente em curvas de nível de doses (isodoses), utilizando o método geométrico. Ele foi criado para auxiliar as aulas sobre radioproteção, mas pode ser utilizado para análise de planos de radioproteção. O
+     <i>
+      software
+     </i>
+     foi escrito para a versão 6.0 do aplicativo Mathematica® da Wolfram Research para o cálculo algébrico e numérico, mas pode ser facilmente traduzido para Maple®, Matlab® ou mesmo Delphi®. Para demonstrar sua aplicação, este
+     <i>
+      software
+     </i>
+     é utilizado para elaborar o plano de radioproteção de um laboratório que utiliza um laser de gás isotópico (
+     <sup>
+      14
+     </sup>
+     CO
+     <sup>
+      2
+     </sup>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     plano de radioproteção, física médica, mathematica, laser.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     In this work we developed a
+     <i>
+      software
+     </i>
+     that calculates the external doses in a plant radioactive, and presented graphically in contour dose (isodoses) using the geometric method. It was created to help the lessons of radioprotection, but can be used to review plans for radioprotection. The
+     <i>
+      software
+     </i>
+     was written for version 6.0 of the application Mathematica® from Wolfram Research for the algebraic and numerical calculation, but can be easily translated into Maple®, Matlab® or Delphi®. To demonstrate its application, this
+     <i>
+      software
+     </i>
+     is used to prepare the plan for radioprotection of a laboratory that uses a gas isotopic laser (
+     <sup>
+      14
+     </sup>
+     CO
+     <sup>
+      2
+     </sup>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     radioprotection plan, medical physics, mathematica, laser.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Desde os experimentos com os misteriosos raios X realizados por Wilhelm Conrad Röntgen no final do século XIX, as radiações ionizantes têm ganhado cada vez mais espaço na vida moderna, especialmente na medicina e nos laboratórios de pesquisa, mas a utilização dessas radiações pode causar efeitos deletérios aos seres vivos. Por isso é importante a confecção e execução de um preciso plano de radioproteção, buscando minimizar os danos. Acadêmicos de graduação e/ou pós-graduação em física médica, radiologia e outras áreas que podem usar essas radiações precisam aprender a elaborar este planos, utilizando geralmente algumas considerações físicas e muito cálculo manual.
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho pretende apresentar uma nova abordagem didática para confecção de planos de radioproteção, através do desenvolvimento de um programa (
+     <i>
+      software
+     </i>
+     ) que calcula os valores das doses numa instalação radioativa, e apresentando-os graficamente em curvas de nível de dose, conhecidas como isodoses. Este
+     <i>
+      software
+     </i>
+     foi escrito para a versão 6.0 do aplicativo Mathematica da Wolfram Research [1] para o cálculo algébrico e numérico.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Elaboração de um plano de radioproteção
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Na elaboração de um plano de radioproteção para fontes de raios X é preciso calcular o valor das doses externas (
+     <i>
+      D
+     </i>
+     ). Esta grandeza radiológica, apresentada nas Disposições Transitórias da Portaria MS/SVS n. 453/98 [2], é utilizada em medidas de monitoração de ambientes de trabalho e de sua circunvizinhança. As doses radioativas externas são a energia disponível ambientalmente (
+     <i>
+      dE
+     </i>
+     ) para ser absorvida por unidade massa (
+     <i>
+      dm
+     </i>
+     ), ou seja
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="821cdbc58344800abd13a593e2cadd78dd337fa1">
+     <a name="821cdbc58344800abd13a593e2cadd78dd337fa1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg821cdbc58344800abd13a593e2cadd78dd337fa1" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/821cdbc58344800abd13a593e2cadd78dd337fa1.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     No Sistema Internacional (SI), a unidade de dose externa é denominada Sievert (Sv), que é equivalente a joule por quilograma.
+    </p>
+    <p>
+    </p>
+    <p>
+     O valor da dose depende do tipo e da atividade da fonte e de fatores externos, como a distância da fonte e a existência de obstáculos (blindagens). Na
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     , temos os elementos básicos para um plano de radioproteção: fontes, distâncias e blindagem.
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Como é inviável calcular o valor das doses para cada uma das infinitas posições da região vizinha à fonte de radiação, são escolhidos alguns pontos estratégicos. O conhecimento dos valores das doses para posições chaves geralmente é suficiente para garantir a eficiência de um plano de radioproteção, mas um mapa completo destes valores seria muito útil para a visualização de sua distribuição espacial, principalmente para acadêmicos.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Calculo do valor da dose
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     São três os fatores que influenciam o valor da dose numa determinada posição: a atividade da fonte, a distância até a fonte e a existência de blindagens [3].
+    </p>
+    <p>
+    </p>
+    <p>
+     Atividade é o número de desintegrações nucleares que ocorrem por unidade de tempo em uma quantidade de substância radioativa. No sistema internacional de unidades (SI), a atividade radioativa é medida em Bequeréis (Bq), cuja unidade equivale a 1 desintegração por segundo. Outra unidade muito usada é Curie (Ci) onde 1 Ci = 3,7 x 10 Bq.
+    </p>
+    <p>
+    </p>
+    <p>
+     Pode-se calcular o valor da dose com base na atividade, mas isto depende do tipo da fonte utilizada. Neste trabalho, para caracterizar a fonte, será utilizado o valor da dose externa padrão a 1 m da fonte (
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     ), sem blindagem.
+    </p>
+    <p>
+    </p>
+    <p>
+     No vácuo, a radiação espalha-se homogeneamente e a área atingida aumenta com o quadrado da distância da fonte. Por isso, desconsiderando a absorção do meio, o valor da dose diminui na mesma proporção, ou seja, a dose (
+     <i>
+      D
+     </i>
+     ) a uma distância (
+     <i>
+      r
+     </i>
+     ) é dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="8f37f661327b66a070d7e4d84c154ae5ece20b65">
+     <a name="8f37f661327b66a070d7e4d84c154ae5ece20b65">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg8f37f661327b66a070d7e4d84c154ae5ece20b65" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/8f37f661327b66a070d7e4d84c154ae5ece20b65.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Quando a radiação ionizante atravessa um meio material (blindagem), além da redução normal da dose pelo aumento da distância, ocorre a redução por absorção do meio. Como a redução do valor da dose por unidade de comprimento da blindagem (
+     <i>
+      dD/dl
+     </i>
+     ) é proporcional à dose (
+     <i>
+      D
+     </i>
+     ), temos a equação diferencial
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="cb8c73ff8ce05e8d1fd5711dd06e03d266a30b64">
+     <a name="cb8c73ff8ce05e8d1fd5711dd06e03d266a30b64">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgcb8c73ff8ce05e8d1fd5711dd06e03d266a30b64" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/cb8c73ff8ce05e8d1fd5711dd06e03d266a30b64.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     cuja solução é
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="98e7e5680010a653817a715e13e80d758f35f7e9">
+     <a name="98e7e5680010a653817a715e13e80d758f35f7e9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg98e7e5680010a653817a715e13e80d758f35f7e9" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/98e7e5680010a653817a715e13e80d758f35f7e9.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde
+     <i>
+      l
+     </i>
+     é a espessura da blindagem e μ é o coeficiente de absorção, ou
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="a4f6fdd3a86b20ca2109be91473be196d9599610">
+     <a name="a4f6fdd3a86b20ca2109be91473be196d9599610">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImga4f6fdd3a86b20ca2109be91473be196d9599610" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/a4f6fdd3a86b20ca2109be91473be196d9599610.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     onde λ é a espessura da camada semi-redutora, sendo λ = ln(2).μ
+     <sup>
+      -1
+     </sup>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Para calcular o valor da dose é preciso acompanhar geometricamente o caminho da radiação, verificando se ela entra e/ou sai de regiões de blindagem.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      4. Geometria da blindagem
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A propagação das radiações ionizantes é retilínea e a seção da superfície de uma blindagem plana é um segmento de reta, conforme
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Saber se uma radiação saindo de uma fonte (
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ) e atingindo uma determinada posição (
+     <b>
+      r
+     </b>
+     ), passa por uma superfície plana (
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      2
+     </sub>
+     ) é geometricamente equivalente a verificar o encontro de dois segmentos de retas (
+     <b>
+      r
+     </b>
+     <sub>
+      <i>
+       C
+      </i>
+     </sub>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando as equações dos dois segmentos de retas (
+     <i>
+      R
+      <sub>
+       A
+      </sub>
+     </i>
+     e
+     <i>
+      R
+      <sub>
+       B
+      </sub>
+     </i>
+     )
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      R
+      <sub>
+       A
+      </sub>
+     </i>
+     ⇒
+     <b>
+      r
+     </b>
+     =
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     + α(
+     <b>
+      r
+     </b>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ),
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      R
+      <sub>
+       B
+      </sub>
+     </i>
+     ⇒
+     <b>
+      r
+     </b>
+     =
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     + β(
+     <b>
+      r
+     </b>
+     <sub>
+      2
+     </sub>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     Para que ocorra o encontro dos dois segmentos de retas é necessário que
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      R
+      <sub>
+       A
+      </sub>
+     </i>
+     ⇒
+     <b>
+      r
+     </b>
+     =
+     <b>
+      r
+     </b>
+     <sub>
+      <i>
+       C
+      </i>
+     </sub>
+     para 0 &lt; α 1,
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      R
+      <sub>
+       B
+      </sub>
+     </i>
+     ⇒
+     <b>
+      r
+     </b>
+     =
+     <b>
+      r
+     </b>
+     <sub>
+      <i>
+       C
+      </i>
+     </sub>
+     para 0 &lt; β 1,
+    </p>
+    <p>
+    </p>
+    <p>
+     ou seja
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     + α(
+     <b>
+      r
+     </b>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ) =
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     + β(
+     <b>
+      r
+     </b>
+     <sub>
+      2
+     </sub>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     ),
+    </p>
+    <p>
+    </p>
+    <p>
+     α(
+     <b>
+      r
+     </b>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ) + β(
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      2
+     </sub>
+     ) = (
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     )
+    </p>
+    <p>
+    </p>
+    <p>
+     sendo
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      r
+     </b>
+     = (
+     <i>
+      x
+     </i>
+     ,
+     <i>
+      y
+     </i>
+     ),
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     = (
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ),
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      r
+     </b>
+     <sub>
+      1
+     </sub>
+     = (
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      1
+     </sub>
+     ), e
+     <b>
+      r
+     </b>
+     <sub>
+      2
+     </sub>
+     = (
+     <i>
+      x
+     </i>
+     <sub>
+      2
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      2
+     </sub>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     Temos o sistema
+    </p>
+    <p>
+    </p>
+    <p>
+     α(
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     ) + β(
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      2
+     </sub>
+     ) = (
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     )
+    </p>
+    <p>
+    </p>
+    <p>
+     α(
+     <i>
+      y
+     </i>
+     -
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ) + β(
+     <i>
+      y
+     </i>
+     <sub>
+      1
+     </sub>
+     -
+     <i>
+      y
+     </i>
+     <sub>
+      2
+     </sub>
+     ) = (
+     <i>
+      y
+     </i>
+     <sub>
+      1
+     </sub>
+     -
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     )
+    </p>
+    <p>
+    </p>
+    <p>
+     Cuja solução é
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="2dc30316f86203c822416cd3032e8b2fe8c8419a">
+     <a name="2dc30316f86203c822416cd3032e8b2fe8c8419a">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg2dc30316f86203c822416cd3032e8b2fe8c8419a" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/2dc30316f86203c822416cd3032e8b2fe8c8419a.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     com a condição de
+    </p>
+    <p>
+    </p>
+    <p>
+     (
+     <i>
+      x
+     </i>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      0
+     </sub>
+     )(
+     <i>
+      y
+     </i>
+     <sub>
+      1
+     </sub>
+     -
+     <i>
+      y
+     </i>
+     <sub>
+      2
+     </sub>
+     ) - (
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     -
+     <i>
+      x
+     </i>
+     <sub>
+      2
+     </sub>
+     )(
+     <i>
+      y
+     </i>
+     -
+     <i>
+      y
+     </i>
+     <sub>
+      0
+     </sub>
+     ) ≠ 0
+    </p>
+    <p>
+    </p>
+    <p>
+     que é valida para retas não colineares.
+    </p>
+    <p>
+    </p>
+    <p>
+     Importante observar que a distância (
+     <i>
+      R
+     </i>
+     <sub>
+      0
+      <i>
+       C
+      </i>
+     </sub>
+     ) entre a fonte (
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ) e a intersecção (
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ) é dada por
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      R
+     </i>
+     <sub>
+      0
+      <i>
+       C
+      </i>
+     </sub>
+     = α.||
+     <b>
+      r
+     </b>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ||.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para calcular o valor de no Mathematica, criou-se a função Alfa, com a seguinte sintaxe:
+    </p>
+    <p>
+    </p>
+    <p>
+     Clear[Alfa,x,y,x0,y0,x1,y1,x2,y2];
+    </p>
+    <p>
+    </p>
+    <p>
+     Alfa[x_,y_,x0_,y0_,
+    </p>
+    <p>
+    </p>
+    <p>
+     x1_,y1_,x2_,y2_]:=
+    </p>
+    <p>
+    </p>
+    <p>
+     Module[{A,B,C}, C=(x-x0)(y1-y2)-(x1-x2)(y-y0);
+    </p>
+    <p>
+    </p>
+    <p>
+     If[C==0,0,(
+    </p>
+    <p>
+    </p>
+    <p>
+     A=((x1-x0)(y1-y2)-(x1-x2)(y1-y0))/C;
+    </p>
+    <p>
+    </p>
+    <p>
+     B=((x-x0)(y1-y0)-(x1-x0)(y-y0))/C;
+    </p>
+    <p>
+    </p>
+    <p>
+     If[0&lt;A&lt;1 &amp;&amp; 0&lt;B&lt;1,A,0])]];
+    </p>
+    <p>
+    </p>
+    <p>
+     Dependendo da forma da blindagem a radiação pode atravessar uma ou mais superfície até a posição analisada. Se a blindagem tiver formato convexo teremos três opções:
+    </p>
+    <p>
+    </p>
+    <p>
+     a) A posição analisada é externa à blindagem e a radiação não atravessa nenhuma superfície, sendo que a distância percorrida dentro da blindagem é nula (Δ
+     <i>
+      x
+     </i>
+     = 0).
+    </p>
+    <p>
+    </p>
+    <p>
+     b) A posição analisada é interna à blindagem e a radiação atravessa uma superfície, sendo que a distância percorrida dentro da blindagem é a diferença entre a distância fonte ⇔ posição analisada (||
+     <b>
+      r
+     </b>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ||) e a distância ponto de intersecção ⇔ posição analisada (
+     <i>
+      R
+     </i>
+     <sub>
+      0
+      <i>
+       C
+      </i>
+     </sub>
+     ), ou seja: Δ
+     <i>
+      x
+     </i>
+     = δ.||
+     <b>
+      r
+     </b>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ||, onde δ = 1 - α.
+    </p>
+    <p>
+    </p>
+    <p>
+     c) A posição analisada é externa à blindagem e a radiação atravessa duas superfícies, sendo que a distância percorrida dentro da blindagem a diferença entre os pontos de intersecção das duas superfícies, ou seja: Δ
+     <i>
+      x
+     </i>
+     = δ.||
+     <b>
+      r
+     </b>
+     -
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ||, onde δ = |α
+     <sub>
+      1
+     </sub>
+     - α
+     <sub>
+      2
+     </sub>
+     |. e α
+     <sub>
+      1
+     </sub>
+     e α
+     <sub>
+      2
+     </sub>
+     são os valores de α para as duas superfícies.
+    </p>
+    <p>
+    </p>
+    <p>
+     Como a grande maioria das blindagens é composta por paredes (paralelepípedos), considerar-se-á as secções transversais como quadriláteros (regulares ou não) com vértices: (
+     <i>
+      x
+     </i>
+     <sub>
+      1
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      1
+     </sub>
+     ), (
+     <i>
+      x
+     </i>
+     <sub>
+      2
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      2
+     </sub>
+     ), (
+     <i>
+      x
+     </i>
+     <sub>
+      3
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      3
+     </sub>
+     ) e (
+     <i>
+      x
+     </i>
+     <sub>
+      4
+     </sub>
+     ,
+     <i>
+      y
+     </i>
+     <sub>
+      4
+     </sub>
+     ). Como não é possível determinar de antemão quais superfícies serão atravessadas, é necessário analisar os quatro segmentos de reta. Para o cálculo de valor de para uma parede de blindagem, foi criada a função Delta, com a seguinte sintaxe:
+    </p>
+    <p>
+    </p>
+    <p>
+     Clear[Delta,x,y,x0,y0,
+    </p>
+    <p>
+    </p>
+    <p>
+     x1,y1,x2,y2,x3,y3,x4,y4];
+    </p>
+    <p>
+    </p>
+    <p>
+     Delta[{x_,y_},{x0_,y0_},
+    </p>
+    <p>
+    </p>
+    <p>
+     {{x1_,y1_},{x2_,y2_},
+    </p>
+    <p>
+    </p>
+    <p>
+     {x3_,y3_},{x4_,y4_}}]:=
+    </p>
+    <p>
+    </p>
+    <p>
+     Module[{A1,A2,A3,A4},
+    </p>
+    <p>
+    </p>
+    <p>
+     A1=Alfa[x,y,x0,y0,x1,y1,x2,y2];
+    </p>
+    <p>
+    </p>
+    <p>
+     A2=Alfa[x,y,x0,y0,x2,y2,x3,y3];
+    </p>
+    <p>
+    </p>
+    <p>
+     A3=Alfa[x,y,x0,y0,x3,y3,x4,y4];
+    </p>
+    <p>
+    </p>
+    <p>
+     A4=Alfa[x,y,x0,y0,x4,y4,x1,y1];
+    </p>
+    <p>
+    </p>
+    <p>
+     If[A1!=0,If[A2!=0,Abs[A1-A2],
+    </p>
+    <p>
+    </p>
+    <p>
+     If[A3!=0,Abs[A1-A3],
+    </p>
+    <p>
+    </p>
+    <p>
+     If[A4!=0,Abs[A1-A3],1-A1]]],
+    </p>
+    <p>
+    </p>
+    <p>
+     If[A2!=0,If[A3!=0,Abs[A2-A3],
+    </p>
+    <p>
+    </p>
+    <p>
+     If[A4!=0,Abs[A2-A4],1-A2]],
+    </p>
+    <p>
+    </p>
+    <p>
+     If[A3!=0,If[A4!=0,Abs[A3-A4],1-A3],
+    </p>
+    <p>
+    </p>
+    <p>
+     If[A4!=0,1-A4,0]]]]];
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando uma planta de instalação com uma fonte (
+     <b>
+      r
+     </b>
+     <sub>
+      0
+     </sub>
+     ) e diversas paredes (blindagens), com diferentes espessuras (
+     <i>
+      l
+     </i>
+     <sub>
+      1
+     </sub>
+     ,
+     <i>
+      l
+     </i>
+     <sub>
+      2
+     </sub>
+     ,
+     <i>
+      l
+     </i>
+     <sub>
+      3
+     </sub>
+     , ...) e valores de coeficientes de absorção (μ
+     <sub>
+      1
+     </sub>
+     , μ
+     <sub>
+      2
+     </sub>
+     , μ
+     <sub>
+      3
+     </sub>
+     , ...) tem-se que a função para a dose (D(
+     <b>
+      r
+     </b>
+     )) é
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="4d09c8e77fe7354ec88ceb0b3cf1597778240fc8">
+     <a name="4d09c8e77fe7354ec88ceb0b3cf1597778240fc8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg4d09c8e77fe7354ec88ceb0b3cf1597778240fc8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/4d09c8e77fe7354ec88ceb0b3cf1597778240fc8.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Traduzindo para o Mathematica, tem-se a função
+     <i>
+      Dose
+     </i>
+     cuja sintaxe é:
+    </p>
+    <p>
+    </p>
+    <p>
+     Clear[Dose,x,y,K0,x0,y0,P];
+    </p>
+    <p>
+    </p>
+    <p>
+     Dose[x_,y_,{K0_,{x0_,y0_}},P_]:=
+    </p>
+    <p>
+    </p>
+    <p>
+     Module[{r2,r,L,i},
+    </p>
+    <p>
+    </p>
+    <p>
+     r2=(x-x0)^2+(y-y0)^2;
+    </p>
+    <p>
+    </p>
+    <p>
+     r=Sqrt[r2];
+    </p>
+    <p>
+    </p>
+    <p>
+     L=Length[P];
+    </p>
+    <p>
+    </p>
+    <p>
+     If[r2==0,0,K0/(r2)*
+    </p>
+    <p>
+    </p>
+    <p>
+     If[L&gt;0,Exp[-Sum[P[[i,1]]*r*
+    </p>
+    <p>
+    </p>
+    <p>
+     Delta[{x,y},{x0,y0},P[[i,2]]],
+    </p>
+    <p>
+    </p>
+    <p>
+     {i,L}]],1]]];
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      5. Teste numa instalação radioativa
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Este programa foi utilizado para auxiliar o plano de radioproteção do laboratório de Lasers de TeraHertz (T-Ray) do Departamento de Ciências (DCI) do Campus Regional de Goioerê (CRG) da Universidade Estadual de Maringá (UEM) [4-6]. O laboratório possui um tubo Laser Isotópico de
+     <sup>
+      14
+     </sup>
+     CO
+     <sub>
+      2
+     </sub>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     O laboratório de Lasers de Terahertz (T-Ray) está instalado numa sala de 67,5 m
+     <sup>
+      2
+     </sup>
+     , (9,0 x 7,5 m) com duas divisórias internas, conforme mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     . As paredes externas são de alvenaria (20 cm) e as divisórias internas e as portas são de madeira (5 cm).
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O carbono 14 (
+     <sup>
+      14
+     </sup>
+     C) é um isótopo emissor de partículas β
+     <sup>
+      -
+     </sup>
+     , que são facilmente blindadas pelo vidro pirex do tubo, pela estrutura metálica, pelo líquido refrigerante circulante em torno do tubo ou pelo ar circundante. As partículas β
+     <sup>
+      -
+     </sup>
+     , quando blindadas, podem geram raios X. Para efeito de análise pode-se comparar o tubo laser de
+     <sup>
+      14
+     </sup>
+     CO
+     <sub>
+      2
+     </sub>
+     com um aparelho de raios X. A atividade radioativa do gás de
+     <sup>
+      14
+     </sup>
+     CO
+     <sub>
+      2
+     </sub>
+     do laser é avaliada em 70 GBq, sendo que essas partículas emitidas têm energia cinética entre 0 e 156 keV. Por isso este laser será comparado com o aparelho de raios X operando com a tensão de 80 kV e corrente continua (
+     <i>
+      i
+     </i>
+     ) de 11,2 nA, equivalente a uma corrente de 7,0 x 10
+     <sup>
+      10
+     </sup>
+     elétrons por segundo.
+    </p>
+    <p>
+    </p>
+    <p>
+     O Ministério da Saúde, na Portaria 453/98 estabelece as diretrizes básicas de proteção radiológica em radiodiagnóstico médico e odontológico. Nele são apresentados os rendimentos aceitáveis para os tubos de raios X brasileiros produzir
+     <i>
+      kerma
+     </i>
+     no ar. O
+     <i>
+      kerma
+     </i>
+     (
+     <i>
+      Kinetic Energy Released in Matter
+     </i>
+     ) é a soma das energias cinéticas iniciais de todas as partículas por unidade de massa do material; sua unidade é Gray (Gy = J/kg).
+    </p>
+    <p>
+    </p>
+    <p>
+     Para tensão de 80 kV, o rendimento (ρ) dos tubos deve estar entre 2,4 a 6,4 mGy/(mA.min.m
+     <sup>
+      2
+     </sup>
+     . O laser de
+     <sup>
+      14
+     </sup>
+     CO
+     <sub>
+      2
+     </sub>
+     pode ser considerado, na melhor das hipóteses, um tubo de raios X de baixa eficiência e, por isso será usar o valor de rendimento mínimo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Supondo-se um turno diário de trabalho de 8 horas, 5 dias por semana e 52 semanas por ano (Δt = 124800 min), tem-se o valor do
+     <i>
+      kerma
+     </i>
+     anual para o tubo laser (
+     <i>
+      K
+     </i>
+     <sub>
+      0
+     </sub>
+     =
+     <i>
+      i
+     </i>
+     .ρ.Δ
+     <i>
+      t
+     </i>
+     ) igual a 3,36 mGy/(ano.m
+     <sup>
+      2
+     </sup>
+     ), à distância de 1 metro da fonte.
+    </p>
+    <p>
+    </p>
+    <p>
+     A mesma portaria estabelece o fator de conversão (
+     <i>
+      f
+     </i>
+     ) entre dose externa (
+     <i>
+      D
+     </i>
+     ) e
+     <i>
+      kerma
+     </i>
+     no ar (
+     <i>
+      k
+     </i>
+     ) sendo
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="bc587c5c2c7e7d7c64d8427140ed8177558bdef5">
+     <a name="bc587c5c2c7e7d7c64d8427140ed8177558bdef5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgbc587c5c2c7e7d7c64d8427140ed8177558bdef5" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/8nT5Gn4BwbYBSJmCkfkGTcq/bc587c5c2c7e7d7c64d8427140ed8177558bdef5.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Portanto, a dose externa padrão (
+     <i>
+      D
+     </i>
+     <sub>
+      0
+     </sub>
+     ) a um metro da fonte será 3,84 mSv/(ano.m
+     <sup>
+      2
+     </sup>
+     ). Como o tubo laser é uma fonte extensa com 1,27 m de comprimento, ele será simulado como sendo três fontes puntiformes de 1,28 mSv/(ano.m
+     <sup>
+      2
+     </sup>
+     ), distantes 50 cm uma da outra, numa linha reta sobre a mesa óptica.
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando os valores dos coeficientes de absorção (μ) típicos para paredes de tijolos cerâmicos (μ = 24 m
+     <sup>
+      -1
+     </sup>
+     ) e de madeira (μ = 8 m
+     <sup>
+      -1
+     </sup>
+     ), podemos completar o
+     <i>
+      software
+     </i>
+     , conforme segue:
+    </p>
+    <p>
+    </p>
+    <p>
+     Clear[Laser, Mesa, Fontes, Paredes,
+    </p>
+    <p>
+    </p>
+    <p>
+     Textos, Isodoses, nPontos];
+    </p>
+    <p>
+    </p>
+    <p>
+     Laser =
+    </p>
+    <p>
+    </p>
+    <p>
+     Rectangle[{4.9,1.4},{6.1,1.6}];
+    </p>
+    <p>
+    </p>
+    <p>
+     Mesa =
+    </p>
+    <p>
+    </p>
+    <p>
+     Rectangle[{2.2,1.1},{6.7,2.6}];
+    </p>
+    <p>
+    </p>
+    <p>
+     Fontes =
+    </p>
+    <p>
+    </p>
+    <p>
+     {{1.27,{5.0,1.5}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {1.27,{5.5,1.5}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {1.27,{6.0,1.5}}};
+    </p>
+    <p>
+    </p>
+    <p>
+     Paredes =
+    </p>
+    <p>
+    </p>
+    <p>
+     {{24,{{0.0,0.0},{9.0,0.0},
+    </p>
+    <p>
+    </p>
+    <p>
+     {9.0,0.2},{0.0,0.2}}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {24,{{0.0,7.5},{9.0,7.5},
+    </p>
+    <p>
+    </p>
+    <p>
+     {9.0,7.3},{0.0,7.3}}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {24,{{0.0,0.9},{0.2,0.9},
+    </p>
+    <p>
+    </p>
+    <p>
+     {0.2,6.4},{0.0,6.4}}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {24,{{8.8,0.2},{9.0,0.2},
+    </p>
+    <p>
+    </p>
+    <p>
+     {9.0,7.3},{8.8,7.3}}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {08,{{3.0,3.8},{3.05,3.8},
+    </p>
+    <p>
+    </p>
+    <p>
+     {3.05,7.3},{3.0,7.3}}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {08,{{0.0,3.75},{9.0,3.75},
+    </p>
+    <p>
+    </p>
+    <p>
+     {9.0,3.8},{0.0,3.8}}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {08,{{0.0,0.2},{0.05,0.0},
+    </p>
+    <p>
+    </p>
+    <p>
+     {0.05,0.9},{0.0,0.9}}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {08,{{0.15,6.4},{0.2,6.4},
+    </p>
+    <p>
+    </p>
+    <p>
+     {0.2,7.3},{0.15,7.3}}}};
+    </p>
+    <p>
+    </p>
+    <p>
+     Isodoses={20,10,1,0.1};
+    </p>
+    <p>
+    </p>
+    <p>
+     Textos =
+    </p>
+    <p>
+    </p>
+    <p>
+     {{"Sala de Apoio",{1.5,7.1}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"Laboratório de Preparação",
+    </p>
+    <p>
+    </p>
+    <p>
+     {6.0,7.1}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"Laboratório de Pesquisa",
+    </p>
+    <p>
+    </p>
+    <p>
+     {4.5,3.6}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"ÁREA PÚBLICA",{1.5,5.5}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"ÁREA LIVRE",{5.5,5.5}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"ÁREA CONTROLADA",{2.2,3.0}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"ÁREA RESTRITA",{5.5,0.5}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"MESA",{3.0,2.2}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"LASER",{4.0,1.5}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"-A-",{5.5,0.9}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"-B-",{5.5,1.1}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"-C-",{5.5,1.3}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"20mSv",{5.5,1.7}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"10mSv",{5.5,1.9}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"1mSv",{5.5,3.2}},
+    </p>
+    <p>
+    </p>
+    <p>
+     {"0,1mSv",{5.5,6.3}}};
+    </p>
+    <p>
+    </p>
+    <p>
+     nPontos=100;
+    </p>
+    <p>
+    </p>
+    <p>
+     Show[{Graphics[
+    </p>
+    <p>
+    </p>
+    <p>
+     {GrayLevel[0.8], Mesa,
+    </p>
+    <p>
+    </p>
+    <p>
+     Black, Laser,
+    </p>
+    <p>
+    </p>
+    <p>
+     Table[Text[
+    </p>
+    <p>
+    </p>
+    <p>
+     Textos[[i,1]],Textos[[i,2]]],
+    </p>
+    <p>
+    </p>
+    <p>
+     {i,1,Length[Textos]}],
+    </p>
+    <p>
+    </p>
+    <p>
+     GrayLevel[0.8],
+    </p>
+    <p>
+    </p>
+    <p>
+     Table[Polygon[Paredes[[i,2]]],
+    </p>
+    <p>
+    </p>
+    <p>
+     {i,Length[Paredes]}]}],
+    </p>
+    <p>
+    </p>
+    <p>
+     ContourPlot[Sum[
+    </p>
+    <p>
+    </p>
+    <p>
+     Dose[x,y,Fontes[[i]],Paredes],
+    </p>
+    <p>
+    </p>
+    <p>
+     {i,1,Length[Fontes]}]==Isodoses,
+    </p>
+    <p>
+    </p>
+    <p>
+     {x,0,9},{y,0,7.5},
+    </p>
+    <p>
+    </p>
+    <p>
+     ContourStyle-&gt;Black,
+    </p>
+    <p>
+    </p>
+    <p>
+     PlotPoints-&gt;nPontos]}]
+    </p>
+    <p>
+    </p>
+    <p>
+     As variáveis Laser e Mesa são representação gráfica do Laser Isotópico de
+     <sup>
+      14
+     </sup>
+     CO
+     <sub>
+      2
+     </sub>
+     e da Mesa Óptica. A variável Fontes tem o valor da dose padrão (D
+     <sub>
+      0
+     </sub>
+     em mGy/ano) e posição (x
+     <sub>
+      0
+     </sub>
+     e y
+     <sub>
+      0
+     </sub>
+     em metros a partir do referencial) das fontes de radiação.
+    </p>
+    <p>
+    </p>
+    <p>
+     Na variável Paredes tem-se os coeficientes de absorção (μ) e os quatro vértices das quatro paredes de alvenaria, duas divisórias e duas portas, em seqüência.
+    </p>
+    <p>
+    </p>
+    <p>
+     A variável Isodoses tem-se os valores das doses que serão grafados como curvas de níveis pela função
+     <i>
+      ContourPlot
+     </i>
+     . Na variável nPontos tem-se a resolução gráfica dos contornos (
+     <i>
+      PlotPoints
+     </i>
+     ).
+    </p>
+    <p>
+    </p>
+    <p>
+     A variável Textos contém as legendas e a suas posições no gráfico.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      6. Resultados
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O resultado do processamento do
+     <i>
+      software
+     </i>
+     completo é mostrado na
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O tempo de processamento depende do número de fontes, três no exemplo, do número de paredes de blindagens, oito no exemplo, e principalmente da resolução das curvas de nível, ou seja, do valor de nPontos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Como a análise é bidimensional, o tempo é quadraticamente proporcional ao nPontos. Testado num
+     <i>
+      notebook
+     </i>
+     Asus
+     <sup>
+      ®
+     </sup>
+     EeePc 1000HA, com processador Intel
+     <sup>
+      ®
+     </sup>
+     Atom N270 de 1,6 GHz e 2 Gb memória RAM, o
+     <i>
+      software
+     </i>
+     demorou 32 minutos para nPontos de 100, 9 minutos para nPontos de 50 e 3 minutos para nPontos de 25, com resultados gráficos similares, embora com resoluções visivelmente deferentes. Isto é interessante, pois revela a possibilidade de realizar prévias com resolução e tempo reduzidos, e no final, gráficos de precisão.
+    </p>
+    <p>
+    </p>
+    <p>
+     Os valores limites de doses efetivas são estabelecidos pelo Conselho Nacional de Energia Nuclear (CNEN), em suas Diretrizes Básica de Proteção Radiológica (NN-3.01) [7-9]. Nessas diretrizes o limite para indivíduos ocupacionalmente expostos / trabalhadores é de no máximo 20 mSv/ano e, para indivíduos do público (até 1 mSv/ano). Com base nessas orientações o laboratório de Lasers de Terahertz foi dividido em quatro áreas mostradas na Fig. 4 e que são descritas a seguir:
+    </p>
+    <p>
+    </p>
+    <p>
+     1) ÁREA PÚBLICA: Área predominantemente com doses inferiores a 0,1 mSv/ano e nunca superiores a 1,0 mSv/ano, como a Sala de Apoio. Como as doses são muito baixas, não existe qualquer restrição nessa área. É interessante observar, na curva de isodose de 0,1 mSv/ano, o efeito criado pelas três diferentes fontes de radiação com diferentes distâncias até a blindagem.
+    </p>
+    <p>
+    </p>
+    <p>
+     2) ÁREA LIVRE: Com doses sempre inferiores a 1,0 mSv/ano, tem-se o Laboratório de Preparação. Apesar das doses serem menores que os limites para o público, esta área é desaconselhada para pessoas não envolvidas diretamente com a pesquisa.
+    </p>
+    <p>
+    </p>
+    <p>
+     3) ÁREA CONTROLADA: Situada no Laboratório de Pesquisa, com doses inferiores a 1,0 mSv/ano, essa área é limitada ao pessoal autorizado pelo coordenador do Laboratório, por ser a continuidade de uma área restrita.
+    </p>
+    <p>
+    </p>
+    <p>
+     4) ÁREA RESTRITA: Também situada no Laboratório de Pesquisa, a uma distância de até 2,0 m do Laser e com doses maiores que 1,0 mSv/ano, essa área é permitida apenas ao pessoal autorizado e capacitado para o trabalho com fontes radioativas, e subdividi-se em três regiões:
+    </p>
+    <p>
+    </p>
+    <p>
+     A)
+     <i>
+      Região de Trabalho
+     </i>
+     : Distante mais de 60 cm do laser, com doses de até 10 mSv/ano, pode ser utilizada durante atividades de pesquisa.
+    </p>
+    <p>
+    </p>
+    <p>
+     B)
+     <i>
+      Região a Ser Evitada
+     </i>
+     : Distante entre 30 cm e 60 cm do laser, com doses entre 10 mSv/ano e 20 mSv/ano, pode ser utilizada durante atividades de pesquisa, mas deve ser evitada sempre que possível.
+    </p>
+    <p>
+    </p>
+    <p>
+     C)
+     <i>
+      Região Proibida
+     </i>
+     : Com distância menor que 30 cm do Laser e doses superiores que 20 mSv/ano, só pode ser utilizada em condições muito especiais. Considerando que o Laser durante seu funcionamento é alimentado por 30 kV, esta região é sempre extremamente perigosa e, portanto dever ser evitada sempre.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      7. Conclusões
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Com o
+     <i>
+      software
+     </i>
+     apresentado neste trabalho foi possível visualizar graficamente a distribuição do valor da dose externas no Laboratório de Lasers de TeraHertz (T-Ray), através de curvas de isodoses. O gráfico foi uma importante ferramenta para a elaboração do plano de radioproteção do laboratório.
+    </p>
+    <p>
+    </p>
+    <p>
+     Com as devidas alterações, este
+     <i>
+      software
+     </i>
+     pode ser aplicado na maioria das instalações radioativas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Apesar de ter sido escrito para o aplicativo Mathematica
+     <sup>
+      ®
+     </sup>
+     , o
+     <i>
+      software
+     </i>
+     pode ser facilmente traduzido para outros aplicativos, como o Maple
+     <sup>
+      ®
+     </sup>
+     e Matlab
+     <sup>
+      ®
+     </sup>
+     , ou linguagens de programação, como o Delphi
+     <sup>
+      ®
+     </sup>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 30/4/2010; Aceito em 10/10/2010; Publicado em 28/3/2011
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] T.    Wickham-Jones,
+        <i>
+         Mathematica Graphics: Techniques e Applications
+        </i>
+        (Springer-Verlag,    Berlin, 1994).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] Ministério da Saúde,
+        <i>
+         Portaria SVS MS-453. Diretriz de Proteção Radiológica em Radiodiagnóstico Médico e Odontológico
+        </i>
+        (Diário Oficial da União, Brasília, 1998).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] G.F.    Knoll,
+        <i>
+         Radiation Detection end Measurent
+        </i>
+        (John Wiley &amp; Sons Inc.,    New York, 2000), 3
+        <i>
+         <sup>
+          rd
+         </sup>
+        </i>
+        ed.
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] R.C.    Viscovini, F.C. Cruz and D. Pereira, IEEE Journal of Quantum Electronics
+        <b>
+         41
+        </b>
+        ,    694 (2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] R.C.    Viscovini, A. Scalabrin and D. Pereira, Measurement Science &amp; Technology
+        <b>
+         11
+        </b>
+        , N23 (2000).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] R.C.    Viscovini, F.C. Cruz, E.M. Telles, A. Scalabrin and D. Pereira, International    Journal of Infrared and Millimeter Waves
+        <b>
+         22
+        </b>
+        , 757 (2001).
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] Comissão Nacional de Energia Nuclear,
+        <i>
+         CNEN-NE-3.01 - Diretriz Básica de Proteção Radiológica
+        </i>
+        (CNEN, Rio de Janeiro, 2005).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] Comissão Nacional de Energia Nuclear,
+        <i>
+         CNEN-NE-3.05 - Requisitos de Radioproteção e Segurança para Serviços de Medicina Nuclear
+        </i>
+        (CNEN, Rio de Janeiro, 1996).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] Comissão Nacional de Energia Nuclear,
+        <i>
+         CNEN-NE-3.06 - Requisitos de Radioproteção e Segurança para Serviços de Radioterapia
+        </i>
+        (CNEN, Rio de Janeiro, 1996).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <li>
+    <span class="xref big">
+     1
+    </span>
+    <div>
+     E-mail:
+    </div>
+    <div>
+     <a href="mailto:viscovin@gmail.com">
+      viscovin@gmail.com
+     </a>
+     .
+    </div>
+   </li>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        18 Abr 2011
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Mar 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        30 Abr 2010
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        10 Out 2010
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

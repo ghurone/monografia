@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 38 
+                (1)
+   <span class="_separator">
+    •
+   </span>
+   Mar 2016
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11173812057" target="_blank">
+    https://doi.org/10.1590/S1806-11173812057
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11173812057">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by 4.0" data-toggle="tooltip">
+  </span>
+  Geração de imagens animadas GIF com o Mathematica®: Simulações didáticas de ondas eletromagnéticas e polarização da luz
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Animated image GIF generation with Mathematica®: Didactic simulations of electromagnetic waves and light polarization
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Maria Aparecida da Conceição dos Santos
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Mestrado Nacional Profissional em Ensino de Física, Universidade Estadual de Maringá, Maringá, PR, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Marinez Meneghello Passos
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual de Londrina, Londrina, PR, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Sergio de Mello Arruda
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual de Londrina, Londrina, PR, Brasil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor4">
+    <span>
+     Ronaldo Celso Viscovini
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor4" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    Universidade Estadual de Maringá, Maringá, PR, Brasil
+    <div class="corresp">
+     * Endereço de correspondência:
+     <a href="mailto:viscovin@gmail.com">
+      viscovin@gmail.com
+     </a>
+     .
+    </div>
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     As animações e simulações são importantes ferramentas didáticas para o ensino da física. Elas podem auxiliar na visualização e na compreensão de fenômenos físicos complexos. Neste artigo é apresentado o uso do Mathematica® para a produção de imagens animadas para simular ondas eletromagnéticas propagando, atravessando polarizadores e meios opticamente ativos. As imagens são no formato GIF (
+     <i>
+      Graphics Interchange Format
+     </i>
+     ), que se notabiliza pela facilidade de inclusão em
+     <i>
+      softwares
+     </i>
+     de apresentação, como o PowerPoint®, ou em navegadores de internet, como Explorer® ou Chrome®. E apresentada, também, uma aplicação pedagógica, utilizando as animações, filtros polarizadores, solução opticamente ativa de sacarose e um monitor de cristal líquido (LCD), que teve seu polarizador de saída retirado.
+    </p>
+    <p>
+     <strong>
+      Palavras-chave:
+     </strong>
+     <br/>
+     GIF animations; polarization of light; optical teaching
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     The animations and simulations are important didactic tools for physics teaching. They can assist in the visualization and understanding of complex physical phenomena. This work presents the use of Mathematica® to produce animated images to simulate electromagnetic waves propagating across polarizers and optically active means. The images are in GIF (Graphics Interchange Format), which is noted for its ease of inclusion in presentation software such as PowerPoint® or in Internet browsers such as Explorer®or Chrome®. Also it appears pedagogical application using animations, polarizing filters, optically active solution of sucrose and a liquid crystal display (LCD) which had its output polarizer removed.
+    </p>
+    <p>
+     <strong>
+      Keywords:
+     </strong>
+     <br/>
+     animações GIF; polarização da luz; ensino de óptica
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <h1 class="articleSectionTitle">
+     1. Introdução
+    </h1>
+    <p>
+     A aprendizagem da física enquanto ciência exata e natural exige um grande esforço de abstração dos alunos. Isso é especialmente nítido quando tratados conceitos pouco habituais ou cotidianos, como os campos elétricos e magnéticos oscilando enquanto a luz se propaga pelo espaço tridimensional. Tentar representar uma onda eletromagnética no quadro negro é trabalhoso para os professores e entender o fenômeno é um desafio para os alunos. Outros exemplos são: as direções e intensidades das forças (peso, tração e resultantes) em pêndulos em movimento; sistemas massa-mola amortecido ou não; geradores e motores de corrente elétrico alternado. Uma possibilidade de melhorar a apresentação destes fenômenos físicos dinâmicos é com o uso de animações e simulações.
+    </p>
+    <p>
+     As animações e as simulações são importantes ferramentas didáticas para o ensino da física
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       1
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [1] V. Heckler, M.F. Oliveira Saraiva e K.S. Oliveira Filho, Revista Brasileira de Ensino de Física 29, 267 (2007).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       2
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [2] A. Riposati Arantes, M. Santos Miranda e N. Studart, Física na Escola 11, 27 (2010).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Usadas com critério, elas podem auxiliar na visualização e na compreensão de fenômenos físicos complexos, conforme Ref.
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       3
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [3] A. Medeiros e C. Farias de Medeiros, Revista Brasileira de Ensino de Física 24, 77 (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     .
+    </p>
+    <p>
+     Mas, assim como nos desenhos animados, as simulações muitas vezes carecem de um "realismo" físico-matemático que as aproximem do fenômeno simulado. Artifícios criativos e artísticos que em geral melhoraram a aparência de uma animação podem deturpar a física do fenômeno.
+    </p>
+    <p>
+     Por isso, considera-se importante para as animações didáticas tentar manter-se o mais fiel possível às características da física que se pretendem ensinar. No caso específico da representação da luz como uma oscilação eletromagnética propagando, com seus campos elétricos e magnéticos variando no espaço e tempo, torna-se um desafio.
+    </p>
+    <p>
+     Diversos
+     <i>
+      softwares
+     </i>
+     podem ser utilizados para criação de vídeos ou imagens animadas, cujo resultado, geralmente, depende muito da criatividade e da capacidade artística dos autores.
+    </p>
+    <p>
+     O
+     <i>
+      software
+     </i>
+     Mathematica® permite a criação de gráficos e imagens em duas ou três dimensões, cuja visualização é bastante precisa e realista, Refs.
+     <sup>
+      [
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       4
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [4] R.C. Viscovini, N. Benedito Lopes e D. Pereira, Revista Brasileira de Ensino de Física 33, 1505 (2011).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ,
+     </sup>
+     <span class="ref">
+      <sup class="xref xrefblue">
+       5
+      </sup>
+      <span class="refCtt closed">
+       <span>
+        [5] D.T. Alves, J.V. Amaraly, J.F. Medeiros Netoz e E.S. Cheb-Terrabx, Revista Brasileira de Ensino de Física 24, 201 (2002).
+       </span>
+      </span>
+     </span>
+     <sup>
+      ]
+     </sup>
+     . Este
+     <i>
+      software
+     </i>
+     também possui o recurso de sequenciar imagens para formar vídeos e imagens animadas.
+    </p>
+    <p>
+     Neste artigo é apresentado o uso do Mathematica® para a produção de imagens animadas com o objetivo de simular ondas eletromagnéticas propagando, atravessando polarizadores e meios opticamente ativos.
+    </p>
+    <p>
+     As imagens são no formato GIF (
+     <i>
+      Graphics Interchange Format
+     </i>
+     ), que se notabilizam pela facilidade de inclusão em
+     <i>
+      softwares
+     </i>
+     de apresentação, como o PowerPoint
+     <i>
+      ®
+     </i>
+     , ou em navegadores de internet, como Explorer® ou Chrome®.
+    </p>
+    <p>
+     Este trabalho pretende estimular os professores, pesquisadores e estudantes a utilizarem o software de análise simbólico Mathematica®. Apesar de não ser gratuito, este software tem opções de licenças de baixo custo (home e student). Os produtos didáticos visuais (gráficos e simulações) produzido pelo Mathematica® podem ser exportados para diferentes formatos e utilizados/visualizados em equipamentos sem tal software. Por isso são necessárias poucas licenças por escola ou grupo de pesquisa, sendo que os resultados compensam esse investimento.
+    </p>
+    <p>
+     Os conceitos apresentados para a criação das animações das ondas eletromagnéticas podem servir de ferramentas para os professores criarem suas próprias animações e simulações didáticas de físicas.
+    </p>
+    <h1 class="articleSectionTitle">
+     2. Representação da luz (polarizada e não polarizada)
+    </h1>
+    <p>
+     Para representar uma onda eletromagnética (luz) propagando costuma-se mostrar uma "foto instantânea" dos vetores dos seus campos (elétricos e magnéticos) variando perpendicularmente ao seu eixo de propagação (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     ). Esta imagem ilustra uma onda luminosa polarizada linearmente.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 1
+      </strong>
+      <br/>
+      Representação de uma onda eletromagnética (luz) propagando. Fonte: Ref. [6].
+      <br/>
+     </div>
+    </div>
+    <p>
+     Representar uma onda luminosa não polarizada é mais difícil, pois seus campos (elétricos e magnéticos) não estão restritos a planos determinados de vibração. Estes campos podem oscilar em qualquer direção. Para explicitar essa característica costumase representar uma luz não polarizada como sendo a superposição de diversos vetores de um dos seus campos (elétrico ou magnético), com diferentes direções (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     - imagem da esquerda). Uma representação mais realista procura mostrar os campos variando conforme o eixo de propagação (
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     - imagem da direita), o que complica muito a visualização, considerando que estes campos estão variando em intensidade e direção também no tempo.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 2
+      </strong>
+      <br/>
+      Representações de uma onda luminosa não polarizada. Fonte: Ref.
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        5
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [5] D.T. Alves, J.V. Amaraly, J.F. Medeiros Netoz e E.S. Cheb-Terrabx, Revista Brasileira de Ensino de Física 24, 201 (2002).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     A representação da luz não polarizada como uma somatória de diferentes direções possíveis do campo é muito utilizada nas aulas em que o conteúdo abordado é polarização e polarizadores ópticos (
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     ).
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 3
+      </strong>
+      <br/>
+      Representação da luz não polarizada, de polarizadores e da luz polarizada. Fonte: Ref.
+      <sup>
+       [
+      </sup>
+      <span class="ref">
+       <sup class="xref xrefblue">
+        7
+       </sup>
+       <span class="refCtt closed">
+        <span>
+         [7] E.V. Costa, Revista Brasileira de Ensino de Física 24, 37 (2002).
+        </span>
+       </span>
+      </span>
+      <sup>
+       ]
+      </sup>
+      .
+      <br/>
+     </div>
+    </div>
+    <p>
+     Filmes (imagens animadas) do campo dinamicamente variando podem representar mais realisticamente as ondas eletromagnéticas (polarizadas ou não polarizadas), melhorando sua visualização.
+    </p>
+    <h1 class="articleSectionTitle">
+     3. Criando imagens animadas (GIF) com o Mathematica®
+    </h1>
+    <p>
+     O Mathematica® tem um conjunto de inúmeras funções gráficas, sendo que na proposta que trazemos neste artigo são utilizadas:
+    </p>
+    <p>
+     <i>
+      Graphics
+     </i>
+     3D: Cria uma imagem tridimensional a partir de elementos básicos, como tubos e setas. Esta função possui diversos parâmetros de configuração, sendo utilizado o
+     <i>
+      PlotRange
+     </i>
+     (valores mínimos e máximos dos eixos
+     <i>
+      x, y, z
+     </i>
+     ) e
+     <i>
+      ImageSize
+     </i>
+     (resolução da imagem em pixel).
+    </p>
+    <p>
+     <i>
+      Tube
+     </i>
+     : Gera um elemento básico na forma de um tubo. Para que isso ocorra deve ser informada a posição do centro das duas extremidades (
+     <i>
+      x, y, z
+     </i>
+     ) e o raio de tubo.
+    </p>
+    <p>
+     <i>
+      Arrow
+     </i>
+     : Quando usado junto com o
+     <i>
+      Tube
+     </i>
+     gera uma seta na sua extremidade.
+    </p>
+    <p>
+     <i>
+      Arrowheads
+     </i>
+     : Especifica o tamanho e o comprimento relativos das setas a serem geradas pelo
+     <i>
+      Arrow
+     </i>
+     .
+    </p>
+    <p>
+     <i>
+      Export
+     </i>
+     : Permite exportar para um arquivo uma lista de dados. O tipo de arquivo é explicitado na extensão do nome do arquivo. Com relação ao que trazemos neste momento a extensão do arquivo deve ser
+     <i>
+      Gif
+     </i>
+     e a lista é de imagens.
+    </p>
+    <p>
+     A seguir trazemos um exemplo em que se tem o código, que cria um arquivo com uma imagem simples (
+     <a class="open-asset-modal" data-target="#ModalFigf4" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     ).
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f4">
+     <a name="f4">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf4" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 4
+      </strong>
+      <br/>
+      Tubo e seta para simulação do vetor campo elétrico ou magnético. Fonte: criada no
+      <i>
+       Mathematica
+      </i>
+      ® (Fig4. gif)
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Após esses esclarecimentos, apresentamos na sequência algumas simulações relacionadas à aplicação pedagógica que realizamos.
+    </p>
+    <h2>
+     3.1. Simulando a propagação da luz não polarizada
+    </h2>
+    <p>
+     Para criar a simulação da propagação da luz não polarizada inicialmente é definida uma função de Campo que desenha uma seta/vetor numa determinada posição (Pos), amplitude (Amp) e ângulo (Ang). Para melhorar a visualização, quando a amplitude for menor que 10% o vetor não vai ter seta de direção.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Definem-se aleatoriamente valores de fase (Fase) e velocidade angular (W) para quatro vetores de campo:
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f16">
+     <a name="f16">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf16" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Por fim, o código a seguir cria um arquivo com 50 imagens animadas, representando a propagação da onda com passos de Δx =0.1.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f17">
+     <a name="f17">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf17" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para visualizar uma imagem específica dentro da lista de imagens que gerou o arquivo Gif basta referenciar seu índice. Por exemplo: Fig5[[25]] é a 25ª imagem Fig5. Na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5
+     </a>
+     é mostrada a imagem de número 25 do arquivo Fig5.gif.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 5
+      </strong>
+      <br/>
+      Imagem número 25 da propagação da luz não polarizada. Fonte: criada no Mathematica® (Fig5.gif).
+      <br/>
+     </div>
+    </div>
+    <p>
+     Também é possível agrupar diferentes imagens em uma imagem simples usando a função
+     <i>
+      Show
+     </i>
+     . No código que trazemos a seguir há um agrupamento de imagens de 8 em 8 passos (
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     ), processo que pode facilitar a visualização do fenômeno.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 6
+      </strong>
+      <br/>
+      Imagens agrupadas da propagação da luz não polarizada. Fonte: criada no Mathematica® (Fig6.gif).
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f18">
+     <a name="f18">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf18" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.2. Simulando a propagação da luz nao polarizada através de um polarizador
+    </h2>
+    <p>
+     Para simular a luz atravessando um polarizador, inicialmente desenha-se uma rede de tubos paralelos simulando a anisotropia estrutural do meio polarizador. Isto é realizado pela função Polarizador por meio do seguinte código:
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f19">
+     <a name="f19">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf19" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Os parâmetros Pos e Ang são a posição horizontal e o ângulo de orientação do polarizador. Essa função desenha um objeto maior que os limites do
+     <i>
+      PlotRange
+     </i>
+     , todavia, isso não se torna um problema, pois o
+     <i>
+      Graphics
+     </i>
+     3D recorta os excessos.
+    </p>
+    <p>
+     O código para simular uma onda luminosa passando por um polarizador é apresentado em seguida:
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f20">
+     <a name="f20">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf20" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     As constantes PosPol e AngPol são a posição e o ângulo de orientação do polarizador, neste caso: 2.5 e 120°. Para uma transição suave da luz não polarizada para a luz polarizada, a fase desta última (FasePol) é calculada pela tangente de AmpPar e AmpPer, que são as componentes resultantes dos vetores de campos projetados na direção paralela e perpendicular ao AngPol. A velocidade angular da onda polarizada (WPol) é a média das velocidades angulares dos vetores campos (W).
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     temos uma superposição de imagens do Fig7.gif, de 3 em 3 passos.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 7
+      </strong>
+      <br/>
+      Imagens agrupadas da propagação da luz não polarizada passando por um polarizador a 60°. Fonte: criada no Mathematica® (Fig7.gif).
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.3. Simulando a propagação da luz não polarizada através de dois polarizadores
+    </h2>
+    <p>
+     Para simular a luz atravessando dois polarizadores, o código mantém um polarizador com posição (Pos-Pol = 1.5) e o ângulo diretor (AngPol = 0°) fixos, enquanto um segundo polarizador tem posição fixa (PosPol2 = 3.5) e varia o ângulo diretor (AngPol2). No exemplo que trazemos na continuidade, o valor de AngPol2 varia de 0°, 30°, 60°, 90°, 120° e 150°.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f21">
+     <a name="f21">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf21" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     é mostrada uma superposição de todas as imagens referentes ao ângulo de 60° para o segundo polarizador.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 8
+      </strong>
+      <br/>
+      Superposição de imagens propagação da luz não polarizada passando por dois polarizadores. Fonte: criada no Mathematica® (Fig8.gif).
+      <br/>
+     </div>
+    </div>
+    <h2>
+     3.4. Simulando a propagação de uma luz não polarizada através de dois polarizadores e meio com atividade óptica.
+    </h2>
+    <p>
+     Uma interessantíssima simulação é quando dois polarizadores cruzados (90°) têm entre eles um meio opticamente ativo, que rotaciona o plano de polarização da luz. Este é o princípio de funcionamento dos monitores de cristal líquido (LCD). O código que trazemos neste artigo gera consecutivamente uma simulação de cinco simulações, com um meio com atividade óptica que rotaciona a luz de 0° até 90°.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f22">
+     <a name="f22">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf22" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     é mostrada uma superposição de todas as imagens quando o meio óptico rotaciona a luz em 22,5° (densidade = 1);
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 9
+      </strong>
+      <br/>
+      Superposição de imagens, propagação da luz não polarizada passando por dois polarizadores cruzados com um componente óptico ativo no meio. Fonte: criada no Mathematica® (Fig9.gif).
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     4. Aplicação pedagógica
+    </h1>
+    <p>
+     As animações apresentadas neste artigo foram utilizadas durante quatro aulas, dois dias letivos, sobre polarização em uma turma do terceiro ano do Ensino Médio de uma escola pública do estado do Paraná.
+    </p>
+    <p>
+     Durante a aula, junto com as apresentações, foram distribuídos cartões polarizadores para os alunos, acomodados em grupos de quatro. Com esses polarizadores eles puderam acompanhar e testar as animações.
+    </p>
+    <p>
+     Uma atividade experimental foi realizada utilizando açúcar (sacarose) como meio opticamente ativo. Um béquer com água foi iluminado no fundo pela luz de uma lanterna filtrada por um polarizador. Colheres de açúcar foram sendo adicionadas na água. Após homogeneizar, um segundo polarizador foi usado para analisar a luz na parte superior do béquer (
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     ). Os alunos registraram o valor aproximado do ângulo entre os polarizadores nas condições de máxima e mínima intensidade de luz observada.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 10
+      </strong>
+      <br/>
+      Análise da rotação do plano de polarização (atividade óptica) por solução de sacarose (açúcar). Fonte: os autores.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Para demonstrar uma aplicação tecnológica relacionada ao fenômeno em estudo, um monitor de cristal líquido (LCD) teve seu polarizador de saída retirado cuidadosamente com um estilete. Na
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     apresentamos esse monitor ligado a um
+     <i>
+      notebook
+     </i>
+     . Percebe-se que sem o polarizador de saída a imagem aparece completamente branca.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 11
+      </strong>
+      <br/>
+      Monitor de Cristal Líquido (LCD) com polarizador de saída retirado. Fonte: os autores.
+      <br/>
+     </div>
+    </div>
+    <p>
+     Utilizando os polarizadores (
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     ) os alunos puderam observar que havia imagem no monitor LCD, contudo, os olhos humanos não distinguem a luz polarizada. Na
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     os alunos puderam observar a animação do funcionamento de um monitor LCD (a luz atravessando um polarizador, um meio ativo e um polarizador cruzado) no monitor sem polarizador de saída, usando um polarizador como óculos.
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 12
+      </strong>
+      <br/>
+      LCD sem polarizador observado através de polarizadores externos. Fonte: os autores.
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <strong>
+       Figura 13
+      </strong>
+      <br/>
+      Visualização da animação no monitor LCD sem polarizador através de "óculos" polarizador. Fonte: os autores.
+      <br/>
+     </div>
+    </div>
+    <h1 class="articleSectionTitle">
+     5. Considerações finais
+    </h1>
+    <p>
+     Durante o período em que fizemos uso desta aplicação pedagógica com as animações, procuramos elaborar um caderno de campo em que descrevíamos nossas percepções a respeito da mobilização dos estudantes em sala de aula, nas turmas em que os recursos pedagógicos eram somente a lousa e livro didático e na turma onde foram utilizadas também as animações, os polarizadores, o experimento com sacarose e a tela LCD sem polarizador.
+    </p>
+    <p>
+     Ficou evidente que nesta turma em que houve o uso dessa multiplicidade de recursos, ocorreu uma melhor aprendizagem dos conceitos como propagação da luz, polarização e intensidade luminosa. Esses alunos também relataram se sentirem mais motivados e interessados do que em outras aulas em que foram apresentados a eles conteúdos semelhantes, por meio da utilização do livro didático e da lousa.
+    </p>
+    <p>
+     Cabe ressaltar que o tempo utilizado nesta aplicação pedagógica, quatro horas aula, foi o dobro do tempo, normalmente utilizado para ministrar este conteúdo, duas horas aula. Por conseguinte, o reflexo na aprendizagem e no interesse dos estudantes leva-nos a crer que esse alargamento do tempo pode compensar a utilização desta dinâmica e de outras similares a ela.
+    </p>
+    <p>
+     Finalmente, com um pouco de habilidade em programação e conhecimento sobre o Mathematica®, é possível utilizar as informações deste artigo para criação de diferentes GIFs animados para aplicações diversas. Podem ser construídas, por exemplo, simulações animadas para os fenômenos de reflexão e refração da luz na óptica geométrica. Um interessante desafio, que demandaria muita imaginação e trabalho, seria desenvolver animações para inter-ferência da luz, tentando simular os experimentos de fendas de Thomas Young.
+    </p>
+   </div>
+   <div class="articleSection">
+    <h1 class="articleSectionTitle">
+     Referências
+    </h1>
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <sup class="xref big">
+        [1]
+       </sup>
+       <div>
+        V. Heckler, M.F. Oliveira Saraiva e K.S. Oliveira Filho, Revista Brasileira de Ensino de Física
+        <b>
+         29
+        </b>
+        , 267 (2007).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [2]
+       </sup>
+       <div>
+        A. Riposati Arantes, M. Santos Miranda e N. Studart, Física na Escola
+        <b>
+         11
+        </b>
+        , 27 (2010).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [3]
+       </sup>
+       <div>
+        A. Medeiros e C. Farias de Medeiros, Revista Brasileira de Ensino de Física
+        <b>
+         24
+        </b>
+        , 77 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [4]
+       </sup>
+       <div>
+        R.C. Viscovini, N. Benedito Lopes e D. Pereira, Revista Brasileira de Ensino de Física
+        <b>
+         33
+        </b>
+        , 1505 (2011).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [5]
+       </sup>
+       <div>
+        D.T. Alves, J.V. Amaraly, J.F. Medeiros Netoz e E.S. Cheb-Terrabx, Revista Brasileira de Ensino de Física
+        <b>
+         24
+        </b>
+        , 201 (2002).
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [6]
+       </sup>
+       <div>
+        J.R.V. Fogaça, Luz Polarizada e Não Polarizada, disponível em http://www.alunosonline.com.br/quimica/luz-polarizada-nao-polarizada.html Acesso em 2 de jun. 2014.
+        <br/>
+        <a href="http://www.alunosonline.com.br/quimica/luz-polarizada-nao-polarizada.html" target="_blank">
+         » http://www.alunosonline.com.br/quimica/luz-polarizada-nao-polarizada.html
+        </a>
+       </div>
+      </li>
+      <li>
+       <sup class="xref big">
+        [7]
+       </sup>
+       <div>
+        E.V. Costa, Revista Brasileira de Ensino de Física
+        <b>
+         24
+        </b>
+        , 37 (2002).
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        Mar 2016
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        18 Jul 2015
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        23 Ago 2015
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        <img alt="Creative Common - by 4.0" src="https://licensebuttons.net/l/by/4.0/88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" title="">
+        Este é um artigo publicado em acesso aberto (Open Access) sob a licença Creative Commons Attribution, que permite uso, distribuição e reprodução em qualquer meio, sem restrições desde que o trabalho original seja corretamente citado.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>

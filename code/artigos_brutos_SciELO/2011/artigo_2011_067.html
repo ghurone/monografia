@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<div class="articleTxt">
+ <div class="articleBadge-editionMeta-doi-copyLink">
+  <span class="_articleBadge">
+   Desenvolvimento em Ensino de Física
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="_editionMeta">
+   Rev. Bras. Ensino Fís. 33 
+                (4)
+   <span class="_separator">
+    •
+   </span>
+   Dez 2011
+  </span>
+  <span class="_separator">
+   •
+  </span>
+  <span class="group-doi">
+   <a class="_doi" href="https://doi.org/10.1590/S1806-11172011000400018" target="_blank">
+    https://doi.org/10.1590/S1806-11172011000400018
+   </a>
+   <a class="copyLink" data-clipboard-text="https://doi.org/10.1590/S1806-11172011000400018">
+    <span class="sci-ico-link">
+    </span>
+    copiar
+   </a>
+  </span>
+ </div>
+ <h1 class="article-title">
+  <span class="sci-ico-openAccess showTooltip" data-original-title="by-nc 4.0 " data-toggle="tooltip">
+  </span>
+  Física com Arduino para iniciantes
+  <a class="short-link" href="#" id="shorten">
+   <span class="sci-ico-link">
+   </span>
+  </a>
+ </h1>
+ <h2 class="article-title">
+  Physics with Arduino for beginners
+ </h2>
+ <div class="articleMeta">
+ </div>
+ <div class="contribGroup">
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor1">
+    <span>
+     Marisa Almeida Cavalcante
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor1" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Sao Paulo,  
+          ,  São Paulo,  
+        ,  Pontifícia Universidade Católica de São Paulo,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor2">
+    <span>
+     Cristiane Rodrigues Caetano Tavolaro
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor2" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Sao Paulo,  
+          ,  São Paulo,  
+        ,  Pontifícia Universidade Católica de São Paulo,  Brazil
+   </ul>
+  </span>
+  <span class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" id="contribGroupTutor3">
+    <span>
+     Elio Molisani
+    </span>
+   </a>
+   <ul aria-labelledby="contribGrupoTutor3" class="dropdown-menu" role="menu">
+    <strong>
+    </strong>
+    ,  Porto Alegre,  
+          ,  Rio Grande do Sul,  
+        ,  Universidade Federal do Rio Grande do Sul,  Brazil
+   </ul>
+  </span>
+  <a class="outlineFadeLink" data-target="#ModalTutors" data-toggle="modal" href="">
+   Sobre os autores
+  </a>
+ </div>
+ <div class="row">
+  <ul class="col-md-2 hidden-sm articleMenu">
+  </ul>
+  <article class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0" id="articleText">
+   <div class="articleSection" data-anchor="Resumos">
+    <h1 class="articleSectionTitle">
+     Resumos
+    </h1>
+   </div>
+   <div>
+    <p>
+     Apresentamos neste trabalho diferentes modos de operar o Arduino para funcionar como uma interface alternativa na aquisição e automação de dados em atividades experimentais de física via porta USB do computador. Selecionamos como exemplo de aplicação o estudo de carga e descarga de um capacitor. As etapas de interação com o Arduino passam pelo processo de construção do circuito, coleta e armazenagem de dados em formato txt e visualização gráfica em tempo real através da linguagem Processing. Para cada etapa apresentamos propostas didáticas de utilização, todos os códigos fontes necessários para a interação com o Arduino, além de links para acesso a tutoriais que possibilitam a reprodução deste e outros experimentos.
+    </p>
+    <p>
+     Arduino; processing; aquisição de dados
+    </p>
+   </div>
+   <hr/>
+   <div>
+    <p>
+     In this paper we present different ways of operating the Arduino to work as an alternative interface for the automation of data acquisition in physics experiments through the computer's USB port. Selected as an example of applying the study of charging and discharging a capacitor. The steps of interaction with the Arduino go through the process of building the circuit, collecting and storing data in txt format and graphic display in real time over the language Processing. For each step we present proposals for didactic use, all source code necessary to interact with the Arduino, and links to access tutorials that provide playback of this and other experiments.
+    </p>
+    <p>
+     Arduino; processing; acquisition of data
+    </p>
+   </div>
+   <hr/>
+   <div class="articleSection" data-anchor="Text">
+    <p>
+    </p>
+    <p>
+     <b>
+      DESENVOLVIMENTO EM ENSINO DE FÍSICA
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Física com Arduino para iniciantes
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Physics with Arduino for beginners
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Marisa Almeida Cavalcante
+      <sup>
+       I
+      </sup>
+      ; Cristiane Rodrigues Caetano Tavolaro
+      <sup>
+       I
+      </sup>
+      ; Elio Molisani
+      <sup>
+       II
+      </sup>
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      I
+     </sup>
+     Grupo de Pesquisa em Ensino de Física, Pontifícia Universidade Católica, Sao Paulo, SP, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <sup>
+      II
+     </sup>
+     Universidade Federal do Rio Grande do Sul, Porto Alegre, RS, Brasil
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      RESUMO
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Apresentamos neste trabalho diferentes modos de operar o Arduino para funcionar como uma interface alternativa na aquisição e automação de dados em atividades experimentais de física via porta USB do computador. Selecionamos como exemplo de aplicação o estudo de carga e descarga de um capacitor. As etapas de interação com o Arduino passam pelo processo de construção do circuito, coleta e armazenagem de dados em formato txt e visualização gráfica em tempo real através da linguagem
+     <i>
+      Processing.
+     </i>
+     Para cada etapa apresentamos propostas didáticas de utilização, todos os códigos fontes necessários para a interação com o Arduino, além de links para acesso a tutoriais que possibilitam a reprodução deste e outros experimentos.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Palavras-chave:
+     </b>
+     Arduino, processing, aquisição de dados.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      ABSTRACT
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     In this paper we present different ways of operating the Arduino to work as an alternative interface for the automation of data acquisition in physics experiments through the computer's USB port. Selected as an example of applying the study of charging and discharging a capacitor. The steps of interaction with the Arduino go through the process of building the circuit, collecting and storing data in txt format and graphic display in real time over the language
+     <i>
+      Processing.
+     </i>
+     For each step we present proposals for didactic use, all source code necessary to interact with the Arduino, and links to access tutorials that provide playback of this and other experiments.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      Keywords:
+     </b>
+     Arduino, processing, acquisition of data.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1. Introdução
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     É inegável que o computador é uma importante ferramenta cognitiva [1], isto é, permite ao estudante desenvolver habilidades, interiorizar conhecimentos e organiza-los de modo a construir uma interpretação do mundo que o cerca. Podemos exemplificar sua interatividade mediante problemas-jogo, tais como os applets, onde o estudante modifica parâmetros e verifica os resultados obtidos, e dessa forma o computador é uma ferramenta que permite organizar e sistematizar informações [2,3]. Segundo Barroso [3] estes objetos educacionais podem ser utilizados tanto presencialmente quanto à distância.
+    </p>
+    <p>
+    </p>
+    <p>
+     Outro exemplo é a modelagem computacional. O software Modellus [4,5] permite que o estudante investigue um fenômeno construindo uma animação a partir de objetos abstratos da matemática, como equações, funções, vetores e relações geométricas de um dado modelo de fenômeno físico. Ao construir seu próprio modelo e as formas de representá-lo o estudante torna-se um agente da construção do conhecimento, interpretando e internalizando a linguagem simbólica, tão importante na física.
+    </p>
+    <p>
+    </p>
+    <p>
+     A utilização do computador como agente transformador no ensino de física o ensino e aprendizagem da física, buscando diminuir esta distância tecnológica entre a escola e o estudante tem sido incansavelmente relatada também como instrumento de laboratorio [6-17] em que computadores são conectados a sensores permitindo fazer experimentos que dificilmente seriam realizados com os instrumentos usuais de um laboratório de ensino, podendo apresentar os resultados quase imediatamente.
+    </p>
+    <p>
+    </p>
+    <p>
+     A introdução da metodologia experimental de aquisição de dados por computador representa a possibilidade real de uso das técnicas de análise estatística de dados experimentais estudadas no curso de física e engenharias do primeiro período da graduação. Além da melhoria da precisão dos resultados, a redução no tempo de coleta de dados e a rápida representação dos mesmos em forma de gráficos, permitem criar no laboratório de física um ambiente de construção do conhecimento físico. O estudante pode observar o fenômeno, predizer o resultado, isto é, formular hipóteses, rapidamente comparar os resultados obtidos com os previstos pelo modelo teórico, explicar possíveis diferenças entre o previsto e o observado e ainda, reformular suas hipóteses, fazer ajustes experimentais e testa-las novamente. O dinamismo desse processo provoca a curiosidade e maior interesse dos estudantes já que a aula de laboratorio torna-se desafiadora: as antigas justificativas encontradas nas conclusões dos relatórios não são mais aceitas. Justificativas para um resultado ruim tais como: "foram obtidos poucos dados" ou, "o instrumento de medida não estava devidamente calibrado", sequer podem ser cogitadas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Contudo, apesar das suas potencialidades, o computador ainda é pouco utilizado em laboratórios de física, quer pela falta de informação dos professores sobre os recursos oferecidos, quer pela dificuldade em adquirir interfaces e programas de aquisição [7], devido ao elevado custo e também por serem sistemas fechados que impossibilitam um estudo mais detalhado de suas características e modificações que permitam adaptações para outros experimentos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Ao analisar as últimas publicações em revistas de ensino de física nacionais, relacionadas à aquisição de dados via computador, notamos algumas tendencias todas elas buscando desenvolver sistemas de aquisição de dados de baixo custo e totalmente livres.
+    </p>
+    <p>
+    </p>
+    <p>
+     Algumas delas [7-13] utilizam-se fotossensores e microfones conectados diretamente na entrada de microfone do PC, de modo que impulsos provenientes correspondentes à coleta de dados são lidos através de versões shareware ou freeware de programas de análise sonora disponíveis na Internet.
+    </p>
+    <p>
+    </p>
+    <p>
+     Nesses softwares, os impulsos são traduzidos em intensidade medida em decibéis em função do tempo de modo que os intervalos de tempo de passagem de objetos interrompendo a luz incidente nos fotossensores podem ser medidos diretamente na tela do microcomputador o que permite estudar tanto características cinemáticas, tais como velocidade e aceleração de objetos, quanto obter informações sobre a quantidade de movimento. Por outro lado, informações associadas às intensidades dos impulsos, como por exemplo, medidas de temperatura, pressão, intensidade de luz, etc., não podem ser avaliadas, inviabilizando um grande número de experimentos.
+    </p>
+    <p>
+    </p>
+    <p>
+     Numa outra tendência [14-17], estes sensores podem ser conectados as portas serial, paralela e USB do microcomputador, dependendo do que se pretende medir e do aparato experimental, se a medida é analógica ou digital. O principal motivo para se usar esta porta para coleta de dados em um laboratório didático é a segurança e facilidade com que podemos conectar sensores, que devem ter como característica a variação da resistência em função da grandeza física que se pretende medir. Os softwares necessários para a coleta e analise de dados, estão disponíveis na Internet (shareware ou freeware), porém, exigem que o usuário domine linguagem de programação. Alguns exemplos são linguagens de programação como Pascal, VisualBasic, Delphi, C++, LOGO e planilhas eletrônicas. Além das dificuldades com a programação, o usuario precisa construir o circuito de aquisição [17].
+    </p>
+    <p>
+    </p>
+    <p>
+     Nesta linha, mas minimizando as dificuldades com a construção do circuito e programação, a placa Arduino vem sendo utilizada com muito sucesso [18,19]. A plataforma para o desenvolvimento dos programas de controle esta disponível na
+     <i>
+      Internet
+     </i>
+     e existem diferentes versões do circuito no mercado nacional por preços acessíveis quando comparados às interfaces disponibilizadas no mercado por empresas como CIDEPE, Pasco Scientific e Phywe [20-22], por exemplo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho mostramos mais uma aplicação do Arduino num experimento de física: carga e descarga de capacitores. Apresentamos desde o acoplamento do circuito RC à placa, os códigos de programação desenvolvidos para esta aquisição específica ate o tratamento de dados além disso mostramos como proceder à visualização dos resultados em tempo real.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      1.1. A interface Arduino
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O Arduino [23] é uma plataforma que foi construída para promover a interação física entre o ambiente e o computador utilizando dispositivos eletrônicos de forma simples e baseada em softwares e hardwares livres.
+    </p>
+    <p>
+    </p>
+    <p>
+     Resumidamente, a plataforma consiste em uma placa de circuitos com entradas e saídas para um microcontrolador AVR, um ambiente de desenvolvimento e o
+     <i>
+      bootloader
+     </i>
+     que já vem gravado no microcontrolador [24].
+    </p>
+    <p>
+    </p>
+    <p>
+     O microcontrolador é constituído de um microprocessador, memória e periféricos de entrada/saída e pode ser programado para funções específicas, como, por exemplo, o controle de máquinas e diferentes automações.
+    </p>
+    <p>
+    </p>
+    <p>
+     Existem outras plataformas construídas para microcontroladores, mas o Arduino tem se destacado no cenário mundial pela facilidade de programação, versatilidade e baixo custo [25]. Mesmo para os que desejam interações de alto nível, o Arduino tem atendido às expectativas.
+    </p>
+    <p>
+    </p>
+    <p>
+     Uma das versões mais difundidas [26] do um Arduino é a Duemilanove (
+     <a class="open-asset-modal" data-target="#ModalFigf1" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 1
+     </a>
+     ) que apresenta 6 portas analógicas e permitem a medida de tensões externas, sendo possível receber informações de uma série de sensores como medidores de temperatura, pressão, umidade, distância, sensores de gases, fototransistores, etc. Existem, também, 14 portas digitais, onde é possível ler e escrever dois estados, 0/1 ou HIGH/LOW, permitindo, por exemplo, manter um LED ligado ou desligado. Quando necessário algumas dessas portas digitais podem ser configuradas para atuarem como portas de saída analógicas, através de modulação por largura de pulso ou
+     <i>
+      Pulse-Width Modulation
+     </i>
+     (PWM).
+    </p>
+    <div class="row fig" id="f1">
+     <a name="f1">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf1" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      2. Proposta experimental
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     A proposta experimental consiste em estudar a carga e descarga em capacitores. Para isso se faz necessário uma revisão dos conceitos básicos envolvidos neste estudo.
+    </p>
+    <p>
+    </p>
+    <p>
+     Um capacitor ou condensador é um dispositivo eletrônico capaz de armazenar energia elétrica. Tal armazenamento se dá em decorrência da existência de um dielétrico que separa as suas placas condutoras. O primeiro capacitor, conhecido como garrafa de Leyden, foi inventado no século XVIII, de modo independente, pelos cientistas; Ewald Georg Van Kleist (alemão) e pelo holandês Pieter Van Musschenbroek (Leyden). A sua invenção foi de fundamental importância no estudo de fenêmenos em eletrostática, pois permitia armazenar grandes quantidades de carga em um recipiente de pequenas dimensões.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf2" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 2
+     </a>
+     mostra diferentes tipos de capacitores disponíveis
+    </p>
+    <div class="row fig" id="f2">
+     <a name="f2">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf2" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Definimos capacitância de um capacitor por uma grandeza que relaciona a quantidade de carga armazenada e a diferença de potencial propiciada nos seu terminais, ou seja
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="00aa76bc6487ec667decd1cd1f2cbeb953b15e65">
+     <a name="00aa76bc6487ec667decd1cd1f2cbeb953b15e65">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg00aa76bc6487ec667decd1cd1f2cbeb953b15e65" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/00aa76bc6487ec667decd1cd1f2cbeb953b15e65.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Assim percebe-se que quanto maior o valor de capacitância maior será a sua capacidade de armazenamento de carga.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf3" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 3
+     </a>
+     mostra um esquema para o estudo da carga em um capacitor. Na posição 1 a chave K comutadora possibilita carregar o capacitor através do circuito RC série e quando na posição 2 o capacitor é descarregado instantaneamente.
+    </p>
+    <div class="row fig" id="f3">
+     <a name="f3">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf3" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Considere agora o seguinte procedimento; inicialmente conectamos a chave K na posição 2 de modo a descarregar por completo o capacitor C e em seguida conectamos na posição 1. No instante em que a chave comutadora K for ligada em 1, o capacitor começa a ser carregado através da corrente i, que circula pela resistência R, com a fonte previamente ajustada a um valor de tensão nominal E.
+    </p>
+    <p>
+    </p>
+    <p>
+     Considerando
+     <i>
+      V
+      <sub>
+       C
+      </sub>
+     </i>
+     a tensão (ou ddp) no capacitor e
+     <i>
+      V
+      <sub>
+       R
+      </sub>
+     </i>
+     a diferença de potencial observada nos terminais do resistor temos pela lei de Kirchoff que
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="7a5817e5f93f44ad608395afb846cac5cf17a019">
+     <a name="7a5817e5f93f44ad608395afb846cac5cf17a019">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg7a5817e5f93f44ad608395afb846cac5cf17a019" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/7a5817e5f93f44ad608395afb846cac5cf17a019.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Substituindo-se
+     <i>
+      V
+      <sub>
+       C
+      </sub>
+     </i>
+     de acordo com a Eq. (1) temos que
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="1d4330f1ad57c14d8ee1db9c864536c2fffb0833">
+     <a name="1d4330f1ad57c14d8ee1db9c864536c2fffb0833">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg1d4330f1ad57c14d8ee1db9c864536c2fffb0833" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1d4330f1ad57c14d8ee1db9c864536c2fffb0833.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Como
+     <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1df85baaa537c3c9505366e63e938714cd716342.jpg" style="max-width:100%"/>
+     temos
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde">
+     <a name="4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/4d5a8c59c38167ab9c31cc7c258c371a8a3c0cde.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     ou ainda
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="a216dcd45f53c5faeb6b1166ef89aa13b27d4681">
+     <a name="a216dcd45f53c5faeb6b1166ef89aa13b27d4681">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImga216dcd45f53c5faeb6b1166ef89aa13b27d4681" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/a216dcd45f53c5faeb6b1166ef89aa13b27d4681.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para resolver a equação diferencial de 1ª ordem, vamos separar as variáveis deixando de um lado da equação os termos que dependem de carga
+     <i>
+      q
+     </i>
+     e os termos dependentes do tempo
+     <i>
+      t
+     </i>
+     do outro lado da equação
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="8b8346d889193d65d09da9427c8111825382bd09">
+     <a name="8b8346d889193d65d09da9427c8111825382bd09">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg8b8346d889193d65d09da9427c8111825382bd09" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/8b8346d889193d65d09da9427c8111825382bd09.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="bd24dde9d2cd0f0650d622f822308213b94d58d6">
+     <a name="bd24dde9d2cd0f0650d622f822308213b94d58d6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgbd24dde9d2cd0f0650d622f822308213b94d58d6" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/bd24dde9d2cd0f0650d622f822308213b94d58d6.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A resolução desta equação é dada por
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="270b19380df93934cb8580057fc0dd3a00e078ae">
+     <a name="270b19380df93934cb8580057fc0dd3a00e078ae">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg270b19380df93934cb8580057fc0dd3a00e078ae" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/270b19380df93934cb8580057fc0dd3a00e078ae.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A grandeza
+     <i>
+      EC
+     </i>
+     corresponde à carga total (Q) que pode ser armazenada no capacitor. Assim teremos
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="86f0f826d5a4f55a97470715396e4645aa0232b8">
+     <a name="86f0f826d5a4f55a97470715396e4645aa0232b8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg86f0f826d5a4f55a97470715396e4645aa0232b8" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/86f0f826d5a4f55a97470715396e4645aa0232b8.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para encontrar o valor da corrente elétrica, basta diferenciar a expressão acima uma vez que
+     <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/cbc7553bc0e79a69c7a769697f363ab5dc1cc614.jpg" style="max-width:100%"/>
+     Desta forma teremos
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57">
+     <a name="f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImgf6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/f6ecc38cbc7bc9e9e2346fb5428a9cf3c4bc9e57.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A constante
+     <i>
+      RC
+     </i>
+     é definida como constante de tempo do circuito o
+     <i>
+      τ
+     </i>
+     ) e corresponde ao tempo necessário para a corrente no circuito reduzir a 1/
+     <i>
+      e
+     </i>
+     do seu valor inicial
+     <i>
+      (E/R).
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+     <i>
+      A
+     </i>
+     medida que a corrente no circuito se reduz a carga no capacitor aumenta e transcorrido o tempo
+     <i>
+      RC
+     </i>
+     esta carga atinge 63,2% do seu valor total EC. A
+     <a class="open-asset-modal" data-target="#ModalFigf04" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 4
+     </a>
+     representa a carga no capacitor aumentando com o tempo enquanto a corrente no circuito cai exponencialmente.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="f04">
+     <a name="f04">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf04" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Utilizando a mesma linha de raciocínio, na descarga do capacitor, chegaremos a uma expressão exponencial para o decréscimo da sua carga com a constante RC.
+    </p>
+    <p>
+    </p>
+    <p>
+     Algumas aplicações importantes em circuitos, decorrentes deste processo de carga e descarga de capacitores são os filtros capacitivos conhecidos como passa-alta e passa-baixa.
+    </p>
+    <p>
+    </p>
+    <p>
+     E fácil perceber que:
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Os capacitores devem ser dispositivos que não permitem a passagem de componentes continua de corrente elétrica, já que a corrente destes circuitos é utilizada para carregá-los.
+      </p>
+     </li>
+     <li>
+      <p>
+       Se submetermos um capacitor a um sinal alternado a resposta de tensão nos seus terminais será tanto maior quanto menor for à freqüência do sinal aplicado e para sinais de alta freqüência o sinal obtido nos terminais do capacitor será menor.
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     Na
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5a
+     </a>
+     temos a indicação de um filtro passa-baixa em que o sinal de saída é obtido nos terminais do capacitor. Já para um filtro passa-alta o sinal deve ser obtido nos terminais do resistor como indica a
+     <a class="open-asset-modal" data-target="#ModalFigf5" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 5b
+     </a>
+     .
+    </p>
+    <div class="row fig" id="f5">
+     <a name="f5">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf5" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.1. Estudo da carga com o Arduino em um circuito convencional
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     O objetivo deste experimento é mostrar como podemos incorporar o Arduino em montagens tradicionalmente utilizadas nos laboratorios didáticos.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf6" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 6
+     </a>
+     mostra um arranjo experimental simples em que um capacitor e uma resistencia estão associados em série utilizando como fonte de alimentação a tensão de saída +5 V na placa do Arduino. A tensão obtida nos terminais do capacitor em função do tempo foi analisada através da entrada analógica 0 do Arduino. Neste primeiro experimento associamos uma chave externa K, conectada aos terminais do capacitor, cuja função e descarregar totalmente o capacitor. Ao desligarmos a chave K o capacitor inicia sua carga e, sua tensão cresce exponencialmente com o tempo. A
+     <a class="open-asset-modal" data-target="#ModalFigf7" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 7
+     </a>
+     mostra um esquema elétrico deste circuito.
+    </p>
+    <div class="row fig" id="f6">
+     <a name="f6">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf6" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f7">
+     <a name="f7">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf7" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     O código fonte utilizado para esta aquisição no Apendice 1.
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf8" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 8
+     </a>
+     mostra aquisições com diferentes valores de
+     <i>
+      delay
+     </i>
+     fixados. Consideramos que a obtenção destes gráficos, pode ser uma dentre outras tarefas propostas em sala de aula visando verificar a influencia de diferentes valores de
+     <i>
+      delay
+     </i>
+     nos resultados obtidos.
+    </p>
+    <div class="row fig" id="f8">
+     <a name="f8">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf8" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Para a determinação da constante
+     <i>
+      RC
+     </i>
+     é também recomendável estudar como a corrente em um circuito RC evolui com o tempo no processo de carga de um capacitor. Para isso basta um pequeno ajuste na programação introduzindo o calculo desta corrente (valor da tensão obtida no resistor e dividido pela resistencia associada ao circuito). O código fonte utilizado para esta aquisição esta disponível no
+     <span class="ref footnote">
+      <sup class="xref">
+       Apêndice 2
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        Apêndice 2
+       </span>
+      </span>
+     </span>
+     .
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf9" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 9
+     </a>
+     mostra os resultados obtidos em escala logarítmica para a corrente no circuito com diferentes
+     <i>
+      delays.
+     </i>
+    </p>
+    <div class="row fig" id="f9">
+     <a name="f9">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf9" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Os valores para a constante
+     <i>
+      RC
+     </i>
+     com respectivas incertezas foram: (0,692±0,021); (0,682±0,023) e (0,680±0,024) para os
+     <i>
+      delays
+     </i>
+     de 10, 50 e 100 ms respectivamente.
+    </p>
+    <p>
+    </p>
+    <p>
+     Observa-se que estes valores diferem essencialmente na incerteza associada à inclinação de cada uma destas retas, reduzindo com a diminuição do tempo de
+     <i>
+      delay.
+     </i>
+     Este é um estudo bastante interessante que pode ser realizado e debatido em sala de aula, contribuindo no aprendizado em analise estatística e contribuição de erros em medidas físicas.
+    </p>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.2. Automação do experimento de carga e descarga
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Para o estudo em um único experimento da carga e descarga em um capacitor devemos utilizar duas chaves externas A
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     mostra um esquema adotado para esta medida com o Arduino e duas chaves externas.
+    </p>
+    <div class="row fig" id="f10">
+     <a name="f10">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf10" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Esta montagem apesar de viável representa um risco considerável para a entrada USB do PC e da placa Arduino, tendo em vista que qualquer descuido do operador pode colocar o circuito em curto (conectando simultaneamente as duas chaves). Para viabilizar este estudo vamos recorrer a outros recursos que o Arduino pode oferecer que corresponde a possibilidade de enviarmos comandos através das portas digitais. Isso significa que estas portas podem se comportar como portas de entrada ou saída de sinais, o que abre um leque inesgotável de possibilidades de automação em experimentos. Sendo assim vamos utilizar uma de suas portas digitais como saída, comandada através de software.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para a elaboração do programa vamos utilizar a função
+     <i>
+      digitalWrite
+     </i>
+     () que escreve uma informação digital, ou seja, 0 (LOW) ou 1 (HIGH). O resistor será conectado em uma porta digital que vai funcionar como uma chave comutadora. Em um dado instante de tempo estará no estado alto (HIGH) promovendo a carga do capacitor e depois de um dado intervalo de tempo irá para o estado baixo (LOW), possibilitando a descarga. Este chaveamento deve ocorrer em um intervalo de tempo controlado pelo operador. A
+     <a class="open-asset-modal" data-target="#ModalFigf11" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 11
+     </a>
+     mostra o esquema do circuito utilizado e o
+     <span class="ref footnote">
+      <sup class="xref">
+       Apêndice 3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        Apêndice 3
+       </span>
+      </span>
+     </span>
+     fornecemos. O código fonte para este experimento é dado no
+     <span class="ref footnote">
+      <sup class="xref">
+       Apêndice 3
+      </sup>
+      <span class="refCtt closed">
+       <span class="refCttPadding">
+        Apêndice 3
+       </span>
+      </span>
+     </span>
+    </p>
+    <div class="row fig" id="f11">
+     <a name="f11">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf11" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf12" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 12
+     </a>
+     mostra diferentes intervalos fixados para a carga e descarga automática.
+    </p>
+    <div class="row fig" id="f12">
+     <a name="f12">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf12" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf10" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 10
+     </a>
+     mostra a influencia do tempo de chaveamento nas medidas realizadas. Nota-se, como esperado, que para tempos maiores temos uma melhor visualização do processo de carga e descarga. No nosso entender esta pode ser mais uma atividade experimental proposta em sala, bastante interessante, pois possibilita ao estudante maior domínio da tecnologia e do sistema de medida utilizado.
+    </p>
+    <p>
+    </p>
+    <p>
+     Outras atividades podem ser propostas aos estudantes tais como;
+    </p>
+    <ul list-type="bullet">
+     <li>
+      <p>
+       Inserir na programação um chaveamento totalmente automatizado, ou seja, realizado a partir da leitura do valor de tensão da porta analógica. Em outras palavras, "se o valor lido de tensão lido no capacitor for maior ou igual a 95% do valor de pico (5,0 V) transite a chave para o estado baixo e neste caso, a descarga se inicia. Este processo permanece até que o valor lido seja menor ou igual a 0,05% do valor total".
+      </p>
+     </li>
+     <li>
+      <p>
+       Transformar o Arduino em um "capacímetro" [27], em que a capacitância pode ser obtida através da medida da constante de tempo e do valor da resistência utilizada no circuito.
+      </p>
+     </li>
+    </ul>
+    <p>
+    </p>
+    <p>
+     <b>
+      2.3. Gráficos em tempo real
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Muitas vezes é importante visualizar os dados em tempo real em um determinado experimento. Neste item vamos apresentar de que maneira podemos visualizar gráficos representativos da grandeza estudada utilizando
+     <i>
+      Processing.
+     </i>
+    </p>
+    <p>
+    </p>
+    <p>
+     O
+     <i>
+      Processing
+     </i>
+     é uma linguagem/ambiente de código aberto que possibilita programar imagens, animações ou interações.
+    </p>
+    <p>
+    </p>
+    <p>
+     Foi desenvolvido inicialmente para ensinar os fundamentos da programação de computadores dentro de um contexto visual, e hoje milhares de estudantes e profissionais de todo o mundo a utilizam, em prototipagem e produção. Assim como o Arduino, apresenta uma vasta biblioteca que possibilita inúmeras aplicações.
+    </p>
+    <p>
+    </p>
+    <p>
+     Há uma comunicação muito simples que acopla o Arduino ao Processing, permitindo, por exemplo, a construção de jogos e animações interativas dentro de um contexto físico, ou seja, buscando informações através de sensores.
+    </p>
+    <p>
+    </p>
+    <p>
+     Para a observação de dados em tempo real, com apenas a instalação de algumas bibliotecas e alguns exemplos podemos observar os sinais de saída das portas digitais e analógicas do Arduino. Caso tenha interesse em saber como conseguir as visualizações gráficas em tempo real, acesse o tutorial que elaboramos disponível na Ref. [28].
+    </p>
+    <p>
+    </p>
+    <p>
+     A
+     <a class="open-asset-modal" data-target="#ModalFigf13" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Fig. 13
+     </a>
+     mostra os gráficos obtidos para a captura simultânea de dois circuitos RC com diferentes constantes de tempo, utilizando o
+     <i>
+      SimpleSerialArduinoScope.
+     </i>
+     As portas observadas são as analógicas 0 e 1 , as demais foram mantidas em GND.
+    </p>
+    <div class="row fig" id="f13">
+     <a name="f13">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf13" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     Outra possibilidade é a visualização em uma melhor resolução utilizando o
+     <i>
+      Osciloscópio Zoom.
+     </i>
+     Neste caso podemos visualizar uma única saída por vez. As
+     <a class="open-asset-modal" data-target="#ModalFigf14" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      Figs. 14
+     </a>
+     e
+     <a class="open-asset-modal" data-target="#ModalFigf15" data-toggle="modal" href="">
+      <span class="sci-ico-fileFigure">
+      </span>
+      15
+     </a>
+     mostram os gráficos do valor de corrente elétrica no circuito na carga do capacitor, observados para diferentes constantes
+     <i>
+      RC.
+     </i>
+    </p>
+    <div class="row fig" id="f14">
+     <a name="f14">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf14" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <div class="row fig" id="f15">
+     <a name="f15">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalFigf15" data-toggle="modal" href="">
+       <div class="thumbOff">
+        <div class="zoom">
+         <span class="sci-ico-zoom">
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+     <div class="col-md-8 col-sm-8">
+      <br/>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+     <b>
+      3. Considerações finais
+     </b>
+    </p>
+    <p>
+    </p>
+    <p>
+     Neste trabalho mostramos um exemplo de aquisição e automação de dados utilizando a plataforma Arduino. A carga e descarga de um circuito RC série foi realizada através de dois procedimentos: coleta de dados num circuito convencional, isto é, os circuitos didáticos de carga e descarga de capacitores podem ser acoplados ao Arduino e num circuito automatizado. Os códigos de programação são bastante simples e com pequenas modificações mostramos como podemos transitar de uma aplicação em que o Arduino se comporta apenas como uma interface de aquisição de dados, para uma aplicação em que utilizamos um chavemanto automático, explorando, portanto as potencialidades que um micro-controlador pode oferecer.
+    </p>
+    <p>
+    </p>
+    <p>
+     Mostramos também que é possível observar os resultados em tempo real através de gráficos utilizando o
+     <i>
+      Processing.
+     </i>
+     Percebemos que não há a necessidade de grandes conhecimentos em eletrônica para efetuar as conexões do circuito RC com o Arduino e que a disponibilidade de bibliotecas e códigos de programação, facilita consideravelmente a utilização da plataforma em experimentos didáticos.
+    </p>
+    <p>
+    </p>
+    <p>
+     A possibilidade de escrever e ler em portas digitais do Arduino abre uma infinidade de aplicações para a experimentação em física e consideramos que sua inserção em sala de aula representa um passo importante para uma maior apropriação da tecnologia na construção do conhecimento.
+    </p>
+    <p>
+    </p>
+    <p>
+     Toda a plataforma Arduino, tanto em
+     <i>
+      software,
+     </i>
+     quanto em
+     <i>
+      hardware,
+     </i>
+     é
+     <i>
+      open-source,
+     </i>
+     o que facilita muito o seu uso e disseminação. Ou seja, existe um número infindável de bibliotecas e tutoriais disponíveis na web para muitas aplicações.
+    </p>
+    <p>
+    </p>
+    <p>
+     Esses fatores nos permitem enfatizar a simplicidade do uso da plataforma Arduino como aquisição e au-tomaçcãao de dados, aliado ao custo relativamente baixo e bons resultados apresentados, contribuindo significativamente para tornar o laboratório didático de física um ambiente de investigação.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <div class="row fig" id="40aaadf2dfc9c687f39986cdf08ec6360d7dc0de">
+     <a name="40aaadf2dfc9c687f39986cdf08ec6360d7dc0de">
+     </a>
+     <div class="col-md-4 col-sm-4">
+      <a data-target="#ModalImg40aaadf2dfc9c687f39986cdf08ec6360d7dc0de" data-toggle="modal" href="">
+       <div class="thumbImg">
+        <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/40aaadf2dfc9c687f39986cdf08ec6360d7dc0de.jpg" style="max-width:100%"/>
+       </div>
+      </a>
+     </div>
+    </div>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+     Recebido em 13/5/2011
+    </p>
+    <p>
+    </p>
+    <p>
+     Aceito em 21/10/2011
+    </p>
+    <p>
+    </p>
+    <p>
+     Publicado em 5/12/2011
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="articleSection">
+    <div class="ref-list">
+     <ul class="refList">
+      <li>
+       <div>
+        [1] M.M.    Magalhães, D. Schiel, I.M. Guerrini e E. Marega Jr., Revista Brasileira    de Ensino de Física 24, 97, (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [2] V.    Heckler, M. de F.O. Saraiva e K. de S.F. Oliveira, Revista Brasileira de Ensino    de Física 29, 267 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [3] M.F.    Barroso, G. Felipe e T. Silva, in:
+        <i>
+         X Encontro de Pesquisa em Ensino de Física,
+        </i>
+        Londrina (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [4] D.M.    Aliprandini, E. Schuhmacher, e M.C. Santos, in:
+        <i>
+         Simpósio Nacional    de Ensino de Ciência e Tecnologia,
+        </i>
+        Ponta Grossa (2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        [5] P.    Dorneles, I. Araujo e E.A. Veit, Revista Brasileira de Ensino de Física    28, 487 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [6] C.E.    Aguiar,
+        <i>
+         Computadores no Ensino de Física
+        </i>
+        (CEDERJ, Rio de Janeiro,    2005), disponível em http://omnis.if.ufrj.br/~marta/aprendizagememfisica/ceaguiar.pdf,    acessado em 9/5/2011.
+       </div>
+      </li>
+      <li>
+       <div>
+        [7] E.    Montarroyos e W.C. Magno, Revista Brasileira de Ensino de Física 23,    57 (2001).
+       </div>
+      </li>
+      <li>
+       <div>
+        [8] R.    Haag, Revista Brasileira de Ensino de Física 23, 176 (2001).
+       </div>
+      </li>
+      <li>
+       <div>
+        [9] M.A.    Cavalcante, E. Silva, R. Prado e R. Haag, Revista Brasileira de Ensino de Física    24, 150 (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [10] W.C.    Magno e E. Montarroyos, Revista Brasileira de Ensino de Física 24,    497 (2002).
+       </div>
+      </li>
+      <li>
+       <div>
+        [11] M.A.    Cavalcante, C.R.C. Tavolaro e D. Guimarães, Física na Escola 7(2),    73 (2006).
+       </div>
+      </li>
+      <li>
+       <div>
+        [12] M.A.    Cavalcante, A.E. Bonizzia e L.C.P. Gomes, Revista Brasileira de Ensino de Física    30, 2501 (2008).
+       </div>
+      </li>
+      <li>
+       <div>
+        [13] M.A.    Cavalcante, A.E. Bonizzia e L.C.P. Gomes, Revista Brasileira de Ensino de Física    31, 4501 (2009).
+       </div>
+      </li>
+      <li>
+       <div>
+        [14] G.    Dionisio e W.C. Magno Revista Brasileira de Ensino de Física 29, 287 (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [15] M.C.R.    Pessanha, S.G. Cozendey e M. de O. Souza, Revista Brasileira de Ensino de Física    32, 4503 (2010).
+       </div>
+      </li>
+      <li>
+       <div>
+        [16] R.R.    Soares e P. de F. Borges, Revista Brasileira de Ensino de Física 32,    2501 (2010).
+       </div>
+      </li>
+      <li>
+       <div>
+        [17] A.B.    Vilar, A.R. Correia, L.F. Oliveira e A.L. Pereira, in:
+        <i>
+         XVII Simposio Nacional    de Ensino de Física,
+        </i>
+        São Luis (2007).
+       </div>
+      </li>
+      <li>
+       <div>
+        [18] A.G.    Bezerra Jr., L.E. Merkle, E.S. de Souza, L.S. Spolaore, E. Ricetti, G.A. Gimenez-Lugo,    e N.C. Saavedra Filho, in:
+        <i>
+         XVIII Simpóosio Nacional de Ensino de Fósica,
+        </i>
+        Vitoria (2009)
+       </div>
+      </li>
+      <li>
+       <div>
+        [19] A.R.    Souza, A.C. Paixão, D.D. Uzêda, M.A. Dias, S. Duarte, e H.S. Amorim,    Revista Brasileira de Ensino de Física 33
+        <b>
+         ,
+        </b>
+        1702 (2011).
+       </div>
+      </li>
+      <li>
+       <div>
+        [20] Pasco Scientific, disponível em http://www.pasco.com, acesso em 9/5/2011.
+        <br/>
+        <a href="http://http://www.pasco.com" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [21] Phywe Wysteme GMBH &amp; CO.KG, disponível em http://www.phywe.com, acesso em 9/5/2011.
+        <br/>
+        <a href="http://http://www.phywe.com" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [22] Centro Industrial de Equipamentos de Ensino e Pesquisa, disponível em http://www.cidepe.com.br, acesso em 9/5/2011.
+        <br/>
+        <a href="http://http://www.cidepe.com.br" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [23] http://arduino.cc, acessado em 9/5/2011.
+        <br/>
+        <a href="http://http://arduino.cc" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [24] http://www.sabereletronica.com.br/secoes/leitura/1307, acessado em 23/9/2011.
+        <br/>
+        <a href="http://http://www.sabereletronica.com.br/secoes/leitura/1307" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [25] http://blog.spock.com.br/2009/07/arduino-uma-plataforma-open-source.html, acessado em 23/9/2011.
+        <br/>
+        <a href="http://http://blog.spock.com.br/2009/07/arduino-uma-plataforma-open-source.html" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [26] www.vivaolinux.com.br, acessado em 23/9/2011.
+        <br/>
+        <a href="http://www.vivaolinux.com.br" target="_blank">
+         » link
+        </a>
+       </div>
+      </li>
+      <li>
+       <div>
+        [27] http://www.arduino.cc/playground/Portugues/LearningCapacitanceMeter:    proposta de construção de um capacímetro utilizando o Arduino,    acessado em 12/5/2011
+       </div>
+      </li>
+      <li>
+       <div>
+        [28] http://labduino.blogspot.com/p/tutoriais.html    tutoriais sobre o Arduino e Processing, acessado em 12/5/2011
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Apêndice 2">
+    <h1 class="articleSectionTitle">
+     Apêndice 2
+    </h1>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/eb854d1651004fe2acf13f58857bdb1975406e50.jpg" style="max-width:100%"/>
+   </div>
+   <div class="articleSection" data-anchor="Apêndice 3">
+    <h1 class="articleSectionTitle">
+     Apêndice 3
+    </h1>
+    <img src="https://minio.scielo.br/documentstore/1806-9126/rrPFbrjsDdtkKKRPDPTJXnn/1fbf9beb828b39d1ca531200321e3e9f311dee61.jpg" style="max-width:100%"/>
+   </div>
+   <li>
+    <span class="xref big">
+     1
+    </span>
+    <div>
+     E-mail:
+    </div>
+    <div>
+     <a href="mailto:marisac@pucsp.br">
+      marisac@pucsp.br
+     </a>
+     .
+    </div>
+   </li>
+   <div class="articleSection" data-anchor="Datas de Publicação ">
+    <h1 class="articleSectionTitle">
+     Datas de Publicação
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Publicação nesta coleção
+        </strong>
+        <br/>
+        02 Mar 2012
+       </li>
+       <li>
+        <strong>
+         Data do Fascículo
+        </strong>
+        <br/>
+        Dez 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="articleSection" data-anchor="Histórico">
+    <h1 class="articleSectionTitle">
+     Histórico
+    </h1>
+    <div class="row">
+     <div class="col-md-12 col-sm-12">
+      <ul class="articleTimeline">
+       <li>
+        <strong>
+         Recebido
+        </strong>
+        <br/>
+        13 Maio 2011
+       </li>
+       <li>
+        <strong>
+         Aceito
+        </strong>
+        <br/>
+        21 Out 2011
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <section class="documentLicense">
+    <div class="container-license">
+     <div class="row">
+      <div class="col-sm-3 col-md-2">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        <img alt="Creative Common - by-nc 4.0 " src="https://licensebuttons.net/l/by-nc/4.0//88x31.png"/>
+       </a>
+      </div>
+      <div class="col-sm-9 col-md-10">
+       <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="">
+        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </article>
+ </div>
+</div>
