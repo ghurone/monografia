@@ -25,7 +25,7 @@ def create_corpus(dicionario, documentos):
 def calc_coherence(model, documents, dictionary, corpus, method='u_mass'):
     return CoherenceModel(model=model, texts=documents,
                           dictionary=dictionary, corpus=corpus,
-                          coherence=method).get_coherence()
+                          coherence=method)
 
 
 class ModelLDA:
@@ -50,6 +50,23 @@ class ModelLDA:
                     num_topics=n_topic,
                     passes=self.passes,
                     random_state=self.SEED,
-                    eval_every=None
-                    
+                    eval_every=None   
         )
+    
+    
+def process_combination(args):
+    combination, documentos = args
+    bi, a, b = combination
+    new_doc = documentos.copy()
+    
+    add_bigram(new_doc, min_count=bi)
+    dicionario = create_dictionary(new_doc, n_abaixo=b, n_acima=a)
+    corpus = create_corpus(dicionario, documentos)
+    
+    lda = ModelLDA(corpus, dicionario, chunksize=2000, iterations=15, passes=25)
+    model = lda.run(12)
+    
+    coerencia = calc_coherence(model, documentos, dicionario, corpus, method='c_v')
+    coe = coerencia.get_coherence()
+
+    return (bi, a, b), {'model': model, 'coherence': coe}
