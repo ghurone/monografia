@@ -1,5 +1,5 @@
 from gensim.corpora import Dictionary
-from gensim.models import Phrases, LdaModel, LdaMulticore
+from gensim.models import Phrases, LdaModel, TfidfModel
 from gensim.models.coherencemodel import CoherenceModel
 
 
@@ -18,11 +18,17 @@ def create_dictionary(documentos, filtrar=True, n_abaixo=30, n_acima=0.5):
     return dicio
 
 
-def create_corpus(dicionario, documentos):
-    return [dicionario.doc2bow(doc) for doc in documentos]
+def create_corpus(dicionario, documentos, use_tfidf=False):
+    corpus = [dicionario.doc2bow(doc) for doc in documentos]
+    
+    if use_tfidf:
+        tfidf = TfidfModel(corpus, dicionario)
+        return tfidf[corpus]
+    
+    return corpus
+    
 
-
-def calc_coherence(model, documents, dictionary, corpus, method='u_mass'):
+def calc_coherence(model, documents, dictionary, corpus, method='c_v'):
     return CoherenceModel(model=model, texts=documents,
                           dictionary=dictionary, corpus=corpus,
                           coherence=method)
@@ -52,21 +58,3 @@ class ModelLDA:
                     random_state=self.SEED,
                     eval_every=None   
         )
-    
-    
-def process_combination(args):
-    combination, documentos = args
-    bi, a, b = combination
-    new_doc = documentos.copy()
-    
-    add_bigram(new_doc, min_count=bi)
-    dicionario = create_dictionary(new_doc, n_abaixo=b, n_acima=a)
-    corpus = create_corpus(dicionario, documentos)
-    
-    lda = ModelLDA(corpus, dicionario, chunksize=2000, iterations=15, passes=25)
-    model = lda.run(12)
-    
-    coerencia = calc_coherence(model, documentos, dicionario, corpus, method='c_v')
-    coe = coerencia.get_coherence()
-
-    return (bi, a, b), {'model': model, 'coherence': coe}
