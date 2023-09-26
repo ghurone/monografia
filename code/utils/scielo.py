@@ -34,17 +34,22 @@ def artigos_por_volume(url: str, formato: str = 'html', idioma: str = 'pt') -> l
     Returns:
         list: Lista com os links dos artigos deste volume.
     """
-    languages = {'pt': 'Português', 'en': 'Inglês', 'es': 'Espanhol'}
+    languages = {'pt': 'Português', 'en': 'Inglês', 'es': 'Espanhol', 
+                 'todos': True}
     formatos = {'html': '/?lang=', 'pdf': '/?format=pdf&'}
 
     lang = languages.get(idioma.lower())
     form = formatos.get(formato.lower())
 
     req = request.get(url)
-
-    soup = BeautifulSoup(req.text, 'lxml', parse_only=SoupStrainer('a', attrs={'title': lang}))
-
-    return [scielo_url(a['href']) for a in soup.find_all('a') if 'abstract' not in a['href'] and form in a['href']]
+    
+    if idioma == 'todos':
+        soup = BeautifulSoup(req.text, 'lxml')
+        return soup.find_all('li', attrs={'data-date':True})
+    
+    a_tags = BeautifulSoup(req.text, 'lxml', parse_only=SoupStrainer('a', attrs={'title': lang}))
+    
+    return [scielo_url(a['href']) for a in a_tags.find_all('a') if 'abstract' not in a['href'] and form in a['href']]
 
 
 def html_do_artigo(url: str) -> BeautifulSoup:

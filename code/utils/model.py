@@ -58,3 +58,4 @@ class ModelLDA:
                     random_state=self.SEED,
                     eval_every=None   
         )
+    

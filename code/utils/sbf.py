@@ -33,7 +33,7 @@ def volumes_por_ano() -> dict[int:list]:
             if a_tag:
                 urls.append(sbf_url(a_tag['href']))
             
-        links[ano] = urls
+        links[int(ano)] = urls
         
     return links
 
