@@ -56,6 +56,5 @@ class ModelLDA:
                     num_topics=n_topic,
                     passes=self.passes,
                     random_state=self.SEED,
-                    eval_every=None   
-        )
+                    eval_every=None)
     
