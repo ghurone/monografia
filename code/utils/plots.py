@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 from matplotlib import ticker
 import numpy as np
+from wordcloud import WordCloud
+
 
 mpl.rcParams['axes.formatter.use_mathtext'] = True
 
@@ -27,6 +29,27 @@ def plot_frequent_words(dicionario, n=15, filename='', dpi=300):
     
     # adjust x-axis labels
     ax.tick_params(axis='x', labelrotation=45, labelsize=10)
+    
+    if filename != '':
+        if not os.path.exists('plots'):
+            os.mkdir('plots')
+            
+        path = os.path.join('plots', filename)
+        fig.savefig(path, dpi=dpi, bbox_inches='tight')
+        
+    plt.show()
+
+
+def plot_wordcloud(dicionario, n=15, filename='', dpi=300):
+    token_freq = {dicionario[id]: freq for id, freq in dicionario.cfs.items()}
+    
+    nuvem = WordCloud(width=800, height=800,
+                      background_color='white',
+                      max_words=n).generate_from_frequencies(token_freq)    
+   
+    fig, ax = plt.subplots(figsize=(10, 10))
+    ax.imshow(nuvem, interpolation='bilinear')
+    ax.axis('off')
     
     if filename != '':
         if not os.path.exists('plots'):
